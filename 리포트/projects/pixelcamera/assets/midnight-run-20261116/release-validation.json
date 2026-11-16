@@ -1,0 +1,124 @@
+{
+    "status": "RanToCompletion",
+    "compilationErrors": false,
+    "checks": [
+        {
+            "title": "Check Audio Clipping",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Colliders",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Compressed Files",
+            "result": "Warning"
+        },
+        {
+            "title": "Check Demo Scenes",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Documentation",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Empty Prefabs",
+            "result": "Pass"
+        },
+        {
+            "title": "Check File Menu Names",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Line Endings",
+            "result": "Pass"
+        },
+        {
+            "title": "Check LODs",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Mesh Prefabs",
+            "result": "Warning"
+        },
+        {
+            "title": "Check Missing Components in Assets",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Missing Components in Scenes",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Model Orientation",
+            "result": "Warning"
+        },
+        {
+            "title": "Check Model Types",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Normal Map Textures",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Particle Systems",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Path Lengths",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Prefab Transforms",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Script Compilation",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Shader Compilation",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Texture Dimensions",
+            "result": "Pass"
+        },
+        {
+            "title": "Check Type Namespaces",
+            "result": "Pass"
+        },
+        {
+            "title": "Remove Executable Files",
+            "result": "Pass"
+        },
+        {
+            "title": "Remove JavaScript Files",
+            "result": "Pass"
+        },
+        {
+            "title": "Remove JPG Files",
+            "result": "Warning"
+        },
+        {
+            "title": "Remove Lossy Audio Files",
+            "result": "Pass"
+        },
+        {
+            "title": "Remove Mixamo Files",
+            "result": "Pass"
+        },
+        {
+            "title": "Remove SpeedTree Files",
+            "result": "Pass"
+        },
+        {
+            "title": "Remove Video Files",
+            "result": "Pass"
+        }
+    ],
+    "missingScripts": 0,
+    "package": "C:\\Projects\\Turnlume\\.local\\NeonSprintRewrite\\outputs\\PixoraStudio-1.0.1-MidnightRun.unitypackage"
+}

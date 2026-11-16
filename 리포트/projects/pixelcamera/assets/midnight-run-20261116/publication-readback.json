@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-16T08:26:46.159Z",
+  "commit": "f648f790384f7f0d84b209b57be18c923f05ce95",
+  "workflowId": 43831036191,
+  "workflowConclusion": "success",
+  "languages": [
+    {
+      "language": "en",
+      "route": "/updates/pixora-studio-1.0.1/",
+      "bytes": 5493,
+      "sha256": "425bcbffecaaca7789f5a886db95f0fad698ce37c64cebc478c5af9707680261",
+      "matched": true
+    },
+    {
+      "language": "ko",
+      "route": "/ko/updates/pixora-studio-1.0.1/",
+      "bytes": 5814,
+      "sha256": "9ea698039a4fa2997bf936c34f406d6f5b4c081c03587792d9506eb0f787dc54",
+      "matched": true
+    },
+    {
+      "language": "ja",
+      "route": "/ja/updates/pixora-studio-1.0.1/",
+      "bytes": 5654,
+      "sha256": "840ac3ec96cb4d273df21b3c446ab325abdca11a894479a5f1e6871c29eb96b7",
+      "matched": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/zh-Hans/updates/pixora-studio-1.0.1/",
+      "bytes": 5328,
+      "sha256": "d8f07463cfd715cf55d00eabf6af925bcaed2875e1573217bac7882fd7b53e19",
+      "matched": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/zh-Hant/updates/pixora-studio-1.0.1/",
+      "bytes": 5328,
+      "sha256": "5d24dc5e0825646878206a1ceb2dbb24ee56d146778b468d1789678cef555bf1",
+      "matched": true
+    },
+    {
+      "language": "es",
+      "route": "/es/updates/pixora-studio-1.0.1/",
+      "bytes": 5442,
+      "sha256": "136ca466eadcd0081fe039021923271392103a42872a3d8ace45d90305dbf1f7",
+      "matched": true
+    },
+    {
+      "language": "fr",
+      "route": "/fr/updates/pixora-studio-1.0.1/",
+      "bytes": 5458,
+      "sha256": "031e153b79b2239566b50e428f66e4eb11d83a3d1e924bc4d82859e35f49702a",
+      "matched": true
+    },
+    {
+      "language": "de",
+      "route": "/de/updates/pixora-studio-1.0.1/",
+      "bytes": 5467,
+      "sha256": "d9aa14276650893fceeb45ccaad6dd9d91b7f7c580032a278881298f25f0b94d",
+      "matched": true
+    },
+    {
+      "language": "pt-BR",
+      "route": "/pt-BR/updates/pixora-studio-1.0.1/",
+      "bytes": 5453,
+      "sha256": "f8b753075f6322fc5235c628fa7baf835b531e509711bb48c07e4e44ce4c0704",
+      "matched": true
+    }
+  ],
+  "thumbnail": {
+    "bytes": 74517,
+    "sha256": "cd5aa100b1f543b945285d338b023dba052f4cc76ad132c5507ccb899bc53e4f",
+    "matched": true
+  }
+}
