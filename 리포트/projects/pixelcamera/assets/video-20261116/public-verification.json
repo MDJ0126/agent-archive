@@ -1,0 +1,36 @@
+[
+  {
+    "status": 200,
+    "url": "https://mdj0126.github.io/codex-config/projects/pixelcamera/reports/2026-11-16-result-20261116045611311-v1.0.0.html",
+    "hasExpectedImage": true,
+    "hasExpectedTitle": true
+  },
+  {
+    "status": 200,
+    "url": "https://mdj0126.github.io/codex-config/projects/pixelcamera/reports/2026-11-16-result-20261116045612680-v1.0.0.html",
+    "hasExpectedImage": true,
+    "hasExpectedTitle": true
+  },
+  {
+    "status": 200,
+    "url": "https://mdj0126.github.io/codex-config/projects/pixelcamera/reports/2026-11-16-result-20261116045614080-v1.0.0.html",
+    "hasExpectedImage": true,
+    "hasExpectedTitle": true
+  },
+  {
+    "sha256": "35d2f3b3580efcf66baf09a4b5c0d59b071e4e3fe06fa1f7c2c2247ee724ba8b",
+    "publicHashMatches": true,
+    "asset": "neon-styled.png"
+  },
+  {
+    "publicMermaidOuterSvg": {
+      "palette": 2,
+      "example": 2
+    },
+    "actionRun": 43807272657,
+    "conclusion": "success",
+    "ownedUnityProcessesRemaining": 0,
+    "ownedChromeSessionsRemaining": 0,
+    "temporaryUnityProjectsRemoved": 3
+  }
+]
