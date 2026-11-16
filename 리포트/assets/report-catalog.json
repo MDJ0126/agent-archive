@@ -1,5 +1,55 @@
 [
   {
+    "title": "첫 플레이 버전 중간 점검 — 지속 스폰·암흑 마을·운명의 슬롯 낙하",
+    "summary": "시간제 지속 스폰, 모닥불 조명과 카지노 등장 연출을 구현하고 실제 Godot 영상·GIF로 기록했습니다. 신규 무기·몬스터·손패는 추가 제작 중입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116171539739-v1.0.0.html",
+    "date": "2026-11-16T17:15:39.739Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소메트릭 뷰와 균일 픽셀·32색·12fps·체력바 빌보드",
+    "summary": "아이소메트릭 회전과 카메라별 체력바 빌보드를 적용했습니다. 720p·1080p의 230400셀을 각각 검사해 균일성과 32색 이내 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116102356104-v1.0.0.html",
+    "date": "2026-11-16T10:23:56.104Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "3D 픽셀 카메라로 만든 DotAction 첫 전투 장면",
+    "summary": "3D 탑뷰 격자 이동·자동 공격·3웨이브 전투를 구현하고 실제 Unity 플레이와 픽셀 카메라 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116091503983-v1.0.0.html",
+    "date": "2026-11-16T09:15:03.983Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DotAction DDT 전투 수치와 기본 자동 공격",
+    "summary": "3D 탑뷰 격자 이동·자동 공격·3웨이브 전투를 구현하고 실제 Unity 플레이와 픽셀 카메라 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116091501194-v1.0.0.html",
+    "date": "2026-11-16T09:15:01.194Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DotAction 8방향 격자 경로 이동과 셀 점유",
+    "summary": "1m XZ 격자의 A* 경로·대각선 모서리 차단·셀 예약을 구현하고 실제 플레이에서 이동을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116091424219-v1.0.0.html",
+    "date": "2026-11-16T09:14:24.219Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Assets 내부의 중복 DotAction 폴더 제거와 경로 정리",
     "summary": "아트·데이터·씬을 Assets 용도별 폴더로 옮기고 코드는 Scripts에 정리했습니다. 메타 81개의 GUID와 해시를 보존했습니다.",
     "project": "dotaction",

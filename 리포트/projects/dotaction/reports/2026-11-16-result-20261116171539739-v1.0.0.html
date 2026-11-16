@@ -1,0 +1,62 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>첫 플레이 버전 중간 점검 — 지속 스폰·암흑 마을·운명의 슬롯 낙하 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/dotaction/assets/sym_bolt.png" alt="DotAction 로고"><span>DotAction</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>첫 플레이 버전 중간 점검 — 지속 스폰·암흑 마을·운명의 슬롯 낙하</h1><span class="badge" data-state="progress">진행 중</span></div><p class="post-summary">시간제 지속 스폰, 모닥불 조명과 카지노 등장 연출을 구현하고 실제 Godot 영상·GIF로 기록했습니다. 신규 무기·몬스터·손패는 추가 제작 중입니다.</p><div class="post-byline"><time datetime="2026-11-16T17:15:39.739Z">2026년 11월 17일 오전 2:15 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>진행 중인 첫 플레이 버전의 중간 기록입니다. 스플래시·이동형 마을·출정·성장 이벤트·10스테이지 보스·귀환 정산이 구현되어 있습니다. 이번 기록은 최신 대규모 콘텐츠 요청의 전체 완료를 의미하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<h3 id="section-4">실제 화면과 연출</h3>
+<p><figure><img class="report-image" src="../assets/20261117-playable-review/20261117-dark-town.png" alt="모닥불 중심의 어두운 마을" loading="lazy"><figcaption>모닥불 중심의 어두운 마을</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/20261117-playable-review/20261117-slot-drop.gif" alt="슬롯머신 낙하·착지·릴 정지·당첨 GIF" loading="lazy"><figcaption>슬롯머신 낙하·착지·릴 정지·당첨 GIF</figcaption></figure></p>
+<p><a class="report-link" href="../assets/20261117-playable-review/20261117-fates-review.mp4">마을·보스 군집·슬롯·천사·악마·강화의 실제 Godot 렌더링 영상, MP4</a></p>
+<p>장면은 QA 스크립트가 실제 게임 노드와 리소스를 구성한 재현 장면입니다. 보스·군집 배치와 전설 천장은 검토를 위해 고정했습니다. 일반 플레이 녹화와 구분하며 생성 시안이나 합성 UI로 대체하지 않았습니다. GIF는 무음이고 MP4에는 엔진의 오디오 출력이 포함됩니다.</p>
+<h3 id="section-5">적용 내용</h3>
+<ul>
+<li>스테이지당 전투 시간 40초, 지속 보충 스폰과 단계별 동시 생성 상한 50~120개체. 10스테이지 보스와 보조 몬스터. 처치만으로 스테이지가 넘어가지 않습니다.</li>
+<li>정지 시 자동 공격, 이동 시 준비 공격 취소. 검의 범위 베기와 활의 가까운 세 대상 사격.</li>
+<li>마을 중앙 모닥불, 따뜻한 중심광과 청흑색 외곽, 조명과 분리된 이름표·HUD.</li>
+<li>슬롯머신 낙하·충격·순차 릴 정지, 카드 호버와 성공 컨페티. 천사·악마·강화의 서로 다른 등장 문양.</li>
+<li>보스와 건물의 공통 팔레트·알파·잡픽셀 후처리. 보스 개별 프레임 128×128과 같은 발 기준점. 원본 생성 그림을 보존했습니다.</li>
+<li>아수라장 26.22 자료를 참고한 증강 15종의 데이터와 효과. 신비한 주먹·흡혈·스킬 치명타·누적 가속 등을 우리 게임 수치로 조정했습니다.</li>
+<li>처치 재화·경험치, 회복·자석·상자·장비 드롭. 드롭은 스테이지 전환만으로 지워지지 않습니다.</li>
+</ul>
+<h3 id="section-6">시간제 스폰의 핵심 함수</h3>
+<p>실제 expedition.gd의 함수입니다. 기존 전멸 후 다음 웨이브 호출을 막고 경과 시간과 생성 예산으로 전환했습니다.</p>
+<pre><code data-language="gdscript">func process_survival_spawns() -&gt; void:
+	if wave&lt;=0 or boss_dead_at&gt;=0: return
+	var stage: Dictionary=campaign.data.config(&quot;stages&quot;)
+	enemies=enemies.filter(func(enemy): return enemy.hp&gt;0 or clock&lt;float(enemy.get(&quot;corpse_until&quot;,clock+1)))
+	if stage_ends_at&gt;0 and clock&gt;=stage_ends_at:
+		spawn_wave()
+	if clock&gt;=next_spawn_at:
+		var progress: float=clampf(clock/float(stage.duration)/9.0,0,1)
+		var interval: float=lerpf(float(stage.spawn_interval),float(stage.late_spawn_interval),progress)
+		next_spawn_at=clock+interval*(1.6 if wave==10 else 1.0)
+		spawn_survival_pack(int(stage.spawn_pack)+int(wave/3))
+</code></pre>
+<pre class="mermaid">flowchart LR
+ A[스테이지 시작] --&gt; B[시간 경과와 생존 수 확인]
+ B --&gt; C{생성 상한 미만}
+ C --&gt;|예| D[화면 바깥에서 적 보충]
+ D --&gt; B
+ C --&gt;|아니오| B
+ B --&gt; E{40초 경과}
+ E --&gt;|예| F[다음 스테이지 또는 보스]
+</pre>
+<pre class="mermaid">flowchart LR
+ A[누적 경험치 도달] --&gt; B[슬롯 자동 대기열]
+ B --&gt; C[머신 낙하와 착지]
+ C --&gt; D[릴 순차 정지]
+ D --&gt; E[결과 카드와 당첨 연출]
+ E --&gt; F[보상 선택 후 전투 재개]
+</pre>
+<h3 id="section-7">대화 기록</h3>
+<p>사용자는 지속 스폰·어두운 다크 판타지·중앙 모닥불·슬롯 낙하와 과감한 연출을 요청했습니다. 이후 손패 카드, 다양한 무기·등급 장비·악마·천사·벌레·언데드·귀신, 고유 능력, 역동적 동작을 추가 요청했습니다. 새 콘텐츠와 기존 캐릭터는 우선 좌우 방향으로 통일하는 최신 요청을 반영하는 중입니다.</p>
+<h2 id="section-8">검증</h2>
+<p>Godot 4.7.2 헤드리스 캠페인 검사 123개 통과. 생존 스폰 및 증강 검사는 실패 목록 없이 통과했습니다. 에셋·오디오 검사 137개, 29개 효과음의 디코딩·피크·경계 검사가 통과했습니다. 생존 시뮬레이션은 검 10스테이지 격파(370.1초), 활 격파(363.9초)를 확인했습니다. 이는 고정 시드의 자동 조작 결과이며 사람의 난이도 평가나 프레임 성능 보증이 아닙니다. 영상은 실제 NVIDIA GTX 970의 Godot OpenGL 출력으로 Movie Maker 녹화를 수행했습니다. 음질의 실제 청감 승인은 미확인입니다. 이후 추가한 손패는 별도 기능 확인 중이며 위 검사를 완료 근거로 소급하지 않습니다.</p>
+<h2 id="section-9">남은 사항</h2>
+<p>제작 중: 손패 카드 8종의 최종 연결·소비·획득 확인, 추가 무기·스킬·등급 장비와 장착 인벤토리, 새 몬스터의 외형·고유 행동·소멸, 좌우 동작 개선, PixelFX 추가 연결, 최신 배포 파일 갱신. 최신 콘텐츠의 종합 QA와 후속 GIF/영상 기록은 남아 있습니다. 기존 Windows 파일은 이 기록 이후 변경을 모두 포함한 최신본이 아닙니다. 1,000스테이지·100개 보스 배치와 누적 10시간은 장기 목표이며 구현 완료로 표시하지 않습니다.</p>
+<h2 id="section-10">작업 시간</h2>
+<ul>
+<li>제안 시간: 전체 작업 최대 6시간: 2026-11-16 23:45 KST 시작, 2026-11-17 05:45 KST 이전 종료. 첫 중간 아카이브 02:30 KST 전후 목표.</li>
+<li>실제로 완료된 시간: 중간 기록 작성: 2026-11-17 02:15:38 KST. 전체 작업 진행 중이며 최종 완료 시각은 미확정입니다.</li>
+<li>XERJ: 미사용 — 사용자 지침에 따라 rg로 프로젝트 소스와 기존 리소스를 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-20261116171539739-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-20261116171539739-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-8">검증</a><a href="#section-9">남은 사항</a><a href="#section-10">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=7aeceb334e38"><script type="module" src="../../../assets/report-visuals.js?v=7aeceb334e38"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
