@@ -1,0 +1,38 @@
+[
+  {
+    "path": "TurnRoom/PixoraStudio/PixelCamera/Runtime/PixelCameraEffect.cs",
+    "sourceSha256": "6BB556CE312AE33634A7C9441CCBEDBD7723CDA35382C18674DF847D0CA1DA10",
+    "importedSha256": "6BB556CE312AE33634A7C9441CCBEDBD7723CDA35382C18674DF847D0CA1DA10",
+    "equal": true
+  },
+  {
+    "path": "TurnRoom/PixoraStudio/PixelCamera/Integrations/URP/PixelCameraRendererFeature.cs",
+    "sourceSha256": "F1B2D2C5D8C318BCFFA95A47E952B19550A8C97BC0A8A1467078C2B92949C6AC",
+    "importedSha256": "F1B2D2C5D8C318BCFFA95A47E952B19550A8C97BC0A8A1467078C2B92949C6AC",
+    "equal": true
+  },
+  {
+    "path": "TurnRoom/DesignDataTable/Scripts/Editor/TableCreator.cs",
+    "sourceSha256": "109A4C74FA528071C6C40D1C53A8CFF0C265E41031AA0814D5646E96FA2DB9AD",
+    "importedSha256": "109A4C74FA528071C6C40D1C53A8CFF0C265E41031AA0814D5646E96FA2DB9AD",
+    "equal": true
+  },
+  {
+    "path": "polyperfect/Low Poly Animated Fantasy Creatures/_Prefabs/Creatures/Dwarf_Ranger_Male.prefab",
+    "sourceSha256": "07E96FC5EB42D37A4ED56E069BCE96825CDB297210522A81F6E4DCF4F641B265",
+    "importedSha256": "07E96FC5EB42D37A4ED56E069BCE96825CDB297210522A81F6E4DCF4F641B265",
+    "equal": true
+  },
+  {
+    "path": "polyperfect/Low Poly Animated Fantasy Creatures/_Prefabs/Creatures/Goblin_Warrior_Male.prefab",
+    "sourceSha256": "76E65693ACC445046026FF8FEAEA7925005107F895FFDDCDF5F4C464E879237A",
+    "importedSha256": "76E65693ACC445046026FF8FEAEA7925005107F895FFDDCDF5F4C464E879237A",
+    "equal": true
+  },
+  {
+    "path": "polyperfect/Low Poly Animated Fantasy Creatures/_Prefabs/Creatures/Skeleton_Basic.prefab",
+    "sourceSha256": "6F74110AC138690AC02FA467BE1B139E2D928D428B35532A31B2A29DD59508BE",
+    "importedSha256": "6F74110AC138690AC02FA467BE1B139E2D928D428B35532A31B2A29DD59508BE",
+    "equal": true
+  }
+]

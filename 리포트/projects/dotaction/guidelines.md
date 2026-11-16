@@ -28,3 +28,13 @@
 - 외부 자산의 `TurnRoom`, `polyperfect` 원본 분류는 보존합니다. 이동 시 파일의 `.meta`와 GUID를 함께 보존하고 빌드 씬 및 도구의 문자열 경로도 갱신합니다.
 - 근거: 사용자의 중복 내부 프로젝트 폴더 정리 요청과 이동 전후 GUID 대조 기록.
 
+
+## 3D 픽셀 전투 프로토타입
+
+- 현재 게임 소유 자산은 Assets/Art·Data·Materials·Prefabs·Animation·Scenes와 Assets/Scripts/Runtime·Editor에 둡니다. 기존 폴더 정리와 meta GUID를 보존합니다.
+- PixelCombat은 PC 16:9, 가까운 사선 탑뷰(직교 크기 6.2)와 플레이어 추적을 사용합니다. 화면 장식 HUD·경로선·바닥 표식은 사용자 요청으로 제거하고 월드 체력바만 남깁니다.
+- 도입한 PixelCameraEffect는 선택 오브젝트 렌더 경로를 사용합니다. 문서의 Full Camera 명칭만 믿지 않고 PixelCameraObject 연결과 LastRenderPath를 확인합니다. 제품 원본은 수정하지 않습니다.
+- 전투 수치는 Assets/Data/CombatStats.xlsx를 DDT에서 편집하며 생성 코드·바이너리는 공식 생성 API를 사용합니다. 다른 게임 샘플과 등록 데이터는 도입하지 않습니다.
+- 사용자 에디터가 프로젝트를 점유하면 별도 사본에서 실행하고, 반영한 씬·프리셋·런타임 소스와 meta를 해시·GUID로 대조합니다. 사용자 에디터를 강제 종료하지 않습니다.
+- 근거: 2026-11-16 전투 Play Mode 3웨이브·24처치·오류 0, 실제 전후 화면과 source-comparison 첨부.
+

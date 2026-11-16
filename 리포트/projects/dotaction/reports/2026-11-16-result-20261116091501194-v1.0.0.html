@@ -1,0 +1,165 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>DotAction DDT 전투 수치와 기본 자동 공격 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/dotaction/assets/sym_bolt.png" alt="DotAction 로고"><span>DotAction</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>DotAction DDT 전투 수치와 기본 자동 공격</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">3D 탑뷰 격자 이동·자동 공격·3웨이브 전투를 구현하고 실제 Unity 플레이와 픽셀 카메라 출력을 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-16T09:15:01.194Z">2026년 11월 16일 오후 6:15 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>DDT의 CombatStats.xlsx에 레인저·고블린·스켈레톤의 체력·속도·피해량·사거리·공격 주기를 저장했습니다. 런타임은 DDT가 생성한 타입과 바이너리에서 값을 읽습니다. 사거리 안에서 가장 가까운 적을 자동 공격하고 6·8·10마리의 3웨이브를 처리합니다.</p>
+<p><figure><img class="report-image" src="../assets/combat-20261116/combat-pixel-battle.png" alt="자동 투사체와 체력 표시" loading="lazy"><figcaption>자동 투사체와 체력 표시</figcaption></figure></p>
+<pre class="mermaid">flowchart TD
+ A[DDT 바이너리에서 행 로드] --&gt; B[체력과 이동 속도 적용]
+ B --&gt; C{공격 주기 도달}
+ C --&gt;|예| D[사거리 안 가장 가까운 적]
+ D --&gt; E{플레이어인가}
+ E --&gt;|예| F[피해량을 보존한 투사체 발사]
+ E --&gt;|아니오| G[근접 피해]
+ F --&gt; H{목표 생존과 도달 확인}
+ H --&gt;|도달| G
+ G --&gt; I{체력 0}
+ I --&gt;|예| J[사망과 셀 예약 해제]
+ J --&gt; K[처치 수와 웨이브 갱신]
+ K --&gt; L{3웨이브 종료}
+ L --&gt;|예| M[승리와 전투 정지]
+</pre>
+<p>웨이브 생성 메서드 전체:</p>
+<pre><code data-language="csharp">private void SpawnWave()
+        {
+            Wave++;
+            _remaining = 4 + Wave * 2;
+            for (int i = 0; i &lt; _remaining; i++)
+            {
+                float angle = (i * 360f / _remaining + Wave * 23) * Mathf.Deg2Rad;
+                Vector2Int cell = new Vector2Int(Mathf.RoundToInt(Mathf.Cos(angle) * 9), Mathf.RoundToInt(Mathf.Sin(angle) * 9));
+                CombatActor enemy = Instantiate(enemyPrefabs[i % enemyPrefabs.Length], CombatGrid.World(cell), Quaternion.identity);
+                enemy.motor.grid = player.motor.grid;
+            }
+            Debug.Log($&quot;DOTACTION_WAVE: {Wave}; enemies={_remaining}&quot;);
+        }
+</code></pre>
+<p><a class="report-link" href="../assets/combat-20261116/source-index.md">프로젝트 소유 전체 소스</a> · <a class="report-link" href="../assets/combat-20261116/combat-play-evidence.txt">실제 실행 수치</a> · <a class="report-link" href="../assets/combat-20261116/combat-vendor-hashes.json">외부 원본 해시</a></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>CombatActor.Update의 실제 전체 구현입니다. 적은 플레이어 셀 대신 점유 가능한 인접 셀을 추적하며, 발사 후 쿨다운과 공격 애니메이션을 연결합니다.</p>
+<pre><code data-language="csharp">private void Update()
+        {
+            if (!IsAlive)
+            {
+                return;
+            }
+            if (!isPlayer)
+            {
+                if (_player == null)
+                {
+                    _player = Actors.Find(actor =&gt; actor.isPlayer &amp;&amp; actor.IsAlive);
+                }
+                if (_player == null || !_player.IsAlive)
+                {
+                    motor.enabled = false;
+                    return;
+                }
+                if (Time.time &gt;= _nextPath)
+                {
+                    _nextPath = Time.time + 0.45f;
+                    Vector2Int playerCell = CombatGrid.Cell(_player.transform.position);
+                    // 적은 플레이어 셀을 예약하지 않고 인접한 공격 위치로 이동한다.
+                    Vector2Int best = CombatGrid.Cell(transform.position);
+                    float distance = float.MaxValue;
+                    for (int x = -1; x &lt;= 1; x++)
+                    {
+                        for (int y = -1; y &lt;= 1; y++)
+                        {
+                            Vector2Int candidate = playerCell + new Vector2Int(x, y);
+                            float score = Vector3.SqrMagnitude(CombatGrid.World(candidate) - transform.position);
+                            if ((x != 0 || y != 0) &amp;&amp; motor.grid.CanOccupy(candidate, motor) &amp;&amp; score &lt; distance)
+                            {
+                                best = candidate;
+                                distance = score;
+                            }
+                        }
+                    }
+                    motor.MoveTo(best);
+                }
+            }
+            if (Time.time &lt; _nextAttack)
+            {
+                return;
+            }
+            CombatActor target = FindNearestTarget();
+            if (target == null)
+            {
+                return;
+            }
+            _nextAttack = Time.time + Stats.Cooldown;
+            ShotsFired++;
+            if (!motor.IsMoving &amp;&amp; motor.visual != null)
+            {
+                Vector3 direction = target.transform.position - transform.position;
+                if (direction.sqrMagnitude &gt; .001f)
+                {
+                    motor.visual.rotation = Quaternion.LookRotation(direction);
+                }
+            }
+            animator.SetTrigger(&quot;Attack&quot;);
+            if (isPlayer)
+            {
+                ArcBolt bolt = Instantiate(boltPrefab, transform.position + Vector3.up * 0.8f, Quaternion.identity);
+                bolt.Launch(target, Stats.Damage);
+            }
+            else
+            {
+                target.TakeDamage(Stats.Damage);
+            }
+        }
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>실제 Play Mode: elapsed=45.79; steps=54; shots=60; kills=24; wave=3; health=84; finished=True; errors=0</p>
+<p>체력·사망 처리 전체:</p>
+<pre><code data-language="csharp">public void TakeDamage(float damage)
+        {
+            if (!IsAlive)
+            {
+                return;
+            }
+            Health = Mathf.Max(0, Health - damage);
+            healthFill.localScale = new Vector3(Health / Stats.Health, 1, 1);
+            if (Health &gt; 0)
+            {
+                return;
+            }
+            animator.SetTrigger(&quot;Die&quot;);
+            motor.enabled = false;
+            CombatSession session = FindFirstObjectByType&lt;CombatSession&gt;();
+            session.NotifyDeath(this);
+            if (!isPlayer)
+            {
+                Destroy(gameObject, 2);
+            }
+        }
+</code></pre>
+<p>투사체 실행 전체:</p>
+<pre><code data-language="csharp">private void Update()
+        {
+            if (_target == null || !_target.IsAlive || Time.time &gt; _expires)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            Vector3 target = _target.transform.position + Vector3.up * 0.8f;
+            Vector3 direction = target - transform.position;
+            if (direction.sqrMagnitude &gt; 0.001f)
+            {
+                transform.rotation = Quaternion.LookRotation(direction);
+            }
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            if ((transform.position - target).sqrMagnitude &lt; 0.04f)
+            {
+                _target.TakeDamage(_damage);
+                Destroy(gameObject);
+            }
+        }
+</code></pre>
+<p>로드한 DDT 수치는 소스 하드코딩 대체값 없이 적용됩니다. 생성 코드와 바이너리는 공식 TableCreator API로 만들었습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>플레이어 빌드·게임 저장소 커밋·푸시는 하지 않았습니다. 프로젝트 루트는 Git 저장소가 아닙니다. 마우스·WASD의 사람이 직접 조작한 체감과 다른 해상도·플랫폼 성능은 미확인입니다. 슬롯·증강·군중 교착 회피는 이번 범위에 포함하지 않았습니다. 자동 테스트는 요청하지 않으셔서 작성·실행하지 않았습니다. 화면 HUD와 승패 문구는 사용자 요청에 따라 제거했고 월드 체력바만 표시합니다. 추가 승패 연출은 미구현입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초 35<del>50분. 추가 PC 근접 뷰·미니멀 UI 요청과 공개 확인으로 5</del>8분 추가 예상을 안내했습니다.</li>
+<li>실제로 완료된 시간: 시작 2026-11-16 17:22:25 KST; 구현·실행·원본 반영 완료 및 기록 2026-11-16 18:14:21 KST; 실측 51분 56초. 보고서 공개 배포 대기는 이후 채팅에서 별도로 기록합니다.</li>
+<li>XERJ: 미사용 — 사용자 지침에 따라 연결 확인도 수행하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-20261116091501194-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-20261116091501194-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
