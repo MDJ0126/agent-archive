@@ -1,0 +1,56 @@
+[
+  {
+    "lang": "en",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "ko",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "ja",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "zh-Hans",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "zh-Hant",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "es",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "fr",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "de",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  },
+  {
+    "lang": "pt-BR",
+    "status": 200,
+    "exactMatch": true,
+    "thumbnail": true
+  }
+]
