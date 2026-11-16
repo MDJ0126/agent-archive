@@ -1,0 +1,164 @@
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+
+namespace TurnRoom.PixelCamera
+{
+    /// <summary>Deterministic palette, lookup and timing algorithms. No Unity native calls.</summary>
+    public static class PixelCameraPaletteAlgorithms
+    {
+        sealed class Bin { public long r,g,b,count; public int R => (int)(r/count); public int G => (int)(g/count); public int B => (int)(b/count); }
+        public static byte[] Extract(byte[] rgba, int maximumColors, int sampleLimit = 262144, byte minimumAlpha = 16)
+        {
+            if(rgba==null||rgba.Length%4!=0)throw new ArgumentException("RGBA byte count must be divisible by four");
+            maximumColors=Math.Max(1,Math.Min(64,maximumColors)); sampleLimit=Math.Max(1,sampleLimit);
+            var bins=new SortedDictionary<int,Bin>(); int step=Math.Max(1,(int)Math.Ceiling(rgba.Length/4.0/sampleLimit));
+            for(int p=0;p<rgba.Length/4;p+=step){int i=p*4;if(rgba[i+3]<minimumAlpha)continue;int key=(rgba[i]>>3)*1024+(rgba[i+1]>>3)*32+(rgba[i+2]>>3);if(!bins.TryGetValue(key,out var v)){v=new Bin();bins.Add(key,v);}v.r+=rgba[i];v.g+=rgba[i+1];v.b+=rgba[i+2];v.count++;}
+            if(bins.Count==0)return Array.Empty<byte>();
+            var groups=new List<List<Bin>>{new List<Bin>(bins.Values)};
+            while(groups.Count<maximumColors)
+            {
+                int chosen=-1,axis=0;double largest=-1;
+                for(int k=0;k<groups.Count;k++){var group=groups[k];if(group.Count<2)continue;int[] lo={255,255,255},hi={0,0,0};long count=0;foreach(var v in group){int[] c={v.R,v.G,v.B};for(int a=0;a<3;a++){lo[a]=Math.Min(lo[a],c[a]);hi[a]=Math.Max(hi[a],c[a]);}count+=v.count;}for(int a=0;a<3;a++){double score=(hi[a]-lo[a])*Math.Sqrt(count);if(score>largest){largest=score;chosen=k;axis=a;}}}
+                if(chosen<0)break;var split=groups[chosen];int splitAxis=axis;
+                split.Sort((a,b)=>{int d=(splitAxis==0?a.R:splitAxis==1?a.G:a.B).CompareTo(splitAxis==0?b.R:splitAxis==1?b.G:b.B);if(d!=0)return d;d=a.R.CompareTo(b.R);if(d!=0)return d;d=a.G.CompareTo(b.G);return d!=0?d:a.B.CompareTo(b.B);});
+                long total=0,sum=0;foreach(var v in split)total+=v.count;int cut=1;for(int i=0;i<split.Count-1;i++){sum+=split[i].count;cut=i+1;if(sum*2>=total)break;}groups[chosen]=split.GetRange(0,cut);groups.Add(split.GetRange(cut,split.Count-cut));
+            }
+            var colors=new List<byte[]>();foreach(var group in groups){long r=0,g=0,b=0,n=0;foreach(var v in group){r+=v.r;g+=v.g;b+=v.b;n+=v.count;}colors.Add(new[]{(byte)((r+n/2)/n),(byte)((g+n/2)/n),(byte)((b+n/2)/n),(byte)255});}
+            colors.Sort((a,b)=>{int d=(a[0]*2126+a[1]*7152+a[2]*722).CompareTo(b[0]*2126+b[1]*7152+b[2]*722);for(int i=0;d==0&&i<3;i++)d=a[i].CompareTo(b[i]);return d;});var output=new byte[colors.Count*4];for(int i=0;i<colors.Count;i++)Array.Copy(colors[i],0,output,i*4,4);return output;
+        }
+        public static void Hsv(float r,float g,float b,out float h,out float s,out float v)
+        {
+            v=Math.Max(r,Math.Max(g,b));float min=Math.Min(r,Math.Min(g,b)),d=v-min;s=v>1e-10f?d/v:0;h=0;if(d<1e-10f)return;
+            h=(v==r?(g-b)/d:v==g?(b-r)/d+2:(r-g)/d+4)/6;h-= (float)Math.Floor(h);
+        }
+        public static int Nearest(float r,float g,float b,float[] palette,bool hsv)
+        {
+            if(palette==null||palette.Length==0||palette.Length%3!=0)throw new ArgumentException("Palette must contain RGB triples");
+            float best=float.MaxValue;int selected=0;Hsv(r,g,b,out float h,out float s,out float v);
+            for(int i=0;i<palette.Length/3;i++){float dr=r-palette[i*3],dg=g-palette[i*3+1],db=b-palette[i*3+2];float distance=dr*dr*.2126f+dg*dg*.7152f+db*db*.0722f;
+                if(hsv){Hsv(palette[i*3],palette[i*3+1],palette[i*3+2],out float ph,out float ps,out float pv);float dh=Math.Abs(h-ph);dh=Math.Min(dh,1-dh);distance=dh*dh*4*s*ps+(s-ps)*(s-ps)*.5f+(v-pv)*(v-pv);}
+                if(distance<best){best=distance;selected=i;}}
+            return selected;
+        }
+        public static byte[] BuildLookup(float[] workingPalette,int edge,bool hsv)
+        {
+            var indices=BuildLookupIndices(workingPalette,edge,hsv);var output=new byte[indices.Length*4];for(int i=0;i<indices.Length;i++){for(int c=0;c<3;c++)output[i*4+c]=(byte)Math.Round(Math.Max(0,Math.Min(1,workingPalette[indices[i]*3+c]))*255);output[i*4+3]=255;}return output;
+        }
+        public static byte[] BuildLookupIndices(float[] workingPalette,int edge,bool hsv)
+        {
+            if(edge!=16&&edge!=32&&edge!=64)throw new ArgumentOutOfRangeException(nameof(edge));
+            if(workingPalette==null||workingPalette.Length<3||workingPalette.Length%3!=0||workingPalette.Length>192)throw new ArgumentException("Lookup palette must contain1–64 RGB colours");
+            var output=new byte[edge*edge*edge];for(int b=0;b<edge;b++)for(int g=0;g<edge;g++)for(int r=0;r<edge;r++)output[r+g*edge+b*edge*edge]=(byte)Nearest(r/(float)(edge-1),g/(float)(edge-1),b/(float)(edge-1),workingPalette,hsv);return output;
+        }
+
+        /// <summary>
+        /// 작업 색 공간의 RGB를 선형 sRGB 기반 OKLab 좌표로 변환한다.
+        /// </summary>
+        public static void ToOKLab(float r, float g, float b, bool linear, out float lightness, out float greenRed, out float blueYellow)
+        {
+            if (!linear)
+            {
+                r = ToLinear(r);
+                g = ToLinear(g);
+                b = ToLinear(b);
+            }
+            double l = CubeRoot(.4122214708 * r + .5363325363 * g + .0514459929 * b);
+            double m = CubeRoot(.2119034982 * r + .6806995451 * g + .1073969566 * b);
+            double s = CubeRoot(.0883024619 * r + .2817188376 * g + .6299787005 * b);
+            lightness = (float)(.2104542553 * l + .7936177850 * m - .0040720468 * s);
+            greenRed = (float)(1.9779984951 * l - 2.4285922050 * m + .4505937099 * s);
+            blueYellow = (float)(.0259040371 * l + .7827717662 * m - .8086757660 * s);
+        }
+
+        /// <summary>
+        /// 감마 부호화된 sRGB 값을 선형 값으로 변환한다.
+        /// </summary>
+        private static float ToLinear(float value)
+        {
+            return value <= .04045f ? value / 12.92f : (float)Math.Pow((value + .055f) / 1.055f, 2.4);
+        }
+
+        /// <summary>
+        /// 음수 HDR 입력의 부호를 보존하여 세제곱근을 계산한다.
+        /// </summary>
+        private static double CubeRoot(double value)
+        {
+            return Math.Sign(value) * Math.Pow(Math.Abs(value), 1.0 / 3.0);
+        }
+
+        /// <summary>
+        /// 지정된 색상 거리로 가장 가까운 원본 팔레트 인덱스를 선택한다.
+        /// </summary>
+        public static int Nearest(float r, float g, float b, float[] palette, int matching, bool linear)
+        {
+            if (matching != 2)
+            {
+                return Nearest(r, g, b, palette, matching == 1);
+            }
+            if (palette == null || palette.Length == 0 || palette.Length % 3 != 0)
+            {
+                throw new ArgumentException("Palette must contain RGB triples");
+            }
+            ToOKLab(r, g, b, linear, out float l, out float a, out float labB);
+            float best = float.MaxValue;
+            int selected = 0;
+            for (int i = 0; i < palette.Length / 3; i++)
+            {
+                ToOKLab(palette[i * 3], palette[i * 3 + 1], palette[i * 3 + 2], linear, out float pl, out float pa, out float pb);
+                float dl = l - pl, da = a - pa, db = labB - pb;
+                float distance = dl * dl + da * da + db * db;
+                if (distance < best)
+                {
+                    best = distance;
+                    selected = i;
+                }
+            }
+            return selected;
+        }
+
+        /// <summary>
+        /// 작업 색 공간과 매칭 방식을 사용하여 LUT의 원본 색 인덱스를 생성한다.
+        /// </summary>
+        public static byte[] BuildLookupIndices(float[] workingPalette, int edge, int matching, bool linear)
+        {
+            if (matching != 2)
+            {
+                return BuildLookupIndices(workingPalette, edge, matching == 1);
+            }
+            if (edge != 16 && edge != 32 && edge != 64)
+            {
+                throw new ArgumentOutOfRangeException(nameof(edge));
+            }
+            if (workingPalette == null || workingPalette.Length < 3 || workingPalette.Length % 3 != 0 || workingPalette.Length > 192)
+            {
+                throw new ArgumentException("Lookup palette must contain 1–64 RGB colours");
+            }
+            var output = new byte[edge * edge * edge];
+            for (int b = 0; b < edge; b++)
+            {
+                for (int g = 0; g < edge; g++)
+                {
+                    for (int r = 0; r < edge; r++)
+                    {
+                        output[r + g * edge + b * edge * edge] = (byte)Nearest(r / (float)(edge - 1), g / (float)(edge - 1), b / (float)(edge - 1), workingPalette, matching, linear);
+                    }
+                }
+            }
+            return output;
+        }
+
+        public static float[] Bayer(int size)
+        {
+            if(size!=2&&size!=4&&size!=8)throw new ArgumentOutOfRangeException(nameof(size));int[] values={0};int n=1;int[] quadrant={0,2,3,1};while(n<size){var next=new int[n*n*4];for(int y=0;y<n*2;y++)for(int x=0;x<n*2;x++)next[y*n*2+x]=4*values[(y%n)*n+x%n]+quadrant[(y/n)*2+x/n];values=next;n*=2;}var output=new float[size*size];for(int i=0;i<output.Length;i++)output[i]=(values[i]+.5f)/output.Length;return output;
+        }
+        public static string Fingerprint(float[] colors,int mode,int edge,bool linear)
+        {
+            var bytes=new byte[colors.Length*4+12];for(int i=0;i<colors.Length;i++)Array.Copy(BitConverter.GetBytes(colors[i]),0,bytes,i*4,4);Array.Copy(BitConverter.GetBytes(mode),0,bytes,colors.Length*4,4);Array.Copy(BitConverter.GetBytes(edge),0,bytes,colors.Length*4+4,4);Array.Copy(BitConverter.GetBytes(linear?1:0),0,bytes,colors.Length*4+8,4);using(var sha=SHA256.Create())return BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+        }
+        public static double[] FrameTimes(double duration,int fps,int maximumFrames=100000)
+        {
+            if(double.IsNaN(duration)||double.IsInfinity(duration)||duration<0||fps<1||fps>240||maximumFrames<2)throw new ArgumentOutOfRangeException();double wanted=Math.Ceiling(duration*fps)+1;if(wanted>maximumFrames)throw new ArgumentException("Clip exceeds the bake frame limit");int count=Math.Max(1,(int)wanted);var times=new double[count];for(int i=0;i<count;i++)times[i]=Math.Min(duration,i/(double)fps);return times;
+        }
+    }
+}

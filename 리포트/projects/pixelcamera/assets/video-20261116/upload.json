@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-11-16T13:45:49.8176638+09:00",
+  "draftVersionId": "1547466",
+  "submitted": false,
+  "assetStoreId": 424614,
+  "uploadStatus": "ok",
+  "cameraVersion": "0.6.3-preview",
+  "bytes": 85389598,
+  "storeVersion": "1.0.1",
+  "httpStatus": 200,
+  "completedAt": "2026-11-16T13:46:41.7045659+09:00",
+  "sha256": "50f075aa2c506285d5877faaab2f9a6c3e41e4c0e2bc709aaa63a7751ef021bc",
+  "savedBytes": 85389598,
+  "savedStatus": "draft",
+  "product": "Pixora Studio",
+  "pendingReviewVersionUnchanged": true,
+  "serverModifiedUtc": "2026-11-16 04:46:39"
+}
