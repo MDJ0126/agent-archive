@@ -1,0 +1,23 @@
+{
+  "tools": [
+    "sprite_list",
+    "sprite_create",
+    "sprite_read",
+    "sprite_reference",
+    "sprite_draw",
+    "sprite_duplicate",
+    "sprite_transform",
+    "sprite_import_png",
+    "sprite_import_file",
+    "sprite_save",
+    "sprite_export"
+  ],
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"image\":\"C:\\\\Projects\\\\DotAction\\\\art\\\\exports\\\\sprite-studio\\\\demo_scarf_idle-r9-1794818121617.png\",\"json\":\"C:\\\\Projects\\\\DotAction\\\\art\\\\exports\\\\sprite-studio\\\\demo_scarf_idle-r9-1794818121617.json\",\"native\":\"C:\\\\Projects\\\\DotAction\\\\art\\\\source\\\\sprite-studio\\\\native\\\\demo_scarf_idle-r9-1794818121617.aseprite\",\"nativeWarning\":null,\"frames\":4,\"width\":128,\"height\":32}"
+      }
+    ]
+  }
+}

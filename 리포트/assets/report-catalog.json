@@ -1,10 +1,40 @@
 [
   {
+    "title": "Sprite Studio: 균일 도트 보정·애니메이션 편집·로컬 MCP 구현",
+    "summary": "도트 보정·픽셀 드로잉·프레임 편집기와 MCP 11개 도구를 구현했습니다. 실제 MCP 드로잉·브라우저 저장·Aseprite 출력·Unity 임포트를 확인했으며 현재 대화의 MCP 도구 노출은 미확인입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116083714591-v1.0.0.html",
+    "date": "2026-11-16T08:37:14.591Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Aseprite 기준 아트 8종 제작과 Unity 2D 프로젝트 시작",
     "summary": "실제 Aseprite로 정적 원본 8종과 비교 화면을 만들고 Unity 6000.0.83f1의 URP 2D 씬에 연결했습니다.",
     "project": "dotaction",
     "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116083325518-v1.0.0.html",
     "date": "2026-11-16T08:33:25.518Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Midnight Run 재제작 — 원본·실행·통합 초안 완료 기록",
+    "summary": "단순 큐브 예제를 Blender 리깅 러너와3층 네온 도시로 교체하고 기존 Pixora Studio1.0.1 초안·9언어 소개 글을 갱신했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-manual-20261116082737371-v1.0.0.html",
+    "date": "2026-11-16T08:27:37.371Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Midnight Run — Blender 러너·네온 도시·연속 횡스크롤 재제작",
+    "summary": "단순 큐브 예제를 Blender 리깅 러너와3층 네온 도시로 교체하고 기존 Pixora Studio1.0.1 초안·9언어 소개 글을 갱신했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-result-20261116082655770-v1.0.0.html",
+    "date": "2026-11-16T08:26:55.770Z",
     "kind": "result",
     "relatedReport": "",
     "replyTo": ""

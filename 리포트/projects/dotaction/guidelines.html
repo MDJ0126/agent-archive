@@ -10,4 +10,14 @@
 <li>TurnRoom·polyperfect는 사용자 의도로 추가된 자산입니다. 이번 작업에서 수정·삭제하지 않습니다.</li>
 <li>근거: 이번 아트 제작 결과 보고 및 첨부된 실제 Aseprite·Unity 화면과 원본 재열기 기록.</li>
 </ul>
+<h2 id="section-2">Sprite Studio</h2>
+<ul>
+<li>공통 실행·보고 기준은 사용자가 제공한 전역 AGENTS.md를 따른다.</li>
+<li>외부 생성 이미지 원본을 보존한다. Sprite Studio 원본은 art/source/sprite-studio의 .sprite.json이며 Aseprite 사본 수정은 자동 역동기화되지 않는다.</li>
+<li>MCP와 UI는 동일한 처리 코드를 사용한다. MCP 수정 전 사용자의 미저장 문서를 보존하고 revision 충돌을 우회하지 않는다.</li>
+<li>격자·팔레트 보정과 캐릭터 형태의 일관성은 구분한다. 기준 그림·장비·캔버스·발 위치를 실제 프레임에서 대조한다.</li>
+<li>시트에는 프레임 크기·태그·시간을 보존한다. Unity의 Studio 출력 폴더는 Multiple 임포트하고, 기존 일반 픽셀 아트의 Single 설정은 유지한다.</li>
+<li>Unity 시트 가져오기 변경은 실제 배치 실행 로그와 생성된 .anim/.controller/.prefab으로 확인한다. 플레이 화면을 보지 않았다면 게임 내 표시를 완료로 기록하지 않는다.</li>
+</ul>
+<p>근거: 2026-11-16 실제 MCP·브라우저·Aseprite·Unity 배치 실행 기록. 샘플 환류는 편집 도구 흐름 안정화 후 검토한다.</p>
 <div class="post-actions"><a class="source" href="../../index.html?project=dotaction">프로젝트 기록 보기</a><a class="source" href="../../guide/global-instructions.html">전역 지침 사항</a><a class="source" href="guidelines.md" download>Markdown 원문</a></div></article></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
