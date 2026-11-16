@@ -2,7 +2,7 @@
 <ul>
 <li>Unity 6000.0.83f1 / URP 2D, 기준 화면 640×360, PPU16입니다.</li>
 <li>아트 규격과 32색 원본은 프로젝트 docs와 art/palettes를 기준으로 합니다.</li>
-<li>.aseprite 원본은 art/source, 파생 출력은 art/exports, Unity 사본은 Assets/DotAction/Art입니다. 동기화할 때 .meta를 보존합니다.</li>
+<li>.aseprite 원본은 art/source, 파생 출력은 art/exports, Unity 사본은 Assets/Art입니다. 동기화할 때 .meta를 보존합니다.</li>
 <li>캐릭터는 32×32, 공통 심벌은 16×16이며 슬롯·카드에서 같은 원본을 공유합니다.</li>
 <li>ArtReference는 정적 스타일 확인 씬입니다. 전투·슬롯 추첨·증강 로직이 구현됐다고 보고하지 않습니다.</li>
 <li>정적 UI는 씬에 저장합니다. 최초 씬 구성 도구는 기존 씬을 덮어쓰지 않습니다.</li>
@@ -20,4 +20,11 @@
 <li>Unity 시트 가져오기 변경은 실제 배치 실행 로그와 생성된 .anim/.controller/.prefab으로 확인한다. 플레이 화면을 보지 않았다면 게임 내 표시를 완료로 기록하지 않는다.</li>
 </ul>
 <p>근거: 2026-11-16 실제 MCP·브라우저·Aseprite·Unity 배치 실행 기록. 샘플 환류는 편집 도구 흐름 안정화 후 검토한다.</p>
+<h2 id="section-3">프로젝트 폴더</h2>
+<ul>
+<li><code>Assets</code> 안에 프로젝트 이름을 반복하는 상위 폴더를 만들지 않습니다.</li>
+<li>아트·씬·데이터·프리팹·머티리얼·애니메이션은 <code>Assets</code>의 용도별 폴더를 사용하고 코드는 <code>Assets/Scripts/Runtime</code>, <code>Assets/Scripts/Editor</code>에 둡니다.</li>
+<li>외부 자산의 <code>TurnRoom</code>, <code>polyperfect</code> 원본 분류는 보존합니다. 이동 시 파일의 <code>.meta</code>와 GUID를 함께 보존하고 빌드 씬 및 도구의 문자열 경로도 갱신합니다.</li>
+<li>근거: 사용자의 중복 내부 프로젝트 폴더 정리 요청과 이동 전후 GUID 대조 기록.</li>
+</ul>
 <div class="post-actions"><a class="source" href="../../index.html?project=dotaction">프로젝트 기록 보기</a><a class="source" href="../../guide/global-instructions.html">전역 지침 사항</a><a class="source" href="guidelines.md" download>Markdown 원문</a></div></article></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

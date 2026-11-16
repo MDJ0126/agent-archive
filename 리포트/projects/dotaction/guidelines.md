@@ -2,7 +2,7 @@
 
 - Unity 6000.0.83f1 / URP 2D, 기준 화면 640×360, PPU16입니다.
 - 아트 규격과 32색 원본은 프로젝트 docs와 art/palettes를 기준으로 합니다.
-- .aseprite 원본은 art/source, 파생 출력은 art/exports, Unity 사본은 Assets/DotAction/Art입니다. 동기화할 때 .meta를 보존합니다.
+- .aseprite 원본은 art/source, 파생 출력은 art/exports, Unity 사본은 Assets/Art입니다. 동기화할 때 .meta를 보존합니다.
 - 캐릭터는 32×32, 공통 심벌은 16×16이며 슬롯·카드에서 같은 원본을 공유합니다.
 - ArtReference는 정적 스타일 확인 씬입니다. 전투·슬롯 추첨·증강 로직이 구현됐다고 보고하지 않습니다.
 - 정적 UI는 씬에 저장합니다. 최초 씬 구성 도구는 기존 씬을 덮어쓰지 않습니다.
@@ -20,3 +20,11 @@
 - Unity 시트 가져오기 변경은 실제 배치 실행 로그와 생성된 .anim/.controller/.prefab으로 확인한다. 플레이 화면을 보지 않았다면 게임 내 표시를 완료로 기록하지 않는다.
 
 근거: 2026-11-16 실제 MCP·브라우저·Aseprite·Unity 배치 실행 기록. 샘플 환류는 편집 도구 흐름 안정화 후 검토한다.
+
+## 프로젝트 폴더
+
+- `Assets` 안에 프로젝트 이름을 반복하는 상위 폴더를 만들지 않습니다.
+- 아트·씬·데이터·프리팹·머티리얼·애니메이션은 `Assets`의 용도별 폴더를 사용하고 코드는 `Assets/Scripts/Runtime`, `Assets/Scripts/Editor`에 둡니다.
+- 외부 자산의 `TurnRoom`, `polyperfect` 원본 분류는 보존합니다. 이동 시 파일의 `.meta`와 GUID를 함께 보존하고 빌드 씬 및 도구의 문자열 경로도 갱신합니다.
+- 근거: 사용자의 중복 내부 프로젝트 폴더 정리 요청과 이동 전후 GUID 대조 기록.
+

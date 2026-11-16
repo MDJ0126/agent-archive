@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-16T08:47:07.962Z",
+  "changed": [
+    "Assets\\DotAction\\Editor\\CombatDataSetup.cs",
+    "Assets\\DotAction\\Editor\\CombatSceneSetup.cs",
+    "Assets\\DotAction\\Editor\\PixelArtImporter.cs",
+    "Assets\\DotAction\\Editor\\ProjectSetup.cs",
+    "Assets\\DotAction\\Editor\\SpriteStudio\\SpriteSheetBuilder.cs",
+    "tools\\prepare-art-report.mjs",
+    "tools\\Sync-Art.ps1",
+    "docs\\art-workflow.md",
+    "docs\\pixel-combat.md",
+    "docs\\project-guidelines.md",
+    "docs\\sprite-studio.md",
+    "docs\\unity-setup.md"
+  ]
+}

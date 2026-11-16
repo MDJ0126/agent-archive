@@ -1,0 +1,36 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Assets 내부의 중복 DotAction 폴더 제거와 경로 정리 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/dotaction/assets/sym_bolt.png" alt="DotAction 로고"><span>DotAction</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Assets 내부의 중복 DotAction 폴더 제거와 경로 정리</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">아트·데이터·씬을 Assets 용도별 폴더로 옮기고 코드는 Scripts에 정리했습니다. 메타 81개의 GUID와 해시를 보존했습니다.</p><div class="post-byline"><time datetime="2026-11-16T08:50:32.236Z">2026년 11월 16일 오후 5:50 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>Assets/DotAction 중복 상위 폴더를 제거했습니다. Animation·Art·Data·Materials·Prefabs는 Assets 아래로, Runtime·Editor는 Assets/Scripts 아래로 이동했습니다. 두 씬은 기존 Assets/Scenes에 합쳤습니다. TurnRoom·polyperfect와 기존 SampleScene은 보존했습니다.</p>
+<p><figure><img class="report-image" src="../assets/reference-board.png" alt="아트 기준 세트 대표 이미지 - 폴더 변경 화면 증거는 아님" loading="lazy"><figcaption>아트 기준 세트 대표 이미지 - 폴더 변경 화면 증거는 아님</figcaption></figure></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<h3 id="section-4">변경 전후 구조</h3>
+<pre><code data-language="text">전: Assets/DotAction/{Animation,Art,Data,Editor,Materials,Prefabs,Runtime,Scenes}
+후: Assets/{Animation,Art,Data,Materials,Prefabs,Scenes}
+    Assets/Scripts/{Editor,Runtime}
+</code></pre>
+<p>기존 AssetDatabase 이동 도구를 준비했으나 열린 Unity가 백그라운드에서 새 요청을 처리하지 않아 도구와 요청 파일을 정리하고 파일·메타를 함께 이동했습니다. 작업 전 절대 경로와 충돌을 검사하고 빈 폴더만 제거했습니다.</p>
+<p>스프라이트 가져오기, Sprite Studio 시트 빌더, 전투 데이터/씬 구성, 아트 동기화와 현재 문서의 경로를 새 구조로 갱신했습니다. 네임스페이스와 어셈블리 이름은 유지합니다. 과거 결과 보고의 당시 경로는 기록으로 보존합니다.</p>
+<pre class="mermaid">flowchart LR
+ A[기존 에셋과 메타 목록 기록] --&gt; B[대상 경로와 충돌 확인]
+ B --&gt; C[폴더와 메타 함께 이동]
+ C --&gt; D[기존 Scenes에 파일 합치기]
+ D --&gt; E[코드와 빌드 씬 경로 갱신]
+ E --&gt; F[GUID와 해시 대조]
+</pre>
+<h3 id="section-5">대화 기록</h3>
+<p>사용자는 프로젝트 이름과 같은 내부 폴더가 불필요하므로 정리를 요청했습니다. 용도별 폴더를 Assets에 배치하고 코드만 Scripts에 모았습니다.</p>
+<p>프로젝트 지침에 프로젝트 이름을 반복하는 래퍼 폴더를 만들지 않는 규칙을 추가했습니다. 전역 지침은 변경하지 않았습니다. Unity 샘플 환류는 제품 폴더 정리이므로 보류했습니다.</p>
+<h2 id="section-6">검증</h2>
+<p>이동 전 .meta 목록을 기록하고 이동 후 81개 파일의 GUID·SHA256이 모두 같은지 대조했습니다. 오류는 0개입니다. 기존 Scenes와 합치며 중복 폴더 자체의 메타 1개는 제거했으며 씬 파일의 메타는 보존했습니다. Assets/DotAction이 없는 것을 확인했습니다. 빌드 씬 경로 Assets/Scenes/PixelCombat.unity와 Assets/Scenes/ArtReference.unity가 모두 존재합니다. 현재 소스·도구·문서에서 과거 경로가 남지 않은 것을 rg로 확인했습니다.</p>
+<p><a class="report-link" href="../assets/folder-migration/folder-migration-before.json">이동 전 목록</a> · <a class="report-link" href="../assets/folder-migration/folder-migration-verification.json">이동 후 대조</a> · <a class="report-link" href="../assets/folder-migration/folder-migration-path-updates.json">문자열 경로 수정 목록</a></p>
+<p>자동 테스트는 작성·실행하지 않았습니다. 현재 열린 에디터를 종료·재시작하지 않았습니다. Unity의 재가져오기·재컴파일 결과는 아직 미확인입니다.</p>
+<p>Unity 창의 비활성 상태 캡처는 대상 앱을 정확히 촬영하지 못해 폐기했습니다. 포커스를 바꾸어 사용자 작업을 방해하지 않았으며 폴더 정리의 실제 전후 화면은 미확보입니다. 대표 아트 이미지는 화면 증거로 사용하지 않습니다.</p>
+<h2 id="section-7">남은 사항</h2>
+<p>열린 Unity가 새 경로를 재가져온 후 컴파일·씬 표시 확인이 남아 있습니다. 게임 소스 커밋·푸시는 하지 않았으며 결과 보고서만 중앙 저장소에 게시합니다. 다른 작업의 에셋과 열린 씬은 보존했습니다.</p>
+<h2 id="section-8">작업 시간</h2>
+<ul>
+<li>제안 시간: 5<del>10분; 폴더 정리 후 보고서 공개 확인 2</del>4분 추가 안내</li>
+<li>실제로 완료된 시간: 7분 35초; 시작 2026-11-16 17:42:36 KST, 정리·정적 대조 완료 및 보고서 작성 2026-11-16 17:50:10 KST. 공개 배포 확인 시간은 별도입니다.</li>
+<li>XERJ: 미사용 — 연결 확인·호출 없음. 검색은 rg 사용.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-20261116085032236-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-20261116085032236-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-6">검증</a><a href="#section-7">남은 사항</a><a href="#section-8">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=7aeceb334e38"><script type="module" src="../../../assets/report-visuals.js?v=7aeceb334e38"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

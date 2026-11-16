@@ -1,5 +1,35 @@
 [
   {
+    "title": "Assets 내부의 중복 DotAction 폴더 제거와 경로 정리",
+    "summary": "아트·데이터·씬을 Assets 용도별 폴더로 옮기고 코드는 Scripts에 정리했습니다. 메타 81개의 GUID와 해시를 보존했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116085032236-v1.0.0.html",
+    "date": "2026-11-16T08:50:32.236Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "변경 이력 대조 후 원래 관리자 톱니바퀴 복원",
+    "summary": "사용자가 요청한 원래 톱니바퀴 링크를 이력에서 확인해 문구 버튼과 임의 테두리를 제거하고 기존 모양으로 복원했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-16-result-20261116084707159-v1.0.0.html",
+    "date": "2026-11-16T08:47:07.159Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 사이트 관리 버튼 복원과 노출 확인",
+    "summary": "운영 HTML에서 누락된 관리자 링크를 사이트 관리라는 글자 버튼으로 복원하고 데스크톱·모바일에서 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-16-result-20261116083949892-v1.0.0.html",
+    "date": "2026-11-16T08:39:49.892Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Sprite Studio: 균일 도트 보정·애니메이션 편집·로컬 MCP 구현",
     "summary": "도트 보정·픽셀 드로잉·프레임 편집기와 MCP 11개 도구를 구현했습니다. 실제 MCP 드로잉·브라우저 저장·Aseprite 출력·Unity 임포트를 확인했으며 현재 대화의 MCP 도구 노출은 미확인입니다.",
     "project": "dotaction",
