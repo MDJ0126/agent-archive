@@ -72,7 +72,10 @@ if(diagrams.length){
     diagram.textContent=source;
     diagram.removeAttribute('data-processed');
     try{
-     await mermaid.run({nodes:[diagram]});
+     const id=`tracefolio-diagram-${index}-${theme}`;
+     const {svg:markup,bindFunctions}=await mermaid.render(id,source);
+     diagram.innerHTML=markup;
+     bindFunctions?.(diagram);
      const svg=diagram.querySelector('svg');
      if(svg)svg.style.minWidth=`${svg.viewBox.baseVal.width}px`;
      diagram.scrollLeft=scrollLeft;
