@@ -82,5 +82,9 @@
   "overdox": {
     "name": "OVERDOX 복원",
     "logo": null
+  },
+  "dotaction": {
+    "name": "DotAction",
+    "logo": "projects/dotaction/assets/sym_bolt.png"
   }
 }

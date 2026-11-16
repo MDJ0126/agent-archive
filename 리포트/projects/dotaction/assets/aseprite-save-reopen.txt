@@ -1,0 +1,9 @@
+C:\Projects\DotAction\art\source\characters\player\chr_player.aseprite | 32x32 | layers=5 | modified=false
+C:\Projects\DotAction\art\source\characters\enemies\chr_enemy_scrapper.aseprite | 32x32 | layers=5 | modified=false
+C:\Projects\DotAction\art\source\symbols\sym_blade.aseprite | 16x16 | layers=1 | modified=false
+C:\Projects\DotAction\art\source\symbols\sym_bolt.aseprite | 16x16 | layers=1 | modified=false
+C:\Projects\DotAction\art\source\symbols\sym_guard.aseprite | 16x16 | layers=1 | modified=false
+C:\Projects\DotAction\art\source\ui\ui_slot_cell.aseprite | 32x32 | layers=1 | modified=false
+C:\Projects\DotAction\art\source\cards\ui_card_frame.aseprite | 96x128 | layers=1 | modified=false
+C:\Projects\DotAction\art\source\environment\tile_floor.aseprite | 16x16 | layers=1 | modified=false
+reference-board | 640x360 | modified=false
