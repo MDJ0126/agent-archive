@@ -1,0 +1,1 @@
+cameraEuler=(35.26, 45.00, 0.00); palette=32; objectComposite=False; poseFps=12; animatorEnabled=False; billboardRightDot=1.000000; billboardUpDot=1.000000; steps=5; shots=10; errors=0

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "Assets/Scenes/PixelCombat.unity",
+    "sha256": "B49B461F5DEF3402D10857484CC2DC6D55073FEE54F42AD140EBCCC0BFC067F9",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Settings/UniversalRP.asset",
+    "sha256": "D9A44A60EF059F10CD919B8AC1A03CE123FF979FAC726022D315FA7E134B9DE2",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Data/CombatRenderer.asset",
+    "sha256": "2D8ADEA85615132C284B9DE61FE8B6D2CA773CA57C853D5D7204218B28084E3F",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Data/CombatPixels.asset",
+    "sha256": "C0537ED197E7CE3AE2CFC783B0E1BE7A15E9CD6CB38B3EFCA9941042FF1D8286",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Data/CombatPalette.asset",
+    "sha256": "243107DDE611BF12EC6FD81DCB87918EA6774916390DC75AEF749A86A4037C50",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Scripts/Runtime/HealthBillboard.cs",
+    "sha256": "9BC27B1D4AF0D9198A1820975C6C756539B099562C87305271B9C0BB7EF0EA62",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Scripts/Runtime/CombatPixelStyle.cs",
+    "sha256": "E4800498F2DD16E7A288F75FE5C44939E313AE5CC2044E052E5C6402C158A948",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Scripts/Rendering/CombatPixelRendererFeature.cs",
+    "sha256": "F9AAB8CD8FF7133D40855D513DBC1508A8F4AF59D9035E7744047072194F7B92",
+    "matchesExecutionCopy": true
+  },
+  {
+    "path": "Assets/Materials/Combat/Shaders/CombatFinalPixel.shader",
+    "sha256": "7AE19F40FFA8E5787A6BA12FA4B7A26CC7094149796E8E6B8A6AC6EAB42A2AA4",
+    "matchesExecutionCopy": true
+  }
+]

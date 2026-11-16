@@ -1,0 +1,1 @@
+elapsed=45.79; steps=54; shots=60; kills=24; wave=3; health=84; finished=True; errors=0
