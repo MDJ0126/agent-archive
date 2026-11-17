@@ -76,7 +76,7 @@
     "logo": null
   },
   "github-blog": {
-    "name": "문동준 개발 블로그",
-    "logo": null
+    "name": "MIRO",
+    "logo": "projects/github-blog/assets/miro-logo.svg"
   }
 }
