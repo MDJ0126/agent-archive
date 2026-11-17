@@ -1,5 +1,15 @@
 [
   {
+    "title": "캐릭터 역광 오류 수정: 불을 등지면 몸통을 어둡게",
+    "summary": "화면 좌표를 공간 높이로 취급하던 오류와 기본 밝기1을 수정해 불 뒤·앞의 명암을 실제 렌더에서 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117100322509-v1.0.0.html",
+    "date": "2026-11-17T10:03:22.509Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "캐릭터 근접광 입체 명암과 자동 추정 노멀",
     "summary": "마을 플레이어와 NPC가 모닥불·등불·가로등 방향에 따라 입체적인 도트 명암을 표시합니다.",
     "project": "dotaction",
