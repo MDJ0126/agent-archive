@@ -10,7 +10,8 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, c=>({'&':'&amp;','
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const linking=url.pathname==='/_access'&&['GET','POST'].includes(request.method);
+    if (["/", prefix+"/", "/_access"].includes(url.pathname)) console.info(JSON.stringify({tag:"device-flow", hasRegisteredDevice: Boolean(deviceCookie(request))}));
+    const linking=url.pathname==='/_access'&&['GET','HEAD','POST'].includes(request.method);
     const managing=url.pathname===prefix+'/admin/rule'&&request.method==='POST';
     if (!['GET','HEAD'].includes(request.method)&&!linking&&!managing) return denied();
     if (!linking&&url.pathname !== '/'&&url.pathname !== prefix && !url.pathname.startsWith(prefix+'/')) return denied();
@@ -33,7 +34,8 @@ export default {
           device=new URLSearchParams(input).get('device')||'';
         }else device=url.searchParams.get('device')||'';
         if(!registered.some(rule=>rule.value===device))return denied();
-        return new Response(null,{status:303,headers:{location:prefix+'/','cache-control':'no-store','referrer-policy':'no-referrer','set-cookie':`__Host-tracefolio_device=${device}; Max-Age=31536000; Path=/; Secure; HttpOnly; SameSite=Lax`}});
+        const connected='<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>보고 사이트 연결</title><body><p>보고 사이트에 연결하고 있습니다.</p><p><a href="'+prefix+'/">보고 사이트 열기</a></p><script>history.replaceState(null,"",location.pathname);location.replace('+JSON.stringify(prefix+'/')+')</script></body></html>';
+        return new Response(request.method==='HEAD'?null:connected,{status:200,headers:{'content-type':'text/html;charset=utf-8','cache-control':'private, no-store','referrer-policy':'no-referrer','x-robots-tag':'noindex, nofollow','set-cookie':`__Host-tracefolio_device=${device}; Max-Age=31536000; Path=/; Secure; HttpOnly; SameSite=Lax`}});
       }
       const device = deviceCookie(request);
       if (!device||!registered.some(rule=>rule.value===device)) return denied();
