@@ -1,5 +1,15 @@
 [
   {
+    "title": "8클래스·공유 동료 호흡 대기 모션64프레임 추가",
+    "summary": "8클래스에8프레임씩 대기 모션을 추가했습니다. 호흡·무기·망토·눈 깜빡임을 별도 시트로 연결하고 실제 Godot 플레이어·동료 렌더러에서 양방향8프레임을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117081156940-v1.0.0.html",
+    "date": "2026-11-17T08:11:56.940Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "재의 약탈자 양손도끼 충전 지면 강타·원형 에어본 구현",
     "summary": "일반 평타를 유지하며 약탈자를 방패 없는 양손도끼로 재제작했습니다. 충전 원형 강타·실제 에어본·지면 FX를 연결하고 Godot에서 범위와 이동 제한을 확인했습니다.",
     "project": "dotaction",
