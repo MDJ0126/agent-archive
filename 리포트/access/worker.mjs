@@ -55,7 +55,18 @@ export default {
       }
       if (url.pathname===prefix) return new Response(null,{status:302,headers:{location:prefix+'/','cache-control':'no-store'}});
       url.pathname=url.pathname.slice(prefix.length);
-      const asset=await env.ASSETS.fetch(new Request(url,request));
+      const sourcePath=url.pathname.endsWith('/')?url.pathname+'index.html':url.pathname;
+      const extension=sourcePath.split('.').at(-1).toLowerCase();
+      const mime={html:'text/html;charset=utf-8',css:'text/css;charset=utf-8',js:'text/javascript;charset=utf-8',mjs:'text/javascript;charset=utf-8',json:'application/json;charset=utf-8',md:'text/markdown;charset=utf-8'};
+      const sourceUrl='https://raw.githubusercontent.com/MDJ0126/codex-config/main/'+encodeURIComponent('리포트')+sourcePath;
+      let asset;
+      // Read current published reports only after authorization; retain packaged assets as fallback.
+      if(mime[extension]){
+        try{const current=await fetch(sourceUrl,{signal:AbortSignal.timeout(5000)});if(current.ok){const currentHeaders=new Headers(current.headers);currentHeaders.set('content-type',mime[extension]);asset=new Response(current.body,{status:current.status,headers:currentHeaders});}}catch{}
+      }
+      if(!asset)asset=await env.ASSETS.fetch(new Request(url,request));
+      if(asset.status===404&&!mime[extension]){try{const current=await fetch(sourceUrl,{signal:AbortSignal.timeout(5000)});if(current.ok)asset=current;}catch{}}
+      if(asset.status===404&&extension==='html')return new Response(null,{status:302,headers:{location:prefix+'/?missing='+encodeURIComponent(sourcePath),'cache-control':'private, no-store'}});
       const headers=new Headers(asset.headers);
       headers.set('cache-control','private, no-store');
       headers.set('x-robots-tag','noindex, nofollow');
