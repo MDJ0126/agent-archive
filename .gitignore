@@ -13,6 +13,8 @@
 !리포트/
 !리포트/**
 리포트/.site/
+리포트/.public-site/
+리포트/access/.wrangler/
 !tools/
 !tools/affinity-cli/
 !tools/affinity-cli/**
