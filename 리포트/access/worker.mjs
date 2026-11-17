@@ -10,7 +10,6 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, c=>({'&':'&amp;','
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (["/", prefix+"/", "/_access"].includes(url.pathname)) console.info(JSON.stringify({tag:"device-flow", hasRegisteredDevice: Boolean(deviceCookie(request))}));
     const linking=url.pathname==='/_access'&&['GET','HEAD','POST'].includes(request.method);
     const managing=url.pathname===prefix+'/admin/rule'&&request.method==='POST';
     if (!['GET','HEAD'].includes(request.method)&&!linking&&!managing) return denied();
