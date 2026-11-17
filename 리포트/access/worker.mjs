@@ -60,7 +60,7 @@ export default {
       let asset;
       // Read current published reports only after authorization; retain packaged assets as fallback.
       if(mime[extension]){
-        try{const current=await fetch(sourceUrl,{signal:AbortSignal.timeout(5000)});if(current.ok){const currentHeaders=new Headers(current.headers);currentHeaders.set('content-type',mime[extension]);asset=new Response(current.body,{status:current.status,headers:currentHeaders});}}catch{}
+        try{const current=await fetch(sourceUrl,{signal:AbortSignal.timeout(5000)});if(current.ok){const currentHeaders=new Headers();currentHeaders.set('content-type',mime[extension]);asset=new Response(current.body,{status:current.status,headers:currentHeaders});}}catch{}
       }
       if(!asset)asset=await env.ASSETS.fetch(new Request(url,request));
       if(asset.status===404&&!mime[extension]){try{const current=await fetch(sourceUrl,{signal:AbortSignal.timeout(5000)});if(current.ok)asset=current;}catch{}}
