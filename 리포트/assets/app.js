@@ -5,6 +5,17 @@ import {matchesRecord} from './filter-core.mjs?v=project-tree-1';
 const buttons=[...document.querySelectorAll('[data-filter]')],projectButtons=[...document.querySelectorAll('[data-project-filter]')],groupButtons=[...document.querySelectorAll('[data-group-filter]')],stageButtons=[...document.querySelectorAll('[data-stage-filter]')],records=[...document.querySelectorAll('.record')];
 const guidelinesLinks=[...document.querySelectorAll('[data-project-guidelines-for]')];
 const filters={type:'전체',project:'전체',group:'all',stage:'all',query:'',date:''};
+const moreToggle=document.querySelector('#project-more-toggle'),moreProjects=document.querySelector('#project-more');
+if(moreToggle&&moreProjects){
+ const key='tracefolio:project-more:v1',day=24*60*60*1000,closedLabel=moreToggle.textContent;let expiresAt=0,timer;
+ function renderMore(expanded){moreProjects.hidden=!expanded;moreToggle.setAttribute('aria-expanded',String(expanded));moreToggle.textContent=expanded?'접기':closedLabel;}
+ function expireMore(){clearTimeout(timer);if(expiresAt>Date.now()){timer=setTimeout(expireMore,expiresAt-Date.now());return;}expiresAt=0;renderMore(false);try{localStorage.removeItem(key);}catch{}}
+ function restoreMore(){let saved;try{saved=JSON.parse(localStorage.getItem(key));}catch{}expiresAt=Number(saved?.expiresAt)||0;if(expiresAt>Date.now()&&expiresAt<=Date.now()+day){renderMore(saved.expanded===true);expireMore();}else{expiresAt=0;expireMore();}}
+ moreToggle.addEventListener('click',()=>{const expanded=moreProjects.hidden;expiresAt=Date.now()+day;renderMore(expanded);try{localStorage.setItem(key,JSON.stringify({expanded,expiresAt}));}catch{}expireMore();});
+ window.addEventListener('storage',event=>{if(event.key===key||event.key===null)restoreMore();});
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)expireMore();});
+ restoreMore();
+}
 const renderActivity=createActivityGrass(document.querySelector('.activity-board'),date=>{filters.date=date;update();});
 function select(group,button){for(const b of group){b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));}}
 for(const button of document.querySelectorAll('[data-collection-toggle]'))button.addEventListener('click',()=>{const children=document.getElementById(button.getAttribute('aria-controls'));children.hidden=!children.hidden;button.setAttribute('aria-expanded',String(!children.hidden));});
