@@ -7,6 +7,12 @@
 .project-sidebar button>span.collection-symbol{flex:0 0 18px;font-size:18px;color:var(--muted)}
 .project-sidebar .collection-toggle{flex:0 0 23px;width:23px;justify-content:center;padding:5px 2px;font-size:16px;min-height:32px}
 .collection-toggle[aria-expanded=false]{transform:rotate(-90deg)}
+.project-sidebar #project-more-toggle{width:calc(100% - 16px);min-height:36px;justify-content:center;gap:7px;margin:10px 8px 6px;padding:10px 4px 4px;border:0;border-top:1px dashed var(--line);border-radius:0;background:transparent;color:var(--muted);font-size:11px;font-weight:400;box-shadow:none}
+.project-sidebar #project-more-toggle::after{content:'';width:6px;height:6px;margin-top:-3px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.project-sidebar #project-more-toggle[aria-expanded=true]::after{margin-top:3px;transform:rotate(225deg)}
+.project-sidebar #project-more-toggle:hover{background:transparent;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.project-sidebar #project-more-toggle:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media(max-width:760px){.project-sidebar #project-more-toggle{width:auto;flex-shrink:0;margin:0 4px;padding:8px 12px;border-top:0;border-left:1px dashed var(--line)}}
 .project-children{border-left:1px solid var(--line);margin:4px 0 4px 18px;padding-left:8px}
 .project-children button{padding:9px 6px}.project-sidebar button.contains-active{color:var(--green);font-weight:600}
 @media(max-width:760px){.project-collection{border-top:0;border-left:1px solid var(--line);margin:0 0 0 5px;padding:0 0 0 8px;min-width:180px}.project-children{display:flex;gap:5px;white-space:nowrap;border-left:0;margin:3px 0 0;padding-left:0}.project-children button{flex-shrink:0}.collection-head>button:first-child{white-space:nowrap}}
@@ -49,7 +55,7 @@
  html[data-theme=dark] :is(.header-nav>a,.record-meta,.form-field>span){color:#f0a27b}
  html[data-theme=dark] :is(.post-summary,.form-field,.post-rail a,.post-rail>span,.submit-panel>p){color:#bdc9d9}
  html[data-theme=dark] :is(.sidebar-label,.sidebar-note,.stage-subfilters small,.list-summary button,.ticket-id,.ticket-date,.priority-tag,.table-heading,.post-rail p,.form-field small,footer,.number,.arrow){color:#a4b1c3}
- html[data-theme=dark] :is(.table-heading,.table-scroll th,.table-scroll tbody tr:nth-child(even),code:where(:not(pre code)),.project-fallback,.report-groups span,.stage-tag,.detail-workflow>span){background:#253244;color:#bcc9da}
+ html[data-theme=dark] :is(.table-heading,.table-scroll th,.table-scroll tbody tr:nth-child(even),code,.project-fallback,.report-groups span,.stage-tag,.detail-workflow>span){background:#253244;color:#bcc9da}
  html[data-theme=dark] .project-logo{background:#e7ecf3}
  html[data-theme=dark] .report-groups{border-color:var(--line)}
  html[data-theme=dark] .report-groups button{background:transparent}

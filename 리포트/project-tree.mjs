@@ -15,7 +15,7 @@ export function projectTree(posts,projects,groups,icon){
  const recent=new Set(ordered.length>5?ordered.slice(0,5):[]);
  const roots=ordered.filter(id=>!membership[id]&&!recent.has(id)).map(item).join('');
  const branches=Object.entries(groups).filter(([,g])=>g.projects.some(p=>!recent.has(p))).map(([id,g])=>`<section class="project-collection"><div class="collection-head"><button data-project-filter="collection:${esc(id)}" data-project-members="${g.projects.join(' ')}" aria-pressed="false"><span class="collection-symbol" aria-hidden="true">▦</span><span>${esc(g.name)}</span><b>${g.projects.reduce((n,p)=>n+count(p),0)}</b></button><button class="collection-toggle" data-collection-toggle="${esc(id)}" aria-expanded="true" aria-controls="children-${esc(id)}" aria-label="${esc(g.name)} 소항목 접기·펼치기">⌄</button></div><div class="project-children" id="children-${esc(id)}">${g.projects.filter(p=>!recent.has(p)).sort((a,b)=>(latest.get(b)||0)-(latest.get(a)||0)).map(item).join('')}</div></section>`).join('');
- return recent.size?`${[...recent].map(item).join('')}<button type="button" id="project-more-toggle" aria-expanded="false" aria-controls="project-more">더보기 (${ordered.length-5})</button><div id="project-more" hidden>${roots+branches}</div>`:roots+branches;
+ return recent.size?`${[...recent].map(item).join('')}<button type="button" id="project-more-toggle" aria-expanded="false" aria-controls="project-more">다른 프로젝트 ${ordered.length-5}개 펼치기</button><div id="project-more" hidden>${roots+branches}</div>`:roots+branches;
 }
 export function projectOptions(projects,groups){
  const membership=projectMembership(groups,projects),label=id=>groups[membership[id]]?.labels?.[id]||projects[id].name,option=id=>`<option value="${esc(id)}">${esc(label(id))}</option>`;

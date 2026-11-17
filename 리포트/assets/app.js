@@ -8,7 +8,7 @@ const filters={type:'전체',project:'전체',group:'all',stage:'all',query:'',d
 const moreToggle=document.querySelector('#project-more-toggle'),moreProjects=document.querySelector('#project-more');
 if(moreToggle&&moreProjects){
  const key='tracefolio:project-more:v1',day=24*60*60*1000,closedLabel=moreToggle.textContent;let expiresAt=0,timer;
- function renderMore(expanded){moreProjects.hidden=!expanded;moreToggle.setAttribute('aria-expanded',String(expanded));moreToggle.textContent=expanded?'접기':closedLabel;}
+ function renderMore(expanded){moreProjects.hidden=!expanded;moreToggle.setAttribute('aria-expanded',String(expanded));moreToggle.textContent=expanded?'다른 프로젝트 접기':closedLabel;}
  function expireMore(){clearTimeout(timer);if(expiresAt>Date.now()){timer=setTimeout(expireMore,expiresAt-Date.now());return;}expiresAt=0;renderMore(false);try{localStorage.removeItem(key);}catch{}}
  function restoreMore(){let saved;try{saved=JSON.parse(localStorage.getItem(key));}catch{}expiresAt=Number(saved?.expiresAt)||0;if(expiresAt>Date.now()&&expiresAt<=Date.now()+day){renderMore(saved.expanded===true);expireMore();}else{expiresAt=0;expireMore();}}
  moreToggle.addEventListener('click',()=>{const expanded=moreProjects.hidden;expiresAt=Date.now()+day;renderMore(expanded);try{localStorage.setItem(key,JSON.stringify({expanded,expiresAt}));}catch{}expireMore();});
