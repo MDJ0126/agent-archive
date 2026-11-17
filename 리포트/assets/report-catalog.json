@@ -1,5 +1,25 @@
 [
   {
+    "title": "캐릭터 근접광 입체 명암과 자동 추정 노멀",
+    "summary": "마을 플레이어와 NPC가 모닥불·등불·가로등 방향에 따라 입체적인 도트 명암을 표시합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117095340498-v1.0.0.html",
+    "date": "2026-11-17T09:53:40.498Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "스킬 슈퍼 아머와 노랑·빨강 지속 하이라이트",
+    "summary": "플레이어·동료의 스킬 시전 중 피해를 유지하며 기본 경직·밀림·띄우기를 막고 노랑에서 빨강으로 이어지는 하이라이트를 표시합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117092037818-v1.0.0.html",
+    "date": "2026-11-17T09:20:37.818Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "네 클래스의 고유 전용 동작과 전투 FX 추가",
     "summary": "궁수 화살비·암살자 돌진 처형·흑마도사 뼈손·총잡이 무릎 관통 사격을 새24자세와 판정/FX로 연결하고 평타를 유지했습니다.",
     "project": "dotaction",
