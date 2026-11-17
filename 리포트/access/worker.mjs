@@ -3,8 +3,16 @@ const encoder = new TextEncoder();
 const denied = () => new Response('<!doctype html><html><meta charset="utf-8"><title>403 Forbidden</title><h1>403 Forbidden</h1></html>', {status:403, headers:{'content-type':'text/html;charset=utf-8','cache-control':'private, no-store','x-robots-tag':'noindex, nofollow','referrer-policy':'no-referrer'}});
 const digest = async value => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(value))), b => b.toString(16).padStart(2,'0')).join('');
 function deviceCookie(request) {
-  return (request.headers.get('cookie') || '').split(';').map(v=>v.trim()).find(v=>v.startsWith('__Host-tracefolio_device='))?.slice(25) || '';
+  const raw=request.headers.get('cookie')||'';
+  // Use the same device identifier as the portfolio/blog; retain existing connections.
+  for(const name of ['site_device_id','__Host-tracefolio_device']){
+    const match=raw.match(new RegExp('(?:^|;\\s*)'+name+'=([^;]+)'));
+    if(match){try{const id=decodeURIComponent(match[1]);if(/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id))return id;}catch{}}
+  }
+  return '';
 }
+function deviceHeader(id){return 'site_device_id='+id+'; Max-Age=31536000; Path=/; Secure; HttpOnly; SameSite=Lax';}
+
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 export default {
@@ -34,7 +42,7 @@ export default {
         }else device=url.searchParams.get('device')||'';
         if(!registered.some(rule=>rule.value===device))return denied();
         const connected='<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>보고 사이트 연결</title><body><p>보고 사이트에 연결하고 있습니다.</p><p><a href="'+prefix+'/">보고 사이트 열기</a></p><script>history.replaceState(null,"",location.pathname);location.replace('+JSON.stringify(prefix+'/')+')</script></body></html>';
-        return new Response(request.method==='HEAD'?null:connected,{status:200,headers:{'content-type':'text/html;charset=utf-8','cache-control':'private, no-store','referrer-policy':'no-referrer','x-robots-tag':'noindex, nofollow','set-cookie':`__Host-tracefolio_device=${device}; Max-Age=31536000; Path=/; Secure; HttpOnly; SameSite=Lax`}});
+        return new Response(request.method==='HEAD'?null:connected,{status:200,headers:{'content-type':'text/html;charset=utf-8','cache-control':'private, no-store','referrer-policy':'no-referrer','x-robots-tag':'noindex, nofollow','set-cookie':deviceHeader(device)}});
       }
       const device = deviceCookie(request);
       if (!device||!registered.some(rule=>rule.value===device)) return denied();
@@ -68,6 +76,7 @@ export default {
       if(asset.status===404&&extension==='html')return new Response(null,{status:302,headers:{location:prefix+'/?missing='+encodeURIComponent(sourcePath),'cache-control':'private, no-store'}});
       const headers=new Headers(asset.headers);
       headers.set('cache-control','private, no-store');
+      if(asset.ok)headers.append('set-cookie',deviceHeader(device));
       headers.set('x-robots-tag','noindex, nofollow');
       const location=headers.get('location');
       if(location){const target=new URL(location,url);if(target.origin===url.origin&&!target.pathname.startsWith(prefix+'/')){target.pathname=prefix+target.pathname;headers.set('location',target.pathname+target.search+target.hash)}}
