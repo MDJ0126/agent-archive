@@ -1,0 +1,34 @@
+[
+  {
+    "path": "Assets/Scenes/PixelCombat.unity",
+    "equal": true
+  },
+  {
+    "path": "Assets/Data/CombatPixels.asset",
+    "equal": true
+  },
+  {
+    "path": "C:\\Projects\\DotAction\\Assets\\Scripts\\Runtime\\ArcBolt.cs",
+    "equal": true
+  },
+  {
+    "path": "C:\\Projects\\DotAction\\Assets\\Scripts\\Runtime\\CombatActor.cs",
+    "equal": true
+  },
+  {
+    "path": "C:\\Projects\\DotAction\\Assets\\Scripts\\Runtime\\CombatCameraFollow.cs",
+    "equal": true
+  },
+  {
+    "path": "C:\\Projects\\DotAction\\Assets\\Scripts\\Runtime\\CombatGrid.cs",
+    "equal": true
+  },
+  {
+    "path": "C:\\Projects\\DotAction\\Assets\\Scripts\\Runtime\\CombatSession.cs",
+    "equal": true
+  },
+  {
+    "path": "C:\\Projects\\DotAction\\Assets\\Scripts\\Runtime\\GridMotor.cs",
+    "equal": true
+  }
+]

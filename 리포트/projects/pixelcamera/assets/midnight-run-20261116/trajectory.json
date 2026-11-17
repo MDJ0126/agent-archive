@@ -1,0 +1,19 @@
+{
+    "frames": 91099,
+    "forwardSteps": 91098,
+    "backwardSteps": 0,
+    "leftwardSteps": [
+        91098,
+        91097,
+        91097
+    ],
+    "recycles": [
+        0,
+        1,
+        1
+    ],
+    "seconds": 17.00060272216797,
+    "distance": 127.6547622680664,
+    "maxFollowError": 0.0000045299530029296879,
+    "passed": true
+}

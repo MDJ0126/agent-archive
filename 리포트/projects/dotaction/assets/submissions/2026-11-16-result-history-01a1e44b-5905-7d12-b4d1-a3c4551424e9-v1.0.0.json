@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "자동 승인 검토가 원본 외 작업 사본·설정·로그·솔루션 파일의 일괄 삭제를 거절했습니다. 남은 Unity 검증 사본(.tools/style-preview, .tools/c",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "자동 승인 검토가 원본 외 작업 사본·설정·로그·솔루션 파일의 일괄 삭제를 거절했습니다. 남은 Unity 검증 사본(.tools/style-preview, .tools/combat-preview), 루트 UserSettings·Logs, Unity용 .csproj·.sln·.vsconfig도 모두 삭제할까요? GodotGame과 art·tools는 유지합니다.\n- 남은 Unity 관련 항목도 모두 삭제\n- 원본 삭제까지만 진행\n\n**Unity 프로젝트와 검증 사본·설정·로그·솔루션 파일을 삭제했습니다.**\n\n배경 큐브는 없애고 **낮은 석재 잔해·돌바닥·풀 지형**으로 교체했습니다.\n\n수정된 Windows 빌드 (당시 로컬 자료; 공개 첨부 미확인)\n\n빌드·헤드리스 실행 성공. 실제 화면의 가림 상태는 **미확인**입니다.\n\n제안 5분 / 실제 **3분 10초**, **21:21:43 KST** 완료했습니다.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T12:21:48.000Z / 세션 턴 실측 203초. 보고서 복원: 2026-11-17T07:40:29.812Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

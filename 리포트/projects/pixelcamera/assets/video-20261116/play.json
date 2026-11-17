@@ -1,0 +1,12 @@
+{
+    "unity": "6000.0.83f1",
+    "colourSpace": "Linear",
+    "pipeline": "Built-in DX11",
+    "sourceScene": "05-NeonRooftops.unity",
+    "frames": 14234,
+    "movingFrames": 14233,
+    "changedPoseFrames": 20,
+    "captureCount": 4,
+    "simulatedSeconds": 1.6916327476501465,
+    "sourcePresetPreserved": true
+}

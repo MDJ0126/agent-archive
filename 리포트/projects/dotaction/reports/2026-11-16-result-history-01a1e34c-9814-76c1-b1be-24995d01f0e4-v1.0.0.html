@@ -1,0 +1,57 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Aseprite 기준의 아트 규격 v0.1과 README·문서·공통 팔레트를 구성했습니다. 이번 결과는 제작 기준이며, 실제 캐릭터·카드 그림은 아직 제작하지 않았습니다. · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/theme.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/discussions.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/manuals.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/copy-links.css?v=376b70681a1b"><script defer src="../../../assets/copy-links.js?v=376b70681a1b"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">D</span><span>DotAction</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Aseprite 기준의 아트 규격 v0.1과 README·문서·공통 팔레트를 구성했습니다. 이번 결과는 제작 기준이며, 실제 캐릭터·카드 그림은 아직 제작하지 않았습니다.</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">지난 작업 개별 복원 보고: 도트 스타일 통일 방법 찾기</p><div class="post-byline"><time datetime="2026-11-16T07:45:27.000Z">2026년 11월 16일 오후 4:45 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p><strong>Aseprite 기준의 아트 규격 v0.1과 README·문서·공통 팔레트를 구성했습니다.</strong> 이번 결과는 제작 기준이며, 실제 캐릭터·카드 그림은 아직 제작하지 않았습니다.</p>
+<p>스타일은 <strong>어두운 외곽선 + 황동 장비 + 청록 에너지 + 보라 증강 효과</strong>로 잡았습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>대상</th>
+<th>규격</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>플레이어·일반 적</td>
+<td>32×32, 발바닥 기준점 통일</td>
+</tr>
+<tr>
+<td>공유 심벌</td>
+<td>16×16, 슬롯·카드에서 동일 원본 사용</td>
+</tr>
+<tr>
+<td>슬롯 셀</td>
+<td>32×32</td>
+</tr>
+<tr>
+<td>카드 프레임</td>
+<td>96×128, 글자·수치는 엔진에서 표시</td>
+</tr>
+<tr>
+<td>공통 표현</td>
+<td>32색, 1px 외곽선, 왼쪽 위 광원</td>
+</tr>
+</tbody></table>
+</div><p>전투 시점은 <strong>옆모습 임시안</strong>입니다. 시점 확정 후 캐릭터를 대량 제작하도록 명시했습니다.</p>
+<p>아트 정리는 <strong>Aseprite + 폴더 + 에셋 목록 + Git</strong>으로 시작합니다.</p>
+<ul>
+<li><code>art/source/</code>: 편집 가능한 <code>.aseprite</code> 원본</li>
+<li><code>art/exports/</code>: 게임용 PNG·애니메이션 JSON</li>
+<li><code>art/palettes/</code>: 공통 팔레트</li>
+<li><code>art/catalog/</code>: 에셋 ID·경로·승인 상태</li>
+<li><code>art/previews/</code>: 전체 스타일 비교 화면</li>
+</ul>
+<p>먼저 README (당시 로컬 자료; 공개 첨부 미확인)를 보시면 됩니다. 상세 내용은 아트 규격 (당시 로컬 자료; 공개 첨부 미확인), 첫 제작 세트 (당시 로컬 자료; 공개 첨부 미확인), 제작·정리 절차 (당시 로컬 자료; 공개 첨부 미확인)에 담았습니다. Aseprite용 팔레트 (당시 로컬 자료; 공개 첨부 미확인)도 만들었습니다. GPL 불러오기는 <a class="report-link" href="https://aseprite.org/docs/tutorial/color-bar-tutorial/">공식 지원 형식</a>입니다.</p>
+<p>색상 32개의 중복 여부·팔레트 파일 일치·문서 링크는 확인했습니다. <strong>Aseprite 실제 불러오기, 그림 제작·시각 검증, 커밋·푸시·공개 보고서 배포는 미완료</strong>입니다.</p>
+<p><strong>제안 시간:</strong> 10~20분<br><strong>실제 완료:</strong> 4분 51초, 2026-11-16 16:45:10 KST</p>
+<h2 id="section-4">검증</h2>
+<p>당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 당시 보고의 제안 시간 참조. 없으면 미기록.</li>
+<li>실제로 완료된 시간: 당시 세션 종료: 2026-11-16T07:45:27.000Z / 세션 턴 실측 317초. 보고서 복원: 2026-11-17T07:40:29.844Z</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-history-01a1e34c-9814-76c1-b1be-24995d01f0e4-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-history-01a1e34c-9814-76c1-b1be-24995d01f0e4-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

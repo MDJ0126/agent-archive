@@ -1,0 +1,77 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>처음에는 ‘자동 검증 프로그램’을 만들고, 그 위에 ‘AI QA 봇’을 붙이는 방식이 좋습니다. AI가 플레이하거나 화면을 살펴보고, 프로그램이 오류 여부를 판정하도록 역 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/theme.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/discussions.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/manuals.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/copy-links.css?v=376b70681a1b"><script defer src="../../../assets/copy-links.js?v=376b70681a1b"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">D</span><span>DotAction</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>처음에는 ‘자동 검증 프로그램’을 만들고, 그 위에 ‘AI QA 봇’을 붙이는 방식이 좋습니다. AI가 플레이하거나 화면을 살펴보고, 프로그램이 오류 여부를 판정하도록 역</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">지난 작업 개별 복원 보고: QA 테스터</p><div class="post-byline"><time datetime="2026-11-16T10:56:45.000Z">2026년 11월 16일 오후 7:56 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p><strong>처음에는 ‘자동 검증 프로그램’을 만들고, 그 위에 ‘AI QA 봇’을 붙이는 방식이 좋습니다.</strong> AI가 플레이하거나 화면을 살펴보고, 프로그램이 오류 여부를 판정하도록 역할을 나누면 결과를 믿고 활용하기 쉽습니다.</p>
+<p>말씀하신 세 가지는 이렇게 구분할 수 있습니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>형태</th>
+<th>하는 일</th>
+<th>적합한 용도</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>QA 프로그램</td>
+<td>정해진 동작을 실행하고 기대 결과와 비교</td>
+<td>반복 검사, 수정 후 문제 재발 확인</td>
+</tr>
+<tr>
+<td>QA 봇</td>
+<td>화면과 상태를 보고 다음 행동을 선택</td>
+<td>다양한 경로 탐색, 예상 밖 상황 찾기</td>
+</tr>
+<tr>
+<td>AI QA 테스터</td>
+<td>요구사항을 읽고 검사 계획·실행·버그 보고까지 수행</td>
+<td>넓은 범위의 QA 보조</td>
+</tr>
+</tbody></table>
+</div><p>현재 작업 중인 <strong>DotAction을 대상으로 생각하신다면</strong>, 다음 구성이 출발점으로 적합합니다. 게임 프로젝트인지는 아직 미확인이라, 아래는 게임을 가정한 예시입니다.</p>
+<p><strong>1. 먼저 검사할 행동 하나를 정합니다.</strong></p>
+<p>처음부터 “게임 전체를 테스트하는 AI”를 목표로 잡으면 문제가 생겼을 때 원인을 구분하기 어렵습니다. 예를 들어 다음처럼 시작합니다.</p>
+<blockquote>
+<p>게임 실행 → 스테이지 진입 → 이동 → 공격 → 적 처치 → 결과 확인</p>
+</blockquote>
+<p>각 단계에 성공 조건을 붙입니다. “공격 버튼을 눌렀다”는 실행 기록이고, “적 체력이 감소했다”가 검증 결과입니다.</p>
+<p><strong>2. 게임에 QA용 관찰·조작 통로를 만듭니다.</strong></p>
+<p>화면 인식만으로 모든 것을 판단하기보다, 개발 빌드에서 다음 정보를 읽고 행동을 실행할 수 있게 만드는 편이 정확합니다.</p>
+<ul>
+<li>관찰: 현재 씬, 플레이어 위치·체력, 적 수, 진행 상태, 오류 로그</li>
+<li>조작: 이동, 공격, 상호작용, 스테이지 초기화</li>
+<li>재현: 시작 상태와 난수 시드 고정, 입력 순서 기록</li>
+</ul>
+<p>실제 키보드·마우스 입력 검증도 따로 필요하지만, 내부 상태를 함께 읽으면 “왜 실패했는지”까지 파악하기 쉬워집니다.</p>
+<p><strong>3. 판정은 명확한 규칙부터 만듭니다.</strong></p>
+<p>예를 들면 다음과 같습니다.</p>
+<ul>
+<li>벽을 통과하면 실패</li>
+<li>체력이 0인데 계속 행동할 수 있으면 실패</li>
+<li>완료 조건을 충족했는데 결과 화면이 나오지 않으면 실패</li>
+<li>제한 시간 동안 진행 상태가 바뀌지 않으면 멈춤 의심</li>
+</ul>
+<p>화면이 이상하거나 조작감이 어색한 문제는 AI가 <strong>의심 사례</strong>로 모으게 하고, 확정 오류와 구분하는 것이 좋습니다.</p>
+<p><strong>4. 그다음 AI에게 탐색을 맡깁니다.</strong></p>
+<p>AI에게는 “아무거나 테스트해”보다 구체적인 목표를 줍니다.</p>
+<blockquote>
+<p>“이 스테이지에서 이동 불가능한 상태를 찾아라. 발견하면 마지막 행동과 위치를 기록해라.”</p>
+</blockquote>
+<p>구조는 다음 정도면 충분합니다.</p>
+<p><code>대상 프로그램 ↔ 관찰·조작 인터페이스 ↔ QA 실행기 ↔ AI 탐색기</code></p>
+<p>QA 실행기는 시간 제한, 초기화, 판정, 증거 저장을 담당하고 AI는 탐색할 행동을 선택합니다.</p>
+<p><strong>5. 결과물은 재현 가능한 버그 보고서로 만듭니다.</strong></p>
+<p>최소한 빌드 버전, 시작 조건, 재현 순서, 기대 결과와 실제 결과, 로그·화면, 재현 횟수가 남아야 합니다. AI가 발견한 경로를 저장해 다시 실행할 수 있어야 수정 여부도 확인할 수 있습니다.</p>
+<p>제가 권하는 첫 완성 기준은 **“대표 시나리오 하나를 자동 실행하고, 실패하면 증거와 재현 순서를 저장한다”**입니다. 이후 시나리오를 늘리고 AI 탐색을 추가하시면 됩니다.</p>
+<p>만드시려는 대상은 <strong>DotAction 같은 게임인가요, 웹·앱인가요?</strong> 그리고 주로 찾고 싶은 것이 <strong>기능 오류, 화면 문제, 플레이 중 버그</strong> 중 무엇인지 알려주시면 구현 구조를 구체적으로 잡아드리겠습니다.</p>
+<h2 id="section-4">검증</h2>
+<p>당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 당시 보고의 제안 시간 참조. 없으면 미기록.</li>
+<li>실제로 완료된 시간: 당시 세션 종료: 2026-11-16T10:56:45.000Z / 세션 턴 실측 28초. 보고서 복원: 2026-11-17T07:40:29.842Z</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-history-01a1e400-238d-77e3-ae8a-cf847057b958-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-history-01a1e400-238d-77e3-ae8a-cf847057b958-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

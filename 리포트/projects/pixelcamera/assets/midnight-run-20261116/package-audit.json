@@ -1,0 +1,14 @@
+{
+  "sha256": "79db0667e010e18a4e188195b1fbdaaaf22c78c1be01ef6cfd25ea0c801658ea",
+  "bytes": 80681626,
+  "files": 2885,
+  "packageStageDifferences": [],
+  "canonicalDifferences": [
+    "Assets/TurnRoom/Templete/Editor/WindowMouseActivationGuard.cs:asset"
+  ],
+  "intentionalBaselineExclusions": [
+    "Assets/TurnRoom/Templete/Editor/WindowMouseActivationGuard.cs:asset"
+  ],
+  "unexpectedDifferences": [],
+  "passed": true
+}

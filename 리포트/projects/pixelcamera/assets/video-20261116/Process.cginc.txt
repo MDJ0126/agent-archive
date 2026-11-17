@@ -1,0 +1,142 @@
+#ifndef TURNROOM_PIXEL_CAMERA_PROCESS
+#define TURNROOM_PIXEL_CAMERA_PROCESS
+sampler2D _PCDepthNormals, _PCOutlineMask;
+sampler3D _PaletteLut;
+float _PaletteLinear,_PaletteMode,_PaletteLutSize,_DitherSize,_Bevel;
+float4 _DitherPattern[16],_OutlineHighlight,_BevelDirection;
+float _Levels, _Dither, _Outline, _OutlineWidth, _DepthThreshold, _NormalThreshold, _UseNormals, _UseMask, _PaletteStrength, _SingleSideOutline;
+float4 _PixelSize, _OutlineColor, _Palette[64], _PaletteLab[64];
+float _SeparateInnerEdges,_InnerEdgeStrength,_ObjectColorOutline,_ObjectOutlineShade;
+float4 _InnerEdgeLight;
+int _PaletteCount;
+float3 PCPaletteHSV(float3 rgb)
+{
+    float v=max(rgb.r,max(rgb.g,rgb.b)),m=min(rgb.r,min(rgb.g,rgb.b)),d=v-m;
+    float h=0;if(d>1e-10)h=(v==rgb.r?(rgb.g-rgb.b)/d:v==rgb.g?(rgb.b-rgb.r)/d+2:(rgb.r-rgb.g)/d+4)/6;
+    return float3(frac(h),v>1e-10?d/v:0,v);
+}
+float3 PCOutlineLighting(float3 flat,float2 direction)
+{
+    float facing=dot(direction/max(.00001,length(direction)),_BevelDirection.xy/max(.00001,length(_BevelDirection.xy)));
+    return lerp(flat,lerp(flat,_OutlineHighlight.rgb,saturate(facing)),_Bevel);
+}
+
+float3 PCToOKLab(float3 rgb)
+{
+    if (_PaletteLinear < .5)
+    {
+        rgb = lerp(pow(max((rgb + .055) / 1.055, 0), 2.4), rgb / 12.92, step(rgb, .04045));
+    }
+    float3 lms = float3(dot(rgb, float3(.4122214708, .5363325363, .0514459929)),
+        dot(rgb, float3(.2119034982, .6806995451, .1073969566)),
+        dot(rgb, float3(.0883024619, .2817188376, .6299787005)));
+    lms = sign(lms) * pow(abs(lms), 1.0 / 3.0);
+    return float3(dot(lms, float3(.2104542553, .7936177850, -.0040720468)),
+        dot(lms, float3(1.9779984951, -2.4285922050, .4505937099)),
+        dot(lms, float3(.0259040371, .7827717662, -.8086757660)));
+}
+
+float3 PCMapPalette(float3 rgb)
+{
+    if(_PaletteCount<=0)return rgb;
+    if(_PaletteMode>2.5){float3 address=(floor(saturate(rgb)*(_PaletteLutSize-1)+.5)+.5)/_PaletteLutSize;return tex3D(_PaletteLut,address).rgb;}
+    float distance=1e20;float3 closest=rgb;float3 hsv=_PaletteMode>.5&&_PaletteMode<1.5?PCPaletteHSV(rgb):0;float3 lab=_PaletteMode>1.5?PCToOKLab(rgb):0;
+    [loop]for(int p=0;p<_PaletteCount;p++)
+    {
+        float3 delta=rgb-_Palette[p].rgb;float candidate=dot(delta*delta,float3(.2126,.7152,.0722));
+        if(_PaletteMode>1.5){float3 deltaLab=lab-_PaletteLab[p].rgb;candidate=dot(deltaLab,deltaLab);}
+        else if(_PaletteMode>.5){float3 other=PCPaletteHSV(_Palette[p].rgb);float hue=abs(hsv.x-other.x);hue=min(hue,1-hue);candidate=hue*hue*4*hsv.y*other.y+(hsv.y-other.y)*(hsv.y-other.y)*.5+(hsv.z-other.z)*(hsv.z-other.z);}
+        if(candidate<distance){distance=candidate;closest=_Palette[p].rgb;}
+    }
+    return closest;
+}
+float4 ProcessPixelCameraColor(float2 uv, float4 color, sampler2D source)
+{
+    uint side=(uint)max(2,_DitherSize);uint2 cell=(uint2)fmod(floor(uv*_PixelSize.xy),side);uint patternIndex=cell.y*side+cell.x;
+    float threshold=_DitherPattern[patternIndex/4][patternIndex%4]-.5;
+    float levels = max(1, _Levels - 1);
+    if (_Levels < 256) color.rgb = floor(saturate(color.rgb + threshold * _Dither / levels) * levels + .5) / levels;
+    float3 edgeSurfaceColor=color.rgb;
+    if (_Outline > .5)
+    {
+        float depth; float3 normal;
+        DecodeDepthNormal(tex2D(_PCDepthNormals, uv), depth, normal);
+        float edge = 0;
+        float outerEdge=0,innerEdge=0,innerFacing=0;
+        float3 innerColor=color.rgb;
+        float2 edgeDirection=0;
+        float selected = _UseMask > .5 ? tex2D(_PCOutlineMask, uv).r : 1;
+        [unroll] for (int i = 0; i < 4; i++)
+        {
+            float2 direction = i == 0 ? float2(1,0) : i == 1 ? float2(-1,0) : i == 2 ? float2(0,1) : float2(0,-1);
+            float2 neighborUV = uv + direction * _PixelSize.zw * _OutlineWidth;
+            float otherDepth; float3 otherNormal;
+            DecodeDepthNormal(tex2D(_PCDepthNormals, neighborUV), otherDepth, otherNormal);
+            float delta = abs(depth - otherDepth) / max(.001, min(depth, otherDepth));
+            float discontinuity = step(_DepthThreshold, delta);
+            float depthEdge=discontinuity;
+            float normalEdge=0;
+            if (_UseNormals < .5)
+            {
+                if (_SingleSideOutline < .5) discontinuity *= step(otherDepth + .00001, depth);
+            }
+            else if (depth < .999 && otherDepth < .999)
+            {
+                normalEdge=step(_NormalThreshold, 1 - dot(normal, otherNormal));
+                discontinuity=max(discontinuity,normalEdge);
+            }
+            float owner=1;
+            if (_SingleSideOutline > .5)
+            {
+                // Assign every detected boundary to only one of its two pixels.
+                // The nearer surface owns depth edges; equal-depth creases use
+                // a fixed direction so mirrored comparisons cannot both paint.
+                owner = depth < otherDepth - .000001 ? 1 : abs(depth - otherDepth) <= .000001 && (i == 0 || i == 2) ? 1 : 0;
+                discontinuity *= owner;
+            }
+            float affected = _UseMask > .5 ? max(selected, tex2D(_PCOutlineMask, neighborUV).r) : 1;
+            edge = max(edge, discontinuity * affected);
+            edgeDirection+=direction*discontinuity*affected;
+            outerEdge=max(outerEdge,depthEdge*owner*affected);
+            float crease=normalEdge*(1-depthEdge)*owner*affected;
+            innerEdge=max(innerEdge,crease);
+            if(crease>.5)
+            {
+                float3 n=normal+otherNormal;n=dot(n,n)>.000001?normalize(n):normal;
+                float facing=max(0,dot(n,normalize(_InnerEdgeLight.xyz+float3(0,0,.000001))))*saturate(_InnerEdgeLight.w);
+                float3 neighborColor=tex2D(source,neighborUV).rgb;
+                if(dot(neighborColor,float3(.2126,.7152,.0722))>dot(innerColor,float3(.2126,.7152,.0722)))innerColor=neighborColor;
+                innerFacing=max(innerFacing,facing);
+            }
+        }
+        if(_SeparateInnerEdges>.5)
+        {
+            // Internal highlights inherit the already lit neighbouring face;
+            // light direction controls their visibility, not a fixed white tint.
+            color.rgb=lerp(color.rgb,innerColor,innerEdge*innerFacing*_InnerEdgeStrength);
+            float3 contour=_ObjectColorOutline>.5?edgeSurfaceColor*_ObjectOutlineShade:PCOutlineLighting(_OutlineColor.rgb,edgeDirection);
+            color.rgb=lerp(color.rgb,contour,outerEdge*_OutlineColor.a);
+        }
+        else color.rgb = lerp(color.rgb, PCOutlineLighting(_OutlineColor.rgb,edgeDirection), edge * _OutlineColor.a);
+    }
+    color.rgb=PCMapPalette(color.rgb + (_PaletteCount > 0 ? threshold * _Dither / max(2, _PaletteCount - 1) : 0));
+    return color;
+}
+float4 PCFinishPalette(float2 uv, float4 color)
+{
+    uint side=(uint)max(2,_DitherSize);
+    uint2 cell=(uint2)fmod(floor(uv*_PixelSize.xy),side);
+    uint index=cell.y*side+cell.x;
+    float threshold=_DitherPattern[index/4][index%4]-.5;
+    if (_PaletteCount > 0 && _PaletteStrength > 0)
+    {
+        float3 mapped=PCMapPalette(color.rgb+threshold*_Dither/max(2,_PaletteCount-1));
+        color.rgb=lerp(color.rgb,mapped,_PaletteStrength);
+    }
+    return color;
+}
+float4 ProcessPixelCamera(float2 uv, float4 color, sampler2D source)
+{
+    return PCFinishPalette(uv,ProcessPixelCameraColor(uv,color,source));
+}
+#endif

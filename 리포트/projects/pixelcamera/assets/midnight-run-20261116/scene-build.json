@@ -1,0 +1,12 @@
+{
+    "runnerSize": {
+        "x": 1.8355008363723755,
+        "y": 2.4945006370544435,
+        "z": 1.2069206237792969
+    },
+    "bones": 21,
+    "renderers": 55,
+    "clip": "Scene",
+    "scene": "Assets/TurnRoom/PixoraStudio/PixelCamera/Samples/Scenes/05-NeonRooftops.unity",
+    "duration": 0.5000000596046448
+}

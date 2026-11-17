@@ -78,5 +78,17 @@
   "github-blog": {
     "name": "문동준 개발 블로그",
     "logo": null
+  },
+  "overdox": {
+    "name": "OVERDOX 복원",
+    "logo": null
+  },
+  "dotaction": {
+    "name": "DotAction",
+    "logo": "projects/dotaction/assets/sym_bolt.png"
+  },
+  "snsmanager": {
+    "logo": "projects/snsmanager/assets/logo.svg",
+    "name": "SNSManager"
   }
 }

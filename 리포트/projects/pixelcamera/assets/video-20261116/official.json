@@ -1,0 +1,128 @@
+{
+  "unity": "6000.0.83f1",
+  "category": "Tools/Camera",
+  "package": "PixoraStudio-1.0.1.unitypackage",
+  "validatorStatus": "RanToCompletion",
+  "error": "",
+  "pass": 27,
+  "warning": 2,
+  "fail": 0,
+  "checks": [
+    {
+      "name": "Check Audio Clipping",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Colliders",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Compressed Files",
+      "status": "Warning"
+    },
+    {
+      "name": "Check Demo Scenes",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Documentation",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Empty Prefabs",
+      "status": "Pass"
+    },
+    {
+      "name": "Check File Menu Names",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Line Endings",
+      "status": "Pass"
+    },
+    {
+      "name": "Check LODs",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Mesh Prefabs",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Missing Components in Assets",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Missing Components in Scenes",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Model Orientation",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Model Types",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Normal Map Textures",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Particle Systems",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Path Lengths",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Prefab Transforms",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Script Compilation",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Shader Compilation",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Texture Dimensions",
+      "status": "Pass"
+    },
+    {
+      "name": "Check Type Namespaces",
+      "status": "Pass"
+    },
+    {
+      "name": "Remove Executable Files",
+      "status": "Pass"
+    },
+    {
+      "name": "Remove JavaScript Files",
+      "status": "Pass"
+    },
+    {
+      "name": "Remove JPG Files",
+      "status": "Warning"
+    },
+    {
+      "name": "Remove Lossy Audio Files",
+      "status": "Pass"
+    },
+    {
+      "name": "Remove Mixamo Files",
+      "status": "Pass"
+    },
+    {
+      "name": "Remove SpeedTree Files",
+      "status": "Pass"
+    },
+    {
+      "name": "Remove Video Files",
+      "status": "Pass"
+    }
+  ]
+}

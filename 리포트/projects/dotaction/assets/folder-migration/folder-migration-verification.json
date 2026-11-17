@@ -1,0 +1,421 @@
+{
+  "at": "2026-11-16T08:48:51.267Z",
+  "wrapperRemoved": true,
+  "metaFilesPreserved": 81,
+  "mergedFolderMetadataRemoved": [
+    "Assets/DotAction/Scenes.meta"
+  ],
+  "buildScenes": [
+    "Assets/Scenes/PixelCombat.unity",
+    "Assets/Scenes/ArtReference.unity"
+  ],
+  "errors": [],
+  "preserved": [
+    {
+      "old": "Assets/DotAction/Animation/Goblin.controller.meta",
+      "new": "Assets/Animation/Goblin.controller.meta",
+      "guid": "d412d4f5e7b331841abb5640b5e094dd"
+    },
+    {
+      "old": "Assets/DotAction/Animation/Ranger.controller.meta",
+      "new": "Assets/Animation/Ranger.controller.meta",
+      "guid": "ed4270d8e47728f4e8ebd22c33219bda"
+    },
+    {
+      "old": "Assets/DotAction/Animation/Skeleton.controller.meta",
+      "new": "Assets/Animation/Skeleton.controller.meta",
+      "guid": "dbee26ade15ab084b9e2de48993b2bf5"
+    },
+    {
+      "old": "Assets/DotAction/Animation.meta",
+      "new": "Assets/Animation.meta",
+      "guid": "e6e04375967d9ca4791bba7281a8ca84"
+    },
+    {
+      "old": "Assets/DotAction/Art/cards/ui_card_frame.png.meta",
+      "new": "Assets/Art/cards/ui_card_frame.png.meta",
+      "guid": "aa77b135c437c21478f07b3a56cf671e"
+    },
+    {
+      "old": "Assets/DotAction/Art/cards.meta",
+      "new": "Assets/Art/cards.meta",
+      "guid": "38af7cd261b4faf4dbc012e297143c72"
+    },
+    {
+      "old": "Assets/DotAction/Art/characters/enemies/chr_enemy_scrapper.png.meta",
+      "new": "Assets/Art/characters/enemies/chr_enemy_scrapper.png.meta",
+      "guid": "c78d41844b0128a469406c0f942f13e0"
+    },
+    {
+      "old": "Assets/DotAction/Art/characters/enemies.meta",
+      "new": "Assets/Art/characters/enemies.meta",
+      "guid": "58be981b89bc7ab4d89ab71abbb97f41"
+    },
+    {
+      "old": "Assets/DotAction/Art/characters/player/chr_player.png.meta",
+      "new": "Assets/Art/characters/player/chr_player.png.meta",
+      "guid": "69b07f27f8db74d4cbfe683c4af7e8d5"
+    },
+    {
+      "old": "Assets/DotAction/Art/characters/player.meta",
+      "new": "Assets/Art/characters/player.meta",
+      "guid": "02e59ea2362f4444699912d65ba89306"
+    },
+    {
+      "old": "Assets/DotAction/Art/characters.meta",
+      "new": "Assets/Art/characters.meta",
+      "guid": "1fa43a89f6fc3034cae43c07614bef60"
+    },
+    {
+      "old": "Assets/DotAction/Art/environment/tile_floor.png.meta",
+      "new": "Assets/Art/environment/tile_floor.png.meta",
+      "guid": "1ec303093054bb34cb635d0ddc5d7ba8"
+    },
+    {
+      "old": "Assets/DotAction/Art/environment.meta",
+      "new": "Assets/Art/environment.meta",
+      "guid": "66e9bd27861840641aa3cc691ebaf5c1"
+    },
+    {
+      "old": "Assets/DotAction/Art/Previews/reference-background.png.meta",
+      "new": "Assets/Art/Previews/reference-background.png.meta",
+      "guid": "23097a2fd8727c94abda74b5d02cc371"
+    },
+    {
+      "old": "Assets/DotAction/Art/Previews.meta",
+      "new": "Assets/Art/Previews.meta",
+      "guid": "1f046289e38460d4f8162ac63dfb3836"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674.json.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674.json.meta",
+      "guid": "8662f9127cf2c914e8448efd2565fc47"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674.png.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674.png.meta",
+      "guid": "0b125532c437f464994e83884aa18c29"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation/animation.controller.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation/animation.controller.meta",
+      "guid": "4cbee844b98981c45a668447c2676201"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation/character.prefab.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation/character.prefab.meta",
+      "guid": "40a87468ac4f5224ca6a66fceff2fad6"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation/clip_0.anim.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation/clip_0.anim.meta",
+      "guid": "1a42a29e2e71a6244acc171525dda1a7"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1/animation.controller.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1/animation.controller.meta",
+      "guid": "cb0b69d28d4029c419fd6566e0541444"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1/character.prefab.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1/character.prefab.meta",
+      "guid": "90c7d44e78956fc4da23c04777bff2df"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1/clip_0.anim.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1/clip_0.anim.meta",
+      "guid": "d15bfcfa33510f64fbd39f0d14062ed8"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation 1.meta",
+      "guid": "86aa27f43247cf941a97b5818f2c8218"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation.meta",
+      "new": "Assets/Art/sprite-studio/demo_scarf_idle-r9-1794817492674_animation.meta",
+      "guid": "22dcd80770bdae34abdf96ceae3c8818"
+    },
+    {
+      "old": "Assets/DotAction/Art/sprite-studio.meta",
+      "new": "Assets/Art/sprite-studio.meta",
+      "guid": "1c0f7a667331a424581093bd7ef08b45"
+    },
+    {
+      "old": "Assets/DotAction/Art/symbols/sym_blade.png.meta",
+      "new": "Assets/Art/symbols/sym_blade.png.meta",
+      "guid": "92e82fa4aae135f4ebb706739c0ce2b9"
+    },
+    {
+      "old": "Assets/DotAction/Art/symbols/sym_bolt.png.meta",
+      "new": "Assets/Art/symbols/sym_bolt.png.meta",
+      "guid": "c65cb6143b479354790ba52e79da5c6f"
+    },
+    {
+      "old": "Assets/DotAction/Art/symbols/sym_guard.png.meta",
+      "new": "Assets/Art/symbols/sym_guard.png.meta",
+      "guid": "a7e8626d7083fdf4f8f3f2d6d36cc764"
+    },
+    {
+      "old": "Assets/DotAction/Art/symbols.meta",
+      "new": "Assets/Art/symbols.meta",
+      "guid": "f0cd256381353e744b89e908c9de534b"
+    },
+    {
+      "old": "Assets/DotAction/Art/ui/ui_slot_cell.png.meta",
+      "new": "Assets/Art/ui/ui_slot_cell.png.meta",
+      "guid": "d7a694478ec7a9d41ac089b9172bc3ad"
+    },
+    {
+      "old": "Assets/DotAction/Art/ui.meta",
+      "new": "Assets/Art/ui.meta",
+      "guid": "e6d6ae9d202997a47a8f4334dd967360"
+    },
+    {
+      "old": "Assets/DotAction/Art.meta",
+      "new": "Assets/Art.meta",
+      "guid": "8eaa4bc0c17f8ad47965c7e0a6a610a6"
+    },
+    {
+      "old": "Assets/DotAction/Data/CombatPixels.asset.meta",
+      "new": "Assets/Data/CombatPixels.asset.meta",
+      "guid": "a501263a5ee0f4640aad97d293945a9f"
+    },
+    {
+      "old": "Assets/DotAction/Data/CombatRenderer.asset.meta",
+      "new": "Assets/Data/CombatRenderer.asset.meta",
+      "guid": "b3def26be3f13424e929118d69c9d468"
+    },
+    {
+      "old": "Assets/DotAction/Data/CombatStats.xlsx.meta",
+      "new": "Assets/Data/CombatStats.xlsx.meta",
+      "guid": "beab7fd74196b9d439a33d7b4eb3f96c"
+    },
+    {
+      "old": "Assets/DotAction/Data.meta",
+      "new": "Assets/Data.meta",
+      "guid": "56306a20aa5e4ae4d9d00718135f7166"
+    },
+    {
+      "old": "Assets/DotAction/Editor/CombatCapture.cs.meta",
+      "new": "Assets/Scripts/Editor/CombatCapture.cs.meta",
+      "guid": "395c76883e36c0842b841a17138fd0a2"
+    },
+    {
+      "old": "Assets/DotAction/Editor/CombatDataSetup.cs.meta",
+      "new": "Assets/Scripts/Editor/CombatDataSetup.cs.meta",
+      "guid": "0408bf375cc0af8478b974c76570e103"
+    },
+    {
+      "old": "Assets/DotAction/Editor/CombatSceneSetup.cs.meta",
+      "new": "Assets/Scripts/Editor/CombatSceneSetup.cs.meta",
+      "guid": "9e63e7fa700142047b0d8af6315d50c1"
+    },
+    {
+      "old": "Assets/DotAction/Editor/DotAction.Editor.asmdef.meta",
+      "new": "Assets/Scripts/Editor/DotAction.Editor.asmdef.meta",
+      "guid": "eeaed0dd9f33e674ca52211e02b54895"
+    },
+    {
+      "old": "Assets/DotAction/Editor/PixelArtImporter.cs.meta",
+      "new": "Assets/Scripts/Editor/PixelArtImporter.cs.meta",
+      "guid": "5ef2cd08d208744499da3d2ac2aac288"
+    },
+    {
+      "old": "Assets/DotAction/Editor/ProjectSetup.cs.meta",
+      "new": "Assets/Scripts/Editor/ProjectSetup.cs.meta",
+      "guid": "5d283df81cef8fc4497118b1c0566f07"
+    },
+    {
+      "old": "Assets/DotAction/Editor/SpriteStudio/DotAction.SpriteStudio.Editor.asmdef.meta",
+      "new": "Assets/Scripts/Editor/SpriteStudio/DotAction.SpriteStudio.Editor.asmdef.meta",
+      "guid": "21df7b414292ab54bb4abdede4d381be"
+    },
+    {
+      "old": "Assets/DotAction/Editor/SpriteStudio/SpriteSheetBuilder.cs.meta",
+      "new": "Assets/Scripts/Editor/SpriteStudio/SpriteSheetBuilder.cs.meta",
+      "guid": "56104d8281c2b9e49ba51e0202a7f633"
+    },
+    {
+      "old": "Assets/DotAction/Editor/SpriteStudio.meta",
+      "new": "Assets/Scripts/Editor/SpriteStudio.meta",
+      "guid": "7ff7892ea56f3df45956338bd1526c2e"
+    },
+    {
+      "old": "Assets/DotAction/Editor.meta",
+      "new": "Assets/Scripts/Editor.meta",
+      "guid": "f87babc04a9d93540ab70b88a86e4e85"
+    },
+    {
+      "old": "Assets/DotAction/Materials/chr_enemy_scrapper.mat.meta",
+      "new": "Assets/Materials/chr_enemy_scrapper.mat.meta",
+      "guid": "ecb2e42cde8306b419f5b8e7a15e6d19"
+    },
+    {
+      "old": "Assets/DotAction/Materials/chr_player.mat.meta",
+      "new": "Assets/Materials/chr_player.mat.meta",
+      "guid": "44b5ea46b621c3d498d6a8798cb55cb4"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/Aether.mat.meta",
+      "new": "Assets/Materials/Combat/Aether.mat.meta",
+      "guid": "dc080b2f8a8389947a9f699643b2dc1b"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/Antique Brass.mat.meta",
+      "new": "Assets/Materials/Combat/Antique Brass.mat.meta",
+      "guid": "e67f76d51c219b54b9462fdb617a452b"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/Dark Stone.mat.meta",
+      "new": "Assets/Materials/Combat/Dark Stone.mat.meta",
+      "guid": "db74bec9f85f1d645822c8ae3a61e96c"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/Enemy Vitality.mat.meta",
+      "new": "Assets/Materials/Combat/Enemy Vitality.mat.meta",
+      "guid": "f6e1b96cc84a1d84e86af6bc3afa58d8"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/Health Background.mat.meta",
+      "new": "Assets/Materials/Combat/Health Background.mat.meta",
+      "guid": "42155d90982e22c4bbd57e4292de4bf6"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/M_Dwarf_Ranger_Male Combat.mat.meta",
+      "new": "Assets/Materials/Combat/M_Dwarf_Ranger_Male Combat.mat.meta",
+      "guid": "f1665f8cfb37aac4fab6fa6e36a1722c"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/M_Goblin_Warrior_Male Combat.mat.meta",
+      "new": "Assets/Materials/Combat/M_Goblin_Warrior_Male Combat.mat.meta",
+      "guid": "b025566e4d1da164abc65a9bbb3d87bc"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/M_Skeleton_Basic Combat.mat.meta",
+      "new": "Assets/Materials/Combat/M_Skeleton_Basic Combat.mat.meta",
+      "guid": "d3f717781696bd447b5551ff0b53fb43"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat/Stone.mat.meta",
+      "new": "Assets/Materials/Combat/Stone.mat.meta",
+      "guid": "ae3d2b9b2d20c3d43b1daba40b5381f8"
+    },
+    {
+      "old": "Assets/DotAction/Materials/Combat.meta",
+      "new": "Assets/Materials/Combat.meta",
+      "guid": "45b6615cfb1ee814eb9a96aa43bff1d6"
+    },
+    {
+      "old": "Assets/DotAction/Materials/reference-background.mat.meta",
+      "new": "Assets/Materials/reference-background.mat.meta",
+      "guid": "763f802bd1527734581587834c099bf2"
+    },
+    {
+      "old": "Assets/DotAction/Materials/sym_blade.mat.meta",
+      "new": "Assets/Materials/sym_blade.mat.meta",
+      "guid": "8d183c35720f6184c9a4ec73e6cd6286"
+    },
+    {
+      "old": "Assets/DotAction/Materials/sym_bolt.mat.meta",
+      "new": "Assets/Materials/sym_bolt.mat.meta",
+      "guid": "667f1fbcdafb1b1469a07cc8d97408a5"
+    },
+    {
+      "old": "Assets/DotAction/Materials/sym_guard.mat.meta",
+      "new": "Assets/Materials/sym_guard.mat.meta",
+      "guid": "62f2be3f895129a40ac3fc0c04fe0e71"
+    },
+    {
+      "old": "Assets/DotAction/Materials/ui_card_frame.mat.meta",
+      "new": "Assets/Materials/ui_card_frame.mat.meta",
+      "guid": "70d92ea7d75e9fe4bb704bd127de7fce"
+    },
+    {
+      "old": "Assets/DotAction/Materials/ui_slot_cell.mat.meta",
+      "new": "Assets/Materials/ui_slot_cell.mat.meta",
+      "guid": "7bac227c2ddddeb44b9ebdbda3e77a0c"
+    },
+    {
+      "old": "Assets/DotAction/Materials.meta",
+      "new": "Assets/Materials.meta",
+      "guid": "4d072b0da788d104f96dda21ae67c7dd"
+    },
+    {
+      "old": "Assets/DotAction/Prefabs/Combat/AetherBolt.prefab.meta",
+      "new": "Assets/Prefabs/Combat/AetherBolt.prefab.meta",
+      "guid": "74aa8410a20be184e8e24be2762e4472"
+    },
+    {
+      "old": "Assets/DotAction/Prefabs/Combat/Goblin.prefab.meta",
+      "new": "Assets/Prefabs/Combat/Goblin.prefab.meta",
+      "guid": "ab4d97340775d0f47b4c37b0a7b789ee"
+    },
+    {
+      "old": "Assets/DotAction/Prefabs/Combat/Ranger.prefab.meta",
+      "new": "Assets/Prefabs/Combat/Ranger.prefab.meta",
+      "guid": "e87e494bcb12bf8449ad4cf6d433c69d"
+    },
+    {
+      "old": "Assets/DotAction/Prefabs/Combat/Skeleton.prefab.meta",
+      "new": "Assets/Prefabs/Combat/Skeleton.prefab.meta",
+      "guid": "dadbc22b7ea4fcd4183fbb2f378f4fc3"
+    },
+    {
+      "old": "Assets/DotAction/Prefabs/Combat.meta",
+      "new": "Assets/Prefabs/Combat.meta",
+      "guid": "d38d6ed1c94d8564c8e9dbd3c4c8fc14"
+    },
+    {
+      "old": "Assets/DotAction/Prefabs.meta",
+      "new": "Assets/Prefabs.meta",
+      "guid": "0808b22cd4af8484283bd1a895223b83"
+    },
+    {
+      "old": "Assets/DotAction/Runtime/ArcBolt.cs.meta",
+      "new": "Assets/Scripts/Runtime/ArcBolt.cs.meta",
+      "guid": "87a0f5e03b6f87f4084671d70c3a0189"
+    },
+    {
+      "old": "Assets/DotAction/Runtime/CombatActor.cs.meta",
+      "new": "Assets/Scripts/Runtime/CombatActor.cs.meta",
+      "guid": "a8a67f0b70498af44a7352ae2a1e8fac"
+    },
+    {
+      "old": "Assets/DotAction/Runtime/CombatGrid.cs.meta",
+      "new": "Assets/Scripts/Runtime/CombatGrid.cs.meta",
+      "guid": "809ae265e18595e4d979dd8ae7e38620"
+    },
+    {
+      "old": "Assets/DotAction/Runtime/CombatSession.cs.meta",
+      "new": "Assets/Scripts/Runtime/CombatSession.cs.meta",
+      "guid": "71363a6598c92e647a9b681e9f361ff4"
+    },
+    {
+      "old": "Assets/DotAction/Runtime/DotAction.Runtime.asmdef.meta",
+      "new": "Assets/Scripts/Runtime/DotAction.Runtime.asmdef.meta",
+      "guid": "0d8cc3c8247236d4c9ada9388ce90a56"
+    },
+    {
+      "old": "Assets/DotAction/Runtime/GridMotor.cs.meta",
+      "new": "Assets/Scripts/Runtime/GridMotor.cs.meta",
+      "guid": "50e0e11c235fded45bc4bf16e1c3dee7"
+    },
+    {
+      "old": "Assets/DotAction/Runtime.meta",
+      "new": "Assets/Scripts/Runtime.meta",
+      "guid": "2aa5b62f470e5cd45aa6a66520d51185"
+    },
+    {
+      "old": "Assets/DotAction/Scenes/ArtReference.unity.meta",
+      "new": "Assets/Scenes/ArtReference.unity.meta",
+      "guid": "d7a503aad29ab154aa947e383163c773"
+    },
+    {
+      "old": "Assets/DotAction/Scenes/PixelCombat.unity.meta",
+      "new": "Assets/Scenes/PixelCombat.unity.meta",
+      "guid": "fe3fd4c2acca90340976aa9bc4d7cc3d"
+    }
+  ],
+  "unityReimport": "Not yet observed; active editor is preserved."
+}

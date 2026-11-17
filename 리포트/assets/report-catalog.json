@@ -1,5 +1,4359 @@
 [
   {
+    "title": "캐릭터 역광 오류 수정: 불을 등지면 몸통을 어둡게",
+    "summary": "화면 좌표를 공간 높이로 취급하던 오류와 기본 밝기1을 수정해 불 뒤·앞의 명암을 실제 렌더에서 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117100322509-v1.0.0.html",
+    "date": "2026-11-17T10:03:22.509Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캐릭터 근접광 입체 명암과 자동 추정 노멀",
+    "summary": "마을 플레이어와 NPC가 모닥불·등불·가로등 방향에 따라 입체적인 도트 명암을 표시합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117095340498-v1.0.0.html",
+    "date": "2026-11-17T09:53:40.498Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "스킬 슈퍼 아머와 노랑·빨강 지속 하이라이트",
+    "summary": "플레이어·동료의 스킬 시전 중 피해를 유지하며 기본 경직·밀림·띄우기를 막고 노랑에서 빨강으로 이어지는 하이라이트를 표시합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117092037818-v1.0.0.html",
+    "date": "2026-11-17T09:20:37.818Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네 클래스의 고유 전용 동작과 전투 FX 추가",
+    "summary": "궁수 화살비·암살자 돌진 처형·흑마도사 뼈손·총잡이 무릎 관통 사격을 새24자세와 판정/FX로 연결하고 평타를 유지했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117091527526-v1.0.0.html",
+    "date": "2026-11-17T09:15:27.526Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "추가 금지어5종과 기존 클래스·보스·스킬·장비 이름 변경",
+    "summary": "여명·잔영·심연·공허·엄니를 금지어로 추가하고 기존 표시명과 제작 도구·현재 문서를 갱신했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117091510305-v1.0.0.html",
+    "date": "2026-11-17T09:15:10.305Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반복 수식어 금지·추천 용어 관리와 기존 명칭 변경",
+    "summary": "금지어3종·남용 주의어8종·추천 기준을 관리하고 기존 표시명7종과 대사를 변경했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117090747149-v1.0.0.html",
+    "date": "2026-11-17T09:07:47.149Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SNSManager 비공개 저장소 및 SNS 활동 기록 구성",
+    "summary": "비공개 저장소 생성·연결과 로고·README·팔로우 및 게시물 기록의 자동 커밋·푸시 구성을 완료했습니다.",
+    "project": "snsmanager",
+    "reportPath": "projects/snsmanager/reports/2026-11-17-result-20261117083733245-v1.0.0.html",
+    "date": "2026-11-17T08:37:33.245Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "NPC72프레임 보간과 발 고정 검증·철제 가로등 교체",
+    "summary": "14명 대기를72프레임으로 늘리고 접지 영역의 루프 전체 픽셀 차이0을 확인했습니다. 핵심3종 손·소품 대응점과 가로등6기를 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117083607039-v1.0.0.html",
+    "date": "2026-11-17T08:36:07.039Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "도끼 내려찍기 궤적 조기 종료·명중 FX 누락 수정",
+    "summary": "도끼 FX가 실제 내려찍기 이전에 끝나고 명중 시점도 어긋나 있었습니다. 궤적을 마지막 자세까지 연장하고 평타 섬광·파편·강타 충격파를 보강해 실제 정지·이동 공격에서 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117082400351-v1.0.0.html",
+    "date": "2026-11-17T08:24:00.351Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 NPC14명 직업별 손·소품 동작과 봉화탑6기",
+    "summary": "분할 들썩임을 제거하고14명에게 직업별6자세를 연결했습니다. 대장장이 망치질·상인 정리·카드 셔플과 봉화탑6기의 주변 조명을 실제 Godot에서 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117081816265-v1.0.0.html",
+    "date": "2026-11-17T08:18:16.265Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "8클래스·공유 동료 호흡 대기 모션64프레임 추가",
+    "summary": "8클래스에8프레임씩 대기 모션을 추가했습니다. 호흡·무기·망토·눈 깜빡임을 별도 시트로 연결하고 실제 Godot 플레이어·동료 렌더러에서 양방향8프레임을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117081156940-v1.0.0.html",
+    "date": "2026-11-17T08:11:56.940Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "재의 약탈자 양손도끼 충전 지면 강타·원형 에어본 구현",
+    "summary": "일반 평타를 유지하며 약탈자를 방패 없는 양손도끼로 재제작했습니다. 충전 원형 강타·실제 에어본·지면 FX를 연결하고 Godot에서 범위와 이동 제한을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117074943032-v1.0.0.html",
+    "date": "2026-11-17T07:49:43.032Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 NPC 후드 축소와 호버·대기·환경 애니메이션",
+    "summary": "후드 NPC를4명으로 줄이고 일러스트6장을 동기화했습니다. NPC 호버/호흡과 천막·연기·식생·까마귀 애니메이션을 실제 Godot 렌더로 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117074233303-v1.0.0.html",
+    "date": "2026-11-17T07:42:33.303Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "버튼 호버를 기능별 14종으로 분리",
+    "summary": "공통 입자 폭발을 제거하고 메뉴·이동·설정·거래·장비와 마을 서비스에 맞는 호버를 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117074225978-v1.0.0.html",
+    "date": "2026-11-17T07:42:25.978Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 재질과 도트 밀도를 맞추지 못했습니다. 튀던 파란 대형 석판을 제거하고, 기존 마을의 낡은 돌 포장으로 교체했습니다. 가장자리는 흙에 자연스럽게 섞고, 길 중심만 조",
+    "summary": "지난 작업 개별 복원 보고: 마을 디자인과 횃불 개선",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e868-e13a-75e3-af1f-c276ef8af16e-v1.0.0.html",
+    "date": "2026-11-17T07:31:49.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 NPC 14명을 비교해 9명의 SD 캐릭터를 기존 일러스트에 맞춰 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 마을 NPC와 일러스트 일치시키기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e864-4209-7ba3-abb1-cf947f022a26-v1.0.0.html",
+    "date": "2026-11-17T07:29:36.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "광장 모닥불에서 출정 성문까지 청회색 보도블록 길을 연결했습니다. 주변 흙바닥과 구분되며, 출정 안내인 앞까지 끊기지 않게 이어집니다.",
+    "summary": "지난 작업 개별 복원 보고: 마을 디자인과 횃불 개선",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e865-c460-7630-951b-14ce94ee1f32-v1.0.0.html",
+    "date": "2026-11-17T07:28:43.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "14개 시설을 각각 새 원본으로 다시 제작했습니다. 기존 이미지를 늘리는 코드는 제거하고, 최종 크기 그대로 1:1로 표시합니다.",
+    "summary": "지난 작업 개별 복원 보고: 마을 디자인과 횃불 개선",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e858-c091-7941-a1e6-cfb1db43e79a-v1.0.0.html",
+    "date": "2026-11-17T07:20:41.878Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 동시 출정은 최대 5명입니다. 영구 계약은 8종까지 가능합니다.",
+    "summary": "지난 작업 개별 복원 보고: 동료 부활 시스템 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e85a-ee5d-7c61-9f09-8f3ae94be32c-v1.0.0.html",
+    "date": "2026-11-17T07:15:48.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공허 감옥을 다시 디자인했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e855-ce67-7c60-b07a-dcf4b27483be-v1.0.0.html",
+    "date": "2026-11-17T07:14:16.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 마을 이동 속도와 캐릭터 배치 수정",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e859-68ca-77c0-8051-bd1ef4739e3d-v1.0.0.html",
+    "date": "2026-11-17T07:14:11.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "특대검 일반 평타만 머리 위에서 아래로 내려치는 모션으로 수정했습니다. 정지·이동 평타와 검 궤적을 맞췄으며, 훨윈드는 유지했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 창기사 연속 찌르기 구현",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e856-8e6a-7183-8c2e-72d13631f335-v1.0.0.html",
+    "date": "2026-11-17T07:13:45.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "챔피언을 처치하면 ‘운명의 선택’ 증강을 얻도록 변경했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e857-9817-7c02-a7e7-2454a74c2986-v1.0.0.html",
+    "date": "2026-11-17T07:12:46.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "건물 14개를 이전보다 약 1.5~1.8배 확대하고, 크기 차이도 더 크게 줬습니다.",
+    "summary": "지난 작업 개별 복원 보고: 마을 디자인과 횃불 개선",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e856-fa1c-75d0-87b0-298ad5d15a12-v1.0.0.html",
+    "date": "2026-11-17T07:10:47.590Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을의 노란색 편중을 줄이고 청회색 야경으로 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 마을 디자인과 횃불 개선",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e833-56ea-7c62-93a0-4314f576cefa-v1.0.0.html",
+    "date": "2026-11-17T06:35:21.501Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "‘방패 밀쳐내기’로 이름을 바꾸고, 기존 위치에 캐릭터보다 큰 방패가 등장하도록 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e831-5560-7fa2-846f-576b5fb30921-v1.0.0.html",
+    "date": "2026-11-17T06:35:11.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "8클래스 모두 기존 일반 평타를 복원하고, 새 기술을 별도 자동 스킬로 분리했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 창기사 연속 찌르기 구현",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e824-4dbf-7750-9360-a9da01394cf8-v1.0.0.html",
+    "date": "2026-11-17T06:35:08.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전부 완성되지는 않았지만, 부족했던 장비 파밍과 출정 준비 흐름을 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e828-86fb-72f0-a253-ed47cba286cf-v1.0.0.html",
+    "date": "2026-11-17T06:33:34.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "대각선 4방향을 추가해 총 8방향으로 대열이 통과하도록 수정했습니다. 24마리 편성과 접촉 피해는 유지합니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e82f-104d-75b2-84e8-38076c62bc3c-v1.0.0.html",
+    "date": "2026-11-17T06:27:31.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "웨이브 편성을 8종으로 늘렸습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e828-affb-73d2-86bf-7edf829bd523-v1.0.0.html",
+    "date": "2026-11-17T06:23:26.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "트럼펫을 ‘봉인의 파열’이라는 철제 유물로 교체하고, 독안개도 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e823-0321-7470-9704-312876607ebb-v1.0.0.html",
+    "date": "2026-11-17T06:19:35.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "해골·갈비뼈를 모든 자세에서 제거하고 다시 디자인했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e823-8907-7e00-b872-e5b77bf8a08d-v1.0.0.html",
+    "date": "2026-11-17T06:15:09.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "II가 숫자처럼 보여 헷갈리는 상태였습니다. 일시정지 글자 버튼으로 변경하고, 공간에 맞춰 재화 표시를 옮겼습니다.",
+    "summary": "지난 작업 개별 복원 보고: 창기사 연속 찌르기 구현",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e821-46c7-73e0-8df7-91f88de65141-v1.0.0.html",
+    "date": "2026-11-17T06:11:36.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "대열에 부딪히면 접촉 피해가 들어가도록 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e820-a951-7c70-97f0-f3064c4299fc-v1.0.0.html",
+    "date": "2026-11-17T06:11:13.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "장비 보존·동료 성장 문제를 수정했고, 1~10스테이지 성장·경제·밸런스 1차 조정을 완료했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e812-66c0-7b90-9aa0-8f03bb237e56-v1.0.0.html",
+    "date": "2026-11-17T06:03:34.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기존 모션 반복을 걷어내고, 8클래스 공격을 새로 그려 연결했습니다. 클래스당 24자세, 총 192자세입니다.",
+    "summary": "지난 작업 개별 복원 보고: 창기사 연속 찌르기 구현",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e80a-220d-7372-b881-8287f62a185d-v1.0.0.html",
+    "date": "2026-11-17T06:02:06.281Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4열 × 6행, 같은 종류 24마리의 대열이 통과하도록 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e813-1593-7031-97a4-c0562f0cd802-v1.0.0.html",
+    "date": "2026-11-17T05:57:10.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "슬라임을 기존 몬스터 스타일로 다시 제작했고, 도약 패턴과 폭사형을 연결했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e80e-6391-7503-9f0d-71b790a94229-v1.0.0.html",
+    "date": "2026-11-17T05:55:26.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "현재는 핵심 시스템을 갖춘 10스테이지 시제품이며, 기획한 누적 10시간 게임으로 만들기에는 콘텐츠 분량·장기 성장·경제 밸런스가 가장 부족합니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e806-0b93-7cc3-9436-5ab61a9e396b-v1.0.0.html",
+    "date": "2026-11-17T05:46:13.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "종족별 군집과 특수 웨이브, 슬라임 계열을 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 몹 출현을 종족·군집별로 구성",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e807-71a3-7123-96fe-aba1120da9d9-v1.0.0.html",
+    "date": "2026-11-17T05:45:52.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "스킬 발동 전에 위치·방향·범위와 충전 진행도가 표시되도록 확장했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 플레이어와 아군 하이라이트 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e805-8f91-7fb3-bbaf-6df840fae7fa-v1.0.0.html",
+    "date": "2026-11-17T05:44:40.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "망치 머리가 모루 윗판에 닿도록 교정했습니다. 손잡이 회전축과 실제 타격면을 기준으로 계산하고, 불꽃 위치·접촉 순간·반동도 맞췄습니다.",
+    "summary": "지난 작업 개별 복원 보고: 픽셀 전반에 색 제한·망점 적용",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e805-28a3-7082-9735-2760d240f781-v1.0.0.html",
+    "date": "2026-11-17T05:44:33.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "퍼지는 음파를 더 화려하게 보강했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e806-7593-7d20-ac9f-44dbd37e8ce7-v1.0.0.html",
+    "date": "2026-11-17T05:43:32.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네. 설치된 PixelFX 라이브러리로 만든 것이 맞습니다. 다만 네 종류 모두 기존 프리셋은 아닙니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e804-a7f1-72b2-a2c1-f8eebe50a9c8-v1.0.0.html",
+    "date": "2026-11-17T05:39:50.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "새 NPC 대화 화면에 추가로 뜨던 SD 캐릭터를 제거했습니다. 전체 일러스트와 서비스 연출은 유지했고, 실제 렌더와 빌드를 확인했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e803-4345-7b20-947a-cfafcbdfa6d3-v1.0.0.html",
+    "date": "2026-11-17T05:39:37.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "원인은 마을용 128px 사물을 40px로 축소해 사용한 것이었습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7fc-cfc5-7190-93de-006db946266d-v1.0.0.html",
+    "date": "2026-11-17T05:38:09.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "증강 카드가 1장·2장이어도 가운데 정렬되도록 수정했습니다. 실제 렌더와 빌드도 확인했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7fb-60e0-71a1-99a8-336c41cdf93e-v1.0.0.html",
+    "date": "2026-11-17T05:31:07.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "창 기사 E 전용기 ‘백골 돌격’을 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 플레이어와 아군 하이라이트 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f7-3b8f-7583-a936-e79e66e84ddc-v1.0.0.html",
+    "date": "2026-11-17T05:29:56.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "증강 표시명 13개를 다크 판타지 명칭으로 변경했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f9-c1d4-7da3-a52a-b78b057f975e-v1.0.0.html",
+    "date": "2026-11-17T05:29:33.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 흰색에 가까운 픽셀만 검사해서 누런 테두리·대각선 경계·열린 상자의 절단면을 놓쳤습니다. 완료 판단이 잘못됐습니다.",
+    "summary": "지난 작업 개별 복원 보고: 픽셀 전반에 색 제한·망점 적용",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f8-2ab1-7743-90c1-cc8ca6eaddb9-v1.0.0.html",
+    "date": "2026-11-17T05:29:32.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "나팔 전용 도트 FX 4종을 제작해 연결했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f5-23c0-7002-a6a8-3953c2e44734-v1.0.0.html",
+    "date": "2026-11-17T05:28:29.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 Godot 렌더링으로 확인했습니다. 체력 바 숫자와 스킬 아이콘이 표시되며, 캐릭터 툴팁의 긴 내용은 스크롤됩니다.",
+    "summary": "지난 작업 개별 복원 보고: 스킬 호버 툴팁 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f8-62dc-7903-9788-614c37225b2e-v1.0.0.html",
+    "date": "2026-11-17T05:28:07.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동료 최대 5명 편성과 역할별 AI를 구현했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7e4-e284-7431-9006-3e94a3b58b96-v1.0.0.html",
+    "date": "2026-11-17T05:27:46.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 스킬 호버 툴팁 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f6-b184-7653-b3a7-4f4ced41a227-v1.0.0.html",
+    "date": "2026-11-17T05:25:20.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카지노 소품 16종·심볼 6종 전체의 흰 테두리와 배경 잔여 픽셀을 수정했습니다. 재생성보다 추출 과정의 배경 제거가 핵심이었습니다.",
+    "summary": "지난 작업 개별 복원 보고: 픽셀 전반에 색 제한·망점 적용",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f2-c87d-7983-8051-45c213b5fd4f-v1.0.0.html",
+    "date": "2026-11-17T05:25:06.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "창은 손 앞쪽 길이를 최대 1.85배, 창날 폭을 1.15배로 키우고 공격 FX 위치도 맞췄습니다.",
+    "summary": "지난 작업 개별 복원 보고: 플레이어와 아군 하이라이트 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f3-2e58-7823-8b73-2aeb69be0010-v1.0.0.html",
+    "date": "2026-11-17T05:23:29.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "‘종말의 나팔’ 증강을 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7ed-51a9-7c42-87ee-39c368679aa5-v1.0.0.html",
+    "date": "2026-11-17T05:22:06.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "좌측 상단 UI를 간소화했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 스킬 호버 툴팁 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f2-4b5c-72f3-8ba9-de239fd52198-v1.0.0.html",
+    "date": "2026-11-17T05:21:25.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "빙결 파동을 탑뷰 원형 확산으로 교체했습니다. 기존 청백색 색감과 얼음 결정 디자인을 유지했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 플레이어와 아군 하이라이트 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7ef-f343-7222-82d6-568ec7e0bab1-v1.0.0.html",
+    "date": "2026-11-17T05:19:57.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "하단 스킬 슬롯 호버 툴팁을 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 스킬 호버 툴팁 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7f0-56fb-73b1-8579-a3a4584677b6-v1.0.0.html",
+    "date": "2026-11-17T05:19:38.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카드·강화·천사·악마·상자까지 모두 새로 그려 교체했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 픽셀 전반에 색 제한·망점 적용",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7e7-87b1-7e40-9140-659f9a1da567-v1.0.0.html",
+    "date": "2026-11-17T05:18:10.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "발밑 원형 하이라이트를 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 플레이어와 아군 하이라이트 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7ee-0a86-7091-9538-5468c92ca25e-v1.0.0.html",
+    "date": "2026-11-17T05:16:31.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 잘못 짚었습니다. 트럼펫 폭발은 공격 누적형이 아니라, 직접 충전한 뒤 전방으로 음파를 쏘는 액티브 증강입니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7ec-49b6-7b42-b3ac-f7b37cfb6be6-v1.0.0.html",
+    "date": "2026-11-17T05:13:45.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카지노 7종을 전체 화면 전용 연출로 강화했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 픽셀 전반에 색 제한·망점 적용",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7dd-80c0-75a1-ae52-d30baca1bc49-v1.0.0.html",
+    "date": "2026-11-17T05:05:55.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수정했습니다. 카드 프레임 텍스처를 계속 보관하도록 바꿨고, 플레이어·동료 모두 흰 배경 없이 표시되는 것을 실제 렌더에서 확인했습니다. 빌드도 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7e1-dc95-7743-8f54-4510c64533f2-v1.0.0.html",
+    "date": "2026-11-17T05:04:58.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "플레이어 8클래스의 모션을 교체하고 0.9.0 빌드를 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7cb-a614-7023-a425-fac688352e0f-v1.0.0.html",
+    "date": "2026-11-17T05:01:40.643Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전체 화면에 48색 제한 + 바둑판 망점 디더링을 적용했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 픽셀 전반에 색 제한·망점 적용",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7d9-5554-7ee3-a4b1-eebd3d6c87fe-v1.0.0.html",
+    "date": "2026-11-17T04:56:55.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "장비 아이콘 78종을 전부 교체했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7c5-5c6f-7713-bfb9-c60801308b38-v1.0.0.html",
+    "date": "2026-11-17T04:37:24.469Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "구현하고 0.8.0 실행 파일까지 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7b3-3818-7db0-b106-b3bb7da116a2-v1.0.0.html",
+    "date": "2026-11-17T04:30:32.086Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반영하고 실행 파일까지 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7ac-4c12-7063-b1b0-605fd253b035-v1.0.0.html",
+    "date": "2026-11-17T04:10:43.365Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미니멀한 카드 UI로 수정하고 실행 파일도 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7a5-eefa-7dc3-bffe-d0598a7c8895-v1.0.0.html",
+    "date": "2026-11-17T04:03:09.594Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 사용한 Codex 화면 캡처 도우미 두 개를 종료했습니다. 게임과 에디터는 그대로 유지했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7a3-6ef7-7d00-9691-eb6b415062e3-v1.0.0.html",
+    "date": "2026-11-17T03:56:12.550Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "화면이 어두워지고 캡처 영역을 고르는 상태라면 Esc를 누르시면 꺼집니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e7a2-da2e-7903-996b-84f935a64646-v1.0.0.html",
+    "date": "2026-11-17T03:52:59.967Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전투를 AI가 조종하고, 사용자는 증강만 선택하도록 반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e78c-57ff-7563-a490-d22be3b1d193-v1.0.0.html",
+    "date": "2026-11-17T03:50:07.470Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e75b-21b3-71c0-a834-1c68bf4e1897-v1.0.0.html",
+    "date": "2026-11-17T02:49:12.791Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e736-90f4-7591-b365-a3b504362ea4-v1.0.0.html",
+    "date": "2026-11-17T02:11:32.361Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캐릭터 재제작과 이동 공격을 반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e716-84f5-7991-ba55-b19a122d0864-v1.0.0.html",
+    "date": "2026-11-17T01:54:33.668Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "변경했습니다. 전투 중 운명의 선택은 증강만 등장하며, 나머지는 마을 NPC로 옮겼습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e70b-a9db-7de3-b8b7-cbaecb7cfcb7-v1.0.0.html",
+    "date": "2026-11-17T01:19:33.837Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "슬롯 전용 부적 6종과 전용 장착 칸 1개를 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e702-85d8-7352-9839-da751c5d1f34-v1.0.0.html",
+    "date": "2026-11-17T01:07:43.651Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "속성 피해와 사망 연출을 구현했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e6f9-5210-7e82-bf8b-00257e5d8d91-v1.0.0.html",
+    "date": "2026-11-17T00:57:44.611Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동료 영입을 상인 전용으로 변경했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-history-01a1e670-9a6d-7a41-8b74-9a74ee9808de-v1.0.0.html",
+    "date": "2026-11-17T00:44:54.350Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아직 안 들어갔습니다. 현재는 마을의 보급 상인만 구현되어 있고, 운명의 선택에서 등장하는 떠돌이 상인 이벤트는 없습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e66d-d245-73c3-8c6c-7bdbb550b83c-v1.0.0.html",
+    "date": "2026-11-16T22:15:28.659Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아닙니다. 첫 플레이 버전의 주요 기능을 구현한 상태이고, 요청하신 전체 게임이 완성된 것은 아닙니다. 제가 완료 범위를 크게 표현했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e66d-6844-7632-8217-3b190734471b-v1.0.0.html",
+    "date": "2026-11-16T22:14:59.447Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 잘못 판단했습니다. 시야 변경과 기능 QA·빌드를 마쳤다는 이유로 전체 작업까지 종료했고, 공개 게시 승인 대기를 다른 작업까지 멈추는 조건처럼 처리했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e66d-193e-7fa3-8382-ffafb9c016e2-v1.0.0.html",
+    "date": "2026-11-16T22:14:37.902Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "적용했습니다. 시야 밖은 완전히 검게 가리고, 보이지 않는 맵 청크·몬스터·이펙트는 렌더링에서 제외합니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4d1-9fd0-7370-bb5d-f0363e05fd49-v1.0.0.html",
+    "date": "2026-11-16T18:50:27.487Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "첫 플레이 버전 중간 점검 — 지속 스폰·암흑 마을·운명의 슬롯 낙하",
+    "summary": "시간제 지속 스폰, 모닥불 조명과 카지노 등장 연출을 구현하고 실제 Godot 영상·GIF로 기록했습니다. 신규 무기·몬스터·손패는 추가 제작 중입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116171539739-v1.0.0.html",
+    "date": "2026-11-16T17:15:39.739Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, GDScript는 수정 후 실행까지의 대기 시간이 대체로 짧습니다. C처럼 .NET 프로젝트를 빌드하는 과정 없이 스크립트를 파싱하고 바이트코드로 변환하기 때문에,",
+    "summary": "지난 작업 개별 복원 보고: GDScript와 C# 비교",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e515-22e2-7000-b538-47ec61fc167f-v1.0.0.html",
+    "date": "2026-11-16T15:58:58.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "현재 DotAction에는 GDScript를 유지하는 편을 권합니다. C은 복잡한 시스템이나 기존 C 코드 활용이 필요할 때 이점이 큽니다.",
+    "summary": "지난 작업 개별 복원 보고: GDScript와 C# 비교",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e511-a645-7021-9252-67eaf1abd3be-v1.0.0.html",
+    "date": "2026-11-16T15:55:20.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자는 동안 4~6시간 정도를 첫 작업 범위로 잡겠습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4ca-6dfd-7780-a363-055a30dbf50c-v1.0.0.html",
+    "date": "2026-11-16T14:37:22.649Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "맞습니다. 앞선 시간은 제가 너무 보수적으로 잡았습니다. 자는 동안 중간 확인 없이 진행하도록 맡겨주시면, 확정된 기획·시안 안에서 구현하고 필요한 리소스 제작과 실행 확",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4c7-ba1d-7a83-92ab-82a1a27296ea-v1.0.0.html",
+    "date": "2026-11-16T14:34:28.441Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "UI v4를 확정 기준으로 지침과 기획서 v0.8 (당시 로컬 자료; 공개 첨부 미확인)에 반영했습니다. 이후 HUD·아이콘·마을·인벤토리도 이 톤으로 맞추겠습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4c6-1e71-78d0-b1bf-80c64feb2a34-v1.0.0.html",
+    "date": "2026-11-16T14:33:33.330Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "바깥 프레임과 판형 배경을 제거했습니다. 카드·버튼 테두리와 도트 톤은 유지했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4c2-cd08-7b33-9a2a-7be0553b15a7-v1.0.0.html",
+    "date": "2026-11-16T14:30:30.211Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캐릭터와 비교해 v2의 평평한 느낌을 보강했습니다. 현재 전사의 금속 표현에 맞춰 밝은 모서리, 명암, 작은 금색 포인트를 추가했습니다. 도트 형태와 절제된 장식은 유지했",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4bf-375c-7aa0-8ef0-902611460c2c-v1.0.0.html",
+    "date": "2026-11-16T14:26:49.251Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "장식과 발광을 줄이고, 단순한 도트 느낌으로 다시 제작했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4bb-8d3e-7370-9edd-2e16105eeaaa-v1.0.0.html",
+    "date": "2026-11-16T14:22:50.133Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "‘운명의 선택’ 오버레이와 스킬 아이콘 6종 시안을 제작했습니다. 기존 청백색 금속·청록·자주색 톤으로 맞췄습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4b7-fb33-7860-96de-112cc60788d9-v1.0.0.html",
+    "date": "2026-11-16T14:19:42.740Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을·재도전을 포함한 누적 약 10시간으로 확정해 기획서 (당시 로컬 자료; 공개 첨부 미확인)와 프로젝트 지침에 반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4b7-276c-7bc3-a64b-668d84676f6b-v1.0.0.html",
+    "date": "2026-11-16T14:16:36.517Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을·전투 배경 시안을 만들고, 기획서에 10시간 플레이와 마을 소비 구조를 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4b3-ca35-7603-8ebc-2978a9370b09-v1.0.0.html",
+    "date": "2026-11-16T14:15:58.921Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "장비 조합을 제한하고 새 파츠를 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4ab-a046-71b0-b066-c43e82a4bd1f-v1.0.0.html",
+    "date": "2026-11-16T14:13:02.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "지침과 기획서 v0.5에 모두 반영했습니다. 나중에 제작할 때 승인하신 보스 시안을 기준으로 작업하도록 명시했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4ab-92d9-7c52-af5f-1d8ab8d4ab94-v1.0.0.html",
+    "date": "2026-11-16T14:06:05.462Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "두 작업 모두 반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4a3-e6ac-7be1-b746-c78eecba93de-v1.0.0.html",
+    "date": "2026-11-16T14:03:33.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "그 시안은 어디서 가져온 이미지가 아니라, 내장 이미지 생성 도구 image_gen으로 이번에 새로 만든 이미지입니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4a9-170a-7a92-b5fd-563877645e79-v1.0.0.html",
+    "date": "2026-11-16T14:00:58.057Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "일반 몬스터는 투구 없이 기본 방어구·무기만 표시하도록 수정했습니다. 향후 투구를 장착할 수 있도록 파츠와 장비 슬롯은 유지했습니다. 씬 미리보기도 갱신했고 Godot 헤",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4a5-0efb-7c92-a835-28925329afe0-v1.0.0.html",
+    "date": "2026-11-16T14:00:12.601Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기획서 v0.4 (당시 로컬 자료; 공개 첨부 미확인)에 10·20·30…스테이지마다 보스전을 추가했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4a2-41d7-7833-8647-cf72bcb045be-v1.0.0.html",
+    "date": "2026-11-16T13:54:32.388Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "궁수 후드를 수정했습니다. 측면은 앞쪽의 좁은 얼굴 창만 남기고, 뒤 3방향은 천으로 막았습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e49f-83ad-7390-b98b-48751c9d1420-v1.0.0.html",
+    "date": "2026-11-16T13:53:40.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기획서 v0.3 (당시 로컬 자료; 공개 첨부 미확인)에 모든 ‘운명의 선택’에서 가끔 발생하는 공통 특수 이벤트로 반영했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e4a1-270f-7cb0-8aa0-886fe22e09e0-v1.0.0.html",
+    "date": "2026-11-16T13:53:12.420Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게임 기획서 v0.2 (당시 로컬 자료; 공개 첨부 미확인)로 업데이트했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e49e-80af-7c33-b030-fedf7fc0930c-v1.0.0.html",
+    "date": "2026-11-16T13:50:56.907Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전체를 묶는 이름은 ‘운명의 선택’, 시스템 이름은 ‘보상 이벤트’가 좋겠습니다. 코인은 이벤트에 쓰는 재화로 두고, 슬롯머신·강화·동료 영입 등을 보상 이벤트의 종류로",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e49d-e381-7712-96c4-51dee21c7a77-v1.0.0.html",
+    "date": "2026-11-16T13:49:14.249Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "가이드와 프로젝트 지침을 작성했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e499-cc1f-7aa1-bd6c-5f10f7129ee6-v1.0.0.html",
+    "date": "2026-11-16T13:48:09.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "활 소리를 짧은 시위 스냅 + 활대 진동 + 화살 공기음으로 교체했습니다. 기타처럼 음정이 남던 합성을 제거하고, 길이도 190ms에서 135ms로 줄였습니다.",
+    "summary": "지난 작업 개별 복원 보고: 효과음과 배경음 생성 방식 정하기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e49a-1b49-7510-b11c-72e1024ffda0-v1.0.0.html",
+    "date": "2026-11-16T13:45:41.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "설치·샘플 제작·게임 연결·프로젝트 지침 업데이트까지 완료했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 효과음과 배경음 생성 방식 정하기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e492-a829-7e92-98ba-6ee67ab0e97c-v1.0.0.html",
+    "date": "2026-11-16T13:43:53.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "이펙트에 맞춰 투구 실루엣과 검·갑옷·방패를 재구성했습니다. 청백색 금속과 빛 포인트를 사용하고, 궁수는 청록색으로 구분했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e493-e02c-7540-9b6a-1c94b20920de-v1.0.0.html",
+    "date": "2026-11-16T13:41:29.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 사운드·이펙트·캐릭터·몬스터 제작까지 포함하면 앞서 말씀드린 3~6시간으로는 부족합니다. 그 시간은 기존 아트와 임시 효과음을 쓰는 기능 시제품 기준이었습니다.",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e493-3f73-7621-9dfc-6ace5f8d5b89-v1.0.0.html",
+    "date": "2026-11-16T13:37:15.133Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기획서를 텍스트 파일로 저장했습니다 (당시 로컬 자료; 공개 첨부 미확인). 핵심 루프, 화면 구성, 무기 2종·스킬 6종, 슬롯머신, 10회 천장, 1차 구현 범위를 담",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e491-d4d1-7863-9ec0-bb3c49fc336c-v1.0.0.html",
+    "date": "2026-11-16T13:36:57.213Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "씬도 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e490-c117-7613-a94c-a367ac8dde84-v1.0.0.html",
+    "date": "2026-11-16T13:35:57.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "조사해보니 효과음은 Python 합성 스킬, 배경음은 MIDI 작곡·악기 렌더링 조합이 현재 DotAction과 PC 환경에 가장 현실적입니다. 전사 5연타·궁수 속사·고",
+    "summary": "지난 작업 개별 복원 보고: 효과음과 배경음 생성 방식 정하기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e48f-eb1a-75a2-be39-71aba9077f3e-v1.0.0.html",
+    "date": "2026-11-16T13:34:47.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PixelFX를 적용했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e489-d4d6-7443-af37-807ee68e6a61-v1.0.0.html",
+    "date": "2026-11-16T13:34:13.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기획의 중심은 뱀서식 전투로 재화를 쏟아내고, 카지노식 보상으로 빌드를 완성하는 액션 로그라이크로 정리됩니다. 특히 무기와 스킬의 조합 제한 + 스킬 슬롯 2~3개가 게임",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e490-4018-7ff2-9456-5a2f879fd1e1-v1.0.0.html",
+    "date": "2026-11-16T13:34:03.435Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "효과음은 짧게 생성·가공해서 동작에 붙이고, 배경음은 루프 가능한 곡을 제작하거나 라이선스가 명확한 음원을 사용할 생각입니다.",
+    "summary": "지난 작업 개별 복원 보고: 효과음과 배경음 생성 방식 정하기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e48f-5ab7-7510-984f-d89aecd27e57-v1.0.0.html",
+    "date": "2026-11-16T13:32:59.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "둘 다 제 생성 코드 오류였습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e487-13ab-7013-b833-7b0ceea4d7bc-v1.0.0.html",
+    "date": "2026-11-16T13:26:28.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "큰 머리 비율과 8방향 캐릭터로 다시 구성했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e47d-03a8-7100-b193-1ab18eb4e3c5-v1.0.0.html",
+    "date": "2026-11-16T13:22:26.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "GodotGame 폴더를 정리해 삭제했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e47b-06c1-74f3-b2b2-a3f771d4d09c-v1.0.0.html",
+    "date": "2026-11-16T13:11:29.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "에디터 미리보기를 이전 캐릭터 시트로 남겨 둔 제 누락이었습니다. 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e479-121d-7130-91c1-da9178525011-v1.0.0.html",
+    "date": "2026-11-16T13:10:29.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "바뀐 루트 구조에 파츠 시스템을 구성했습니다. 이번 작업은 GodotGame 아래에 저장하지 않았습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e46f-b791-7463-beef-5988c6318bc1-v1.0.0.html",
+    "date": "2026-11-16T13:07:57.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네. 지금 파츠 시스템으로 바꾸는 게 맞습니다. 종족별 몸체와 장비를 분리하고, 공통 규격으로 맞추면 해골·오크·엘프·인간이 같은 장비를 장착할 수 있습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e46f-1722-79d0-aaf1-136ff973a1d0-v1.0.0.html",
+    "date": "2026-11-16T12:57:49.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "편집기에서 구성을 볼 수 있게 씬을 만들어뒀습니다. main.tscn을 다시 열고 상단 2D를 눌러주세요.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e46a-1a0e-7d61-b621-ec480669aabb-v1.0.0.html",
+    "date": "2026-11-16T12:54:14.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "다시 그릴 전사의 도트 밀도는 어느 쪽이 가까울까요?",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e464-7928-71f2-8aef-47646258f314-v1.0.0.html",
+    "date": "2026-11-16T12:52:17.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "씬 파일은 왼쪽 아래 파일시스템의 main.tscn입니다. 지금 이미 열려 있습니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e469-8cfd-7fa0-8314-64f2f45546e9-v1.0.0.html",
+    "date": "2026-11-16T12:51:31.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "F5를 누르거나 오른쪽 위 ▶ 버튼을 누르면 게임 화면이 실행됩니다. 실행된 화면을 클릭한 뒤 WASD로 이동하시면 됩니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e469-0f7d-77c0-95f0-f6f909f1072e-v1.0.0.html",
+    "date": "2026-11-16T12:50:59.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PC 조작과 캡처 세션을 종료했습니다. 노란 테두리 제거 여부는 미확인입니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e461-47c8-7453-a0db-0dc2f6a9e2bb-v1.0.0.html",
+    "date": "2026-11-16T12:45:06.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "무료 후보를 설치·사용해 보고 정리했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e459-97b7-7ed0-9c77-53707362ee02-v1.0.0.html",
+    "date": "2026-11-16T12:42:53.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "맞습니다. Godot은 여러 프로젝트가 함께 쓰는 도구이므로 DotAction/tools에 넣은 건 부적절한 배치입니다. 제가 정리할 때 이것도 분리했어야 했습니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e460-e671-7353-b3b2-75cfa7473bfd-v1.0.0.html",
+    "date": "2026-11-16T12:42:04.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실행 EXE는 있습니다. 지금은 프로젝트의 tools 폴더에 들어가 있습니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e460-7d2a-7692-941d-aac5b56e0b1d-v1.0.0.html",
+    "date": "2026-11-16T12:41:39.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "PowerShell에서 아래처럼 실행하시면 됩니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e460-182f-7160-b9ba-6dfb49a6007a-v1.0.0.html",
+    "date": "2026-11-16T12:41:10.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트와 아트 폴더를 루트로 통합했습니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e45d-774f-7520-a3e5-4dfabe3d26bb-v1.0.0.html",
+    "date": "2026-11-16T12:40:37.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 아트 리소스는 프로젝트 안에 넣어도 됩니다. 현재는 이전 제작 폴더와 Godot 프로젝트가 분리된 채 남아 있어 구조가 어색합니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e45c-f478-7803-a6ed-9182bc5f45c5-v1.0.0.html",
+    "date": "2026-11-16T12:38:10.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "품질을 높이려면 ‘좋은 캐릭터 원화 → 기준 이미지 고정 → 모션 제작’으로 순서를 바꿔야 합니다. 제가 했던 도형 조합 방식은 장비 실루엣·인체 비율·명암 표현이 부족했",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e456-b2bc-7643-9014-9e2174e75832-v1.0.0.html",
+    "date": "2026-11-16T12:32:56.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4종 모두 Aseprite로 제작하고 Godot에 연결했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e450-7e4f-78d3-89fd-4684f54b566f-v1.0.0.html",
+    "date": "2026-11-16T12:30:48.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 표준 Unity Asset Store EULA가 적용되는 에셋은 Godot에서도 사용할 수 있습니다. 상업용 게임에 포함하는 것도 가능합니다. 표준 약관은 사용 엔진",
+    "summary": "지난 작업 개별 복원 보고: Unity 에셋의 Godot 사용 가능 여부",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e455-8e27-7b90-adf3-6c4a3260fe5c-v1.0.0.html",
+    "date": "2026-11-16T12:30:04.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네. 조사해 보니 이 프로젝트는 Aseprite에서 프레임을 제작하고, PNG 시트＋JSON으로 내보내 Godot에 연결하는 방식이 적합합니다. 이 PC에는 aseprit",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e44e-7556-7083-a017-c6d6ac80324f-v1.0.0.html",
+    "date": "2026-11-16T12:22:18.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 승인 검토가 원본 외 작업 사본·설정·로그·솔루션 파일의 일괄 삭제를 거절했습니다. 남은 Unity 검증 사본(.tools/style-preview, .tools/c",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e44b-5905-7d12-b4d1-a3c4551424e9-v1.0.0.html",
+    "date": "2026-11-16T12:21:48.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Godot 프로젝트는 별도 폴더에 있고, Unity 코드는 기존 프로젝트를 보존해서 남아 있습니다. C 코드를 그대로 실행하는 방식이 아니라, 현재 게임 로직은 GDScr",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e449-7423-7853-bfdc-510f49b726c6-v1.0.0.html",
+    "date": "2026-11-16T12:16:33.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "좌우 반전할 때 이미지 좌표까지 바꾸던 처리를 제거하고, 같은 발 위치에서 그림만 반전하도록 수정했습니다. 웨이브도 무한 반복으로 변경했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e447-afba-7291-9203-17fa5e2dacde-v1.0.0.html",
+    "date": "2026-11-16T12:16:12.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Godot으로 이식하고 Windows 실행 파일까지 만들었습니다. 기존 Unity 프로젝트는 보존했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e43e-0510-74d2-9aa1-d35ec71c2fd1-v1.0.0.html",
+    "date": "2026-11-16T12:12:07.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네. 엔진 라이선스 비용을 없애고, 순수 2D 도트 게임으로 빠르게 반복 개발하려는 목적이면 Godot이 잘 맞습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e43d-ad24-7b10-a1c5-76acf172a5f5-v1.0.0.html",
+    "date": "2026-11-16T12:03:36.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, Godot 엔진 라이선스 비용은 없습니다. MIT 라이선스라 상용 게임에도 무료로 사용할 수 있고, 구독료·매출 로열티·설치당 요금도 없습니다. 게임 소스 공개 의무",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e43d-1fd5-7b82-b69e-5fd9b1dc11c4-v1.0.0.html",
+    "date": "2026-11-16T12:03:04.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "몹의 일반 피격 넉백은 제거했습니다. 경직·빨간 플래시는 유지하며, 별도 밀쳐내기 스킬에서만 넉백을 주면 됩니다. 검증 사본 컴파일 성공, 실제 플레이는 미확인입니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e439-d9f4-7653-ba6a-e09dde88c8bf-v1.0.0.html",
+    "date": "2026-11-16T12:00:24.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "구현하고 저장했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e42f-280a-75f2-a69a-0fa9cd8c18ff-v1.0.0.html",
+    "date": "2026-11-16T11:53:37.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "수정·저장했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e42b-17d3-7171-959e-21d110beee63-v1.0.0.html",
+    "date": "2026-11-16T11:45:38.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 진영 구분용 기본 외곽선과 마우스 근처 대상의 선택 하이라이트를 같은 색상 변경으로 처리했습니다. 그래서 대상이 선택됐는지 구분이 약했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e42a-8206-72c0-8d52-83adf093980b-v1.0.0.html",
+    "date": "2026-11-16T11:42:40.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "적용하고 씬·프리팹 저장했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e424-955f-7380-aa3c-e722c56e10d9-v1.0.0.html",
+    "date": "2026-11-16T11:42:01.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "4가지 구현하고 씬 저장했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e41d-01b2-7c80-ab35-558a4840273e-v1.0.0.html",
+    "date": "2026-11-16T11:34:15.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "중복 CombatPixelStyle·커스텀 렌더러·셰이더를 삭제하고 기존 Pixel Camera로 통일했습니다. 물체 색상 외곽선과 팔레트도 기존 프리셋에서 처리합니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e417-4cf6-7152-aa6f-3c9693620bee-v1.0.0.html",
+    "date": "2026-11-16T11:26:22.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "저는 전투에서 높낮이와 깊이를 실제로 쓸 거면 3D 픽셀, 평면 액션의 손맛이 중심이면 완전 2D 쪽입니다. 분위기만으로 고르기엔 이후 제작 방식 차이가 커서요.",
+    "summary": "지난 작업 개별 복원 보고: 2D와 3D 픽셀 스타일 비교",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e419-7116-7bb3-a6a9-d838c3496b05-v1.0.0.html",
+    "date": "2026-11-16T11:24:11.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 기존 Pixel Camera를 비활성화하고 별도 후처리를 만들어 붙였습니다. 출력 문제를 우회하려다 요청 범위를 벗어나 중복 구현한 것입니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e416-5e18-7b03-9041-075dde901166-v1.0.0.html",
+    "date": "2026-11-16T11:21:20.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "지금 Inspector 상단에 선택된 프리셋 이름이 무엇인가요? CombatPixels인지 확인 부탁드립니다. 첨부에는 상단 이름이 잘려 있어 현재 열린 프리셋과 카메라",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e411-df28-7192-9722-fd8db597a9c7-v1.0.0.html",
+    "date": "2026-11-16T11:20:24.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 기존 옵션을 빠뜨리고 고정색으로 처리한 게 원인이었습니다. 수정했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e40e-637a-7572-bf38-0e933e4f3864-v1.0.0.html",
+    "date": "2026-11-16T11:14:22.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Main Camera → Combat Pixel Style에서 조절하시면 됩니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e40c-e612-76c2-8b15-f1ed12e22b88-v1.0.0.html",
+    "date": "2026-11-16T11:10:37.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역 지침에 반영하고 충돌하던 세부 지침도 정리했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e40a-da17-7d10-971a-0c06c5699b80-v1.0.0.html",
+    "date": "2026-11-16T11:09:58.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제가 필요한 구현보다 검토·도구 구성·캡처·보고서 작업을 과하게 벌리고, 실패한 접근을 늦게 정리했기 때문입니다. 환경 탓만으로 설명할 수 없는 제 진행 문제였습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e409-4c41-7501-9586-e1f65e8dd2eb-v1.0.0.html",
+    "date": "2026-11-16T11:06:34.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "입력·스킬·슬롯 UI와 외곽선 코드를 적용하고 씬 저장·C 컴파일을 완료했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e404-13d6-7e61-b921-fa4896c4ed1c-v1.0.0.html",
+    "date": "2026-11-16T11:06:15.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "스킬 3개의 실제 효과도 지금 정해 둘까요? 별도 지정이 없으면 1번은 기존 기본 투사체, 2·3번은 입력·슬롯·연결 지점만 만들고 미할당으로 표시하겠습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e3ff-4a81-79e2-9b59-9dd4fc5a140b-v1.0.0.html",
+    "date": "2026-11-16T11:00:27.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 별도 QA 봇을 만들지 않고 이 세션에서 제가 직접 테스트하는 방식으로 진행하겠습니다. 주무시기 전에 대상과 범위를 맡겨주시면, 실행·문제 재현·증거 수집·결과 정리",
+    "summary": "지난 작업 개별 복원 보고: QA 테스터",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e402-514e-77c0-9b00-270305f9acbf-v1.0.0.html",
+    "date": "2026-11-16T10:58:51.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "처음에는 ‘자동 검증 프로그램’을 만들고, 그 위에 ‘AI QA 봇’을 붙이는 방식이 좋습니다. AI가 플레이하거나 화면을 살펴보고, 프로그램이 오류 여부를 판정하도록 역",
+    "summary": "지난 작업 개별 복원 보고: QA 테스터",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e400-238d-77e3-ae8a-cf847057b958-v1.0.0.html",
+    "date": "2026-11-16T10:56:45.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소메트릭 각도와 균일한 픽셀 처리를 적용했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e3cc-0e3c-7791-9108-f6f6177e4f06-v1.0.0.html",
+    "date": "2026-11-16T10:29:31.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소메트릭 뷰와 균일 픽셀·32색·12fps·체력바 빌보드",
+    "summary": "아이소메트릭 회전과 카메라별 체력바 빌보드를 적용했습니다. 720p·1080p의 230400셀을 각각 검사해 균일성과 32색 이내 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116102356104-v1.0.0.html",
+    "date": "2026-11-16T10:23:56.104Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 디아블로 느낌은 지금보다 카메라를 조금 더 눕혀도 좋습니다. Inspector에서 직접 조절하실 수 있습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e3b4-54ff-7880-a362-6d4844250bf3-v1.0.0.html",
+    "date": "2026-11-16T09:34:53.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "결과 보고서·실제 게임 화면·프로젝트 소유 전투 코드(상용 에셋 원본 제외)를 MDJ0126/codex-config의 main에, 개발일지·썸네일을 MDJ0126/gith",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e373-23f9-7880-9762-99ad053992b3-v1.0.0.html",
+    "date": "2026-11-16T09:20:29.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "3D 픽셀 카메라로 만든 DotAction 첫 전투 장면",
+    "summary": "3D 탑뷰 격자 이동·자동 공격·3웨이브 전투를 구현하고 실제 Unity 플레이와 픽셀 카메라 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116091503983-v1.0.0.html",
+    "date": "2026-11-16T09:15:03.983Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DotAction DDT 전투 수치와 기본 자동 공격",
+    "summary": "3D 탑뷰 격자 이동·자동 공격·3웨이브 전투를 구현하고 실제 Unity 플레이와 픽셀 카메라 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116091501194-v1.0.0.html",
+    "date": "2026-11-16T09:15:01.194Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DotAction 8방향 격자 경로 이동과 셀 점유",
+    "summary": "1m XZ 격자의 A* 경로·대각선 모서리 차단·셀 예약을 구현하고 실제 플레이에서 이동을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116091424219-v1.0.0.html",
+    "date": "2026-11-16T09:14:24.219Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "중복된 Assets/DotAction 폴더를 제거했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 도트 스타일 통일 방법 찾기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e385-974f-7b42-8730-68348d140b8b-v1.0.0.html",
+    "date": "2026-11-16T08:54:04.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Assets 내부의 중복 DotAction 폴더 제거와 경로 정리",
+    "summary": "아트·데이터·씬을 Assets 용도별 폴더로 옮기고 코드는 Scripts에 정리했습니다. 메타 81개의 GUID와 해시를 보존했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116085032236-v1.0.0.html",
+    "date": "2026-11-16T08:50:32.236Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "변경 이력 대조 후 원래 관리자 톱니바퀴 복원",
+    "summary": "사용자가 요청한 원래 톱니바퀴 링크를 이력에서 확인해 문구 버튼과 임의 테두리를 제거하고 기존 모양으로 복원했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-16-result-20261116084707159-v1.0.0.html",
+    "date": "2026-11-16T08:47:07.159Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 사이트 관리 버튼 복원과 노출 확인",
+    "summary": "운영 HTML에서 누락된 관리자 링크를 사이트 관리라는 글자 버튼으로 복원하고 데스크톱·모바일에서 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-16-result-20261116083949892-v1.0.0.html",
+    "date": "2026-11-16T08:39:49.892Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "작업 중 같은 폴더에 Assets/TurnRoom과 Assets/polyperfect가 새로 들어온 것을 확인했습니다. 다른 작업에서 의도적으로 가져오고 계신가요? 해당",
+    "summary": "지난 작업 개별 복원 보고: 도트 스타일 통일 방법 찾기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e35f-8698-7263-baae-ce658d5244f5-v1.0.0.html",
+    "date": "2026-11-16T08:38:21.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Sprite Studio: 균일 도트 보정·애니메이션 편집·로컬 MCP 구현",
+    "summary": "도트 보정·픽셀 드로잉·프레임 편집기와 MCP 11개 도구를 구현했습니다. 실제 MCP 드로잉·브라우저 저장·Aseprite 출력·Unity 임포트를 확인했으며 현재 대화의 MCP 도구 노출은 미확인입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116083714591-v1.0.0.html",
+    "date": "2026-11-16T08:37:14.591Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Aseprite 기준 아트 8종 제작과 Unity 2D 프로젝트 시작",
+    "summary": "실제 Aseprite로 정적 원본 8종과 비교 화면을 만들고 Unity 6000.0.83f1의 URP 2D 씬에 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-20261116083325518-v1.0.0.html",
+    "date": "2026-11-16T08:33:25.518Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Midnight Run 재제작 — 원본·실행·통합 초안 완료 기록",
+    "summary": "단순 큐브 예제를 Blender 리깅 러너와3층 네온 도시로 교체하고 기존 Pixora Studio1.0.1 초안·9언어 소개 글을 갱신했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-manual-20261116082737371-v1.0.0.html",
+    "date": "2026-11-16T08:27:37.371Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Midnight Run — Blender 러너·네온 도시·연속 횡스크롤 재제작",
+    "summary": "단순 큐브 예제를 Blender 리깅 러너와3층 네온 도시로 교체하고 기존 Pixora Studio1.0.1 초안·9언어 소개 글을 갱신했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-result-20261116082655770-v1.0.0.html",
+    "date": "2026-11-16T08:26:55.770Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "네, 3D로 만들고 픽셀 느낌으로 렌더링하는 방향은 괜찮아 보입니다. 캐릭터 회전이나 장비 교체, 애니메이션을 활용하면서 도트풍 화면을 만들고 싶을 때 특히 잘 맞습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e36f-772d-7d32-a530-2cb4f2be1fa6-v1.0.0.html",
+    "date": "2026-11-16T08:18:34.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "맞습니다. 필요한 것은 이미지를 생성하는 기능에 더해, 결과를 일정한 픽셀 규칙으로 보정하고 애니메이션까지 편집하는 도구입니다. 제가 앞서 요청 문구 위주로 설명드려서 실",
+    "summary": "지난 작업 개별 복원 보고: 도트 그래픽 요청 방법 안내",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e368-f333-75d2-bbfc-9742c0f416a6-v1.0.0.html",
+    "date": "2026-11-16T08:11:25.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "사용할 곳, 크기, 원하는 분위기, 필요한 동작을 알려주시면 도트 캐릭터와 배경을 구체적으로 만들기 좋습니다. 처음부터 모두 정하실 필요는 없고, 모르는 항목은 “프로젝트",
+    "summary": "지난 작업 개별 복원 보고: 도트 그래픽 요청 방법 안내",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e367-ee2b-7102-94ba-6da537816bfc-v1.0.0.html",
+    "date": "2026-11-16T08:10:21.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Aseprite 기준의 아트 규격 v0.1과 README·문서·공통 팔레트를 구성했습니다. 이번 결과는 제작 기준이며, 실제 캐릭터·카드 그림은 아직 제작하지 않았습니다.",
+    "summary": "지난 작업 개별 복원 보고: 도트 스타일 통일 방법 찾기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e34c-9814-76c1-b1be-24995d01f0e4-v1.0.0.html",
+    "date": "2026-11-16T07:45:27.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "이 게임에는 ‘Aseprite 같은 도트 에디터 + 제가 관리하는 제작 규칙·자동화 + GitHub 원본 관리’ 조합을 추천합니다. 스킬 하나로 그림체를 고정하기보다는,",
+    "summary": "지난 작업 개별 복원 보고: 도트 스타일 통일 방법 찾기",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-16-result-history-01a1e33d-2c50-7301-9c04-26b8f2b67cec-v1.0.0.html",
+    "date": "2026-11-16T07:24:36.000Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "영상 기능 보완·네온 옥상 예제·초안 재등록",
+    "summary": "영상 자막과 실제 소스를 대조하고 새 예제와 통합 패키지 초안을 준비합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-manual-20261116054702435-v1.0.0.html",
+    "date": "2026-11-16T05:47:02.435Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera — 승인 후 main 푸시·소개 글 공개 완료",
+    "summary": "세 커밋의 main 푸시와 기존 Pixora Studio1.0.1 소개 글의9개 언어 공개·실제 썸네일 확인을 완료했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-result-20261116054620385-v1.0.0.html",
+    "date": "2026-11-16T05:46:20.385Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "영상 기능 보완·네온 옥상 예제·초안 재등록",
+    "summary": "영상 자막과 실제 소스를 대조하고 새 예제와 통합 패키지 초안을 준비합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-manual-20261116050350115-v1.0.0.html",
+    "date": "2026-11-16T05:03:50.115Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio1.0.1 — Pixel Camera 보완본 초안 재등록",
+    "summary": "85,389,598바이트를 초안1547466에 저장·재조회했습니다. Turnlume 원격 푸시는 승인 대기입니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-result-20261116045614080-v1.0.0.html",
+    "date": "2026-11-16T04:56:14.080Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera — 네온 옥상 러너 새 예제",
+    "summary": "기존 예제를 보존하고 새로운3D 야간 도심·러너·다섯 효과 비교·9개 언어 안내를 저장했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-result-20261116045612680-v1.0.0.html",
+    "date": "2026-11-16T04:56:12.680Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixel Camera — OKLab과 최종 팔레트·디더 보완",
+    "summary": "영상과 소스를 대조해 OKLab·윤곽선 이후 팔레트·256단계 팔레트 디더를 보완했습니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-result-20261116045611311-v1.0.0.html",
+    "date": "2026-11-16T04:56:11.311Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "영상 기능 보완·네온 옥상 예제·초안 재등록",
+    "summary": "영상 자막과 실제 소스를 대조하고 새 예제와 통합 패키지 초안을 준비합니다.",
+    "project": "pixelcamera",
+    "reportPath": "projects/pixelcamera/reports/2026-11-16-manual-20261116043749928-v1.0.0.html",
+    "date": "2026-11-16T04:37:49.928Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "누락된 탈진을 지원해 세 자세 회복량0.2배를 실제 Windows에서 확인했습니다. 전체38무기 일반 명중 검증을 통과하고, 시작 예외가 있던 장시간 실행은 보존 후 최신 빌드로 다시 시작했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113152129751-v1.0.9.html",
+    "date": "2026-11-13T15:21:29.751Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 탈진의 세 자세 회복 배율 복구와 검증기 시작 예외 수정",
+    "summary": "누락된 탈진을 지원해 세 자세 회복량0.2배를 실제 Windows에서 확인했습니다. 전체38무기 일반 명중 검증을 통과하고, 시작 예외가 있던 장시간 실행은 보존 후 최신 빌드로 다시 시작했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113152108277-v1.0.0.html",
+    "date": "2026-11-13T15:21:08.277Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "이전·다음 버튼을 원본 콜라이더30×350으로 복구하고 자동 전투 요청을 로딩 완료 뒤 전달했습니다. Build28에서 같은 좌표 클릭·여성 전투와20초 자동 흐름을 확인했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113143923605-v1.0.8.html",
+    "date": "2026-11-13T14:39:23.605Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원본30×350 장비 버튼 입력 영역과 로딩 뒤 자동 전투 진입 복구",
+    "summary": "이전·다음 버튼을 원본 콜라이더30×350으로 복구하고 자동 전투 요청을 로딩 완료 뒤 전달했습니다. Build28에서 같은 좌표 클릭·여성 전투와20초 자동 흐름을 확인했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113143921927-v1.0.0.html",
+    "date": "2026-11-13T14:39:21.927Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "세트 제목을 가리던 배경 순서를 수정하고 DDT 기반 레벨·프레임·세트 문구·무기군 아이콘을 연결했습니다. 현재 남녀 아바타는 보존했으며 전체 UI 동일성은 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113140544762-v1.0.7.html",
+    "date": "2026-11-13T14:05:44.762Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 장비 세트 제목 depth·실제 장착 표시 복구와 S 표식 정정",
+    "summary": "세트 제목을 가리던 배경 순서를 수정하고 DDT 기반 레벨·프레임·세트 문구·무기군 아이콘을 연결했습니다. 현재 남녀 아바타는 보존했으며 전체 UI 동일성은 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113140543093-v1.0.0.html",
+    "date": "2026-11-13T14:05:43.093Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "재화 그림자8쌍과 직접 형제 depth 순서를 복구했습니다. Build26에서 남녀 전환·장비 변경·전투·로비 복귀를 확인했으며 전체 UI 동일성은 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113130435366-v1.0.6.html",
+    "date": "2026-11-13T13:04:35.366Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 재화 그림자·UI depth 복구와 현재 남녀 아바타 보존 확인",
+    "summary": "재화 그림자8쌍과 직접 형제 depth 순서를 복구했습니다. Build26에서 남녀 전환·장비 변경·전투·로비 복귀를 확인했으며 전체 UI 동일성은 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113130433745-v1.0.0.html",
+    "date": "2026-11-13T13:04:33.745Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "저장 XLSX 배율 변경이 실제 DDT와 Windows 장비 표시까지 이어짐을 확인하고 원본을 복구했습니다. 전체 복원은 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113121641040-v1.0.5.html",
+    "date": "2026-11-13T12:16:41.040Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 저장 Excel 수식을 DDT와 Windows 장비 표시까지 검증",
+    "summary": "흑조10750의 검증 사본 배율1→1.1을 저장·컴파일해 카드203→215, 장착 공격력213→226을 확인하고 원본30파일을 복구했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113121639592-v1.0.0.html",
+    "date": "2026-11-13T12:16:39.592Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 사망 전후 비교 캡션 정정: 두 실행 모두 무기10140",
+    "summary": "사망 자세 보고서의 무기가 다르다는 캡션을 정정합니다. 실제 Build20·Build22 로그는 모두10140이며, 전투 시각과 주변 봇 배치가 다른 비교입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113114237480-v1.0.0.html",
+    "date": "2026-11-13T11:42:37.480Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "Build22 장비 캐러셀·별도 장착·사망 자세와 샘플 작성 규칙·개발 문서의 부분 적용 결과를 보존하며 전체 복원을 이어갑니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113113346055-v1.0.4.html",
+    "date": "2026-11-13T11:33:46.055Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 장비 빈 영역 입력을 원작 클리핑 크기에 맞춰 수정",
+    "summary": "투명 입력 이미지의100×100 부모 연결을590×400 클리핑 자식으로 옮겼습니다. 실제5개 레이캐스트와 Windows 빈 영역 휠을 확인했으며 OS 드래그는 미확인입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113113343934-v1.0.0.html",
+    "date": "2026-11-13T11:33:43.934Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "Build22 장비 캐러셀·별도 장착·사망 자세와 샘플 작성 규칙·개발 문서의 부분 적용 결과를 보존하며 전체 복원을 이어갑니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113111422005-v1.0.3.html",
+    "date": "2026-11-13T11:14:22.005Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 무기군별 영웅 사망 클립 연결과 0HP 자세 수정",
+    "summary": "영웅 리그에 연결되지 않던 공통 Die_01을 무기군별 클립으로 교체했습니다.18개 리그 포즈 변화와 Build22 남성 검·방패의 실제 사망 자세를 확인했습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113111408715-v1.0.0.html",
+    "date": "2026-11-13T11:14:08.715Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 장비 캐러셀과 열람·장착 분리 복원",
+    "summary": "원작 카드 간격210·중앙 정렬 강도16을 연결하고 열람과 장착을 분리했습니다. Build22 클릭·휠·장착을 확인했으며 OS 드래그는 미확인입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113111406784-v1.0.0.html",
+    "date": "2026-11-13T11:14:06.784Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 샘플 기준 코드 주석과 개발 다큐먼트 최초 적용",
+    "summary": "SampleProjectForUnity의 작성 문서와 실제 예제를 확인하고 UI 컴포넌트5개의 주석·형식을 정리했습니다. 구조·흐름·사용법·규칙 문서를 작성했으며 전체 코드 적용은 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113095547115-v1.0.0.html",
+    "date": "2026-11-13T09:55:47.115Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원본 전투 HUD와 조이스틱 입력 연결",
+    "summary": "원본 전투 HUD를 봇 전투에 연결하고, 실행 코드로 확인한30HP 단위 체력 표시를 적용했습니다. Windows Build20 실행 범위와 미확인 입력을 분리합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113090841436-v1.0.0.html",
+    "date": "2026-11-13T09:08:41.436Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원본 로비·장비 UI 연결과 Windows 진입 흐름 검증",
+    "summary": "원작 NGUI 배치·아틀라스를 편집 가능한 uGUI로 옮겨 장비 선택과 전투 진입에 연결했습니다. Build19 실제 전후 화면과 남은 표시 문제를 기록합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113090840126-v1.0.0.html",
+    "date": "2026-11-13T09:08:40.126Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "사용자 재개 지시에 따라 Excel 수식·원작 카메라·진입 씬을 개선하고 원본 UI·FX 복원을 이어갑니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113074247737-v1.0.2.html",
+    "date": "2026-11-13T07:42:47.737Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "검토 보정: 탈진과 방어구 비전투 은신은 구현 누락",
+    "summary": "히드라 탈진501과 팬텀 하데스 비전투 은신55의 실행 경로가 없습니다. 원본 보고서의 과도한 설명을 정정하고 검토본의 알려진 누락으로 연결합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-discussion-20261113053635645-v1.0.0.html",
+    "date": "2026-11-13T05:36:35.645Z",
+    "kind": "discussion",
+    "relatedReport": "projects/overdox/reports/2026-11-13-result-20261113052415634-v1.0.0.html",
+    "replyTo": "",
+    "topic": "qa",
+    "discussionState": "deferred"
+  },
+  {
+    "title": "검토 보정: 탈진과 방어구 비전투 은신은 구현 누락",
+    "summary": "히드라 탈진501과 팬텀 하데스 비전투 은신55의 실행 경로가 없습니다. 원본 보고서의 과도한 설명을 정정하고 검토본의 알려진 누락으로 연결합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-discussion-20261113053634296-v1.0.0.html",
+    "date": "2026-11-13T05:36:34.296Z",
+    "kind": "discussion",
+    "relatedReport": "projects/overdox/reports/2026-11-13-result-20261113051936494-v1.0.0.html",
+    "replyTo": "",
+    "topic": "qa",
+    "discussionState": "deferred"
+  },
+  {
+    "title": "팬텀 하데스 비전투 은신 패시브 미구현",
+    "summary": "방어구의 패시브55 데이터는 보존됐지만 비전투 시간과 은신 발동을 처리하는 실행 경로가 없습니다. 스킬 잠행과 구분해 알려진 누락으로 기록합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-bug-20261113053504340-v1.0.0.html",
+    "date": "2026-11-13T05:35:04.340Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "히드라 탈진 미적용과 앞선 구현 설명 정정",
+    "summary": "전설 검의 피해·순간이동은 연결됐지만 탈진501의 타입60을 처리하지 않아 탈진은 적용되지 않습니다. 앞선 적용 완료 설명을 정정합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-bug-20261113053502809-v1.0.0.html",
+    "date": "2026-11-13T05:35:02.809Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "원작 장비119종과 한국어 원문을 DDT·Unity에 연결하고, 고정 빌드의 실제10시간 검증을 진행합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-manual-overdox-reconstruction-20261113-20261113052537799-v1.0.1.html",
+    "date": "2026-11-13T05:25:37.799Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 검토 빌드 전달·38종 명중·초기10시간 검증 결과",
+    "summary": "build16을 검토용으로 전달했습니다.35개 회귀 검사와38종 일반 명중을 확인했고, 초기 빌드의 실측10시간이 완료됐습니다. 복원 빌드의 별도10시간은 계속 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113052415634-v1.0.0.html",
+    "date": "2026-11-13T05:24:15.634Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 전설 검 투척·순간이동과 지연 피해 검토",
+    "summary": "회복·검기·오라·돌진·잠행과 전설 검 투척/순간이동을 연결했습니다. 비공격 유틸리티의 충전 소비를 효과 정확성 통과로 바꾸지 않았습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051936494-v1.0.0.html",
+    "date": "2026-11-13T05:19:36.494Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 고유 스킬 분기와 돌진 접촉 폭발 검토",
+    "summary": "회복·검기·오라·돌진·잠행과 전설 검 투척/순간이동을 연결했습니다. 비공격 유틸리티의 충전 소비를 효과 정확성 통과로 바꾸지 않았습니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051934942-v1.0.0.html",
+    "date": "2026-11-13T05:19:34.942Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 종류별 상태 중첩·만료 검토",
+    "summary": "원작 콤보·타격 표·상태 중첩을 로컬 전투에 연결했습니다. 일반 공격38종 실제 명중은 확인했으며, 서버 공식이 없는 부분은 가정으로 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051933394-v1.0.0.html",
+    "date": "2026-11-13T05:19:33.394Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 방향 가드·패링과 스킬 피해 분류 검토",
+    "summary": "원작 콤보·타격 표·상태 중첩을 로컬 전투에 연결했습니다. 일반 공격38종 실제 명중은 확인했으며, 서버 공식이 없는 부분은 가정으로 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051931871-v1.0.0.html",
+    "date": "2026-11-13T05:19:31.871Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 공격·가드·상태 실행과 전체 무기 명중 검토",
+    "summary": "원작 콤보·타격 표·상태 중첩을 로컬 전투에 연결했습니다. 일반 공격38종 실제 명중은 확인했으며, 서버 공식이 없는 부분은 가정으로 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051930336-v1.0.0.html",
+    "date": "2026-11-13T05:19:30.336Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 클립 이벤트 참조와 체력 막대 표시 수정",
+    "summary": "뼈 목록이 비어 있던 원작 스킨과 클립을 연결하고,0HP에서도 가득 차 보이던 uGUI 막대를 수정했습니다. 실제 전후 화면과35개 테스트를 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051928854-v1.0.0.html",
+    "date": "2026-11-13T05:19:28.854Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 리그와 장비 부착 검토",
+    "summary": "뼈 목록이 비어 있던 원작 스킨과 클립을 연결하고,0HP에서도 가득 차 보이던 uGUI 막대를 수정했습니다. 실제 전후 화면과35개 테스트를 남깁니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113051927376-v1.0.0.html",
+    "date": "2026-11-13T05:19:27.376Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 장비119종·DDT·원작 자산 복원 중간 결과",
+    "summary": "Unity 봇 전투와 장비119종·브랜드6종을 연결했습니다. 실제 Blender 원본과29개 테스트 통과를 확인했으며,10시간 검증과 세부 전투 대조는 진행 중입니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-13-result-20261113044127119-v1.0.0.html",
+    "date": "2026-11-13T04:41:27.119Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OVERDOX 원작 장비·봇 전투 복원 및 10시간 검증",
+    "summary": "원작 장비119종과 한국어 원문을 DDT·Unity에 연결하고, 고정 빌드의 실제10시간 검증을 진행합니다.",
+    "project": "overdox",
+    "reportPath": "projects/overdox/reports/2026-11-12-manual-20261112210344423-v1.0.0.html",
+    "date": "2026-11-12T21:03:44.423Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio / Pixel Camera에 URP 인스턴싱 반짝임 수정 반영",
+    "summary": "Fantasya에서 확인한 수정을 제품 원본에 반영했습니다. Runtime·URP만 설치한 실제 Unity에서 기본24프레임·법선 외곽선12프레임의 변동과 경고가 0이었습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111164414605-v1.0.0.html",
+    "date": "2026-11-11T16:44:14.605Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실행 중 캐릭터 픽셀 반짝임 재현과 수정",
+    "summary": "실제 열린 Unity에서 시간적 변동을 재현하고 교체 패스 인스턴싱만 제한했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111155315670-v1.0.0.html",
+    "date": "2026-11-11T15:53:15.670Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캐릭터 픽셀 카메라 실행 중 반짝임과 부분 소실 수정",
+    "summary": "실제 Unity에서 시간에 따른 반짝임을 재현했습니다. 교체 셰이더 패스만 인스턴싱을 끈 결과 24프레임의 변동과 경고가 0이 됐습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-bug-20261111155151183-v1.0.0.html",
+    "date": "2026-11-11T15:51:51.183Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio와 플레이어·몬스터 전용 픽셀 카메라 적용",
+    "summary": "제품은 Pixora Studio만 가져오며 배경을 제외한 캐릭터만 실제 렌더로 비교합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-fantasya-pixora-character-pixels-20261111-20261111153651055-v1.0.1.html",
+    "date": "2026-11-11T15:36:51.055Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio와 플레이어·몬스터 전용 픽셀 카메라 적용",
+    "summary": "제품은 Pixora Studio만 가져오며 배경을 제외한 캐릭터만 실제 렌더로 비교합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111134807418-v1.0.0.html",
+    "date": "2026-11-11T13:48:07.418Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 동료 제거에 함께 누락된 기존 몬스터 행동 코드 복원",
+    "summary": "기존 MonsterAI와 MonsterBehaviorAction을 원본 GUID로 복원했습니다. AI 동료·대화·연결 기능은 복원하지 않았습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111134634009-v1.0.0.html",
+    "date": "2026-11-11T13:46:34.009Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Pixora Studio 도입과 플레이어·몬스터 전용 픽셀 카메라",
+    "summary": "Pixora Studio만 도입하고 캐릭터 프리팹 49개를 구성했습니다. 실제 URP 화면에서 배경 815,995픽셀은 동일했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111134632367-v1.0.0.html",
+    "date": "2026-11-11T13:46:32.367Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 동료·대화·마이크·PC 에이전트 연결 제거",
+    "summary": "AI 기능을 제거하고 플레이어·몬스터 전투 구성으로 되돌렸습니다. 다른 작업과 삭제 전 복구 백업은 보존했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111130655924-v1.0.0.html",
+    "date": "2026-11-11T13:06:55.924Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "왼쪽 투명 동료 대화창 디자인",
+    "summary": "왼쪽의 작은 투명 대화창과 채팅·마이크 모드를 실제 Unity에서 확인합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111123837110-v1.0.0.html",
+    "date": "2026-11-11T12:38:37.110Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동료 대화창을 작은 왼쪽 투명 UI로 정리",
+    "summary": "큰 남색 배경을 없애고 이름·행동·대화와 채팅·마이크 입력을 간결하게 배치했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111123835057-v1.0.0.html",
+    "date": "2026-11-11T12:38:35.057Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동료 대화·PC 에이전트 참여·채팅과 마이크 입력 작업 기록",
+    "summary": "실제 Unity와 사용자 PC Codex로 대화·약속·행동을 확인하고 음성 입력을 분리합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-fantasya-companion-conversation-20261111-20261111111754516-v1.0.1.html",
+    "date": "2026-11-11T11:17:54.516Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "동료 대화·PC 에이전트 참여·채팅과 마이크 입력 작업 기록",
+    "summary": "실제 Unity와 사용자 PC Codex로 대화·약속·행동을 확인하고 음성 입력을 분리합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111110848696-v1.0.0.html",
+    "date": "2026-11-11T11:08:48.696Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "채팅·마이크 모드 분리와 로컬 한국어 음성 인식·확인 후 전송",
+    "summary": "마이크를 직접 시작하고 인식한 문장을 확인 후 보내도록 분리했습니다. 공용 WAV 인코더를 모체에도 반영했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111110712583-v1.0.0.html",
+    "date": "2026-11-11T11:07:12.583Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "사용자 PC의 Codex·Claude·Cursor가 같은 게임 동료에 참여하는 MCP 연결",
+    "summary": "실제 Codex CLI가 게임의 질문을 받고 자기 모델로 답변한 뒤 Unity 행동 적용을 확인했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111110710940-v1.0.0.html",
+    "date": "2026-11-11T11:07:10.940Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "같은 동료와 게임 안팎에서 대화하고 기억·약속을 실제 행동에 연결",
+    "summary": "동료별 성격·공유 기억·대화창과 약속 우선 행동을 추가하고 실제 Unity에서 대기·추종 전환을 확인했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111110709384-v1.0.0.html",
+    "date": "2026-11-11T11:07:09.384Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Turnlume 자동 배포를 사이트 게시 변경으로 제한",
+    "summary": "main의 모든 푸시에서 실행되던 Pages 배포를 게시글·사이트 입력 파일 변경으로 제한했습니다. Unity 개발과 일반 문서 수정은 제외합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111105200868-v1.0.0.html",
+    "date": "2026-11-11T10:52:00.868Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 등록 실패 수정과 댓글 목록 배경 적용",
+    "summary": "Cloudflare에서 지원하지 않는 redirect:error가 등록 전 게시글 확인을 중단시켰습니다. manual로 수정하고 실제 등록·조회·삭제까지 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111103538288-v1.0.0.html",
+    "date": "2026-11-11T10:35:38.288Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "이전·다음 버튼 제거와 댓글 입력란 두 열 압축",
+    "summary": "글 상세의 이전·다음 버튼을 제거하고 닉네임·비밀번호를 왼쪽 두 줄, 댓글을 오른쪽에 배치했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111101828970-v1.0.0.html",
+    "date": "2026-11-11T10:18:28.970Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "추천 카드 튕기는 등장과 최초 노출 유지",
+    "summary": "추천 카드에 680ms 아래에서 위로 튕기는 효과를 적용하고 스크롤을 올려도 유지하도록 수정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111095223380-v1.0.0.html",
+    "date": "2026-11-11T09:52:23.380Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "본문 하단 진입 시 추천 게시물 카드 표시",
+    "summary": "본문 약 80%를 읽으면 좌측 하단에 같은 카테고리 글과 썸네일을 표시합니다. 닫으면 해당 글의 세션 동안 재표시하지 않습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111094350536-v1.0.0.html",
+    "date": "2026-11-11T09:43:50.536Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya AI 동료 컨트롤러 구성",
+    "summary": "공통 모터, 긴급 대응, 다중 동료, 지연 HUD와 로컬 모델을 순서대로 구성합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-fantasya-ai-companions-20261111-20261111093301286-v1.0.1.html",
+    "date": "2026-11-11T09:33:01.286Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya AI 동료 컨트롤러 구성",
+    "summary": "공통 모터, 긴급 대응, 다중 동료, 지연 HUD와 로컬 모델을 순서대로 구성합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-manual-20261111091836492-v1.0.0.html",
+    "date": "2026-11-11T09:18:36.492Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya에서 환류한 공용 모델 통신과 요청 슬롯",
+    "summary": "사용자 승인으로 게임 행동 해석을 분리한 Game.AgentModels 모듈과 연결·정리 계약 문서를 추가했습니다.",
+    "project": "sampleprojectforunity",
+    "reportPath": "projects/sampleprojectforunity/reports/2026-11-11-result-20261111091517893-v1.0.0.html",
+    "date": "2026-11-11T09:15:17.893Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "플레이어 모터를 공유하는 AI 동료와 로컬 모델 실측",
+    "summary": "AI 동료 3명, 지연 HUD와 Ollama 연결을 구성했습니다. 최종 정상 판단 평균 190.2~233.5ms; 원격·32명 부하는 미확인입니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-11-result-20261111091516119-v1.0.0.html",
+    "date": "2026-11-11T09:15:16.119Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Turnlume 폴더 변경과 푸시 자동 배포 완료",
+    "summary": "로컬 폴더를 Turnlume으로 변경하고 배포 토큰을 등록했습니다. 실제 main 푸시로 운영 배포와 171개 공개 경로 일치를 확인했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111090457813-v1.0.0.html",
+    "date": "2026-11-11T09:04:57.813Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 전용 GA4 속성으로 포트폴리오와 통계 분리",
+    "summary": "측정 ID G-MV60PQ4FH0와 숫자 속성 563715828로 연결을 분리하고 운영 배포를 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111081218663-v1.0.0.html",
+    "date": "2026-11-11T08:12:18.663Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 팀 프로필과 공용 로고 적용, Analytics 속성 연결 확인",
+    "summary": "개인 소개를 팀 소개로 바꾸고 기존 MIRO 로고를 사용했습니다. 운영 데스크톱과 모바일에서 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111075955183-v1.0.0.html",
+    "date": "2026-11-11T07:59:55.183Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 방문 상세 수집과 본인 방문 제외 연결",
+    "summary": "날짜별 방문 합계만 저장하던 경로에 상세 방문 저장과 조회를 연결했습니다. 포트폴리오의 무시 규칙 3개를 블로그로 복사했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-11-result-20261111061147787-v1.0.0.html",
+    "date": "2026-11-11T06:11:47.787Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Turnlume 저장소 이름과 공개 사이트 주소 적용",
+    "summary": "GitHub 저장소와 origin을 Turnlume으로 변경하고 새 Pages 주소에 배포했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111055145125-v1.0.0.html",
+    "date": "2026-11-11T05:51:45.125Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Ternlume의 Design Data Table 로고 교체",
+    "summary": "제품에 포함된 둥근 픽셀 로고를 웹사이트의 제품 카드, 게시물과 공유 미리보기에 적용했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-11-result-20261111000804863-v1.0.0.html",
+    "date": "2026-11-11T00:08:04.863Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Ternlume 9개 언어 사이트와 푸시 배포 구성",
+    "summary": "기존 주소에서 게시물 14건과 사이트를 9개 언어로 공개했습니다. Actions는 배포 토큰 등록이 필요합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110235710019-v1.0.0.html",
+    "date": "2026-11-10T23:57:10.019Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 홈과 게시물 상세의 1년 기준 시간 표시",
+    "summary": "홈과 게시물 상세는 발행 후 1년 미만이면 경과 시간으로 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110234527912-v1.0.0.html",
+    "date": "2026-11-10T23:45:27.912Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Ternlume 사이트 병합과 제품 버전별 Journal 공개",
+    "summary": "기존 Pages 주소를 유지하고 통합 저장소에서 5개 제품의 13개 버전 글을 배포했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110232228961-v1.0.0.html",
+    "date": "2026-11-10T23:22:28.961Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 게시판 목록의 글별 NEW 표시",
+    "summary": "게시판 목록의 각 글 제목 옆에 발행 후 24시간 동안 NEW를 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110230955808-v1.0.0.html",
+    "date": "2026-11-10T23:09:55.808Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 홈의 게시물 발행 시각을 경과 시간으로 표시",
+    "summary": "홈 게시물 카드의 날짜가 발행 후 경과한 분, 시간, 일로 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110230340519-v1.0.0.html",
+    "date": "2026-11-10T23:03:40.519Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 카테고리 NEW 표시를 발행 후 24시간으로 변경",
+    "summary": "카테고리 최신 글의 확인된 발행 시각부터 24시간 동안 NEW를 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110225528675-v1.0.0.html",
+    "date": "2026-11-10T22:55:28.675Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 블로그를 miro-lab.pages.dev로 이전했습니다",
+    "summary": "새 주소에 블로그를 배포하고 이전 링크를 301로 연결했습니다. GA4 URL을 바꾸고 AdSense와 Search Console의 새 주소 등록을 접수했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110153036338-v1.0.0.html",
+    "date": "2026-11-10T15:30:36.338Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 체크박스와 전체 IP 표시",
+    "summary": "댓글 선택 삭제와 관리자 전용 전체 IP 표시를 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110143627961-v1.0.0.html",
+    "date": "2026-11-10T14:36:27.961Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 선택과 전체 IP 표시",
+    "summary": "현재 페이지 선택·삭제 및 관리자 전용 전체 IP를 추가합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110143625933-v1.0.0.html",
+    "date": "2026-11-10T14:36:25.933Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 홈 최근 개발일지 항목 높이 고정",
+    "summary": "홈의 왼쪽 최근 개발일지 네 항목을 아래쪽 항목의 기존 크기인 105px로 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110130919104-v1.0.0.html",
+    "date": "2026-11-10T13:09:19.104Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록의 색과 구분선 정리",
+    "summary": "작성자 강조색, 옅은 구분선, 차분한 원글 링크를 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110130058244-v1.0.0.html",
+    "date": "2026-11-10T13:00:58.244Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록의 티스토리풍 스타일 적용",
+    "summary": "작성자 강조와 옅은 행 구분선을 기존 관리자 탭에 적용합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110130056710-v1.0.0.html",
+    "date": "2026-11-10T13:00:56.710Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록을 행으로 정리하고 원글 제목 연결",
+    "summary": "작성자와 시각, 댓글 본문, 클릭할 수 있는 원글 제목을 행마다 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110124800582-v1.0.0.html",
+    "date": "2026-11-10T12:48:00.582Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "관리자 댓글 목록의 행 레이아웃과 원글 제목",
+    "summary": "댓글 행에 작성자, 내용, 클릭 가능한 원글 제목을 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110124759037-v1.0.0.html",
+    "date": "2026-11-10T12:47:59.037Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 폭을 본문에 맞추고 세로 크기 줄이기",
+    "summary": "댓글 폼이 본문 좌우에 정렬되며 입력칸과 위아래 여백이 줄었습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110122705807-v1.0.0.html",
+    "date": "2026-11-10T12:27:05.807Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 폼 가로 폭 복원과 세로 크기 축소",
+    "summary": "본문 폭을 사용하고 폼의 높이와 세로 간격만 줄입니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110122704048-v1.0.0.html",
+    "date": "2026-11-10T12:27:04.048Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 11월 9~10일 작업 기록 보완",
+    "summary": "DDT 로컬라이징 보고서 이후 누락된 Fantasya 작업을 결과 보고서 네 건과 버그 보고서 한 건으로 보완했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111108899-v1.0.2.html",
+    "date": "2026-11-10T12:23:20.530Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Robot Kyle 플레이어와 카메라 기준 조작",
+    "summary": "Robot Kyle을 임시 플레이어로 연결하고 카메라 기준 걷기, Shift 스프린트, Space 점프를 추가했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111038571-v1.0.2.html",
+    "date": "2026-11-10T12:23:20.527Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Playground 터레인과 파스텔 배경",
+    "summary": "Playground를 32×32m 초원으로 확장하고 배경과 색감을 조정했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111037114-v1.0.1.html",
+    "date": "2026-11-10T12:23:20.519Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 관리를 같은 관리자 대시보드 탭으로 통합",
+    "summary": "왼쪽 메뉴와 테마를 유지하며 댓글 관리가 중앙 패널에 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110122001830-v1.0.0.html",
+    "date": "2026-11-10T12:20:01.830Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 관리를 기존 관리자 탭에 통합",
+    "summary": "댓글 관리의 별도 페이지를 대시보드 중앙 패널로 이동합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110121959645-v1.0.0.html",
+    "date": "2026-11-10T12:19:59.645Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Tracefolio 코드 강조와 Mermaid 테마 정리",
+    "summary": "코드 줄마다 보이던 배경을 제거하고 Mermaid를 사이트의 라이트·다크 테마에 맞췄습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110120336973-v1.0.0.html",
+    "date": "2026-11-10T12:03:36.973Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공통 지침 중복 정리와 필요한 문서만 읽는 경로",
+    "summary": "공통 가이드 4개를 86,118바이트에서 61,870바이트로 줄이고, 프로젝트별 예외와 코드·Mermaid 기준을 보존했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110115747227-v1.0.0.html",
+    "date": "2026-11-10T11:57:47.227Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 화면 축소와 관리자 댓글 관리 배포",
+    "summary": "4자 삭제 비밀번호를 지원하고 관리자 댓글 목록에 삭제와 원글 이동을 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110115742503-v1.0.0.html",
+    "date": "2026-11-10T11:57:42.503Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "댓글 UI 축소와 관리자 댓글 관리 추가",
+    "summary": "4자 삭제 비밀번호와 관리자 목록·삭제·원글 링크를 운영에 적용합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110115740772-v1.0.0.html",
+    "date": "2026-11-10T11:57:40.772Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Codex 전역 지침 압축과 작업별 절차 분리",
+    "summary": "전역 AGENTS.md를 46,807바이트에서 4,686바이트로 줄이고 세부 절차를 작업별 문서로 옮겼습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110113818267-v1.0.0.html",
+    "date": "2026-11-10T11:38:18.267Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역 지침 압축 작업 메뉴얼",
+    "summary": "설치본의 공통 규칙과 작업별 절차를 분리하고 동기화·공개 배포를 확인합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110113646253-v1.0.0.html",
+    "date": "2026-11-10T11:36:46.253Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "비회원 댓글 운영 배포와 공개 동작 확인",
+    "summary": "공개 블로그에서 댓글 작성과 비밀번호 삭제를 확인했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110113158432-v1.0.0.html",
+    "date": "2026-11-10T11:31:58.432Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 게시글에 비회원 댓글 추가",
+    "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-guest-comments-d1-20261110-20261110113156732-v1.0.1.html",
+    "date": "2026-11-10T11:31:56.732Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 11월 9~10일 작업 기록 보완",
+    "summary": "DDT 로컬라이징 보고서 이후 누락된 Fantasya 작업을 결과 보고서 네 건과 버그 보고서 한 건으로 보완했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111108899-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.557Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Robot Kyle 플레이어와 카메라 기준 조작",
+    "summary": "Robot Kyle을 임시 플레이어로 연결하고 카메라 기준 걷기, Shift 스프린트, Space 점프를 추가했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111038571-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.555Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity Behavior 몬스터 순찰과 팀 전투",
+    "summary": "몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111035632-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.554Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 전환과 캐릭터 프리팹",
+    "summary": "DDT 캐릭터·스테이터스·이름을 Addressables로 로드하고 플레이어와 몬스터 프리팹을 등록했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111032667-v1.0.1.html",
+    "date": "2026-11-10T11:26:27.543Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 메뉴 바깥 터치 닫기",
+    "summary": "모바일 메뉴가 열리면 바깥 화면이 어두워지고, 바깥을 누르면 닫힙니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110111758258-v1.0.0.html",
+    "date": "2026-11-10T11:17:58.258Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 화면의 가로 넘침 수정",
+    "summary": "400px 모바일 화면에서 문서가 644px로 넓어지던 문제를 수정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110111119749-v1.0.0.html",
+    "date": "2026-11-10T11:11:19.749Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 11월 9~10일 작업 기록 보완",
+    "summary": "DDT 로컬라이징 보고서 이후 누락된 Fantasya 작업을 결과 보고서 네 건과 버그 보고서 한 건으로 보완했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111108899-v1.0.0.html",
+    "date": "2026-11-10T11:11:08.899Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Robot Kyle 플레이어와 카메라 기준 조작",
+    "summary": "Robot Kyle을 임시 플레이어로 연결하고 카메라 기준 걷기, Shift 스프린트, Space 점프를 추가했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111038571-v1.0.0.html",
+    "date": "2026-11-10T11:10:38.571Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Playground 터레인과 파스텔 배경",
+    "summary": "Playground를 32×32m 초원으로 확장하고 배경과 색감을 조정했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111037114-v1.0.0.html",
+    "date": "2026-11-10T11:10:37.114Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Unity Behavior 몬스터 순찰과 팀 전투",
+    "summary": "몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111035632-v1.0.0.html",
+    "date": "2026-11-10T11:10:35.632Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "FantasyaCharacter Addressables InvalidKeyException 수정",
+    "summary": "잘못 중첩된 번역 항목을 정리해 DDT 그룹 목록을 복구했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-bug-20261110111034171-v1.0.0.html",
+    "date": "2026-11-10T11:10:34.171Z",
+    "kind": "bug",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 전환과 캐릭터 프리팹",
+    "summary": "DDT 캐릭터·스테이터스·이름을 Addressables로 로드하고 플레이어와 몬스터 프리팹을 등록했습니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-result-20261110111032667-v1.0.0.html",
+    "date": "2026-11-10T11:10:32.667Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Fantasya 누락 보고서 정리와 공개 확인",
+    "summary": "11월 9~10일의 누락된 작업과 버그를 주제별 보고서로 정리하고 중앙 아카이브의 공개 주소를 확인합니다.",
+    "project": "fantasya",
+    "reportPath": "projects/fantasya/reports/2026-11-10-manual-20261110111030921-v1.0.0.html",
+    "date": "2026-11-10T11:10:30.921Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 탑바 문구와 카테고리 배치 수정",
+    "summary": "모바일 탑바의 소개 문구를 숨겨 MIRO 이름만 표시하고 카테고리를 탑바 아래 한 줄로 복구했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110110731894-v1.0.0.html",
+    "date": "2026-11-10T11:07:31.894Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글에 로그인 없는 댓글과 비밀번호 삭제 추가",
+    "summary": "D1 댓글 API와 반응형 폼을 구현했습니다. 운영 반영은 PR 병합 승인 대기입니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110110346663-v1.0.0.html",
+    "date": "2026-11-10T11:03:46.663Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 게시글에 비회원 댓글 추가",
+    "summary": "게시글별 댓글, 브라우저 닉네임 저장, 비밀번호 삭제를 D1으로 연결합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110110345138-v1.0.0.html",
+    "date": "2026-11-10T11:03:45.138Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모바일 카테고리 메뉴와 방문자 수 배치",
+    "summary": "모바일 가로 메뉴와 방문자 그래프를 치우고 탑바의 햄버거 메뉴로 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110110343755-v1.0.0.html",
+    "date": "2026-11-10T11:03:43.755Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글 OG의 MIRO 영문 표기",
+    "summary": "모든 게시글 OG가 공유하는 로고 옆 표기를 MIRO로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110105143083-v1.0.0.html",
+    "date": "2026-11-10T10:51:43.083Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글과 함께 자동 생성되는 MIRO OG 카드",
+    "summary": "블로그 빌드가 홈과 글의 공유 이미지를 자동 생성하고 제목, 발행일, 썸네일 변경을 카드에 반영합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110104529869-v1.0.0.html",
+    "date": "2026-11-10T10:45:29.869Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 축소 탑바 소개 문구 배치",
+    "summary": "탑바를 축소할 때 블로그 소개 문구가 MIRO 오른쪽에 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110104037238-v1.0.0.html",
+    "date": "2026-11-10T10:40:37.238Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 게시물 하단의 네 구역 분리",
+    "summary": "빨간 표시선을 기준으로 본문과 배너, 이전·다음 게시물, 헤드라인, 관련 글을 분리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110103821105-v1.0.0.html",
+    "date": "2026-11-10T10:38:21.105Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 스크롤 제목의 왼쪽 여백 정렬",
+    "summary": "스크롤 중 작은 제목의 시작 위치를 본문 제목과 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110103056174-v1.0.0.html",
+    "date": "2026-11-10T10:30:56.174Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 기본 Chrome 환경의 스크롤 애니메이션 수정",
+    "summary": "기본 Chrome의 모션 감소 설정에서 전환 시간이 0초로 적용됐습니다. 탑바와 검색창은 0.18초 동안 줄어들고 제목은 제자리에서 페이드됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110102737751-v1.0.0.html",
+    "date": "2026-11-10T10:27:37.751Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 탑바와 검색창의 스크롤 전환 개선",
+    "summary": "탑바와 검색창이 함께 부드럽게 줄어듭니다. 원래 글 제목이 탑바 뒤로 가려지면 읽는 제목이 작은 줄로 나타납니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110102251063-v1.0.0.html",
+    "date": "2026-11-10T10:22:51.063Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 본문 제목과 좌우 패널의 스크롤 위치 수정",
+    "summary": "글 제목을 검색 탑바 아래 본문 너비의 전용 줄로 분리했습니다. 상단 헤드라인도 본문 열로 옮겼습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110101625435-v1.0.0.html",
+    "date": "2026-11-10T10:16:25.435Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OG 공유 카드와 검색 예시 검증",
+    "summary": "홈과 개발일지 한 편을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-miro-og-20261110-20261110101343669-v1.0.1.html",
+    "date": "2026-11-10T10:13:43.669Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미로 블로그의 라이트 테마 OG 카드 개편",
+    "summary": "흰 배경의 홈 카드와 제목·썸네일·발행일을 담은 게시글 카드 153장을 Affinity에서 제작했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110101342282-v1.0.0.html",
+    "date": "2026-11-10T10:13:42.282Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 스크롤 탑바와 게시물 탐색 개선",
+    "summary": "검색창을 포함한 탑바가 스크롤 중 작게 유지됩니다. 헤드라인은 본문과 함께 스크롤되고, 글 하단에 한 번 더 표시됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110100810610-v1.0.0.html",
+    "date": "2026-11-10T10:08:10.610Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OG 공유 카드와 검색 예시 검증",
+    "summary": "홈과 개발일지 한 편을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110094717055-v1.0.0.html",
+    "date": "2026-11-10T09:47:17.055Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈·게시글 OG 카드와 Google 검색 예시",
+    "summary": "홈과 개발일지 한 편의 링크 공유 이미지 2종을 제작하고 Google 일반 검색에서의 제목·설명 예시를 작성했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094641412-v1.0.0.html",
+    "date": "2026-11-10T09:46:41.412Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "MIRO 모든 페이지의 고정 헤드라인",
+    "summary": "홈 전용 헤드라인을 공통 위치로 옮기고 스크롤 시 상단에 고정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094635065-v1.0.0.html",
+    "date": "2026-11-10T09:46:35.065Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "탑바를 유지하는 부드러운 페이지 전환",
+    "summary": "전체 화면 가림을 제거하고 본문만 짧고 약하게 페이드하도록 조정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094306437-v1.0.0.html",
+    "date": "2026-11-10T09:43:06.437Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 상단 요약 제거와 태그 하단 배치",
+    "summary": "상단 요약을 제거하고 태그를 본문 아래로 옮겼습니다. 제목 아래에 작성 정보 간격을 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110094019610-v1.0.0.html",
+    "date": "2026-11-10T09:40:19.610Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 공개 페이지의 공용 레이아웃",
+    "summary": "푸터에서 열리는 다섯 페이지의 본문 폭과 좌우 패널을 일반 게시물에 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110093706640-v1.0.0.html",
+    "date": "2026-11-10T09:37:06.640Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시판 우측 세로 광고 슬롯 추가",
+    "summary": "내 개발일지 등 게시판에서 기존 우측 세로 광고 미리보기를 쓸 수 있습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110093107902-v1.0.0.html",
+    "date": "2026-11-10T09:31:07.902Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 링크 아래에 문의 이메일 표시",
+    "summary": "이메일 링크를 푸터 메뉴 아래에 문의 문구로 배치했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110092733944-v1.0.0.html",
+    "date": "2026-11-10T09:27:33.944Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "페이지 본문 공개 후 페이드 시작",
+    "summary": "폰트 대기 중 소진되던 페이드를 본문이 보이는 시점으로 옮겼습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110092542348-v1.0.0.html",
+    "date": "2026-11-10T09:25:42.348Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 이메일과 AI 게시물 삭제 요청 안내",
+    "summary": "공개 이메일을 문의 본문에서 공통 푸터로 옮기고 삭제·정정 절차를 보강했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110092116814-v1.0.0.html",
+    "date": "2026-11-10T09:21:16.814Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "탑바와 모바일 그래프 로딩 공간 확보",
+    "summary": "탑바의 3px 로딩 공간과 모바일 방문자 그래프의 높이를 첫 프레임에 확보했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110091932888-v1.0.0.html",
+    "date": "2026-11-10T09:19:32.888Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 이름을 MIRO로 변경",
+    "summary": "블로그 상단과 페이지 제목에 MIRO를 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110091642967-v1.0.0.html",
+    "date": "2026-11-10T09:16:42.967Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 삭제·정정 요청 안내 페이지",
+    "summary": "공개 연락처를 설정 변수로 관리하고 게시물 문의 페이지를 푸터에 연결했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110091241745-v1.0.0.html",
+    "date": "2026-11-10T09:12:41.745Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 링크 위의 내부 여백 제거",
+    "summary": "본문과 푸터 사이 간격을 복원하고 푸터 링크 위쪽 내부 패딩만 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110090705492-v1.0.0.html",
+    "date": "2026-11-10T09:07:05.492Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "헤드라인 Next 간소화와 가로 모션 보완",
+    "summary": "Next를 작은 텍스트로 바꾸고 모션 줄이기에서도 짧은 가로 전환을 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110090527399-v1.0.0.html",
+    "date": "2026-11-10T09:05:27.399Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기존 개발 기록에 코드 구문 강조와 Mermaid 적용",
+    "summary": "기준 커밋의 20개 프로젝트 1,462편을 조사하고 기존 게시글 59편에 코드 또는 도표를 적용했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110085650583-v1.0.0.html",
+    "date": "2026-11-10T08:56:50.583Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "과거 개발 기록의 코드·Mermaid 적용 메뉴얼",
+    "summary": "공개 게시글 목록 조사, 원문 근거 기반 보강, 브라우저 검사, 공개 확인을 순서대로 수행합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110085648574-v1.0.0.html",
+    "date": "2026-11-10T08:56:48.574Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "헤드라인 자동 재생과 가로 전환",
+    "summary": "4초 자동 재생을 기본으로 하고 가로 슬라이드와 Next 버튼을 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110085514009-v1.0.0.html",
+    "date": "2026-11-10T08:55:14.009Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발일지 두 편에 로딩 분기와 예산 검사 추가",
+    "summary": "테이블별 로딩 선택을 Mermaid로 나타내고 웹 빌드의 전송 예산은 짧은 JavaScript 예제로 보여 줍니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110085424722-v1.0.0.html",
+    "date": "2026-11-10T08:54:24.722Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+    "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-devlog-formatting-20261110-20261110085422390-v1.0.1.html",
+    "date": "2026-11-10T08:54:22.390Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발일지 두 편에 Mermaid와 코드 강조 적용",
+    "summary": "기존 원고를 대조하고 도식과 코드가 필요한 두 글을 갱신합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084635167-v1.0.0.html",
+    "date": "2026-11-10T08:46:35.167Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 대표 게시물 제목 크기 조정",
+    "summary": "홈 가운데 대표 카드 제목을 PC 22px, 모바일 18px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084624494-v1.0.0.html",
+    "date": "2026-11-10T08:46:24.494Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물별 공개 조회수와 발행 시각 분산",
+    "summary": "게시물 상세에 조회수를 표시하고 기존 150개 글의 표시 시각을 30일에 걸쳐 분산했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084608423-v1.0.0.html",
+    "date": "2026-11-10T08:46:08.423Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "코드 수정 보고서에 Mermaid 사용 기준 추가",
+    "summary": "실행 흐름, 구조, 의존 관계의 이해를 돕는 경우 Mermaid 다이어그램을 사용합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110084402791-v1.0.0.html",
+    "date": "2026-11-10T08:44:02.791Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그 상단 표기와 작성진 안내 제목 수정",
+    "summary": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084317422-v1.0.0.html",
+    "date": "2026-11-10T08:43:17.422Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그와 작성진 안내 표기 수정 작업 메뉴얼",
+    "summary": "블로그 상단에 팀 블로그를 표시하고 푸터 링크와 페이지 제목을 작성진 안내로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084312431-v1.0.0.html",
+    "date": "2026-11-10T08:43:12.431Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈의 최신 게시물 헤드라인 티커",
+    "summary": "최신 게시물 다섯 개의 제목을 작은 글씨로 한 줄에 차례로 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084232571-v1.0.0.html",
+    "date": "2026-11-10T08:42:32.571Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 필명 적용 메뉴얼",
+    "summary": "루미 → 서하린, 노바 → 윤서진, 픽셀 → 강도현",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110084214829-v1.0.0.html",
+    "date": "2026-11-10T08:42:14.829Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 필명 변경",
+    "summary": "루미 → 서하린, 노바 → 윤서진, 픽셀 → 강도현",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110084148661-v1.0.0.html",
+    "date": "2026-11-10T08:41:48.661Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시물 코드 블록에 문법 강조 적용",
+    "summary": "마크다운에 언어를 적으면 코드가 빌드 단계에서 문법 강조됩니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110083715334-v1.0.0.html",
+    "date": "2026-11-10T08:37:15.334Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 상단 뉴스 헤드라인 적용",
+    "summary": "홈 상단 고정 소개 문구를 기사로 연결되는 뉴스 헤드라인으로 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110083529556-v1.0.0.html",
+    "date": "2026-11-10T08:35:29.556Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "코드 수정 보고서의 구문 강조와 핵심 설명 기준",
+    "summary": "핵심 코드에는 구문 강조를 적용하고 보고서만으로 변경을 이해할 수 있도록 맥락을 남깁니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110083452612-v1.0.0.html",
+    "date": "2026-11-10T08:34:52.612Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "코드 수정 보고 지침 반영 및 배포 메뉴얼",
+    "summary": "전역 지침 수정, 설치본 대조, 아카이브 배포를 순서대로 수행합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110083450326-v1.0.0.html",
+    "date": "2026-11-10T08:34:50.326Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 홈 방문자 수와 최근 7일 추이",
+    "summary": "홈 왼쪽 프로필 아래에 오늘·어제·누적 방문자 수와 7일 그래프를 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110083015321-v1.0.0.html",
+    "date": "2026-11-10T08:30:15.321Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 콘텐츠와 푸터 사이에 남은 여백 제거",
+    "summary": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110082713364-v1.0.0.html",
+    "date": "2026-11-10T08:27:13.364Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 푸터 위 실제 간격 제거 작업 메뉴얼",
+    "summary": "공개 홈에서 마지막 콘텐츠와 푸터 경계 사이에 남은 간격을 0px로 없앴습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110082711817-v1.0.0.html",
+    "date": "2026-11-10T08:27:11.817Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 안내와 게시 기준 구체화",
+    "summary": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110082230432-v1.0.0.html",
+    "date": "2026-11-10T08:22:30.432Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "AI 작성진 안내 상세화 작업 메뉴얼",
+    "summary": "AI 작성진 안내에 담당 분야, 실제 글 예시, 원고 작성과 발행 기준을 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110082228835-v1.0.0.html",
+    "date": "2026-11-10T08:22:28.835Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "NEW 그라데이션의 방향과 속도 조정",
+    "summary": "NEW 표시가 0.9초 주기로 한 방향으로 흐르도록 변경했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110081614209-v1.0.0.html",
+    "date": "2026-11-10T08:16:14.209Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 위 여백 줄이기",
+    "summary": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110081534981-v1.0.0.html",
+    "date": "2026-11-10T08:15:34.981Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 상단 여백 조정 작업 메뉴얼",
+    "summary": "공개 홈에서 푸터 위 여백을 데스크톱 72px에서 24px, 모바일 42px에서 12px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110081533276-v1.0.0.html",
+    "date": "2026-11-10T08:15:33.276Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "광고 관리 버튼과 패널 디자인 개선",
+    "summary": "블로그 하늘색을 기준으로 광고 관리 탭의 동작과 선택 상태를 구분했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110081424507-v1.0.0.html",
+    "date": "2026-11-10T08:14:24.507Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 왼쪽 제목과 자동 발행 문구 삭제",
+    "summary": "푸터 왼쪽의 제목과 설명을 삭제하고 오른쪽 메뉴를 유지했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110080756928-v1.0.0.html",
+    "date": "2026-11-10T08:07:56.928Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "푸터 왼쪽 소개 삭제 작업 메뉴얼",
+    "summary": "표시된 문구를 삭제하고 오른쪽 메뉴를 공개 화면에서 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110080755180-v1.0.0.html",
+    "date": "2026-11-10T08:07:55.180Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "광고 관리에서 수익 CSV 가져오기 제거",
+    "summary": "광고 관리에서 CSV 수익 조회 메뉴와 처리 코드를 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110080620651-v1.0.0.html",
+    "date": "2026-11-10T08:06:20.651Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글 작성자와 주제 태그 다섯 개 표시",
+    "summary": "개발일지는 미로로, 나머지 글은 게시판별 필명으로 표시하고 제목 아래에 태그 다섯 개를 배치했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110074641760-v1.0.0.html",
+    "date": "2026-11-10T07:46:41.760Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시글 작성자와 태그 표시 작업 메뉴얼",
+    "summary": "게시판별 작성자와 글마다 태그 다섯 개를 반영하고 공개 화면을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110074640195-v1.0.0.html",
+    "date": "2026-11-10T07:46:40.195Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 광고 관리에 AdSense 수익 보고서 추가",
+    "summary": "AdSense 읽기 전용 인증과 블로그 도메인 수익 보고서를 운영에 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110074519273-v1.0.0.html",
+    "date": "2026-11-10T07:45:19.273Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 관리자 왼쪽 메뉴에 광고 관리 배치",
+    "summary": "광고 관리를 왼쪽 탭으로 옮기고 관리자 사이트맵 안내를 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110073644670-v1.0.0.html",
+    "date": "2026-11-10T07:36:44.670Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "상단 검색 버튼 글씨를 흰색으로 변경",
+    "summary": "검색 버튼의 글자색을 흰색으로 지정했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110073056858-v1.0.0.html",
+    "date": "2026-11-10T07:30:56.858Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그 푸터와 AI 작성진 안내",
+    "summary": "공용 푸터를 팀 블로그로 바꾸고 AI 자동 발행 안내와 작성진 페이지 링크를 추가했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110073035907-v1.0.0.html",
+    "date": "2026-11-10T07:30:35.907Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "팀 블로그 푸터와 AI 작성진 안내 작업 메뉴얼",
+    "summary": "공용 푸터 수정 후 공개 안내 페이지의 링크와 내용을 확인합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-manual-20261110073033936-v1.0.0.html",
+    "date": "2026-11-10T07:30:33.936Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 GA4 측정 태그 운영 반영",
+    "summary": "블로그의 측정 태그와 개인정보 안내를 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072920178-v1.0.0.html",
+    "date": "2026-11-10T07:29:20.178Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 섹션 색상에 맞춘 카드 호버",
+    "summary": "최신 뉴스는 붉은색, 제작 이야기는 초록색, 게임 기술은 보라색으로 호버를 맞췄습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072848513-v1.0.0.html",
+    "date": "2026-11-10T07:28:48.513Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "웹폰트 준비 전 전체 화면 로딩 표시",
+    "summary": "블로그 첫 방문과 새로고침에서 웹폰트가 준비될 때까지 로딩 표시를 보여 줍니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072820254-v1.0.0.html",
+    "date": "2026-11-10T07:28:20.254Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그와 관리 화면의 하늘색 및 파비콘 일치",
+    "summary": "블로그 운영 색상과 탭 아이콘을 관리 Worker에 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072740103-v1.0.0.html",
+    "date": "2026-11-10T07:27:40.103Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈과 게시판의 호버 강조선 두께 조정",
+    "summary": "하늘색 그라데이션 강조선을 2px에서 1px로 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110072119233-v1.0.0.html",
+    "date": "2026-11-10T07:21:19.233Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity CLI 우선 사용을 전역 지침에 명시",
+    "summary": "Affinity 작업은 전용 CLI의 연결 확인부터 시작합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110071442376-v1.0.0.html",
+    "date": "2026-11-10T07:14:42.376Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Affinity 전용 CLI 우선 적용 메뉴얼",
+    "summary": "전역 지침에 Affinity CLI 선행과 GUI 전환 조건을 명시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-manual-20261110071409855-v1.0.0.html",
+    "date": "2026-11-10T07:14:09.855Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 공용 하늘색 테마 복원",
+    "summary": "탑바, 검색 버튼, 글 카드 강조를 하늘색 계열로 맞추고 기존 파란 로고를 복원했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110071400338-v1.0.0.html",
+    "date": "2026-11-10T07:14:00.338Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "명시적 사용자 지시의 전체 이행 원칙 추가",
+    "summary": "전역 AGENTS.md에 사용자 지시 이행 원칙을 추가했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-10-result-20261110071152222-v1.0.0.html",
+    "date": "2026-11-10T07:11:52.222Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "포트폴리오 원본 관리 화면 이식",
+    "summary": "원본 관리자 UI와 탐색·통계 API를 블로그 관리 Worker에 적용했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110071007472-v1.0.0.html",
+    "date": "2026-11-10T07:10:07.472Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "파비콘 모서리 투명 처리와 흰색 로고 선",
+    "summary": "Affinity에서 둥근 주황색 로고의 바깥 모서리를 투명하게 만들고 내부 선을 흰색으로 바꿨습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110070511341-v1.0.0.html",
+    "date": "2026-11-10T07:05:11.341Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "포트폴리오 구조를 반영한 블로그 관리 화면",
+    "summary": "관리 로그인과 대시보드의 공통 스타일, 메뉴 및 통계 구성을 운영에 배포했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110065823019-v1.0.0.html",
+    "date": "2026-11-10T06:58:23.019Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 관리 푸터 운영 배포 확인",
+    "summary": "공개 블로그에 관리 링크를 반영했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110064850863-v1.0.0.html",
+    "date": "2026-11-10T06:48:50.863Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 관리 페이지 Google 로그인과 푸터 진입점",
+    "summary": "관리 Worker를 Google 로그인으로 전환했습니다. 푸터 변경은 로컬 빌드에 반영됐습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-10-result-20261110063443523-v1.0.0.html",
+    "date": "2026-11-10T06:34:43.523Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "세 Publisher 업로드본의 Unity 설치·실행 및 공식 Validator 결과",
+    "summary": "대표 예제 5개 실행, 공식 Validator 실패 0개 및 Pixora Studio 추가 파일 1개를 확인했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110053915525-v1.0.0.html",
+    "date": "2026-11-10T05:39:15.525Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Publisher 업로드 패키지 3종 설치·실행·Validator 메뉴얼",
+    "summary": "업로드된 패키지를 격리 환경에 설치하고 실행·Validator·파일 목록을 검증했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110053914243-v1.0.0.html",
+    "date": "2026-11-10T05:39:14.243Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "템플릿 변경을 세 제품의 Publisher 초안에 반영",
+    "summary": "Design Data Table 2.0.3, Pixora Studio 1.0.1, Entity Forge 0.3.2-preview의 바이너리를 갱신했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110052621625-v1.0.0.html",
+    "date": "2026-11-10T05:26:21.625Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "템플릿 변경 후 세 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "Design Data Table, Pixora Studio, Entity Forge의 기존 초안 바이너리를 갱신합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110052620324-v1.0.0.html",
+    "date": "2026-11-10T05:26:20.324Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 목록 클릭의 메인 창 덮임 완화",
+    "summary": "별도 Windows 목록 창에도 기존 클릭 보호를 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-result-20261110051441762-v1.0.0.html",
+    "date": "2026-11-10T05:14:41.762Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 목록의 창 깜박임 완화 검증",
+    "summary": "별도 Windows 목록 창에 클릭 보호를 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-10-manual-20261110051440367-v1.0.0.html",
+    "date": "2026-11-10T05:14:40.367Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "제품 지정 정정 및 Pixora Studio 1.0.1 초안 바이너리 갱신",
+    "summary": "두 번째 제품을 Entity Forge로 잘못 해석한 업로드 기록을 정정하고 Pixora Studio 1.0.1 바이너리를 기존 초안에 등록했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109161505594-v1.0.0.html",
+    "date": "2026-11-09T16:15:05.594Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109161503946-v1.0.2.html",
+    "date": "2026-11-09T16:15:03.946Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom main 푸시 및 원격 커밋 확인",
+    "summary": "사용자 재지시 후 기존 로컬 커밋 46968c72를 origin/main에 푸시하고 원격 SHA를 대조했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109155426712-v1.0.0.html",
+    "date": "2026-11-09T15:54:26.712Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-drafts-20261110-20261109155424828-v1.0.1.html",
+    "date": "2026-11-09T15:54:24.828Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "검정과 주황의 개발 블로그 테마",
+    "summary": "홈, 게시판, 글 상세, 검색과 푸터를 짙은 검정과 주황 포인트로 통일했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109154923882-v1.0.0.html",
+    "date": "2026-11-09T15:49:23.882Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 전용 지침 모아보기 폴더화",
+    "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-tracefolio-guideline-folders-20261109154421278-v1.0.1.html",
+    "date": "2026-11-09T15:44:21.278Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 전용 지침의 폴더 탐색",
+    "summary": "모아보기에서 프로젝트 20개를 폴더로 펼치고, 턴룸 제품은 하위 폴더에서 각각 열 수 있습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-result-20261109154419506-v1.0.0.html",
+    "date": "2026-11-09T15:44:19.506Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 변경 커밋과 Unity Asset Store 초안 바이너리 갱신",
+    "summary": "Design Data Table과 Entity Forge의 바이너리를 기존 초안에 저장했습니다. TurnRoom 변경은 로컬에 커밋했으며 원격 main 푸시는 자동 승인 검토에서 차단됐습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109153850576-v1.0.0.html",
+    "date": "2026-11-09T15:38:50.576Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "TurnRoom 푸시와 두 제품 초안 바이너리 갱신 메뉴얼",
+    "summary": "소스 고정, 두 초안 등록, 원격 푸시 상태를 확인합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109153848658-v1.0.0.html",
+    "date": "2026-11-09T15:38:48.658Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 전용 지침 모아보기 폴더화",
+    "summary": "개별 프로젝트와 턴룸 제품을 접고 펼치는 사이트 폴더로 표시합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109153819022-v1.0.0.html",
+    "date": "2026-11-09T15:38:19.022Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "한글 입력 중 검색 미리보기 즉시 갱신",
+    "summary": "입력마다 미리보기가 사라지는 동작을 제거하고 검색창 브라우저 자동완성을 끕니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109153129008-v1.0.0.html",
+    "date": "2026-11-09T15:31:29.008Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글 상세 폭과 본문 간격 정리, 홈 광고 미리보기",
+    "summary": "글 상세 폭을 홈과 맞추고 상단 로고와 파비콘을 통일했습니다. 홈에서 단축키로 광고 자리 미리보기를 켜고 끌 수 있습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109150854869-v1.0.0.html",
+    "date": "2026-11-09T15:08:54.869Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+    "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-tracefolio-project-guidelines-20261109150214760-v1.0.1.html",
+    "date": "2026-11-09T15:02:14.760Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "상단 메뉴와 20개 프로젝트 전용 지침",
+    "summary": "공개 상단 메뉴와 프로젝트 전용 지침 20개를 확인하고 실제 브라우저 전후 화면을 첨부했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-project-guidelines-20261109150212698-v1.0.1.html",
+    "date": "2026-11-09T15:02:12.698Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "상단 메뉴와 20개 프로젝트 전용 지침",
+    "summary": "전역 지침을 상단 메뉴에 두고, 각 프로젝트 화면과 모아보기에서 전용 지침을 연결했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-result-20261109145440152-v1.0.0.html",
+    "date": "2026-11-09T14:54:40.152Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블별 Addressables 작업 메뉴얼",
+    "summary": "테이블별 등록과 로딩을 구현하고 실제 Unity에서 확인합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109145351037-v1.0.0.html",
+    "date": "2026-11-09T14:53:51.037Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블별 Addressables 선택",
+    "summary": "전체 적용을 제거했습니다. 체크된 테이블만 Addressables를 사용하며, 샘플은 자동 등록되지 않습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109145315072-v1.0.0.html",
+    "date": "2026-11-09T14:53:15.072Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역·프로젝트 전용 지침 정리 및 공개 작업 메뉴얼",
+    "summary": "20개 프로젝트의 근거를 대조하고 상단 바·프로젝트 카테고리·모아보기에서 접근하도록 구성합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109145039346-v1.0.0.html",
+    "date": "2026-11-09T14:50:39.346Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Tracefolio에서 Codex 전역 지침 열람",
+    "summary": "작성 가이드에 전역 지침 링크를 추가하고 저장소 원문으로 목차와 본문을 생성합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-result-20261109143936010-v1.0.0.html",
+    "date": "2026-11-09T14:39:36.010Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Tracefolio 전역 지침 열람 페이지 작업 메뉴얼",
+    "summary": "공개 저장소의 전역 지침을 작성 가이드에서 열고 원문과 대조합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-09-manual-20261109143839686-v1.0.0.html",
+    "date": "2026-11-09T14:38:39.686Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블 관리 입력란과 미설치 화면 검증",
+    "summary": "DDT 테이블 관리 입력란을 공통 카드 스타일로 통일하고 Addressables가 미설치된 경우 관련 설정을 숨겼습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109142643933-v1.0.0.html",
+    "date": "2026-11-09T14:26:43.933Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 영어 입력란 대비 수정과 Addressables 미설치 표시 정리",
+    "summary": "DDT 테이블 관리 입력란을 공통 카드 스타일로 통일하고 Addressables가 미설치된 경우 관련 설정을 숨겼습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109142641920-v1.0.0.html",
+    "date": "2026-11-09T14:26:41.920Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 주소와 Inspector 형식 확인",
+    "summary": "DDT 카드에서 Unity Inspector와 같은 순서로 Addressable 체크박스, 주소, 선택, 그룹, 레이블을 표시합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109141916673-v1.0.0.html",
+    "date": "2026-11-09T14:19:16.673Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 주소 편집과 Inspector 형식",
+    "summary": "DDT 카드에서 Unity Inspector와 같은 순서로 Addressable 체크박스, 주소, 선택, 그룹, 레이블을 표시합니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109141915167-v1.0.0.html",
+    "date": "2026-11-09T14:19:15.167Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT Addressables 등록과 기본 팝업 검증 메뉴얼",
+    "summary": "DDT 테이블에서 바이너리를 등록하고 Unity Addressables 기본 그룹·레이블 창을 열 수 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109140049564-v1.0.0.html",
+    "date": "2026-11-09T14:00:49.564Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 테이블별 Addressables 등록과 Unity 기본 팝업",
+    "summary": "DDT 테이블에서 바이너리를 등록하고 Unity Addressables 기본 그룹·레이블 창을 열 수 있습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109140048187-v1.0.0.html",
+    "date": "2026-11-09T14:00:48.187Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 바이너리 저장 위치와 설정창 검증 메뉴얼",
+    "summary": "DDT에서 새 바이너리의 기본 출력 경로를 분리하고, 테이블 관리에서 기존 파일의 위치를 바꾸도록 수정했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-manual-20261109134244684-v1.0.0.html",
+    "date": "2026-11-09T13:42:44.684Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 바이너리 저장 위치와 테이블 관리 바로가기",
+    "summary": "DDT에서 새 바이너리의 기본 출력 경로를 분리하고, 테이블 관리에서 기존 파일의 위치를 바꾸도록 수정했습니다.",
+    "project": "designdatatable",
+    "reportPath": "projects/designdatatable/reports/2026-11-09-result-20261109134243397-v1.0.0.html",
+    "date": "2026-11-09T13:42:43.397Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈과 게시판의 화면 진입 렌더링",
+    "summary": "화면 밖에 있는 카드에 자리만 잡아 두고 스크롤 시 제목과 썸네일을 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109133936320-v1.0.0.html",
+    "date": "2026-11-09T13:39:36.320Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 각진 박스와 제목 옆 글 수 적용",
+    "summary": "홈 박스 모서리를 통일하고 상단 높이를 줄였습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109133456919-v1.0.0.html",
+    "date": "2026-11-09T13:34:56.919Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-minimized-list-20261109-20261109133329625-v1.0.1.html",
+    "date": "2026-11-09T13:33:29.625Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "최소화 리스트의 공용 상세 툴팁 적용",
+    "summary": "최소화 리스트 옵션의 툴팁을 제목과 본문이 있는 공용 카드로 연결했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109133327284-v1.0.0.html",
+    "date": "2026-11-09T13:33:27.284Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈과 게시판 목록의 공통 가로 폭 적용",
+    "summary": "게시판에 별도로 적용된 800px 폭 제한을 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109133032789-v1.0.0.html",
+    "date": "2026-11-09T13:30:32.789Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 섹션 상단선과 게시물 미리보기 추가",
+    "summary": "홈 두 섹션에 상단선을 넣고 홈과 게시판 목록에서 본문을 미리 읽을 수 있게 했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109132648710-v1.0.0.html",
+    "date": "2026-11-09T13:26:48.710Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-turnroom-popup-alttab-20261109-20261109131856007-v1.0.1.html",
+    "date": "2026-11-09T13:18:56.007Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전역 설정의 Alt+Tab 제목 번역 일치",
+    "summary": "전역 설정 창의 내부 제목과 Windows 창 제목에 같은 번역을 사용합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109131854353-v1.0.0.html",
+    "date": "2026-11-09T13:18:54.353Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "게시판별 30일 모아보기와 중복 썸네일 정리",
+    "summary": "공개 게시판 5곳에 각각 30편을 표시하고 대표 이미지 중복을 제거했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109131807302-v1.0.0.html",
+    "date": "2026-11-09T13:18:07.302Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "독립 팝업 Alt+Tab 등록 작업 메뉴얼",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109130940378-v1.0.0.html",
+    "date": "2026-11-09T13:09:40.378Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "독립 설정 및 도구 팝업의 Windows Alt+Tab 등록",
+    "summary": "최소화 리스트 포함 여부와 별도로 설정·도구 팝업을 Windows 창 전환에 등록합니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109130938952-v1.0.0.html",
+    "date": "2026-11-09T13:09:38.952Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글로벌 최소화 리스트 설정 작업 메뉴얼",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-manual-20261109130255858-v1.0.0.html",
+    "date": "2026-11-09T13:02:55.858Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "글로벌 설정에 최소화 리스트 토글 추가",
+    "summary": "최소화 리스트 사용 여부를 저장하고 기본값을 켜짐으로 설정했습니다.",
+    "project": "turnroom",
+    "reportPath": "projects/turnroom/reports/2026-11-09-result-20261109130254452-v1.0.0.html",
+    "date": "2026-11-09T13:02:54.452Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "OG 썸네일 교체 및 홈 높이와 푸터 조정",
+    "summary": "기존 공유 카드를 실제 화면이나 출처가 있는 관련 이미지로 바꾸고 홈 높이와 푸터를 정리했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109125620619-v1.0.0.html",
+    "date": "2026-11-09T12:56:20.619Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109125009623-v1.0.3.html",
+    "date": "2026-11-09T12:50:09.623Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 시점 설명을 설정 아래로 이동",
+    "summary": "Inspector에 설정 카드를 먼저 표시하고 기존 설명 두 문단을 아래에 배치했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109125008013-v1.0.0.html",
+    "date": "2026-11-09T12:50:08.013Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "홈 개발일지 통합 및 한 줄 게시판 복원",
+    "summary": "홈 섹션을 구별해 세로로 배치하고 카테고리 게시판은 한 줄에 글 하나씩 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109124822233-v1.0.0.html",
+    "date": "2026-11-09T12:48:22.233Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109124616733-v1.0.2.html",
+    "date": "2026-11-09T12:46:16.733Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 시점 이름과 자유 회전 설정",
+    "summary": "아이소매트릭 시점 활성화 중 Transform을 잠그고 자유 시점에서만 회전 값을 편집하도록 변경했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109124615405-v1.0.0.html",
+    "date": "2026-11-09T12:46:15.405Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "블로그 제목 크기와 카테고리 목록 개편",
+    "summary": "제목 크기를 줄이고 홈과 카테고리 목록에 썸네일을 표시합니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-09-result-20261109124328748-v1.0.0.html",
+    "date": "2026-11-09T12:43:28.748Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 렌더링 책임 분리 작업 메뉴얼",
+    "summary": "오브젝트 픽셀 렌더링과 독립 아이소매트릭 시점을 분리합니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-manual-pixel-camera-isometric-separation-20261109-20261109123207322-v1.0.1.html",
+    "date": "2026-11-09T12:32:07.322Z",
+    "kind": "manual",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "아이소매트릭 카메라 자유 이동 및 시장 픽셀 효과 복원",
+    "summary": "추적 대상 없는 카메라의 Transform 이동을 허용하고 시장 예제의 픽셀화와 윤곽선을 복원했습니다.",
+    "project": "pixora",
+    "reportPath": "projects/pixora/reports/2026-11-09-result-20261109123146042-v1.0.0.html",
+    "date": "2026-11-09T12:31:46.042Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "Markdown 폴더로 블로그 카테고리 결정",
     "summary": "Markdown 파일이 들어 있는 폴더에 따라 목록과 본문의 카테고리를 정합니다.",
     "project": "github-blog",

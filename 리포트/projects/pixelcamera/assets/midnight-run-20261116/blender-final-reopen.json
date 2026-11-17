@@ -1,0 +1,26 @@
+[
+  {
+    "file": "CourierSprint.blend",
+    "sha256": "38b38ee76632650cd764ffd23302fb914d80c69d5ec795e4f78fa22e89152019",
+    "reopened": true,
+    "rigBones": [
+      18
+    ],
+    "meshes": 1,
+    "weightedMeshes": 1,
+    "actions": 1,
+    "fps": 48,
+    "unchangedOnDisk": true
+  },
+  {
+    "file": "NeonSprintCity.blend",
+    "sha256": "0640c0bcfdd7e0996a139b37cc592faf49edf94da13e5ea975db0d402cdf8160",
+    "reopened": true,
+    "rigBones": [],
+    "meshes": 27,
+    "weightedMeshes": 0,
+    "actions": 0,
+    "fps": 48,
+    "unchangedOnDisk": true
+  }
+]

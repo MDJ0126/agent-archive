@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "네, 디아블로 느낌은 지금보다 카메라를 조금 더 눕혀도 좋습니다. Inspector에서 직접 조절하실 수 있습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "네, 디아블로 느낌은 지금보다 카메라를 조금 더 눕혀도 좋습니다. Inspector에서 직접 조절하실 수 있습니다.\n\n`PixelCombat` 씬의 **Main Camera**를 선택하신 뒤:\n\n- **Combat Camera Follow → Offset**: 현재 `(10, 14, -10)`에서 **Y를 10~12로 낮추면** 카메라 위치가 낮아집니다.\n- **Transform → Rotation X**: 현재 약 45°에서 **35~40°**로 낮추면 더 누운 각도가 됩니다.\n- **Camera → Orthographic Size**: 현재 `6.2`이며, 작을수록 가까워집니다.\n\n현재 코드는 추적 중 카메라 위치만 갱신하므로 **Offset과 Rotation을 함께 조절**해 주세요. 영구 저장하려면 Play 모드를 끈 상태에서 수정하고 씬을 저장하시면 됩니다.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T09:34:53.000Z / 세션 턴 실측 84초. 보고서 복원: 2026-11-17T07:40:29.829Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

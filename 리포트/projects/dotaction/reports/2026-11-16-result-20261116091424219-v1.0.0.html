@@ -1,0 +1,193 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>DotAction 8방향 격자 경로 이동과 셀 점유 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/theme.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/discussions.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/manuals.css?v=15c00d9afbaf"><link rel="stylesheet" href="../../../assets/copy-links.css?v=15c00d9afbaf"><script defer src="../../../assets/copy-links.js?v=15c00d9afbaf"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/dotaction/assets/sym_bolt.png" alt="DotAction 로고"><span>DotAction</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>DotAction 8방향 격자 경로 이동과 셀 점유</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">1m XZ 격자의 A* 경로·대각선 모서리 차단·셀 예약을 구현하고 실제 플레이에서 이동을 확인했습니다.</p><div class="post-byline"><time datetime="2026-11-16T09:14:24.219Z">2026년 11월 16일 오후 6:14 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>기존 정적 씬에는 이동이 없었습니다. 이제 마우스로 목적지를 지정하면 8방향 경로를 따라 셀 사이를 보간합니다. WASD도 같은 이동 경로를 사용합니다.</p>
+<p><figure><img class="report-image" src="../assets/combat-20261116/combat-pixel-movement.png" alt="격자 경로와 이동 중 실제 화면" loading="lazy"><figcaption>격자 경로와 이동 중 실제 화면</figcaption></figure></p>
+<pre class="mermaid">flowchart TD
+ A[마우스 목적지 또는 WASD 입력] --&gt; B[현재 또는 진행 중 도착 셀]
+ B --&gt; C[A star 경로 탐색]
+ C --&gt; D{경계와 장애물 확인}
+ D --&gt;|불가| E[요청 거부]
+ D --&gt;|가능| F[다음 셀 예약]
+ F --&gt; G{점유 가능}
+ G --&gt;|아니오| F
+ G --&gt;|예| H[셀 사이 보간과 회전]
+ H --&gt; I[이전 셀 해제]
+ I --&gt; F
+</pre>
+<p><a class="report-link" href="../assets/combat-20261116/source-index.md">프로젝트 소유 전체 소스</a> · <a class="report-link" href="../assets/combat-20261116/combat-play-evidence.txt">실제 실행 수치</a> · <a class="report-link" href="../assets/combat-20261116/combat-vendor-hashes.json">외부 원본 해시</a></p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>CombatGrid.FindPath는 경계·장애물을 검사하고 대각선 이동 시 인접한 두 직교 셀도 검사합니다. 실패하면 빈 경로를 반환합니다. 다음은 실제 핵심 메서드 전체입니다.</p>
+<pre><code data-language="csharp">public List&lt;Vector2Int&gt; FindPath(Vector2Int start, Vector2Int goal)
+        {
+            var result = new List&lt;Vector2Int&gt;();
+            if (!IsWalkable(goal) || start == goal)
+            {
+                return result;
+            }
+            var open = new List&lt;Vector2Int&gt; { start };
+            var cost = new Dictionary&lt;Vector2Int, float&gt; { [start] = 0 };
+            var parents = new Dictionary&lt;Vector2Int, Vector2Int&gt;();
+            var closed = new HashSet&lt;Vector2Int&gt;();
+            while (open.Count &gt; 0)
+            {
+                Vector2Int current = open[0];
+                foreach (Vector2Int candidate in open)
+                {
+                    if (cost[candidate] + Vector2Int.Distance(candidate, goal) &lt; cost[current] + Vector2Int.Distance(current, goal))
+                    {
+                        current = candidate;
+                    }
+                }
+                open.Remove(current);
+                if (current == goal)
+                {
+                    while (current != start)
+                    {
+                        result.Add(current);
+                        current = parents[current];
+                    }
+                    result.Reverse();
+                    return result;
+                }
+                closed.Add(current);
+                for (int x = -1; x &lt;= 1; x++)
+                {
+                    for (int y = -1; y &lt;= 1; y++)
+                    {
+                        Vector2Int next = current + new Vector2Int(x, y);
+                        if ((x == 0 &amp;&amp; y == 0) || !IsWalkable(next) || closed.Contains(next))
+                        {
+                            continue;
+                        }
+                        if (x != 0 &amp;&amp; y != 0 &amp;&amp; (!IsWalkable(current + new Vector2Int(x, 0)) || !IsWalkable(current + new Vector2Int(0, y))))
+                        {
+                            continue;
+                        }
+                        float score = cost[current] + (x != 0 &amp;&amp; y != 0 ? 1.41421356f : 1f);
+                        if (!cost.TryGetValue(next, out float previous) || score &lt; previous)
+                        {
+                            cost[next] = score;
+                            parents[next] = current;
+                            if (!open.Contains(next))
+                            {
+                                open.Add(next);
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+</code></pre>
+<h2 id="section-4">검증</h2>
+<p>실제 이동을 처리하는 GridMotor 전체입니다. 목적지 변경 시 진행 중 세그먼트는 마친 뒤 새 경로를 적용합니다.</p>
+<pre><code data-language="csharp">using System.Collections.Generic;
+using UnityEngine;
+
+namespace DotAction
+{
+    /// &lt;summary&gt;
+    /// 셀 사이를 부드럽게 이동하며 출발·도착 셀을 예약해 겹침을 막는다.
+    /// &lt;/summary&gt;
+    public sealed class GridMotor : MonoBehaviour
+    {
+        public CombatGrid grid;
+        public float speed = 4;
+        public Transform visual;
+        public Animator animator;
+        public bool IsMoving { get; private set; }
+        public int CompletedSteps { get; private set; }
+        private List&lt;Vector2Int&gt; _path = new();
+        private Vector2Int _cell;
+        private Vector2Int _next;
+        private bool _isInSegment;
+
+        private void Start()
+        {
+            if (grid == null)
+            {
+                grid = FindFirstObjectByType&lt;CombatGrid&gt;();
+            }
+            _cell = CombatGrid.Cell(transform.position);
+            transform.position = CombatGrid.World(_cell);
+            grid.TryOccupy(_cell, this);
+        }
+
+        private void Update()
+        {
+            if (!_isInSegment &amp;&amp; _path.Count &gt; 0 &amp;&amp; grid.TryOccupy(_path[0], this))
+            {
+                _next = _path[0];
+                _path.RemoveAt(0);
+                _isInSegment = true;
+            }
+            IsMoving = _isInSegment;
+            if (animator != null)
+            {
+                animator.SetBool(&quot;Moving&quot;, IsMoving);
+            }
+            if (!_isInSegment)
+            {
+                return;
+            }
+            Vector3 target = CombatGrid.World(_next);
+            Vector3 direction = target - transform.position;
+            if (direction.sqrMagnitude &gt; 0.0001f &amp;&amp; visual != null)
+            {
+                visual.rotation = Quaternion.RotateTowards(visual.rotation, Quaternion.LookRotation(direction), 720 * Time.deltaTime);
+            }
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            if ((transform.position - target).sqrMagnitude &lt; 0.00001f)
+            {
+                grid.Release(_cell, this);
+                _cell = _next;
+                _isInSegment = false;
+                CompletedSteps++;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (grid != null)
+            {
+                grid.Release(_cell, this);
+                if (_isInSegment)
+                {
+                    grid.Release(_next, this);
+                }
+            }
+            if (animator != null)
+            {
+                animator.SetBool(&quot;Moving&quot;, false);
+            }
+        }
+
+        public bool MoveTo(Vector2Int destination)
+        {
+            Vector2Int start = _isInSegment ? _next : _cell;
+            if (!grid.IsWalkable(destination))
+            {
+                return false;
+            }
+            List&lt;Vector2Int&gt; path = grid.FindPath(start, destination);
+            if (path.Count == 0 &amp;&amp; destination != start)
+            {
+                return false;
+            }
+            _path = path;
+            return true;
+        }
+    }
+}
+
+</code></pre>
+<p>실제 Play Mode: elapsed=45.79; steps=54; shots=60; kills=24; wave=3; health=84; finished=True; errors=0</p>
+<h2 id="section-5">남은 사항</h2>
+<p>플레이어 빌드·게임 저장소 커밋·푸시는 하지 않았습니다. 프로젝트 루트는 Git 저장소가 아닙니다. 마우스·WASD의 사람이 직접 조작한 체감과 다른 해상도·플랫폼 성능은 미확인입니다. 슬롯·증강·군중 교착 회피는 이번 범위에 포함하지 않았습니다. 자동 테스트는 요청하지 않으셔서 작성·실행하지 않았습니다. 화면 HUD와 승패 문구는 사용자 요청에 따라 제거했고 월드 체력바만 표시합니다. 추가 승패 연출은 미구현입니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초 35<del>50분. 추가 PC 근접 뷰·미니멀 UI 요청과 공개 확인으로 5</del>8분 추가 예상을 안내했습니다.</li>
+<li>실제로 완료된 시간: 시작 2026-11-16 17:22:25 KST; 구현·실행·원본 반영 완료 및 기록 2026-11-16 18:14:21 KST; 실측 51분 56초. 보고서 공개 배포 대기는 이후 채팅에서 별도로 기록합니다.</li>
+<li>XERJ: 미사용 — 사용자 지침에 따라 연결 확인도 수행하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-20261116091424219-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-20261116091424219-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=19fcf16cdbe7"><script type="module" src="../../../assets/report-visuals.js?v=19fcf16cdbe7"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

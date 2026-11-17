@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "일반 몬스터는 투구 없이 기본 방어구·무기만 표시하도록 수정했습니다. 향후 투구를 장착할 수 있도록 파츠와 장비 슬롯은 유지했습니다. 씬 미리보기도 갱신했고 Godot 헤",
+    "summary": "지난 작업 개별 복원 보고: 정리한 뱀서라이크 기획",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "일반 몬스터는 **투구 없이 기본 방어구·무기만 표시하도록 수정했습니다.** 향후 투구를 장착할 수 있도록 파츠와 장비 슬롯은 유지했습니다. 씬 미리보기도 갱신했고 Godot 헤드리스 실행을 확인했습니다.\n\n**보스 6종 디자인 보드**도 제작했습니다.\n\n- 잿빛 엄니: 거대 도끼를 든 오크\n- 종을 짊어진 과부: 낮고 넓은 다족형\n- 사슬 수도원장: 길쭉한 부유 사제\n- 잿불 아귀: 육중한 돌진 야수\n- 맹세의 거상: 초대형 석상\n- 마지막 계약자: 망토와 거대한 손을 가진 악마\n\n[보스 디자인 보드](../assets/history/01a1e4a5-0efb-7c92-a835-28925329afe0-boss-lineup-v1.png) · 디자인·레퍼런스 정리 (당시 로컬 자료; 공개 첨부 미확인)\n\n[Halls of Torment](https://store.steampowered.com/app/2218750/Halls_of_Torment/), [Death Must Die](https://store.steampowered.com/app/2334730/Death_Must_Die/), [Soulstone Survivors](https://www.soulstonesurvivors.com/), [Skul](https://store.steampowered.com/app/1147560/Skul_The_Hero_Slayer/), [뱀서](https://store.steampowered.com/app/1794680/Vampire_Survivors/)를 참고했습니다.\n\n보스는 **디자인 시안까지 완료**했으며, 실제 크기에 맞춘 도트·애니메이션·전투 연결은 남아 있습니다. 일반 몬스터의 실제 플레이 화면은 미확인입니다.\n\n예상 **10분 이내** / 실제 **3분 25초**, 완료 **2026-11-16 22:59:58 KST**.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T14:00:12.601Z / 세션 턴 실측 228초. 보고서 복원: 2026-11-17T07:40:29.610Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "네, 표준 Unity Asset Store EULA가 적용되는 에셋은 Godot에서도 사용할 수 있습니다. 상업용 게임에 포함하는 것도 가능합니다. 표준 약관은 사용 엔진",
+    "summary": "지난 작업 개별 복원 보고: Unity 에셋의 Godot 사용 가능 여부",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "네, **표준 Unity Asset Store EULA가 적용되는 에셋은 Godot에서도 사용할 수 있습니다.** 상업용 게임에 포함하는 것도 가능합니다. 표준 약관은 사용 엔진을 Unity로 한정하지 않습니다. [공식 EULA §2.2.1](https://unity.com/legal/as-terms)\n\n다만 다음은 확인하셔야 합니다.\n\n- **별도 라이선스:** 상품에 `Non-standard EULA` 또는 `Restricted Asset` 표시가 있으면 해당 조건을 확인해야 합니다. [공식 FAQ](https://assetstore.unity.com/browse/eula-faq)\n- **재배포 제한:** 게임에 포함하는 것은 가능하지만, 에셋 원본을 따로 공유하거나 재판매하는 것은 제한됩니다. [공식 EULA](https://unity.com/legal/as-terms)\n- **기술적 호환성:** 이미지·모델·음원은 가져와 활용할 수 있지만, Unity 전용 스크립트·셰이더·프리팹은 Godot에 맞게 변환하거나 다시 구현해야 합니다.\n\n구매하신 **에셋 링크를 주시면 해당 상품의 예외 조건까지 확인해 드리겠습니다.** 개별 상품 조건은 현재 미확인입니다.\n\n확인 시간: 예상 1~2분 / 실제 약 15초, 2026-11-16 21:29 KST 완료.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T12:30:04.000Z / 세션 턴 실측 30초. 보고서 복원: 2026-11-17T07:40:29.840Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

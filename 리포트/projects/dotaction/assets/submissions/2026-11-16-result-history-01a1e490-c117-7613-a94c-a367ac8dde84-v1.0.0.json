@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "씬도 갱신했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "씬도 갱신했습니다.\n\n- `main.tscn`에 `Effects` 씬 연결\n- combat_effects.tscn (당시 로컬 자료; 공개 첨부 미확인)에서 효과별 지속 시간·크기·위치·미리보기 조절 가능\n- 인스펙터 설정을 실제 게임에도 반영\n\n컴파일·헤드리스 실행 정상, Windows 빌드도 갱신했습니다. 에디터 화면 직접 확인은 미확인입니다.\n\n제안 10분 / 실제 1분 30초, 22:35:50 KST 완료.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T13:35:57.000Z / 세션 턴 실측 104초. 보고서 복원: 2026-11-17T07:40:29.800Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "나팔 전용 도트 FX 4종을 제작해 연결했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 트럼펫 증강 추가",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "**나팔 전용 도트 FX 4종을 제작해 연결했습니다.**\n\n- 입구로 모이는 충전 입자\n- 발사 순간 섬광\n- 퍼지는 세 겹 음파\n- 적 명중 파편\n\n정규화·Godot 실행과 좌우 발사를 확인했습니다. 기존 종료 시 그래픽 리소스 정리 경고는 남아 있습니다.\n\n![실제 Godot FX](../assets/history/01a1e7f5-23c0-7002-a6a8-3953c2e44734-trumpet-fx.gif)\n\n[소리 포함 영상](../assets/history/01a1e7f5-23c0-7002-a6a8-3953c2e44734-trumpet-fx.mp4)\n\n제안 5~10분 / 실제 **5분 29초**, 완료 **14:28:22 KST**. 푸시·배포는 하지 않았습니다.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-17T05:28:29.000Z / 세션 턴 실측 345초. 보고서 복원: 2026-11-17T07:40:29.555Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

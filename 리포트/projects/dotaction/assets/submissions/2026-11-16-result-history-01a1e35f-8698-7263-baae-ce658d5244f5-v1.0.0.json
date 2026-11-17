@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 중 같은 폴더에 Assets/TurnRoom과 Assets/polyperfect가 새로 들어온 것을 확인했습니다. 다른 작업에서 의도적으로 가져오고 계신가요? 해당",
+    "summary": "지난 작업 개별 복원 보고: 도트 스타일 통일 방법 찾기",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "작업 중 같은 폴더에 `Assets/TurnRoom`과 `Assets/polyperfect`가 새로 들어온 것을 확인했습니다. 다른 작업에서 의도적으로 가져오고 계신가요? 해당 파일은 보존하고, 저는 `Assets/DotAction`의 아트·씬 작업만 계속하겠습니다.\n- 의도한 추가입니다. 보존하고 진행하세요.\n- 다른 작업일 수 있습니다. 해당 폴더는 건드리지 마세요.\n\n**[결과 보고서 작성·공개 배포를 완료했습니다.](https://mdj0126.github.io/codex-config/projects/dotaction/reports/2026-11-16-result-20261116083325518-v1.0.0.html)**\n\n실제 아트 8종, 통합 비교 화면, Unity 전후 화면, 검증 결과와 핵심 코드를 담았습니다. 공개 본문·첨부 이미지·흐름도 표시까지 확인했습니다.\n\n최종 카드 글자 크기의 Unity 재렌더는 다른 배치 실행과 충돌해 **미확인**으로 기록했습니다.\n\n**제안 시간:** 30~60분  \n**실제 소요:** 37분 12초 — 2026-11-16 17:38:13 KST, 보고서 배포 확인 완료.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T08:38:21.000Z / 세션 턴 실측 2251초. 보고서 복원: 2026-11-17T07:40:29.843Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
