@@ -38,10 +38,10 @@ jobs:
             git commit -m 'Synchronize Tracefolio report from GitHub Issues'
             git push origin HEAD:main
           fi
-      - run: node 리포트/package-public-site.mjs
+      - run: node 리포트/package-site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: 리포트/.public-site
+          path: 리포트/.site
       - id: deployment
         uses: actions/deploy-pages@v4

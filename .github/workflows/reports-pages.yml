@@ -27,12 +27,12 @@ jobs:
       - run: node 리포트/verify-migration.mjs
       - run: node 리포트/verify-editorial.mjs
       - run: node --test 리포트/tests/*.test.mjs
-      - run: node 리포트/package-public-site.mjs
+      - run: node 리포트/package-site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         id: pages_artifact
         with:
-          path: 리포트/.public-site
+          path: 리포트/.site
           name: report-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Deploy
         id: deployment
@@ -40,3 +40,5 @@ jobs:
         with:
           artifact_name: report-pages-${{ github.run_id }}-${{ github.run_attempt }}
           timeout: 600000
+      - name: Verify public reports and assets
+        run: node 리포트/verify-public.mjs
