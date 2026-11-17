@@ -86,5 +86,9 @@
   "dotaction": {
     "name": "DotAction",
     "logo": "projects/dotaction/assets/sym_bolt.png"
+  },
+  "snsmanager": {
+    "logo": "projects/snsmanager/assets/logo.svg",
+    "name": "SNSManager"
   }
 }

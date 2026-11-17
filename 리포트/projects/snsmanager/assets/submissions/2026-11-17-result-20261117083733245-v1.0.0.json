@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "SNSManager 비공개 저장소 및 SNS 활동 기록 구성",
+    "summary": "비공개 저장소 생성·연결과 로고·README·팔로우 및 게시물 기록의 자동 커밋·푸시 구성을 완료했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 비 Git 폴더를 main 브랜치로 초기화했습니다. 로고 SVG, 한국어 README, AGENTS.md, 의존성 없는 기록 CLI를 추가했습니다. 기존 작업 파일은 보존하고 자동 커밋에서 제외했습니다. 기록별 고유 폴더를 사용하고 이미지 원본은 복사합니다. 기록 저장 후 커밋·pull rebase·push를 수행하며 실패 시 로컬 기록을 보존합니다.",
+    "verification": "node --check와 CLI 사용법 실행 완료. 실제 원격 대상에서 node scripts/sns.mjs sync 성공 및 최초 커밋의 원격 SHA 일치 확인. npm 미설치 환경을 확인하여 직접 Node 명령으로 통일했습니다. 실제 SNS 작업·실제 이미지 기록은 미실행, 다른 PC 실행은 미확인. 별도 테스트 작성·실행 및 SNS 배포 없음.",
+    "remaining": "매일 실제 SNS 팔로우 실행은 플랫폼·계정·대상 선정 기준·수량·시간 미지정으로 미설정입니다. 이 구현은 결과 기록과 Git 동기화 범위입니다. 중앙 아카이브는 이 JSON 등록 후 별도 배포 결과를 확인합니다. 지침 변경 없음: 검증된 새 전역 교훈을 추가할 근거 없음.",
+    "outcome": "저장소 생성, 로컬 연결, 구현 파일 커밋·푸시 완료. 팔로우 대상·이유와 게시물 작성 방식·본문·이미지를 저장하는 Node 명령 및 PC 인수인계 지침 구성.",
+    "proposedTime": "8~10분",
+    "actualTime": "구현·연결·검증 완료: 2026-11-17 17:37:33 KST, 시작 2026-11-17 17:33:18 KST, 실측 4분 15초. 중앙 보고서 등록·배포 시간은 별도.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "partial"
+  }
+}
