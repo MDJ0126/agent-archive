@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Godot 프로젝트는 별도 폴더에 있고, Unity 코드는 기존 프로젝트를 보존해서 남아 있습니다. C 코드를 그대로 실행하는 방식이 아니라, 현재 게임 로직은 GDScr",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "**Godot 프로젝트는 별도 폴더에 있고, Unity 코드는 기존 프로젝트를 보존해서 남아 있습니다.** C# 코드를 그대로 실행하는 방식이 아니라, 현재 게임 로직은 GDScript로 새로 옮겼습니다.\n\nGodot 에디터 실행 방법입니다.\n\n1. Godot 에디터 실행 (당시 로컬 자료; 공개 첨부 미확인)\n2. 프로젝트 관리자에서 **가져오기(Import)** → project.godot (당시 로컬 자료; 공개 첨부 미확인) 선택\n3. 프로젝트를 열고 **F6**으로 현재 씬, **F5**로 게임 실행\n\n코드는 여기서 보시면 됩니다.\n\n- game.gd (당시 로컬 자료; 공개 첨부 미확인): 현재 전투·이동·AI·맵·도트 그리기 로직\n- combat_stats.json (당시 로컬 자료; 공개 첨부 미확인): 캐릭터 수치\n- main.tscn (당시 로컬 자료; 공개 첨부 미확인): 시작 씬\n\n현재는 빠른 이식 과정에서 **대부분의 로직을 `game.gd` 하나에 모은 상태**입니다. 기존 `Assets/Scripts/*.cs`는 Unity용이며 Godot 빌드에는 포함되지 않습니다.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T12:16:33.000Z / 세션 턴 실측 12초. 보고서 복원: 2026-11-17T07:40:29.813Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

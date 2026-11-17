@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "둘 다 제 생성 코드 오류였습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "**둘 다 제 생성 코드 오류였습니다.**\n\n- 다리: 무릎을 옆으로 꺾던 계산을 제거해 역관절 모양 수정\n- 투구: 확대 시 생기던 빈 픽셀 줄 제거\n- 에디터 미리보기도 변경된 이미지를 다시 읽도록 수정\n\n![수정한 달리기](../assets/history/01a1e487-13ab-7013-b833-7b0ceea4d7bc-run-preview-knee-fixed.gif)\n\n수정된 Windows 빌드 (당시 로컬 자료; 공개 첨부 미확인)\n\n프레임 이미지 확인·빌드·EXE 헤드리스 실행 성공. 실제 조작감은 미확인입니다.\n\n제안 5분 / 실제 **2분 31초**, **22:26:21 KST** 완료.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T13:26:28.000Z / 세션 턴 실측 168초. 보고서 복원: 2026-11-17T07:40:29.802Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

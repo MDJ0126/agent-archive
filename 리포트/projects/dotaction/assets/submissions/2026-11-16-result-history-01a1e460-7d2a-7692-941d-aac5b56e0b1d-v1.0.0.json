@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "실행 EXE는 있습니다. 지금은 프로젝트의 tools 폴더에 들어가 있습니다.",
+    "summary": "지난 작업 개별 복원 보고: Godot 폴더 구조 정리",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "실행 EXE는 있습니다. 지금은 프로젝트의 `tools` 폴더에 들어가 있습니다.\n\nGodot 에디터 실행 (당시 로컬 자료; 공개 첨부 미확인)\n\nGodot은 별도 설치 없이 EXE를 실행하는 **포터블 방식**이라 설치 과정에서 바탕화면 바로가기가 자동으로 생기지 않은 겁니다.\n\n이 EXE는 **게임을 만드는 에디터**이고, `build/DotAction.exe`는 **만들어진 게임 실행 파일**입니다.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T12:41:39.000Z / 세션 턴 실측 8초. 보고서 복원: 2026-11-17T07:40:29.838Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

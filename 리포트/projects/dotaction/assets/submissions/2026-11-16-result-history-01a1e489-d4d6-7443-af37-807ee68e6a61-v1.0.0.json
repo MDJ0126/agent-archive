@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelFX를 적용했습니다.",
+    "summary": "지난 작업 개별 복원 보고: 작업",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "PixelFX를 적용했습니다.\n\n- 전사 검 궤적·피격 불꽃·범위 폭발\n- 회피 먼지와 현재 캐릭터 잔상\n- 궁수 화살 효과\n\n컴파일·Windows 빌드·헤드리스 실행 정상입니다. 실제 게임 화면에서의 최종 외관은 **미확인**입니다.\n\nWindows 실행 파일 ZIP (당시 로컬 자료; 공개 첨부 미확인)\n\n제안 10분 / 실제 7분 15초, 22:34:07 KST 완료.",
+    "verification": "당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.",
+    "remaining": "현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.",
+    "outcome": "당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.",
+    "proposedTime": "당시 보고의 제안 시간 참조. 없으면 미기록.",
+    "actualTime": "당시 세션 종료: 2026-11-16T13:34:13.000Z / 세션 턴 실측 453초. 보고서 복원: 2026-11-17T07:40:29.800Z",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

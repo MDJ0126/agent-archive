@@ -1,0 +1,51 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>맞습니다. 필요한 것은 이미지를 생성하는 기능에 더해, 결과를 일정한 픽셀 규칙으로 보정하고 애니메이션까지 편집하는 도구입니다. 제가 앞서 요청 문구 위주로 설명드려서 실 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/theme.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/discussions.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/manuals.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/copy-links.css?v=376b70681a1b"><script defer src="../../../assets/copy-links.js?v=376b70681a1b"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">D</span><span>DotAction</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>맞습니다. 필요한 것은 이미지를 생성하는 기능에 더해, 결과를 일정한 픽셀 규칙으로 보정하고 애니메이션까지 편집하는 도구입니다. 제가 앞서 요청 문구 위주로 설명드려서 실</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">지난 작업 개별 복원 보고: 도트 그래픽 요청 방법 안내</p><div class="post-byline"><time datetime="2026-11-16T08:11:25.000Z">2026년 11월 16일 오후 5:11 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>당시 세션의 결과 보고를 복원했습니다. 아래 기록은 해당 작업 시점의 결과이며 최신 버전 재검증을 뜻하지 않습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>맞습니다. 필요한 것은 <strong>이미지를 생성하는 기능에 더해, 결과를 일정한 픽셀 규칙으로 보정하고 애니메이션까지 편집하는 도구</strong>입니다. 제가 앞서 요청 문구 위주로 설명드려서 실제 제작 과정이 빠졌습니다.</p>
+<p>말씀하신 흐름이라면 이렇게 구성하는 것이 좋습니다.</p>
+<p><strong>이미지 생성 → 픽셀 정규화 → 캐릭터 정리 → 애니메이션 제작 → 게임용 내보내기</strong></p>
+<p>여기서 픽셀 정규화는 단순히 해상도를 낮추는 필터보다 구체적이어야 합니다.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>기능</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>픽셀 격자 통일</td>
+<td>들쭉날쭉한 도트 크기를 하나의 논리 픽셀 격자로 맞춤</td>
+</tr>
+<tr>
+<td>색상 정리</td>
+<td>팔레트 색 수를 제한하고 비슷한 색을 합침</td>
+</tr>
+<tr>
+<td>경계 정리</td>
+<td>반투명 테두리와 불필요한 흐림을 제거</td>
+</tr>
+<tr>
+<td>프레임 정렬</td>
+<td>캐릭터의 발 위치·중심·캔버스 크기를 통일</td>
+</tr>
+<tr>
+<td>미리보기·수정</td>
+<td>원본과 보정 결과를 비교하고 직접 픽셀을 수정</td>
+</tr>
+</tbody></table>
+</div><p>다만 <strong>필터만으로 캐릭터의 형태까지 일관되게 만들 수는 없습니다.</strong> 예를 들어 프레임마다 검 길이나 얼굴 모양이 달라지는 문제는 별도로 고쳐야 합니다. 격자가 균일한 것과 그림이 일관된 것은 서로 다른 문제입니다.</p>
+<p>애니메이션 도구도 함께 있어야 합니다. 프레임 타임라인, 이전·다음 프레임을 겹쳐 보는 어니언 스킨, 재생 속도 조절, 발 위치 고정, 반복 재생이 필요합니다. 최종적으로는 프레임별 PNG나 스프라이트 시트와 동작 정보를 내보내야 하고요.</p>
+<p>처음 만들 범위는 **“캐릭터 한 장을 가져와 픽셀 크기와 팔레트를 보정하고, 여러 프레임을 정렬해 움직임을 확인하는 도구”**가 적절합니다. 이 흐름이 작동하면 동작 프레임 생성까지 붙일 수 있습니다. 배경은 이후 같은 보정 기능에 타일 연결 검사와 레이어 분리를 추가하면 됩니다.</p>
+<p>따라서 제게 요청하실 때도 **“도트 그림을 만들어 줘”보다 “생성한 그림을 보정하고 애니메이션으로 완성할 제작 도구를 만들자”**라고 말씀하시는 쪽이 지금 의도에 정확합니다.</p>
+<h2 id="section-4">검증</h2>
+<p>당시 세션 최종 보고에 명시된 검증 범위만 기록했습니다. 이번 등록에서는 게임 실행·청감·밸런스를 재검증하지 않았습니다.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>현재 버전 동작은 미확인입니다. 기존 기록의 미확인·경고·후속 수정은 적용 내용에 보존했습니다. 원본 세션 전체 로그는 공개하지 않았습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 당시 보고의 제안 시간 참조. 없으면 미기록.</li>
+<li>실제로 완료된 시간: 당시 세션 종료: 2026-11-16T08:11:25.000Z / 세션 턴 실측 17초. 보고서 복원: 2026-11-17T07:40:29.845Z</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-history-01a1e368-f333-75d2-bbfc-9742c0f416a6-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=dotaction&topic=qa&relatedReport=projects%2Fdotaction%2Freports%2F2026-11-16-result-history-01a1e368-f333-75d2-bbfc-9742c0f416a6-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=dotaction">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=dotaction">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
