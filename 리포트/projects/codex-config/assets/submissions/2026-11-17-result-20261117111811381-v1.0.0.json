@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "SNS 프로필 배경 이미지 제작",
+    "summary": "기존 인게임 전투 장면을 잘라 X용 1500×500, Reddit용 1920×640 PNG를 저장했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "SNSManager 기존 게시 기록의 실제 전투 이미지에서 (110,108,450,150) 영역을 크롭했습니다. 최근접 보간으로 확대해 UI 문구와 내부 게임명이 없는 배너 두 장을 output/profile-banners에 저장했습니다. 원본은 보존했습니다.",
+    "verification": "원본 3장과 최종 X 배너를 시각 확인했습니다. PNG 저장 성공. 실제 플랫폼 업로드·잘림 범위는 미확인입니다.",
+    "remaining": "계정 적용은 요청 범위 밖입니다. Reddit 실제 표시 범위는 업로드 시 확인이 필요합니다. 기존 지침 변경 없음: 새로 일반화할 검증된 교훈이 없습니다. GitHub 연결 앱의 이슈 등록은 403으로 실패하여 로컬 CLI 경로로 등록합니다.",
+    "outcome": "이미지 제작·저장 완료. SNS 계정 적용 및 업로드는 수행하지 않았습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "이미지 제작: 2026-11-17 20:15:44~20:17:08 KST, 약 1분 24초. 제안 시간 5~10분. 결과 보고 등록 시간은 별도입니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
