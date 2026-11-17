@@ -33,5 +33,5 @@ assert.equal(elements.filter(e=>matchesRecord(e,{project:'pixora',type:'수정�
 for(const stage of ['new','review','in_progress','resolved','closed','unclassified'])assert.equal(elements.filter(e=>matchesRecord(e,{group:'bug',stage})).length,elements.filter(e=>e.group==='bug'&&e.stage===stage).length);
 assert.ok(!index.includes('design-example'));
 const projects=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8'));
-for(const p of Object.values(projects)){if(p.logo){const data=await readFile(path.join(root,p.logo));assert.equal(data.subarray(1,4).toString(),'PNG');assert.ok(data.length>100);}}
-console.log(`PASS: ${reports.length} Markdown/HTML pairs, ${links} local links, project-scoped folders, legacy redirect targets, all project/type filters, combined project+type+version search, empty/reset, example removal and PNG logos. Browser layout not tested.`);
+for(const p of Object.values(projects)){if(p.logo){const data=await readFile(path.join(root,p.logo));if(path.extname(p.logo).toLowerCase()==='.svg'){assert.match(data.toString(),/<svg\b[^>]*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/);assert.match(data.toString(),/<\/svg>\s*$/);}else assert.equal(data.subarray(1,4).toString(),'PNG');assert.ok(data.length>100);}}
+console.log(`PASS: ${reports.length} Markdown/HTML pairs, ${links} local links, project-scoped folders, legacy redirect targets, all project/type filters, combined project+type+version search, empty/reset, example removal and PNG/SVG logos. Browser layout not tested.`);

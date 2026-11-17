@@ -1,5 +1,55 @@
 [
   {
+    "title": "네 클래스의 고유 전용 동작과 전투 FX 추가",
+    "summary": "궁수 화살비·암살자 돌진 처형·흑마도사 뼈손·총잡이 무릎 관통 사격을 새24자세와 판정/FX로 연결하고 평타를 유지했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117091527526-v1.0.0.html",
+    "date": "2026-11-17T09:15:27.526Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "추가 금지어5종과 기존 클래스·보스·스킬·장비 이름 변경",
+    "summary": "여명·잔영·심연·공허·엄니를 금지어로 추가하고 기존 표시명과 제작 도구·현재 문서를 갱신했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117091510305-v1.0.0.html",
+    "date": "2026-11-17T09:15:10.305Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "반복 수식어 금지·추천 용어 관리와 기존 명칭 변경",
+    "summary": "금지어3종·남용 주의어8종·추천 기준을 관리하고 기존 표시명7종과 대사를 변경했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117090747149-v1.0.0.html",
+    "date": "2026-11-17T09:07:47.149Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SNSManager 비공개 저장소 및 SNS 활동 기록 구성",
+    "summary": "비공개 저장소 생성·연결과 로고·README·팔로우 및 게시물 기록의 자동 커밋·푸시 구성을 완료했습니다.",
+    "project": "snsmanager",
+    "reportPath": "projects/snsmanager/reports/2026-11-17-result-20261117083733245-v1.0.0.html",
+    "date": "2026-11-17T08:37:33.245Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "NPC72프레임 보간과 발 고정 검증·철제 가로등 교체",
+    "summary": "14명 대기를72프레임으로 늘리고 접지 영역의 루프 전체 픽셀 차이0을 확인했습니다. 핵심3종 손·소품 대응점과 가로등6기를 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117083607039-v1.0.0.html",
+    "date": "2026-11-17T08:36:07.039Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "도끼 내려찍기 궤적 조기 종료·명중 FX 누락 수정",
     "summary": "도끼 FX가 실제 내려찍기 이전에 끝나고 명중 시점도 어긋나 있었습니다. 궤적을 마지막 자세까지 연장하고 평타 섬광·파편·강타 충격파를 보강해 실제 정지·이동 공격에서 확인했습니다.",
     "project": "dotaction",
