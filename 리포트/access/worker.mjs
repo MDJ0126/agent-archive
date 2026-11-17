@@ -33,7 +33,7 @@ export default {
           device=new URLSearchParams(input).get('device')||'';
         }else device=url.searchParams.get('device')||'';
         if(!registered.some(rule=>rule.value===device))return denied();
-        return new Response(null,{status:303,headers:{location:prefix+'/','cache-control':'no-store','referrer-policy':'no-referrer','set-cookie':`__Host-tracefolio_device=${device}; Max-Age=31536000; Path=/; Secure; HttpOnly; SameSite=Strict`}});
+        return new Response(null,{status:303,headers:{location:prefix+'/','cache-control':'no-store','referrer-policy':'no-referrer','set-cookie':`__Host-tracefolio_device=${device}; Max-Age=31536000; Path=/; Secure; HttpOnly; SameSite=Lax`}});
       }
       const device = deviceCookie(request);
       if (!device||!registered.some(rule=>rule.value===device)) return denied();

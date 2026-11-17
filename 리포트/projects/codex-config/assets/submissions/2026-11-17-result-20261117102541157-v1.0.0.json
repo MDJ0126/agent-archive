@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "외부 링크 이동 시 등록 기기가 403으로 차단되는 오류 수정",
+    "summary": "실제 Chrome에서 외부 링크 이동 후 403을 재현하고 SameSite 설정을 수정했습니다. 동일 경로 재진입이 정상이며 실제 iPhone 확인은 남아 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "연결 응답의 SameSite=Strict를 SameSite=Lax로 변경했습니다. 기존 두 기기 ID 허용, HttpOnly·Secure, 관리 변경의 Origin 검사는 유지합니다. IP 허용과 공개 안내는 추가하지 않았습니다.",
+    "verification": "실제 사용 중인 Chrome에서 기존 GitHub 주소를 거쳐 이동하면 403으로 바뀌는 것을 재현했습니다. 수정 후 등록 정보를 갱신하고 같은 기존 주소에서 이동해 보고서 목록·스타일·이미지가 정상 표시되는 것을 확인했습니다. 실제 iPhone ID 연결 응답은 303과 SameSite=Lax를 확인했으며 등록 ID 없는 보고서 접근은 403입니다. 소스 node --check 통과. 테스트 모음은 실행하지 않았습니다.",
+    "remaining": "실제 iPhone의 동일 링크 접속은 사용자 확인 대기입니다. 폰에서 접속 완료라고 보고하지 않습니다. 식별값 두 개의 판별 방식은 유지하며 다른 기기를 추가하지 않았습니다. 일반 검증 지침과 중복되는 교훈이므로 지침 변경은 하지 않았습니다.",
+    "outcome": "외부 사이트에서 들어올 때 등록 정보가 빠지던 설정을 수정 배포했습니다. PC에서 동일 외부 이동을 재현 전후로 확인했고 미등록 요청은 계속 403입니다.",
+    "proposedTime": "3~5분. 시작 2026-11-17 19:23:16 KST.",
+    "actualTime": "2026-11-17 19:25경 수정 배포·실제 Chrome 외부 이동 검증 완료. 결과 보고서 등록과 사용자 iPhone 확인은 별도로 구분했습니다.",
+    "xerjEvidence": "사용 금지 지침 준수",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
