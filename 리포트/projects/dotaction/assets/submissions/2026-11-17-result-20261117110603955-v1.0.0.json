@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마을·NPC 대화 글자와 버튼 깨짐 보정",
+    "summary": "마을 모달90% 축소와 UI 디더링을 제거하고11px 기본 글꼴·버튼 줄바꿈·선술집 안내 겹침을 보정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "마을 공통 모달은1:1 정수 위치, 작은 글자/버튼/이름표는Galmuri11 기본11px로 표시합니다. 대화 버튼32px와 자동 줄바꿈을 적용하고 선술집 안내 겹침을 제거했습니다. PixelFinish39층/UI40층으로 글자·프레임의 디더링을 방지했습니다. 아트 가이드·스타일 메타데이터에 검증된 교훈을 통합했습니다. 전투HUD 크기는 유지합니다.",
+    "verification": "Godot4.7.2/GTX970 OpenGL 실제 실행. NPC14명 기본 대화font=11/scale=(1,1),data.errors=[] 확인. 교관·선술집 렌더에서 글자/프레임·안내 겹침 보정 확인. 요청 범위 점검만 수행했으며 테스트 작성/전체 회귀는 하지 않았습니다.",
+    "remaining": "모든 서비스 결과·장문·해상도별 가독성과 사용자 체감은 미확인. 환경 셰이더 캐시 경고와 기존 종료 텍스처3개 해제 경고가 남습니다. Windows 빌드 미실행. 중앙 등록·푸시·배포는 별도 확인.",
+    "outcome": "구현·저장·Godot 실제 렌더 확인 완료. 배포 빌드는 미실행입니다.",
+    "proposedTime": "2026-11-17 20:02:46 KST 시작,10분 이내 수정·실행 확인.",
+    "actualTime": "구현·실행·시각 확인 및 기록 완료 2026-11-17 20:06:01 KST. 실측 196초. 중앙 등록은 별도.",
+    "xerjEvidence": "rg·소스·실제 Godot 렌더/로그 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
