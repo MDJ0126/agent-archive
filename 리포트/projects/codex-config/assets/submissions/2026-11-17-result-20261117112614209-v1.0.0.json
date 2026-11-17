@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "마을 화톳불 장면으로 SNS 배경 제작",
+    "summary": "실제 마을 원본에서 화톳불과 캐릭터를 중심으로 X·Reddit 배너 PNG 두 장을 제작했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "SNSManager 산출물 x-town-campfire.png 및 reddit-town-campfire.png 추가. 마을 원본의 (150,85,480,160) 영역을 크롭하고 최근접 보간으로 확대했습니다. UI·이름표·게임명 없이 화톳불을 중앙에 배치했습니다. 기존 전투 배너와 외부 원본은 보존했습니다.",
+    "verification": "실제 마을 원본과 최종 X 배너 시각 확인. 두 PNG 저장 성공. 테스트·빌드·계정 적용 없음.",
+    "remaining": "실제 플랫폼별 업로드와 잘림 범위는 미확인입니다. 새 교훈 없음으로 지침 변경하지 않았습니다.",
+    "outcome": "X용 1500×500, Reddit용 1920×640 제작·저장 완료. 계정 적용은 수행하지 않았습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "이미지 제작 2026-11-17 20:25:01~20:25:48 KST, 약 47초. 결과 보고 등록 시간 별도.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
