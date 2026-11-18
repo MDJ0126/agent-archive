@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 망토 장교의 5시 발도 횡베기",
+    "summary": "기존 장교를 참조한 ImageGen 시안으로, 앞발을 디디고 몸을 내밀며 발도합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "납도에서 시작해 전방 횡베기 후 검을 낮추는 5자세.\n\n![장교 발도 프레임 시트](../assets/officer-draw-cut-20261119.png)",
+    "verification": "시트 육안 확인, 발 기준선, GIF 5프레임 타이밍, 웹 빌드.",
+    "remaining": "나머지 방향과 게임 판정 미구현.",
+    "outcome": "생성 원본, 320×64 시트와 GIF 저장, 웹 문서 갱신.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 02:46:20 KST 시안 및 웹 문서 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
