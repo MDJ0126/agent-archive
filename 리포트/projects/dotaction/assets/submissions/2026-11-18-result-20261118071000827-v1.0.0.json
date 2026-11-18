@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기존 몬스터 재사용안 폐기 및 새 디자인 4종 제작",
+    "summary": "사용자 요청을 잘못 처리한 재사용안을 폐기하고 잿더미·가시·장송종·철턱 4종을 새 원본부터 제작해 게임에 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이전 보고의 seraph/wraith/bone-hound 재사용은 사용자가 요청한 신규 제작이 아니었습니다. 이 작업에서 대체했습니다. built-in image_gen으로 새 디자인4종을 각각 생성하고 원본·프롬프트·좌표·해시를 art/source/creatures/redesign-v2에 보존했습니다. export-monster-redesign-v2.mjs → normalize-art.mjs → Godot 임포트. 기존7종 호환 ID·수치는 유지하고 이름·계열·신규 시트를 연결했습니다. 추심자는 새 장송종 외형입니다. 제작기·스타일 설정·아트 가이드·웹 본문·미리보기를 동기화했습니다. 원본 보존 및 신규 제작 지시를 재사용으로 대체하지 않는 기존 원칙을 적용했으며 전역 규칙 추가 없음.\n![신규4종·대기/걸음/공격/사망 16자세 정규화 출력 확대](../assets/monster-redesign-v2-20261118/lineup.png)",
+    "verification": "Godot4.7.2 OpenGL 실제 렌더에서 right/left/step/attack PNG 저장 result=0 및 data_errors=[] 확인. 오른쪽 대기·공격 화면을 직접 열어 신규 실루엣과 자세를 확인했습니다. 원본4종도 직접 열어 대조했습니다. 문서 빌드 성공(14페이지·이미지260개). 일반 테스트·회귀는 수행하지 않았습니다. 종료 시 기존 GL 텍스처3개 해제 경고가 남습니다.\n![신규 디자인을 연결한 실제 Godot 배치 화면](../assets/monster-redesign-v2-20261118/right.png)\n![실제 Godot 좌우·걸음·공격 자세 전환](../assets/monster-redesign-v2-20261118/poses.gif)",
+    "remaining": "캡처는 배치 확인용 연출 화면입니다. 실제 처치 과정·장기 체감 밸런스·청감은 미확인입니다. 걷기는 대기+한 걸음2상태이며 상세 다프레임 모션은 미제작입니다. 능력·사운드·FX는 연결된 기존 리소스를 공유합니다. 게임 저장소의 다른 작업은 커밋·푸시하지 않았습니다. 중앙 게시 배포 확인은 보고 생성 이후 진행합니다.",
+    "outcome": "새 원본4장·64px 시트4종/16자세 제작, 정규화, 기존7종과 추심자 연결, 실제 Godot 좌우·걸음·공격 렌더 및 GIF 저장과 웹 문서 갱신 완료.",
+    "proposedTime": "8~10분",
+    "actualTime": "2026-11-18 16:02:58 KST 시작, 신규 제작·연결·렌더·문서 갱신 16:09:20 KST 확인(6분22초). 보고 게시·배포 확인은 이후 진행.",
+    "xerjEvidence": "로컬 소스·자산·Godot 실행 직접 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
