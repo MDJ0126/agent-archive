@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "DDT 게임 테이블 스크린샷과 컬럼 구조 원본 대조",
+    "summary": "실제 DDT 문서 화면·모델·생성 C#과 현재 웹 변환기를 대조했습니다. 현재 구현은 타입 스키마 없이 JSON 키를 자동 전개해 DDT 구조와 다릅니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "DDT Column은 name/type/description/isUniqueKey/customEnum, TableInfo는 columns/rows, Row는 cells를 가집니다. 문서 게임 표는 열 문자, 1행 컬럼명, 2행 타입/unique, 3행부터 레코드, 하단 시트 탭 구성입니다. SampleCharacter 생성 클래스는 Id:int, Name:string, Hp/Damage/MoveSpeed:float로 고정됩니다. 실제 FantasyaCharacter는 Id/NameKey/StatusId, FantasyaStatus는 Id/MaxHealth/AttackDamage/MoveSpeed/AttackReach로 나뉘고 Monster.cs에서 StatusId로 GetData합니다. 이번 작업은 조사이므로 웹 본문과 지침은 변경하지 않았습니다.",
+    "verification": "Turnlume의 guide-game-table.png, guide-type-picker.png, Fantasya character-table.png/status-table.png를 직접 시각 확인했습니다. Column.cs/Row.cs/TableInfo.cs 및 생성 C#을 대조했습니다. 현재 workbook.mjs 자동 전개와 sheet.js 배열 join을 확인했습니다. 데이터 산출 대조:classes16행38열, town1행30열, economy11행118열. DDT 스키마 행·열 타입 메타데이터가 현재 웹 컬럼 정의에 없고 배열은 한 셀에 결합됩니다.",
+    "remaining": "사용자가 보는 최신 화면과 로컬 생성물이 같은 배포인지 미확인입니다. 신규 DDT 실행·촬영은 하지 않았으며 보고의 이미지는 기존 자료입니다. DDT 스키마 기반 컬럼/테이블 재구성 구현은 수행하지 않았습니다.",
+    "outcome": "조사·보고 완료. 게임/사이트 구현 수정·빌드·실행은 수행하지 않았습니다. DDT 기존 문서 스크린샷과 저장된 게임 표 이미지를 직접 열어 확인했습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "2026-11-18 16:04:25 KST 시작 / 조사 완료 2026-11-18 16:06:17 KST / 실측 112초. 중앙 등록 별도.",
+    "xerjEvidence": "사용자 지침에 따라 rg와 로컬 원본·스크린샷을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
