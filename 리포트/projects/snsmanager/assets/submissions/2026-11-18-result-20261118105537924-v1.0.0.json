@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "개발 쇼츠·SNS 직접 게시·채널 소개·보관 지침 통합",
+    "summary": "사용자가 승인한 제작·게시·보관 방식을 프로젝트 지침과 게시 가이드에 반영하고 커밋·푸시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "YouTube 쇼츠 및 Threads/X MP4 직접 첨부, 첫 채널 소개글과 진행 이미지3장, 게임명 비공개, 상단고정·소개2초·첫프레임썸네일후보, 버전파일명 전달, 게시완료즉시안내, 비공개 영상 폴더 보관, 이번 기록만 선택커밋을 통합했습니다. 초안과 공개게시권한을 구분하며 LinkedIn/Reddit 보류 유지. 기존 승인된 쇼츠 지침도 함께 커밋했습니다. 전역 규칙은 변경하지 않았습니다.",
+    "verification": "변경범위 diff 확인 및 SNSManager 지침·가이드·기본이미지만 커밋·푸시 성공. 공개용 중앙 프로젝트지침은 내부게임명 예시가 없는 정책 부분만 동일 내용으로 동기화합니다. 지침 수정으로 별도 게시·예약·브라우저 조작을 수행하지 않았습니다.",
+    "remaining": "이미 실행 중인 다른 세션이 새 지침을 읽었다고 단정하지 않습니다. 중앙 보고 배포 상태는 별도 확인.",
+    "outcome": "SNSManager AGENTS.md·posting-guide.md 갱신, 기본 상단 이미지 보존 및 GitHub 푸시 완료.",
+    "proposedTime": "2~3분",
+    "actualTime": "2026-11-18 19:53:15 KST 시작. 지침저장·푸시 2026-11-18 19:55:07 대한민국 표준시; 약 112초. 중앙 등록 별도.",
+    "xerjEvidence": "기존지침·승인된세션요청·실제변경대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
