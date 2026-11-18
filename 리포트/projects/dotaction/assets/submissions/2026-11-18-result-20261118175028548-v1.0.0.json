@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 발도 횡베기 8방향과 1픽셀 외곽선",
+    "summary": "ImageGen 원본 5방향을 완성하고 3방향을 반전했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "64×64 출력에서 실루엣 안쪽 경계 1픽셀을 정리했습니다.\n\n![장교 발도 프레임 시트](../assets/officer-draw-cut-8dir-20261119.png)",
+    "verification": "40셀의 바닥선, 반전 15셀 픽셀 일치, 시트 육안 확인과 웹 빌드.",
+    "remaining": "게임 연결 및 공격 판정 미구현.",
+    "outcome": "320×512 시트, 8방향 GIF, 메타데이터 및 웹 문서.",
+    "proposedTime": "4~7분",
+    "actualTime": "2026-11-19 02:50:09 KST 시안과 검증 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
