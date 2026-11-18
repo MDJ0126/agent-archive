@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기존 장교와 여성형 커마 더미 8방향 호흡",
+    "summary": "기존 원본 두 종에 2프레임 호흡을 추가했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 장교와 자주색 눈의 여성형 더미를 사용했습니다.\n\n![장교 8방향 기본 자세](../assets/officer-breathing-20261119.png)",
+    "verification": "하체 픽셀 일치, 좌우 반전 일치, 웹 빌드.",
+    "remaining": "게임 연결 미완료.",
+    "outcome": "256×128 시트 4장과 비교 GIF를 저장하고 웹 문서를 빌드했습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 02:11:38 KST 자산 및 문서 완료, 약 2분",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
