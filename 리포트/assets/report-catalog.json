@@ -1,5 +1,15 @@
 [
   {
+    "title": "쇼츠 상단 페이드 제거와 개발 일지 회차 위치 수정",
+    "summary": "상단 이미지를 고정하고 게임 영상 좌상단에 개발 일지 001을 배치했습니다.",
+    "project": "snsmanager",
+    "reportPath": "projects/snsmanager/reports/2026-11-18-result-20261118084316704-v1.0.0.html",
+    "date": "2026-11-18T08:43:16.704Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "드레이크만 T포즈 기준96자세 공통 원본으로 재생성",
     "summary": "드레이크만 공통96자세 원본과 고정 소스 리그로 재생성하고 게임·웹 문서에 같은 출력과 피격/사망/돌파8자세를 연결했습니다.",
     "project": "dotaction",
