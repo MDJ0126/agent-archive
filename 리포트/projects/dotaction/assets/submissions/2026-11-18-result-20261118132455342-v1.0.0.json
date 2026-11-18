@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "64픽셀5개원본과3개반전으로8방향통일",
+    "summary": "S/SW/W/NW/N5개를기준으로NE/E/SE를정확히반전해8방향을다시구성했습니다.기존반대쪽3그림은사용하지않았습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자요청대로기준5방향만사용하고NE=NW좌우반전,E=W좌우반전,SE=SW좌우반전했습니다.캐릭터셀64×64,4×2시트256×128,한줄시트512×64입니다.다른외형으로생성되었던반대편3방향은사용하지않고원본파일은보존했습니다.\n\n![5기준3반전으로통일한8방향](../assets/officer-64-mirrored-20261118.png)",
+    "verification": "실제Aseprite배치실행·8프레임원본저장·재열기성공.3쌍모든RGBA픽셀의정확한좌우반전일치,재열기8프레임PNG완전일치확인.6배확대8방향판을직접확인했습니다.웹문서빌드성공.자동테스트/Godot실행은미실행입니다.",
+    "remaining": "본8방향시트의파츠분리는아직진행전이며완료로표시하지않습니다.게임연결은범위외입니다.",
+    "outcome": "8PNG·4×2/1행시트·6배확대미리보기·8프레임Aseprite저장과재열기/반전일치확인·문서갱신완료.",
+    "proposedTime": "2026-11-18 22:24:04 KST 시작,5기준+3반전재구성2~3분예상.",
+    "actualTime": "2026-11-18 22:24 KST 8방향저장·시각확인완료.반전/재열기확인·문서·중앙등록은이후실행했으며최종시각은세션최종응답에기록합니다.",
+    "xerjEvidence": "사용자가전체반전을명시요청해비대칭원본보존과별도의5기준3반전시트를제작했습니다.새전역지침없음.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
