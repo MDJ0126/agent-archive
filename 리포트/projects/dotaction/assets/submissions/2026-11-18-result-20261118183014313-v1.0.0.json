@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 5시 방향 2프레임 발도",
+    "summary": "납도와 발도 두 자세로 동작을 줄였습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "128×64 셀. 납도 600ms, 발도 140ms. 발도에만 잔상.\n\n![장교 발도 프레임 시트](../assets/officer-draw-cut-2frame-20261119.png)",
+    "verification": "GIF 2프레임 및 타이밍 확인, 웹 빌드.",
+    "remaining": "게임 연결 미완료.",
+    "outcome": "256×64 시트 및 2프레임 GIF, 잔상 분리.",
+    "proposedTime": "약 1분",
+    "actualTime": "2026-11-19 03:29:58 KST 제작과 확인 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
