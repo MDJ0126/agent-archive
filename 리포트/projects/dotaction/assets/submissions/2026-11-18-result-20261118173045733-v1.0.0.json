@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "등불지기 외곽선 빈 픽셀 보정",
+    "summary": "외곽 전체 추가를 철회하고 한 픽셀 간격만 메웠습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존의 어두운 선 사이에서 몸체와 맞닿는 투명 픽셀만 채웠습니다.\n\n![등불지기 8방향 기본 자세](../assets/lantern-gaps-20261119.png)",
+    "verification": "외곽 전체 덧칠 출력과 대조, 하체 유지 검사 및 웹 빌드.",
+    "remaining": "파츠 이식 및 게임 연결",
+    "outcome": "기본·날숨 시트, GIF 및 웹 문서를 갱신했습니다.",
+    "proposedTime": "1분 내외",
+    "actualTime": "2026-11-19 02:30:27 KST 출력 갱신",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
