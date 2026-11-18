@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "문서 GIF19개를 버튼 없는 자동 재생으로 변경",
+    "summary": "모든 문서 GIF에 src를 바로 지정하고 재생·정지 버튼과 클릭 로딩 처리를 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "media.mjs의 recording 템플릿에서 숨김 이미지/버튼을 제거하고 src·eager 로딩을 직접 지정했습니다. app.js의 GIF 클릭 핸들러와 style.css의 토글 전용 스타일을 제거했습니다. docs/web/README.md와 AGENTS.md를 자동 재생 기준으로 동기화했습니다. GIF 원본은 변경하지 않았습니다.",
+    "verification": "node docs/build.mjs 통과:12페이지·관계도6·이미지370. app.js 구문 확인 통과. 생성 HTML 대조:GIF19개 모두 src 있음, 숨김0개, 재생 버튼0개. 별도 테스트는 작성·실행하지 않았습니다.",
+    "remaining": "실제 브라우저 애니메이션 재생은 미확인입니다. 중앙 보고서 배포·HTTPS 접근은 등록 후 별도 확인 대상입니다.",
+    "outcome": "구현·저장·문서 빌드 완료. 문서 GIF19개가 처음부터 로드되는 자동 재생 구조입니다.",
+    "proposedTime": "1~3분",
+    "actualTime": "시작2026-11-18 16:28:26 KST / 구현·빌드 완료 2026-11-18 16:29:12 KST / 실측47초. 중앙 게시 시간 별도.",
+    "xerjEvidence": "로컬 원본과 생성 HTML을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
