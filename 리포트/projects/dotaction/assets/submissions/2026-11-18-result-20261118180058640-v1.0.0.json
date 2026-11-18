@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 5시 방향 와이드 전진 발도 시안",
+    "summary": "ImageGen으로 앞발을 크게 내딛는 전진 자세를 만들고 세로 64를 유지했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "납도에서 시작해 몸을 내밀며 전방 횡베기. 가로만 확장.\n\n![장교 발도 프레임 시트](../assets/officer-draw-cut-wide-20261119.png)",
+    "verification": "5프레임과 600×64 분리 시트, 웹 문서 빌드.",
+    "remaining": "8방향 확장 보류. 게임 연결 및 판정 미구현.",
+    "outcome": "120×64 셀 5장, 캐릭터·잔상 분리 시트 및 GIF.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 03:00:40 KST 시안과 검증 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
