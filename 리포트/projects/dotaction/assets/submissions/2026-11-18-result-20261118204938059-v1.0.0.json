@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "이미지 생성 도구 5시 횡베기 비교 시안",
+    "summary": "참조 캐릭터로9프레임 시트를 생성하고64×64 GIF로 구성했습니다. 무기·자세 일관성에 한계가 있어 비교용으로 보존했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "art/source/imagegen-slash-se-v1에 생성 원본·참조·9프레임·시트·GIF·메타데이터 보존. 공통 배율과 발 높이 적용. 제작 가이드 비교 결과 추가.",
+    "verification": "생성 원본과64×64 접촉판을 육안 확인. 검 길이와 손 위치 변화 확인. 웹 문서 빌드 결과는 별도 실행 기록. 테스트 미실행.",
+    "remaining": "무기 일관성·180도 궤적·루프 복귀 보정 필요. 게임 임포트·판정 연결 미실행. 기존 제작 기준 변경 없음.",
+    "outcome": "시트 생성과 GIF 구성 완료. 정확한180도 횡베기와 게임용 품질은 미완료.",
+    "proposedTime": "같은 공격1회 생성 후 GIF 비교. 수치 예상은 시작 시 제시하지 못함.",
+    "actualTime": "2026-11-19 05:46:10~05:49:07 KST 생성·파일 저장·시각 확인 2분57초. 보고 등록·문서 빌드는 이후 별도 수행.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
