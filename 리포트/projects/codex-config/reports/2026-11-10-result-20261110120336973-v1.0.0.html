@@ -1,0 +1,84 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Tracefolio 코드 강조와 Mermaid 테마 정리 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Codex 설정 로고"><span>Codex 설정</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>Tracefolio 코드 강조와 Mermaid 테마 정리</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">코드 줄마다 보이던 배경을 제거하고 Mermaid를 사이트의 라이트·다크 테마에 맞췄습니다.</p><div class="post-byline"><time datetime="2026-11-10T12:03:36.973Z">2026년 11월 10일 오후 9:03 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>코드 블록에 하나의 배경을 적용하고 문장 속 코드 배경과 구문 색상을 유지했습니다. Mermaid는 사이트 테마를 따라 바뀌며 긴 흐름도는 영역 안에서 가로로 스크롤됩니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li><p><code>assets/theme.css</code>에서 인라인 코드의 다크 테마 배경을 블록 코드에서 제외했습니다.</p>
+</li>
+<li><p><code>assets/report-visuals.js</code>의 <code>renderDiagrams</code>는 현재 테마의 배경·텍스트·강조 색을 읽어 원본 Mermaid를 다시 렌더링합니다. 렌더에 실패하면 원본을 표시합니다.</p>
+</li>
+<li><p><code>build.mjs</code>에서 보고서 렌더러의 CSS와 JS에 콘텐츠 기반 버전을 적용했습니다.</p>
+</li>
+<li><p>Tracefolio 프로젝트 지침에 코드 배경, 공용 테마, 라이트·다크·모바일 확인 기준을 추가했습니다.</p>
+</li>
+</ul>
+<pre><code data-language="js">async function renderDiagrams(){
+   const theme=root.dataset.theme;
+   if(theme===renderedTheme)return;
+   renderedTheme=theme;
+   const style=getComputedStyle(diagrams[0]);
+   const color=name=&gt;style.getPropertyValue(name).trim();
+   mermaid.initialize({
+    startOnLoad:false,
+    securityLevel:&#39;strict&#39;,
+    htmlLabels:false,
+    suppressErrorRendering:true,
+    theme:&#39;base&#39;,
+    look:&#39;classic&#39;,
+    fontFamily:&#39;Segoe UI, Malgun Gothic, system-ui, sans-serif&#39;,
+    themeCSS:&#39;.node rect { rx: 6px; }&#39;,
+    themeVariables:{
+     darkMode:theme===&#39;dark&#39;,
+     fontSize:&#39;14px&#39;,
+     background:color(&#39;--paper&#39;),
+     primaryColor:color(&#39;--diagram-node&#39;),
+     primaryBorderColor:color(&#39;--diagram-border&#39;),
+     primaryTextColor:color(&#39;--ink&#39;),
+     lineColor:color(&#39;--green&#39;),
+     edgeLabelBackground:color(&#39;--paper&#39;)
+    },
+    flowchart:{curve:&#39;linear&#39;,nodeSpacing:28,rankSpacing:30,padding:10,wrappingWidth:115}
+   });
+   for(const [index,diagram] of diagrams.entries()){
+    const scrollLeft=diagram.scrollLeft;
+    const source=sources[index];
+    diagram.textContent=source;
+    diagram.removeAttribute(&#39;data-processed&#39;);
+    try{
+     await mermaid.run({nodes:[diagram]});
+     const svg=diagram.querySelector(&#39;svg&#39;);
+     if(svg)svg.style.minWidth=`${svg.viewBox.baseVal.width}px`;
+     diagram.scrollLeft=scrollLeft;
+    }catch{
+     diagram.textContent=source;
+    }
+   }
+  }
+</code></pre>
+<pre class="mermaid">flowchart TD
+  A[&quot;보고서 로드 또는 화면 테마 전환&quot;] --&gt; B[&quot;사이트 테마 색상 읽기&quot;]
+  B --&gt; C[&quot;저장한 Mermaid 원문 렌더링&quot;]
+  C --&gt; D{&quot;SVG 생성 여부&quot;}
+  D --&gt;|성공| E[&quot;다이어그램과 스크롤 위치 표시&quot;]
+  D --&gt;|오류| F[&quot;Mermaid 원문 표시&quot;]
+</pre>
+<h3 id="section-4">대화 기록</h3>
+<ul>
+<li>사용자(시각 미기록)는 “코드 강조 매줄마다 무슨 드레그한 것 처럼 이상해”라고 지적하고 Mermaid 디자인과 지침 조정을 요청했습니다.</li>
+<li>Codex는 Tracefolio 보고서의 공통 스타일에서 원인을 확인하고 사이트 테마와 프로젝트 전용 지침에 수정 사항을 반영했습니다.</li>
+</ul>
+<h2 id="section-5">검증</h2>
+<p>첨부에 나온 댓글 배포 결과 보고서를 최신 소스에서 빌드하고 Chrome에서 확인했습니다. 다크 테마 코드의 배경은 투명으로 바뀌었고 인라인 코드는 기존 배경을 유지했습니다. 사이트 버튼으로 라이트와 다크를 전환했을 때 두 도표의 노드와 카드 색이 함께 바뀌었습니다. 390px에서는 도표 영역에만 가로 넘침이 생겼으며 페이지 폭은 390px을 유지했습니다.</p>
+<p><figure><img class="report-image" src="../assets/report-visuals-20261110/after-dark.png" alt="대표 화면 · 수정 후 다크 테마" loading="lazy"><figcaption>대표 화면 · 수정 후 다크 테마</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/report-visuals-20261110/before-dark.png" alt="수정 전 다크 테마" loading="lazy"><figcaption>수정 전 다크 테마</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/report-visuals-20261110/after-light.png" alt="수정 후 라이트 테마" loading="lazy"><figcaption>수정 후 라이트 테마</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/report-visuals-20261110/after-mobile.png" alt="수정 후 390px 모바일" loading="lazy"><figcaption>수정 후 390px 모바일</figcaption></figure></p>
+<h2 id="section-6">남은 사항</h2>
+<p>이 기록을 작성한 시점에는 공개 배포와 외부 접근을 확인하는 단계가 남았습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 10~15분</li>
+<li>실제로 완료된 시간: 2026-11-10 20:57 KST 시작. 21:02 KST에 구현·빌드·로컬 화면 확인 완료, 약 5분. 공개 배포 확인은 별도입니다.</li>
+<li>XERJ: 미사용 — 지정 검색 도구를 사용하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110120336973-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=codex-config&topic=qa&relatedReport=projects%2Fcodex-config%2Freports%2F2026-11-10-result-20261110120336973-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=codex-config">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=codex-config">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

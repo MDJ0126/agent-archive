@@ -1,0 +1,39 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>FantasyaCharacter Addressables InvalidKeyException 수정 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">버그</span></div><div class="post-title-row"><h1>FantasyaCharacter Addressables InvalidKeyException 수정</h1><span class="badge" data-state="progress">진행</span></div><p class="post-summary">잘못 중첩된 번역 항목을 정리해 DDT 그룹 목록을 복구했습니다.</p><div class="detail-workflow"><span data-stage="new" class=""><img class="stage-icon" src="../../../assets/workflow/new.svg" alt="" width="40" height="40" aria-hidden="true">접수</span><i>→</i><span data-stage="review" class=""><img class="stage-icon" src="../../../assets/workflow/review.svg" alt="" width="40" height="40" aria-hidden="true">검토</span><i>→</i><span data-stage="in_progress" class="current"><img class="stage-icon" src="../../../assets/workflow/in_progress.svg" alt="" width="40" height="40" aria-hidden="true">진행</span><i>→</i><span data-stage="resolved" class=""><img class="stage-icon" src="../../../assets/workflow/resolved.svg" alt="" width="40" height="40" aria-hidden="true">해결</span><i>→</i><span data-stage="closed" class=""><img class="stage-icon" src="../../../assets/workflow/closed.svg" alt="" width="40" height="40" aria-hidden="true">종료</span></div><div class="post-byline"><time datetime="2026-11-10T11:10:34.171Z">2026년 11월 10일 오후 8:10 KST</time><span>v1.0.0</span><span>버그 추적</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>FantasyaCharacter를 GUID로 로드할 때 사용자가 제공한 InvalidKeyException 로그를 확인했습니다. 그룹 직렬화를 수정했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">재현 조건</h3>
+<p>Fantasya의 Unity 6000.0.83f1 및 Addressables 2.9.1</p>
+<h3 id="section-4">재현 순서</h3>
+<p>Playground에서 캐릭터가 초기화되면 DDT가 FantasyaCharacter 바이너리를 GUID로 요청합니다. 사용자 로그에 남은 실행 경로입니다.</p>
+<h3 id="section-5">기대 동작</h3>
+<p>GUID로 등록한 테이블 바이너리를 읽어 캐릭터를 초기화합니다.</p>
+<h3 id="section-6">실제 동작</h3>
+<p>사용자 콘솔에 InvalidKeyException과 DDT 로드 실패가 기록됐습니다.</p>
+<h3 id="section-7">원인</h3>
+<p>번역 항목을 잘못 삽입해 Design Data Tables 그룹 목록의 YAML이 손상됐습니다.</p>
+<h3 id="section-8">적용 내용</h3>
+<ul>
+<li>이전 보고에서는 등록 주소와 파일 참조를 대조했다고 밝혔습니다. 그 확인은 주소 문자열의 존재를 확인했으며, 그룹 목록의 구조가 깨진 사실은 놓쳤습니다.</li>
+<li><code>Design Data Tables.asset</code>에는 번역 항목이 반복 삽입되면서 테이블 항목의 YAML 구조가 깨져 있었습니다. 테이블 바이너리 26개와 번역 참조 에셋 1개를 한 목록으로 복구했습니다.</li>
+</ul>
+<pre><code data-language="yaml">- m_GUID: 12d5ece039f4bda4c9b4f15ac07ac70e
+  m_Address: DesignDataTable/FantasyaCharacter
+  m_ReadOnly: 0
+  m_SerializedLabels: []
+</code></pre>
+<h3 id="section-9">대화 기록</h3>
+<ol>
+<li>사용자 · 미기록 · “No Location found for Key=12d5ece039f4bda4c9b4f15ac07ac70e.” 오류를 제공했습니다.</li>
+<li>Codex · 11월 9일 21:10 KST · 잘못 삽입한 번역 항목을 정리하고 GUID 일치를 확인했다고 보고했습니다. 기존 콘텐츠를 사용하는 경우에는 재빌드가 필요하다고 설명했습니다.</li>
+</ol>
+<h2 id="section-10">검증</h2>
+<p>사용자 로그의 GUID를 DDT 레지스트리 및 복구된 그룹 항목과 대조했습니다.</p>
+<h2 id="section-11">남은 사항</h2>
+<p>수정 후 Unity에서 해당 로드 경로를 다시 실행한 기록과 전후 화면은 미확보 상태입니다.</p>
+<h2 id="section-12">작업 시간</h2>
+<ul>
+<li>제안 시간: 원 작업별로 채팅에 안내했습니다. 누락분 정리 초안은 5~10분으로 제안했습니다.</li>
+<li>실제로 완료된 시간: 원 작업별 소요 시간은 개별 작업 응답에 기록했으며 합산하지 않았습니다.</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-bug-20261110111034171-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-10-bug-20261110111034171-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-10">검증</a><a href="#section-11">남은 사항</a><a href="#section-12">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

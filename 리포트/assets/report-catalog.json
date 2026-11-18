@@ -1,10 +1,500 @@
 [
   {
+    "title": "언덕을 유지하고 기존 마을 바닥 디자인 복원",
+    "summary": "언덕 작업에서 교체된 마을 바닥을 기존 디자인 8종과 출정로로 복원하고 매 칸 전체 이미지가 반복되던 샘플링을 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-TF-3-v1.0.3.html",
+    "date": "2026-11-18T04:57:58Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "전체 스킬·부하 실전 캐스팅 검증과 누락 수정",
+    "summary": "106개 스킬/클래스/부하 조합과150개 취소 조합을 확인하고7클래스 E 시전 누락·연속 베기 게이지·취소 잔여 상태를 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118044335921-v1.0.0.html",
+    "date": "2026-11-18T04:43:35.921Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "NPC 옆 말풍선 대화와 외부 서비스 버블 메뉴",
+    "summary": "첫 대화는 마을 위 NPC 옆 말풍선으로 표시하며 서비스 버튼을 분리된 버블 메뉴로 제공합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118044318502-v1.0.0.html",
+    "date": "2026-11-18T04:43:18.502Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 지휘관 명암 데이터 누락 복구",
+    "summary": "전체 조명 베이크가 마을 지휘관 manifest 항목을 누락해 원본 밝기로 노출되던 문제를 복구했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118043953246-v1.0.0.html",
+    "date": "2026-11-18T04:39:53.246Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "8클래스 캐스팅과 특대검 바닥 끌기",
+    "summary": "별도 시전8자세와 청색 게이지·슈퍼아머를 연결하고 철의 처형자를1.15배 표시하며16자세로 검을 끕니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118042450674-v1.0.0.html",
+    "date": "2026-11-18T04:24:50.674Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 지휘관 좌우 반전 시 불빛 명암 방향 수정",
+    "summary": "이미지 반전 시 표면 노멀의 수평 방향도 변환해 불빛 명암이 잘못 뒤집히던 현상을 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118042028936-v1.0.0.html",
+    "date": "2026-11-18T04:20:28.936Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "미니 화면 대상과 관전 카메라의 지형 청크 유지",
+    "summary": "메인 화면 밖의 대장을 미니 화면으로 볼 때도 바닥 타일과 전투 소품 청크를 유지하도록 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118041308465-v1.0.0.html",
+    "date": "2026-11-18T04:13:08.465Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "황실 지휘관 설정에 맞춘 마을 NPC 대사 수정",
+    "summary": "마을 NPC 14명의 첫 대사와 후속 안내를 지휘관 호칭·존대로 정비하고 일부 인물의 반말을 유지했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118040921102-v1.0.0.html",
+    "date": "2026-11-18T04:09:21.102Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 좌상단 지휘관 초상과 이름 연결",
+    "summary": "마을 좌상단에 마지막 전투 클래스 대신 현재 마을에서 조작하는 지휘관의 초상과 이름을 표시합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118040858616-v1.0.0.html",
+    "date": "2026-11-18T04:08:58.616Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 밖 원정과 수비대 지원 사격 연결",
+    "summary": "성문 방어 전투를 마을 밖 원정으로 바꾸고 수비대의 주기적 지원 화살을 연결했습니다. 기능 QA 39항목 및 자동 전투·정산 시나리오 2개를 통과했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117161627907-v1.0.0.html",
+    "date": "2026-11-17T16:16:27.907Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "자동 전투 위기 개입 죽음의 빚 구현 및 기능 QA",
+    "summary": "체력 30% 이하 대장의 1회 계약, 12초 치명 피해 방지와 피해 증가, 추심자 및 상환/미상환 정산을 구현하고 기능 QA 21항목을 통과했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117160903368-v1.0.0.html",
+    "date": "2026-11-17T16:09:03.368Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "시작 화면 방패·불빛·제목 순차 등장 연출",
+    "summary": "중앙 방패 등장과 상승, 숲 실루엣과 따뜻한 불빛·불씨, 지연 제목 표시를 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117131433470-v1.0.0.html",
+    "date": "2026-11-17T13:14:33.470Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "README에 기존 플레이 GIF 4개 추가",
+    "summary": "마을·다섯 동료 전투·기사 공격·증강 카드 촬영 GIF를 README에서 바로 볼 수 있도록 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117130223343-v1.0.0.html",
+    "date": "2026-11-17T13:02:23.343Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "레벨업 금빛 폭발·별빛·팡파르 연출 강화",
+    "summary": "대장 결과의 레벨 경계마다 금빛 고리·별빛과 짧은 음을 표시하고 마지막 레벨에 전용 팡파르를 재생합니다. 전투 축복도 강화했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117123211818-v1.0.0.html",
+    "date": "2026-11-17T12:32:11.818Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "경험치 게이지 상승음과 경쾌한 주사위 굴림음",
+    "summary": "경험치0.66초 상승음과1.05초 가벼운 주사위 굴림음을 각각3종 합성해 실제 게임에 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117122434265-v1.0.0.html",
+    "date": "2026-11-17T12:24:34.265Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "직접 번역 지침 추가와 11개 언어 UI 잘림 빠른 검수",
+    "summary": "프로젝트 번역 품질 기준을 명시하고 마을 설정·라벨 줄바꿈·카드·NPC 대화의 잘림과 넘침을 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117122315694-v1.0.0.html",
+    "date": "2026-11-17T12:23:15.694Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캠프 가디언 독립 투명 로고 분리와 번역 제목 연결",
+    "summary": "방패·모닥불 심볼과 영문 로고를 투명 PNG로 분리해 보고서 사이트·README·게임에 연결했습니다. 하단 제목은 선택 언어를 따릅니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117121835848-v1.0.0.html",
+    "date": "2026-11-17T12:18:35.848Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "대장 결과 카드 축소와 주사위·결과 사운드 연결",
+    "summary": "대장 카드를286×82/초상48px로 줄이고 HUD 주사위의 굴림·획득음과 일시정지 중 결과음 출력을 확인했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117121754248-v1.0.0.html",
+    "date": "2026-11-17T12:17:54.248Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 이름과 로고를 MIRO로 갱신",
+    "summary": "프로젝트 목록의 문동준 개발 블로그를 MIRO로 변경하고 기존 블로그의 SVG 로고를 연결했습니다.",
+    "project": "github-blog",
+    "reportPath": "projects/github-blog/reports/2026-11-17-result-20261117121712830-v1.0.0.html",
+    "date": "2026-11-17T12:17:12.830Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "간단한 웨이브 알림과 수호 성공 대장별 경험치 순차 연출",
+    "summary": "웨이브 클리어는 약1초 알림으로 분리하고, 수호 성공 후 대장4명의 경험치를 한 명씩 빠르게 표시한 뒤 옆으로 넘깁니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117120819773-v1.0.0.html",
+    "date": "2026-11-17T12:08:19.773Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "11개 언어 선택·오프라인 번역 테이블 기반과 직접 번역 281개",
+    "summary": "언어 선택·저장과 공통 번역 경로를 구현했습니다. 비한국어 10개 언어에 문구 281개씩 직접 작성했으며, 전체 번역은 미완료입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117120544513-v1.0.0.html",
+    "date": "2026-11-17T12:05:44.513Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캠프 가디언 프로젝트 이름·로고·README와 시작 화면 정리",
+    "summary": "중앙 표시 이름을 캠프 가디언으로 통일하고 승인된 방패·모닥불 로고를 제작해 README와 시작 화면에 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117120315755-v1.0.0.html",
+    "date": "2026-11-17T12:03:15.755Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기기 접근 제한 기능 제거 및 원래 공개 보고 사이트 복원",
+    "summary": "사용자 요청으로 기기 접근 제한을 제거하고 원래 GitHub Pages 공개 사이트로 복원했습니다. 추가 Cloudflare 서버도 삭제했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117120215788-v1.0.0.html",
+    "date": "2026-11-17T12:02:15.788Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "인게임 배경을 유지하는 웨이브 클리어와 원정 승리 연출",
+    "summary": "남은 적을 동시에 제거하고 금속 문양·충격파·빛·입자·제목을 순차 표시합니다. 일반 웨이브는 다음 전투로 재개합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117115840613-v1.0.0.html",
+    "date": "2026-11-17T11:58:40.613Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카일 부분 재생성 애니메이션 가속 오류 수정",
+    "summary": "이전 외곽선 수정에서 발생한 재분할 오류로 주기가0.25초가 된 것을 원래2.5초로 복구했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117114455802-v1.0.0.html",
+    "date": "2026-11-17T11:44:55.802Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "포폴·블로그 기록 무시와 동일한 기기 ID 형식 적용",
+    "summary": "요청 대상이 Access가 아닌 기존 기록 무시 방식임을 확인하고 동일 site_device_id 저장·판별 형식으로 맞췄습니다. 실제 폰 재접속은 미확인입니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117114235828-v1.0.0.html",
+    "date": "2026-11-17T11:42:35.828Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "설정 배경 재생성 제거와 배경음·효과음 개별 볼륨",
+    "summary": "설정 변경 시 기존 배경·버튼을 유지하고 배경음·효과음을 개별 0~100%로 조절·저장하도록 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117114102874-v1.0.0.html",
+    "date": "2026-11-17T11:41:02.874Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 더보기를 펼치기 컨트롤로 구분",
+    "summary": "더보기를 카테고리 버튼과 구분하도록 점선 구분선, 작은 보조 문구, 방향 화살표를 적용했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117113634101-v1.0.0.html",
+    "date": "2026-11-17T11:36:34.101Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 화톳불 장면으로 SNS 배경 제작",
+    "summary": "실제 마을 원본에서 화톳불과 캐릭터를 중심으로 X·Reddit 배너 PNG 두 장을 제작했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117112614209-v1.0.0.html",
+    "date": "2026-11-17T11:26:14.209Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "일시정지 포함 공통 UI 픽셀 글자 깨짐 수정",
+    "summary": "마을에 한정했던 보정을 전체 모달·툴팁·손패로 확대하고 비정수 배율·비기본 글꼴 크기·잘림을 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117112449908-v1.0.0.html",
+    "date": "2026-11-17T11:24:49.908Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "프로젝트 네비게이터 최근 5개와 더보기 24시간 유지",
+    "summary": "최근 보고서 날짜 기준 프로젝트 5개를 표시하고 나머지는 더보기로 접습니다. 선택 상태는 마지막 변경 후 24시간 유지합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117112423906-v1.0.0.html",
+    "date": "2026-11-17T11:24:23.906Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카일 스프라이트 과도한 외곽선 수정",
+    "summary": "흰 테두리를 남청색으로 덧칠하던 전용 처리를 제거하고 카일72프레임·호버 외곽선·조명 베이크를 갱신했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117112354405-v1.0.0.html",
+    "date": "2026-11-17T11:23:54.405Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "SNS 프로필 배경 이미지 제작",
+    "summary": "기존 인게임 전투 장면을 잘라 X용 1500×500, Reddit용 1920×640 PNG를 저장했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117111811381-v1.0.0.html",
+    "date": "2026-11-17T11:18:11.381Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "iPhone 일반 보고서 주소 접속 확인 및 임시 진단 제거",
+    "summary": "사용자 성공 확인과 서버의 실제 iPhone 일반 주소 HTTP 200을 모두 확인했습니다. 임시 진단과 실시간 조회는 제거했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117111233760-v1.0.1.html",
+    "date": "2026-11-17T11:15:04.607Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "iPhone 일반 주소 접속 실패 재접수와 연결 문서 방식 변경",
+    "summary": "사용자는 연결 링크와 달리 일반 주소가 계속 403이라고 정정했습니다. 연결 응답을 실제 문서로 바꿨으며 폰 일반 주소 재확인은 남아 있습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117111233760-v1.0.0.html",
+    "date": "2026-11-17T11:12:33.760Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을·NPC 대화 글자와 버튼 깨짐 보정",
+    "summary": "마을 모달90% 축소와 UI 디더링을 제거하고11px 기본 글꼴·버튼 줄바꿈·선술집 안내 겹침을 보정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117110603955-v1.0.0.html",
+    "date": "2026-11-17T11:06:03.955Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "외부 링크 이동 시 등록 기기가 403으로 차단되는 오류 수정",
+    "summary": "외부 링크 이동 시 403이 발생하던 설정을 수정했고 실제 PC 동일 경로 재접속과 사용자 iPhone 링크 접속 성공을 확인했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117102541157-v1.0.1.html",
+    "date": "2026-11-17T10:43:58.279Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 Shift 달리기 연결",
+    "summary": "마을의 키보드·클릭 이동에 Shift 1.65배 달리기를 적용했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117103253330-v1.0.0.html",
+    "date": "2026-11-17T10:32:53.330Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "메뉴 그래픽 설정 추가",
+    "summary": "화면 모드·정수 배율 창 크기·수직 동기화·최대 FPS 설정과 자동 저장을 추가했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117102931946-v1.0.0.html",
+    "date": "2026-11-17T10:29:31.946Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "외부 링크 이동 시 등록 기기가 403으로 차단되는 오류 수정",
+    "summary": "실제 Chrome에서 외부 링크 이동 후 403을 재현하고 SameSite 설정을 수정했습니다. 동일 경로 재진입이 정상이며 실제 iPhone 확인은 남아 있습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117102541157-v1.0.0.html",
+    "date": "2026-11-17T10:25:41.157Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "초기 로딩 배우 노멀 사전 베이크",
+    "summary": "첫 마을 진입의 NPC14명 노멀 생성9.66초를 사전 베이크 파일 로드50.65ms로 교체했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117102109733-v1.0.0.html",
+    "date": "2026-11-17T10:21:09.733Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "실제 Chrome 접근 연결 및 원본 보안 헤더 전달 오류 수정",
+    "summary": "사용 중인 Chrome의 PC 연결을 적용하고 새로고침 후 정상 접근을 확인했습니다. GitHub 원본 보안 헤더로 스타일·이미지가 차단되던 문제도 수정했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117102044395-v1.0.0.html",
+    "date": "2026-11-17T10:20:44.395Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 건물 입구 등불28개 설치와 NPC 입체조명 연결",
+    "summary": "시설14곳 입구 양옆에 실제 등불을 설치하고 NPC·플레이어와 건물 주변이 같은 광원을 사용하도록 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117101801145-v1.0.0.html",
+    "date": "2026-11-17T10:18:01.145Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "IP 허용 제거 및 등록 기기 2대 외 일반 403 적용",
+    "summary": "IP 허용을 제거하고 PC·iPhone 기기 ID만 허용합니다. 비인가 요청에는 연결 안내 없는 403 페이지만 반환합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117101435994-v1.0.0.html",
+    "date": "2026-11-17T10:14:35.994Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캐릭터 역광 몸통을 더 어둡게 조정",
+    "summary": "캐릭터 주변광을 낮춰 역광 몸통 표시 밝기를 약25% 낮추고 직접광은 유지했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117100957293-v1.0.0.html",
+    "date": "2026-11-17T10:09:57.293Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "기존 보고서 링크의 보호 사이트 연결 복구",
+    "summary": "기존 주소가 잠금 안내에 머물던 문제를 경로 유지 자동 이동으로 수정했습니다. 보호 사이트는 인증 후 최신 원본을 조회합니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117100838050-v1.0.0.html",
+    "date": "2026-11-17T10:08:38.050Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "사용자 지정 장비명 왕실 수호검 반영",
+    "summary": "장비 데이터·제작기·용어 정책·가이드의 이름을 왕실 수호검으로 통일했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117100556427-v1.0.0.html",
+    "date": "2026-11-17T10:05:56.427Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "캐릭터 역광 오류 수정: 불을 등지면 몸통을 어둡게",
     "summary": "화면 좌표를 공간 높이로 취급하던 오류와 기본 밝기1을 수정해 불 뒤·앞의 명암을 실제 렌더에서 확인했습니다.",
     "project": "dotaction",
     "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117100322509-v1.0.0.html",
     "date": "2026-11-17T10:03:22.509Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "어색한 무기 조어 금지와 왕실 장검으로 표시명 수정",
+    "summary": "절단검을 금지어에 추가하고 기존 장비명과 제작기의 이름을 왕실 장검으로 바꿨습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-17-result-20261117100143050-v1.0.0.html",
+    "date": "2026-11-17T10:01:43.050Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "중앙 보고 사이트에 기존 관리 기기 접근 제한 적용",
+    "summary": "PC·iPhone 기기 ID와 등록 IP를 중앙 사이트에 독립 저장하고 서버에서 접근을 제한했습니다. 기존 공개 보고 주소는 잠금 안내로 전환했습니다.",
+    "project": "codex-config",
+    "reportPath": "projects/codex-config/reports/2026-11-17-result-20261117095919053-v1.0.0.html",
+    "date": "2026-11-17T09:59:19.053Z",
     "kind": "result",
     "relatedReport": "",
     "replyTo": ""

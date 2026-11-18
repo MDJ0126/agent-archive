@@ -1,0 +1,87 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>관리자 댓글 목록을 행으로 정리하고 원글 제목 연결 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/github-blog/assets/miro-logo.svg" alt="MIRO 로고"><span>MIRO</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>관리자 댓글 목록을 행으로 정리하고 원글 제목 연결</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">작성자와 시각, 댓글 본문, 클릭할 수 있는 원글 제목을 행마다 표시합니다.</p><div class="post-byline"><time datetime="2026-11-10T12:48:00.582Z">2026년 11월 10일 오후 9:48 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p><a class="report-link" href="https://miro-blog-admin.ehdwns0126.workers.dev/#comments">관리자 댓글 탭</a>에 새 행 레이아웃을 배포했습니다. 댓글 아래 글 제목을 누르면 해당 글의 댓글 위치로 이동합니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li><code>admin/comments-panel.html</code>에서 댓글을 작성자·시각, 본문, 원글 제목 순으로 배치하고 삭제 버튼을 오른쪽에 뒀습니다. 기존 관리자 탭과 대시보드 테마를 사용합니다.</li>
+<li><code>admin/comments.mjs</code>에서 공개 검색 색인의 경로와 댓글의 게시물 경로를 맞춰 제목을 가져옵니다. 색인에서 확인할 수 없는 글은 경로 식별자를 표시해 관리 동작이 계속됩니다.</li>
+</ul>
+<pre><code data-language="js">async function postTitles(blog) {
+  try {
+    const response = await fetch(blog + &#39;/search-index.json&#39;, {signal: AbortSignal.timeout(2500)});
+    if (response.ok) {
+      const index = await response.json();
+      return new Map(index.map(([title, , , path]) =&gt; [path, title]));
+    }
+  } catch {
+    // A temporary index error must not prevent moderation.
+  }
+  return new Map();
+}
+
+function render(comment) {
+    const item = document.createElement(&#39;li&#39;);
+    const content = document.createElement(&#39;div&#39;);
+    const meta = document.createElement(&#39;div&#39;);
+    meta.className = &#39;comment-meta&#39;;
+    const name = document.createElement(&#39;strong&#39;);
+    name.textContent = comment.nickname;
+    const time = document.createElement(&#39;time&#39;);
+    time.dateTime = comment.created_at;
+    time.textContent = date.format(new Date(comment.created_at));
+    const body = document.createElement(&#39;p&#39;);
+    body.textContent = comment.body;
+    const link = document.createElement(&#39;a&#39;);
+    link.className = &#39;comment-post&#39;;
+    link.href = comment.postUrl;
+    const icon = document.createElement(&#39;span&#39;);
+    icon.setAttribute(&#39;aria-hidden&#39;, &#39;true&#39;);
+    icon.textContent = &#39;▤&#39;;
+    const title = document.createElement(&#39;span&#39;);
+    title.textContent = comment.postTitle;
+    link.append(icon, title);
+    const remove = document.createElement(&#39;button&#39;);
+    remove.className = &#39;record-policy&#39;;
+    remove.type = &#39;button&#39;;
+    remove.textContent = &#39;삭제&#39;;
+    remove.setAttribute(&#39;aria-label&#39;, comment.nickname + &#39;님의 댓글 삭제&#39;);
+    remove.addEventListener(&#39;click&#39;, () =&gt; removeComment(comment.id, remove));
+    meta.append(name, time);
+    content.append(meta, body, link);
+    item.append(content, remove);
+    return item;
+  }
+</code></pre>
+<pre class="mermaid">flowchart LR
+ A[&quot;관리자 댓글 목록 요청&quot;] --&gt; B[&quot;D1 댓글 조회&quot;]
+ B --&gt; C[&quot;공개 검색 색인의 글 경로와 제목 조회&quot;]
+ C --&gt; D[&quot;행에 작성자·시각·본문·원글 제목 표시&quot;]
+ D --&gt; E[&quot;제목 클릭&quot;]
+ E --&gt; F[&quot;해당 게시물 댓글 위치로 이동&quot;]
+</pre>
+<h3 id="section-4">대화 기록</h3>
+<ol>
+<li>사용자 (시각 미기록) · “티스토리 댓글 관리 페이지 처럼 레이아웃 구성해줘 게시물 이름도 보이게 하고 그걸 누르면 이동하고”</li>
+<li>AI (21:46 KST) · 댓글을 행으로 정리하고 실제 글 제목과 클릭 이동을 확인했습니다.</li>
+<li>AI (21:47 KST) · 운영 Worker에서 새 목록 코드를 확인했습니다.</li>
+</ol>
+<h2 id="section-5">검증</h2>
+<ul>
+<li>로컬 관리자 로그인에서 실제 제목 “첫 접속에 50MB가 들던 웹 빌드 줄이기”가 표시됐습니다. 제목 클릭 후 공개 게시글의 댓글 위치로 이동했고, 삭제 버튼도 동작했습니다.</li>
+<li>390px 너비에서 가로 넘침이 없었습니다. 운영 Worker의 새 목록 HTML을 확인했고, 비로그인 목록 요청은 401을 반환했습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/comments-tab-20261110/comments-tab-after.png" alt="변경 전 댓글 카드" loading="lazy"><figcaption>변경 전 댓글 카드</figcaption></figure>
+변경 전에는 별도 게시물 이동 버튼만 표시됐습니다.</p>
+<p><figure><img class="report-image" src="../assets/comment-rows-20261110/comment-rows-after-desktop.png" alt="변경 후 관리자 댓글 행과 제목" loading="lazy"><figcaption>변경 후 관리자 댓글 행과 제목</figcaption></figure>
+변경 후에는 본문 아래에 원글 제목이 표시됩니다. 로컬 로그인 상태에서 샘플 댓글로 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/comment-rows-20261110/comment-rows-after-mobile.png" alt="모바일 댓글 행과 제목" loading="lazy"><figcaption>모바일 댓글 행과 제목</figcaption></figure>
+390px 화면에서도 제목과 삭제 버튼을 확인했습니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>운영 Google 계정으로 로그인한 실제 댓글 목록은 미확인입니다. 운영 번들과 로컬 로그인 동작을 구분해 확인했습니다. 기존 전역·전용 지침 변경 사항은 없습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 6~10분</li>
+<li>실제로 완료된 시간: 기능 배포·검증 2분 25초. 2026-11-10 21:44:50 시작, 21:47:15 KST 완료.</li>
+<li>XERJ: 미사용 — 지정 검색 도구 미사용.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110124800582-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=github-blog&topic=qa&relatedReport=projects%2Fgithub-blog%2Freports%2F2026-11-10-result-20261110124800582-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=github-blog">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=github-blog">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

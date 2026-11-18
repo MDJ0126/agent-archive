@@ -1,0 +1,85 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>댓글 화면 축소와 관리자 댓글 관리 배포 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/github-blog/assets/miro-logo.svg" alt="MIRO 로고"><span>MIRO</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>댓글 화면 축소와 관리자 댓글 관리 배포</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">4자 삭제 비밀번호를 지원하고 관리자 댓글 목록에 삭제와 원글 이동을 추가했습니다.</p><div class="post-byline"><time datetime="2026-11-10T11:57:42.503Z">2026년 11월 10일 오후 8:57 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p><a class="report-link" href="https://miro-game.pages.dev/posts/story-suwon-web-budget/#comments-title">공개 게시글</a>의 댓글 폼을 줄이고, <a class="report-link" href="https://miro-blog-admin.ehdwns0126.workers.dev/">관리 페이지</a>에 댓글 관리 메뉴를 추가했습니다. 운영에서 4자 비밀번호로 작성·삭제를 확인했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li><code>comments/style.css</code>와 <code>comments/template.mjs</code>에서 댓글 영역 최대 폭을 720px로 제한하고 폼의 간격, 입력 높이와 본문 행 수를 줄였습니다.</li>
+<li>폼과 <code>functions/api/comments.js</code>의 최소 삭제 비밀번호 길이를 함께 4자로 변경했습니다. 기존 댓글은 작성할 때 정한 비밀번호로 삭제할 수 있습니다.</li>
+<li><code>admin/comments.mjs</code>의 <code>commentAdministration</code>에서 기존 관리자 인증을 사용해 최신 댓글부터 30개씩 조회합니다. 각 행에서 게시물로 이동하거나 댓글 비밀번호 없이 삭제합니다.</li>
+<li>운영 관리자 Worker의 기존 대시보드 소스는 로컬 운영본을 사용했습니다. 배포 전 공개 운영 HTML과 CSS를 대조했고, Git에는 기존 저장소 관리자 템플릿에 적용한 동일 기능만 포함했습니다.</li>
+</ul>
+<pre><code data-language="js">export async function commentAdministration(request, env, blog) {
+  const url = new URL(request.url);
+  const remove = url.pathname.match(/^\/comments\/([1-9]\d{0,15})\/delete$/);
+  if (!configured(env)) return new Response(&#39;관리자 로그인 설정을 확인해 주세요.&#39;, {status: 503, headers});
+  if (!await authorized(request, env)) {
+    if (request.method === &#39;GET&#39;) return new Response(null, {status: 303, headers: {...headers, location: &#39;/&#39;}});
+    return new Response(null, {status: 401, headers});
+  }
+  if (!env.COMMENTS_DB) return new Response(&#39;댓글 저장소를 확인해 주세요.&#39;, {status: 503, headers});
+  const before = url.searchParams.get(&#39;before&#39;);
+  if (before !== null &amp;&amp; !positiveId(before)) return new Response(&#39;잘못된 목록 위치입니다.&#39;, {status: 400, headers});
+
+  if (request.method === &#39;POST&#39; &amp;&amp; remove &amp;&amp; positiveId(remove[1])) {
+    if (request.headers.get(&#39;Origin&#39;) !== url.origin) return new Response(null, {status: 403, headers});
+    const deletion = await env.COMMENTS_DB.prepare(&#39;DELETE FROM comments WHERE id = ?&#39;).bind(Number(remove[1])).run();
+    const query = new URLSearchParams();
+    if (before) query.set(&#39;before&#39;, before);
+    if (deletion.meta.changes) query.set(&#39;deleted&#39;, &#39;1&#39;);
+    const location = &#39;/comments&#39; + (query.size ? &#39;?&#39; + query : &#39;&#39;);
+    return new Response(null, {status: 303, headers: {...headers, location}});
+  }
+  if (url.pathname !== &#39;/comments&#39; || request.method !== &#39;GET&#39;) return new Response(null, {status: 405, headers});
+
+  const {results} = await env.COMMENTS_DB.prepare(
+    &#39;SELECT id, post, nickname, body, created_at FROM comments WHERE id &lt; ? ORDER BY id DESC LIMIT ?&#39;,
+  ).bind(before ? Number(before) : Number.MAX_SAFE_INTEGER, pageSize + 1).all();
+  const comments = results.slice(0, pageSize);
+  const next = results.length &gt; pageSize ? comments.at(-1).id : null;
+  return new Response(renderPage(comments, next, before, url.searchParams.get(&#39;deleted&#39;) === &#39;1&#39;, blog), {headers});
+}
+</code></pre>
+<pre class="mermaid">flowchart LR
+ A[&quot;댓글 입력&quot;] --&gt; B{&quot;비밀번호가 4자 이상?&quot;}
+ B --&gt;|예| C[&quot;Pages API에서 검증하고 D1에 등록&quot;]
+ B --&gt;|아니요| D[&quot;길이 오류 표시&quot;]
+ C --&gt; E[&quot;작성자 비밀번호로 삭제 가능&quot;]
+</pre>
+<pre class="mermaid">flowchart LR
+ A[&quot;관리 메뉴 열기&quot;] --&gt; B{&quot;관리자 세션 유효?&quot;}
+ B --&gt;|아니요| C[&quot;로그인 화면으로 이동&quot;]
+ B --&gt;|예| D[&quot;D1 댓글 목록&quot;]
+ D --&gt; E[&quot;게시글 댓글로 이동&quot;]
+ D --&gt; F[&quot;동일 출처의 삭제 요청&quot;]
+ F --&gt; G[&quot;D1 삭제 및 목록 갱신&quot;]
+</pre>
+<h3 id="section-4">대화 기록</h3>
+<ol>
+<li>사용자 (시각 미기록) · “디자인을 좀 작게 만들어주고, 비밀번호는 최소 4개로 바꾸고, 관리 페이지에서 댓글들 볼 수 있게 해주고, 그냥 지울 수 있도록 만들어주고, 해당 게시물 이동 버튼도 만들어줘”</li>
+<li>AI (20:54 KST) · 관리자 Worker 배포와 비로그인 GET 차단을 확인했습니다.</li>
+<li>AI (20:56 KST) · 공개 글에서 4자 비밀번호 등록·삭제를 확인하고 검증용 댓글을 삭제했습니다.</li>
+</ol>
+<h2 id="section-5">검증</h2>
+<ul>
+<li><a class="report-link" href="https://github.com/MDJ0126/github-blog/actions/runs/42811380954">블로그 Pages 배포</a> 성공. 4자 비밀번호 등록, 닉네임 복원, 잘못된 비밀번호 거부, 정상 삭제를 공개 브라우저에서 확인했습니다.</li>
+<li>격리한 관리자 세션에서 목록, 원글 링크, 비밀번호 없는 삭제를 확인했습니다. 운영 관리자 화면은 메뉴 존재 및 비로그인 목록 303, 삭제 401을 확인했습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/comments-live-20261110/comments-live.png" alt="변경 전 댓글 영역" loading="lazy"><figcaption>변경 전 댓글 영역</figcaption></figure>
+변경 전 운영 게시글에서 댓글 영역이 글 너비에 맞춰 표시됩니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-compact-20261110/comments-compact.png" alt="변경 후 작은 댓글 영역" loading="lazy"><figcaption>변경 후 작은 댓글 영역</figcaption></figure>
+운영 게시글에서 댓글 너비와 입력란 높이를 줄였습니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-compact-20261110/comments-compact-mobile.png" alt="모바일 4자 댓글 폼" loading="lazy"><figcaption>모바일 4자 댓글 폼</figcaption></figure>
+운영 모바일 댓글 폼과 복원된 닉네임입니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-compact-20261110/comments-moderation.png" alt="댓글 관리 목록과 동작 버튼" loading="lazy"><figcaption>댓글 관리 목록과 동작 버튼</figcaption></figure>
+로컬 관리자 세션에서 원글 이동과 삭제 버튼을 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-compact-20261110/comments-moderation-deleted.png" alt="관리자 삭제 후 화면" loading="lazy"><figcaption>관리자 삭제 후 화면</figcaption></figure>
+로컬 관리자 세션에서 삭제 후 목록이 비고 안내가 표시됩니다. 관리 목록은 신규 화면이라 변경 전 동일 화면이 없습니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>운영 관리자 Google 로그인 상태에서 목록·삭제를 직접 실행하지 않았습니다. 운영 인증 경계와 로컬 로그인 상태의 동작을 별도로 확인했습니다. 전역·프로젝트 지침에 추가할 새 규칙은 없습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 8~15분</li>
+<li>실제로 완료된 시간: 운영 반영과 기능 확인 5분 31초 · 2026-11-10 20:51:05 시작, 20:56:36 KST 완료.</li>
+<li>XERJ: 미사용 — 지정 검색 도구를 사용하지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110115742503-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=github-blog&topic=qa&relatedReport=projects%2Fgithub-blog%2Freports%2F2026-11-10-result-20261110115742503-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=github-blog">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=github-blog">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

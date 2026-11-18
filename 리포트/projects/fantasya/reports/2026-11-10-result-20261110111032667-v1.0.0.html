@@ -1,0 +1,34 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>DDT Addressables 전환과 캐릭터 프리팹 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>DDT Addressables 전환과 캐릭터 프리팹</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">DDT 캐릭터·스테이터스·이름을 Addressables로 로드하고 플레이어와 몬스터 프리팹을 등록했습니다.</p><div class="post-byline"><time datetime="2026-11-10T11:10:32.667Z">2026년 11월 10일 오후 8:10 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>Playground의 기존 플레이어·스켈레톤·오크를 프리팹으로 분리했습니다. 이어 보유 Creatures 48종을 몬스터로 구성했고, 플레이어를 포함해 주소는 49개입니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li>Addressables 2.9.1을 사용합니다. <code>Characters</code> 그룹에는 플레이어와 몬스터, <code>Design Data Tables</code>에는 DDT 바이너리와 번역 참조 에셋을 등록했습니다.</li>
+<li>캐릭터와 스테이터스는 DDT 생성 테이블의 비동기 API로 읽습니다. 이름은 DDT 번역 원본을 참조하는 프로젝트 에셋을 Addressables로 읽습니다. 새 DDT 테이블 바이너리 등록은 DDT 가져오기 흐름을 사용합니다.</li>
+<li>보유 팩의 말·사슴도 시험용 몬스터 범위에 포함했습니다. 기존 Playground에는 처음 배치한 두 몬스터가 남아 있습니다. Data 에셋은 파일 종류별로 <code>Tables</code>, <code>Behavior</code>, <code>Localization</code>으로 정리하고 기존 GUID를 보존했습니다.</li>
+</ul>
+<p><code>Monster.Start</code>의 공유 초기화입니다. 캐릭터별 초기화가 한 로드 작업을 기다립니다.</p>
+<pre><code data-language="csharp">await (_tableLoad ??= Task.WhenAll(
+    FantasyaCharacterTable.instance.LoadAsync(),
+    FantasyaStatusTable.instance.LoadAsync(),
+    CharacterLocalization.LoadAsync()));
+</code></pre>
+<h3 id="section-4">대화 기록</h3>
+<ol>
+<li>사용자 · 미기록 · “아 프리팹화 하라고 하려고 했던거임”.</li>
+<li>사용자 · 미기록 · “어드레서블 설치하고 정리해둬”. DDT의 Addressables 로드도 요청했습니다.</li>
+<li>사용자 · 미기록 · “현재 있는 모든 몬스터들 비슷하게 구현해서 프리팹화 하고 어드레서블에 등록해줘.”</li>
+<li>Codex · 11월 9일 21:00 KST · 몬스터 48종과 DDT, Addressables 연결을 보고하고 Play Mode는 미확인으로 구분했습니다.</li>
+<li>사용자 · 미기록 · “파일 종류 단위로 폴더 구분하라고”. Codex는 파일마다 만들었던 폴더를 세 종류로 다시 묶었습니다.</li>
+</ol>
+<h2 id="section-5">검증</h2>
+<p>현재 작업 트리에서 캐릭터 프리팹 49개와 플레이어 빌드의 Addressables 설정을 대조했습니다. 당시 프리팹 ID, 주소, DDT 바이너리 연결은 정적으로 대조했습니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>Unity 임포트, 최신 콘텐츠 빌드 및 Play Mode는 미확인입니다. 동일 상태의 전후 화면은 당시 확보하지 못했습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 원 작업별로 채팅에 안내했습니다. 누락분 정리 초안은 5~10분으로 제안했습니다.</li>
+<li>실제로 완료된 시간: 원 작업별 소요 시간은 개별 작업 응답에 기록했으며 합산하지 않았습니다.</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110111032667-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-10-result-20261110111032667-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,0 +1,79 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Pixel Camera — OKLab과 최종 팔레트·디더 보완 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixelcamera/assets/logo.png" alt="Pixel Camera 로고"><span>턴룸 › Pixel Camera</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Pixel Camera — OKLab과 최종 팔레트·디더 보완</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">영상과 소스를 대조해 OKLab·윤곽선 이후 팔레트·256단계 팔레트 디더를 보완했습니다.</p><div class="post-byline"><time datetime="2026-11-16T04:56:11.311Z">2026년 11월 16일 오후 1:56 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>Pixel Camera0.6.3-preview에 CPU·GPU·LUT의 OKLab 매칭을 추가하고 윤곽선·하이라이트 뒤에 최종 팔레트를 적용했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>영상0:50 해상도,1:29 툰,1:56 외곽선,2:29 팔레트/디더,3:09 애니메이션을 대조했습니다. 세부 누락은 OKLab, 일부 윤곽선의 최종 팔레트,256단계의 팔레트 디더였습니다.3:41 얼굴 소실은 모델 크기·해상도 문제로 구분했습니다. <a class="report-link" href="https://www.youtube.com/watch?v=sOSH-Vc7aJY">영상</a> · <a class="report-link" href="https://bottosson.github.io/posts/oklab/">OKLab 원저자</a>.</p>
+<p>기존 enum0/1과 bool API를 보존하고 OKLab=2를 추가했습니다. LUT 내부 모드는3입니다. 팔레트 좌표는 CPU에서 미리 변환하며 강도0·부분 적용을 보존합니다.</p>
+<pre class="mermaid">flowchart LR
+A[작업 RGB] --&gt; B[Linear 또는 Gamma 보정]
+B --&gt; C[OKLab 변환]
+C --&gt; D[거리 또는 LUT 생성]
+D --&gt; E[원본 팔레트 색 선택]
+</pre>
+<pre><code data-language="csharp">public static void ToOKLab(float r, float g, float b, bool linear, out float lightness, out float greenRed, out float blueYellow)
+        {
+            if (!linear)
+            {
+                r = ToLinear(r);
+                g = ToLinear(g);
+                b = ToLinear(b);
+            }
+            double l = CubeRoot(.4122214708 * r + .5363325363 * g + .0514459929 * b);
+            double m = CubeRoot(.2119034982 * r + .6806995451 * g + .1073969566 * b);
+            double s = CubeRoot(.0883024619 * r + .2817188376 * g + .6299787005 * b);
+            lightness = (float)(.2104542553 * l + .7936177850 * m - .0040720468 * s);
+            greenRed = (float)(1.9779984951 * l - 2.4285922050 * m + .4505937099 * s);
+            blueYellow = (float)(.0259040371 * l + .7827717662 * m - .8086757660 * s);
+        }
+</code></pre>
+<pre><code data-language="hlsl">float3 PCMapPalette(float3 rgb)
+{
+    if(_PaletteCount&lt;=0)return rgb;
+    if(_PaletteMode&gt;2.5){float3 address=(floor(saturate(rgb)*(_PaletteLutSize-1)+.5)+.5)/_PaletteLutSize;return tex3D(_PaletteLut,address).rgb;}
+    float distance=1e20;float3 closest=rgb;float3 hsv=_PaletteMode&gt;.5&amp;&amp;_PaletteMode&lt;1.5?PCPaletteHSV(rgb):0;float3 lab=_PaletteMode&gt;1.5?PCToOKLab(rgb):0;
+    [loop]for(int p=0;p&lt;_PaletteCount;p++)
+    {
+        float3 delta=rgb-_Palette[p].rgb;float candidate=dot(delta*delta,float3(.2126,.7152,.0722));
+        if(_PaletteMode&gt;1.5){float3 deltaLab=lab-_PaletteLab[p].rgb;candidate=dot(deltaLab,deltaLab);}
+        else if(_PaletteMode&gt;.5){float3 other=PCPaletteHSV(_Palette[p].rgb);float hue=abs(hsv.x-other.x);hue=min(hue,1-hue);candidate=hue*hue*4*hsv.y*other.y+(hsv.y-other.y)*(hsv.y-other.y)*.5+(hsv.z-other.z)*(hsv.z-other.z);}
+        if(candidate&lt;distance){distance=candidate;closest=_Palette[p].rgb;}
+    }
+    return closest;
+}
+</code></pre>
+<pre class="mermaid">flowchart LR
+A[표면 명암] --&gt; B[윤곽선과 하이라이트]
+B --&gt; C[Bayer 디더]
+C --&gt; D[최종 팔레트]
+D --&gt; E[원본과 강도 혼합]
+</pre>
+<pre><code data-language="hlsl">float4 PCFinishPalette(float2 uv, float4 color)
+{
+    uint side=(uint)max(2,_DitherSize);
+    uint2 cell=(uint2)fmod(floor(uv*_PixelSize.xy),side);
+    uint index=cell.y*side+cell.x;
+    float threshold=_DitherPattern[index/4][index%4]-.5;
+    if (_PaletteCount &gt; 0 &amp;&amp; _PaletteStrength &gt; 0)
+    {
+        float3 mapped=PCMapPalette(color.rgb+threshold*_Dither/max(2,_PaletteCount-1));
+        color.rgb=lerp(color.rgb,mapped,_PaletteStrength);
+    }
+    return color;
+}
+</code></pre>
+<p><a class="report-link" href="../assets/video-20261116/PaletteAlgorithms.cs.txt">CPU 전체 원본</a> · <a class="report-link" href="../assets/video-20261116/Process.cginc.txt">셰이더 전체 원본</a></p>
+<h2 id="section-4">검증</h2>
+<p>Unity6000.0.83f1에서 실제 임포트·컴파일·렌더했습니다. 아래 Gamma 기준 화면은 변경 전과 첫 구현입니다. 최종 최적화 소스는 다음 Linear 설치본 렌더로 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/video-20261116/palette-before.png" alt="변경 전 — Weighted RGB와 기존 윤곽선" loading="lazy"><figcaption>변경 전 — Weighted RGB와 기존 윤곽선</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/video-20261116/palette-after.png" alt="첫 구현 후 — OKLab과 최종 팔레트" loading="lazy"><figcaption>첫 구현 후 — OKLab과 최종 팔레트</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/video-20261116/urp-outline.png" alt="최종 설치본 URP OKLab·Bayer·외곽선" loading="lazy"><figcaption>최종 설치본 URP OKLab·Bayer·외곽선</figcaption></figure></p>
+<p>설치본 URP17.0.4 RenderGraph/DX11/Linear:24프레임과 외곽선12프레임의 불안정 쌍0, 인스턴싱 경고0, 배경 변화0, 마스크 복원. <a class="report-link" href="../assets/video-20261116/urp.json">측정</a>. 단위·회귀 테스트를 새로 작성하지 않았습니다. <a class="report-link" href="../assets/video-20261116/conversation.json">대화</a>.</p>
+<h2 id="section-5">남은 사항</h2>
+<p>Native Inspector 선택, 새 LUT 저장·재열기 UI,9개 언어 전체 배치, HDRP·XR·다른 플랫폼은 미확인입니다. LUT는 연속 색의 근사입니다. 강도1의 처리 대상 불투명 표면에 팔레트 포함 계약을 적용하며 Overlay UI·비대상 배경은 제외합니다. 제품 전용 코드라 공통 Unity 샘플 환류는 보류했습니다.</p>
+<h2 id="section-6">작업 시간</h2>
+<ul>
+<li>제안 시간: 최초40<del>70분, 새 예제 추가 후55</del>85분.</li>
+<li>실제로 완료된 시간: 2026-11-16 13:00:04 KST 시작. 구현·실행·새 설치·초안 저장까지46분37초,13:46:41 KST 완료. 공개 보고·푸시는 별도입니다.</li>
+<li>XERJ: 미사용 — 사용자 지시에 따라 rg와 실제 자막·소스·Unity 로그·렌더·Publisher 재읽기를 사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-20261116045611311-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixelcamera&topic=qa&relatedReport=projects%2Fpixelcamera%2Freports%2F2026-11-16-result-20261116045611311-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixelcamera">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixelcamera">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">검증</a><a href="#section-5">남은 사항</a><a href="#section-6">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

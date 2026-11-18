@@ -1,0 +1,254 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Midnight Run — Blender 러너·네온 도시·연속 횡스크롤 재제작 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/pixelcamera/assets/logo.png" alt="Pixel Camera 로고"><span>턴룸 › Pixel Camera</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Midnight Run — Blender 러너·네온 도시·연속 횡스크롤 재제작</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">단순 큐브 예제를 Blender 리깅 러너와3층 네온 도시로 교체하고 기존 Pixora Studio1.0.1 초안·9언어 소개 글을 갱신했습니다.</p><div class="post-byline"><time datetime="2026-11-16T08:26:55.770Z">2026년 11월 16일 오후 5:26 KST</time><span>v1.0.0</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>실제 Blender 원본2개와 FBX4개를 저장·재열기했습니다. 18본 가중치 러너가7.5m/s로 전진하며3개 도시 레이어를 순환합니다. 실제 Unity25.1초 플레이에서188.4m 이동·302회 자세 변화를 확인했습니다. <a class="report-link" href="../assets/midnight-run-20261116/MidnightRun-Play.mp4">실행 영상—12초, 무음 실행 증거</a></p>
+<p>편집 가능한 원본2개와 재생성 스크립트는 프로젝트 ArtSources/Pixora/Blender/NeonSprint에 보관했습니다. 공개 첨부는 실제 실행 화면·로그로 제한합니다.</p>
+<h3 id="section-2">다중 재질 전환의 전체 메서드</h3>
+<pre><code data-language="csharp">        public void ApplySwitches()
+        {
+            PixelCameraPreset settings = _working != null ? _working : preset;
+            effect.enabled = switches[0] || switches[2] || switches[3];
+            for (int i = 0; i &lt; pixelObjects.Length; i++)
+            {
+                pixelObjects[i].pixelSize = switches[0] ? 4 : 1;
+            }
+            settings.outline = switches[2];
+            settings.palette = switches[3] ? palette : null;
+            settings.orderedDithering = switches[3];
+            steppedAnimator.enabled = switches[4];
+            for (int i = 0; i &lt; surfaces.Length; i++)
+            {
+                surfaces[i].sharedMaterial = switches[1] ? toonMaterials[i] : smoothMaterials[i];
+            }
+            if (materialSets != null)
+            {
+                foreach (var set in materialSets)
+                {
+                    if (set.renderer != null)
+                    {
+                        set.renderer.sharedMaterials = switches[1] ? set.toon : set.smooth;
+                    }
+                }
+            }
+            for (int i = 0; i &lt; enabledIndicators.Length; i++)
+            {
+                enabledIndicators[i].SetActive(switches[i % 5]);
+            }
+        }
+</code></pre>
+<pre class="mermaid">flowchart TD
+ A[ApplySwitches] --&gt; B[격자와 팔레트·외곽선·포즈 토글]
+ B --&gt; C[기존 단일 재질 배열 전환]
+ C --&gt; D[Renderer별 전체 재질 슬롯 전환]
+ D --&gt; E[표시기 갱신]
+</pre>
+<h2 id="section-3">변경 내용</h2>
+<h3 id="section-4">적용 내용</h3>
+<p><figure><img class="report-image" src="../assets/midnight-run-20261116/neon-play-styled.png" alt="새 횡스크롤 실행 화면" loading="lazy"><figcaption>새 횡스크롤 실행 화면</figcaption></figure></p>
+<p>기존 장면 경로·GUID와 예제 메뉴를 유지했습니다. 기존 세 예제는 보존하고 폐기한 네온 큐브 재질은 제거했습니다. 아래는 질주·카메라·시차 순환을 담당하는 전체 컴포넌트입니다.</p>
+<pre><code data-language="csharp">using UnityEngine;
+
+namespace TurnRoom.PixelCamera.Samples
+{
+    /// &lt;summary&gt;
+    /// 연속 질주와 추적 카메라·깊이별 도시 순환을 담당한다.
+    /// &lt;/summary&gt;
+    public sealed class NeonSprintLoop : MonoBehaviour
+    {
+        [System.Serializable]
+        public struct CityLayer
+        {
+            public Transform[] chunks;
+            [Range(.05f, 1.2f)] public float parallax;
+            public float length;
+        }
+
+        public FiveSwitchShowcase showcase;
+        public Transform runner;
+        public Camera followCamera;
+        public float speed = 7.5f;
+        public float lead = 2.8f;
+        public CityLayer[] layers;
+        private Vector3 _cameraHome;
+        private Quaternion _cameraRotation;
+        private float[][] _origins;
+        private float _distance;
+
+        public float Distance =&gt; _distance;
+
+        private void Awake()
+        {
+            _cameraHome = followCamera.transform.position;
+            _cameraRotation = followCamera.transform.rotation;
+            _origins = new float[layers.Length][];
+            for (int i = 0; i &lt; layers.Length; i++)
+            {
+                _origins[i] = new float[layers[i].chunks.Length];
+                for (int j = 0; j &lt; layers[i].chunks.Length; j++)
+                {
+                    _origins[i][j] = layers[i].chunks[j].position.x;
+                }
+            }
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                ResetView();
+            }
+            if (showcase.IsPaused)
+            {
+                return;
+            }
+            float delta = Mathf.Max(0, Time.deltaTime);
+            _distance += speed * delta;
+            runner.position += Vector3.right * speed * delta;
+            UpdateLayers();
+        }
+
+        private void LateUpdate()
+        {
+            if (showcase.IsPaused)
+            {
+                return;
+            }
+            ResetView();
+        }
+
+        /// &lt;summary&gt;
+        /// 실제 캐릭터 이동과 독립된 거리로 각 깊이의 모듈을 화면 밖에서 재배치한다.
+        /// &lt;/summary&gt;
+        private void UpdateLayers()
+        {
+            for (int i = 0; i &lt; layers.Length; i++)
+            {
+                CityLayer layer = layers[i];
+                if (layer.chunks == null || layer.chunks.Length &lt; 2 || layer.length &lt;= 0)
+                {
+                    continue;
+                }
+                float travel = _distance * layer.parallax;
+                float span = layer.length * layer.chunks.Length;
+                for (int j = 0; j &lt; layer.chunks.Length; j++)
+                {
+                    while (travel - _origins[i][j] &gt; layer.length * .5f + 22)
+                    {
+                        _origins[i][j] += span;
+                    }
+                    Vector3 position = layer.chunks[j].position;
+                    position.x = _origins[i][j] + _distance * (1 - layer.parallax);
+                    layer.chunks[j].position = position;
+                }
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 전진 중인 캐릭터보다 앞을 보여 주는 횡스크롤 시점을 복원한다.
+        /// &lt;/summary&gt;
+        public void ResetView()
+        {
+            followCamera.transform.SetPositionAndRotation(
+                new Vector3(runner.position.x + lead, _cameraHome.y, _cameraHome.z),
+                _cameraRotation);
+        }
+    }
+}
+
+</code></pre>
+<pre class="mermaid">flowchart TD
+ A[Update] --&gt; B{일시정지?}
+ B --&gt;|아니오| C[거리와 러너 +X 전진]
+ C --&gt; D[LateUpdate 추적 시점 복원]
+ B --&gt;|예| E[이동 중지·3D 관찰 유지]
+</pre>
+<pre class="mermaid">flowchart TD
+ A[누적 거리 × 시차] --&gt; B[각 레이어와 청크 확인]
+ B --&gt; C{뒤쪽 한계 통과?}
+ C --&gt;|예| D[원점에 전체 구간 길이 더하기]
+ D --&gt; C
+ C --&gt;|아니오| E[원점과 시차 보정으로 위치 적용]
+</pre>
+<h2 id="section-5">검증</h2>
+<h3 id="section-6">실제 전후 화면</h3>
+<p><figure><img class="report-image" src="../assets/midnight-run-20261116/before-0.png" alt="폐기 전 큐브 예제" loading="lazy"><figcaption>폐기 전 큐브 예제</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/midnight-run-20261116/neon-play-styled.png" alt="새 Blender 러너와 네온 도시" loading="lazy"><figcaption>새 Blender 러너와 네온 도시</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/midnight-run-20261116/neon-play-original.png" alt="효과를 끈 동일 장면" loading="lazy"><figcaption>효과를 끈 동일 장면</figcaption></figure></p>
+<ul>
+<li>Blender5.2.3 LTS 최종 원본 재열기: 러너18본·가중 메시1·Action1, 도시27메시. 디스크 해시 보존. <a class="report-link" href="../assets/midnight-run-20261116/blender-final-reopen.json">근거</a></li>
+<li>추가17초 실제 실행:91,098회 전진·역방향0회. 모든 레이어가 카메라 기준 뒤로 이동하고 중경·데크가 재순환했습니다. <a class="report-link" href="../assets/midnight-run-20261116/trajectory.json">상대 이동 기록</a></li>
+<li>Unity6000.0.83f1 / Built-in DX11 / Linear.25.1초·188.4m·302자세 변화와6개 청크 재배치. <a class="report-link" href="../assets/midnight-run-20261116/play-motion.json">실행 값</a>
+-12초1280×720 /24FPS:288프레임 전체 인코드·디코드. 음향 없는 실행 증거이며 판매용 홍보 영상으로 판정하지 않았습니다. <a class="report-link" href="../assets/midnight-run-20261116/video-encoding.json">근거</a></li>
+<li>공식 validator25 Pass·4 Warning·0 Fail, 컴파일 오류 없음. 경고: Compressed Files / Mesh Prefabs / Model Orientation / JPG. <a class="report-link" href="../assets/midnight-run-20261116/release-validation.json">전체 결과</a></li>
+<li>패키지2,885파일·80,681,626바이트. SHA256 79db0667e010e18a4e188195b1fbdaaaf22c78c1be01ef6cfd25ea0c801658ea. Stage asset/meta 차이0. 사용자 수정 중인 공용 WindowMouseActivationGuard는 검증된HEAD본을 패키지에 사용하고 작업 파일을 보존했습니다. <a class="report-link" href="../assets/midnight-run-20261116/package-audit.json">대조</a></li>
+<li>새 프로젝트 실제 ImportPackage: 누락 스크립트0·질주 제어기1·스킨 메시1·core→sample 의존 없음. 첫 확인은 비동기 가져오기보다 빨라 실패했으며 완료 이벤트·도메인 재로드 후 확인으로 수정하여 통과했습니다. <a class="report-link" href="../assets/midnight-run-20261116/fresh-import.json">새 설치</a></li>
+<li>초안1547466 /1.0.1: 업로드 후80,681,626바이트·draft 재조회. 기존1541558 /1.0.0 pendingReview 유지. <a class="report-link" href="../assets/midnight-run-20261116/store-readback.json">서버 재조회</a></li>
+<li>main f648f790384f7f0d84b209b57be18c923f05ce95; 소개 사이트9언어 본문·같은 버전 URL·새 썸네일 공개 확인. <a class="report-link" href="../assets/midnight-run-20261116/publication-readback.json">공개 재읽기</a>
+-9언어 문서·실제 캡처·ScreenshotManifest 갱신. 문서 경로 검사 통과.</li>
+<li>컴퓨터 유즈·마우스·키보드·포커스 조작 없음. Unity 성공 배치 모두 ownForegroundObserved=false. 격리 라이선스 연결 실패는 실제 환경의 배치 실행으로 해결했습니다.</li>
+</ul>
+<h2 id="section-7">남은 사항</h2>
+<p>Native 입력 조작, 모든9언어 화면 배치, 이 예제의URP·HDRP·XR·타 플랫폼은 미확인입니다. 공식4개 경고는 보존했으며 심사 승인·제출을 의미하지 않습니다. 최종 심사 제출은 하지 않았습니다. 기존 사용자 수정 파일과 다른 Unity 작업을 보존했습니다.</p>
+<h3 id="section-8">대화 기록</h3>
+<p>사용자는 기존 예제가 성의 없다고 지적하며 “블랜더로 모델 만들고 … 다 다시 만들어서 횡스크롤로 질주하는 씬”을 요구했습니다. 이어 “컴퓨터 유즈 안 쓰고 … 나 써야해”라고 제약했고, 왕복하지 않고 앞으로 계속 달리며 배경이 스크롤돼야 한다고 다시 명시했습니다. 원본 모델·리깅·도시를 재제작하고 배치/API 경로를 유지했습니다.</p>
+<h3 id="section-9">지침 환류</h3>
+<p>검증한 교훈을 PixoraAuthoring 및 Pixel Camera 프로젝트 지침에 통합했습니다: 단순 큐브 대체 금지, 실제 Blender 원본 보존, 한 방향 질주와 구간 순환을 실행 값으로 확인. 기존 전역 비간섭 원칙은 중복 추가하지 않았습니다.</p>
+<h3 id="section-10">공개 흐름도 재검증</h3>
+<p>실제 headless Chrome에서 개별 mermaid.run 호출의 SVG ID가 겹쳐 세 번째 그래프가 비는 현상을 관찰했습니다. <a class="report-link" href="https://mermaid.js.org/config/usage.html#api-usage">Mermaid12.3 공식 문서</a>의 명시적인 고유 ID를 사용하는 render 호출로 수정했습니다. 이 변경은 보고서 렌더러이며 제품 패키지는 바뀌지 않습니다. 아래는 수정한 전체 메서드입니다.</p>
+<pre><code data-language="javascript">  async function renderDiagrams(){
+   const theme=root.dataset.theme;
+   if(theme===renderedTheme)return;
+   renderedTheme=theme;
+   const style=getComputedStyle(diagrams[0]);
+   const color=name=&gt;style.getPropertyValue(name).trim();
+   mermaid.initialize({
+    startOnLoad:false,
+    securityLevel:&#39;strict&#39;,
+    htmlLabels:false,
+    suppressErrorRendering:true,
+    theme:&#39;base&#39;,
+    look:&#39;classic&#39;,
+    fontFamily:&#39;Segoe UI, Malgun Gothic, system-ui, sans-serif&#39;,
+    themeCSS:&#39;.node rect { rx: 6px; }&#39;,
+    themeVariables:{
+     darkMode:theme===&#39;dark&#39;,
+     fontSize:&#39;14px&#39;,
+     background:color(&#39;--paper&#39;),
+     primaryColor:color(&#39;--diagram-node&#39;),
+     primaryBorderColor:color(&#39;--diagram-border&#39;),
+     primaryTextColor:color(&#39;--ink&#39;),
+     lineColor:color(&#39;--green&#39;),
+     edgeLabelBackground:color(&#39;--paper&#39;)
+    },
+    flowchart:{curve:&#39;linear&#39;,nodeSpacing:28,rankSpacing:30,padding:10,wrappingWidth:115}
+   });
+   for(const [index,diagram] of diagrams.entries()){
+    const scrollLeft=diagram.scrollLeft;
+    const source=sources[index];
+    diagram.textContent=source;
+    diagram.removeAttribute(&#39;data-processed&#39;);
+    try{
+     const id=`tracefolio-diagram-${index}-${theme}`;
+     const {svg:markup,bindFunctions}=await mermaid.render(id,source);
+     diagram.innerHTML=markup;
+     bindFunctions?.(diagram);
+     const svg=diagram.querySelector(&#39;svg&#39;);
+     if(svg)svg.style.minWidth=`${svg.viewBox.baseVal.width}px`;
+     diagram.scrollLeft=scrollLeft;
+    }catch{
+     diagram.textContent=source;
+    }
+   }
+  }
+</code></pre>
+<pre class="mermaid">flowchart TD
+ A[원본과 스크롤 위치 보관] --&gt; B[모든 다이어그램 초기화]
+ B --&gt; C[고유 ID로 각 다이어그램 렌더]
+ C --&gt; D[각 SVG 폭과 스크롤 복원]
+ C --&gt;|실패| E[미렌더 원본 유지]
+</pre>
+<h2 id="section-11">작업 시간</h2>
+<ul>
+<li>제안 시간: 60~90분</li>
+<li>실제로 완료된 시간: 시작2026-11-16 16:15:41 KST. 구현·배치 실행·새 설치·초안 업로드·main 푸시·소개 사이트 공개 확인까지 약71분, 2026-11-16 17:26:53 KST. 이 보고서 자체의 배포·공개 확인은 후속으로 수행합니다.</li>
+<li>XERJ: 미사용 — 사용자 지시에 따라 rg·직접 소스·실제 Blender와 Unity 배치 로그를 사용했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-16-result-20261116082655770-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=pixelcamera&topic=qa&relatedReport=projects%2Fpixelcamera%2Freports%2F2026-11-16-result-20261116082655770-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=pixelcamera">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=pixelcamera">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-3">변경 내용</a><a href="#section-5">검증</a><a href="#section-7">남은 사항</a><a href="#section-11">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -76,15 +76,19 @@
     "logo": null
   },
   "github-blog": {
-    "name": "문동준 개발 블로그",
-    "logo": null
+    "name": "MIRO",
+    "logo": "projects/github-blog/assets/miro-logo.svg"
   },
   "overdox": {
     "name": "OVERDOX 복원",
     "logo": null
   },
   "dotaction": {
-    "name": "DotAction",
-    "logo": "projects/dotaction/assets/sym_bolt.png"
+    "name": "캠프 가디언",
+    "logo": "projects/dotaction/assets/camp-guardian-symbol.png"
+  },
+  "snsmanager": {
+    "logo": "projects/snsmanager/assets/logo.svg",
+    "name": "SNSManager"
   }
 }

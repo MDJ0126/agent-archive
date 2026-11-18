@@ -1,0 +1,93 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>추천 카드 튕기는 등장과 최초 노출 유지 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/github-blog/assets/miro-logo.svg" alt="MIRO 로고"><span>MIRO</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>추천 카드 튕기는 등장과 최초 노출 유지</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">추천 카드에 680ms 아래에서 위로 튕기는 효과를 적용하고 스크롤을 올려도 유지하도록 수정했습니다.</p><div class="post-byline"><time datetime="2026-11-11T09:52:23.380Z">2026년 11월 11일 오후 6:52 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>6e4c16d main 푸시와 Actions 성공, 실제 운영 화면의 애니메이션·위로 스크롤 후 유지·닫기를 확인했습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p>기존 220ms 전환 대신 680ms 키프레임으로 화면 아래에서 출발해 -14px, +6px, -3px를 지나 정착합니다. 사용자가 요청한 효과를 위해 이 카드의 동작 감소 비활성화 조건을 제거했습니다. 최초 생성 이후 nearEnd 조건이 false가 되어도 유지하며 닫기 상태는 그대로 보관합니다. 추천 기준은 같은 카테고리에서 현재 글과 이전·다음 글을 제외한 최신 글입니다. 스크립트와 스타일 URL의 캐시 식별자를 갱신했습니다.</p>
+<p><figure><img class="report-image" src="../assets/recommendation-bounce-20261111/reading-recommendation-after.png" alt="변경 전" loading="lazy"><figcaption>변경 전</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/recommendation-bounce-20261111/recommendation-bounce-after.png" alt="변경 후" loading="lazy"><figcaption>변경 후</figcaption></figure></p>
+<h2 id="section-4">전체 카드 갱신 코드</h2>
+<pre><code data-language="javascript">const article = document.querySelector(&#39;.post-detail .prose&#39;);
+const candidate = document.querySelector(&#39;.post-related .digest-row&#39;);
+if (article &amp;&amp; candidate) {
+  let dismissed = false;
+  let card;
+  let queued = false;
+  const key = &#39;miro-recommendation-dismissed:&#39; + location.pathname;
+  try { dismissed = sessionStorage.getItem(key) === &#39;1&#39;; } catch {}
+
+  function updateRecommendation() {
+    queued = false;
+    const bounds = article.getBoundingClientRect();
+    const visibleEnd = innerHeight - bounds.top;
+    const nearEnd = visibleEnd &gt;= bounds.height * .8 &amp;&amp; bounds.top &lt; 0;
+    if (dismissed || (!nearEnd &amp;&amp; !card)) return;
+    if (!card) {
+      card = document.createElement(&#39;aside&#39;);
+      card.className = &#39;reading-recommendation&#39;;
+      card.setAttribute(&#39;aria-label&#39;, &#39;추천 게시물&#39;);
+      const heading = document.createElement(&#39;p&#39;);
+      heading.className = &#39;reading-recommendation-label&#39;;
+      heading.textContent = &#39;이 글도 읽어보세요&#39;;
+      const close = document.createElement(&#39;button&#39;);
+      close.type = &#39;button&#39;;
+      close.className = &#39;reading-recommendation-close&#39;;
+      close.setAttribute(&#39;aria-label&#39;, &#39;추천 게시물 닫기&#39;);
+      close.textContent = &#39;×&#39;;
+      close.addEventListener(&#39;click&#39;, () =&gt; {
+        dismissed = true;
+        try { sessionStorage.setItem(key, &#39;1&#39;); } catch {}
+        card.remove();
+      });
+      const link = document.createElement(&#39;a&#39;);
+      link.href = candidate.href;
+      const originalImage = candidate.querySelector(&#39;img&#39;);
+      if (originalImage) {
+        const image = originalImage.cloneNode();
+        image.loading = &#39;eager&#39;;
+        image.removeAttribute(&#39;fetchpriority&#39;);
+        link.append(image);
+      }
+      const title = document.createElement(&#39;strong&#39;);
+      title.textContent = candidate.querySelector(&#39;strong&#39;).textContent;
+      link.append(title);
+      card.append(heading, close, link);
+      document.body.append(card);
+      requestAnimationFrame(() =&gt; requestAnimationFrame(() =&gt; {
+        if (!dismissed) card.classList.add(&#39;is-visible&#39;);
+      }));
+    } else card.classList.add(&#39;is-visible&#39;);
+    card.inert = false;
+  }
+  function scheduleRecommendation() {
+    if (queued || dismissed) return;
+    queued = true;
+    requestAnimationFrame(updateRecommendation);
+  }
+  addEventListener(&#39;scroll&#39;, scheduleRecommendation, {passive: true});
+  addEventListener(&#39;resize&#39;, scheduleRecommendation);
+  addEventListener(&#39;pageshow&#39;, scheduleRecommendation);
+  new ResizeObserver(scheduleRecommendation).observe(article);
+  scheduleRecommendation();
+}
+
+</code></pre>
+<pre class="mermaid">flowchart TD
+ A[스크롤 또는 크기 변경] --&gt; B{닫혔는가}
+ B --&gt;|예| C[표시하지 않음]
+ B --&gt;|아니오| D{카드가 이미 있는가}
+ D --&gt;|예| E[계속 유지]
+ D --&gt;|아니오| F{본문 80% 도달}
+ F --&gt;|예| G[생성 후 680ms 튕기는 등장]
+ F --&gt;|아니오| C
+</pre>
+<h2 id="section-5">검증</h2>
+<p>Actions가 최종 커밋 6e4c16d에 대해 success입니다. 운영 글을 실제 headless Chrome에서 열어 prefers-reduced-motion: reduce 상태로 확인했습니다. animationName=recommendation-bounce-in, duration=0.68s, 실행 중 animation 수=1과 translateY=173.797을 확인했습니다. 상단으로 돌아간 뒤 visible=true/inert=false, 닫기 후 DOM 없음=true입니다. 별도 테스트 파일은 작성하지 않았습니다. 운영 코드와 source syntax를 확인했습니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>전역 지침 변경 없음: 이번 동작은 사용자가 지정한 개별 UI 요구이며 공통 동작 감소 정책으로 확대하지 않습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 2~4분, 시작 2026-11-11 18:49:23 KST</li>
+<li>실제로 완료된 시간: 운영 확인 18:51:44 KST, 2분21초. 보고서 공개 확인 별도.</li>
+<li>XERJ: 미사용 — 소스와 실제 브라우저 애니메이션 상태 및 Actions 결과를 확인했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111095223380-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=github-blog&topic=qa&relatedReport=projects%2Fgithub-blog%2Freports%2F2026-11-11-result-20261111095223380-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=github-blog">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=github-blog">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-4">전체 카드 갱신 코드</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

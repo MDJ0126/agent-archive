@@ -1,0 +1,44 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>댓글 폭을 본문에 맞추고 세로 크기 줄이기 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/github-blog/assets/miro-logo.svg" alt="MIRO 로고"><span>MIRO</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>댓글 폭을 본문에 맞추고 세로 크기 줄이기</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">댓글 폼이 본문 좌우에 정렬되며 입력칸과 위아래 여백이 줄었습니다.</p><div class="post-byline"><time datetime="2026-11-10T12:27:05.807Z">2026년 11월 10일 오후 9:27 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p><a class="report-link" href="https://miro-game.pages.dev/posts/story-suwon-web-budget/#comments-title">공개 게시글</a>에서 댓글 폭이 본문과 일치하고, 폼의 높이가 데스크톱에서 약 37px, 모바일에서 약 45px 줄었습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li><code>comments/style.css</code>에서 720px 최대 폭과 가운데 정렬을 제거해 댓글이 본문 안쪽 폭을 채우도록 했습니다.</li>
+<li>상하 여백, 폼 내부 간격, 입력 높이를 줄였습니다. 모바일 입력 배치는 기존 한 열을 사용합니다.</li>
+</ul>
+<pre><code data-language="css">.comments {
+  --comment-tint: color-mix(in srgb, var(--accent) 5%, var(--panel));
+  margin-block: 18px 12px;
+  padding-block-start: 8px;
+  border-top: 2px solid var(--accent);
+}
+.comments-form :is(input, textarea) { padding-block: 4px; line-height: 1.35; }
+</code></pre>
+<h3 id="section-4">대화 기록</h3>
+<ol>
+<li>사용자 (시각 미기록) · “이걸 좁혀달라는게 아니라 사이즈를 줄여달라는거지 가로를 줄이면 어캄”</li>
+<li>AI (21:24 KST) · 본문 폭을 복원하고 입력칸 높이와 세로 여백을 줄이기로 했습니다.</li>
+<li>AI (21:26 KST) · 공개 페이지에서 가로 정렬과 높이 감소를 확인했습니다.</li>
+</ol>
+<h2 id="section-5">검증</h2>
+<ul>
+<li>데스크톱 1280px 화면에서 댓글 폭 720→966px, 본문 폭 966px. 폼 높이 234→197px.</li>
+<li>모바일 390px 화면에서 본문과 댓글 폭 모두 326px. 폼 높이 363→317px. 두 화면 모두 가로 스크롤이 생기지 않았습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/comment-width-20261110/comments-width-before-desktop.png" alt="데스크톱 변경 전" loading="lazy"><figcaption>데스크톱 변경 전</figcaption></figure>
+가운데로 좁아진 변경 전 댓글 영역입니다.</p>
+<p><figure><img class="report-image" src="../assets/comment-width-20261110/comments-width-after-desktop.png" alt="데스크톱 변경 후" loading="lazy"><figcaption>데스크톱 변경 후</figcaption></figure>
+본문과 좌우가 일치하고 높이가 줄었습니다.</p>
+<p><figure><img class="report-image" src="../assets/comment-width-20261110/comments-width-before-mobile.png" alt="모바일 변경 전" loading="lazy"><figcaption>모바일 변경 전</figcaption></figure>
+기존 모바일 댓글 폼입니다.</p>
+<p><figure><img class="report-image" src="../assets/comment-width-20261110/comments-width-after-mobile.png" alt="모바일 변경 후" loading="lazy"><figcaption>모바일 변경 후</figcaption></figure>
+같은 폭에서 폼의 세로 높이를 줄였습니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>레이아웃 변경 작업은 완료됐습니다. 전역·전용 지침에 추가할 새 규칙은 없었습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 3~6분</li>
+<li>실제로 완료된 시간: 운영 배포·검증 약 2분 1초. 2026-11-10 21:24:20 시작, 21:26:21 KST 완료.</li>
+<li>XERJ: 미사용 — 지정 검색 도구 미사용.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110122705807-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=github-blog&topic=qa&relatedReport=projects%2Fgithub-blog%2Freports%2F2026-11-10-result-20261110122705807-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=github-blog">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=github-blog">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

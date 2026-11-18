@@ -1,7 +1,7 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>97개 실제 호출 배치 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/theme.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/discussions.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/manuals.css?v=376b70681a1b"><link rel="stylesheet" href="../../../assets/copy-links.css?v=376b70681a1b"><script defer src="../../../assets/copy-links.js?v=376b70681a1b"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>97개 실제 호출 배치</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">원문에 기록된 작업 내용과 당시 검증 범위를 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-18T13:10:10.082Z">2026년 10월 18일 오후 10:10 KST</time><span>v1.0.0</span><span>이전 기록</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><p>97개 실제 호출 배치</p>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>97개 실제 호출 배치 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/codeassist/assets/logo.png" alt="CodeAssist 로고"><span>CodeAssist</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>97개 실제 호출 배치</h1><span class="badge" data-state="">기존 기록 이전</span></div><p class="post-summary">원문에 기록된 작업 내용과 당시 검증 범위를 정리한 보관 기록입니다.</p><div class="post-byline"><time datetime="2026-10-18T13:10:10.082Z">2026년 10월 18일 오후 10:10 KST</time><span>v1.0.0</span><span>이전 기록</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="archive-notice">보관 기록 · 결과와 검증 범위는 원문 작성 시점을 기준으로 읽어주세요.</div><div class="post-body"><p>97개 실제 호출 배치</p>
 <h2 id="section-1">97개 실제 호출 배치</h2>
 <p>전체 기능 검증 완료가 아닙니다. 양쪽 전용 VS에서 명령·UI 실행과 취소를 수집했습니다. 실제 기능별 입력·기대 결과 어댑터가 없는 항목은 미검증을 유지합니다.</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;requested&quot;: 97,
   &quot;processed&quot;: 97,
   &quot;allRowsAttempted&quot;: true,
@@ -27,7 +27,7 @@
 </code></pre>
 <p>97개 상세 결과 · 상위 실행기 실제 시간 · 고정 계획</p>
 <p>VA-F001 Find by Context — observed-only 3501.04 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F001&quot;,
   &quot;name&quot;: &quot;Find by Context&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -97,7 +97,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-001/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-001/CA/after.png">CA after.png</a></p>
 <p>VA-F002 Find References — observed-only 3472.01 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F002&quot;,
   &quot;name&quot;: &quot;Find References&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -167,7 +167,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-002/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-002/CA/after.png">CA after.png</a></p>
 <p>VA-F004 GoTo Implementation — observed-only 3351.49 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F004&quot;,
   &quot;name&quot;: &quot;GoTo Implementation&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -237,7 +237,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-004/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-004/CA/after.png">CA after.png</a></p>
 <p>VA-F005 GoTo Member — observed-only 3029.91 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F005&quot;,
   &quot;name&quot;: &quot;GoTo Member&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -307,7 +307,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-005/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-005/CA/after.png">CA after.png</a></p>
 <p>VA-F006 GoTo Related — observed-only 2880.35 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F006&quot;,
   &quot;name&quot;: &quot;GoTo Related&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -379,7 +379,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-006/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-006/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-006/CA/after.png">CA after.png</a></p>
 <p>VA-F007 Highlight Current Line — observed-only 3449.11 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F007&quot;,
   &quot;name&quot;: &quot;Highlight Current Line&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -449,7 +449,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-007/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-007/CA/after.png">CA after.png</a></p>
 <p>VA-F008 List Methods in File — observed-only 3353.33 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F008&quot;,
   &quot;name&quot;: &quot;List Methods in File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -519,7 +519,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-008/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-008/CA/after.png">CA after.png</a></p>
 <p>VA-F010 Navigate Back and Forward — observed-only 3333.36 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F010&quot;,
   &quot;name&quot;: &quot;Navigate Back and Forward&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -589,7 +589,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-010/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-010/CA/after.png">CA after.png</a></p>
 <p>VA-F011 Open Corresponding File — observed-only 3197.48 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F011&quot;,
   &quot;name&quot;: &quot;Open Corresponding File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -659,7 +659,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-011/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-011/CA/after.png">CA after.png</a></p>
 <p>VA-F012 Open File in Solution — observed-only 2676.81 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F012&quot;,
   &quot;name&quot;: &quot;Open File in Solution&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -729,7 +729,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-012/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-012/CA/after.png">CA after.png</a></p>
 <p>VA-F013 VA Hashtags — observed-only 3247.46 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F013&quot;,
   &quot;name&quot;: &quot;VA Hashtags&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -799,7 +799,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-013/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-013/CA/after.png">CA after.png</a></p>
 <p>VA-F014 VA Navigation Bar — observed-only 3198.01 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F014&quot;,
   &quot;name&quot;: &quot;VA Navigation Bar&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -869,7 +869,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-014/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-014/CA/after.png">CA after.png</a></p>
 <p>VA-F015 Access to Refactoring Commands — observed-only 3638.57 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F015&quot;,
   &quot;name&quot;: &quot;Access to Refactoring Commands&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -939,7 +939,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-015/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-015/CA/after.png">CA after.png</a></p>
 <p>VA-F016 Change Signature — observed-only 1890.1 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F016&quot;,
   &quot;name&quot;: &quot;Change Signature&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1000,7 +1000,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-016/CA/after.png">CA after.png</a></p>
 <p>VA-F017 Convert Between Pointer and Instance — observed-only 1810.63 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F017&quot;,
   &quot;name&quot;: &quot;Convert Between Pointer and Instance&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1061,7 +1061,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-017/CA/after.png">CA after.png</a></p>
 <p>VA-F018 Encapsulate Field — observed-only 1962.14 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F018&quot;,
   &quot;name&quot;: &quot;Encapsulate Field&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1122,7 +1122,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-018/CA/after.png">CA after.png</a></p>
 <p>VA-F019 Extract Method — observed-only 2655.48 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F019&quot;,
   &quot;name&quot;: &quot;Extract Method&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1192,7 +1192,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-019/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-019/CA/after.png">CA after.png</a></p>
 <p>VA-F020 Introduce Variable — observed-only 1862.33 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F020&quot;,
   &quot;name&quot;: &quot;Introduce Variable&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1253,7 +1253,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-020/CA/after.png">CA after.png</a></p>
 <p>VA-F021 Move Implementation to Header File — observed-only 1879.14 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F021&quot;,
   &quot;name&quot;: &quot;Move Implementation to Header File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1314,7 +1314,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-021/CA/after.png">CA after.png</a></p>
 <p>VA-F022 Move Implementation to Source File — observed-only 1853.34 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F022&quot;,
   &quot;name&quot;: &quot;Move Implementation to Source File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1375,7 +1375,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-022/CA/after.png">CA after.png</a></p>
 <p>VA-F023 Move Method Implementations to Source File — observed-only 1900.48 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F023&quot;,
   &quot;name&quot;: &quot;Move Method Implementations to Source File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1436,7 +1436,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-023/CA/after.png">CA after.png</a></p>
 <p>VA-F024 Move Selection to New File — observed-only 2244.62 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F024&quot;,
   &quot;name&quot;: &quot;Move Selection to New File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -1961,7 +1961,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-024/CA/dialog.png">CA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-024/CA/after.png">CA after.png</a></p>
 <p>VA-F026 Rename Files — observed-only 2622.92 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F026&quot;,
   &quot;name&quot;: &quot;Rename Files&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2031,7 +2031,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-026/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-026/CA/after.png">CA after.png</a></p>
 <p>VA-F027 Simplify Instance Declaration — observed-only 1860.53 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F027&quot;,
   &quot;name&quot;: &quot;Simplify Instance Declaration&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2092,7 +2092,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-027/CA/after.png">CA after.png</a></p>
 <p>VA-F028 Add Forward Declaration — observed-only 1814.57 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F028&quot;,
   &quot;name&quot;: &quot;Add Forward Declaration&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2153,7 +2153,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-028/CA/after.png">CA after.png</a></p>
 <p>VA-F029 Add Member — observed-only 1906.7 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F029&quot;,
   &quot;name&quot;: &quot;Add Member&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2214,7 +2214,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-029/CA/after.png">CA after.png</a></p>
 <p>VA-F030 Add Missing Case Statements — observed-only 1959.24 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F030&quot;,
   &quot;name&quot;: &quot;Add Missing Case Statements&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2275,7 +2275,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-030/CA/after.png">CA after.png</a></p>
 <p>VA-F031 Add Similar Member — observed-only 1508.95 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F031&quot;,
   &quot;name&quot;: &quot;Add Similar Member&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2333,7 +2333,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-031/CA/after.png">CA after.png</a></p>
 <p>VA-F032 Add Using Directive — observed-only 1329.85 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F032&quot;,
   &quot;name&quot;: &quot;Add Using Directive&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2391,7 +2391,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-032/CA/after.png">CA after.png</a></p>
 <p>VA-F033 Add include Directive — observed-only 1347.91 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F033&quot;,
   &quot;name&quot;: &quot;Add include Directive&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2449,7 +2449,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-033/CA/after.png">CA after.png</a></p>
 <p>VA-F034 Add/Remove Braces — observed-only 1294.53 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F034&quot;,
   &quot;name&quot;: &quot;Add/Remove Braces&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2507,7 +2507,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-034/CA/after.png">CA after.png</a></p>
 <p>VA-F035 Create Declaration — observed-only 1325.0 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F035&quot;,
   &quot;name&quot;: &quot;Create Declaration&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -2565,7 +2565,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-035/CA/after.png">CA after.png</a></p>
 <p>VA-F036 Create File — observed-only 2192.61 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F036&quot;,
   &quot;name&quot;: &quot;Create File&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3164,7 +3164,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-036/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-036/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-036/CA/dialog.png">CA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-036/CA/after.png">CA after.png</a></p>
 <p>VA-F037 Create from Usage — observed-only 1370.85 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F037&quot;,
   &quot;name&quot;: &quot;Create from Usage&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3222,7 +3222,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-037/CA/after.png">CA after.png</a></p>
 <p>VA-F038 Create Implementation — observed-only 1494.49 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F038&quot;,
   &quot;name&quot;: &quot;Create Implementation&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3280,7 +3280,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-038/CA/after.png">CA after.png</a></p>
 <p>VA-F039 Create Method Implementations — observed-only 1538.6 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F039&quot;,
   &quot;name&quot;: &quot;Create Method Implementations&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3338,7 +3338,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-039/CA/after.png">CA after.png</a></p>
 <p>VA-F040 Document Method — observed-only 1468.02 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F040&quot;,
   &quot;name&quot;: &quot;Document Method&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3396,7 +3396,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-040/CA/after.png">CA after.png</a></p>
 <p>VA-F041 Implement Interface / Virtual Methods — observed-only 1308.18 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F041&quot;,
   &quot;name&quot;: &quot;Implement Interface / Virtual Methods&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3454,7 +3454,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-041/CA/after.png">CA after.png</a></p>
 <p>VA-F042 Acronyms — observed-only 2918.41 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F042&quot;,
   &quot;name&quot;: &quot;Acronyms&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3516,7 +3516,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-042/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-042/CA/after.png">CA after.png</a></p>
 <p>VA-F045 Format After Paste — observed-only 2397.46 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F045&quot;,
   &quot;name&quot;: &quot;Format After Paste&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3582,7 +3582,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-045/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-045/CA/after.png">CA after.png</a></p>
 <p>VA-F047 Insert _ After m and Shift — observed-only 2446.68 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F047&quot;,
   &quot;name&quot;: &quot;Insert _ After m and Shift&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3648,7 +3648,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-047/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-047/CA/after.png">CA after.png</a></p>
 <p>VA-F048 Multiple Clipboards — observed-only 2125.62 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F048&quot;,
   &quot;name&quot;: &quot;Multiple Clipboards&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3714,7 +3714,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-048/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-048/CA/after.png">CA after.png</a></p>
 <p>VA-F050 Shorthand — observed-only 2930.94 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F050&quot;,
   &quot;name&quot;: &quot;Shorthand&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3776,7 +3776,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-050/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-050/CA/after.png">CA after.png</a></p>
 <p>VA-F052 Smart Suggestions — observed-only 2364.08 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F052&quot;,
   &quot;name&quot;: &quot;Smart Suggestions&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3842,7 +3842,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-052/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-052/CA/after.png">CA after.png</a></p>
 <p>VA-F054 Suggestion Lists — observed-only 2737.63 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F054&quot;,
   &quot;name&quot;: &quot;Suggestion Lists&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3908,7 +3908,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-054/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-054/CA/after.png">CA after.png</a></p>
 <p>VA-F056 Surround With — observed-only 1830.27 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F056&quot;,
   &quot;name&quot;: &quot;Surround With&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -3974,7 +3974,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-056/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-056/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-056/CA/after.png">CA after.png</a></p>
 <p>VA-F057 Column Indicator — observed-only 2459.68 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F057&quot;,
   &quot;name&quot;: &quot;Column Indicator&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4040,7 +4040,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-057/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-057/CA/after.png">CA after.png</a></p>
 <p>VA-F058 Context Field — observed-only 2526.2 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F058&quot;,
   &quot;name&quot;: &quot;Context Field&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4106,7 +4106,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-058/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-058/CA/after.png">CA after.png</a></p>
 <p>VA-F059 Definition Field — observed-only 2422.94 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F059&quot;,
   &quot;name&quot;: &quot;Definition Field&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4172,7 +4172,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-059/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-059/CA/after.png">CA after.png</a></p>
 <p>VA-F060 Enhanced Syntax Coloring — observed-only 2574.98 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F060&quot;,
   &quot;name&quot;: &quot;Enhanced Syntax Coloring&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4238,7 +4238,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-060/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-060/CA/after.png">CA after.png</a></p>
 <p>VA-F061 Local Symbols in Bold — observed-only 2822.44 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F061&quot;,
   &quot;name&quot;: &quot;Local Symbols in Bold&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4304,7 +4304,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-061/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-061/CA/after.png">CA after.png</a></p>
 <p>VA-F062 Highlight Find Results — observed-only 2331.11 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F062&quot;,
   &quot;name&quot;: &quot;Highlight Find Results&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4370,7 +4370,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-062/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-062/CA/after.png">CA after.png</a></p>
 <p>VA-F063 Highlight Matching Words — observed-only 2731.44 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F063&quot;,
   &quot;name&quot;: &quot;Highlight Matching Words&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4436,7 +4436,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-063/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-063/CA/after.png">CA after.png</a></p>
 <p>VA-F064 Highlight References to Symbol Under Cursor — observed-only 2526.78 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F064&quot;,
   &quot;name&quot;: &quot;Highlight References to Symbol Under Cursor&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4502,7 +4502,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-064/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-064/CA/after.png">CA after.png</a></p>
 <p>VA-F065 Parameter Info — observed-only 2604.36 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F065&quot;,
   &quot;name&quot;: &quot;Parameter Info&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4568,7 +4568,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-065/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-065/CA/after.png">CA after.png</a></p>
 <p>VA-F066 Print in Color — observed-only 2068.64 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F066&quot;,
   &quot;name&quot;: &quot;Print in Color&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4795,7 +4795,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-066/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-066/CA/dialog.png">CA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-066/CA/after.png">CA after.png</a></p>
 <p>VA-F067 Quick Info — observed-only 2427.98 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F067&quot;,
   &quot;name&quot;: &quot;Quick Info&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4861,7 +4861,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-067/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-067/CA/after.png">CA after.png</a></p>
 <p>VA-F068 System Symbols in Italics — observed-only 2695.72 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F068&quot;,
   &quot;name&quot;: &quot;System Symbols in Italics&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4927,7 +4927,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-068/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-068/CA/after.png">CA after.png</a></p>
 <p>VA-F070 Highlight Files in Output Window — observed-only 2720.67 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F070&quot;,
   &quot;name&quot;: &quot;Highlight Files in Output Window&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -4993,7 +4993,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-070/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-070/CA/after.png">CA after.png</a></p>
 <p>VA-F071 Highlight Matching Braces and Parentheses — observed-only 2545.35 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F071&quot;,
   &quot;name&quot;: &quot;Highlight Matching Braces and Parentheses&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5059,7 +5059,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-071/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-071/CA/after.png">CA after.png</a></p>
 <p>VA-F072 Highlight Mismatching Braces and Parentheses — observed-only 2598.34 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F072&quot;,
   &quot;name&quot;: &quot;Highlight Mismatching Braces and Parentheses&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5125,7 +5125,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-072/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-072/CA/after.png">CA after.png</a></p>
 <p>VA-F073 Repair Case — observed-only 2003.51 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F073&quot;,
   &quot;name&quot;: &quot;Repair Case&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5174,7 +5174,7 @@
 }
 </code></pre>
 <p>VA-F074 Underline Spelling Errors — observed-only 2326.76 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F074&quot;,
   &quot;name&quot;: &quot;Underline Spelling Errors&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5240,7 +5240,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-074/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-074/CA/after.png">CA after.png</a></p>
 <p>VA-F075 Underline Unknown Symbols — observed-only 2541.72 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F075&quot;,
   &quot;name&quot;: &quot;Underline Unknown Symbols&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5306,7 +5306,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-075/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-075/CA/after.png">CA after.png</a></p>
 <p>VA-F076 Code Inspection Settings — observed-only 2835.03 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F076&quot;,
   &quot;name&quot;: &quot;Code Inspection Settings&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5372,7 +5372,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-076/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-076/CA/after.png">CA after.png</a></p>
 <p>VA-F077 Code Issues in the Editor — observed-only 3004.24 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F077&quot;,
   &quot;name&quot;: &quot;Code Issues in the Editor&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5438,7 +5438,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-077/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-077/CA/after.png">CA after.png</a></p>
 <p>VA-F078 Quick Fixes in the Editor — observed-only 2519.02 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F078&quot;,
   &quot;name&quot;: &quot;Quick Fixes in the Editor&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5504,7 +5504,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-078/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-078/CA/after.png">CA after.png</a></p>
 <p>VA-F079 Quick Fixes in a Tool Window — observed-only 2691.58 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F079&quot;,
   &quot;name&quot;: &quot;Quick Fixes in a Tool Window&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5570,7 +5570,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-079/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-079/CA/after.png">CA after.png</a></p>
 <p>VA-F080 VA Snippets — observed-only 1701.16 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F080&quot;,
   &quot;name&quot;: &quot;VA Snippets&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5638,7 +5638,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-080/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-080/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-080/CA/after.png">CA after.png</a></p>
 <p>VA-F081 for Refactoring — observed-only 2505.7 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F081&quot;,
   &quot;name&quot;: &quot;for Refactoring&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5704,7 +5704,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-081/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-081/CA/after.png">CA after.png</a></p>
 <p>VA-F082 for Smart Suggestions — observed-only 2518.19 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F082&quot;,
   &quot;name&quot;: &quot;for Smart Suggestions&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5770,7 +5770,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-082/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-082/CA/after.png">CA after.png</a></p>
 <p>VA-F083 for Surround With — observed-only 1766.6 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F083&quot;,
   &quot;name&quot;: &quot;for Surround With&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5838,7 +5838,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-083/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-083/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-083/CA/after.png">CA after.png</a></p>
 <p>VA-F084 with Shortcuts — observed-only 2629.58 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F084&quot;,
   &quot;name&quot;: &quot;with Shortcuts&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5904,7 +5904,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-084/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-084/CA/after.png">CA after.png</a></p>
 <p>VA-F085 Create from Selection — observed-only 1297.17 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F085&quot;,
   &quot;name&quot;: &quot;Create from Selection&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -5962,7 +5962,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-085/CA/after.png">CA after.png</a></p>
 <p>VA-F086 Environment Placeholders — observed-only 2563.23 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F086&quot;,
   &quot;name&quot;: &quot;Environment Placeholders&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6028,7 +6028,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-086/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-086/CA/after.png">CA after.png</a></p>
 <p>VA-F087 Input Placeholders — observed-only 2649.35 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F087&quot;,
   &quot;name&quot;: &quot;Input Placeholders&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6094,7 +6094,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-087/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-087/CA/after.png">CA after.png</a></p>
 <p>VA-F088 Reserved Strings — observed-only 2432.32 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F088&quot;,
   &quot;name&quot;: &quot;Reserved Strings&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6160,7 +6160,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-088/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-088/CA/after.png">CA after.png</a></p>
 <p>VA-F089 Address Resolver — observed-only 2305.69 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F089&quot;,
   &quot;name&quot;: &quot;Address Resolver&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6495,7 +6495,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-089/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-089/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-089/CA/after.png">CA after.png</a></p>
 <p>VA-F090 PDB Explorer — observed-only 2008.49 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F090&quot;,
   &quot;name&quot;: &quot;PDB Explorer&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6855,7 +6855,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-090/VA/dialog.png">VA dialog.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-090/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-090/CA/after.png">CA after.png</a></p>
 <p>VA-F091 VA Memory View — observed-only 1659.5 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F091&quot;,
   &quot;name&quot;: &quot;VA Memory View&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6913,7 +6913,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-091/CA/after.png">CA after.png</a></p>
 <p>VA-F092 VA Step Filter — observed-only 2568.54 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F092&quot;,
   &quot;name&quot;: &quot;VA Step Filter&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -6979,7 +6979,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-092/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-092/CA/after.png">CA after.png</a></p>
 <p>VA-F093 VA Outline — observed-only 2723.58 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F093&quot;,
   &quot;name&quot;: &quot;VA Outline&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7045,7 +7045,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-093/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-093/CA/after.png">CA after.png</a></p>
 <p>VA-F094 VA View — observed-only 2720.45 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F094&quot;,
   &quot;name&quot;: &quot;VA View&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7111,7 +7111,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-094/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-094/CA/after.png">CA after.png</a></p>
 <p>VA-F095 Simple Link Patterns — observed-only 2755.71 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F095&quot;,
   &quot;name&quot;: &quot;Simple Link Patterns&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7177,7 +7177,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-095/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-095/CA/after.png">CA after.png</a></p>
 <p>VA-F096 Complex Link Patterns — observed-only 2946.96 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F096&quot;,
   &quot;name&quot;: &quot;Complex Link Patterns&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7243,7 +7243,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-096/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-096/CA/after.png">CA after.png</a></p>
 <p>VA-F097 Connect to FogBugz and GitHub — observed-only 2620.19 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F097&quot;,
   &quot;name&quot;: &quot;Connect to FogBugz and GitHub&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7309,7 +7309,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-097/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-097/CA/after.png">CA after.png</a></p>
 <p>VA-F098 Preview Files — observed-only 2095.7 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F098&quot;,
   &quot;name&quot;: &quot;Preview Files&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7375,7 +7375,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-098/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-098/CA/after.png">CA after.png</a></p>
 <p>VA-F099 Open Hyperlinks in an External Browser — observed-only 2780.56 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F099&quot;,
   &quot;name&quot;: &quot;Open Hyperlinks in an External Browser&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7441,7 +7441,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-099/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-099/CA/after.png">CA after.png</a></p>
 <p>VA-F100 Custom Plug-ins — observed-only 2582.9 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F100&quot;,
   &quot;name&quot;: &quot;Custom Plug-ins&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7507,7 +7507,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-100/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-100/CA/after.png">CA after.png</a></p>
 <p>VA-F101 Context Menus — observed-only 2373.22 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F101&quot;,
   &quot;name&quot;: &quot;Context Menus&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7573,7 +7573,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-101/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-101/CA/after.png">CA after.png</a></p>
 <p>VA-F102 Custom File Extensions — observed-only 2635.57 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F102&quot;,
   &quot;name&quot;: &quot;Custom File Extensions&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7639,7 +7639,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-102/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-102/CA/after.png">CA after.png</a></p>
 <p>VA-F103 Keyboard Shortcuts — observed-only 2432.87 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F103&quot;,
   &quot;name&quot;: &quot;Keyboard Shortcuts&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7705,7 +7705,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-103/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-103/CA/after.png">CA after.png</a></p>
 <p>VA-F104 Mouse — observed-only 2692.26 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F104&quot;,
   &quot;name&quot;: &quot;Mouse&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7771,7 +7771,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-104/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-104/CA/after.png">CA after.png</a></p>
 <p>VA-F105 Multiple Platforms — observed-only 2516.34 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F105&quot;,
   &quot;name&quot;: &quot;Multiple Platforms&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7837,7 +7837,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-105/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-105/CA/after.png">CA after.png</a></p>
 <p>VA-F106 Non-Microsoft Build Processes — observed-only 2994.87 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F106&quot;,
   &quot;name&quot;: &quot;Non-Microsoft Build Processes&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7903,7 +7903,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-106/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-106/CA/after.png">CA after.png</a></p>
 <p>VA-F107 Parse Concurrency — observed-only 2764.27 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F107&quot;,
   &quot;name&quot;: &quot;Parse Concurrency&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -7969,7 +7969,7 @@
 </code></pre>
 <p><a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-107/VA/after.png">VA after.png</a> <a class="report-link" href="../assets/imports/docs/validation/bounded-100/run/remaining-107/CA/after.png">CA after.png</a></p>
 <p>VA-F108 Options Dialog — observed-only 2610.56 ms</p>
-<pre><code>{
+<pre><code data-language="json">{
   &quot;id&quot;: &quot;VA-F108&quot;,
   &quot;name&quot;: &quot;Options Dialog&quot;,
   &quot;executionStatus&quot;: &quot;observed-only&quot;,
@@ -8040,4 +8040,4 @@
 <li>원문 SHA-256: <code>029a2f6a8b17daf1a1ef1af2535340a8bdba45c81df45aec2eb728d58c69a17d</code></li>
 <li>표시 날짜는 원본 파일의 수정 시각입니다. 작업 완료 시각은 원문에 있는 값을 기준으로 확인합니다.</li>
 </ul>
-</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-94b396c93252-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=codeassist&topic=qa&relatedReport=projects%2Fcodeassist%2Freports%2F2026-10-29-import-codeassist-94b396c93252-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=codeassist">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=codeassist">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">97개 실제 호출 배치</a><a href="#section-2">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>
+</div><div class="post-actions"><a class="source" href="../posts/2026-10-29-import-codeassist-94b396c93252-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=codeassist&topic=qa&relatedReport=projects%2Fcodeassist%2Freports%2F2026-10-29-import-codeassist-94b396c93252-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=codeassist">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=codeassist">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">97개 실제 호출 배치</a><a href="#section-2">원문과 편집 이력</a></nav><p>원문을 보존한 과거 기록입니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

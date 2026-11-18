@@ -1,0 +1,78 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Turnlume 저장소 이름과 공개 사이트 주소 적용 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">턴</span><span>턴룸 › 공통 · 통합 작업</span><span class="post-kind">설정</span></div><div class="post-title-row"><h1>Turnlume 저장소 이름과 공개 사이트 주소 적용</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">GitHub 저장소와 origin을 Turnlume으로 변경하고 새 Pages 주소에 배포했습니다.</p><div class="post-byline"><time datetime="2026-11-11T05:51:45.125Z">2026년 11월 11일 오후 2:51 KST</time><span>v1.0.0</span><span>설정</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p><a class="report-link" href="https://github.com/MDJ0126/Turnlume">MDJ0126/Turnlume</a> 저장소와 <a class="report-link" href="https://turnlume.pages.dev/">Turnlume 사이트</a>를 적용했습니다. 기존 ternlume.pages.dev는 각 경로를 새 주소로 301 연결합니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p><figure><img class="report-image" src="../assets/turnlume-rename-20261111/home-after.png" alt="새 이름의 홈페이지" loading="lazy"><figcaption>새 이름의 홈페이지</figcaption></figure></p>
+<p>GitHub 저장소 ID 672617668을 유지하며 TurnRoom을 Turnlume으로 변경했습니다. 로컬 origin은 <a class="report-link" href="https://github.com/MDJ0126/Turnlume.git">https://github.com/MDJ0126/Turnlume.git</a> 입니다. main 커밋 8c94b7b7273896622b8a86aa0f57d69d9ac6b4a2가 로컬과 원격에서 일치합니다.</p>
+<pre class="mermaid">flowchart LR
+  A[&quot;기존 GitHub 저장소 ID&quot;] --&gt; B[&quot;이름 Turnlume&quot;]
+  B --&gt; C[&quot;로컬 origin 갱신&quot;]
+  C --&gt; D[&quot;새 주소 main에 푸시&quot;]
+  D --&gt; E[&quot;로컬과 원격 커밋 대조&quot;]
+</pre>
+<p>새 Cloudflare Pages 프로젝트 turnlume에 사이트를 배포했습니다. 사이트 표기와 공식 URL, 언어별 대체 URL, 사이트맵, 배포 명령과 프로젝트 지침을 새 이름으로 갱신했습니다. 저장소의 Website/Ternlume 폴더는 기존 작업 경로입니다.</p>
+<pre class="mermaid">flowchart LR
+  A[&quot;이전 Pages 주소&quot;] --&gt;|301과 기존 경로| B[&quot;turnlume.pages.dev&quot;]
+  C[&quot;다국어 사이트 빌드&quot;] --&gt; B
+  B --&gt; D[&quot;공식 주소와 이름 확인&quot;]
+  B --&gt; E[&quot;기존 글과 문서 응답 확인&quot;]
+</pre>
+<p>이전 프로젝트의 배포 소스는 다음 두 규칙입니다.</p>
+<pre><code data-language="text">/ https://turnlume.pages.dev/ 301
+/* https://turnlume.pages.dev/:splat 301
+</code></pre>
+<h3 id="section-4">사이트 이름 적용 함수</h3>
+<p>공통 HTML이 설정의 이름과 URL을 사용하도록 조정했습니다. shell 함수 전체입니다.</p>
+<pre><code data-language="javascript">function shell(locale, path, title, description, body, thumbnail) {
+  const t = locales[locale];
+  const local = target =&gt; localizedPath(locale, target);
+  const canonical = config.url + local(path);
+  const alternates = Object.keys(languages).map(code =&gt;
+    `&lt;link rel=&quot;alternate&quot; hreflang=&quot;${code}&quot; href=&quot;${escape(config.url + localizedPath(code, path))}&quot;&gt;`).join(&#39;&#39;);
+  const languageLinks = Object.entries(languages).map(([code, label]) =&gt;
+    `&lt;a href=&quot;${localizedPath(code, path)}&quot; lang=&quot;${code}&quot; hreflang=&quot;${code}&quot;${code === locale ? &#39; aria-current=&quot;page&quot;&#39; : &#39;&#39;}&gt;${escape(label)}&lt;/a&gt;`).join(&#39;&#39;);
+  return `&lt;!doctype html&gt;&lt;html lang=&quot;${locale}&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;${escape(title)}&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;${escape(description)}&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#123c32&quot;&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;${escape(canonical)}&quot;&gt;${alternates}
+    &lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;${escape(config.url + path)}&quot;&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;${escape(title)}&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;${escape(description)}&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;${escape(canonical)}&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;${escape(config.url + (thumbnail || designDataTableLogo))}&quot;&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;/assets/ternlume.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/site.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/localized.css?v=${localizedStyle}&quot;&gt;
+    &lt;script src=&quot;/assets/site.js&quot; defer&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;
+    &lt;a class=&quot;skip&quot; href=&quot;#main&quot;&gt;${escape(t.skip)}&lt;/a&gt;
+    &lt;header class=&quot;site-header wrap&quot;&gt;
+      &lt;a class=&quot;brand&quot; href=&quot;${local(&#39;/&#39;)}&quot;&gt;&lt;img src=&quot;/assets/ternlume.svg&quot; width=&quot;38&quot; height=&quot;38&quot; alt=&quot;&quot;&gt;${escape(config.name)}&lt;/a&gt;
+      &lt;nav&gt;&lt;a href=&quot;${local(&#39;/&#39;)}#tools&quot;&gt;${escape(t.tools)}&lt;/a&gt;&lt;a href=&quot;${local(&#39;/updates/&#39;)}&quot;&gt;${escape(t.journal)}&lt;/a&gt;&lt;a href=&quot;${guide(locale)}&quot;&gt;${escape(t.docs)}&lt;/a&gt;&lt;/nav&gt;
+      &lt;details class=&quot;language-menu&quot;&gt;&lt;summary&gt;${escape(t.language)} &lt;span aria-hidden=&quot;true&quot;&gt;▾&lt;/span&gt;&lt;/summary&gt;&lt;div&gt;${languageLinks}&lt;/div&gt;&lt;/details&gt;
+    &lt;/header&gt;
+    ${body}
+    &lt;footer class=&quot;wrap footer&quot;&gt;&lt;a class=&quot;brand&quot; href=&quot;${local(&#39;/&#39;)}&quot;&gt;&lt;img src=&quot;/assets/ternlume.svg&quot; width=&quot;30&quot; height=&quot;30&quot; alt=&quot;&quot;&gt;${escape(config.name)}&lt;/a&gt;
+      &lt;p&gt;${escape(t.tagline)}&lt;/p&gt;&lt;div&gt;&lt;a href=&quot;${escape(config.publisher)}&quot;&gt;Unity Asset Store ↗&lt;/a&gt;
+      &lt;a href=&quot;${local(&#39;/&#39;)}#contact&quot;&gt;${escape(t.contact)}&lt;/a&gt;&lt;a href=&quot;${local(&#39;/privacy/&#39;)}&quot;&gt;${escape(t.privacy)}&lt;/a&gt;&lt;/div&gt;
+      &lt;small&gt;© ${new Date().getUTCFullYear()} ${escape(config.name)}&lt;/small&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;`;
+}
+</code></pre>
+<h3 id="section-5">대화 기록</h3>
+<ul>
+<li>사용자 · 자동완성으로 이름이 잘못됐다고 정정하고 “Turnlume으로 리포지토리 이름 바꾸고 깃도 바꾸고 주소도 그렇게 적용해”라고 요청했습니다.</li>
+<li>Codex · 저장소 ID와 이름 사용 가능 여부를 확인한 뒤 이름을 변경하고 새 Pages 주소를 배포했습니다.</li>
+</ul>
+<h2 id="section-6">검증</h2>
+<p>9개 언어로 생성한 HTML 183개와 로컬 참조 4,928개를 확인했습니다. 새 공개 주소의 171개 경로가 빌드와 일치합니다. 이전 주소의 언어별 글·홈·목록·개인정보, 이미지와 쿼리를 포함한 155개 301 응답을 대조했습니다. 홈페이지와 한국어 목록·글에서 새 이름과 공식 주소를 확인했습니다.</p>
+<p><figure><img class="report-image" src="../assets/turnlume-rename-20261111/home-before.png" alt="홈 이전 이름" loading="lazy"><figcaption>홈 이전 이름</figcaption></figure>
+<figure><img class="report-image" src="../assets/turnlume-rename-20261111/home-after.png" alt="홈 새 이름" loading="lazy"><figcaption>홈 새 이름</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/turnlume-rename-20261111/journal-before.png" alt="Journal 이전 이름" loading="lazy"><figcaption>Journal 이전 이름</figcaption></figure>
+<figure><img class="report-image" src="../assets/turnlume-rename-20261111/journal-after.png" alt="Journal 새 이름" loading="lazy"><figcaption>Journal 새 이름</figcaption></figure></p>
+<p><figure><img class="report-image" src="../assets/turnlume-rename-20261111/post-before.png" alt="게시물 이전 이름" loading="lazy"><figcaption>게시물 이전 이름</figcaption></figure>
+<figure><img class="report-image" src="../assets/turnlume-rename-20261111/post-after.png" alt="게시물 새 이름" loading="lazy"><figcaption>게시물 새 이름</figcaption></figure></p>
+<h2 id="section-7">남은 사항</h2>
+<p>사이트는 Wrangler로 직접 배포했습니다. 기존 푸시 자동 배포의 Cloudflare API 토큰 등록은 별도 미완료 사항이며, 이번 변경으로 워크플로의 대상은 새 turnlume 프로젝트가 됐습니다. 과거 게시물의 당시 이름과 출처 기록은 유지했습니다.</p>
+<h2 id="section-8">작업 시간</h2>
+<ul>
+<li>제안 시간: 초기 확인 3<del>5분, 전체 8</del>15분. 장시간 중단 후 14:47 KST 재개 시점에는 5~8분 예상.</li>
+<li>실제로 완료된 시간: 2026-11-11 09:10:53 KST 시작. 중단 구간을 거쳐 14:47:45 KST 재개. 14:50:22 KST에 사이트·리디렉션·원격 검증 완료. 전체 경과 5시간 39분 29초, 재개 후 해당 검증까지 2분 37초. 보고서 공개 검증 별도.</li>
+<li>XERJ: 미사용 — GitHub 저장소 ID, origin, 원격 커밋, Cloudflare 배포 응답과 공개 HTML·301 응답을 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111055145125-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=turnroom&topic=qa&relatedReport=projects%2Fturnroom%2Freports%2F2026-11-11-result-20261111055145125-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=turnroom">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=turnroom">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-6">검증</a><a href="#section-7">남은 사항</a><a href="#section-8">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

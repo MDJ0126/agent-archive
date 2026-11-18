@@ -1,0 +1,125 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Unity Behavior 몬스터 순찰과 팀 전투 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/fantasya/assets/logo.png" alt="Fantasya 로고"><span>Fantasya</span><span class="post-kind">작업 결과</span></div><div class="post-title-row"><h1>Unity Behavior 몬스터 순찰과 팀 전투</h1><span class="badge" data-state="verification">검증 대기</span></div><p class="post-summary">몬스터 48종을 공용 Behavior 그래프에 연결하고 생성 지점 중심의 순찰과 팀 판정을 적용했습니다.</p><div class="post-byline"><time datetime="2026-11-10T11:26:27.554Z">2026년 11월 10일 오후 8:26 KST</time><span>v1.0.1</span><span>작업 결과</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>플레이어가 탐지되지 않으면 몬스터는 생성 지점 주변을 순찰합니다. 목적지에 도착하거나 이동이 중단되면 몬스터마다 2~5초 사이의 대기 시간을 새로 뽑습니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li><code>MonsterBehavior.asset</code>은 Unity Behavior 1.0.16을 사용합니다. <code>MonsterBehaviorAction</code>이 순찰·추격·공격 단계를 연결하고 <code>MonsterAI</code>가 행동을 실행합니다.</li>
+<li>기본 순찰 4m, 감지 7m, 생성 지점 기준 추격 한계 12m입니다. 순찰 이동 시도는 최대 6초입니다. 대기는 0.6초에서 3초로 늘린 후 무작위 간격으로 조정했습니다.</li>
+<li>샘플의 전역 <code>eTeam</code>을 가져왔습니다. 활성 캐릭터 중 다른 전투 진영을 고르며 같은 팀과 <code>None</code>은 제외합니다. 기본 배치는 플레이어 <code>MyTeam</code>, 몬스터 <code>Enemy</code>입니다.</li>
+</ul>
+<h3 id="section-4">몬스터 행동 전환</h3>
+<p>순찰 중 대상이 감지되면 그래프가 공유 Target을 다음 단계에 넘깁니다. 추격과 공격은 대상을 재검사합니다. 순찰 목적지에 도착하거나 이동 시도가 끝나면 2~5초 쉬고 다음 목적지를 고릅니다.</p>
+<pre class="mermaid">flowchart TD
+ A[&quot;Unity Behavior: 순찰 단계&quot;] --&gt; B{&quot;FindTarget 결과가 있는가?&quot;}
+ B -- &quot;아니요&quot; --&gt; C[&quot;생성 지점 주변 순찰 · 지면 검사 · 2~5초 대기&quot;]
+ C --&gt; A
+ B -- &quot;예&quot; --&gt; D[&quot;공유 Target에 저장 · 순찰 중단&quot;]
+ D --&gt; E{&quot;CanPursue?&quot;}
+ E -- &quot;아니요&quot; --&gt; F[&quot;현재 단계 실패 반환&quot;]
+ E -- &quot;예&quot; --&gt; G{&quot;공격 거리까지 추격했는가?&quot;}
+ G -- &quot;아니요&quot; --&gt; E
+ G -- &quot;예&quot; --&gt; H[&quot;공격 단계에서도 CanPursue 재검사&quot;]
+ H --&gt; I[&quot;Attack 결과에 따라 Running 또는 Failure&quot;]
+</pre>
+<p><strong>Assets/Scripts/InGame/Object/AI/MonsterBehaviorAction.cs</strong></p>
+<pre><code data-language="csharp">protected override Status OnStart() =&gt; Execute();
+
+protected override Status OnUpdate() =&gt; Execute();
+
+/// &lt;summary&gt;
+/// 단계의 결과를 그래프에 반환해 다음 행동을 선택하게 한다.
+/// &lt;/summary&gt;
+private Status Execute()
+{
+    if (_controller == null || !_controller.isActiveAndEnabled || !_controller.IsAlive)
+    {
+        return Status.Failure;
+    }
+
+    if (Step.Value == eStep.Patrol)
+    {
+        Monster found = _controller.FindTarget();
+        Target.Value = found != null ? found.gameObject : null;
+        if (found == null)
+        {
+            _controller.Patrol();
+            return Status.Running;
+        }
+
+        _controller.InterruptPatrol();
+        return Status.Success;
+    }
+
+    Monster target = Target.Value != null ? Target.Value.GetComponent&lt;Monster&gt;() : null;
+    if (!_controller.CanPursue(target))
+    {
+        return Status.Failure;
+    }
+
+    if (Step.Value == eStep.Approach)
+    {
+        return _controller.Approach(target) ? Status.Success : Status.Running;
+    }
+
+    return _controller.Attack(target) ? Status.Running : Status.Failure;
+}
+</code></pre>
+<p><strong>Assets/Scripts/InGame/Object/AI/MonsterAI.cs</strong></p>
+<pre><code data-language="csharp">internal void Patrol()
+{
+    if (_hasPatrolPoint)
+    {
+        Vector3 direction = PlanarOffset(transform.position, _patrolPoint);
+        if (direction.sqrMagnitude &gt; 0.16f &amp;&amp; Time.time &lt; _patrolDeadline &amp;&amp;
+            HasGround(transform.position + direction.normalized * 0.5f))
+        {
+            _monster.Drive(direction.normalized);
+            return;
+        }
+
+        _hasPatrolPoint = false;
+        _nextPatrolTime = Time.time + Random.Range(2f, 5f);
+    }
+
+    _monster.Drive(Vector3.zero);
+    if (Time.time &lt; _nextPatrolTime)
+    {
+        return;
+    }
+
+    Vector2 offset = Random.insideUnitCircle * _patrolRadius;
+    _patrolPoint = PlanarOffset(_spawnPosition, transform.position).sqrMagnitude &gt; _patrolRadius * _patrolRadius
+        ? _spawnPosition
+        : _spawnPosition + new Vector3(offset.x, 0f, offset.y);
+    _hasPatrolPoint = HasGround(_patrolPoint);
+    _patrolDeadline = Time.time + 6f;
+    if (!_hasPatrolPoint)
+    {
+        _nextPatrolTime = Time.time + Random.Range(2f, 5f);
+    }
+}
+</code></pre>
+<h3 id="section-5">대화 기록</h3>
+<ol>
+<li>사용자 · 미기록 · “AI는 단순하게 하나로만 만들어봐 몬스터 공용으로”.</li>
+<li>사용자 · 미기록 · “몬스터 ai 유니티 비헤비어로 만들어야지”와 “생성 지점을 기준으로 패트롤하게 해”.</li>
+<li>Codex · 11월 9일 21:33 KST · 공용 그래프와 순찰·추격 범위의 파일 연결을 보고했습니다.</li>
+<li>사용자 · 미기록 · “글로벌 이넘으로 team 가져와”라고 요청했습니다.</li>
+<li>사용자 · 미기록 · “너무 짧아 좀 더 텀을 주자” 이후 “고정 시간은 좀 그렇지 않나”.</li>
+<li>Codex · 11월 10일 19:06 KST · 몬스터별 무작위 대기를 적용했습니다.</li>
+</ol>
+<h3 id="section-6">보고서 보완 요청</h3>
+<ul>
+<li>사용자 · 미기록 · “코드 조각은 앞으로 최소 함수 단위 ~ 클래스 단위로 작성”하고, 누락한 Mermaid 도표를 추가해 달라고 요청했습니다.</li>
+</ul>
+<h2 id="section-7">검증</h2>
+<p>그래프와 48개 몬스터 프리팹 연결, 현재 소스의 팀 필터 및 무작위 대기값을 대조했습니다. v1.0.1에서 코드 예시를 현재 소스의 전체 함수와 대조하고 동작 흐름을 Mermaid로 추가했습니다.</p>
+<h2 id="section-8">남은 사항</h2>
+<p>Unity Play Mode의 실제 순찰, 추격, 팀 전투와 전후 화면은 미확인입니다.</p>
+<h2 id="section-9">작업 시간</h2>
+<ul>
+<li>제안 시간: 원 작업별로 채팅에 안내했습니다. 누락분 정리 초안은 5~10분으로 제안했습니다.</li>
+<li>실제로 완료된 시간: 원 작업별 소요 시간은 개별 작업 응답에 기록했으며 합산하지 않았습니다.</li>
+<li>XERJ: 미사용 — 코드 검색 근거가 제공되지 않았습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110111035632-v1.0.1.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=fantasya&topic=qa&relatedReport=projects%2Ffantasya%2Freports%2F2026-11-10-result-20261110111035632-v1.0.1.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=fantasya">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=fantasya">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-7">검증</a><a href="#section-8">남은 사항</a><a href="#section-9">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

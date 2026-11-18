@@ -1,0 +1,49 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>Turnlume 자동 배포를 사이트 게시 변경으로 제한 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><span class="project-fallback" aria-label="로고 미등록">턴</span><span>턴룸 › 공통 · 통합 작업</span><span class="post-kind">설정</span></div><div class="post-title-row"><h1>Turnlume 자동 배포를 사이트 게시 변경으로 제한</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">main의 모든 푸시에서 실행되던 Pages 배포를 게시글·사이트 입력 파일 변경으로 제한했습니다. Unity 개발과 일반 문서 수정은 제외합니다.</p><div class="post-byline"><time datetime="2026-11-11T10:52:00.868Z">2026년 11월 11일 오후 7:52 KST</time><span>v1.0.0</span><span>설정</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p>게시글·번역·사이트 리소스 또는 게시 버전 기록이 바뀐 main 푸시에서만 사이트 배포가 실행됩니다. Unity 코드만 수정한 푸시에는 실행되지 않습니다. 사이트 도구·배포 설정 변경과 수동 실행도 허용합니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<p><figure><img class="report-image" src="../assets/turnlume-deploy-20261111/site-thumbnail.png" alt="Turnlume 공개 사이트 대표 이미지" loading="lazy"><figcaption>Turnlume 공개 사이트 대표 이미지</figcaption></figure></p>
+<p>대표 이미지는 이전 이름 변경 작업에서 촬영한 공개 사이트이며 이번 설정 변경의 화면 증거가 아닙니다. 사이트 화면 자체는 변경하지 않았습니다.</p>
+<p>이전 설정은 main의 모든 push를 배포했습니다. 변경 후 .github/workflows/ternlume-pages.yml의 이벤트 설정 전체는 다음과 같습니다.</p>
+<pre><code data-language="yaml">on:
+  push:
+    branches: [main]
+    paths:
+      - &#39;Website/Ternlume/site/**&#39;
+      - &#39;Website/Ternlume/scripts/**&#39;
+      - &#39;Website/Ternlume/package.json&#39;
+      - &#39;Website/Ternlume/pnpm-lock.yaml&#39;
+      - &#39;Website/Ternlume/pnpm-workspace.yaml&#39;
+      - &#39;Docs/Store/TernlumeReleasePosts.ko.json&#39;
+      - &#39;.github/workflows/ternlume-pages.yml&#39;
+  workflow_dispatch:
+</code></pre>
+<p>site에는 글·9개 언어 번역·홈·공개 문서·이미지·스타일이 포함됩니다. build.mjs의 입력과 releases/locales 모듈을 대조해 게시 버전 JSON도 포함했습니다. Unity Assets, QA 출력, README와 과거 Jekyll 원문은 필터에 포함하지 않았습니다. 배포 토큰이나 계정 권한은 바꾸지 않았습니다. README에 이 범위를 기록했습니다.</p>
+<pre class="mermaid">flowchart TD
+ A[실행 요청] --&gt; B{수동 실행인가}
+ B --&gt;|예| E[사이트 빌드와 배포]
+ B --&gt;|아니요| C{main 푸시인가}
+ C --&gt;|아니요| F[실행하지 않음]
+ C --&gt;|예| D{게시 입력 경로가 바뀌었는가}
+ D --&gt;|예| E
+ D --&gt;|아니요| F
+</pre>
+<p><a class="report-link" href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onpushpull_requestpull_request_targetpathspaths-ignore">GitHub 공식 경로 필터 설명</a>에 따라 branches와 paths가 함께 만족돼야 push 실행이 생성됩니다.</p>
+<h3 id="section-4">대화 기록</h3>
+<ul>
+<li>사용자: 게시글 발행 때만 액션이 실행되는지 물었습니다.</li>
+<li>Codex: 현재 main의 모든 푸시에서 실행된다고 답했습니다.</li>
+<li>사용자: “제한해야하지 않을까?”라고 요청했습니다.</li>
+<li>Codex: 사이트 게시 입력에만 경로 필터를 적용하고 Unity 개발 변경을 제외했습니다. 세부 발언 시각은 미기록입니다.</li>
+</ul>
+<h2 id="section-5">검증</h2>
+<p>설정 커밋 8ee1d527877a934bc5ba098ce8506303d2ab7e66의 <a class="report-link" href="https://github.com/MDJ0126/Turnlume/actions/runs/43006947178">push 실행</a>이 success입니다. 설정 파일 자신이 허용 경로이므로 이번 배포는 정상 실행됐습니다. 사이트 본문 수정이 없어서 별도의 UI 전후 캡처는 필요하지 않습니다. README만 변경한 acf2a9c7a1458b330469698711eaa401e79b96ad를 별도로 푸시한 뒤, 최신 실행 목록에 해당 커밋 실행이 0개이고 마지막 실행은 허용 경로 커밋 8ee1d527인 것을 확인했습니다. <a class="report-link" href="../assets/turnlume-trigger-20261111/execution-evidence.json">실행 확인 기록</a>을 첨부합니다. 이번 변경에 자동화 테스트를 작성하거나 실행하지 않았습니다. 기존 Unity 변경 3파일과 QA 산출물은 포함하지 않았습니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>GitHub 공식 문서상 1,000개 초과 커밋 푸시 또는 diff 생성 시간 초과 시 경로 필터와 관계없이 실행될 수 있고, 경로 비교는 첫 3,000개 파일에 한정됩니다. 일반 푸시에 적용되는 표준 경로 필터입니다. 브라우저 도구가 현재 세션에서 제거되어 보고서 Mermaid의 실제 브라우저 렌더링은 미확인입니다. 기존 사이트 게시 지침은 유지하고 필터 운영 범위는 README에 통합했습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 2026-11-11 19:48:31 KST 시작, 5~10분 예상.</li>
+<li>실제로 완료된 시간: 설정 변경 push 실행 성공을 2026-11-11 19:50~19:51 KST에 확인했습니다. 최종 공개 보고서 검증 완료 시각은 채팅에 기록합니다.</li>
+<li>XERJ: 미사용 — rg로 빌드 의존 경로를 찾고 실제 워크플로·GitHub Actions API·공식 경로 필터 문서를 대조했습니다.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-11-result-20261111105200868-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=turnroom&topic=qa&relatedReport=projects%2Fturnroom%2Freports%2F2026-11-11-result-20261111105200868-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=turnroom">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=turnroom">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,0 +1,75 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><script src="../../../assets/theme-init.js"></script><title>댓글 관리를 같은 관리자 대시보드 탭으로 통합 · Tracefolio</title><link rel="icon" type="image/png" href="../../../assets/brand/tracefolio-mark.png"><link rel="stylesheet" href="../../../assets/style.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/theme.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/discussions.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/manuals.css?v=8ff9240ee35e"><link rel="stylesheet" href="../../../assets/copy-links.css?v=8ff9240ee35e"><script defer src="../../../assets/copy-links.js?v=8ff9240ee35e"></script><script defer src="../../../assets/theme.js"></script></head><body><header><a class="brand" href="../../../index.html"><img class="archive-brand-logo" src="../../../assets/brand/tracefolio-mark.png" alt="Tracefolio 로고"> Tracefolio <small>REPORTS & ISSUES</small></a><nav class="header-nav"><a href="../../../manuals/index.html">작업 메뉴얼</a><a href="../../../discussions/index.html">QA 토론</a><a href="../../../guide/index.html">작성 가이드</a><a href="../../../guide/global-instructions.html">전역 지침 사항</a><a href="../../../guide/project-instructions.html">프로젝트 전용 지침 사항</a><a class="header-write" href="../../../write/index.html">보고서 작성</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="화면 테마: 시스템 설정. 선택하려면 누르세요"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">시스템</span></button></nav></header><main class="detail post-layout"><div class="post-column"><a class="back" href="../../../index.html">← 모든 기록</a><article class="post"><div class="post-project"><img class="project-logo" src="../../../projects/github-blog/assets/miro-logo.svg" alt="MIRO 로고"><span>MIRO</span><span class="post-kind">수정사항</span></div><div class="post-title-row"><h1>댓글 관리를 같은 관리자 대시보드 탭으로 통합</h1><span class="badge" data-state="complete">완료</span></div><p class="post-summary">왼쪽 메뉴와 테마를 유지하며 댓글 관리가 중앙 패널에 표시됩니다.</p><div class="post-byline"><time datetime="2026-11-10T12:20:01.830Z">2026년 11월 10일 오후 9:20 KST</time><span>v1.0.0</span><span>수정사항</span><button type="button" class="copy-link" data-copy-url="" aria-label="링크 복사">링크 복사</button></div><div class="post-body"><h2 id="section-1">작업 결과</h2>
+<p><a class="report-link" href="https://miro-blog-admin.ehdwns0126.workers.dev/#comments">관리 대시보드</a>에 댓글 탭을 배포했습니다. 메뉴를 클릭하면 같은 페이지에서 댓글 목록과 관리 버튼이 표시됩니다.</p>
+<h2 id="section-2">변경 내용</h2>
+<h3 id="section-3">적용 내용</h3>
+<ul>
+<li><code>admin/portfolio.mjs</code>의 탭 전환이 댓글 패널을 표시하고 목록 조회를 요청합니다. 패널과 버튼은 기존 대시보드의 배경·텍스트·테두리·강조색을 따릅니다.</li>
+<li><code>admin/comments-panel.html</code>이 목록, 원글 이동, 삭제를 표시합니다. 삭제 후 현재 목록을 다시 읽습니다.</li>
+<li><code>admin/comments.mjs</code>는 인증과 삭제 요청의 출처를 검증한 다음 D1을 조회하거나 수정합니다. 기존 주소는 같은 관리자 대시보드의 댓글 탭으로 연결됩니다.</li>
+<li>운영 Worker는 기존 대시보드 소스를 유지했고, 저장소에는 기존 관리자 템플릿에도 댓글 패널을 통합했습니다.</li>
+</ul>
+<pre><code data-language="js">export async function commentAdministration(request, env, blog) {
+  const url = new URL(request.url);
+  if (!configured(env)) return reply({error: &#39;관리자 로그인 설정을 확인해 주세요.&#39;}, 503);
+  if (!await authorized(request, env)) return reply({error: &#39;관리자 로그인이 필요합니다.&#39;}, 401);
+  if (!env.COMMENTS_DB) return reply({error: &#39;댓글 저장소를 확인해 주세요.&#39;}, 503);
+
+  const remove = url.pathname.match(/^\/api\/admin\/comments\/([1-9]\d{0,15})$/);
+  if (request.method === &#39;DELETE&#39; &amp;&amp; remove &amp;&amp; positiveId(remove[1])) {
+    if (request.headers.get(&#39;Origin&#39;) !== url.origin) return reply({error: &#39;요청 출처를 확인해 주세요.&#39;}, 403);
+    await env.COMMENTS_DB.prepare(&#39;DELETE FROM comments WHERE id = ?&#39;).bind(Number(remove[1])).run();
+    return new Response(null, {status: 204, headers});
+  }
+  if (url.pathname !== &#39;/api/admin/comments&#39; || request.method !== &#39;GET&#39;) return reply({error: &#39;지원하지 않는 요청입니다.&#39;}, 405);
+
+  const before = url.searchParams.get(&#39;before&#39;);
+  if (before !== null &amp;&amp; !positiveId(before)) return reply({error: &#39;잘못된 목록 위치입니다.&#39;}, 400);
+  const {results} = await env.COMMENTS_DB.prepare(
+    &#39;SELECT id, post, nickname, body, created_at FROM comments WHERE id &lt; ? ORDER BY id DESC LIMIT ?&#39;,
+  ).bind(before ? Number(before) : Number.MAX_SAFE_INTEGER, pageSize + 1).all();
+  const comments = results.slice(0, pageSize).map(({post, ...comment}) =&gt; ({
+    ...comment, postUrl: blog + &#39;/posts/&#39; + encodeURIComponent(post) + &#39;/#comments-title&#39;,
+  }));
+  return reply({comments, next: results.length &gt; pageSize ? comments.at(-1).id : null});
+}
+</code></pre>
+<pre class="mermaid">flowchart LR
+ A[&quot;댓글 관리 탭 선택&quot;] --&gt; B[&quot;기존 대시보드 안에서 패널 표시&quot;]
+ B --&gt; C[&quot;인증된 목록 요청&quot;]
+ C --&gt; D[&quot;D1의 최신 댓글 표시&quot;]
+ D --&gt; E[&quot;게시물 댓글 위치로 이동&quot;]
+</pre>
+<pre class="mermaid">flowchart LR
+ A[&quot;댓글 삭제 클릭&quot;] --&gt; B{&quot;관리자 인증 및 요청 출처 확인&quot;}
+ B --&gt;|통과| C[&quot;D1 댓글 삭제&quot;]
+ C --&gt; D[&quot;같은 탭에서 목록 갱신&quot;]
+ B --&gt;|거부| E[&quot;401 또는 403 응답&quot;]
+</pre>
+<h3 id="section-4">대화 기록</h3>
+<ol>
+<li>사용자 (시각 미기록) · “따로 페이지 만들지 말고 한 페이지에서 해”</li>
+<li>사용자 (시각 미기록) · “디자인 톤도 맞춰주고”</li>
+<li>AI (21:18 KST) · 기존 메뉴와 패널의 스타일을 사용하고, 탭 전환과 삭제를 확인해 배포했습니다.</li>
+</ol>
+<h2 id="section-5">검증</h2>
+<ul>
+<li>인증된 로컬 브라우저에서 댓글 탭 선택 후 주소·헤더 유지, 원글 URL, 삭제 후 목록 갱신, 통계 탭 복귀 및 모바일 표시를 확인했습니다.</li>
+<li>운영에서 패널과 메뉴를 확인했고, 기존 주소는 303으로 같은 대시보드 탭에 연결되며 미로그인 목록 API는 401을 반환했습니다.</li>
+</ul>
+<p><figure><img class="report-image" src="../assets/comments-compact-20261110/comments-moderation.png" alt="변경 전 별도 댓글 관리 화면" loading="lazy"><figcaption>변경 전 별도 댓글 관리 화면</figcaption></figure>
+변경 전 로컬 관리자 세션의 별도 댓글 관리 화면입니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-tab-20261110/comments-tab-after.png" alt="변경 후 기존 대시보드 댓글 탭" loading="lazy"><figcaption>변경 후 기존 대시보드 댓글 탭</figcaption></figure>
+변경 후 로컬 관리자 세션에서 기존 메뉴와 톤을 유지한 댓글 탭입니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-tab-20261110/comments-tab-deleted.png" alt="댓글 삭제 후 같은 탭" loading="lazy"><figcaption>댓글 삭제 후 같은 탭</figcaption></figure>
+삭제 후 같은 주소에서 목록과 안내가 갱신됐습니다.</p>
+<p><figure><img class="report-image" src="../assets/comments-tab-20261110/comments-tab-mobile.png" alt="모바일 관리자 댓글 탭" loading="lazy"><figcaption>모바일 관리자 댓글 탭</figcaption></figure>
+모바일에서도 기존 메뉴 안에서 댓글 패널이 열립니다.</p>
+<h2 id="section-6">남은 사항</h2>
+<p>운영 Google 로그인 후 목록과 삭제는 미확인입니다. 운영 라우팅과 인증 경계, 로컬 로그인 상태의 기능을 각각 확인했습니다. 전역 및 프로젝트 전용 지침은 기존 규칙을 유지했습니다.</p>
+<h2 id="section-7">작업 시간</h2>
+<ul>
+<li>제안 시간: 5~9분</li>
+<li>실제로 완료된 시간: 기능 배포와 확인 3분 8초. 2026-11-10 21:15:43 시작, 21:18:51 KST 완료.</li>
+<li>XERJ: 미사용 — 지정 검색 도구 미사용.</li>
+</ul>
+</div><div class="post-actions"><a class="source" href="../posts/2026-11-10-result-20261110122001830-v1.0.0.md" download>Markdown 원본</a><a class="source" href="../../../guide/index.html">작성 기준</a></div></article><section class="qa-panel" id="qa-discussion"><div class="qa-panel-heading"><div><span class="eyebrow">QA → DISCUSSION → NEXT ACTION</span><h2>이 보고서의 QA 토론 <span>0</span></h2></div><a class="primary-link" href="../../../write/index.html?kind=discussion&project=github-blog&topic=qa&relatedReport=projects%2Fgithub-blog%2Freports%2F2026-11-10-result-20261110122001830-v1.0.0.html">토론 시작</a></div><div class="discussion-links"><p>QA에서 확인한 부족한 점, 개선안, 새 기능을 별도 글로 남기세요. 원본 보고서와 함께 보관됩니다.</p></div><a class="source" href="../../../discussions/index.html?project=github-blog">이 프로젝트의 모든 토론 보기 →</a></section><section class="qa-panel manual-link-panel"><div class="qa-panel-heading"><div><div class="eyebrow">PLAN → WORK → QA → RECHECK</div><h2>작업 메뉴얼</h2></div><a class="primary-link" href="../../../manuals/index.html?project=github-blog">프로젝트 메뉴얼 보기</a></div></section></div><aside class="post-rail"><span>이 글의 내용</span><nav aria-label="글 목차"><a href="#qa-discussion">QA 토론 · 후속 글</a><a href="#section-1">작업 결과</a><a href="#section-2">변경 내용</a><a href="#section-5">검증</a><a href="#section-6">남은 사항</a><a href="#section-7">작업 시간</a></nav><p>프로젝트별 작업 결과와 근거를 기록합니다.</p></aside></main><link rel="stylesheet" href="../../../assets/report-visuals.css?v=390fc8ec35a1"><script type="module" src="../../../assets/report-visuals.js?v=390fc8ec35a1"></script><div id="copy-status" role="status" aria-live="polite" hidden></div><dialog id="copy-dialog"><p>자동 복사를 사용할 수 없습니다. 주소를 선택해 직접 복사해 주세요.</p><input readonly aria-label="복사할 링크"><button type="button" data-copy-close>닫기</button></dialog><footer><span>Tracefolio</span><span>날짜 및 버전별 기록</span></footer></body></html>

@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "언덕을 유지하고 기존 마을 바닥 디자인 복원",
+    "summary": "언덕 작업에서 교체된 마을 바닥을 기존 디자인 8종과 출정로로 복원하고 매 칸 전체 이미지가 반복되던 샘플링을 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "town.gd의 기존 town-terrain 리소스 순서 [1,5,2,0,7,6,4,3]와 8×8 연속 영역 샘플링을 복원했습니다. town.json의 출정로와 configure-town-hill-v2.py의 재설정 경로를 기존 town-terrain-4로 맞췄습니다. 언덕 높이·축대·정상 범위·낮은 외곽 지면·건물 배치 코드는 유지했습니다. 기존 원본과 신규 언덕 바닥 원본은 보존했습니다. 기존 디자인 복원이므로 지침 추가·변경은 없습니다.",
+    "verification": "Git HEAD의 기존 바닥 경로·샘플링과 직접 대조했습니다. Godot 4.7.2 --headless --path . --editor --quit 종료 0, 로그의 SCRIPT ERROR/Parse Error/Compile Error 없음. 에디터 설정 저장 경고가 남았습니다. 테스트·회귀·화면 촬영은 수행하지 않았습니다.",
+    "remaining": "실제 게임 화면 미확인. 실행파일 빌드·설치·게임 저장소 푸시·배포 미수행. 중앙 보고 커밋·푸시·배포는 접수 후 별도 확인합니다.",
+    "outcome": "구현·저장 및 Godot 컴파일 확인 완료. 실제 게임 화면은 미확인입니다.",
+    "proposedTime": "2026-11-18 13:55:49 KST 시작, 5~10분 예상.",
+    "actualTime": "구현·저장·컴파일 2026-11-18 13:57:09 KST 완료, 실측 1분20초. 중앙 보고 등록은 이후 수행했습니다.",
+    "xerjEvidence": "로컬 town.gd, town.json, 재설정 도구와 Git HEAD를 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
