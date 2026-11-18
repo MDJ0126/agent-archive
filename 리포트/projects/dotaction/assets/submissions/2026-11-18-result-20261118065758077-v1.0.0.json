@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "DDT 기준 데이터 파일 목록과 테이블 이동 수정",
+    "summary": "원본 JSON 뷰어를 제거하고 파일 목록에서 선택 파일의 DDT형 테이블과 하위 시트로 이동하도록 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이전 app.js의 JSON.stringify 기반 원본 뷰어를 제거했습니다. data-browser.mjs는 workbook.mjs 시트만 사용하고 파일별 해시 링크로 연결합니다. sheet.js에 파일 주소 직접 열기·뒤로 가기·목록 복귀와 파일 변경 시 내부 열 숨김 초기화를 연결했습니다. 전체 콘텐츠 목록·세부 수치표는 기존 문서 형태를 유지합니다. README와 데이터 문서를 동기화했습니다. DDT 참고 그림 C:/Projects/Fantasya/Dosc/reference/ddt-monsters/character-table.png를 실제 확인했습니다. 기존 AGENTS.md에 DDT 및 파일 목록 지침이 있어 추가 지침은 만들지 않았습니다.",
+    "verification": "node docs/build.mjs 통과:14페이지·관계도6·이미지256. app.js/sheet.js 구문 검사 통과. 생성 데이터 대조:원정 데이터36파일·74시트, classes 원본16항목=시트16행, 중첩 객체 셀0, 원본 뷰어 payload 없음, 파일 해시 링크 및 초기 숨김 시트 확인. 별도 테스트는 작성·실행하지 않았습니다.",
+    "remaining": "브라우저 도구의 file 프로토콜 접근 차단으로 실제 화면·클릭·뒤로 가기 동작은 미확인입니다. 중앙 보고서 푸시·배포·외부 접근은 등록 단계에서 별도로 확인합니다.",
+    "outcome": "파일 목록 → 해당 파일의 정규화된 행·열 표/하위 시트 → 파일 목록 복귀 흐름을 구현·저장·빌드했습니다. 한글 열 이름·참조명·아이콘·행 번호·고정 헤더·검색·정렬·열 너비·CSV 기능을 유지합니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "시작 2026-11-18 15:55:40 KST / 구현·빌드 완료 2026-11-18 15:57:52 KST / 실측 132초. 중앙 게시 소요는 별도.",
+    "xerjEvidence": "지침에 따라 rg와 원본·생성 데이터 대조를 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
