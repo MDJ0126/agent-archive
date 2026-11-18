@@ -1,5 +1,105 @@
 [
   {
+    "title": "드레이크 3면 T포즈 초안과 캐릭터 비율 선행 지침",
+    "summary": "정면·후면·측면 T포즈 초안을 먼저 제시하고 사용자 확인 후 모션을 제작하도록 비율 지침과 기계용 제안 수치를 저장했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118082003061-v1.0.0.html",
+    "date": "2026-11-18T08:20:03.061Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "무작위 증강 자동 지급과 전투 주사위 연출 폐기",
+    "summary": "레벨업·챔피언·구 보상의 증강 추첨을 제거하고 별도 주사위 도박안을 제안으로 기록했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118081640652-v1.0.0.html",
+    "date": "2026-11-18T08:16:40.652Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "모든 현행 몬스터의 전용 공격·픽셀 FX와 향후 제작 지침 구현",
+    "summary": "일반33종·추심자의 전용68공격 및 구현 보스3패턴에236개 픽셀 FX를 연결하고 실제71개 실행·문서·제작 누락 방지를 완료했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118081605553-v1.0.0.html",
+    "date": "2026-11-18T08:16:05.553Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "공유 외형 몬스터27종을 개별 원본과 시트로 새 제작",
+    "summary": "공유8묶음27종을 각기 다른 체형·장비·실루엣으로 새로 그려 연결했습니다. 전체33종의 외형 경로·이미지·첫 프레임 중복은0입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118080655134-v1.0.0.html",
+    "date": "2026-11-18T08:06:55.134Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발 일지 상단 디자인과 가운데 자막 정렬 반영",
+    "summary": "중앙 정렬을 유지한 대칭 자막 영역과 심벌 아이콘·개발 일지·영상 번호를 적용했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118080522824-v1.0.0.html",
+    "date": "2026-11-18T08:05:22.824Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발 쇼츠 게임 화면 확대와 하단 자막 배치",
+    "summary": "36초 소개 순서를 유지하며 화면 높이를 1080px로 확대하고 바로 아래 자막과 상단 영상 번호를 배치했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118075919635-v1.0.0.html",
+    "date": "2026-11-18T07:59:19.635Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캐릭터 상황별 스프라이트 전체 동시 표시",
+    "summary": "동작 선택을 없애고92개 캐릭터의465개 보유 동작을 가로로 나란히 동시에 재생하도록 변경했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118075340737-v1.0.0.html",
+    "date": "2026-11-18T07:53:40.737Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "넉백 시각 효과만 제거",
+    "summary": "넉백의 별도FX만 제거하고 실제밀기와 에어본·다른FX를 유지했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118075316516-v1.0.0.html",
+    "date": "2026-11-18T07:53:16.516Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "개발 쇼츠 제목 비공개 및 단순한 자막 구성 반영",
+    "summary": "상하 제목·단계·출처 설명을 제거하고 소개 순서를 유지한 36초 영상과 편집 프로젝트를 갱신했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118075042025-v1.0.0.html",
+    "date": "2026-11-18T07:50:42.025Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "캠프 가디언 첫 개발 쇼츠 36초와 편집 프로젝트 제작",
+    "summary": "기존 Godot 캡처를 사용한 세로 영상·자막·페이드·자체 배경음과 Shotcut MLT를 저장했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118073402112-v1.0.0.html",
+    "date": "2026-11-18T07:34:02.112Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "대장16명·부하20종 이름·이미지·역할·스킬 웹 도감",
     "summary": "기존 웹 다큐먼트에 대장·부하 도감을 추가해36종의 현재 이미지·이름·역할·기본 공격·자동 스킬·전용기를 같은 행에서 비교합니다.",
     "project": "dotaction",
