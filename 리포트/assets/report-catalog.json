@@ -1,5 +1,25 @@
 [
   {
+    "title": "드레이크만 T포즈 기준96자세 공통 원본으로 재생성",
+    "summary": "드레이크만 공통96자세 원본과 고정 소스 리그로 재생성하고 게임·웹 문서에 같은 출력과 피격/사망/돌파8자세를 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118084125802-v1.0.0.html",
+    "date": "2026-11-18T08:41:25.802Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "쇼츠 상단 사용자 이미지 적용 및 저프레임 장면 교체",
+    "summary": "제공된 채널 이미지를 상단에 적용하고 저프레임 GIF를 제외한 연속 녹화로 36초 영상을 재구성했습니다.",
+    "project": "snsmanager",
+    "reportPath": "projects/snsmanager/reports/2026-11-18-result-20261118083722159-v1.0.0.html",
+    "date": "2026-11-18T08:37:22.159Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "드레이크 3면 T포즈 초안과 캐릭터 비율 선행 지침",
     "summary": "정면·후면·측면 T포즈 초안을 먼저 제시하고 사용자 확인 후 모션을 제작하도록 비율 지침과 기계용 제안 수치를 저장했습니다.",
     "project": "dotaction",
