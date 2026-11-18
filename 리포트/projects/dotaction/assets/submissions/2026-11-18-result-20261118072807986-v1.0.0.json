@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "문서12개 탭의 긴 부가 설명과 반복 안내 정리",
+    "summary": "데이터 탭을 제목 다음 파일 목록으로 정리하고 12개 탭 본문을 약31% 줄였습니다. 핵심 수치·규칙·미정 상태·제작 예제는 유지했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "docs/design의12개 문서를 정리했습니다. 데이터 본문은 제목만 남겨 파일 목록이 바로 나오게 했습니다. 소개·설정은 요약/표 중심, 대장·마을·전투·경제는 핵심 동작과 수치를 유지한 축약, 스프라이트는 동작 표/제작 예제를 우선했습니다. media.mjs와 sprite-browser.mjs의 반복 안내를 제거하고 그림별 자료 구분·촬영 시점은 유지했습니다. workbook/sheet의 상시 도움말을 제거하고 셀 설명은 선택할 때만 표시합니다. AGENTS.md와 docs/web/README.md에 간결한 웹 본문 원칙을 반영했습니다. 게임 데이터·실행 코드는 변경하지 않았습니다.",
+    "verification": "node docs/build.mjs 통과:12페이지·관계도6·이미지370. sheet.js 구문 확인 통과. 문서 원문 총27996→19372자(약31% 감소). 생성 HTML에서 데이터 제목 직후 파일 목록이 나오며 컬럼과 행 규칙 설명이 없는 것을 확인했습니다. 별도 테스트는 작성·실행하지 않았습니다.",
+    "remaining": "실제 브라우저 렌더링·클릭 확인은 미확인입니다. 중앙 보고서 배포·HTTPS 접근은 등록 후 별도 확인 대상입니다.",
+    "outcome": "문서 원문·생성 화면·제작 지침 수정과 문서 빌드 완료. 일반 사용법·내부 구조·중복 주의문·폐기 작업 경위를 제거하거나 축약했습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "시작2026-11-18 16:23:52 KST / 구현·빌드 완료 2026-11-18 16:28:02 KST / 실측250초. 중앙 게시 시간 별도.",
+    "xerjEvidence": "사용자 지침에 따라 로컬 원문과 생성 HTML을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
