@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 9시 발도 끝 자세 상체 보정",
+    "summary": "기존 후면 납도와 9시 칼끝을 유지하며 끝 자세의 상체를 앞무릎 쪽으로 기울였습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "끝 자세만 새로 생성하고 128×64 셀로 배치.\n\n![장교 발도 프레임 시트](../assets/officer-draw-cut-endpoints-v5-20261119.png)",
+    "verification": "비교판 육안과 두 셀의 발 기준선 확인, 웹 빌드.",
+    "remaining": "중간 동작 및 공개 게시 보류.",
+    "outcome": "128×64 개별 자세 두 장과 정지 비교판 및 웹 문서.",
+    "proposedTime": "2~4분",
+    "actualTime": "2026-11-19 03:51:31 KST",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
