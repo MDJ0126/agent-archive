@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "등불지기 64px 외곽선 보정",
+    "summary": "ImageGen 원본을 보존하고 축소 시트의 외곽선을 보정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "외곽에 1픽셀을 추가하고 발 기준선 아래는 제외했습니다.\n\n![등불지기 8방향 기본 자세](../assets/lantern-outline-20261119.png)",
+    "verification": "생성기 내 발 높이·하체 픽셀 일치 확인, GIF 육안 확인, 웹 빌드.",
+    "remaining": "파츠 이식 및 게임 연결",
+    "outcome": "기본·날숨 시트, GIF 및 웹 문서를 갱신했습니다.",
+    "proposedTime": "1~2분",
+    "actualTime": "2026-11-19 02:29:43 KST 제작 완료, 14초",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
