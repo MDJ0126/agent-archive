@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "커마용64정면더미와별도눈레이어",
+    "summary": "의상/머리카락/장비없는64정면더미를Aseprite15신체부위+눈별도레이어로제작했습니다.나머지방향과리그연결은미완료입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공용15신체슬롯이름을재사용하고정수좌표로중성적인인형몸체를직접그렸습니다.민머리와피부신체에성적세부묘사는없고눈만독립레이어로넣었습니다.64×64/발기준32,56이며기존리그원본은변경하지않았습니다.\n\n![커마용정면더미와별도눈레이어](../assets/customizer-dummy-front-20261118.png)",
+    "verification": "실제Aseprite배치실행·저장·닫기·재열기PNG완전일치,15신체+눈16레이어등록확인.정면확대미리보기를직접확인했습니다.웹문서빌드성공.자동테스트/Godot실행은미실행입니다.",
+    "remaining": "정면체형아트승인·나머지4기준방향+3반전·파츠관절변형·게임연결은미완료입니다.",
+    "outcome": "정면1칸aseprite·부위PNG·눈없는PNG·확대미리보기·등록점저장및재열기일치확인완료.",
+    "proposedTime": "2026-11-18 22:38:46 KST 시작,빠른정면한칸3분이내.",
+    "actualTime": "2026-11-18 22:40:27 KST 정면저장/재열기/시각확인완료,실측1분41초.문서/중앙등록은이후진행했습니다.",
+    "xerjEvidence": "공용파츠계약과정면체형부터확인하는제작절차를적용했습니다.새전역지침없음.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
