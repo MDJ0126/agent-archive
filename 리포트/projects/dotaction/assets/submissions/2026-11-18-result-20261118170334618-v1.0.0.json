@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "더미 기반 드레이크 8방향 호흡 대기",
+    "summary": "64픽셀 더미 기준판을 외형 생성에 참조한 뒤 드레이크 대기와 들숨 시트를 만들었습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "다섯 기본 방향을 생성하고 세 방향을 반전했습니다. 상체 1픽셀 이동으로 들숨을 구성했습니다.\n\n![드레이크 5시 동작 시안](../assets/drake-idle-8dir-20261118.png)",
+    "verification": "들숨에서 허리 아래 픽셀 일치 확인, 정규화 및 웹 문서 빌드.",
+    "remaining": "대검 장착 상태, 정확한 관절 대응, 게임 재생 미확인.",
+    "outcome": "생성 원본, 더미와 드레이크 시트, 호흡 GIF, 웹 문서를 저장했습니다.",
+    "proposedTime": "02:01:13 KST 시작, 5~8분 예상.",
+    "actualTime": "2026-11-19 KST 최종 저장 시간은 응답에 기록.",
+    "xerjEvidence": "더미와 드레이크 생성 원본 및 시트 보존.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
