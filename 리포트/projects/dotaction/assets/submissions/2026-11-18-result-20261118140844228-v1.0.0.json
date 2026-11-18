@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "커마 더미 5시 방향 동작 5종 시안",
+    "summary": "기존 더미의 걷기·달리기·빈손 공격·피격·죽음 시안과 네 자세를 재생하는 GIF를 저장했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 정정 후 기존 커마 더미의 SE 그림을 참조로 이미지 생성했습니다. 공격은 무기를 붙일 수 있도록 빈손 자세를 사용했습니다. GIF는 원본을 네 칸으로 나누고 임시 속도로 재생합니다.\n\n![커마 더미 5시 달리기 시안](../assets/dummy-motion-se-20261118.png)",
+    "verification": "각 PNG 육안 확인, GIF마다 4프레임 재열기 확인, 웹 문서 빌드 성공.",
+    "remaining": "걷기의 두 접지 자세가 유사합니다. 발과 손 기준점, 공용 리그, 런타임 연결 및 실제 재생 품질은 미확인입니다.",
+    "outcome": "PNG 원본 5개, GIF 미리보기 5개, 웹 제작 가이드 갱신 완료.",
+    "proposedTime": "2026-11-18 23:04:07 KST, 예상 5~10분.",
+    "actualTime": "2026-11-18 23:08:14 KST 시안·GIF·웹 빌드 완료, 4분 7초.",
+    "xerjEvidence": "기존 5시 기준 유지.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
