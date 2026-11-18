@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 5시 방향 전진 횡베기 수정",
+    "summary": "기존 전진 자세에서 장검의 횡베기를 허리 앞까지 이어갑니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "128×64 고정, 5시 방향 유지, 오른쪽에서 왼쪽까지 장검 궤적 연장.\n\n![장교 발도 프레임 시트](../assets/officer-longsword-forward-20261119.png)",
+    "verification": "640×64 시트 3장, 5프레임 GIF, 자세 육안 확인 및 웹 빌드.",
+    "remaining": "게임 연결 미완료.",
+    "outcome": "5프레임 GIF, 본체와 잔상 분리 시트, 웹 문서.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 03:21:23 KST 제작과 확인 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
