@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "문서 데이터를 DDT 명시 컬럼 스키마와 개별 레코드로 재구성",
+    "summary": "JSON 키 합집합과 배열 셀 결합을 제거하고 명시 컬럼·타입·고유 Id·상위 참조를 가진 172개 테이블로 구성했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "table-schemas.json에 36개 파일의 테이블/컬럼/타입/고유값/참조/하위 경로 계약을 고정했습니다. schema-workbook.mjs가 이 계약으로만 데이터를 읽고 미등록 필드·파일/타입 불일치/중복 ID를 거부합니다. workbook.mjs의 자동 키 합집합을 제거했습니다. 경제 설정을 개별 테이블로 분리하고 중첩 객체·배열은 상위 Id를 참조하는 별도 테이블로 옮겼습니다. sheet.js/css는 컬럼명1행·타입/unique2행·레코드3행부터, 하위 테이블 버튼과 상위 참조 더블클릭을 지원합니다. 문자열 안정 ID를 유지합니다. CSS/JS URL에 빌드 해시를 붙였습니다. docs/design/data-tables.md와 docs/web/README.md를 동기화했습니다. 기존 DDT 지침에 부합하므로 추가 지침은 만들지 않았습니다.",
+    "verification": "node docs/build.mjs 통과:14페이지·관계도6·이미지260. sheet.js 구문 확인 통과. 실제 데이터 산출 대조:36파일/172테이블/1613행, 비스칼라 셀0·타입 누락0·상위 참조 오류0. 클래스16=16행, 스테이지 성장10=10행, NPC14=14행. 생성 HTML의 스키마 v1 표시와 자산 해시4개 확인. 테스트는 작성·실행하지 않았습니다.",
+    "remaining": "브라우저 file 프로토콜 접근 차단이 있어 실제 UI 렌더링·클릭·정렬·시트 전환·참조 더블클릭 동작은 미확인입니다. 게임 빌드/실행은 범위 밖입니다. 중앙 등록·배포·HTTPS는 별도 확인합니다.",
+    "outcome": "DDT 스키마 기반 문서 변환·타입 행·파일별 테이블 이동 구현, 원문 갱신, 문서 빌드를 완료했습니다. 게임 데이터와 런타임 코드는 변경하지 않았습니다.",
+    "proposedTime": "8~10분",
+    "actualTime": "시작2026-11-18 16:08:19 KST / 구현·빌드 확인 2026-11-18 16:12:37 KST / 실측259초. 중앙 게시 시간 별도.",
+    "xerjEvidence": "프로젝트 지침에 따라 로컬 원본과 생성 데이터 대조를 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
