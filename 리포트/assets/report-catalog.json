@@ -1,10 +1,80 @@
 [
   {
+    "title": "신규 대장 중3명만 투구형으로 혼합",
+    "summary": "브레나·가릭·베른3명만 열린 면갑/포병 철모/고글 투구로 바꾸고 나머지5명과 부하 외형을 유지했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118070716331-v1.0.0.html",
+    "date": "2026-11-18T07:07:16.331Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 게임 테이블 스크린샷과 컬럼 구조 원본 대조",
+    "summary": "실제 DDT 문서 화면·모델·생성 C#과 현재 웹 변환기를 대조했습니다. 현재 구현은 타입 스키마 없이 JSON 키를 자동 전개해 DDT 구조와 다릅니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118070622395-v1.0.0.html",
+    "date": "2026-11-18T07:06:22.395Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "DDT 기준 데이터 파일 목록과 테이블 이동 수정",
+    "summary": "원본 JSON 뷰어를 제거하고 파일 목록에서 선택 파일의 DDT형 테이블과 하위 시트로 이동하도록 수정했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118065758077-v1.0.0.html",
+    "date": "2026-11-18T06:57:58.077Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "초기 캐릭터 파츠 몬스터 제거 및 전용 몬스터 외형 재구성",
+    "summary": "천사 3종·언데드 4종과 추심자를 전용 몬스터 시트로 교체하고 웹 문서 미리보기를 갱신했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118065704282-v1.0.0.html",
+    "date": "2026-11-18T06:57:04.282Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "문서 흰색 배경과 데이터 파일 목차 및 스프라이트 제작 가이드",
+    "summary": "흰색 본문을 고정하고 파일 선택형 초록색 데이터 시트 및 기사 동작 예제를 추가했습니다. 브라우저 화면 확인은 미실행입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118065045384-v1.0.0.html",
+    "date": "2026-11-18T06:50:45.384Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "이동 중 공격과 캐스팅 차단",
+    "summary": "대장·부하의 이동 중 공격·시전 시작을 차단하고 대장 이동 요청 시 준비를 취소합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118064249387-v1.0.0.html",
+    "date": "2026-11-18T06:42:49.387Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "대장·부하 8종씩 확장과 고유 이름·장발 디자인",
     "summary": "신규 대장8명/부하8종을 추가하고 기존 대장8명/부하12종을 장발·머리색·노출된 얼굴로 갱신했습니다. 총 대장16명/부하20종입니다.",
     "project": "dotaction",
     "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118063321713-v1.0.0.html",
     "date": "2026-11-18T06:33:21.713Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "발밑 포커스를 움직이는 PixelFX 링으로 교체",
+    "summary": "정적 타원을 청록 분절 링·회전 하이라이트·상승 입자의 2.4초 루프로 교체했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118063139247-v1.0.0.html",
+    "date": "2026-11-18T06:31:39.247Z",
     "kind": "result",
     "relatedReport": "",
     "replyTo": ""
