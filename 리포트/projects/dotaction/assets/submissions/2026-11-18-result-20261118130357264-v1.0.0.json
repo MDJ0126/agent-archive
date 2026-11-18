@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "미채택 기사 3D 시제품 게임 적용 철회",
+    "summary": "사용자 미채택 결정에 따라 기사 3D 런타임 연결과 F8 전환을 제거하고 기존 기사 스프라이트·부착점으로 복구했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "class_system.gd의 3D preload·텍스처 선택·부착점 덮어쓰기를 제거하고 campaign.gd의 F8 전환을 제거했습니다. 기존 사용자 변경은 보존했습니다. 미사용 시제품 helper 기본값도 false로 바꿨습니다. 웹 현행 대장 문서와 갤러리에서 시제품 적용을 제거하고 아트 문서는 미채택 과거 실험으로 정정했습니다. 전역 지침 변경 없음: 사용자 명시 철회에 따른 원복입니다.",
+    "verification": "런타임 두 파일에서 knight_3d 및 KEY_F8 참조 없음 확인. docs/build.mjs 성공. Godot 에디터 파싱 확인은 별도 로그에 보존합니다. 실제 게임 GUI 재실행은 하지 않았습니다.",
+    "remaining": "기존 실행 중 게임이 있다면 재실행 후 복구 코드가 적용됩니다. 게임 푸시·배포 미실행. 중앙 보고 배포는 푸시 후 확인합니다.",
+    "outcome": "게임 적용 철회와 웹 문서 정정 완료. 실험 원본·비교 자료만 보존합니다.",
+    "proposedTime": "3분; 2026-11-18 22:02:35 KST 시작",
+    "actualTime": "구현·문서 복구 2026-11-18 22:03:08 KST, 33초. 파싱 확인·중앙 등록 시각은 별도.",
+    "xerjEvidence": "사용자 금지 지침 준수",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
