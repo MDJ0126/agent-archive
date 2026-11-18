@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "개발 쇼츠를 X와 Threads에 영상 직접 첨부로 게시",
+    "summary": "게임명·유튜브 링크 없이 한글 본문과 최종36초 MP4를 두 플랫폼에 직접 게시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자 승인 문구를 한글로 작성하고 v3 최종 MP4를 각각 직접 첨부했습니다. Chrome 확장 browser-client.mjs의 DOM·Playwright·파일선택 API만 사용했습니다. Computer Use·OS입력·좌표 조작 없음. sns start는 기존 로컬 변경으로 중단되어 기존 기록을 보존했습니다. records CLI에 선택형 --defer-sync true를 추가하여 새 기록만 저장하고 이번 파일만 명시적으로 커밋·푸시했습니다. 기본 자동 동기화는 유지합니다. 영상 보관 폴더에 crossposts JSON 추가. README에 보류 옵션을 기록했습니다.",
+    "verification": "Chrome 직접 연결 성공. 실제 계정 nerdy_jun/itsnerdyjun·본문·고유 게시 URL 확인. 게시 전36초1080×1920 준비상태 확인. 게시 후 X36.053초 및 Threads36.011초·720×1280·video readyState4 확인. sns post 두 건 published 저장과 GitHub 푸시 성공.",
+    "remaining": "새 청감·타인 계정에서의 노출과 향후 반응은 미확인. 게시 확인 후 화면 증거 저장 시 X 탭이 현재 브라우저 세션에 없다는 오류가 발생하여 추가 브라우저 조작은 중단했습니다. 스크린샷 저장·작업 탭 정리는 미확인. 사용자 기존 작업·탭은 강제 종료하지 않았습니다.",
+    "outcome": "X https://x.com/nerdy_jun/status/2122988341599871082 및 Threads https://www.threads.com/@itsnerdyjun/post/Df4NOQ4Dqm9 공개 게시 완료. 게시 기록과 사용 영상 경로를 비공개 GitHub 저장소에 커밋·푸시했습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-18 18:37:31 KST 시작. 게시·기록 푸시 2026-11-18 18:44:33 대한민국 표준시; 약 423초. 중앙 보고 등록 별도.",
+    "xerjEvidence": "기존 성공 기록·직접 Chrome DOM 및 실제 게시 화면 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
