@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마을 지휘관 좌우 반전 시 불빛 명암 방향 수정",
+    "summary": "이미지 반전 시 표면 노멀의 수평 방향도 변환해 불빛 명암이 잘못 뒤집히던 현상을 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "town_commander.gd의 음수 X 배율로 그림은 반전하지만 노멀 X는 그대로였습니다. actor_relief.gdshader에서 UV 수평 미분 부호로 반전을 판별해 노멀 X를 캔버스 방향에 맞췄습니다. 이미 반전된 이미지로 베이크한 노멀은 중복 반전하지 않습니다. 기존 광원·원본은 보존했습니다. 기존 조명 좌표 규칙 내의 오류 수정으로 지침 변경 없음.",
+    "verification": "Godot4.7.2/OpenGL Compatibility/GTX970의 현재 boot.tscn에서 동일 위치·대기 자세·조명으로 좌우를 실제 렌더해 직접 확인했습니다. LIGHT_FACING_CAPTURE_COMPLETE errors=[]. 셰이더 오류 없음. 자동 테스트·회귀 미실행.\n\n![동일 위치에서 좌우 방향을 바꾼 실제 Godot 조명](../assets/20261118-facing-light.gif)",
+    "remaining": "사용자 저장 경로 권한 오류 및 기존 종료 시 GL 텍스처 3개 해제 경고가 남습니다. 전체 배우 조합·플레이 체감 미확인. EXE 빌드·게임 배포 미실행. 중앙 푸시·배포·접근 확인은 별도입니다.",
+    "outcome": "셰이더 수정·저장·실제 Godot 좌우 렌더 확인 완료. 게임 빌드·배포 미실행.",
+    "proposedTime": "2026-11-18 13:17:46 KST 시작, 5~10분.",
+    "actualTime": "구현·렌더 확인 완료 2026-11-18 13:20:26 KST. 중앙 등록 별도.",
+    "xerjEvidence": "rg·소스·Godot 실행 로그·실제 렌더를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
