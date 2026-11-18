@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 더미와 독립 착용 레이어 시안",
+    "summary": "몸체를 자르지 않고 머리카락, 제복, 망토를 각각 켜고 껐습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "신체 6개 레이어와 머리카락, 제복, 망토를 같은 64×64 좌표에 배치했습니다. 웹 도감에 시안을 추가했습니다.",
+    "verification": "Aseprite PNG 출력, 착용 비교판 시각 확인 및 전체 해제 후 더미 PNG 바이트 일치. 웹 문서 빌드 성공.",
+    "remaining": "숨은 신체 형태는 추정이며 공용 리그 및 게임 연결 미완료.",
+    "outcome": "Aseprite에서 대기 자세 더미와 착용 레이어를 합성하고 해제 후 더미 PNG 동일성을 확인했습니다.",
+    "proposedTime": "4~7분",
+    "actualTime": "2026-11-18 19:55:09~19:55:41 KST, 확인 가능한 제작 및 문서 구간 32초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
