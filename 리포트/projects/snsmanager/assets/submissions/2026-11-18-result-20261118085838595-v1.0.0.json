@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "쇼츠 첫 화면 소개 문구와 썸네일 이미지 제작",
+    "summary": "첫 2초 소개 문구와 실제 첫 프레임 썸네일을 저장하고 시작 구간을 교체했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자가 표시한 첫 프레임의 배우/효과 겹침을 피하도록 시작점을 원본9초로 변경. 상단 고정·초반 페이드 없음 유지. MLT 소개 문구0~59프레임·기존 자막60프레임 이후로 분리. SRT·썸네일 PNG·새 v3 MP4/편집ZIP 저장. 플랫폼 썸네일 선택이나 공개 게시 미실행.",
+    "verification": "36초 영상·음원 전체 디코딩 성공. 실제 첫 프레임과2.1초 화면 확인. MLT 소개 문구/자막 표시 구간 확인. 문서 빌드 성공.",
+    "remaining": "실제 SNS 썸네일 지정과 앱 미리보기, Shotcut 재열기·재출력 미확인. SNS start는 기존 로컬 변경으로 중단. 원본 배우/FX 자체 수정은 하지 않았습니다.",
+    "outcome": "혼자 만드는 도트 게임 / 전투부터 마을까지 만들었습니다를 첫 프레임부터2초간 표시합니다. 2초 뒤 기존 자막으로 전환합니다.",
+    "proposedTime": "2~3분",
+    "actualTime": "2026-11-18 17:55:31 KST 시작. 출력·검증 2026-11-18 17:58:20 대한민국 표준시; 약 170초. 중앙 등록 별도.",
+    "xerjEvidence": "로컬 원본·메타데이터·실제 출력 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "partial"
+  }
+}
