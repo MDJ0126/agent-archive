@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "무료 PixMiniMax 5시 방향 횡베기 생성 시험",
+    "summary": "무료 계정 PixMiniMax로 64×64·9프레임 GIF를 생성하고 원본·프레임 시트를 보존했습니다. 게임 연결은 하지 않았습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "첨부 참조의 우하단5시 이미지를 추출해 64×64로 입력. 동남향·8프레임·자동 프롬프트 확장 끔·배경 제거로1회 생성. art/source/pixellab-slash-se-v1에 원본 GIF·참조·GIF에서 추출한PNG 시트·확대 미리보기·source.json 보존. 웹 제작 가이드 갱신.",
+    "verification": "로그인 계정 구독 비활성 확인 후 PixMiniMax 실제 생성 완료. 다운로드GIF를 Pillow로 열어64×64·9프레임·130ms 확인. 프레임 접촉판 육안 확인. 웹 원본PNG 다운로드는 시간 초과하여GIF 프레임을 PNG 시트로 구성. 회귀 테스트 미실행.",
+    "remaining": "공격 각도·정확한5시 유지·마지막 자세·무기 궤적 보정. 실제 잔여 생성량 차이는 미확인. 게임 임포트·판정·FX 연결 미실행. 신규 상시 지침 변경 없음.",
+    "outcome": "생성과 GIF 다운로드 완료. 횡베기와 몸통 회전 확인. 정확한180도·방향 고정·원상 복귀는 미확인.",
+    "proposedTime": "1회 생성 후 결과 확인·저장",
+    "actualTime": "작업 시작 시각 실측 미기록. 2026-11-19 05:44 KST 결과 파일 확인·저장. 최종 완료 시각은 대화에 별도 기록.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
