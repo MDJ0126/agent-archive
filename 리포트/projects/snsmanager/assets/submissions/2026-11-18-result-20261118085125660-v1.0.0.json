@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "쇼츠 개발 일지 표기 및 시작 페이드 제거",
+    "summary": "회차 표기를 제거하고 첫 프레임부터 게임 화면을 표시하도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "PNG 자막 오버레이와 MLT 텍스트 필터에서 개발 일지 삭제. 첫 클립의 영상 페이드인만 FFmpeg와 MLT 양쪽에서 제거. 자막·길이·중간 전환·음악 유지. 지침·문서·편집 ZIP 동기화.",
+    "verification": "36초 영상·음원 전체 디코딩 성공. 실제 첫 프레임에서 게임 화면 확인. MLT 회차 텍스트와 첫 클립 fadeInBrightness 부재 확인. 미디어 참조9개 존재 및 문서 빌드 성공.",
+    "remaining": "Shotcut 실제 재열기·재출력 및 SNS 앱 미리보기 미확인. SNS 게시 미실행. sns start는 기존 로컬 변경으로 중단하여 기존 기록을 보존했습니다.",
+    "outcome": "게임 영상 좌상단의 개발 일지 표기·배지를 삭제하고 첫 장면 페이드인을 제거했습니다. 상단 고정 이미지와 중간 전환은 유지했습니다.",
+    "proposedTime": "2~3분",
+    "actualTime": "2026-11-18 17:49:26 KST 시작. 출력·검증 2026-11-18 17:51:02 대한민국 표준시; 약 97초. 중앙 등록 별도.",
+    "xerjEvidence": "로컬 원본·메타데이터·실제 출력 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "partial"
+  }
+}
