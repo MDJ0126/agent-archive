@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "쇼츠 상단 페이드 제거와 개발 일지 회차 위치 수정",
+    "summary": "상단 이미지를 고정하고 게임 영상 좌상단에 개발 일지 001을 배치했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 전체 화면 페이드 뒤에 상단 이미지 레이어를 독립 합성했습니다. Shotcut V2 상단 이미지 트랙을 분리하고 V1에 수정 가능한 개발 일지 001 텍스트 필터를 추가했습니다. 좌상단 배지와 가운데 자막 유지. 지침·문서·편집 ZIP 갱신. SNS start는 기존 로컬 변경 때문에 중단하여 기록 자동 동기화 미실행.",
+    "verification": "최종 36초 영상·음원 전체 디코딩 성공. 시작0초·장면 전환·종료 직전 7프레임에서 상단350px 평균 픽셀 차이3미만으로 유지 확인. MLT 미디어 참조9개·텍스트필터21개 확인. 문서 빌드 성공.",
+    "remaining": "Shotcut 실제 재열기·재출력 및 SNS 앱 미리보기 미확인. 공개 게시 미실행.",
+    "outcome": "상단은 페이드 없이 영상 전체에 유지하며 게임 장면과 자막의 기존 페이드는 유지합니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-18 17:40:35 KST 시작. 영상 출력·검증 2026-11-18 17:43:00 대한민국 표준시; 경과 약 146초. 중앙 등록 별도.",
+    "xerjEvidence": "로컬 원본·메타데이터·실제 출력 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "partial"
+  }
+}
