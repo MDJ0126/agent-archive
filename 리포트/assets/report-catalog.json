@@ -1,5 +1,85 @@
 [
   {
+    "title": "대장·부하 8종씩 확장과 고유 이름·장발 디자인",
+    "summary": "신규 대장8명/부하8종을 추가하고 기존 대장8명/부하12종을 장발·머리색·노출된 얼굴로 갱신했습니다. 총 대장16명/부하20종입니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118063321713-v1.0.0.html",
+    "date": "2026-11-18T06:33:21.713Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 나무 5종과 건물 간격 재배치",
+    "summary": "크기와 실루엣이 다른 나무5종을 추가하고 마을 나무10그루를 건물 외곽·접근 경로에서 떨어뜨렸습니다. 실제 마을 리소스 로딩을 확인했으며 전체 실행에는 기존 전투 스크립트 오류가 남아 있습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118062957469-v1.0.0.html",
+    "date": "2026-11-18T06:29:57.469Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "Godot 씬에서 마을 건물·NPC 직접 배치",
+    "summary": "town_layout.tscn에서 건물·NPC·기존 장식·시작 위치를 이동하고 저장하면 실제 마을에 반영하도록 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118062448583-v1.0.0.html",
+    "date": "2026-11-18T06:24:48.583Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "마을 다중 광원 실루엣 그림자와 그림자 옵션",
+    "summary": "모닥불 고정 사다리꼴 그림자를 실제 조명 기반 현재 자세 실루엣 투영으로 교체하고 끔·간단·광원 기반 설정을 추가했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118053244709-v1.0.0.html",
+    "date": "2026-11-18T05:32:44.709Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "대사 출력 자동 스크롤과 휠 이동량 확대",
+    "summary": "출력 중인 마지막 글자를 따라 스크롤하고 휠 한 칸 이동량을32px로 높였습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118052500415-v1.0.0.html",
+    "date": "2026-11-18T05:25:00.415Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "카메라 고정 및 NPC 대화 버블 소형화",
+    "summary": "대화 카메라 이동을 제거하고 현재 화면의 NPC 머리 바로 위에184px 버블과 작은2열 버튼을 표시합니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118051516129-v1.0.0.html",
+    "date": "2026-11-18T05:15:16.129Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "대장4명 11시·1시·5시·7시 분산 담당",
+    "summary": "첫 대장 추종을 제거하고 고정4구역 출발·순찰·추적·수집·복귀와 대장 간격 유지를 연결했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118050453859-v1.0.0.html",
+    "date": "2026-11-18T05:04:53.859Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
+    "title": "NPC 머리 위 디아블로풍 대화 버블",
+    "summary": "NPC 머리 위 중앙에 흑색·황동 대화 버블과 하단 꼬리, 작은 서비스 선택 행을 배치했습니다.",
+    "project": "dotaction",
+    "reportPath": "projects/dotaction/reports/2026-11-18-result-20261118050422553-v1.0.0.html",
+    "date": "2026-11-18T05:04:22.553Z",
+    "kind": "result",
+    "relatedReport": "",
+    "replyTo": ""
+  },
+  {
     "title": "언덕을 유지하고 기존 마을 바닥 디자인 복원",
     "summary": "언덕 작업에서 교체된 마을 바닥을 기존 디자인 8종과 출정로로 복원하고 매 칸 전체 이미지가 반복되던 샘플링을 수정했습니다.",
     "project": "dotaction",
