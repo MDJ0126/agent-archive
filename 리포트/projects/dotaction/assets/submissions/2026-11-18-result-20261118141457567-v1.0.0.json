@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "커마 더미 이동 시안 4번 프레임 부분 보정",
+    "summary": "걷기와 달리기 4번의 다리 명암을 보정했습니다. 실제 다리 자세 교대는 미완료입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "교체 포즈 생성 요청이 도구 검토에서 차단됐습니다. 기존 4번의 지지 다리와 들린 다리 명암을 조정했습니다. 향후 접지발과 지지발의 교대 확인을 제작 가이드에 기록했습니다.\n\n![이미지생성기반64커마더미8방향](../assets/dummy-passing-pose-20261118.png)",
+    "verification": "1~3번 픽셀 일치 확인, 2번과 4번 비교판 육안 확인, 웹 문서 빌드 실행.",
+    "remaining": "다리 실루엣과 연결 교대 및 보행 루프 합격 검증.",
+    "outcome": "원본 유지, 보정 PNG와 GIF 및 2번·4번 비교판 저장.",
+    "proposedTime": "2026-11-18 23:12:47 KST 시작, 예상 3~5분.",
+    "actualTime": "2026-11-18 23시 KST 수행, 최종 시간은 작업 응답 참조.",
+    "xerjEvidence": "원본 도트와 비교판 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
