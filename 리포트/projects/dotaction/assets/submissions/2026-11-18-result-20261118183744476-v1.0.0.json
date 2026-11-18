@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 발도 시작과 끝 자세 비교",
+    "summary": "납도와 횡베기 직후를 ImageGen으로 새로 그렸습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 배율과 발 기준선으로 배치.\n\n![장교 발도 프레임 시트](../assets/officer-draw-cut-endpoints-20261119.png)",
+    "verification": "크기와 바닥선 검사, 비교판 육안 확인, 웹 빌드.",
+    "remaining": "자세 승인 대기.",
+    "outcome": "128×64 개별 자세 두 장과 정지 비교판 및 웹 문서.",
+    "proposedTime": "2~4분",
+    "actualTime": "2026-11-19 03:37:27 KST 제작·확인 완료, 약 1분",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
