@@ -88,7 +88,7 @@
     "logo": "projects/dotaction/assets/camp-guardian-symbol.png"
   },
   "snsmanager": {
-    "logo": "projects/snsmanager/assets/logo.svg",
+    "logo": null,
     "name": "SNSManager"
   }
 }
