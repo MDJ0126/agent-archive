@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 장검 270도 베기 연출 시안",
+    "summary": "검끝이 준비에서 왼쪽 위, 베기에서 오른쪽 아래, 마무리에서 왼쪽 뒤를 향하도록 다시 제작했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "128×64 고정, 5시 카메라에서 어깨와 골반을 회전하고 반대편으로 칼을 넘깁니다.\n\n![장교 발도 프레임 시트](../assets/officer-longsword-270-20261119.png)",
+    "verification": "640×64 시트 3장, 5프레임 GIF, 검 방향의 육안 확인 및 웹 빌드.",
+    "remaining": "게임 연결과 실제 각도 판정 미구현.",
+    "outcome": "5프레임 GIF, 본체와 잔상 분리 시트, 웹 문서.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 03:14:17 KST 제작·확인 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
