@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "드레이크 5시 동작 시안 20자세",
+    "summary": "걷기·달리기·대검 공격·피격·죽음을 생성하고 64픽셀 셀로 축소했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "드레이크 T포즈를 참고한 5시 방향 5동작 20자세를 생성했습니다.\n\n![드레이크 5시 동작 시안](../assets/drake-motion-se-20261118.png)",
+    "verification": "확대판 육안 확인, 정규화 및 웹 문서 빌드 성공.",
+    "remaining": "걷기 2·4번 교대, 일부 픽셀 잔여물과 칸 경계, 팔다리 접지 및 실제 동작 검증.",
+    "outcome": "고해상도 원본과 4열 5행 PNG, 확대판, 제작 가이드 저장.",
+    "proposedTime": "00:06:33 KST 시작, 3~5분 예상.",
+    "actualTime": "2026-11-19 00:07:28 KST 시안 저장 및 웹 빌드 완료. 55초 소요.",
+    "xerjEvidence": "생성 원본과 확대 시트 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
