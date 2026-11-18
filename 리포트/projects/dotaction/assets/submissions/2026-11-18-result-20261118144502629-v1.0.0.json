@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "5시 마네킹 파츠 리그 걷기 시안",
+    "summary": "기존 15파츠와 피벗으로 64픽셀 걷기 4프레임과 GIF를 제작했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "팔과 다리의 부모 관절을 따라 회전시켜 걷기를 합성했습니다.\n\n![5시 마네킹 4자세 걷기](../assets/mannequin-walk-20261118.png)",
+    "verification": "2·4번 지지발과 높이 차이 확인. GIF 4프레임 재열기 및 웹 빌드.",
+    "remaining": "관절 외곽선 보정 및 게임 적용.",
+    "outcome": "시트, GIF, 발 높이 기록과 웹 문서 저장.",
+    "proposedTime": "23:43:32 KST 시작, 예상 3~5분.",
+    "actualTime": "2026-11-18 KST 최종 완료 시각은 작업 응답에 기록.",
+    "xerjEvidence": "파츠 합성과 발 위치 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
