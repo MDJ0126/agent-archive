@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 5시 방향 128×64 장검 발도",
+    "summary": "칼날과 전진 자세를 확대하고 셀 너비를 128로 고정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ImageGen으로 장검 자세를 새로 만들고 별도 반원 잔상을 합성했습니다.\n\n![장교 발도 프레임 시트](../assets/officer-longsword-128-20261119.png)",
+    "verification": "640×64 시트와 5프레임 GIF, 시트 육안 및 웹 빌드.",
+    "remaining": "8방향 확장 보류. 게임 연결 및 판정 미구현.",
+    "outcome": "5프레임 GIF, 본체와 잔상 분리 시트, 웹 문서.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 03:09:13 KST 제작 및 확인 완료",
+    "xerjEvidence": "해당 없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "progress"
+  }
+}
