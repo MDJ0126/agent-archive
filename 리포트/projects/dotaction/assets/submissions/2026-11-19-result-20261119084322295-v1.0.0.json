@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "문서 이미지 확대 모달·아카이브 링크 줄 제거",
+    "summary": "이미지 클릭을 확대 모달로 바꾸고 스크린샷에서 표시한 하단 보기 링크 줄을 제거했습니다. 분리 장비도 모달에서 선택합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "문서의 이미지 링크를새탭대신네이티브dialog확대모달로엽니다. 캐릭터별이미지목록은일러스트/T포즈/8방향/분리몸체/망토/검/칼집을포함하며모달썸네일/좌우버튼/방향키로전환합니다. ESC/닫기/배경클릭닫기와본문스크롤/포커스복원을구현했습니다. 가이드등다른본문이미지도같은뷰어를사용합니다. 스크린샷에서밑줄친T포즈보기·8방향보기·장비보기텍스트링크줄은마크업에서제거하고접근경로는모달목록으로유지했습니다.",
+    "verification": "node --check docs/web/characters.js 및 node docs/build.mjs14페이지/696자산성공. 실제Chrome에서링크줄0개/모달생성확인. T포즈클릭모달open=true/title=T포즈/items9/loaded=true확인. 검썸네일전환, ESC/닫기버튼, 닫힘open=false/이미지src해제/본문overflow복원/원래앵커포커스복원확인. 8방향원본확대모달실제렌더확인. 테스트작성/회귀테스트없음.",
+    "remaining": "모바일실기기미확인. 중앙푸시/배포/HTTPS최종상태와완료시각은publication JSON과최종응답에기록합니다.",
+    "outcome": "이미지 모달·9개 이미지 전환·링크 줄 제거·문서 빌드·실제 Chrome 동작 확인 완료.",
+    "proposedTime": "수정·화면확인3~5분, 중앙배포별도",
+    "actualTime": "2026-11-19 17:38:34 KST 시작.17:40:07 KST 구현·문법/문서빌드완료,1분33초. 이후실제Chrome모달/전환/닫기검증완료. 중앙등록/배포최종시간은publication JSON과최종응답에기록합니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
