@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 삼연격 슈퍼아머 누락 수정",
+    "summary": "장교 삼연격의 준비·검격 전체1.26초에 공용 슈퍼아머를 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "class_attacks.gd의 start_officer_triple에서 super_armor_until을 officer_special_until과 동일하게 설정. 기존 공용 슈퍼아머의 넉백·띄우기 차단과 표시를 재사용. docs/design/captains.md와 docs/index.html 갱신. 기존 공용 규칙을 따르므로 지침 변경 없음.",
+    "verification": "Godot4.7.2 실제 출정·기본 스킬 발동: 시작 후0.1/0.49/0.68/0.97초에서 super_armor.active=true, 넉백·띄우기 적용 시 상태 미부여·좌표 유지 확인. 3회 공격 피해 유지(1000→962.2), 1.3초에 만료, 명시 취소 후 슈퍼아머 비활성·예약0 확인. DATA_ERRORS=[]. node docs/build.mjs 성공. 별도 테스트 작성·회귀 테스트 미실행.",
+    "remaining": "실제 화면의 슈퍼아머 강조 표시는 미확인. 기존 규칙상 피해와 강한 상태이상은 받으며 해당 로직은 변경하지 않음. user:// 로그 파일 쓰기 환경 오류 남음. 게임 저장소 커밋·푸시·게임 배포 미수행. 중앙 게시 상태는 publication JSON 기록.",
+    "outcome": "구현·실제 Godot 실행 확인·문서 빌드 완료.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-19 17:04:11 KST 시작. 2026-11-19 17:05:01 KST 구현·실행·문서 빌드 완료, 실측 51초. 보고 등록 시간 별도.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
