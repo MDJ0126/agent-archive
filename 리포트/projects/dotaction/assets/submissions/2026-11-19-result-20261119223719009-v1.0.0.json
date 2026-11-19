@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "전투 카드 마나 게이지와 재화 HUD 정리",
+    "summary": "손패 위에 내 마나 게이지를 표시하고 상대 마나와 전투 HUD의 코인·골드를 숨겼습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 양측 카드 비용과 마나 재생 규칙을 사용합니다. 손패 위 내 마나 막대와 현재량·최대량을 표시합니다. 카드와 슬롯 보상 표시 문구를 마나로 통일하고 전투 HUD 코인·골드 영역을 숨겼습니다. ![내 마나 게이지가 표시된 실제 전투](../assets/20261120-battle-mana-hud.png)",
+    "verification": "Godot 4.7.2 실제 전투 실행 및 640×360 캡처에서 마나 4.7 / 10, 막대 채움, 코인·골드 및 상대 마나 미표시 확인. 웹 문서 빌드 완료.",
+    "remaining": "카드 사용 직후 마나 차감은 별도 조작 확인 미실행. 패키지 빌드·게임 배포 미실행.",
+    "outcome": "마나 게이지 구현 및 실제 전투 화면 확인 완료.",
+    "proposedTime": "구현·확인 약 2분, 중앙 배포 포함 약 5분",
+    "actualTime": "2026-11-20 07:36:05 KST 시작, 07:36:44 KST 실제 화면 확인, 약 39초.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
