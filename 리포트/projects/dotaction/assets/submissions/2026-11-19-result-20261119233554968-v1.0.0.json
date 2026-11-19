@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "왼쪽 마나 구슬",
+    "summary": "장비 버튼 위에 내 마나 구슬과 현재량·최대량을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "마나 구슬은 보유 비율에 따라 아래에서부터 채워집니다. ![좌측 장비 버튼 위 실제 마나 구슬](../assets/20261120-battle-mana-orb.png)",
+    "verification": "Godot 4.7.2 실제 전투에서 좌측 구슬과 마나 4.7 / 10을 확인했습니다. 웹 문서 빌드를 실행했습니다.",
+    "remaining": "마나 소비 조작은 미확인입니다. 게임 패키지 빌드·배포는 미실행입니다. 지침 변경 없음.",
+    "outcome": "구현 및 실제 전투 화면 확인 완료.",
+    "proposedTime": "구현·확인 약 2분, 중앙 배포 포함 약 5분",
+    "actualTime": "2026-11-20 08:34:53 KST 시작, 08:35:27 KST 실제 화면 확인, 약 34초.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
