@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마을·기존 싸움 방식 복원과 전투 구도만 5대5로 보정",
+    "summary": "사용자 정정에 따라 마을과 기존 전투 코드를 복원하고 5인 편성·좌우5대5 배치·도감 버튼만 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "첫 구현에서 전투 구도 변경을 별도 간이 전투와 마을 생략으로 잘못 해석했습니다. 사용자 정정에 따라 해당 간이 전투 코드를 제거했습니다. collection_game.gd는 기존 campaign.gd의 시작 연출·마을·NPC·전투·장비·정산·귀환을 그대로 호출하는 확장으로 변경했습니다. 공대 편성5인, 마을/전투의 별도 캐릭터·몬스터 도감 버튼과 태생·최고 등급 데이터는 유지했습니다. 기존 companion_system·four_captains의 공격·스킬·투사체·상태·FX·독립성장 경로를5인으로 확장했고5번째 대장 전환 버튼을 추가했습니다. 아군 좌측·적 우측의 전열2/후열3 초기 배치 후 기존 AI와 조작으로 이동·공격합니다. 사방 연속 생성과 담당구역 제한을 해제하고 적5인 편성 전멸 시 다음 스테이지로 진행하며 기존 결과/마을 귀환을 유지합니다. 기존 마을/장비 저장의4인 계약은 보존하고 새 편성만 별도 저장합니다. 몬스터 도감의 integrated 외형도 지원했습니다. 프로젝트 지침과 웹 문서에서 사용자 정정과 현재 구현을 우선 기록했습니다.",
+    "verification": "Godot4.7.2 루트 씬 실제 실행: --headless --path . --fixed-fps 60 --log-file C:/Projects/camp-guardian/.tools/collection-correction-startup.log --quit-after 240 -- --start-battle. 로그: mode=battle actors=5 paused=false / stage=1 allies=5 enemies=5; existing expedition combat active. 실행의 원본 저장 간섭 방지를 위해 해당 명령의 캠페인 저장만 프로젝트 .tools 임시 저장을 사용했습니다. 스크립트 파싱/실행 오류 없음. node tools/build-design-catalog.mjs 및 node docs/build.mjs 성공:15페이지·8관계도·696이미지. 도감9캐릭터·33몬스터, 등급9행·승급경로54행. 테스트 작성/실행 없음. 실제 GUI 시각·청감·완주·원본 저장 재열기는 미확인.",
+    "remaining": "승급 소비·소환·획득 확률·등급별 실전 능력치 변화는 미구현이며 태생 R/SR/SSR → 최고 UR★★★는 조정 가능한 초안입니다.5대5 전용 보스 편성·장기 밸런스·실제 GUI는 미확인. 기존 대장 미니창3개를 유지하고5번째 전환 버튼을 추가했으며5인 통합 HUD 재디자인은 하지 않았습니다. 게임 패키지 빌드/게임 배포/프로젝트 푸시는 미실행. 웹 문서는 로컬 생성. 앞선 간이 전투 보고는 사용자 정정 전의 이력이며 현행 구현은 이 보정 보고를 따릅니다. 중앙 배포는 별도 publication에 기록합니다. 교훈 추가 없음; 사용자 정정 방향을 프로젝트 지침에 통합했습니다.",
+    "outcome": "기존 마을과 전투 경로 복원 완료. 실제 루트 씬 실행에서 기존 전투 코드의 아군5·적5 진입을 확인했습니다. GUI 시각·장기 전투는 미확인입니다.",
+    "proposedTime": "최초10분 이내 초기 전환. 사용자 정정 후 기존 구조 복원·5대5 보정에 추가10분 이내.",
+    "actualTime": "최초 시작2026-11-19 17:55:49 KST, 최초 구현·문서18:02경. 사용자 정정 이후 보정 구현·실행·문서 완료 2026-11-19 18:09:05 KST, 최초 시작부터 실측797초. 중앙 등록·배포는 publication 기록에서 구분합니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
