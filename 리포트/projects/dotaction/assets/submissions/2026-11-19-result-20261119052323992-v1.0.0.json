@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 사망 검 유지·눈 감기·옆 엎드림 v5",
+    "summary": "사망을2회 생성해 바로 눕는 v4를 제외하고 눈 감은 옆 엎드림 v5를 게임에 연결했습니다. 사망 렌더 누락 경로도 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "검을 같은손에 유지·눈 감기·옆엎드림 프롬프트로 v4/v5 생성, 각2회분으로합계4회분 사용표시. 원본·시트·GIF·프롬프트·결과 화면 보존. death.png만선택갱신/정규화하고피격편집본보존. 원본/metadatabackup. 사망플레이어drawable와동료render_corpse에서1.36초동작을먼저보이도록수정. import도구최신death원본경로갱신. 기획/아트문서·실제GIF갱신.",
+    "verification": "두GIF모두128×128·17프레임확인. v4는바로누워미채택, v5에서눈감김·무기분리없음·옆엎드림/무릎굽힘확인. 손/칼연결부일부가림. 실제Godot death-only실행 frames17/pose1515/data_errors=[]와화면엎드림확인. 최초캡처에서사망배우미표시를발견해drawable/render수정후재실행. user://로그/캐시및종료Texture경고잔존. 테스트미작성/미실행.",
+    "remaining": "검그립정밀도는가림으로미확인. 사용자자연스러움평가는미확인. 원본과이전시트보존. 새상시지침변경없음,장교사망시각기준은아트문서반영.",
+    "outcome": "v5 생성·시트 연결·실제 사망 렌더 확인 완료. 손/검 연결부 일부 가림은 미확인.",
+    "proposedTime": "3~5분. 첫결과의엎드림불충족으로추가2회분/2~3분안내.",
+    "actualTime": "2026-11-19 14:14:22 KST 시작.14:20:44 KST v5시각확인까지6분22초. 이후연결·Godot사망렌더누락보정·문서/보고진행. 최종완료시각은대화기록.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
