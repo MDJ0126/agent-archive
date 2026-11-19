@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "모닥불 마을과 전장형 공격대 편성",
+    "summary": "마을 NPC·건물·외벽·경비대·설치물과 지정 UI를 제거하고 전열–후열 1–4~4–1, 전장 미리보기와 우측 카드 편성을 구현했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "마을 좌상단 지휘관 정보와 하단 대화 안내 제거. 시설·설치물 생성과 외벽 충돌·조명 연결 제거. 기존 원본과 campaign-v1.json 보존. 전장 위 캐릭터 자리 선택 후 우측 카드 교체·출전 캐릭터 자리 교환. 전열–후열 1–4·2–3·3–2·4–1을 collection-v1.json에 저장하고 실제 전투 초기 위치에 반영. 구형 저장은 2–3으로 호환. 관련 웹 문서와 프로젝트 지침 갱신. 검증된 사용자 정정을 프로젝트 지침에 통합했으며 전역 규칙 변경은 없습니다.",
+    "verification": "Godot 4.7.2 헤드리스 실행: data_errors=[], actors=5. 실제 마을·편성 실행: npcs=0, scenery=0, guards=0, entries=2, modal=collection_formation, children=34. 실제 Godot 편성 렌더 1회 확인 후 이름 겹침을 슬롯 번호로 보정했습니다. node docs/build.mjs 성공: 15페이지·696이미지. 사용자 지침에 따라 별도 테스트·회귀 테스트는 실행하지 않았습니다.",
+    "remaining": "보정 후 최종 화면·마우스 조작·저장 재열기는 미확인. 에디터 설정과 user 로그 저장 권한 오류가 있었으며 게임 실행 데이터 오류와는 구분합니다. 캡처 종료 시 Godot 렌더러 자원 해제 경고가 있습니다. 게임 저장소 커밋·푸시·게임 배포는 수행하지 않았습니다. 중앙 보고의 공개 게시 상태는 별도 확인합니다.",
+    "outcome": "구현·저장 연결·문서 빌드 완료. 마을에서 NPC·설치물·경비대 0개, 플레이어·모닥불만 2개 항목 확인. 기존 전투 5인 진입 확인.",
+    "proposedTime": "2026-11-19 18:44:42 KST 시작, 약 10분, 18:54까지 예상.",
+    "actualTime": "구현·실행·문서 빌드와 시각 보정 완료 2026-11-19 18:50:03 KST. 실측 5분 21초. 보고 등록·게시 확인 시간은 별도 기록합니다.",
+    "xerjEvidence": "사용자 지침에 따라 미사용. 로컬 rg와 데미안 공식 배틀 준비 가이드를 참조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
