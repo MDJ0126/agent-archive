@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 미니 화면 숨김·전열 간격 확대와 5:N 적 편성",
+    "summary": "미니 화면 팝업과 보조 렌더를 숨기고 전열 간격을120→220px로 확대했습니다. 아군5명·전투별 적 N명 구성을 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "village_defense.gd에서 캐릭터 미니 화면 팝업3개를 기본 숨김 처리하고 SubViewport의 렌더 갱신과 처리를 중지했습니다. 숨은 팝업의 입력 판정을 제외하고 좌측 체력HUD와 대장 전환은 유지했습니다. 초기 배치를 formation_spawn_position으로 통합하고 전열 화면 x=±110(간격220px), 후열 x=±170으로 확대했습니다. 장애물과 겹치는 초기 위치는 주변 이동 가능한 지점으로 보정합니다. 아군5명은 유지하고 formation_battles.json의 스테이지별 enemy_count를 읽어 적 N명을 배치합니다. 임시 적 수는6·6·7·7·8·8·9·9·10·12명이며 초과 인원은 추가 후열에 배치합니다. HUD와 시작 안내를 실제 적 수로 표시합니다. 기존 마을·공격·AI·스킬·FX·전멸 진행은 유지했습니다. 신규 적 편성 데이터를 문서 시트 스키마와 생성기 매핑에 추가하고 현행 지침·기획·웹 문서를5:N 기준으로 갱신했습니다.",
+    "verification": "node tools/build-design-catalog.mjs 및 node docs/build.mjs 성공:15페이지·8관계도·696이미지. Godot4.7.2 루트 실제 실행 --headless --path . --fixed-fps 60 --log-file C:/Projects/camp-guardian/.tools/formation-5vn-startup.log --quit-after 240 -- --start-battle 성공. 로그: mode=battle actors=5 paused=false / stage=1 allies=5 enemies=6 front_gap=220px mini_windows=false; existing expedition combat active. 파싱·실행 오류 없음. 기존 원본 저장에 간섭하지 않는 .tools 전용 실행 저장 사용. 테스트 작성·실행 없음.",
+    "remaining": "실제 GUI 육안 확인·전체 스테이지 완주·장기 밸런스 미확인. 적 수는 조정 가능한 임시 데이터이며 전투 중 기존 AI가 접근하므로 시작 간격을 고정 유지하지 않습니다. 게임 패키지 빌드·게임 배포·프로젝트 푸시 미실행. 중앙 보고서 푸시·배포는 별도 publication 기록으로 구분합니다. 새 교훈 추가 없음; 사용자 확정 방향을 기존 프로젝트 지침에 통합했습니다.",
+    "outcome": "구현·문서 빌드·기존 전투의5대6 진입 확인 완료. 실제 GUI 시각과 밸런스는 미확인입니다.",
+    "proposedTime": "구현·실행·문서 갱신10분 이내",
+    "actualTime": "2026-11-19 18:41:04 KST 시작, 2026-11-19 18:43:00 KST 구현·실행·문서 완료. 실측117초. 중앙 게시 완료는 publication 기록에서 구분합니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
