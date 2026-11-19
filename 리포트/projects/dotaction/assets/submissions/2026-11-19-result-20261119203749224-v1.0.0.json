@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "게임 전반 공격대 명칭을 원정대로 통일",
+    "summary": "마을 카드·편성 화면·NPC 대사·전투력 설명·현행 기획 문서의 공격대와 공대 표기를 원정대로 변경했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공대 편성·공격대 편성을 원정대 편성으로, 공격대 배치를 원정대 배치로 변경. NPC 대사·전투력 용어·화면 흐름·관계도·프로젝트 지침도 통일. town.json 변경 후 디자인 카탈로그 재생성, 웹 문서 재빌드. raid_* 함수·저장 키 등 내부 계약은 보존. 과거 보고서·제작 시안·이미지 원본은 보존하고 관련 이미지 설명에 이전 표기임을 명시. 사용자 확정 용어를 프로젝트 지침에 통합했으며 전역 지침 변경 없음.",
+    "verification": "node tools/build-design-catalog.mjs 성공. node docs/build.mjs 성공(15페이지). Godot4.7.2 헤드리스 기존5인 전투 진입: data_errors=[], actors=5, mode=battle, paused=false. 변경 대상 게임 코드·데이터·현행 문서에서 공격대·공대 잔여 표시 검색 완료. 별도 테스트·회귀 테스트 미실행.",
+    "remaining": "GUI 시각은 미확인. 기존 user 로그 파일 저장 권한 오류가 있으나 실행은 성공. 과거 이미지에 구 표기가 남으며 현행 명칭과 구분. 게임 저장소 커밋·푸시·게임 배포 미실행. 중앙 보고 공개 게시 상태는 별도 확인.",
+    "outcome": "게임 표시·데이터 대사·현행 문서 명칭 변경과 Godot 실행·문서 빌드 완료.",
+    "proposedTime": "2026-11-20 05:36:43 KST 시작, 약5분 예상.",
+    "actualTime": "구현·실행·문서 빌드 완료 2026-11-19T20:37:47.185Z (UTC, KST는+9시간). 실측 64초. 보고 등록·배포 확인은 별도 기록.",
+    "xerjEvidence": "사용자 지침에 따라 미사용. rg로 관련 표시 문자열을 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
