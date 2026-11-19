@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "이동 픽셀 격자를 깨는 비정수 줌과 화면 흔들림 수정",
+    "summary": "기본 이동 투영은 정수였으나 비정수 휠 줌과 소수 흔들림이 남아 있어 정수 배율과 정수 카메라 투영으로 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "휠 줌0.75~2.0의 연속 배율을1/2배로 제한했습니다. game.screen은 월드 투영과 카메라를 각각 반올림한 뒤 차감합니다. 기본 전투 및 원정의 화면 흔들림을 정수화했습니다. sprite-guide와 docs/index.html을 갱신했습니다. 내부 물리 좌표는 기존 연속 좌표 계약을 유지합니다.",
+    "verification": "Godot4.7.2 headless editor import 종료코드0, 스크립트 파싱 오류 없음. 샌드박스 user:// 접근 오류 후 승인된 권한으로 headless90프레임 기동을 다시 실행해 종료코드0과 오류 없는 로그를 확인했습니다. 실제 이동 화면은 미확인입니다. node docs/build.mjs 성공:15페이지/721이미지. 기본 이동 screen과 마을 screen의 정수 투영,640x360/정수 확대/최근접 필터를 소스로 확인했습니다.",
+    "remaining": "실제 이동 화면·미니 대장 축소 화면·개별 FX 회전과 배율·전체 UI 경로의1픽셀 규격은 미확인. 전체 처리가 모두1픽셀이라고 확정하지 않습니다. 게임 빌드·배포 미실행. 중앙 등록·푸시·배포는 별도 기록.",
+    "outcome": "코드·문서 저장과 문서 빌드 완료. Godot 파싱 오류 없음. 실제 이동 화면의 시각 확인은 미확인.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-19 16:46:24 KST 시작. 구현·문서 빌드16:48경 완료,약2분. 중앙 등록 시간은 별도.",
+    "xerjEvidence": "rg와 현재 소스·설정·Godot 실행 로그를 확인했습니다. 기존 정수 투영 지침을 적용했으며 전역 지침 변경 없음.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
