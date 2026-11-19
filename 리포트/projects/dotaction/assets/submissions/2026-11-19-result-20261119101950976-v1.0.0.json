@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마우스 전용 이동과 달리기 제거",
+    "summary": "마을·전투의 WASD·방향키 이동, NPC E 말걸기, Shift 달리기와 달리기 모션 선택을 제거했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "town.gd의 키보드 이동·달리기·E 말걸기 제거. game.gd의 키보드 방향 입력·키 이동 시 행동 취소·Shift 속도 배율·달리기 모션 선택 제거. expedition.gd의 키보드 수동 이동 분기 제거, 마우스 경로 및 기존 자동 전투 AI 유지. E 대화 안내와 NPC E 표시 제거. 전투 E 전용기 유지. 웹 문서와 프로젝트 지침에 반영. 사용자 확정 입력 규칙을 프로젝트 지침에 통합했으며 전역 지침 변경은 없습니다.",
+    "verification": "Godot 4.7.2 헤드리스 실제 진입: data_errors=[], mode=battle, actors=5, paused=false. node docs/build.mjs 성공(15페이지·696이미지). game.gd·town.gd·expedition.gd에서 WASD·방향키 입력·KEY_SHIFT·sprint multiplier 잔여 참조 없음. 별도 테스트·회귀 테스트 미실행.",
+    "remaining": "실제 마우스 입력과 화면 동작은 미확인. user 로그 파일 저장 권한 오류는 기존과 동일하며 게임 진입은 성공했습니다. 게임 커밋·푸시·배포는 수행하지 않았습니다. 중앙 보고 공개 배포 상태는 별도 기록합니다.",
+    "outcome": "입력 처리 수정과 Godot 실행·문서 빌드 완료. 수동 이동은 마우스 클릭 경로 이동만 사용합니다.",
+    "proposedTime": "2026-11-19 19:18:38 KST 시작, 약 5분 예상.",
+    "actualTime": "구현·실행·문서 빌드 완료 2026-11-19T19:19:48.964198+09:00. 실측 70초. 보고 등록·배포 확인은 별도 기록.",
+    "xerjEvidence": "사용자 지침에 따라 XERJ 미사용, rg로 관련 입력 처리만 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "partial"
+  }
+}
