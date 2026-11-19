@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 비율·T포즈12번 웹 탭 제거",
+    "summary": "12번 캐릭터 비율·T포즈 탭을 제거하고 이후 번호/목차를 정리했습니다. 기존 링크는 제작 가이드로 연결합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "docs/build.mjs의proportions페이지를목록에서제거했습니다. 뒤쪽메뉴번호·이전/다음문서·검색목록은빌드로자동재생성합니다. #proportions와proportions.md 링크는스프라이트제작가이드로보냅니다. 홈원문안내와비활성페이지이미지등록을정리하고원래문서/그림은보존했습니다. 프로젝트지침에현행탭구성을반영했습니다.",
+    "verification": "node docs/build.mjs14페이지/696자산 성공. 생성된HTML에서proportions메뉴없음·제작가이드12번·원문보관 확인. node --check docs/web/app.js 성공. 브라우저재실행/회귀테스트없음.",
+    "remaining": "원문docs/design/proportions.md와기존이미지는보관합니다. 중앙푸시/배포/HTTPS와최종실측은publication JSON및최종응답으로구분합니다.",
+    "outcome": "메뉴 제거·번호 재생성·기존 링크 연결·원문 보관·문서 빌드 완료.",
+    "proposedTime": "메뉴수정1~2분, 중앙배포별도",
+    "actualTime": "2026-11-19 17:15:22 KST 시작. 수정/빌드/화면확인·중앙등록 완료시간은publication JSON과최종응답에기록합니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
