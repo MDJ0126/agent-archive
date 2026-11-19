@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "도감은 마을에서만 열도록 전투 HUD 정리",
+    "summary": "전투의 캐릭터·몬스터 도감 버튼을 제거하고 전투 중 도감 호출을 차단했습니다. 마을 하단 도감 카드는 유지합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전투 build_hud에서 도감 버튼2개를 제거하고 open_codex에 mode==town 제한을 추가했습니다. 마을 하단 캐릭터 도감·몬스터 도감 카드는 유지합니다. 확정 마을 전용 도감 정책을 문서에 반영했습니다. ![도감 버튼을 제거한 실제 전투 HUD](../assets/20261120-town-only-codex.png)",
+    "verification": "Godot4.7.2 실제 OpenGL GTX970 루트 게임 실행 종료0. 엔진 API로640x360 PNG 저장 성공. 실제 전투 화면에서 도감 버튼2개 부재 확인. 마을 도감 연결은 소스 확인, 이번 마을 UI 실행은 미확인. user:// 로그·캐시 및 종료 RID 경고 있음. 테스트 작성·실행 없음.",
+    "remaining": "마을 도감 열기·닫기 상호작용 재실행은 미확인. 패키지 빌드·게임 배포·프로젝트 푸시는 미실행. 중앙 보고 게시 상태 별도 기록. 공통 교훈 추가 없음, 사용자 확정 정책을 프로젝트 문서에 반영.",
+    "outcome": "구현·실제 Godot 실행 및 컴파일·전투 화면 캡처·웹 문서 갱신 완료. 중앙 게시 상태는 publication 참조.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-20 07:26:09 KST 시작, 07:26:42 KST 구현·실제 전투 화면 확인 완료, 실측33초. 문서·중앙 게시 완료 시각은 publication 참조.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
