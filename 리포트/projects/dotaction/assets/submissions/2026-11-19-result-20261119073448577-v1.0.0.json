@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 최신본 중심 폴더 단순화·지난 자료 통합",
+    "summary": "최상단 최신PNG5장과 모션/이펙트/사운드/원본4폴더로 단순화하고 지난 자료를 중복 제거한 ZIP으로 통합했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "최상단에 일러스트.png·프로필.png·T포즈.png·8방향-256.png·8방향-64.png를 배치했습니다. 모션은7개PNG/motions.json/피격Aseprite, 이펙트는평면PNG/JSON, 사운드는효과음/테마/cues.json으로 단순화했습니다. 원본에는현재 분리몸체/장비/5방향 원본과 제작기록.zip을 두었습니다. 기존358파일의 원본 바이트를349고유파일로 중복 제거해 자체 완결 ZIP과 목록.json에 보존한 뒤 이전6개 중첩 트리를 제거했습니다. 모션/일러스트/FX/오디오 로더·임포터·FX/음원 생성기·정규화 예외·웹 그림·내보내기 경로를 갱신했습니다. 폐기된 깊은 구조를 재생성하는 이전 선택/포장 도구는 중단하도록 처리했습니다. 새 폴더 규칙을AGENTS/제작 지침/스타일JSON과 중앙 프로젝트 지침에 반영했습니다.",
+    "verification": "ZIP358개 원래 경로의 바이트별SHA256 대조 성공·349고유파일 자체완결 보존 확인. 현행 문서파일40개/하위폴더4개, 자동.import 별도. 실제Godot 전신1024x1536·프로필512x640·모션7종·PixelFX4종 렌더·기본피해21·삼연격3회/예약0·데이터오류[] 확인. node docs/build.mjs15페이지/427이미지 성공. 회귀 테스트 작성/실행 없음. 기존 로그/셰이더캐시/에디터설정 저장·종료Texture경고는 남아 있습니다.",
+    "remaining": "프로젝트 밖이 아닌 장교 폴더 내부만 정리했습니다. art/classes/officer와기존art/source의호환 자료는 다른 참조 보존을 위해 유지했습니다. 중앙푸시·배포/HTTPS완료는publication JSON과최종응답으로 구분합니다.",
+    "outcome": "폴더 이동·보관 검증·게임/문서/생성기 경로 갱신·실제 Godot 실행 확인 완료.",
+    "proposedTime": "5~8분",
+    "actualTime": "2026-11-19 16:27:42 KST 시작 →16:33:34 KST 정리/보관검증/실제실행/문서완료,5분52초. 중앙등록/배포최종시간은publication JSON과최종응답에 기록합니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
