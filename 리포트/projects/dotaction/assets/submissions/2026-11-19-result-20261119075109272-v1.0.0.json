@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 삼연격 자동 발동과 애니메이션 참조 오류 수정",
+    "summary": "자동 전투에서 장교 삼연격을 공격용으로 사용하고 AI 이동 취소와 잘못된 애니메이션 참조를 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "combat_pilot.gd: 삼연격 사거리 내 공격 발동 및 준비·검격 중 조향 정지. class_attacks.gd: 발동 시 AI 조향 초기화·공격 유지 시간 설정, 공용 렌더러에 없는 attack_special 대신 attack_1 사용. officer_motion.gd의 전용 special 선택은 유지. docs/design/captains.md 및 docs/index.html 갱신. 기존 지침에 해당 규칙이 있어 지침 추가 없음.",
+    "verification": "Godot 4.7.2 headless 실제 부트·장교 자동 발동 경로 실행: 예약3회, 재사용7초, 대상 체력1000→987.4→974.8→962.2, 남은 예약2→1→0, AI 조향0 유지, 전용 special 포즈1604/1607/1612, DATA_ERRORS=[]. 첫 실행의 attack_special 키 참조 오류 수정 후 같은 실행으로 오류 제거 확인. node docs/build.mjs 성공(15페이지·721이미지). 별도 테스트 작성·회귀 테스트 미실행. user:// 로그 쓰기 오류는 환경 제한으로 남음.",
+    "remaining": "실제 화면의 모션 자연스러움·사용자 청감 미확인. 아트 파일 미변경. 게임 저장소 커밋·푸시·게임 배포는 수행하지 않음. 중앙 보고 게시 상태는 별도 publication JSON에 기록.",
+    "outcome": "구현·Godot 실행·문서 빌드 완료. 화면상 자세 품질은 미확인입니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-19 16:48:40 KST 시작. 2026-11-19 16:51:07 KST 구현·실행·문서 빌드 완료. 실측 148초. 중앙 보고 등록 시간 별도.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
