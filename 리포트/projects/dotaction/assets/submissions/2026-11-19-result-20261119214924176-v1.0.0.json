@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "강화 카드2배와 양측 금색 PixelFX 강조",
+    "summary": "상대 지휘관을12px 올리고 강화 카드 효과를 양측2배로 맞췄습니다. 손패·적 뒷면·투척에 PixelFX 강조를 적용해 실제 게임 GIF를 기록했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "상대 최종 위치12px 상승. 강화 효과 배율1.5→2, 성급+1 및 추가회복 대신+2성(최대5성). 양측 공통 비용·대상 검사 유지. 플레이어 강화 손패18px 추가 상승·×2·전경 배치, 금색 순환 테두리/3px 밝은 불꽃/방출 입자 PixelFX24프레임·20FPS 제작. 적 손패 뒷면과 오른손 쥔 카드·양측 투척에도 합성했습니다. 원본/제작 코드/피벗/해시/라이선스 위치 보존.\n\n![실제 게임 양측 강화 카드 PixelFX](../assets/20261120-enhanced-card.gif)",
+    "verification": "Godot4.7.2 OpenGL3.3/GTX970 실제 인게임105프레임·약15fps/7초 직접 캡처. 촬영용으로 양측 손패 강화 플래그를 지정했으며 실제 AI 사용과 전투는 원래 실행 구조입니다. DEALER_THROW_RELEASE enhanced=true power=2.0, actual_ai_throw=true actual_refill_draw=true paused=false 확인. 양측 손패 강조와12px 상승 시각 확인. PixelFX 출력 정규화·Godot 임포트·콘텐츠 데이터 생성·웹 문서 빌드 완료. 에디터 설정/셰이더 캐시 쓰기 경고가 있으며 게임 파싱/런타임 오류는 없습니다. 테스트 작성·실행 없음.",
+    "remaining": "전체 카드별2배 실효 수치의 개별 실행 확인은 미실행이며 공통 배율/성급 코드와 실제 적 사용 로그를 확인했습니다. 자연12% 등장 빈도 장기 확인과 최종 미감 승인은 미확인입니다. 게임 패키지 빌드·게임 배포·프로젝트 푸시 미실행. 중앙 보고 커밋·푸시·배포는publication에 기록합니다. 공통 교훈 추가 없음, 사용자 확정 배율/강조를 프로젝트 지침에 통합했습니다.",
+    "outcome": "구현·PixelFX 제작/정규화·실제 게임 실행/GIF·데이터/웹 문서 빌드 완료. 중앙 게시 상태는publication에 구분합니다.",
+    "proposedTime": "약10분",
+    "actualTime": "2026-11-20 06:45:34 KST 시작, 2026-11-20 06:49:19 KST 구현·제작·실제 촬영·문서 빌드 완료. 실측225초. 게시 완료는publication에 기록합니다.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
