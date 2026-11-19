@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장교 대기5시·동작3시 확정과 캐스팅·관성 사망·삼연격",
+    "summary": "방향 규칙을 지침에 기록하고 캐스팅·사망·전방3타를 게임에 연결했습니다. 사망 검 이탈과 특수기 마지막 칼동작은 보정이 남습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "AGENTS.md·아트/파츠/워크플로에 idle5시/animation3시 명시. East16프레임3종+자연 사망 재시도1회(표시 합계8회분). 원본/프롬프트/PNG/GIF/화면 보존. cast/death/special 정규화 연결. E는 등 보이는.24초 준비 후1.02초3타·각60%·재사용7초. 3시 고정축·좌측반전9시, 강제취소 시예약타격 제거. import-officer.py는--only 필수로수동 피격보존. 문서/스키마/도감갱신.",
+    "verification": "실제GIF3종 모두128×128·17프레임 확인. 접촉판에서등 자세와관절/망토붕괴확인. 특수마지막은찌르기성향·검완전이탈불명확. Godot부트실행 data_errors=[]·7상태렌더·기본피해1000→979. 특수 started=true/reserved_hits=3, 체력1000→962.2·pending0 확인. 실제Godot렌더PNG/GIF보존. 피격PNG미변경. user://로그/캐시와종료Texture정리경고남음. 별도테스트미작성/미실행.",
+    "remaining": "특수기3번째동작의베기자세, 사망검이탈과더자연스러운옷동작은시각보정필요. 플레이어직접장시간평가미확인. 공용분리파츠미구현. 서버순차처리와추가사망요청으로최초예상초과. 상시지침추가:대기5시와전방3시구분.",
+    "outcome": "방향 지침·캐스팅·사망·3타 판정 연결 완료. 아트 자연스러움과 베기형3타는 부분 완료.",
+    "proposedTime": "8~10분. 추가 자연스러운 사망 요청으로약3분추가안내.",
+    "actualTime": "2026-11-19 13:52:08 KST 시작, 14:06:30 KST 자연 사망 결과 시각 확인까지14분22초. 이후 게임 재실행·문서 빌드·보고 등록 별도.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
