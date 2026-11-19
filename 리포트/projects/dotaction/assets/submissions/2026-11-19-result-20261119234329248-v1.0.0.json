@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마을에서 마계로 이어지는 스테이지 지도",
+    "summary": "원정 스테이지 맵에는 마을에서 숲과 폐허의 다리, 차원문을 지나 마계 성채로 이어지는 전용 파노라마를 배치합니다. 10개 구역 표식은 지형을 따라 왼쪽에서 오른쪽으로 진행합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "원정 스테이지 맵에는 마을에서 숲과 폐허의 다리, 차원문을 지나 마계 성채로 이어지는 전용 파노라마를 배치합니다. 10개 구역 표식은 지형을 따라 왼쪽에서 오른쪽으로 진행합니다.\n\n![실제 스테이지 맵](../assets/20261120-stage-realm.png)",
+    "verification": "Godot 4.7.2의 마을 스테이지 맵 화면에서 파노라마와 10개 표식 표시 확인.",
+    "remaining": "마계는 지도상의 시각 표현입니다. 별도 마계 전투 지형은 이번 작업 범위 밖입니다.",
+    "outcome": "스테이지 배경 제작 및 연결, 실제 엔진 촬영과 웹 문서 빌드 완료.",
+    "proposedTime": "약 8분",
+    "actualTime": "2026-11-20 08:42:09 KST 시작. 최종 게시 확인은 publication 기록 참조.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
