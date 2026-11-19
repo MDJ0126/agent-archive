@@ -17,7 +17,7 @@
     "remaining": "최종 팔 비율·동작 미감 승인은 미확인. 전체 카드 종류별 연출 확인은 미실행. 게임 패키지 빌드·게임 배포·프로젝트 푸시 미실행. 중앙 보고 커밋/푸시/배포는publication에 구분합니다. 일반 교훈 추가 없음, 사용자 요청을 프로젝트 지침에 반영했습니다.",
     "outcome": "구현·실제 GPU 실행/인게임 GIF·웹 문서 갱신 완료. 중앙 게시 상태는 publication에 별도 기록합니다.",
     "proposedTime": "약10분",
-    "actualTime": "2026-11-20 06:10:49 KST 시작, 06:18:30 KST 구현·실제 렌더·GIF 저장, 실측461초. 게시 완료 시각은publication에 기록합니다.",
+    "actualTime": "2026-11-20 06:10:49 KST 시작, 06:18:13 KST 구현·실제 렌더·GIF·문서·보고 푸시 확인, 실측444초. 배포 완료 시각은publication에 기록합니다.",
     "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
     "priority": "normal",
     "severity": "normal",
