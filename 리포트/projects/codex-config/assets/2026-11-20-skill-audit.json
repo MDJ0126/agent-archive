@@ -1,0 +1,503 @@
+{
+  "date": "2026-11-20T00:33:52.449Z",
+  "tool": "SkillEvaluator 1.0.1",
+  "scope": "Installed user/system skills and currently connected plugin package skill folders",
+  "groups": [
+    {
+      "group": "user",
+      "count": 23,
+      "score": 86.5,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "agents",
+      "count": 1,
+      "score": 86.5,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "computer",
+      "count": 1,
+      "score": 86.5,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "drive",
+      "count": 5,
+      "score": 87.1,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "pages",
+      "count": 4,
+      "score": 88.4,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "plugincreator",
+      "count": 4,
+      "score": 83,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "pluginmanagement",
+      "count": 1,
+      "score": 84.8,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "sites",
+      "count": 2,
+      "score": 86.9,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "pets",
+      "count": 3,
+      "score": 85.9,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "visualize",
+      "count": 1,
+      "score": 77.2,
+      "grade": "C",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "documents",
+      "count": 1,
+      "score": 79,
+      "grade": "C",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "pdf",
+      "count": 1,
+      "score": 86.5,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    },
+    {
+      "group": "presentations",
+      "count": 1,
+      "score": 83.8,
+      "grade": "B",
+      "qualityExit": 1,
+      "harnessExit": 0
+    },
+    {
+      "group": "spreadsheets",
+      "count": 2,
+      "score": 84.5,
+      "grade": "B",
+      "qualityExit": 1,
+      "harnessExit": 0
+    },
+    {
+      "group": "template",
+      "count": 1,
+      "score": 86.8,
+      "grade": "B",
+      "qualityExit": 0,
+      "harnessExit": 0
+    }
+  ],
+  "skills": [
+    {
+      "group": "user",
+      "name": "imagegen",
+      "score": 82.5,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "openai-docs",
+      "score": 81.2,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "review-agent",
+      "score": 88.5,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "skill-creator",
+      "score": 82,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "skill-installer",
+      "score": 80.2,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "agents-sdk",
+      "score": 89.5,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "cli-anything",
+      "score": 81.8,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "cloudflare",
+      "score": 87.8,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "cloudflare-email-service",
+      "score": 85,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "cloudflare-one",
+      "score": 85.5,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "cloudflare-one-migrations",
+      "score": 91.5,
+      "grade": "A"
+    },
+    {
+      "group": "user",
+      "name": "durable-objects",
+      "score": 87.8,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "music-gen",
+      "score": 80.8,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "reverse-engineer-anything",
+      "score": 86.5,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "sandbox-migrate-to-next",
+      "score": 90.2,
+      "grade": "A"
+    },
+    {
+      "group": "user",
+      "name": "sandbox-next",
+      "score": 90.2,
+      "grade": "A"
+    },
+    {
+      "group": "user",
+      "name": "sandbox-stable",
+      "score": 87.8,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "skillevaluator",
+      "score": 98.8,
+      "grade": "A"
+    },
+    {
+      "group": "user",
+      "name": "sound",
+      "score": 82.5,
+      "grade": "B"
+    },
+    {
+      "group": "user",
+      "name": "turnstile-spin",
+      "score": 78.2,
+      "grade": "C"
+    },
+    {
+      "group": "user",
+      "name": "web-perf",
+      "score": 90.2,
+      "grade": "A"
+    },
+    {
+      "group": "user",
+      "name": "workers-best-practices",
+      "score": 90.2,
+      "grade": "A"
+    },
+    {
+      "group": "user",
+      "name": "wrangler",
+      "score": 90,
+      "grade": "A"
+    },
+    {
+      "group": "agents",
+      "name": "reverse-engineer-anything",
+      "score": 86.5,
+      "grade": "B"
+    },
+    {
+      "group": "computer",
+      "name": "computer-use",
+      "score": 86.5,
+      "grade": "B"
+    },
+    {
+      "group": "drive",
+      "name": "google-docs",
+      "score": 84,
+      "grade": "B"
+    },
+    {
+      "group": "drive",
+      "name": "google-drive",
+      "score": 87.2,
+      "grade": "B"
+    },
+    {
+      "group": "drive",
+      "name": "google-drive-comments",
+      "score": 86,
+      "grade": "B"
+    },
+    {
+      "group": "drive",
+      "name": "google-sheets",
+      "score": 91.5,
+      "grade": "A"
+    },
+    {
+      "group": "drive",
+      "name": "google-slides",
+      "score": 86.8,
+      "grade": "B"
+    },
+    {
+      "group": "pages",
+      "name": "maintain-space",
+      "score": 90.2,
+      "grade": "A"
+    },
+    {
+      "group": "pages",
+      "name": "manage-schedules",
+      "score": 87.2,
+      "grade": "B"
+    },
+    {
+      "group": "pages",
+      "name": "organize-space",
+      "score": 90.2,
+      "grade": "A"
+    },
+    {
+      "group": "pages",
+      "name": "write-page",
+      "score": 86,
+      "grade": "B"
+    },
+    {
+      "group": "plugincreator",
+      "name": "create-plugin",
+      "score": 82.2,
+      "grade": "B"
+    },
+    {
+      "group": "plugincreator",
+      "name": "starter-workflow",
+      "score": 79.5,
+      "grade": "C"
+    },
+    {
+      "group": "plugincreator",
+      "name": "prepare-plugin-submission",
+      "score": 87,
+      "grade": "B"
+    },
+    {
+      "group": "plugincreator",
+      "name": "update-plugin",
+      "score": 83.2,
+      "grade": "B"
+    },
+    {
+      "group": "pluginmanagement",
+      "name": "plugin-management",
+      "score": 84.8,
+      "grade": "B"
+    },
+    {
+      "group": "sites",
+      "name": "sites",
+      "score": 84,
+      "grade": "B"
+    },
+    {
+      "group": "sites",
+      "name": "sites-remix",
+      "score": 89.8,
+      "grade": "B"
+    },
+    {
+      "group": "pets",
+      "name": "create-pet",
+      "score": 83.2,
+      "grade": "B"
+    },
+    {
+      "group": "pets",
+      "name": "pets",
+      "score": 86,
+      "grade": "B"
+    },
+    {
+      "group": "pets",
+      "name": "update-pet",
+      "score": 88.5,
+      "grade": "B"
+    },
+    {
+      "group": "visualize",
+      "name": "visualize",
+      "score": 77.2,
+      "grade": "C"
+    },
+    {
+      "group": "documents",
+      "name": "documents",
+      "score": 79,
+      "grade": "C"
+    },
+    {
+      "group": "pdf",
+      "name": "pdf",
+      "score": 86.5,
+      "grade": "B"
+    },
+    {
+      "group": "presentations",
+      "name": "presentations",
+      "score": 83.8,
+      "grade": "B"
+    },
+    {
+      "group": "spreadsheets",
+      "name": "excel-live-control",
+      "score": 86.2,
+      "grade": "B"
+    },
+    {
+      "group": "spreadsheets",
+      "name": "spreadsheets",
+      "score": 82.8,
+      "grade": "B"
+    },
+    {
+      "group": "template",
+      "name": "template-creator",
+      "score": 86.8,
+      "grade": "B"
+    }
+  ],
+  "highFindings": [
+    {
+      "group": "presentations",
+      "check": "quality_correctness",
+      "severity": "high",
+      "message": "Invalid name format: 'Presentations' (lowercase/numbers/hyphens only)"
+    },
+    {
+      "group": "spreadsheets",
+      "check": "quality_correctness",
+      "severity": "high",
+      "message": "Invalid name format: 'Spreadsheets' (lowercase/numbers/hyphens only)"
+    }
+  ],
+  "totalBefore": 51,
+  "totalAfter": 50,
+  "userAfter": {
+    "overall_score": 86.5,
+    "grade": "B",
+    "skill_count": 22,
+    "dimensions": {
+      "correctness": {
+        "score": 82.7,
+        "weight": 0.35,
+        "issues_count": 61
+      },
+      "discoverability": {
+        "score": 88.9,
+        "weight": 0.25,
+        "issues_count": 46
+      },
+      "reliability": {
+        "score": 83.6,
+        "weight": 0.25,
+        "issues_count": 68
+      },
+      "efficiency": {
+        "score": 95.9,
+        "weight": 0.15,
+        "issues_count": 10
+      }
+    }
+  },
+  "userAfterHarness": [
+    {
+      "status": "degraded",
+      "verified_version": "0.166.0",
+      "findings": [
+        {
+          "id": "CX-LIST-BUDGET",
+          "effect": "degraded",
+          "message": "The 22 skills in this folder have 8,466 description chars; Codex's skill list fits about 8,000 (2% of the context window at 4 bytes per token; 8,000 chars if unknown), so descriptions get shortened, then removed, then skills left out.",
+          "fix": "Shorten descriptions (trigger first) or install fewer skills here.",
+          "outcome": "listing shortened",
+          "confidence": "high"
+        }
+      ],
+      "catalog": {
+        "size": 22,
+        "desc_chars": 8466
+      }
+    }
+  ],
+  "limitations": [
+    "Static quality only; no security assurance or live performance result.",
+    "Harness profiles model Codex CLI 0.166.0, not the desktop plugin loader; plugin-path findings do not prove that a connected plugin failed to load.",
+    "Tier 2 embeddings and Tier 3 were not run; overlap decisions below use direct source comparison."
+  ]
+}
