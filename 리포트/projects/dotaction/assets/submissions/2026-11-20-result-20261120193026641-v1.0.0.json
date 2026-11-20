@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 특수 공격 1 손·검집 위치 재시험",
+    "summary": "256×128에서 생성 8프레임을 한 번 요청했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "총 9프레임, 입력 첫 이미지 일치, GIF 재생, 실제 사용량 1회분을 확인했습니다. 전진, 숙임, 눈 그림자, 머리 움직임이 보입니다.",
+    "remaining": "후반 검 위치가 크게 바뀌고 마지막까지 뒤로 검날이 노출됩니다. 검토본으로 보관했습니다.",
+    "outcome": "![검과 검집 위치 재시험 GIF](../assets/officer-special1-fixed-grip-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "04:29:02 KST 시작, 04:30:05 KST 결과 검수",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
