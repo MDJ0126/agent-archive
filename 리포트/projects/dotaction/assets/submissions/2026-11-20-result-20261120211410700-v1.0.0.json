@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 특수 공격 1 절도 있는 준비 시안",
+    "summary": "아이들 기준 한 장으로 절도 있는 파지, 검은 의상과 눈가 음영을 요청했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "128×128 17프레임. 파지 후 정지와 돌풍 확인. 눈가 국소 그림자가 뚜렷하지 않고 검집이 기울어집니다. 2회 사용, 1666/2000회 잔여.",
+    "remaining": "눈가 그림자와 검집 각도 고정 미충족. 아카이브 미채택.",
+    "outcome": "![절도 있는 준비 시안](../assets/officer-delayed-gust-stern-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "약 2분 40초, 06:13 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
