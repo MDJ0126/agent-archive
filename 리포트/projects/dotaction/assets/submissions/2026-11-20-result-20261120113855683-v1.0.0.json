@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 6시점·8방향 마네퀸 정렬",
+    "summary": "보정한 정면을 반영하고, 제작 가이드와 캐릭터 아카이브에 새 장교 시트를 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "정면 보정본을 사용하고 후면·좌우 T포즈를 마네퀸 가슴·허리·골반·엉덩이 윤곽에 맞춰 조정. 8방향 5원본+3반전. 상면·하면 투영 중심 정렬. 제작 가이드 기준과 예제 갱신.",
+    "verification": "직립 T포즈 발 좌표 일치, 8방향 바닥선 전부 일치, 반전 한 방향 가로 1px 차이. 상·하면 중심 일치. 문서 빌드·아카이브 윤곽선·가이드 예제 7장 실제 확인.",
+    "remaining": "의복 두께와 가려진 부위는 신체 윤곽과 다릅니다. Affinity 연결 거부로 신규 네이티브 원본은 작성하지 않았습니다. 중앙 배포 미확인.",
+    "outcome": "![tpose.png](../assets/officer-aligned-reference-20261120/tpose.png)\n\n![directions.png](../assets/officer-aligned-reference-20261120/directions.png)\n\n![tpose-overlay.png](../assets/officer-aligned-reference-20261120/tpose-overlay.png)\n\n![directions-overlay.png](../assets/officer-aligned-reference-20261120/directions-overlay.png)\n\n![guide.png](../assets/officer-aligned-reference-20261120/guide.png)",
+    "proposedTime": "7~10분",
+    "actualTime": "20:30:54 KST 시작, 20:38:51 KST 보고 작성.",
+    "xerjEvidence": "ImageGen 및 브라우저·PNG 실측",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
