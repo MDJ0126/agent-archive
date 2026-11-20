@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 T포즈 비교 추가",
+    "summary": "6시점 T포즈 확대 창에서 여성형 마네퀸 겹치기와 불투명도 조절을 추가했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "6시점 T포즈에 같은 3×2 크기로 마네퀸을 겹칩니다.",
+    "verification": "문서 빌드, T포즈 비교와 불투명도 60%, 8방향 전환 확인. 실제 GIF 2프레임 확인.",
+    "remaining": "Affinity MCP 연결이 ECONNREFUSED로 레이어 원본과 무기·장식 별도 파일 제작 미진행. 중앙 배포 미확인.",
+    "outcome": "![T포즈 비교](../assets/tpose-mannequin-comparison/comparison.gif)",
+    "proposedTime": "초기 확인 2~3분",
+    "actualTime": "19:20:50 KST부터 19:23:00 KST까지 부분 결과 보고.",
+    "xerjEvidence": "Affinity CLI 및 로컬 브라우저 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
