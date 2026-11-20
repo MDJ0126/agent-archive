@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "아카이브 기준 이미지 높이 정렬",
+    "summary": "기준 이미지와 나란한 모션의 미리보기 중심 높이를 맞췄습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "카드 제목과 미리보기 영역 간격 통일. 프로젝트 b28d8b53 푸시.",
+    "verification": "문서 빌드와 브라우저에서 네 미리보기의 중심 높이가 일치하는 것을 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-reference-align-20261121/archive.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 51초, 03:38:38 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
