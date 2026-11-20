@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "게임 구성 문서 축약과 읽기 화면 정리",
+    "summary": "게임 구성 9개 문서를 주제별로 정리하고 핵심 8개 본문을 84% 축약했습니다. 번호 섹션과 요약 표, 접힌 이미지 참고를 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "날짜별 변경 기록·반복 문구·폐기된 규칙을 본문에서 정리했습니다. 편성·성장·전투·마을·경제·화면의 내용을 담당 문서로 분리했습니다. 흰색 바탕과 검정 사이드바·주황 강조를 유지하고 제목·여백·번호 섹션·요약 표를 정리했습니다. 대량 이미지는 접어서 보며 도감은 그대로 열람합니다. 이전 본문 9개는 docs/originals/game-composition-20261120에 보존했습니다. 게임 코드와 데이터는 변경하지 않았습니다.",
+    "verification": "node docs/build.mjs 성공: 15페이지·8다이어그램·1,020이미지. 실제 로컬 문서의 Chrome 헤드리스 렌더 스크린샷 2장을 확인했습니다. 브라우저 실행 오류 0, 데스크톱 가로 넘침 없음, 게임 구성 9개 페이지 생성. 자동 테스트는 작성·실행하지 않았습니다. 스킬 복원 CheckOnly 누락 0. SkillEvaluator 신규 설치 조건에 해당하지 않으며 CLI-Anything 신규 harness 대신 기존 Playwright API를 재사용했습니다.",
+    "remaining": "모바일 실제 기기와 모든 하단 이미지의 수동 열람은 미확인입니다. 이전 문서 보존 외 별도 전역 지침 변경은 없습니다. 업데이트 게시판의 로컬 최신 ID 2026-11-20-012는 확인했으나 최초 원격 조회는 네트워크 제한으로 실패했습니다.",
+    "outcome": "![정리된 전투 문서](../assets/game-docs-20261120/combat.png)\n\n![정리된 게임 소개](../assets/game-docs-20261120/overview.png)\n\n게임 구성 9개 페이지를 주제별로 재구성했습니다. 핵심 8개 본문은 41,974자에서 6,653자로 84% 축약했습니다. 몬스터 문서는 대응 요약과 상세 수치로 나누었습니다.",
+    "proposedTime": "8~10분. 시작 2026-11-20 14:36:59 KST.",
+    "actualTime": "문서 구현·빌드·실제 화면 확인: 2026-11-20 14:41 KST까지 약 4분. 중앙 게시 대기는 이후 별도 기록.",
+    "xerjEvidence": "사용자 지침에 따라 rg와 원문·빌드·실제 렌더를 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
