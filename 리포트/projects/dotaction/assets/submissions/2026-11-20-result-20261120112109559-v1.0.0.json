@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 정면 T포즈 ControlNet 실험",
+    "summary": "여성형 마네킹 윤곽을 사용해 GTX 970에서 ControlNet 정면 T포즈를 생성하고 형태와 외형을 비교했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "여성형 기준 외곽선을 추출해 SD1.5 Canny에 적용했습니다. 몸체 한정 비교에서는 기존 장교 머리를 합성했습니다.",
+    "verification": "GTX970 Vulkan 실제 생성 54.78초 및 31.98초, 512×512 PNG와 외곽선 대조 확인. 최초 diffusers 체크포인트의 텐서 형식 오류는 호환 체크포인트로 복구.",
+    "remaining": "전체 윤곽 적용에서는 얼굴과 제복이 변형됐습니다. 몸체 한정 합성도 목·어깨 정합 불일치가 있어 제작 정본에는 적용하지 않았습니다. 중앙 배포 미확인.",
+    "outcome": "![전체 윤곽 적용](../assets/controlnet-officer-tpose-20261120/comparison.png)\n\n![몸체 윤곽과 기존 얼굴 합성](../assets/controlnet-officer-tpose-20261120/body-comparison.png)",
+    "proposedTime": "환경 확인 1~2분, 모델 다운로드와 생성 별도",
+    "actualTime": "20:13:31 KST 시작, 20:21:07 KST 보고 작성.",
+    "xerjEvidence": "로컬 Vulkan CLI 및 실제 결과 PNG 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
