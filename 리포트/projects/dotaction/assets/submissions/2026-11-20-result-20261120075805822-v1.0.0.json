@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "프로젝트 내부 .tools 전체 삭제",
+    "summary": "사용자 명시 지시에 따라 제작 도구·AI 모델·복구 ZIP을 포함한 .tools 약19.70GB 삭제",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "프로젝트 내부 도구·모델·보고서·복구본 저장 금지 및 기존 중앙 아카이브·공용 도구 위치 사용을 지침에 명시. 과거 복구본 보존 안내를 폐기 상태로 기록.",
+    "verification": "삭제 전149046파일·19702415862바이트 집계. 삭제 완료2026-11-20 16:57:23 KST, 경로 부재 확인. 문서 빌드 성공. 게임 빌드·실행·테스트 미실행.",
+    "remaining": "기존 .tools 참조 제작 도구는 미설치 상태. 프로젝트 푸시0700ebea 완료. 해당 커밋에 다른 세션이 미리 스테이징한 데이터 문서 관련6파일도 함께 포함됨; 변경을 되돌리지 않음. 중앙 원격은 기존 이력 차이로 게시 미완료.",
+    "outcome": ".tools 전체 삭제와 경로 부재 확인. 프로젝트 소스·게임 에셋은 삭제하지 않음. 순수 파일 삭제·지침 작업으로 시각 결과 없음.",
+    "proposedTime": "약2분",
+    "actualTime": "시작2026-11-20 16:55:56 KST, 삭제 완료16:57:23 KST(1분27초). 기록·푸시까지 약2분.",
+    "xerjEvidence": "PowerShell 실제 파일 집계와 삭제 결과 확인. SkillEvaluator·CLI-Anything 비대상.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
