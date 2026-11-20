@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 모션 버전 번호 표시",
+    "summary": "최신 버전부터 숫자로 표시하고 화살표로 이전 번호를 확인합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "2 / 2 최신 기본 표시와 1 / 2 전환. 프로젝트 045a133c 푸시.",
+    "verification": "문서 빌드, Chrome에서 신·구·신 전환 및 옆 카드 유지 확인. 실제 17프레임 GIF 기록.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![모션별 전환](../assets/officer-motion-numbers-20261120/archive.gif)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 52초, 23:54:48 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
