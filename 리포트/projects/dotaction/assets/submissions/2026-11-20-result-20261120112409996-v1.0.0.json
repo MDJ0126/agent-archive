@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 정면 T포즈 몸통 윤곽 보정",
+    "summary": "가슴을 안쪽으로 모으고 허리를 좁히며 골반을 넓혔습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "정면 시안에서 가슴·허리·골반 구간만 수평 변형했습니다.",
+    "verification": "가슴 높이 y189 기준 폭 73→65px, 허리 y212 기준 65→51px, 골반 y279 기준 99→107px. 수정 창 밖 원본과 픽셀 동일. PNG 저장 및 시각 비교.",
+    "remaining": "정면 수정 시안 검토 대기. 중앙 배포 미확인.",
+    "outcome": "![붉은 장교 정면](../assets/officer-tpose-torso-fit-20261120/tpose.png)\n\n![수정 전후와 마네킹 윤곽 비교](../assets/officer-tpose-torso-fit-20261120/comparison.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "20:22:31 KST 시작, 20:24:07 KST 보고 작성.",
+    "xerjEvidence": "ImageGen 확인 및 로컬 PNG 좌표 보정",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
