@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 메모와 스프라이트 팝업 디자인",
+    "summary": "메모에 테마를 적용하고 원본 이미지를 1:1로 유지하며 팝업을 이미지 크기에 맞췄습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "메모 테마와 팝업 여백 조정. 프로젝트 599c15c0 푸시.",
+    "verification": "브라우저에서 512×384 원본 크기와 맞춤 팝업, 다크 모드 메모 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-popup-design-20261121/archive.gif)",
+    "proposedTime": "3~5분",
+    "actualTime": "약 1분 15초, 00:14:43 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
