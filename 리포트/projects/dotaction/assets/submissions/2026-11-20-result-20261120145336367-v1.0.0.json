@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 신버전 애니메이션 재생 제어",
+    "summary": "신버전 모션 10개를 기존 플레이어에 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "아카이브 전용 프레임 시트로 재생·일시정지, 방향 반전, 속도 제어 적용. 프로젝트 422e1462 푸시.",
+    "verification": "문서 빌드, Chrome에서 10개 클립 연결과 대기 모션 일시정지·반전·2배속 설정·재개 확인. 실제 14프레임 GIF 기록.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![모션별 전환](../assets/officer-motion-controls-20261120/archive.gif)",
+    "proposedTime": "4~7분",
+    "actualTime": "약 2분 18초, 23:53:19 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
