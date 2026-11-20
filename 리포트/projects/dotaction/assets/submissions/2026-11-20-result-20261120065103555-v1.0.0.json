@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대기와 이동 모션의5시 사선 기준 통합",
+    "summary": "대기·걷기·달리기는5시 사선 기준, 공격 등 기존 동작은3시 기준으로 구분했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "대기 및 이동의 기존3시 문구를5시 기준으로 수정했습니다. 프롬프트 예시와 방향 옵션 안내를 통일하고 대기·이동에는 East를 강제하지 않습니다. 반대편은 좌우 반전으로7시, 공격은3시/9시를 유지합니다. AGENTS.md·docs/art-workflow.md·docs/character-production.md·docs/design/sprite-guide.md에 통합했습니다. 순수 지침 변경이며 신규 시각 산출물은 없습니다.",
+    "verification": "node docs/build.mjs 성공:16페이지·1029이미지. 실제 모션 재제작·게임 실행·테스트는 이번 요청 범위에 없어 수행하지 않았습니다. SkillEvaluator·CLI-Anything은 적용 대상이 아닙니다.",
+    "remaining": "실제 PixelLab 모션 생성은 미실행. 중앙 게시 접근은 별도 확인합니다.",
+    "outcome": "제작 원문·웹 가이드·프로젝트 지침 수정과 문서 빌드 완료. 기존 모션은 자동 교체하지 않습니다.",
+    "proposedTime": "수정·빌드1~2분, 중앙 배포 대기 별도",
+    "actualTime": "2026-11-20 15:49:45~15:50:42 KST, 수정·빌드57초. 중앙 보고 게시·배포 대기 별도.",
+    "xerjEvidence": "rg로 관련 제작 규격 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
