@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기존 8방향 기반 PixelLab 제출용 합성",
+    "summary": "기존 5시 칸을 잘라 그대로 사용하고 장검 원화만 뒤에 합성했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "512×512 콘셉트 PNG와 아카이브 확대 항목 추가. 프로젝트 02a34c7c 푸시.",
+    "verification": "문서 빌드 성공. 아카이브 참조 PNG의 실제 치수 512×512 확인.",
+    "remaining": "PixelLab 도트 생성은 이번 범위 밖. 중앙 배포 미확인.",
+    "outcome": "![검 착용 참조 확대창](../assets/officer-pixellab-composite-20261120/archive.png)\n\n![기존 그림에서 합성한 제출용 PNG](../assets/officer-pixellab-composite-20261120/composite.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "22:17:07 KST 확인 시작. 512px 합성 및 가이드 갱신.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
