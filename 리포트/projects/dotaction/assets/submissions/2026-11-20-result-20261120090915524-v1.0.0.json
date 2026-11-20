@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "픽셀렙 도트 8방향 제작 흐름 정리",
+    "summary": "남녀 마네퀸의 사전 제작 도트 시트를 제거하고 제작 원본으로 PixelLab에서 도트를 생성하도록 가이드를 갱신했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "마네퀸 사전 제작 도트 시트 4개와 참조를 제거했습니다.",
+    "verification": "문서 빌드 성공. 브라우저에서 예제 5장 디코딩 및 실제 화면 캡처.",
+    "remaining": "PixelLab 생성 미실행. 중앙 배포 미확인.",
+    "outcome": "남녀 T포즈와 제작 원본 8방향을 두 열로 표시합니다.\n\n![제작 가이드](../assets/guide-pixellab-directions-20261120/display.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "18:07:11 KST부터 18:09:13 KST까지 작업. 게시 시간 별도.",
+    "xerjEvidence": "로컬 파일 및 브라우저 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
