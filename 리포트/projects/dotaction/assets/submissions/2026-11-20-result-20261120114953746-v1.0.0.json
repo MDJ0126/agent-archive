@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 8방향 몸체 정렬 재보정",
+    "summary": "여성형 마네킹 기준으로 방향별 가슴·허리·골반·엉덩이 윤곽과 손·발 위치를 재보정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "장교 8방향 시트 교체, 장비 없는 몸체 비교 추가. T포즈 보존. 프로젝트 main a58ada69 푸시 확인.",
+    "verification": "방향당 512×512 및 3방향 픽셀 반전 확인. 발바닥 높이 차이 0px. 몸체 마스크 윤곽 겹침 84~91%에서 91~94%로 개선. 웹 빌드와 로컬 윤곽 전환 확인.",
+    "remaining": "의상과 실루엣에는 일부 차이가 남고 외형 승인 대기. 중앙 배포 미확인.",
+    "outcome": "![붉은 장교 8방향](../assets/officer-eight-direction-fit-20261120/caped.png)\n\n![장비 없는 8방향 몸체](../assets/officer-eight-direction-fit-20261120/body.png)\n\n![아카이브 여성형 마네킹 윤곽 비교](../assets/officer-eight-direction-fit-20261120/body-overlay.png)",
+    "proposedTime": "4~7분",
+    "actualTime": "20:43:15 KST 시작, 20:48:40 KST 제작 및 검증 완료. 5분 25초. 커밋과 게시 별도.",
+    "xerjEvidence": "ImageGen, PNG 실측, 로컬 브라우저",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
