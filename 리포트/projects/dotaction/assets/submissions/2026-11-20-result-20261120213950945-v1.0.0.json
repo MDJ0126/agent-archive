@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "스프라이트 제작 관계도 Markdown 분리",
+    "summary": "관계도에 자체 Markdown 원본을 두고 여섯 단계의 입력과 다음 단계를 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "문서 빌드 성공. Chrome에서 Mermaid 렌더와 27개 링크 대상, 8방향 이동 확인.",
+    "remaining": "웹 게시는 미확인.",
+    "outcome": "![단계별 Markdown 관계도](../assets/sprite-guide-relationships-20261121/relationship.png)",
+    "proposedTime": "약 2분",
+    "actualTime": "약 1분, KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
