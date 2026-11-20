@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "생성 PNG 무손실 압축과 아트 중복 정리",
+    "summary": "PNG 1433장 무손실 최적화, 이전 사본·유효하지 않은 임포트 기록 삭제. 작업 파일 약57.38MB 절감.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "생성기와 문서 빌드의 새 아트 경로에 무손실 프로그램 연결. 6개 이전 백업의 정본 매핑·해시 보존, 69개 미사용 import 기록 삭제.",
+    "verification": "2657개 변경 후보의 Git 버전과 PNG 데이터 및 색상 메타데이터 비교. 1224개 바이트 고정 파일 보존. 현재 정규화 목록 1181개 해시 일치. 문서 16페이지·이미지 1026개 빌드. 프로젝트 커밋 9c2c92a5.",
+    "remaining": "원본·편집 중 파일·PixelLab 모션·바이트 고정 계약, APNG 및 서명된 PNG를 보존. 실제 게임 전체 플레이 미확인.",
+    "outcome": "이미지 291119522바이트에서 245508593바이트로 절감. 원본과 동일한 PNG 스캔라인·압축 외 청크 검증. 다음은 적용한 가시추적자 프로필입니다.\n\n![압축 후 가시추적자](../assets/png-lossless-20261120/thorn-profile.png)",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-20 17:58:26 KST 시작. 18:14 KST 프로젝트 커밋 확인. SHA-256 고정 항목과 동시 변경 대조로 예상 초과.",
+    "xerjEvidence": "Node zlib·SHA-256·Git 검증 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
