@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "버전 팝업 닫기 버튼 정렬",
+    "summary": "닫기 버튼을 헤더 오른쪽 끝에 배치했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "헤더 정렬. 프로젝트 ec79dd06 푸시.",
+    "verification": "문서 빌드와 Chrome의 실제 닫기 버튼 우측 정렬 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-motion-picker-close-20261121/archive.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "약 34초, 05:49:13 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
