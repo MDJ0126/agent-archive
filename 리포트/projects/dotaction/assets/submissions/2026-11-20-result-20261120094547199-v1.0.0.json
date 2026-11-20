@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "아카이브 스프라이트 배속과 아이콘",
+    "summary": "애니메이션 제목 옆에 0.25~2배속 슬라이더를 추가하고 재생·방향 버튼을 아이콘으로 변경했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "0.25배 단위 재생 슬라이더, 현재 배속 표시, 접근 가능한 버튼 아이콘.",
+    "verification": "문서 빌드 성공. 브라우저에서 양쪽 배속값, 움직이는 프레임, 일시정지, 방향 아이콘 전환 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![스프라이트 배속](../assets/archive-playback-speed-20261120/playback.gif)",
+    "proposedTime": "3~5분",
+    "actualTime": "18:44:20 KST 시작, 18:45:45 KST 보고 작성.",
+    "xerjEvidence": "로컬 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
