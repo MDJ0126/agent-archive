@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 검격 이펙트 포함 공격 모션 재제작",
+    "summary": "기본 공격 3종, 전진 베기·베기·찌르기, 한 바퀴 발도를 PixelLab에서 검격 효과와 함께 재제작했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기본 횡베기·내려베기·올려베기에 PixelLab 생성 검격이 포함됩니다. 전진기는 독립 시작·종료 자세로 세 타격을 연결했습니다. 발도의 반복 회전 구간을 제외했습니다. 피격 모션은 기존 아카이브 항목을 사용합니다.",
+    "verification": "문서 빌드, 로컬 HTTP에서 합성 없이 생성된 GIF 5종 전송, 개별 생성 프레임과 원본 ZIP 해시를 확인했습니다. 전진기는 검끝 여백을 확보한 세 번째 찌르기 버전을 사용합니다.",
+    "remaining": "신규 모션은 캐릭터 아카이브 검토용입니다. 인게임 연결과 중앙 배포는 미확인입니다.",
+    "outcome": "### 기본 공격 1 · 발도 횡베기\n\n![기본 공격 1 · 발도 횡베기](../assets/officer-pixellab-attacks-20261120/attack.gif)\n\n### 기본 공격 2 · 내려베기\n\n![기본 공격 2 · 내려베기](../assets/officer-pixellab-attacks-20261120/attack2.gif)\n\n### 기본 공격 3 · 올려베기\n\n![기본 공격 3 · 올려베기](../assets/officer-pixellab-attacks-20261120/attack3.gif)\n\n### 전진 3연격 · 베기 → 베기 → 찌르기\n\n![전진 3연격 · 베기 → 베기 → 찌르기](../assets/officer-pixellab-attacks-20261120/special.gif)\n\n### 360° 발도 · 납도에서 일회전\n\n![360° 발도 · 납도에서 일회전](../assets/officer-pixellab-attacks-20261120/spin.gif)",
+    "proposedTime": "7~10분",
+    "actualTime": "23:44 KST 시작, 23:51:37 KST 산출물 저장 (약 7분 7초).",
+    "xerjEvidence": "사용자 지침에 따라 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
