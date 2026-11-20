@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 작업 차감과 잔여 회차 보고 기준",
+    "summary": "결과 보고에 개별 요청 차감량과 계정 잔여 회차를 구분해 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "PixelLab 잔여량 읽기 API 응답을 확인했습니다. 텍스트 지침 변경입니다.",
+    "remaining": "중앙 보고서 배포 미확인.",
+    "outcome": "프로젝트 지침과 제작 지침에 요청 전후 잔여량 조회와 실제 차감량 기록을 추가했습니다.",
+    "proposedTime": "약 1~2분",
+    "actualTime": "03:51 KST 지침 반영 및 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
