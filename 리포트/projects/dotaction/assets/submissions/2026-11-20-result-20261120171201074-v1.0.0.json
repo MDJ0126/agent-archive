@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 끝 이미지 명시 요청 예외",
+    "summary": "등록된 투명 기준 PNG 한 장이 기본이며 끝 이미지는 명시 요청 시에만 추가합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "작업 지침과 캐릭터 제작 가이드 및 웹 가이드를 갱신했습니다.",
+    "verification": "문서 빌드와 실제 웹 문구를 확인하고 스크린샷을 저장했습니다. PixelLab 호출 0회.",
+    "remaining": "중앙 게시 후 접근 미확인.",
+    "outcome": "![제작 가이드의 끝 이미지 예외](../assets/pixellab-end-image-opt-in-20261121/guide.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 3분 15초, 2026-11-21 02:10:53 KST 문서 및 확인 완료",
+    "xerjEvidence": "사용자 지침에 따라 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
