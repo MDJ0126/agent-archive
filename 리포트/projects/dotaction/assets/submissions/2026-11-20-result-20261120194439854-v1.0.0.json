@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 검 각도와 눈 그림자 재시험",
+    "summary": "256×128 생성 16프레임으로 한 번 제출했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "입력 첫 이미지 일치, 17프레임과 GIF 재생, 실제 1회분 소모 확인. 머리 전체의 급격한 명암 변화는 없고 검·검집은 납도 상태입니다.",
+    "remaining": "전진과 숙임이 얕고 검집 각도에 미세한 차이가 있습니다. 검토본으로 보관했습니다.",
+    "outcome": "![검 각도와 눈 그림자 검토 GIF](../assets/officer-special1-angle-lock-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "04:42:53 KST 시작, 04:44:17 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
