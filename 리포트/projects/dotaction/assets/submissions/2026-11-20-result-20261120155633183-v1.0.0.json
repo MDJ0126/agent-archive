@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 제작 교훈과 세션 공통 검수 기준",
+    "summary": "붉은 장교의 실제 입력·모션·아카이브에서 확인한 교훈을 프로젝트 지침, 제작 가이드, 중앙 프로젝트 지침에 반영합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "등록 도트와 실제 시작·끝 PNG 대조, 성공 포즈와 프롬프트 인과 구분, 타격·손·효과·잘림의 프레임 검수, 공급자 원본·아카이브·게임 상태 분리를 통합했습니다. 프로젝트 전용 기준으로 적용합니다.",
+    "verification": "이전 기본 공격 및 특수 공격 요청 JSON을 대조했고, 문서 빌드와 Edge의 검수 기준 네 행 표시를 확인했습니다.",
+    "remaining": "이미 실행 중인 세션의 재로딩과 중앙 페이지 배포는 미확인입니다.",
+    "outcome": "![제작 가이드에서 확인한 PixelLab 교훈](../assets/pixellab-session-lessons-20261121/guide.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "00:54:21 KST 시작, 00:55:52 KST 확인 (1분 31초).",
+    "xerjEvidence": "사용자 지침에 따라 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
