@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Godot 프로젝트 폴더와 캐릭터 프리팹 정리",
+    "summary": "아트·사운드·셰이더를 art에 모으고 씬, 스크립트와 캐릭터 외형 프리팹을 별도 폴더로 정리했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "art/audio와 art/shaders로 리소스를 모으고 전투 수치를 data로 이동했습니다. 진입점·자동 로드·도구·내보내기·문서의 경로를 함께 갱신했습니다.",
+    "verification": "Godot 4.7.2 헤드리스에서 씬과 프리팹 20개, 대표 음원과 셰이더를 로드하고 스플래시에서 마을을 거쳐 첫 5대6 전투까지 진입했습니다. 프로젝트 커밋 3ddd35ae를 main에 푸시했습니다. 폴더 및 경로 정리여서 시각 결과 화면의 변경이 없습니다.",
+    "remaining": "현재 열린 Godot 편집기의 파일 목록 새로고침과 Windows 배포 빌드는 미확인입니다.",
+    "outcome": "씬 14개를 scenes에, 기존 스크립트를 scripts에, 캐릭터 외형 PackedScene 6개를 prefabs/characters에 배치했습니다. 루트에는 프로젝트 설정과 안내 문서가 있습니다.",
+    "proposedTime": "범위 확대 후 5~8분",
+    "actualTime": "2026-11-20 17:49~17:53 KST, 약 4분",
+    "xerjEvidence": "파일 이동 대조와 Godot 직접 로드로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
