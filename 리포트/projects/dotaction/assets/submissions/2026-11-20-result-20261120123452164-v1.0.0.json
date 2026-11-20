@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 T포즈 6시점 위치 정렬",
+    "summary": "여성형 마네퀸의 몸통과 발에 맞춰 여섯 칸을 정수 픽셀로 평행 이동했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "크기와 형태 변환 없이 위치 이동. 칸별 오프셋 기록. 아카이브 갱신. 커밋 1bf22327.",
+    "verification": "정렬 지표 6시점 개선. 실제 아카이브 윤곽선 확인. 웹 빌드 및 모달 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![수정 T포즈](../assets/officer-tpose-position-20261120/tpose.png)\n\n![아카이브의 6시점 T포즈](../assets/officer-tpose-position-20261120/archive.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "21:33:36 KST 확인 시작, 21:34:50 KST 보고 작성.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
