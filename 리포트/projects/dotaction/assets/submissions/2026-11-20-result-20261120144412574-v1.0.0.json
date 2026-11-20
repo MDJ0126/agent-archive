@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 모션별 신·구 버전 비교",
+    "summary": "애니메이션 섹션을 합치고 작은 투명 화살표로 각 모션의 신·구 버전을 전환합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "단일 섹션과 독립 카드 전환. 프로젝트 3ce08140 푸시.",
+    "verification": "문서 빌드, Chrome에서 신·구·신 전환 및 옆 카드 유지 확인. 실제 17프레임 GIF 기록.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![모션별 전환](../assets/officer-motion-versions-20261120/archive.gif)",
+    "proposedTime": "4~7분",
+    "actualTime": "약 2분 37초, 23:43:55 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
