@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 Affinity 레이어 원본과 별도 장비",
+    "summary": "잠긴 여성형 마네퀸을 기준으로 T포즈와 8방향 편집 파일을 만들고, 무기와 장식은 별도 파일에 분리했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 시안의 보이는 파츠를 분리하고 방향별 발 위치를 맞췄습니다. 장비 시안을 새로 그려 6개 레이어로 넣었습니다.",
+    "verification": "Affinity CLI에서 세 .af를 저장하고 다시 열어 각각 4, 5, 6개 레이어와 미저장 없음 및 기준 잠금 확인. 브라우저에서 T포즈 비교·8방향·장비 열기 확인.",
+    "remaining": "기존 그림에서 가려진 부위의 재작화·리깅은 미진행. 장비 시안의 전용 컷아웃 정리 미확인. 중앙 배포 미확인.",
+    "outcome": "![tpose.png](../assets/officer-affinity-layers-20261120/tpose.png)\n\n![directions.png](../assets/officer-affinity-layers-20261120/directions.png)\n\n![equipment.png](../assets/officer-affinity-layers-20261120/equipment.png)\n\n![comparison.gif](../assets/officer-affinity-layers-20261120/comparison.gif)",
+    "proposedTime": "초기 확인 2~3분, 전체 제작 별도",
+    "actualTime": "19:20:50 KST 시작, 19:29:53 KST 보고 작성.",
+    "xerjEvidence": "Affinity CLI, ImageGen 참고 시안, 로컬 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
