@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "Turnlume 지정 작업 폴더 네 곳 정리",
+    "summary": "지정된 네 폴더를 삭제해 45.9 GiB를 줄였습니다. Unity 자산과 문서, 패키지, 프로젝트 설정은 보존했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "오래된 작업 복제본과 검증용 사본, 산출물 폴더를 사용자가 지정한 범위에 따라 삭제했습니다.",
+    "verification": "삭제 경로의 부재와 Assets, Docs, Packages, ProjectSettings, Git 디렉터리의 존재를 확인했습니다. 남긴 폴더를 합산한 크기는 약 12.8 GiB입니다. 시각적 변경이 없는 파일 정리이며 파일시스템 집계를 기록했습니다.",
+    "remaining": "Unity 재실행은 미확인입니다.",
+    "outcome": ".local, WorkFiles/Temp, Tools/Verification/Temp, Artifacts 삭제를 완료했습니다. 삭제 파일의 논리 크기 합계는 49,284,944,050바이트입니다.",
+    "proposedTime": "3~7분",
+    "actualTime": "삭제 및 경로 확인 8분 7초, 2026-11-20 18:01:02 KST",
+    "xerjEvidence": "절대 경로 검증과 파일 크기 합산",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
