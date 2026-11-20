@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "공허의 총잡이 픽셀렙 제출 전 시안",
+    "summary": "일러스트·6시점 T포즈·분리 장비와 무기 없는 8방향 및 5시 대기 참조를 제작했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "방향당 512×512 및 정확한 좌우 반전, 아카이브의 주요 이미지 세 장 확인. PixelLab 미사용.",
+    "remaining": "마네킹 관절 겹침 및 필요한 무기 합성을 포함한 제출용 PNG 최종 검수 대기.",
+    "outcome": "![공허의 총잡이 캐릭터 아카이브](../assets/gunslinger-sprite-concept-20261121/archive.png)",
+    "proposedTime": "캐릭터별 진행",
+    "actualTime": "약 3분, 07:01 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
