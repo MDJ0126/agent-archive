@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "스프라이트 제작 관계도와 단계별 지침",
+    "summary": "제작 가이드를 여섯 단계별 문서로 분리하고 웹 가이드에서 관계도와 예시를 표시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "Chrome에서 관계도 노드 8개, 단계 링크 6개와 참고 이미지 15개 로드 확인.",
+    "remaining": "나머지 용병 개별 제작 및 검수. 웹 배포 미확인.",
+    "outcome": "![스프라이트 제작 관계도](../assets/sprite-guide-workflow-20261121/relationship.png)",
+    "proposedTime": "약 3분",
+    "actualTime": "약 3분, KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
