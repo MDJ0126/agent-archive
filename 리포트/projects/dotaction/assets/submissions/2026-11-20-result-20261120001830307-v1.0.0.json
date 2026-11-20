@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "테이블 건너편 배경 밝기 조정",
+    "summary": "건너편 벽과 대형 공석 의자의 밝기를 낮춰 상판과 구분했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "배경과 공석 의자 렌더에 어두운 색조를 적용했습니다. ![어두워진 건너편 벽과 공석 의자](../assets/20261120-dark-far-table.png)",
+    "verification": "Godot 4.7.2 전투 화면을 엔진 API로 촬영해 벽, 의자, 상판의 대비를 확인했습니다. 웹 문서 빌드 완료.",
+    "remaining": "지휘관이 있는 구역의 배경은 소스 확인이며 해당 화면은 미확인입니다. 게임 패키지 빌드와 배포는 미실행입니다. 지침 변경 없음.",
+    "outcome": "구현 및 실제 전투 화면 확인 완료.",
+    "proposedTime": "구현·캡처 약 2분, 중앙 배포 포함 약 5분",
+    "actualTime": "2026-11-20 09:17:39 KST 시작, 09:18:17 KST 구현·캡처 완료.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
