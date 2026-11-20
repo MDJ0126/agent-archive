@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 지침에 PNG 무손실 최적화 명시",
+    "summary": "기존 AI 작업 기록에 있는 절차를 프로젝트 지침과 캐릭터 제작 문서에 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "AGENTS.md와 docs/character-production.md에 추가.",
+    "verification": "변경 단락 검토 및 Git diff 검사. 프로젝트 main 25ff4e64 푸시.",
+    "remaining": "문서만 변경. 실행 및 빌드 미실행.",
+    "outcome": "생성·교체 후 최종 해시 기록 전 처리, 변경·일괄 처리 옵션과 원본 보존 범위를 명시했습니다. 순수 지침 변경으로 시각 결과 없음.",
+    "proposedTime": "1~2분",
+    "actualTime": "18:22:11~18:23:35 KST 프로젝트 푸시까지 1분24초",
+    "xerjEvidence": "rg·Git 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
