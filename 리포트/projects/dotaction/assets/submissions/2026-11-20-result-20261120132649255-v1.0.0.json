@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 콜라주 단차와 좁은 화면 정리",
+    "summary": "넓은 화면에서 좌우 카드 하단을 맞추고, 좁은 화면에서 이미지 카드를 한 열로 배치했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "반응형 갤러리 스타일 적용. 프로젝트 1d565470 푸시.",
+    "verification": "문서 빌드 성공. 1600px 창에서 카드 하단 차이 0px, 900px 창에서 두 그룹 한 열 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![붉은 장교 상세 콜라주](../assets/officer-collage-align-20261120/archive.png)\n\n![좁은 화면의 세로 배치](../assets/officer-collage-align-20261120/narrow.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "22:24:44 KST 시작, 22:26:27 KST 검증 및 푸시 완료. 약 1분 43초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
