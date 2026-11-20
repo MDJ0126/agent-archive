@@ -30,6 +30,7 @@ const edges = [
   ['global', 'qa', 'required'],
   ['global', 'authoring', 'required'],
   ['global', 'projects', 'required'],
+  ['global', 'reporting-exceptions', 'required'],
   ['work', 'naming', 'reference'],
   ['work', 'style', 'reference'],
   ['qa', 'qa-record', 'reference'],
@@ -69,37 +70,40 @@ export async function buildRelationships(root, projects, shell) {
   const projectDocuments = Object.entries(projects).sort(([, a], [, b]) => a.name.localeCompare(b.name, 'ko'));
   const projectNodes = await Promise.all(projectDocuments.map(([id, project]) =>
     documentNode(`project-${id}`, `../projects/${id}/guidelines.md`, '프로젝트 전용 지침', `projects/${id}/guidelines.md`, id, project.name)));
-  const exceptionNodes = await Promise.all(projectDocuments.map(([id]) => {
+  const reportingProjects = projectDocuments.filter(([id]) => Object.hasOwn(projectReporting, id));
+  const exceptionNodes = await Promise.all(reportingProjects.map(([id, project]) => {
     const label = projectReporting[id];
-    if (!label) {
-      return `<div class="relations-node relations-note" data-node="reporting-${escape(id)}" data-project="${escape(id)}" hidden><strong>보고·공개 예외</strong><small>별도 기준 확인 기록 없음</small></div>`;
-    }
     const file = `관계도/${label}.md`;
-    return documentNode(`reporting-${id}`, file, label, `guide/${file}`, id, '보고·공개 기준');
+    return documentNode(`reporting-${id}`, file, label, `guide/${file}`, '', project.name);
   }));
+  const exceptionFile = '관계도/보고 예외 프로젝트.md';
+  const exceptionRoot = await documentNode('reporting-exceptions', exceptionFile, '보고 예외 프로젝트',
+    `guide/${exceptionFile}`, '', `프로젝트 ${reportingProjects.length}개`);
   const rows = await Promise.all(guideRows.map(async (row, index) => {
     const nodes = await Promise.all(row.map(([id, file, label, source]) => file
       ? documentNode(id, file, label, source ?? `guide/${file}`)
       : `<a class="relations-node" data-node="${id}" href="project-instructions.html"><strong>${label}</strong><small>프로젝트별 문서 목록</small></a>`));
     if (index === 2) nodes.push(`<div class="relations-project">${projectNodes.join('')}</div>`);
-    if (index === 3) nodes.push(`<div class="relations-project">${exceptionNodes.join('')}</div>`);
     return `<div class="relations-row">${nodes.join('')}</div>`;
   }));
   const options = projectDocuments.map(([id, project]) =>
     `<option value="${escape(id)}"${id === 'codex-config' ? ' selected' : ''}>${escape(project.name)}</option>`).join('');
-  const renderedEdges = [...edges, ...projectDocuments.flatMap(([id]) => [
-    ['projects', `project-${id}`, 'reference'],
-    [`project-${id}`, `reporting-${id}`, 'reference'],
-  ])]
+  const renderedEdges = [...edges,
+    ...projectDocuments.map(([id]) => ['projects', `project-${id}`, 'reference']),
+    ...reportingProjects.map(([id]) => ['reporting-exceptions', `reporting-${id}`, 'branch']),
+  ]
     .map(([from, to, kind]) => `<span data-from="${escape(from)}" data-to="${escape(to)}" data-kind="${kind}"></span>`).join('');
   const body = `<main class="relations-page">
     <div class="relations-heading"><h1>관계도 관리</h1><p>중앙 아카이브의 지침과 가이드 연결을 살펴보고, 문서를 눌러 원문을 읽으세요.</p></div>
     <section class="relations-panel" aria-label="Markdown 문서 관계도">
       <div class="relations-toolbar"><div class="relations-legend"><span>적용 지침</span><span>참조 문서</span></div>
-        <label for="relations-project">프로젝트 <select id="relations-project">${options}</select></label>
+        <label for="relations-project">전용 지침 프로젝트 <select id="relations-project">${options}</select></label>
       </div>
       <div class="relations-scroll" tabindex="0" aria-label="문서 관계도, 가로 스크롤 가능">
-        <div class="relations-board"><canvas aria-hidden="true"></canvas>${rows.join('')}</div>
+        <div class="relations-board"><canvas aria-hidden="true"></canvas>${rows[0]}
+          <div class="relations-main-branch">${rows.slice(1).join('')}</div>
+          <div class="relations-exception-branch">${exceptionRoot}<div class="relations-exceptions">${exceptionNodes.join('')}</div></div>
+        </div>
       </div>
     </section>
     <dialog class="relations-dialog" aria-labelledby="relations-title">

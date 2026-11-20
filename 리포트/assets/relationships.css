@@ -1,5 +1,6 @@
 .relations-page {
   width: min(1440px, calc(100% - 40px));
+  max-width: none;
   margin: 38px auto 56px;
 }
 .relations-heading h1 { margin: 0 0 6px; font-size: clamp(1.7rem, 3vw, 2.35rem); }
@@ -45,9 +46,10 @@
 .relations-scroll { overflow: auto; }
 .relations-board {
   position: relative;
-  min-width: 1050px;
+  min-width: 1040px;
   display: grid;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 194px;
+  gap: 48px 24px;
   padding: 34px 20px;
   background-image: linear-gradient(#242b37 1px, transparent 1px), linear-gradient(90deg, #242b37 1px, transparent 1px);
   background-size: 24px 24px;
@@ -66,9 +68,13 @@
   justify-items: center;
   gap: 12px;
 }
-.relations-row:nth-of-type(1) > :first-child { grid-column: 3 / 5; max-width: 182px; }
-.relations-row:nth-of-type(2) > :nth-child(-n + 2) { grid-column: span 2; max-width: 182px; }
-.relations-row:nth-of-type(4) > :first-child { grid-column: 4; }
+.relations-board > .relations-row { grid-column: 1 / -1; }
+.relations-board > .relations-row > :first-child { grid-column: 3 / 5; max-width: 182px; }
+.relations-main-branch { display: grid; gap: 48px; align-content: start; }
+.relations-main-branch > .relations-row:first-child > :nth-child(-n + 2) { grid-column: span 2; max-width: 182px; }
+.relations-main-branch > .relations-row:last-child > :first-child { grid-column: 4; }
+.relations-exception-branch { display: grid; align-content: start; gap: 34px; }
+.relations-exceptions { display: grid; gap: 12px; padding-left: 24px; }
 .relations-project { width: 100%; }
 .relations-node {
   position: relative;
@@ -92,13 +98,16 @@
   cursor: pointer;
 }
 .relations-node[hidden] { display: none; }
-.relations-note { cursor: default; border-style: dashed; }
 .relations-node small { color: #b9c6db; }
-.relations-row:nth-of-type(-n + 2) .relations-node {
+.relations-board > .relations-row .relations-node,
+.relations-main-branch > .relations-row:first-child .relations-node,
+.relations-exception-branch > .relations-node {
   background: #2b271d;
   border-color: #76633f;
 }
-.relations-row:nth-of-type(-n + 2) .relations-node small { color: #decb9d; }
+.relations-board > .relations-row .relations-node small,
+.relations-main-branch > .relations-row:first-child .relations-node small,
+.relations-exception-branch > .relations-node small { color: #decb9d; }
 .relations-node:hover, .relations-node:focus-visible {
   color: #fff;
   outline: 2px solid #ffc46e;

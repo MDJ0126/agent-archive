@@ -31,6 +31,22 @@
       const required = kind === 'required';
       context.strokeStyle = context.fillStyle = required ? '#d4c08b' : '#8193ad';
       context.setLineDash(required ? [] : [5, 5]);
+      if (kind === 'branch') {
+        const tip = end.left - bounds.left - 3;
+        const trunk = tip - 11;
+        const y = end.top + end.height / 2 - bounds.top;
+        context.beginPath();
+        context.moveTo(trunk, y1);
+        context.lineTo(trunk, y);
+        context.lineTo(tip - 5, y);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(tip, y);
+        context.lineTo(tip - 7, y - 4);
+        context.lineTo(tip - 7, y + 4);
+        context.fill();
+        continue;
+      }
       context.beginPath();
       context.moveTo(x1, y1);
       context.bezierCurveTo(x1, mid, x2, mid, x2, y2 - 5);
