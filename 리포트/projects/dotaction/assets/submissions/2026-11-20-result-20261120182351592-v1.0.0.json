@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 공격 준비 자세 손 역할 재요청",
+    "summary": "기준 PNG로 PixelLab에 1컷을 재요청하고 최신 결과를 등록했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "왼손은 검집 입구, 오른손은 검자루에 놓인 납도 상태로 재요청했습니다. 이전 PNG는 보존했습니다.",
+    "verification": "PNG 128×128 및 투명 배경, 확대 육안 확인과 웹 슬롯 로드를 확인했습니다. 1건, 10회분 차감.",
+    "remaining": "모션용 입력으로는 아직 사용하지 않았습니다. 중앙 보고서 배포 미확인.",
+    "outcome": "![공용 준비 자세](../assets/officer-attack-prep-hands-20261121/pose.png)\n\n![교체한 슬롯](../assets/officer-attack-prep-hands-20261121/archive.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "03:21:07 KST 시작, 03:23:19 KST 웹 슬롯 검증",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
