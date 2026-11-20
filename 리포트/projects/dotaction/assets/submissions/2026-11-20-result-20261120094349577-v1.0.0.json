@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "확대 창에서 성별에 맞는 마네퀸 비교",
+    "summary": "원본 8방향 확대 창에서 캐릭터 데이터의 성별에 해당하는 마네퀸만 겹칩니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "classes.gender를 추가했습니다. 장교 여성형, 기사 남성형, 미정 값은 비교 숨김. 데이터 테이블 성별 열과 확대 창을 갱신했습니다.",
+    "verification": "빌드 성공. 브라우저에서 장교·기사의 마네퀸 선택, 켜기와 불투명도, 다른 이미지로 이동 시 숨김 확인. 실제 GIF 2프레임 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![붉은 장교 확대 비교](../assets/modal-mannequin-overlay-20261120/comparison.gif)",
+    "proposedTime": "4~6분",
+    "actualTime": "18:40:52 KST 시작, 18:43:48 KST 보고 작성.",
+    "xerjEvidence": "로컬 문서 및 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
