@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 상세 콜라주에 남은 두 이미지 표시",
+    "summary": "오른쪽 캐릭터 설명 아래에 무기와 장식 및 5시 검 착용 제출용 이미지를 표시했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "아카이브 상세 이미지 카드와 공통 스타일 반영. 프로젝트 2b3a4a4d 푸시.",
+    "verification": "문서 빌드 성공. 다크 모드에서 이미지 표시와 클릭 시 5번·6번 갤러리 항목 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![붉은 장교 상세 콜라주](../assets/officer-collage-side-20261120/archive.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "22:22:23 KST 확인 시작, 결과 확인과 푸시 후 보고 작성.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
