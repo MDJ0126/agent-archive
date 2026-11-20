@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "잿빛 기사 콘셉트 갱신",
+    "summary": "잿빛 기사 일러스트, 6시점 T포즈, 몸체 8방향과 망토 착용 8방향을 단계별로 갱신했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "검토 시안과 기존 분리 장비를 아카이브에 연결. 프로젝트 커밋 a49dac60.",
+    "verification": "방향당 512×512 및 3방향 픽셀 반전 확인. 발바닥 높이 차이 0px. 방향별 발 기준 이동과 일률 배율. 아카이브 남성형 윤곽 표시 확인. 웹 빌드와 로컬 윤곽 전환 확인.",
+    "remaining": "오른쪽 T포즈는 머리 잘림을 막아 발 맞춤 제한. 검·방패 착용 제출 PNG 미제작. 다른 캐릭터는 별도 진행. 중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 일러스트](../assets/knight-concept-refresh-20261120/illustration.png)\n\n![잿빛 기사 T포즈](../assets/knight-concept-refresh-20261120/tpose.png)\n\n![장비 없는 8방향](../assets/knight-concept-refresh-20261120/body.png)\n\n![망토 착용 8방향](../assets/knight-concept-refresh-20261120/cape.png)\n\n![남성형 마네킹 윤곽 비교](../assets/knight-concept-refresh-20261120/archive.png)",
+    "proposedTime": "5~8분",
+    "actualTime": "23:02:06 KST 확인 시작. 23:07:26 KST 보고 작성.",
+    "xerjEvidence": "ImageGen, PNG 실측, 로컬 브라우저",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
