@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 원본 임포트와 쇼츠 중복 ZIP 정리",
+    "summary": "제작 원본과 편집 파일을 유지하면서 캐시와 ZIP 약643MB를 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "Godot 캐시 574070913바이트 및 쇼츠 ZIP 69000583바이트 제거. 제작 도구에 원본 임포트 제외 표시를 추가하고 검수 후 ZIP 자동 생성을 제거했습니다.",
+    "verification": "원본 UID와 런타임 코드·데이터 대조, MLT 편집 폴더와 ZIP 53개 파일 SHA-256 일치, 문서 빌드 16페이지·1024이미지 및 Godot 4.7.2 헤드리스 기본 시작 확인. 프로젝트 main 66ccfa5e 푸시.",
+    "remaining": "전투 전체와 시각 검수는 미확인. Git·정본·문서 미디어는 보존.",
+    "outcome": "현재 작업 폴더 6.76GB. 캐릭터 43개 원본 폴더 임포트를 제외하고, 충돌 없는 실제 파일과 문서 연결을 확인했습니다. 파일 관리 작업이라 시각 결과는 없습니다.",
+    "proposedTime": "5~10분",
+    "actualTime": "17:08:39~17:14:34 KST, 프로젝트 푸시까지 5분55초",
+    "xerjEvidence": "파일·Git 객체·SHA-256 직접 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
