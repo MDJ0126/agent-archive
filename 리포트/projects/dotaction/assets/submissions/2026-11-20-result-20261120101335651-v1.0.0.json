@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 기준 남녀 마네퀸 머리 크기 보정",
+    "summary": "남녀 마네퀸의 머리를 줄이고 현재 장교 원본 8방향과 50% 겹쳐서 비교했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "정면 머리 높이 두 마네퀸 모두 129→121px. 8방향과 T포즈 4직립 시점 보정.",
+    "verification": "브라우저에서 동일 장교에 남녀 각각 50% 합성. 실측 JSON 작성, 문서 빌드 확인.",
+    "remaining": "장교 앞머리 아래의 윤곽과 T포즈 상면·하면은 정합 확인 범위 제외. 중앙 배포 미확인.",
+    "outcome": "![female-comparison.png](../assets/mannequin-officer-head-match/female-comparison.png)\n\n![male-comparison.png](../assets/mannequin-officer-head-match/male-comparison.png)\n\n![female-tpose.png](../assets/mannequin-officer-head-match/female-tpose.png)\n\n![male-tpose.png](../assets/mannequin-officer-head-match/male-tpose.png)\n\n![female-directions.png](../assets/mannequin-officer-head-match/female-directions.png)\n\n![male-directions.png](../assets/mannequin-officer-head-match/male-directions.png)",
+    "proposedTime": "5~8분",
+    "actualTime": "19:09:14 KST 시작, 19:13:34 KST 보고 작성.",
+    "xerjEvidence": "ImageGen 시안, 기존 PNG 머리 부위 편집 및 브라우저 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
