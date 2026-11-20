@@ -1,7 +1,8 @@
 ﻿param(
     [ValidateSet('Pull','Push')][string]$Direction='Pull',
     [string]$Message='Update global Codex instructions',
-    [string]$CodexDirectory=$(if($env:CODEX_HOME){$env:CODEX_HOME}else{Join-Path $env:USERPROFILE '.codex'})
+    [string]$CodexDirectory=$(if($env:CODEX_HOME){$env:CODEX_HOME}else{Join-Path $env:USERPROFILE '.codex'}),
+    [switch]$SkipSkills
 )
 $ErrorActionPreference='Stop'
 $repository=$PSScriptRoot
@@ -15,9 +16,11 @@ $tracked=Join-Path $repository 'AGENTS.md'
 if($Direction -eq 'Push'){
     if(-not (Test-Path -LiteralPath $installed)){throw 'Installed AGENTS.md is missing'}
     Copy-Item -LiteralPath $installed -Destination $tracked
-    Invoke-Git -GitArguments @('add','--','AGENTS.md','Sync.ps1','README.md','.gitignore')
-    & git -C $repository diff --cached --quiet
-    if($LASTEXITCODE -eq 1){Invoke-Git -GitArguments @('commit','-m',$Message)}
+    & (Join-Path $repository 'tools/skills/Export-Skills.ps1') -CodexDirectory $CodexDirectory
+    $syncPaths=@('AGENTS.md','Sync.ps1','README.md','.gitignore','tools/skills')
+    Invoke-Git -GitArguments (@('add','--')+$syncPaths)
+    & git -C $repository diff --cached --quiet -- @syncPaths
+    if($LASTEXITCODE -eq 1){Invoke-Git -GitArguments (@('commit','--only','-m',$Message,'--')+$syncPaths)}
     elseif($LASTEXITCODE -ne 0){throw 'Cannot inspect staged changes'}
     Invoke-Git -GitArguments @('push','-u','origin','HEAD')
 }else{
@@ -39,3 +42,6 @@ if($Direction -eq 'Push'){
 }
 if((Get-FileHash -LiteralPath $installed).Hash -ne (Get-FileHash -LiteralPath $tracked).Hash){throw 'Instruction copy verification failed'}
 Write-Output "Global instructions synchronized: $Direction"
+if($Direction -eq 'Pull' -and -not $SkipSkills){
+    & (Join-Path $repository 'tools/skills/Restore-Skills.ps1') -CodexDirectory $CodexDirectory
+}

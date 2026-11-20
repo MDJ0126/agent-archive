@@ -16,6 +16,8 @@
 리포트/.public-site/
 리포트/access/.wrangler/
 !tools/
+!tools/skills/
+!tools/skills/**
 !tools/affinity-cli/
 !tools/affinity-cli/**
 tools/affinity-cli/.cache/
