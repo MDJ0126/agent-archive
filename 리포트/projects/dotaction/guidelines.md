@@ -1,6 +1,7 @@
 # 2026-11-20 · 피격 모션과 피격 이펙트 분리
 
-- 피격 모션에는 몸체·장비의 충격 반동·휘청임·회복만 포함합니다. 피격 섬광·스파크·충돌선·빔·파티클·혈흔·화면 흔들림 등 피격 이펙트를 모션 프레임에 굽지 않습니다. 필요한 효과는 PixelFX 별도 자산으로 제작하고 게임에서 합성합니다. 모든 PixelLab 피격 프롬프트에 `Animate only the character hit reaction. No hit effects, flashes, sparks, impact lines, beams, particles, blood, or camera shake.`를 명시합니다.
+- 피격 모션은 데미지를 받는 즉시 첫 프레임부터 최대 피격 반동 자세로 표시하고, 이후 원래 준비 자세로 돌아오는 회복 동작만 제작합니다. 피격 전 대기·준비·반동이 점점 커지는 구간·추가 충격·반복 휘청임은 넣지 않습니다. PixelLab first_frame 참조도 최대 피격 자세를 사용하며 기본 대기 자세를 첫 프레임에 붙이지 않습니다. 피격 섬광·스파크·충돌선·빔·파티클·혈흔·화면 흔들림 등 모든 피격 이펙트는 제외합니다. 필요한 효과는 PixelFX 별도 자산으로 게임에서 합성합니다. 모든 피격 프롬프트에 `Frame 1 is already the maximum hit-recoil pose. Animate only recovery back to the ready stance. No anticipation, no build-up, no additional hits, no hit effects, flashes, sparks, impact lines, beams, particles, blood, or camera shake.`를 명시합니다.
+
 
 # 2026-11-20 · 무기 고정과 캐릭터별 공격 콤보
 
