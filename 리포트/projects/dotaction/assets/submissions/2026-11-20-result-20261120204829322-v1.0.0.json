@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 대기 카드 제목 복원",
+    "summary": "캐릭터 아카이브에서 대기 카드의 제목을 복원했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "Chrome에서 제목 대기와 버전 3 / 3 확인.",
+    "remaining": "웹 게시 미확인.",
+    "outcome": "![붉은 장교 대기 카드](../assets/officer-idle-title-20261121/archive-card.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "약 1분, KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
