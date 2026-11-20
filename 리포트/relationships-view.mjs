@@ -5,7 +5,7 @@ import { escapeHTML as escape, renderMarkdown } from './render.mjs';
 const topic = (id, label) => [id, `관계도/${label}.md`, label];
 
 const guideRows = [
-  [topic('global', '전역 지침')],
+  [['global', '../../AGENTS.md', 'AGENTS', 'Global instructions']],
   [
     topic('work', '작업별 지침'),
     topic('qa', '품질 점검 절차'),
@@ -52,7 +52,9 @@ export async function buildRelationships(root, projects, shell) {
   async function documentNode(id, file, label, description = '') {
     const raw = await readFile(path.join(root, 'guide', file), 'utf8');
     const markdown = raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n\s*/, '');
-    const base = file.split('/').map(encodeURIComponent).join('/');
+    const base = id === 'global'
+      ? 'https://github.com/MDJ0126/codex-config/blob/main/AGENTS.md'
+      : file.split('/').map(encodeURIComponent).join('/');
     const title = `${label}.md`;
     const { html, toc } = renderMarkdown(markdown, { bodyMode: true });
     const caption = description || `제목 ${toc.length}개`;
@@ -77,7 +79,7 @@ export async function buildRelationships(root, projects, shell) {
   const exceptionRoot = await documentNode('reporting-exceptions', exceptionFile, '보고 예외 프로젝트',
     `프로젝트 ${reportingProjects.length}개`);
   const rows = await Promise.all(guideRows.map(async row => {
-    const nodes = await Promise.all(row.map(([id, file, label]) => documentNode(id, file, label)));
+    const nodes = await Promise.all(row.map(([id, file, label, description]) => documentNode(id, file, label, description)));
     return `<div class="relations-row">${nodes.join('')}</div>`;
   }));
   const renderedEdges = [...edges,

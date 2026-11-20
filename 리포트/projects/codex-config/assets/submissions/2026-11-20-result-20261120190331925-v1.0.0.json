@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "전역 관계도의 시작점을 실제 AGENTS.md에 연결",
+    "summary": "최상단 노드를 AGENTS.md로 표시하고, 눌렀을 때 저장소 루트의 실제 영어 지침이 열리도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이전 작업에서는 영어 AGENTS.md만 변경해 기존 관계도 시작점이 그대로 남았습니다. 이번에 관계도 빌드를 실제 저장소 루트 파일에 연결했습니다.",
+    "verification": "빌드 및 Chrome에서 최상단 AGENTS.md, 팝업의 Codex Global Instructions 본문, GitHub 원문 링크를 확인했고 실제 화면 두 프레임을 확인했습니다.\n\n![전역 관계도에서 AGENTS.md 영어 원문을 여는 동작](../assets/agents-root-global.gif)",
+    "remaining": "작성 시점의 새 Pages 배포는 미확인입니다.",
+    "outcome": "[전역 관계도](https://mdj0126.github.io/codex-config/guide/relationships.html)에서 루트 AGENTS.md의 영어 지침과 Markdown 원문 링크를 열 수 있습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "3분 5초, 04:03:29 KST 기준",
+    "xerjEvidence": "실제 Markdown 원문, 생성한 HTML과 Chrome 동작을 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
