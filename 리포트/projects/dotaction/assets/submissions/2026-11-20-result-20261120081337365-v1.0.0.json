@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "망자의 주교 외형 재설계 시안",
+    "summary": "깨진 스테인드글라스 아치 안에 검은 가면이 떠 있는 세로형 석조 망령. 길게 뻗은 돌 손으로 푸른 진혼 표식을 새깁니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "새 디자인을 별도 원본으로 보관하고 캐릭터 아카이브에서 검토용으로 표시했습니다.",
+    "verification": "ImageGen 원본을 재열어 1024×1536 치수와 새 실루엣을 확인했습니다. 로컬 캐릭터 아카이브에서 새 일러스트와 검토 대기 라벨을 확인하고 캡처했습니다. 중앙 업데이트 원격 최신 ID 2026-11-20-013을 확인했습니다.",
+    "remaining": "외형 검토 대기. 신규 디자인의 T포즈·8방향·모션·인게임 적용은 미실행입니다.",
+    "outcome": "깨진 스테인드글라스 아치 안에 검은 가면이 떠 있는 세로형 석조 망령. 길게 뻗은 돌 손으로 푸른 진혼 표식을 새깁니다.\n\n![새 디자인 일러스트](../assets/monster-redesign-death_bishop-20261120/illustration.webp)\n\n![캐릭터 아카이브 표시](../assets/monster-redesign-death_bishop-20261120/archive.webp)",
+    "proposedTime": "일러스트 시안 2종 3~6분.",
+    "actualTime": "2026-11-20 17:09:38 KST 착수, 2026-11-20 17:11:56 KST 원본 저장. 실측 경과 2.3분.",
+    "xerjEvidence": "ImageGen과 프로젝트 아카이브 도구 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
