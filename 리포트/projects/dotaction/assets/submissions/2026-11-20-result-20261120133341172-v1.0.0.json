@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "상황별 PixelLab 제출 표 추가",
+    "summary": "첫 도트부터 개별 모션 수정까지 전달할 이미지와 프롬프트·설정을 상황별 표로 추가했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 가이드 원문 및 웹 다큐먼트 동기화. 프로젝트 be871fea 푸시.",
+    "verification": "문서 빌드 성공. 실제 브라우저에서 웹 가이드 본문과 오른쪽 목차, 제출 기준 표 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![다큐먼트 스프라이트 제작 가이드](../assets/pixellab-scenarios-20261120/guide.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "22:32:49 KST 시작, 22:33:23 KST 검증 및 푸시 완료. 약 34초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
