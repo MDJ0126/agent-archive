@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "스프라이트 Windows 절대 경로 복사",
+    "summary": "아카이브의 스프라이트와 기준 이미지 경로를 Windows 절대 경로로 복사합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "경로 복사 버튼과 로컬 파일 URL 처리. 프로젝트 b8df100f 푸시.",
+    "verification": "클립보드에 복사된 절대 경로와 해당 파일 존재를 확인했습니다.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-sprite-copy-absolute-20261121/archive.gif)",
+    "proposedTime": "3~5분",
+    "actualTime": "최초 시작 05:57:52 KST, 절대 경로 보정 약 54초, 06:00:37 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
