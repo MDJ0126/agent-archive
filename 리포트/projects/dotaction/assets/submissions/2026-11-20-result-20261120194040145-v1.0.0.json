@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 전방 런지 준비 자세 제작",
+    "summary": "256×128, 생성 16프레임으로 한 번 제출했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "총 17프레임과 입력 첫 이미지 일치, GIF 재생, 실제 1회분 소모 확인. 다리를 길게 뻗는 동안 상체도 전방으로 낮아집니다.",
+    "remaining": "후반 눈 주변 외에 머리카락 전체가 갑자기 어두워지는 현상이 있어 검토본으로 보관했습니다.",
+    "outcome": "![전방 런지 준비 자세 GIF](../assets/officer-special1-forward-ready-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "04:38:20 KST 시작, 04:40:18 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
