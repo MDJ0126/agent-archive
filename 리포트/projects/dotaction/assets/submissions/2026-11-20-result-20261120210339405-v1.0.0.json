@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 끝 이미지 없는 눈가 그림자 재시안",
+    "summary": "아이들 시작 이미지 단독으로 특수 공격 1을 생성했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "128×128 시작 컷 포함 17프레임. 파지 후 돌풍 표현. 후반에 전신이 어두워지고 초반 검집 각도가 변합니다. 2회 사용, 1670/2000회 남음.",
+    "remaining": "국소 눈가 그림자와 검집 각도 고정 미충족. 아카이브 미채택.",
+    "outcome": "![눈가 그림자 재시안](../assets/officer-delayed-gust-eye-shadow-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "약 1분 50초, 06:03 KST 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
