@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 특수 공격 1 검은 소매 재시안",
+    "summary": "사용자 보정 준비 자세를 끝 이미지로 사용해 한 번 재생성했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "128×128, 17프레임. 손잡이 파지 뒤 돌풍. 전완이 어두우나 팔과 망토 경계에 붉은색이 일부 보입니다. 2회 사용, 1672/2000회 잔여.",
+    "remaining": "끝 컷 픽셀 차이 및 아카이브 채택 검토.",
+    "outcome": "![검은 소매 재시안](../assets/officer-delayed-gust-black-sleeve-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "약 3분 20초, 05:59 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
