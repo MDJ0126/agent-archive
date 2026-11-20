@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 PixelLab 공격 준비 자세 1컷 등록",
+    "summary": "등록된 기준 PNG를 변환 없이 PixelLab에 전송해 준비 자세 한 컷을 생성했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공격 준비 자세 기준 이미지 슬롯에 투명 128×128 PNG를 등록했습니다.",
+    "verification": "입력 해시 일치, 공급자 결과 1장, PNG 알파 및 아카이브의 실제 128×128 이미지 로드를 확인했습니다. API 기록은 10회분입니다.",
+    "remaining": "모션 생성 및 게임 적용은 이번 작업 범위에 포함되지 않습니다. 보고서 페이지 배포 미확인.",
+    "outcome": "![PixelLab 준비 자세](../assets/officer-pixellab-attack-prep-20261121/pose.png)\n\n![캐릭터 아카이브 등록 결과](../assets/officer-pixellab-attack-prep-20261121/archive.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "03:13:09 KST 시작, 03:16:36 KST 아카이브 표시 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
