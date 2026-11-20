@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "모션 버전 정렬과 게임 적용 표시",
+    "summary": "목록을 오름차순으로 정렬하고 현재 선택에 포커스를 맞추며 실제 게임 버전을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "현재 선택 자동 스크롤과 게임 적용 배지. 프로젝트 1b567ec6 푸시.",
+    "verification": "브라우저에서 23개 오름차순, 23번과 18번 재진입 포커스, 게임 적용 배지 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-motion-picker-focus-20261121/archive.gif)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 1분 33초, 05:37:54 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
