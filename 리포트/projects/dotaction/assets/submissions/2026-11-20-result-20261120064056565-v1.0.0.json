@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 · 512 시트 본문 누락 수정",
+    "summary": "512 규격 표시 이름 때문에 제외되던8방향 이미지를 상세 본문에 표시하고 몬스터 분위기 재제작 상태를 반영했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "8방향 원본 표시 이름의 정확 일치 필터를 접두사 필터로 수정했습니다.512칸 규격명이 붙어도 본문 이미지에 포함됩니다. 몬스터 기존 T포즈·방향 시안에는 일러스트 비율/몽환적·음침한·신비스러운 분위기로 재제작 대기 상태를 표시합니다. 신규 제작 지침에 소형 몬스터도 대형과 같은512칸 상세 제작을 명시했습니다. docs/web/sprite-browser.mjs 원문 수정 후 docs/build.mjs로 재생성했습니다.",
+    "verification": "문서 빌드 성공. 실제 웹 문서를 기존 Playwright/Chrome headless API로 렌더했고 세 상세마다 이미지3개 로드 및8방향 원본2048×1024를 확인한 뒤 화면을 저장했습니다. 사용자 포커스 조작 없음. 스크린샷 PNG와 게시 WebP를 재열어 확인했습니다. 테스트/회귀 테스트 미실행.",
+    "remaining": "전체 몬스터의 새 분위기 T포즈/8방향 재제작과 사용자 미감 승인은 진행 중입니다. 이번 수정은 아카이브 본문 누락 해결이며 전체76종 제작 완료가 아닙니다. 본문 공개 웹 서비스 배포는 별도 확인하지 않았으며, 중앙 개별 보고서와 증거 미디어의 HTTPS 접근을 별도 확인합니다.",
+    "outcome": "실제 docs/index.html#sprite-browser의 무덤 포식자·역병 주술사·납골 사냥개 상세에서 일러스트/T포즈/512칸8방향3종 이미지 표시를 확인했습니다. 아래는 실제 아카이브 화면이며 새 분위기 시안 완료 증거가 아닙니다.\n\n![무덤 포식자 실제 아카이브](../assets/pre-pixellab-archive-sync-20261120/illustration.webp)\n\n![역병 주술사 실제 아카이브](../assets/pre-pixellab-archive-sync-20261120/tpose.webp)\n\n![납골 사냥개 실제 아카이브](../assets/pre-pixellab-archive-sync-20261120/directions.webp)",
+    "proposedTime": "아카이브 누락 원인 수정과 실제 화면 확인 약10분. 몬스터 새 분위기 첫 수정본은 별도10~15분 제안.",
+    "actualTime": "확인 기록2026-11-20T06:32:52.440Z부터 보고서 준비 2026-11-20T06:40:49.307Z까지 경과. 아트 생성 및 후속 요청 반영 병행 시간이며 순수 실작업은 별도 미계측. 배포 대기는 푸시 이후 별도.",
+    "xerjEvidence": "기존 파일 API·문서 서버·공식 Playwright SDK 재사용. CLI-Anything 신규 harness/SkillEvaluator 새 스킬 설치 없음. 원격 업데이트 확인011.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
