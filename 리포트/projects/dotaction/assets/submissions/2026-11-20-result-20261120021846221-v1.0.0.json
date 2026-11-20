@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "광신의 집정관 · PixelLab 전 단계 시안",
+    "summary": "위협 일러스트·프로필·정후면 T포즈·분리 장비·5원본+3반전 8방향 제작. 게임 모션은 유지합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "Zealous armored angel archon, head is an enormous pointed empty gold mitre, rigid silver breastplate and tall shield, TWO folded narrow wings behind shoulders, flail of broken halo shards in one hand. Heavy upright rectangular silhouette, visibly unlike a four-winged seraph.\n\n일러스트 자세: Fanatical commanding gesture, one hand thrust toward viewer, other arm pulled backward, torso tall and threatening\n\n일러스트·프로필·몸체 정후면·분리 장비·방향 원본·128 패딩본·대기 참조·출처/프롬프트/해시를 art/characters/광신의집정관에 저장했습니다. 문서 아카이브도 같은 시안으로 연결했습니다. 게임 모션·공격·FX는 교체하지 않았습니다.\n\n### 대화 기록\n사용자 요청: 누락된 캐릭터/몬스터를 PixelLab 전 단계까지 최신화하고 한 종씩 보고. 몬스터 일러스트는 다양한 자세로 위협적이고 무섭게 제작.\n\n금관은 머리 구조 자체로 유지하고 인간 얼굴을 추가하지 않았습니다. 두 날개를 가진 어두운 기본 몸체의 T포즈는 컨셉 기준도이며, 분리 은색 갑옷·자주색 의복·방패·플레일은 장비 컨셉입니다. 실제 공용 리그 호환은 미완료입니다.",
+    "verification": "실제 ImageGen 출력의 외형·T포즈 정후면·분리 장비·5방향을 확인했습니다. 256×128 전체 시트·64칸·NE/NW, E/W, SE/SW 바이트 단위 정확한 반전과32px 중앙 패딩을 확인했습니다. PixelLab 호출0회. 선택한 픽셀 파생본만 tools/normalize-art.mjs 적용. node docs/build.mjs 통과(15페이지). WebP 저장 후 재열기 확인. 게임 실행/회귀 테스트는 범위 밖으로 미실행.",
+    "remaining": "최종 사용자 미감 승인 대기. PixelLab/리그 파츠/모션·FX·음향 신규 제작과 게임 연결은 이번 요청 범위 밖입니다. 전체 최신화의 나머지 대상은 진행 중입니다. SkillEvaluator는 스킬 변경이 없어 비대상, CLI-Anything은 GUI 조작 없이 ImageGen 및 기존 파일 API를 사용하여 비대상. 지침 추가 변경 없음: 기존 제작 규칙 재사용. 업데이트 원격 확인 latest2026-11-20-011, 새 채팅 지침의 개별 시안 직접 표시 적용.",
+    "outcome": "광신의 집정관의 PixelLab 투입 전 제작 묶음을 저장했습니다. 개별 시안 검토 대기이며 전체 캐릭터/몬스터 최신화는 진행 중입니다.\n\n![일러스트](../assets/pre-pixellab-archon-20261120/illustration.webp)\n\n![정후면 T포즈와 분리 장비](../assets/pre-pixellab-archon-20261120/tpose.webp)\n\n![8방향 시트 · 4배 최근접 확대](../assets/pre-pixellab-archon-20261120/directions.webp)",
+    "proposedTime": "전량 제작3~6시간. 종별 제작과 저장·문서 연결·게시를 순서대로 수행.",
+    "actualTime": "이 종 제작·정리 2.9분. 시작 2026-11-20T11:15:09.779000+09:00, 제작 저장 2026-11-20T11:18:05.801260+09:00 (Asia/Seoul). 푸시·배포 대기는 별도 기록.",
+    "xerjEvidence": "지침에 따라 사용하지 않음. 파일 검색 rg, 기존 이미지와 데이터 대조.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
