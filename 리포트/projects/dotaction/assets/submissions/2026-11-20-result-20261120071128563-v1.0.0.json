@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "효과음 Stable Audio·배경음 ACE-Step 제작 도구 도입",
+    "summary": "공식 원본과 CPU 독립 환경을 설치하고 생성 모듈 로딩을 확인했습니다. Stable Audio 모델 접근은401로 차단되며 실제 음원 생성은 미확인입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공식 stable-audio-tools 3241adba 및 ACE-Step ca1e85fe 원본 보존. 각각 Python3.10/3.12·CPU PyTorch2.7.1 독립 설치. tools/audio에 doctor·효과음 생성·음악 API 실행·재설치 스크립트, 버전 잠금과 어두운 판타지 미생성 프리셋 추가. 제작 문서 갱신. 기존 런타임 음원은 유지. 새 스킬 추가가 아니므로 SkillEvaluator 미적용, GUI 자동화 대신 공식 API/CLI 사용. 전역 지침 변경 없음.",
+    "verification": "두 핵심 생성 모듈 import 및 doctor 종료0. docs/build.mjs 성공(16페이지). Hugging Face model_config.json 요청 GatedRepoError401. GTX970 4096MiB 관찰, CPU 구성. 모델 추론 및 게임 청감 검증 미실행. 도구 설정 작업으로 실제 시각·음향 산출물이 없어 캡처/음향 영상 없음. 최신 업데이트 원격 확인 ID2026-11-20-013.",
+    "remaining": "Stable Audio 계정 약관 동의·로그인 필요. ACE-Step 모델 가중치 다운로드·실제 CPU 생성 속도·음질·청감 미확인. 새 음원 게임 연결과 음향 영상은 후속 생성 작업. 중앙 보고서 게시·프로젝트 푸시는 별도로 기록하며 배포는 기다리지 않음.",
+    "outcome": "도구·의존성 설치, 프로젝트 실행 진입점과 버전 잠금 저장 완료. 모델 다운로드·실제 생성·청감은 미완료.",
+    "proposedTime": "10분 이내. 시작2026-11-20 16:04:29 KST.",
+    "actualTime": "설치·모듈 확인16:10:28 KST(5분59초). 보고서 작성2026-11-20 16:11:21 KST.",
+    "xerjEvidence": "공식 원본·로컬 설치·실행 로그 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "partial"
+  }
+}
