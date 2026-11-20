@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 일러스트 표정과 칼집 가림 수정",
+    "summary": "사용자 참고의 차가운 인상을 반영했습니다. 쥔 손과 손잡이는 망토 안에 있고 늘린 칼집 끝만 반대편에 보입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ImageGen 전신 및 얼굴 편집. 일러스트와 문서 갱신. 아카이브 갱신. 커밋 640bf437.",
+    "verification": "투명 배경과 실제 아카이브 표시 확인. 웹 빌드 및 모달 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![수정 일러스트](../assets/officer-illustration-cape-sword-20261120/illustration.png)\n\n![아카이브 일러스트](../assets/officer-illustration-cape-sword-20261120/archive.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "21:46:32 KST 확인 시작, 21:48:38 KST 보고 작성.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
