@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 8방향 피부색 복원",
+    "summary": "노출된 얼굴과 손에 기존 붉은 장교의 피부색을 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "원본 RGB를 피부 영역에서 보정 후 8방향을 구성했습니다.",
+    "verification": "원본 5방향의 모든 알파값이 기존과 동일하고 8방향 PNG를 열어 확인했습니다.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![붉은 장교 8방향](../assets/officer-skin-color-20261120/directions.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "18:23:06 KST 시작, 18:25:10 KST 보고 작성.",
+    "xerjEvidence": "ImageGen 및 로컬 PNG 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
