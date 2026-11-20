@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "용병 7명 5시 방향 제출용 PNG 시안",
+    "summary": "각 캐릭터의 512칸 원본을 보존하고 5시 대기 자세를 별도의 128×128 투명 PNG로 만들었습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "Chrome에서 용병 7명의 제출 전 이미지 링크와 128×128 PNG 로드 확인. 캐릭터 높이 102px와 마네킹 발 기준을 적용했습니다.",
+    "remaining": "마네킹 관절의 시점별 정밀 일치와 무기 가능 합성은 최종 검수 대기. PixelLab 호출 없음.",
+    "outcome": "![제출용 5시 참조](../assets/mercenary-submission-drafts-20261121/archive.png)",
+    "proposedTime": "캐릭터별 진행",
+    "actualTime": "07:02 KST 검수, 전체 약 35분",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
