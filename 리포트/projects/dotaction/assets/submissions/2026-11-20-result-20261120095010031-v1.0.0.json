@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "스프라이트 재생과 방향 버튼 구분",
+    "summary": "방향 전환은 ↔와 현재 방향으로 표시해 재생·일시정지 아이콘과 구분합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "재생·일시정지는 ▶와 ⏸, 방향은 ↔와 왼쪽·오른쪽을 표시합니다.",
+    "verification": "문서 빌드와 실제 브라우저에서 두 상태의 버튼 표시 확인. GIF 두 프레임 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![재생 및 방향 버튼](../assets/distinct-playback-controls-20261120/controls.gif)",
+    "proposedTime": "2~3분",
+    "actualTime": "18:48:47 KST 시작, 18:50:08 KST 보고 작성.",
+    "xerjEvidence": "로컬 브라우저 화면 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
