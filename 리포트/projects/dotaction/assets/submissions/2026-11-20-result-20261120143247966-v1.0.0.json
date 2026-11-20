@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "잿빛 기사 투구 착용 8방향",
+    "summary": "투구 착용 8방향을 아카이브에 연결하고 캐릭터별 대기 자세 기준을 제작 가이드에 반영했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "방향당512×512 8방향 시안, 아카이브와 제작 가이드. 프로젝트 e0cca694 푸시.",
+    "verification": "별도 장교 수정 블록을 보존한 채 대상 문서 빌드 성공. 투구 착용 8방향 PNG 확인.",
+    "remaining": "새 검·방패 착용 5시 제출본은 미제작. 중앙 배포 미확인.",
+    "outcome": "![기존 그림에서 합성한 제출용 PNG](../assets/knight-helmet-turnaround-20261120/equipped.png)",
+    "proposedTime": "4~7분",
+    "actualTime": "약 3분, 23:32 KST 프로젝트 반영.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
