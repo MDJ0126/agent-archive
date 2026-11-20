@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "latest": "2026-11-21-002",
+  "latest": "2026-11-21-003",
   "entries": [
+    {
+      "id": "2026-11-21-003",
+      "date": "2026-11-21",
+      "title": "CampGuardian PixelLab 최종안 제출 승인",
+      "scope": "CampGuardian PixelLab 제작 세션",
+      "source": "AGENTS.md",
+      "summary": "수정·질문 중에는 PixelLab 요청을 보류합니다. 명시적인 최종 제출 지시 후에만 요청하고, 오제출 시 먼저 사과하고 접수·차감 상태를 보고합니다. CampGuardian AGENTS.md를 따릅니다."
+    },
     {
       "id": "2026-11-21-002",
       "date": "2026-11-21",
