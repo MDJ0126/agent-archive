@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "다큐먼트 새로고침 시 선택과 읽던 위치 복원",
+    "summary": "캐릭터 아카이브의 마지막 선택과 문서의 스크롤 위치를 복원합니다. 데이터 하위 시트와 펼친 AI 작업 기록도 주소에 반영합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "선택한 캐릭터·하위 시트·작업 기록을 해시에 기록. 같은 주소의 읽던 위치를 브라우저 기록에 저장. 기존 캐릭터 쿼리 링크 호환. 프로젝트 8d5f94cb 커밋 및 푸시.",
+    "verification": "Chrome file:// 실제 문서에서 잿빛 기사와 스크롤 535px, 하위 시트와 파일 목록 뒤로 가기, 펼친 작업 기록을 확인. 실제 화면으로 만든 6프레임 GIF 확인.",
+    "remaining": "공개 사이트 배포 미확인. 로컬 첨부의 모바일 표시는 미확인.",
+    "outcome": "![로컬 Chrome에서 캐릭터, 하위 시트, 작업 기록을 새로고침한 실제 화면](../assets/docs-reading-position-20261120/reload.gif)",
+    "proposedTime": "5~8분",
+    "actualTime": "23:17:37 KST 시작, 23:20:10 KST 동작 확인, 23:21:29 KST 보고 작성.",
+    "xerjEvidence": "소스 대조, Playwright Chrome, Git",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
