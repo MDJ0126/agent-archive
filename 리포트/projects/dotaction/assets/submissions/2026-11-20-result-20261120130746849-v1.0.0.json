@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 무기와 장식 구역선 제거",
+    "summary": "붉은 장교 무기와 장식 시트의 구역선에 투명도를 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "시트 PNG와 다큐먼트 이미지 버전 갱신. 프로젝트 7b19ba92 푸시.",
+    "verification": "문서 빌드 성공. 실제 무기와 장식 확대창 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![무기와 장식 확대창](../assets/officer-weapon-divider-20261120/archive.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "22:06:54 KST 시작, 22:07:25 KST 검증 및 푸시 완료. 약 31초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
