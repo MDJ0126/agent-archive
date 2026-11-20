@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 공격 준비 전환 재시안",
+    "summary": "아이들 기준 이미지에서 공격 준비 자세로 전환하는 PixelLab 모션을 제작했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "128×128 출력 17프레임. 시작 프레임 일치. 끝 프레임 픽셀 불일치. 팔의 노출과 망토·머리카락 움직임 확인. 2회 소모, 1676/2000회 잔여.",
+    "remaining": "눈 그림자 연출은 약하며 캐릭터 아카이브 채택은 검토 대기.",
+    "outcome": "![공격 준비 전환](../assets/officer-idle-ready-cape-flare-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "약 2분, 05:37 KST 생성 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
