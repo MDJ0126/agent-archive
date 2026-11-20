@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "캐릭터 결과를 개별 시안과 모션 GIF로 직접 보고하도록 전역 지침 갱신",
+    "summary": "보고서 전체 화면 대신 개별 일러스트·T포즈·8방향과 모션별GIF를 직접 표시하도록 전역 지침010을 추가했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "캐릭터·아트결과는게시된개별시안을종류별로직접표시하고, PixelLab결과는모션별실제GIF를직접표시합니다. 보고서화면전체캡처·링크·대표모음만으로대체하지않습니다. 중앙보고서에도동일개별미디어를표시하고배포후확인한HTTPS주소를채팅에사용합니다.",
+    "verification": "설치본/저장소원문 SHA256 ab321dc3c9a67efa0ba2cc730183e7169ce51d22f9626c091b6eff2d98388138 일치확인. 최신원격009확인후010추가. 순수텍스트지침설정이며별도시각결과없음. 실제적용사례는같은커밋의잿빛기사PixelLab개별GIF보고서. 스킬변경없어SkillEvaluator비대상, 공식API재사용으로새CLIharness작성없음. 테스트추가없음.",
+    "remaining": "다른PC동기화와실행중다른세션자동로딩은미확인. 중앙페이지배포는publication에서구분확인.",
+    "outcome": "설치본과저장소정본동기화·SHA256일치, 업데이트010과개별보고서동일커밋게시.",
+    "proposedTime": "PixelLab제작과함께진행",
+    "actualTime": "2026-11-20 10:30:06 KST 요청시작, 10:32경지침저장. 전체게시완료시각·실측은publication기록.",
+    "xerjEvidence": "사용자 지침에 따라 미사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
