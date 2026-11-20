@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 T포즈 측면과 후면 입체감 수정",
+    "summary": "후면과 측면의 바지 명암을 다듬고 측면 군복의 가슴 윤곽을 소폭 보정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "후면 및 좌우 측면의 국소 수정. 아카이브 갱신. 커밋 34e1d455.",
+    "verification": "지정 부위 외 T포즈 픽셀 동일. 웹 빌드 및 모달 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![수정 T포즈](../assets/officer-tpose-hip-line-20261120/tpose.png)\n\n![아카이브의 6시점 T포즈](../assets/officer-tpose-hip-line-20261120/archive.png)\n\n![후면과 측면 전후 비교](../assets/officer-tpose-hip-line-20261120/compare.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "21:27:13 KST 확인 시작, 21:29:58 KST 보고 작성.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
