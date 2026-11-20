@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "latest": "2026-11-21-008",
+  "latest": "2026-11-21-009",
   "entries": [
+    {
+      "id": "2026-11-21-009",
+      "date": "2026-11-21",
+      "title": "PixelLab 소모량·잔여량 전역 보고",
+      "scope": "모든 프로젝트의 PixelLab 사용",
+      "source": "AGENTS.md",
+      "summary": "PixelLab 사용 보고는 실제 차감량과 잔여 회차만 기록합니다."
+    },
     {
       "id": "2026-11-21-008",
       "date": "2026-11-21",
