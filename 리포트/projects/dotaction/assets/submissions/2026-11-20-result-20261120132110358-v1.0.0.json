@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 갤러리 이미지 순서 정리",
+    "summary": "기존 도트 참조를 갤러리에서 제외하고 장비 없는 8방향과 장비 착용 시안을 순서대로 배치했습니다. PixelLab 제출용을 마지막에 뒀습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "아카이브 참조 목록과 생성 페이지 갱신. 프로젝트 38469c04 푸시.",
+    "verification": "문서 빌드 성공. 실제 모달 6개 항목 순서와 마지막 이미지 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![붉은 장교 갤러리 순서](../assets/officer-gallery-order-20261120/archive.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "22:20:06 KST 확인 시작, 22:20:47 KST 검증 및 푸시 완료. 약 41초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
