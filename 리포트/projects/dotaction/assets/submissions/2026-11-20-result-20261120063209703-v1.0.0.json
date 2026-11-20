@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 실제 몸체 점유 크기와 모션 요청 기준 반영",
+    "summary": "캔버스와 몸체 해상도를 구분하고 신규 일반 인간형 높이90~100px, 발 기준점 및 모션 크기 유지 기준을 제작 가이드에 반영했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "128칸 일반 인간형 대기 몸체 높이90~100px 기본 목표, 입력 참조 준비, 전 모션 픽셀 밀도 유지, 큰 동작256칸 확장, 기준점 변환과 실측 기록, 영문 요청 예시 추가. 기존 원본과 장교(64,88)는 보존합니다. 순수 제작 지침 변경으로 게임 시각 결과와 신규 촬영은 없습니다. 기존 지침에 이번 확정 기준을 통합했습니다.",
+    "verification": "node docs/build.mjs 성공:15페이지·이미지1030개. 원문 두 곳에서 신규 절 확인. 테스트는 요청 범위가 아니므로 실행하지 않았습니다. SkillEvaluator·CLI-Anything은 스킬 설치/평가 및 앱 자동화가 없어 적용 대상이 아닙니다. 원격 업데이트 조회 실패, 알려진 ID2026-11-20-012 적용.",
+    "remaining": "실제 캐릭터 재제작과 게임 원본 교체는 이번 요청 범위 밖입니다. 중앙 보고서 푸시·배포·HTTPS 접근은 등록 후 확인합니다.",
+    "outcome": "제작 지침 원문과 웹 제작 가이드 수정 및 문서 빌드 완료. 중앙 게시 접근은 별도 확인 대상입니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-20 15:30:37~15:31:24 KST, 문서 수정·빌드 약47초. 보고 등록·배포 대기 별도.",
+    "xerjEvidence": "rg로 관련 제작 가이드만 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
