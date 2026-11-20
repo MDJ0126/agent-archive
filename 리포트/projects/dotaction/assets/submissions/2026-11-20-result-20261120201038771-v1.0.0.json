@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 망토 걷기와 나비 파지 연출",
+    "summary": "시작·끝 이미지로 PixMiniMax 24프레임을 한 번 생성하고 PixelFX 나비를 검집 파지 시점에 합성했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "25개 공급자 프레임과 첫 프레임 일치, 파지 후보인 25번째 프레임에 나비 분리 시작, GIF 재생과 소모량 3회분을 확인했습니다.",
+    "remaining": "호흡과 검집을 잡는 순간이 미세하며 끝 프레임은 지정 PNG와 픽셀 단위로 일치하지 않습니다. 게임 적용은 미진행입니다.",
+    "outcome": "![망토와 나비 합성 GIF](../assets/officer-cape-butterfly-ready-20261121/combined.gif)",
+    "proposedTime": "3~6분",
+    "actualTime": "05:05:46 KST 시작, 05:10:12 KST 합성 GIF 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
