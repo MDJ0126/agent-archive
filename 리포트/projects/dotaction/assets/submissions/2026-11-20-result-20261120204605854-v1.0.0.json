@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "공격 준비 자세 정렬과 현재 선택 표시",
+    "summary": "공격 준비 카드 위치를 통일하고 버전 팝업 상단에 현재 선택 번호를 상시 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "카드 중첩 그리드 해제와 현재 선택 강조. 프로젝트 0db74dcf 푸시.",
+    "verification": "브라우저에서 미리보기 네 개 중심 높이와 25개 버전 중 18번 재진입 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-reference-focus-fix-20261121/archive.gif)\n\n![공격 준비 카드 정렬](../assets/archive-reference-focus-fix-20261121/archive.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 1분 20초, 05:45:48 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
