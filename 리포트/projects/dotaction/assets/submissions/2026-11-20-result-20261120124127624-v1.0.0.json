@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "다크 모드 문서 목록 가독성 수정",
+    "summary": "다크 모드 본문 컨테이너에 테마 전경색을 적용해 목록 글자와 번호 대비를 복원했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 스타일과 생성 페이지 캐시 버전 변경. 프로젝트 0995bdfc 푸시.",
+    "verification": "문서 빌드 성공. 실제 브라우저에서 라이트 및 다크 모드의 목록 글자와 번호 색상 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![다큐먼트 스프라이트 제작 가이드](../assets/guide-dark-list-20261120/dark.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "21:40:22 KST 시작, 21:41:09 KST 검증 및 푸시 완료. 약 47초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
