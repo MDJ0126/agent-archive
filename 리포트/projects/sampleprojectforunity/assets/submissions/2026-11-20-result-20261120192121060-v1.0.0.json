@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "sampleprojectforunity",
+    "kind": "result",
+    "title": "샘플 다큐먼트와 README의 AGENTS.md 관계도 이름 통일",
+    "summary": "실제 지침 문서가 출발점인 탐색 화면의 표시명을 AGENTS.md 관계도로 통일했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자는 전역 및 샘플 프로젝트의 기존 관계도 이름을 AGENTS.md를 중심으로 통일해 달라고 요청했습니다.",
+    "verification": "다큐먼트 목차와 본문·탭 제목, 소개와 README 링크를 AGENTS.md 관계도로 표시합니다. Chrome에서 제목·목차와 문서 진입을 확인했고, 00b38af를 main에 푸시했습니다.\n\n![실제 AGENTS.md 관계도 확인 화면](../assets/agents-name-sample.png)",
+    "remaining": "보고서 작성 시점에는 해당 이름의 공개 배포를 확인 중입니다.",
+    "outcome": "페이지와 진입 링크에서 AGENTS.md 관계도 이름을 확인할 수 있습니다.",
+    "proposedTime": "구현·검증 3~5분",
+    "actualTime": "1분 43초 경과, 04:21:17 KST 기준",
+    "xerjEvidence": "로컬 문서와 실제 브라우저 화면을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

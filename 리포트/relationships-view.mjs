@@ -74,10 +74,10 @@ export async function buildRelationships(root, _projects, shell) {
     return `<span data-from="${escape(parent)}" data-to="${escape(id)}" data-kind="${kind}"></span>`;
   }).join('');
   const body = `<main class="relations-page">
-    <div class="relations-heading"><h1>관계도 관리</h1><p>전역 AGENTS.md의 문서 트리에서 공통 가이드와 프로젝트별 보고 예외를 확인하세요.</p></div>
-    <section class="relations-panel" aria-label="Markdown 문서 관계도">
+    <div class="relations-heading"><h1>AGENTS.md 관계도</h1><p>전역 AGENTS.md의 문서 트리에서 공통 가이드와 프로젝트별 보고 예외를 확인하세요.</p></div>
+    <section class="relations-panel" aria-label="AGENTS.md 관계도">
       <div class="relations-toolbar"><div class="relations-legend"><span>적용 지침</span><span>참조 문서</span></div></div>
-      <div class="relations-scroll" tabindex="0" aria-label="문서 관계도, 가로 스크롤 가능">
+      <div class="relations-scroll" tabindex="0" aria-label="AGENTS.md 관계도, 가로 스크롤 가능">
         <div class="relations-board"><canvas aria-hidden="true"></canvas>${rowHtml[0]}
           <div class="relations-main-branch">${rowHtml.slice(1).join('')}</div>
           <div class="relations-exception-branch">${exceptionCards[0].card}<div class="relations-exceptions">${exceptionCards.slice(1).map(entry => entry.card).join('')}</div></div>
@@ -91,7 +91,7 @@ export async function buildRelationships(root, _projects, shell) {
     </dialog>
     <template id="relations-edges">${edges}</template>${entries.map(entry => entry.preview).join('')}
   </main><script defer src="../assets/relationships.js"></script>`;
-  const html = shell('관계도 관리', body, '../').replace('</head>',
+  const html = shell('AGENTS.md 관계도', body, '../').replace('</head>',
     '<link rel="stylesheet" href="../assets/relationships.css"></head>');
   await writeFile(path.join(root, 'guide/relationships.html'), html);
 }
