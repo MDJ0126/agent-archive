@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 정면 T포즈 재작화",
+    "summary": "붉은 장교 정면 한 칸을 ImageGen으로 다시 그렸습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "정면 한 칸 교체. 아카이브 갱신. 커밋 64edc2d6.",
+    "verification": "나머지 다섯 칸 픽셀 동일. 웹 빌드 및 모달 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![새 정면 T포즈](../assets/officer-tpose-front-redrawn-20261120/front.png)\n\n![아카이브의 6시점 T포즈](../assets/officer-tpose-front-redrawn-20261120/archive.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "21:04:56 KST 확인 시작, 21:06:12 KST 보고 작성.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
