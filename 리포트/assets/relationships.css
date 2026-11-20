@@ -33,16 +33,6 @@
   border-top: 2px solid #d4c08b;
 }
 .relations-legend span + span::before { border-top: 2px dashed #8193ad; }
-.relations-toolbar select {
-  max-width: min(220px, 56vw);
-  margin-left: 6px;
-  padding: 5px 8px;
-  background: #202633;
-  color: #edf2fb;
-  border: 1px solid #536077;
-  border-radius: 6px;
-  font: inherit;
-}
 .relations-scroll { overflow: auto; }
 .relations-board {
   position: relative;
@@ -63,19 +53,18 @@
 }
 .relations-row {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
   gap: 12px;
 }
 .relations-board > .relations-row { grid-column: 1 / -1; }
-.relations-board > .relations-row > :first-child { grid-column: 3 / 5; max-width: 182px; }
+.relations-board > .relations-row > :first-child { grid-column: 1 / -1; max-width: 182px; }
 .relations-main-branch { display: grid; gap: 48px; align-content: start; }
 .relations-main-branch > .relations-row:first-child > :nth-child(-n + 2) { grid-column: span 2; max-width: 182px; }
 .relations-main-branch > .relations-row:last-child > :first-child { grid-column: 4; }
 .relations-exception-branch { display: grid; align-content: start; gap: 34px; }
 .relations-exceptions { display: grid; gap: 12px; padding-left: 24px; }
-.relations-project { width: 100%; }
 .relations-node {
   position: relative;
   display: grid;
@@ -97,7 +86,6 @@
   font-size: .9rem;
   cursor: pointer;
 }
-.relations-node[hidden] { display: none; }
 .relations-node small { color: #b9c6db; }
 .relations-board > .relations-row .relations-node,
 .relations-main-branch > .relations-row:first-child .relations-node,

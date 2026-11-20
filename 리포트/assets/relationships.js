@@ -4,7 +4,6 @@
   const context = canvas.getContext('2d');
   const nodes = new Map([...board.querySelectorAll('[data-node]')].map(node => [node.dataset.node, node]));
   const edges = document.querySelector('#relations-edges').content.children;
-  const select = document.querySelector('#relations-project');
   const dialog = document.querySelector('.relations-dialog');
   const article = dialog.querySelector('.relations-document');
   const sourceLink = dialog.querySelector('.relations-source');
@@ -20,7 +19,6 @@
     context.lineWidth = 1.5;
     for (const { dataset: { from, to, kind } } of edges) {
       const target = nodes.get(to);
-      if (target.hidden) continue;
       const start = nodes.get(from).getBoundingClientRect();
       const end = target.getBoundingClientRect();
       const x1 = start.left + start.width / 2 - bounds.left;
@@ -59,13 +57,6 @@
     }
   }
 
-  select.addEventListener('change', () => {
-    for (const node of nodes.values()) {
-      if (node.dataset.project) node.hidden = node.dataset.project !== select.value;
-    }
-    draw();
-  });
-
   function showDocument(node) {
     const { preview, title } = node.dataset;
     const base = new URL(preview, location.href);
@@ -100,7 +91,7 @@
     }
     const related = event.target.closest('.relations-document a');
     const node = related && documents.get(related.href);
-    if (node && !node.hidden && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+    if (node && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
       event.preventDefault();
       showDocument(node);
       dialog.querySelector('button').focus();

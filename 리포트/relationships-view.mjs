@@ -10,7 +10,6 @@ const guideRows = [
     topic('work', '작업별 지침'),
     topic('qa', '품질 점검 절차'),
     topic('authoring', '결과 보고 기준'),
-    ['projects', null, '프로젝트 전용 지침'],
   ],
   [
     topic('naming', '네이밍 규칙'),
@@ -29,7 +28,6 @@ const edges = [
   ['global', 'work', 'required'],
   ['global', 'qa', 'required'],
   ['global', 'authoring', 'required'],
-  ['global', 'projects', 'required'],
   ['global', 'reporting-exceptions', 'required'],
   ['work', 'naming', 'reference'],
   ['work', 'style', 'reference'],
@@ -51,53 +49,45 @@ const projectReporting = {
 
 export async function buildRelationships(root, projects, shell) {
   const previews = [];
-  async function documentNode(id, file, label, source, project = '', projectLabel = '') {
-    const raw = await readFile(path.join(root, source), 'utf8');
+  async function documentNode(id, file, label, description = '') {
+    const raw = await readFile(path.join(root, 'guide', file), 'utf8');
     const markdown = raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n\s*/, '');
     const base = file.split('/').map(encodeURIComponent).join('/');
     const title = `${label}.md`;
     const { html, toc } = renderMarkdown(markdown, { bodyMode: true });
-    const caption = projectLabel || `제목 ${toc.length}개`;
+    const caption = description || `제목 ${toc.length}개`;
     const sections = /^#\s/.test(markdown) ? toc.slice(1) : toc;
     const contents = sections.length > 3
       ? `<details class="relations-contents"><summary>이 문서의 목차</summary><ul>${sections.map(({ id, label }) =>
         `<li><a href="#${id}" data-jump="${id}">${label}</a></li>`).join('')}</ul></details>`
       : '';
     previews.push(`<template id="preview-${escape(id)}">${contents}${html}</template>`);
-    return `<button type="button" class="relations-node" data-node="${escape(id)}" data-preview="${escape(base)}" data-project="${escape(project)}" data-title="${escape(title)}"${project && project !== 'codex-config' ? ' hidden' : ''}><strong>${escape(title)}</strong><small>${escape(caption)}</small></button>`;
+    return `<button type="button" class="relations-node" data-node="${escape(id)}" data-preview="${escape(base)}" data-title="${escape(title)}"><strong>${escape(title)}</strong><small>${escape(caption)}</small></button>`;
   }
 
-  const projectDocuments = Object.entries(projects).sort(([, a], [, b]) => a.name.localeCompare(b.name, 'ko'));
-  const projectNodes = await Promise.all(projectDocuments.map(([id, project]) =>
-    documentNode(`project-${id}`, `../projects/${id}/guidelines.md`, '프로젝트 전용 지침', `projects/${id}/guidelines.md`, id, project.name)));
-  const reportingProjects = projectDocuments.filter(([id]) => Object.hasOwn(projectReporting, id));
+  const reportingProjects = Object.entries(projects)
+    .filter(([id]) => Object.hasOwn(projectReporting, id))
+    .sort(([, a], [, b]) => a.name.localeCompare(b.name, 'ko'));
   const exceptionNodes = await Promise.all(reportingProjects.map(([id, project]) => {
     const label = projectReporting[id];
     const file = `관계도/${label}.md`;
-    return documentNode(`reporting-${id}`, file, label, `guide/${file}`, '', project.name);
+    return documentNode(`reporting-${id}`, file, label, project.name);
   }));
   const exceptionFile = '관계도/보고 예외 프로젝트.md';
   const exceptionRoot = await documentNode('reporting-exceptions', exceptionFile, '보고 예외 프로젝트',
-    `guide/${exceptionFile}`, '', `프로젝트 ${reportingProjects.length}개`);
-  const rows = await Promise.all(guideRows.map(async (row, index) => {
-    const nodes = await Promise.all(row.map(([id, file, label, source]) => file
-      ? documentNode(id, file, label, source ?? `guide/${file}`)
-      : `<a class="relations-node" data-node="${id}" href="project-instructions.html"><strong>${label}</strong><small>프로젝트별 문서 목록</small></a>`));
-    if (index === 2) nodes.push(`<div class="relations-project">${projectNodes.join('')}</div>`);
+    `프로젝트 ${reportingProjects.length}개`);
+  const rows = await Promise.all(guideRows.map(async row => {
+    const nodes = await Promise.all(row.map(([id, file, label]) => documentNode(id, file, label)));
     return `<div class="relations-row">${nodes.join('')}</div>`;
   }));
-  const options = projectDocuments.map(([id, project]) =>
-    `<option value="${escape(id)}"${id === 'codex-config' ? ' selected' : ''}>${escape(project.name)}</option>`).join('');
   const renderedEdges = [...edges,
-    ...projectDocuments.map(([id]) => ['projects', `project-${id}`, 'reference']),
     ...reportingProjects.map(([id]) => ['reporting-exceptions', `reporting-${id}`, 'branch']),
   ]
     .map(([from, to, kind]) => `<span data-from="${escape(from)}" data-to="${escape(to)}" data-kind="${kind}"></span>`).join('');
   const body = `<main class="relations-page">
-    <div class="relations-heading"><h1>관계도 관리</h1><p>중앙 아카이브의 지침과 가이드 연결을 살펴보고, 문서를 눌러 원문을 읽으세요.</p></div>
+    <div class="relations-heading"><h1>관계도 관리</h1><p>전역 지침과 공통 가이드, 프로젝트별 보고 예외를 확인하세요.</p></div>
     <section class="relations-panel" aria-label="Markdown 문서 관계도">
       <div class="relations-toolbar"><div class="relations-legend"><span>적용 지침</span><span>참조 문서</span></div>
-        <label for="relations-project">전용 지침 프로젝트 <select id="relations-project">${options}</select></label>
       </div>
       <div class="relations-scroll" tabindex="0" aria-label="문서 관계도, 가로 스크롤 가능">
         <div class="relations-board"><canvas aria-hidden="true"></canvas>${rows[0]}
