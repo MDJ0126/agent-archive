@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 장보폭 저자세 재시험",
+    "summary": "가로 256×128, 생성 16프레임으로 한 번 요청했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "총 17프레임, 입력 첫 이미지 일치, GIF 재생 및 소모량 1회분 확인. 앞발을 크게 뻗고 몸을 낮추며 후반 자세를 유지합니다.",
+    "remaining": "눈 그림자가 가장 낮은 자세에 가까워진 후반에 두드러지며, 검집 각도는 초기와 다릅니다. 기존 적용본은 유지했습니다.",
+    "outcome": "![장보폭 저자세 검토 GIF](../assets/officer-special1-long-low-ready-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "04:45:49 KST 시작, 04:47:28 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
