@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 지침에서 전역 응답 규칙 중복 제거",
+    "summary": "사과 원칙은 전역에서 관리하고 PixelLab의 접수·차감 확인과 추가 호출 중단 절차를 유지합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "문서 빌드와 생성 HTML의 중복 문구 제거를 확인했습니다. 텍스트 문구 수정입니다.",
+    "remaining": "",
+    "outcome": "프로젝트 지침과 제작 가이드에서 중복 문구를 제거했습니다.",
+    "proposedTime": "약 1분",
+    "actualTime": "02:14:26 KST 시작. 문서 수정 및 빌드 확인.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
