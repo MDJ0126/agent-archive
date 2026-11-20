@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "잿빛 기사 5시 대기 자세 시안",
+    "summary": "투구 착용 8방향의 SE를 참조해 검과 방패를 든 대기 자세 시안을 만들었습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "검토용 512×512 투명 PNG.",
+    "verification": "생성 시안의 방향과 그립, PNG 해상도 및 알파 확인.",
+    "remaining": "사용자 시안 검토 후 가이드 반영. 중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 5시 대기 시안](../assets/knight-helmet-idle-20261120/equipped.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 1분 5초, 23:34:51 KST 시안 저장.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
