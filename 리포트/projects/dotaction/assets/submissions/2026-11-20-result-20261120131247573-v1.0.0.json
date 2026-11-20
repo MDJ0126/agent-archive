@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 PixelLab 5시 검 착용 참조",
+    "summary": "기존 대기 첫 프레임에서 이미 검을 착용한 모습을 128×128 PNG로 분리했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "착용 참조 PNG와 아카이브 확대 항목 추가. 프로젝트 bc7c8ae7 푸시.",
+    "verification": "문서 빌드 성공. 아카이브 참조 PNG의 실제 치수 128×128 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![검 착용 참조 확대창](../assets/officer-pixellab-equipped-20261120/archive.png)\n\n![검 착용 참조 4배 확대](../assets/officer-pixellab-equipped-20261120/equipped-4x.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "22:10:52 KST 확인 시작, 22:12:24 KST 검증 및 푸시 완료. 약 1분 32초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
