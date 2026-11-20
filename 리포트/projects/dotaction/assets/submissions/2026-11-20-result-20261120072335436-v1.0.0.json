@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "프로젝트 보고서 중복 파일 정리와 용량 관리 지침",
+    "summary": "원본과 해시가 같은 보고서 중복 파일 553개, 약3.03GB 정리",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "중앙 저장소와 도구 환경 재사용·임시 자원 정리 규칙을 프로젝트 AGENTS.md와 AI 작업 기록에 추가. 기본 조회 모드의 해시 기반 정리 스크립트 추가.",
+    "verification": "삭제553개 부재 및 보존 파일 SHA-256 일치 확인. docs/build.mjs 성공. 게임 코드 변경 없이 빌드·실행·테스트 미실행.",
+    "remaining": "미게시 변경 포함 보고서 폴더와 유일 녹화·모델은 보존. 중앙 배포 미확인. 원격 업데이트 조회 실패. SkillEvaluator·CLI-Anything 적용 대상 아님.",
+    "outcome": "중복 보고서 파일만 제거하고 유일 원본·AI 환경·Git 이력·미게시 변경은 보존했습니다. 순수 파일 정리·설정으로 시각 변화와 촬영 대상이 없습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "2026-11-20 16:19:53 KST 시작, 파일 정리·지침 갱신과 검증 시각 2026-11-20 16:22:42 KST. 최종 시간은 채팅에 기록.",
+    "xerjEvidence": "rg와 PowerShell 파일·해시 비교 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
