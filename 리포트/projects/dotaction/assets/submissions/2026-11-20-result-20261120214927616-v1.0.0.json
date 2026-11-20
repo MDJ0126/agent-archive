@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "밤의 암살자 픽셀렙 제출 전 시안",
+    "summary": "일러스트·6시점 T포즈·분리 장비와 무기 없는 8방향 및 5시 대기 참조를 제작했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "방향당 512×512 및 정확한 좌우 반전, 아카이브의 세 가지 주요 이미지 확인. PixelLab 사용 없음.",
+    "remaining": "마네킹 관절 정렬과 최종 제출용 합성 검수 대기.",
+    "outcome": "![캐릭터 아카이브](../assets/rogue-sprite-concept-20261121/archive.png)",
+    "proposedTime": "캐릭터별 진행",
+    "actualTime": "약 4분, 06:49 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
