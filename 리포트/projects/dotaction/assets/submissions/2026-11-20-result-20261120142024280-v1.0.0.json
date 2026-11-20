@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "잿빛 기사 장비와 5시 PixelLab 제출본",
+    "summary": "망토 착용 8방향의 5시 칸에서 장검과 십자 방패 원화를 합성하고 오른쪽 콜라주에 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "512×512 콘셉트 PNG와 아카이브 확대 항목 추가. 프로젝트 a681506f 푸시.",
+    "verification": "문서 빌드 성공. 아카이브 참조 PNG의 실제 치수 512×512 확인.",
+    "remaining": "PixelLab 도트 생성은 이번 범위 밖. 중앙 배포 미확인.",
+    "outcome": "![검 착용 참조 확대창](../assets/knight-pixellab-equipped-20261120/archive.png)\n\n![기존 그림에서 합성한 제출용 PNG](../assets/knight-pixellab-equipped-20261120/equipped.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "23:18:59 KST 시작, 23:20:05 KST 검증 및 푸시. 1분 6초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
