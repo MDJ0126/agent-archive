@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 공통 모션 카드 규격",
+    "summary": "붉은 장교의 모션 카드 규격을 모든 캐릭터와 몬스터에 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 모션 카드와 제작 시 아카이브 누적 규칙을 적용했습니다. 프로젝트 d881f515 푸시.",
+    "verification": "문서 빌드와 브라우저에서 잿빛 기사 및 염소 약탈자 카드 치수 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![잿빛 기사 공통 모션 카드 화면](../assets/archive-motion-layout-20261121/archive.png)",
+    "proposedTime": "3~6분",
+    "actualTime": "약 1분 2초, 00:08:55 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
