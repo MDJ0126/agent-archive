@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "남녀 마네퀸 · 투명 영역 경계만 정리",
+    "summary": "후처리전128칸 파일로 복원한 뒤 외곽1px RGB만 변경. 내부색·명암·관절선·알파 변경0,장교는 미수정입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "각 마네퀸의 원본/8방향-후처리전.png를 입력으로 사용. 알파0인 픽셀과 상하좌우로 맞닿은 불투명 픽셀의RGB만(17,17,17)로 변경했습니다. 다른RGB와 모든알파는 입력 바이트 그대로 유지했습니다. T포즈는 고해상도 원본,페이지 소개 순서는 T포즈→원본8방향→도트8방향을 유지합니다.",
+    "verification": "남성 경계2294px·여성2340px 변경. 내부RGBA 변경0·전체알파 변경0.512×256시트·128칸·정확한 반전 유지. 실제PNG 시각 확인. 문서 빌드16페이지 통과. 게임실행·테스트 미실행.",
+    "remaining": "붉은 장교는 요청에 따라 추가 수정·게시 대기. 중앙 배포·HTTPS 접근 미확인. 원격 업데이트 조회 실패,알려진014와 최신 지침 적용. SkillEvaluator/CLI-Anything 비대상: 스킬 설치·GUI 조작 없이 기존PNG·파일API 사용.",
+    "outcome": "남녀 마네퀸만 경계 처리를 적용했습니다. 색상 단계 조절·주변색 대체는 실행하지 않았습니다.\n\n![남성형8방향](../assets/mannequin-boundary-only-20261120/male-directions.png)\n\n![여성형8방향](../assets/mannequin-boundary-only-20261120/female-directions.png)",
+    "proposedTime": "3분",
+    "actualTime": "시작2026-11-20 17:10:36 KST,로컬 처리17:11:16 KST. 커밋·게시별도.",
+    "xerjEvidence": "rg·PNG바이트 대조",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
