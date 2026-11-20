@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 스프라이트 시트 재생",
+    "summary": "편집용 PNG가 등록된 카드의 미리보기와 경로 복사를 동일한 스프라이트 시트에 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "Chrome에서 사용자 편집 PNG 해시 406c9ee9da6b, 17프레임 메타데이터와 11개 재생 위치 및 복사 절대 경로를 확인했습니다. 별도 편집 시트가 등록된 카드는 특수 공격 1 하나입니다.",
+    "remaining": "PNG 시트가 없는 과거 GIF는 보관 중이며 웹 게시는 미확인입니다.",
+    "outcome": "![브라우저의 스프라이트 재생](../assets/officer-sheet-playback-20261121/playback.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "약 2분, KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
