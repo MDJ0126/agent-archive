@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 특수 공격 2 적용",
+    "summary": "특수 공격 2의 9프레임 시안을 360° 발도로 연결하고 아카이브의 최신 슬롯으로 이동했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "256×256 시안을 원본과 동일한 바이트의 9프레임 아틀라스로 적용했습니다. 재사용 7초와 마나 30을 유지하고 180% 피해를 한 번 적용합니다. 아카이브는 채택 시안을 2/2에 두고 이전 시안은 1/2로 표시합니다.",
+    "verification": "Godot에서 9개 포즈, 앞뒤 적 각 1회 타격, 범위 밖 적 피해 없음, 이동 0과 마나 100→70을 확인했습니다. GIF 24프레임을 확인했습니다. 실제 로컬 HTML에서 2/2 기본 표시, PNG 및 양방향 전환을 확인했습니다.",
+    "remaining": "공개 웹 배포와 사용자 기기에서의 미디어 재생은 미확인입니다. Godot 검증용 프로세스 종료 시 기존 렌더 자원 정리 경고가 출력됐습니다.",
+    "outcome": "붉은 장교가 제자리에서 회전해 반경 안 적을 한 번씩 타격합니다. 아래는 실제 Godot 전투 캡처입니다.\n\n![붉은 장교의 실제 전투 360도 발도](../assets/20261121-officer-spin.gif)",
+    "proposedTime": "5~10분",
+    "actualTime": "7분 11초, 2026-11-21 03:46:19 +09:00ST",
+    "xerjEvidence": "Godot 전투 렌더 API와 기존 Playwright 환경을 사용했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
