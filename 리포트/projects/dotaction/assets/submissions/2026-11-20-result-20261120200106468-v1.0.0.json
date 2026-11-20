@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 대기에서 공격 준비로 이어지는 모션",
+    "summary": "등록된 시작·끝 이미지 두 장을 PixelLab에 제출했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "128×128 총 9프레임과 GIF 재생, 첫 프레임 일치, 실제 소모 1회분을 확인했습니다. 검자루 쪽으로 손이 이동합니다.",
+    "remaining": "호흡이 미세하고 마지막 생성 프레임은 지정한 끝 이미지와 픽셀 단위로 일치하지 않습니다.",
+    "outcome": "![대기에서 공격 준비까지](../assets/officer-idle-to-ready-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "04:59:22 KST 시작, 05:00:41 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
