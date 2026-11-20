@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 장비 없는 8방향과 망토 덧입히기",
+    "summary": "장비 없는 원본 위에 망토를 덧입혀 손을 자연스럽게 천 뒤에 가렸습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "망토 시안 및 장비 없는 몸체 카드 연결. 제작 가이드 갱신. 프로젝트 커밋 898519c5 푸시.",
+    "verification": "방향당 512×512 및 3방향 픽셀 반전 확인. 발바닥 높이 차이 0px. 장비 없는 몸체와 발 위치 일치. 두 카드와 윤곽 모드 표시 확인. 웹 빌드와 로컬 윤곽 전환 확인.",
+    "remaining": "수정 미리보기는 단일 PNG. 분리 망토 레이어에는 이 편집 미적용. 중앙 배포 미확인.",
+    "outcome": "![망토 드레이프 시안](../assets/officer-eight-cape-drape-20261120/cape-drape.png)\n\n![장비 없는 몸체](../assets/officer-eight-cape-drape-20261120/body.png)\n\n![아카이브에서 확인한 시안](../assets/officer-eight-cape-drape-20261120/archive.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "21:25:02 KST 확인 시작, 21:25:48 KST 제작·검증·푸시 완료. 46초. 21:26:07 KST 보고 작성.",
+    "xerjEvidence": "ImageGen, PNG 실측, 로컬 브라우저",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
