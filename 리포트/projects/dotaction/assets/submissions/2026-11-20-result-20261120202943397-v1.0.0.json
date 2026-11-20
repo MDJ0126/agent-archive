@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 준비 자세의 큰 망토 움직임",
+    "summary": "공격 준비 자세 PNG 한 장만으로 생성 16프레임을 요청했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "시작 입력 일치와 총 17프레임, GIF 재생, 2회분 차감 확인. 망토는 뒤로 크게 펄럭이고 검은 납도 상태를 유지합니다.",
+    "remaining": "고개 숙임과 눈 주변만 어두워지는 변화가 미세합니다.",
+    "outcome": "![큰 망토 움직임 검토 GIF](../assets/officer-flare-eye-shadow-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "05:26:58 KST 시작, 05:29:20 KST 결과 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
