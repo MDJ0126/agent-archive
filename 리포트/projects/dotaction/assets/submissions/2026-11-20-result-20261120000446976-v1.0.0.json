@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "원정 지도 돌기사 말 일러스트 교체",
+    "summary": "스테이지 지도 말에 투명 배경의 돌기사 흉상 일러스트를 사용합니다. 원형 받침대가 발판 위에 놓이며, 구역을 선택하면 중간 발판을 거쳐 이동합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "스테이지 지도 말에 투명 배경의 돌기사 흉상 일러스트를 사용합니다. 원형 받침대가 발판 위에 놓이며, 구역을 선택하면 중간 발판을 거쳐 이동합니다.\n\n![돌기사 말 실제 이동](../assets/20261120-stage-knight.gif)",
+    "verification": "Godot 4.7.2에서 63프레임을 촬영하고 10구역 도착을 확인했습니다. 선택 함수 호출로 촬영했습니다.",
+    "remaining": "마우스 직접 조작과 최종 미감은 미확인입니다.",
+    "outcome": "ImageGen 에셋 적용, 실제 게임 GIF 촬영과 문서 빌드 완료.",
+    "proposedTime": "약 8분",
+    "actualTime": "2026-11-20 09:03:09 KST 시작, 09:04:40 KST 촬영과 문서 갱신.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
