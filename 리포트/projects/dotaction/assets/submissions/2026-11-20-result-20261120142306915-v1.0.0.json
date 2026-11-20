@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "잿빛 기사 5시 장검 손잡이 보정",
+    "summary": "장검의 각도와 위치를 옮겨 손잡이 중앙을 장갑이 가리게 합성했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "512×512 제출 PNG 및 문서 이미지 캐시 갱신. 프로젝트 88e31395 푸시.",
+    "verification": "문서 빌드 성공. 제출 PNG를 열어 손잡이와 장갑 위치를 확인.",
+    "remaining": "PixelLab 도트 생성은 이번 범위 밖. 중앙 배포 미확인.",
+    "outcome": "![기존 그림에서 합성한 제출용 PNG](../assets/knight-pixellab-grip-20261120/equipped.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "약 1분, 23:22 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
