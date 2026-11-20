@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 무기 없는 전신 일러스트",
+    "summary": "전신 일러스트에서 검과 칼집을 제거하고 양손이 자연스럽게 내려오게 했습니다. 장검 원화는 별도 보관했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ImageGen 무기 제거 및 빈손 표현. 아카이브와 제작 가이드 갱신. 아카이브 갱신. 커밋 640bf437.",
+    "verification": "투명 배경과 실제 아카이브 표시 확인. 웹 빌드 및 모달 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![수정 일러스트](../assets/officer-illustration-unarmed-20261120/illustration.png)\n\n![아카이브 일러스트](../assets/officer-illustration-unarmed-20261120/archive.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "21:56:11 KST 확인 시작, 21:57:01 KST 보고 작성.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
