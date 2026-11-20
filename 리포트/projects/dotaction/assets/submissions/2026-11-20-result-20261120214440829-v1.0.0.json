@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "철의 처형자 무기 없는 8방향 시안",
+    "summary": "무기를 분리한 의상 착용 8방향을 제작하고 캐릭터 아카이브에 연결했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "2048×1024, 8칸과 정확한 3쌍 반전 확인. Chrome에서 무기 없는 방향 시트 로드. PixelLab 미사용.",
+    "remaining": "마네킹 관절 정렬과 5시 제출용 합성 최종 검수 대기.",
+    "outcome": "![철의 처형자 아카이브](../assets/iron-executioner-weaponless-20261121/archive.png)",
+    "proposedTime": "캐릭터별 진행",
+    "actualTime": "06:44 KST 브라우저 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
