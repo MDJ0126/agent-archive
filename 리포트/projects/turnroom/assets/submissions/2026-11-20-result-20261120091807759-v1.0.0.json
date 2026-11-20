@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "Turnlume 로컬 문서 인덱스에서 제품별 가이드 선택",
+    "summary": "Docs/index.html의 Design Data Table 자동 이동을 제거하고 제품별 문서 목차를 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 루트 HTML 리디렉션을 세 제품의 현재 가이드 링크와 저장소 문서 목차 링크로 교체했습니다.",
+    "verification": "Chrome 헤드리스에서 실제 file URL을 열어 자동 이동이 없음을 확인했습니다. 세 링크를 차례로 클릭해 대상 URL의 페이지 로드와 제목을 대조했고 최초 화면을 PNG로 저장했습니다.",
+    "remaining": "모바일 표시와 중앙 아카이브 배포는 미확인입니다.",
+    "outcome": "Pixora Studio, Design Data Table, Entity Forge의 가이드를 인덱스에서 각각 열 수 있습니다.\n\n![Chrome에서 실제로 열린 Turnlume 문서 목차](../assets/turnlume-docs-index-20261120.png)",
+    "proposedTime": "3~7분",
+    "actualTime": "구현 및 브라우저 확인 2분 2초, 2026-11-20 18:17:33 KST",
+    "xerjEvidence": "HTML과 빌드 출력 경로를 rg로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
