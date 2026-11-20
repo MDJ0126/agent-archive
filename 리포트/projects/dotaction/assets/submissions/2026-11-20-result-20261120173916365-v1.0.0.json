@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "모션 표의 애니메이션 기준 이미지 용어 통일",
+    "summary": "공통 시작 이미지 칸 7개의 이름을 애니메이션 기준 이미지로 통일했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "문서 빌드와 실제 웹 표의 굵은 표기 7개를 확인했습니다.",
+    "remaining": "보고서 페이지 배포 미확인.",
+    "outcome": "![애니메이션 기준 이미지 표기](../assets/pixellab-reference-label-20261121/table.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "02:38:29 KST 시작, 빌드와 웹 표 검증 후 게시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
