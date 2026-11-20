@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기본 공격 1~3의 공용 준비 자세",
+    "summary": "애니메이션 기준 이미지에서 준비 자세 PNG 한 컷을 제작해 기본 공격 1~3의 시작 입력으로 사용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "문서 빌드 후 실제 웹 표의 공격 1~3과 공용 PNG 문구를 확인했습니다. PixelLab 호출 0회.",
+    "remaining": "중앙 보고서 배포 미확인.",
+    "outcome": "![기본 공격 공용 준비 자세](../assets/shared-attack-prep-20261121/table.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "02:54:17 KST 시작, 웹 확인 후 게시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "complete"
+  }
+}
