@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 제출 기준과 외형 참조·첫 프레임 구분 기록",
+    "summary": "입력 첫 자세·동작 순서·종료·이동·장비·고정 조건·모순 제거와 모델별 설정 확인 기준을 기록했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "New 모델은 입력 이미지가 첫 프레임입니다. 다른 시작 자세는 확정 외형에서 먼저 준비하고 실제 입력으로 제출합니다. 별도 외형 참조와 독립 first_frame 동시 지원은 API별 확인 전 단정하지 않습니다. 재시도 절감을 위한 9개 제출 기준을 추가했습니다.",
+    "verification": "공식 New 문서에서 입력 첫 프레임 보존을 확인. node docs/build.mjs 성공: 16페이지·1029이미지. 게임 실행·유료 생성·테스트 없음. SkillEvaluator·CLI-Anything은 적용 대상 아님.",
+    "remaining": "실제 재시도 절감 효과와 다른 모델의 독립 참조 슬롯 지원은 미확인. 순수 규칙 텍스트 수정으로 새 시각 결과가 없어 캡처 없음. 기존 다른 작업의 변경이 있는 생성 docs/index.html은 로컬 재생성하고 이번 소스 커밋에서는 제외했습니다.",
+    "outcome": "제작 가이드 원문 두 곳과 프로젝트 지침 수정, 웹 문서 빌드 완료. 실제 생성 없이 문서만 변경했습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-20 15:56:48 시작, 문서 수정·빌드 약1분. 커밋·푸시·중앙 배포 확인 시간 별도.",
+    "xerjEvidence": "요청 범위의 로컬 문서와 빌드 결과로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
