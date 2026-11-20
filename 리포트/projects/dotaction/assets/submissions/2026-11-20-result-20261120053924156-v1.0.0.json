@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "피격 모션에서 모든 피격 이펙트 제외",
+    "summary": "향후 모든 캐릭터·몬스터 피격 모션은 몸의 반동만 제작하고 피격 이펙트를 포함하지 않도록 지침과 제작 가이드를 갱신했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "# 2026-11-20 · 피격 모션과 피격 이펙트 분리\r\n\r\n- 피격 모션에는 몸체·장비의 충격 반동·휘청임·회복만 포함합니다. 피격 섬광·스파크·충돌선·빔·파티클·혈흔·화면 흔들림 등 피격 이펙트를 모션 프레임에 굽지 않습니다. 필요한 효과는 PixelFX 별도 자산으로 제작하고 게임에서 합성합니다. 모든 PixelLab 피격 프롬프트에 `Animate only the character hit reaction. No hit effects, flashes, sparks, impact lines, beams, particles, blood, or camera shake.`를 명시합니다.\r\n\nAGENTS.md, docs/character-production.md, docs/design/sprite-guide.md에 반영했습니다. 기존 모션·이미지는 변경하지 않았습니다.",
+    "verification": "수정한 원문과 피격 표의 제외 기준을 확인했습니다. node docs/build.mjs 성공(15페이지). 순수 텍스트 제작 규칙 변경으로 신규 시각 결과가 없어 이미지·GIF를 추가하지 않았습니다. SkillEvaluator는 새 스킬 추가가 없어 해당 없음, CLI-Anything은 앱 자동화가 없어 해당 없음. 테스트 미요청·미실행.",
+    "remaining": "기존 자산 재제작은 이번 요청 범위에 포함하지 않았습니다. 원격 업데이트 확인은 최초 네트워크 제한으로 실패했고 최종 확인을 별도로 수행합니다. 배포·HTTPS 확인은 최종 응답에 구분합니다.",
+    "outcome": "프로젝트 지침·제작 가이드·PixelLab 피격 프롬프트 공통 문구 갱신 및 문서 빌드 완료.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-20 14:38:24 KST 시작, 원문 수정·빌드·보고서 작성 59초 (2026-11-20T05:39:22.507Z); 배포 대기 별도.",
+    "xerjEvidence": "사용자 지침에 따라 미사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
