@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "스프라이트 제작 가이드의 PixelLab 제출 절 복원",
+    "summary": "캐릭터·몬스터 제작 지침에 있던 PixelLab 제출 전 확인 표와 첫 프레임 기준을 웹 가이드 본문과 목차에 복원했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 가이드 원문 및 웹 다큐먼트 동기화. 프로젝트 d9d0f487 푸시.",
+    "verification": "문서 빌드 성공. 실제 브라우저에서 웹 가이드 본문과 오른쪽 목차, 제출 기준 표 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![다큐먼트 스프라이트 제작 가이드](../assets/pixellab-submission-guide-20261120/guide.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "22:31:10 KST 시작, 22:31:40 KST 검증 및 푸시 완료. 약 30초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
