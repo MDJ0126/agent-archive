@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "전역 업데이트 확인 의무와 관계도 진입점 추가",
+    "summary": "전역 AGENTS.md의 Start Here에서 확인 의무를 볼 수 있고, 관계도의 새 가지에서 확인 절차와 게시판을 열 수 있습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전역 AGENTS.md의 Start Here에 새 요청·작업 재개·문맥 복구·최종 보고 시 확인 의무와 새 지침 반영을 명시했습니다. 문서 트리에 전용 가지를 넣고 팝업에서 실행 방법, 조회 실패 처리, 최신 ID 기록 및 게시판 링크를 제공했습니다. 업데이트 번호는 2026-11-21-011입니다.",
+    "verification": "설치본과 저장소 원문의 SHA-256 일치, 로컬 관계도 빌드, Chrome의 AGENTS.md 직속 연결과 절차 팝업, 실제 게시판 이동을 확인했습니다. 실제로 다른 세 화면을 GIF로 확인했습니다.\n\n![업데이트 확인·반영 가지에서 절차를 읽고 게시판을 여는 동작](../assets/updates-branch.gif)",
+    "remaining": "보고서 작성 시점에는 공개 배포 확인이 남아 있습니다.",
+    "outcome": "[전역 관계도](../../../guide/relationships.html)의 업데이트 확인·반영 노드와 [공개 업데이트 게시판](../../../guide/updates.html)을 연결했습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "구현과 로컬 검증 2분 36초, 04:17:42 KST 기준",
+    "xerjEvidence": "저장소와 설치본 파일을 대조하고 실제 Chrome 탐색을 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

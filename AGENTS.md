@@ -13,6 +13,7 @@
     - [보고서 처리 가이드](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/workflow.md) — Report workflow
       - [결과 보고서 양식](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/template-report.md) — Result report template
       - [버그 보고서 양식](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/template-bug.md) — Bug report template
+  - [업데이트 확인·반영](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%20%ED%99%95%EC%9D%B8%C2%B7%EB%B0%98%EC%98%81.md) — Check for and apply instruction updates
   - [보고 예외 프로젝트](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.md) — Project reporting exceptions
     - [캠프 가디언 보고 예외](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%BA%A0%ED%94%84%20%EA%B0%80%EB%94%94%EC%96%B8%20%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8.md) — CampGuardian
     - [중앙 아카이브 보고 기준](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%A4%91%EC%95%99%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C%20%EB%B3%B4%EA%B3%A0%20%EA%B8%B0%EC%A4%80.md) — Tracefolio
@@ -22,6 +23,7 @@
 
 ## Start Here
 
+- Check the central update board at the start of each new request, when resuming work or recovering context, and before the final report. Read and apply any newly linked instructions relevant to the task. Follow the [update procedure](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%20%ED%99%95%EC%9D%B8%C2%B7%EB%B0%98%EC%98%81.md).
 - Before implementing, producing, or running anything on the first task of a session or when resuming work, read the installed global `AGENTS.md`, then the target project's `AGENTS.md` and any applicable instructions in subdirectories. Do this without a separate request from the user.
 - Use the table below to open only the source documents relevant to the task. The global rules in this file apply across projects. For CampGuardian sprites or PixelLab work, also read the relevant sections of the project's `docs/character-production.md` before starting.
 - Resolve archive paths below from `$CODEX_HOME/config-repo`, or from `~/.codex/config-repo` if `CODEX_HOME` is unset. The link labels give the local source paths. Use the corresponding repository links if local sources are unavailable.
