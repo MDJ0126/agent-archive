@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "여성형 마네퀸 비율로 붉은 장교 재제작",
+    "summary": "여성형 마네퀸을 직접 편집 대상으로 사용해 붉은 장교 T포즈와 원본 8방향 시안을 갱신했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "여성형 마네퀸 위에 붉은 장교 의상과 헤어를 입히는 방식으로 재생성했습니다.",
+    "verification": "정면에서 정수리부터 턱까지 높이와 전체 키 비율 비교. T포즈 약27%와28%, 대기 약27%와25%. 문서 빌드 성공.",
+    "remaining": "정면 육안 근사치. 옷에 가린 관절 및 나머지 시점의 정확한 정합은 미확인. 중앙 배포 미확인.",
+    "outcome": "![tpose](../assets/officer-mannequin-proportion/tpose.png)\n\n![directions](../assets/officer-mannequin-proportion/directions.png)\n\n![comparison](../assets/officer-mannequin-proportion/comparison.png)",
+    "proposedTime": "5~8분",
+    "actualTime": "18:17:49 KST 시작, 18:20:43 KST 보고 작성.",
+    "xerjEvidence": "ImageGen과 원본 PNG 비교",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
