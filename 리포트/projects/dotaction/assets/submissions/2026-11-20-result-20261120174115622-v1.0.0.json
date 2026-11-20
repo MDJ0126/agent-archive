@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 별도 시작 자세 문구 수정",
+    "summary": "걷기·달리기와 피격에서 애니메이션 기준 이미지로 별도 자세를 제작한다는 문구를 지정 표현으로 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "문서 빌드 후 실제 웹 표의 두 칸을 대조하고 캡처했습니다.",
+    "remaining": "중앙 보고서 배포 미확인.",
+    "outcome": "![수정한 시작 이미지 문구](../assets/pixellab-pose-labels-20261121/table.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "02:40:30 KST 시작, 웹 표 확인 후 게시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
