@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 장비 없는 몸체 검토",
+    "summary": "장비 없는 새 시안을 마네퀸에 포개어 가슴과 허리, 골반과 엉덩이가 어긋나는 방향을 확인했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ImageGen 몸체 재시안 검토. 프로젝트에 채택하지 않음.",
+    "verification": "칸 크기와 발 위치를 맞춘 브라우저 비교. 앞·뒤 사선 및 측면 실루엣 오차 확인.",
+    "remaining": "Affinity 연결 거부. 기준선을 잠근 뒤 몸체 트레이싱 및 장비 합성 필요. 중앙 배포 미확인.",
+    "outcome": "![몸체와 마네퀸 윤곽 비교](../assets/officer-body-trace-check-20261120/body-comparison.png)",
+    "proposedTime": "5~8분",
+    "actualTime": "20:57:30 KST 시작. 20:59:53 KST까지 시안 및 비교.",
+    "xerjEvidence": "ImageGen과 실제 PNG 브라우저 대조, Affinity CLI 연결 진단",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
