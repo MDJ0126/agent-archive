@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기존 도트 없이 만드는 PixelLab 착용 콘셉트",
+    "summary": "기존 도트를 입력하지 않고 8방향 제작 원본과 장검 원화만으로 착용 콘셉트를 생성했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "1024×1024 콘셉트 PNG와 아카이브 확대 항목 추가. 프로젝트 df2c971a 푸시.",
+    "verification": "문서 빌드 성공. 아카이브 참조 PNG의 실제 치수 1024×1024 확인.",
+    "remaining": "PixelLab 도트 생성은 이번 범위 밖. 중앙 배포 미확인.",
+    "outcome": "![검 착용 참조 확대창](../assets/officer-pixellab-concept-20261120/archive.png)\n\n![새로 그린 검 착용 콘셉트](../assets/officer-pixellab-concept-20261120/concept.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "22:13:58 KST 확인 시작, 22:15:00 KST 검증 및 푸시 완료. 약 1분 2초.",
+    "xerjEvidence": "가이드 원문, 웹 빌드, 실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
