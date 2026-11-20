@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 모션별 PixelLab 요청 기록",
+    "summary": "모든 모션 버전에서 기록을 열고 걷기·사망의 실제 요청 원본을 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "17개 모션 버전의 버튼과 제작 가이드 갱신. 프로젝트 0629210f 푸시.",
+    "verification": "범위 내 문서 빌드 및 브라우저 검증. 걷기·사망 원문, 번역, 입력 이미지 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![모션별 전환](../assets/officer-prompt-records-20261121/archive.gif)",
+    "proposedTime": "4~7분",
+    "actualTime": "약 1분 49초, 00:01:59 KST 프로젝트 푸시.",
+    "xerjEvidence": "웹 빌드 및 수정한 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
