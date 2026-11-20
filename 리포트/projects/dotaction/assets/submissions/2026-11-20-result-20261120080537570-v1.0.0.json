@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "누적 빌드·임시 캡처 삭제와 상시 정리",
+    "summary": "build·tmp 약1.836GB 삭제. 작업 종료 시 누적 산출물을 남기지 않도록 상시 지침 적용.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용자가 지시한 누적 산출물 상시 삭제를 프로젝트 지침·AI 작업 기록에 명시. 문서 몬스터 렌더 도구는 공용 Godot 경로와 OS 임시 디렉터리 finally 정리로 변경. 실제 문서 미디어·제작 원본·게임 에셋은 보존.",
+    "verification": "삭제 후 build·tmp 부재 확인, 공용 엔진 파일 존재 확인, 문서 빌드 성공. 프로젝트 커밋68904e66 푸시 완료. 게임 빌드·실행·테스트 미실행. 문서 렌더 재생성 분기는 지문 불변으로 실제 실행 미확인.",
+    "remaining": "상주 정리 자동화가 아니라 후속 작업에 적용하는 상시 규칙. 중앙 게시 미완료(기존 원격 이력 차이). SkillEvaluator·CLI-Anything 비대상.",
+    "outcome": "build1252885934바이트·tmp583327515바이트 삭제 및 경로 부재 확인. 현재 프로젝트 약7.34GB. 순수 파일·설정 작업으로 별도 시각 변화와 촬영 대상 없음.",
+    "proposedTime": "약2분",
+    "actualTime": "2026-11-20 17:03:47 KST 시작, 정리·빌드·프로젝트 푸시17:05:09 KST 완료(1분22초). 중앙 기록은 별도.",
+    "xerjEvidence": "PowerShell 경로 검증·파일 집계 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
