@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "turnroom",
+    "kind": "result",
+    "title": "Turnlume 작업 변경 18개 파일 커밋 및 푸시",
+    "summary": "선반 활성화 소스, Pixora 검증 자료와 촬영 도구를 Turnlume main에 푸시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 작업을 Git에 기록했습니다. 생성된 IDE 프로젝트 파일과 로컬 업로드 검증 원본은 작업 폴더에 보존했습니다.",
+    "verification": "Push 성공 응답과 main…origin/main 상태를 대조했습니다. Git 변경만 게시한 작업이므로 새 실행 화면을 촬영하지 않았습니다.",
+    "remaining": "원본 업로드 검증 폴더는 로그의 이메일 노출 우려로 공개 범위에서 제외했습니다. 제품 빌드와 실행은 미확인입니다.",
+    "outcome": "작업 변경 18개 파일을 c20fe39ca 커밋으로 기록하고 origin/main에 반영했습니다.",
+    "proposedTime": "2~5분",
+    "actualTime": "1분 59초, 2026-11-20 18:40:58 KST",
+    "xerjEvidence": "Git 작업 상태와 원격 푸시 응답 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
