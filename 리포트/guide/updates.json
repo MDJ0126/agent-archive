@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "latest": "2026-11-21-009",
+  "latest": "2026-11-21-010",
   "entries": [
+    {
+      "id": "2026-11-21-010",
+      "date": "2026-11-21",
+      "title": "AGENTS.md 문서 트리를 관계도 원본으로 통합",
+      "scope": "전역 지침과 중앙 관계도",
+      "source": "AGENTS.md",
+      "summary": "전역 AGENTS.md의 Document Tree에서 관계도와 지침 팝업의 문서 계층을 함께 관리합니다."
+    },
     {
       "id": "2026-11-21-009",
       "date": "2026-11-21",

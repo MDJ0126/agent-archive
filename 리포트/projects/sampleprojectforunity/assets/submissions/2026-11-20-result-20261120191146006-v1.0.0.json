@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "sampleprojectforunity",
+    "kind": "result",
+    "title": "샘플 프로젝트 관계도와 AGENTS.md 팝업의 문서 계층 일치",
+    "summary": "관계도와 팝업이 하나의 AGENTS.md 문서 트리를 사용하며, 모달 바깥을 누르면 닫히고 원래 노드로 초점이 돌아옵니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "AGENTS.md의 Document Tree를 문서 계층의 기준으로 삼았습니다. 웹 관계도와 팝업에 같은 계층을 표시합니다. 모달 바깥 클릭은 닫고 내부 클릭은 본문을 읽을 수 있게 유지합니다. 샘플 프로젝트 main에 푸시했습니다. 커밋은 9d6a681입니다.",
+    "verification": "로컬 빌드 및 실제 Chrome에서 31개 문서 구조, 내부 클릭 후 열린 상태, 바깥 클릭 후 모달 닫기와 노드 초점 복귀를 확인했습니다. 서로 다른 GIF 프레임 2개를 확인했습니다.\n\n![샘플 프로젝트 관계도에서 같은 문서 트리를 확인하고 모달 바깥을 눌러 닫는 동작](../assets/shared-tree-sample.gif)",
+    "remaining": "보고서 작성 시점의 새 Pages 배포는 미확인입니다.",
+    "outcome": "[샘플 프로젝트 관계도](https://mdj0126.github.io/SampleProjectForUnity/docs/documentation/30-document-map.html)에서 AGENTS.md 문서 트리를 열고 바깥 클릭으로 닫을 수 있습니다.",
+    "proposedTime": "7~10분",
+    "actualTime": "4분 39초, 04:11:40 KST 기준",
+    "xerjEvidence": "실제 Markdown과 빌드 출력 및 Chrome 클릭 동작을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

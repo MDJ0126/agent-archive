@@ -1,5 +1,25 @@
 # Codex Global Instructions
 
+## Document Tree
+
+- [AGENTS](https://github.com/MDJ0126/codex-config/blob/main/AGENTS.md) — Global instructions
+  - [작업별 지침](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%9E%91%EC%97%85%EB%B3%84%20%EC%A7%80%EC%B9%A8.md) — Task-specific work guidance
+    - [네이밍 규칙](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EB%84%A4%EC%9D%B4%EB%B0%8D%20%EA%B7%9C%EC%B9%99.md) — Unity naming conventions
+    - [코드 스타일](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%BD%94%EB%93%9C%20%EC%8A%A4%ED%83%80%EC%9D%BC.md) — Unity code style
+  - [품질 점검 절차](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%ED%92%88%EC%A7%88%20%EC%A0%90%EA%B2%80%20%EC%A0%88%EC%B0%A8.md) — QA procedure
+    - [검수 기록](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EA%B8%B0%EB%A1%9D.md) — Verification records
+    - [검수 증거](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EC%A6%9D%EA%B1%B0.md) — Evidence by result type
+  - [결과 보고 기준](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%B0%EA%B3%BC%20%EB%B3%B4%EA%B3%A0%20%EA%B8%B0%EC%A4%80.md) — Result reporting
+    - [보고서 처리 가이드](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/workflow.md) — Report workflow
+      - [결과 보고서 양식](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/template-report.md) — Result report template
+      - [버그 보고서 양식](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/template-bug.md) — Bug report template
+  - [보고 예외 프로젝트](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.md) — Project reporting exceptions
+    - [캠프 가디언 보고 예외](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%BA%A0%ED%94%84%20%EA%B0%80%EB%94%94%EC%96%B8%20%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8.md) — CampGuardian
+    - [중앙 아카이브 보고 기준](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%A4%91%EC%95%99%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C%20%EB%B3%B4%EA%B3%A0%20%EA%B8%B0%EC%A4%80.md) — Tracefolio
+    - [판타지아 보고 기준](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%ED%8C%90%ED%83%80%EC%A7%80%EC%95%84%20%EB%B3%B4%EA%B3%A0%20%EA%B8%B0%EC%A4%80.md) — Fantasya
+    - [샘플 프로젝트 보고 예외](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%83%98%ED%94%8C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8.md) — SampleProjectForUnity
+    - [소셜 게시 보고 예외](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%86%8C%EC%85%9C%20%EA%B2%8C%EC%8B%9C%20%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8.md) — SNSManager
+
 ## Start Here
 
 - Before implementing, producing, or running anything on the first task of a session or when resuming work, read the installed global `AGENTS.md`, then the target project's `AGENTS.md` and any applicable instructions in subdirectories. Do this without a separate request from the user.

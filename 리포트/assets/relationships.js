@@ -7,8 +7,10 @@
   const dialog = document.querySelector('.relations-dialog');
   const article = dialog.querySelector('.relations-document');
   const sourceLink = dialog.querySelector('.relations-source');
-  const documents = new Map([...nodes.values()].filter(node => node.dataset.preview)
-    .map(node => [new URL(node.dataset.preview, location.href).href, node]));
+  const documents = new Map([...nodes.values()].flatMap(node => [
+    [new URL(node.dataset.preview, location.href).href, node],
+    [node.dataset.source, node],
+  ]));
 
   function draw() {
     const bounds = board.getBoundingClientRect();
@@ -79,7 +81,12 @@
     if (node) showDocument(node);
   });
   dialog.addEventListener('click', event => {
-    if (event.target === dialog) dialog.close();
+    if (event.target === dialog) {
+      const bounds = dialog.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX >= bounds.right ||
+          event.clientY < bounds.top || event.clientY >= bounds.bottom) dialog.close();
+      return;
+    }
     const link = event.target.closest('[data-jump]');
     if (link) {
       event.preventDefault();
