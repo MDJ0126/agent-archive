@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 공통 스프라이트 제작 가이드 요약",
+    "summary": "공통 제작 규격과 걷기·피격의 모션별 시작 입력을 세 절로 정리했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "장교 개별 예시와 중복 설명을 제거했습니다. 피격 회복 끝 이미지는 명시 요청 때만 등록 대기 PNG를 사용하도록 기록했습니다.",
+    "verification": "문서 빌드 후 실제 웹 가이드에서 공통 규격과 시작·끝 입력 문구를 확인하고 캡처했습니다. PixelLab 호출 0회.",
+    "remaining": "중앙 보고서 웹 배포 미확인.",
+    "outcome": "![간결해진 스프라이트 제작 가이드](../assets/shared-sprite-guide-20261121/guide.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "02:17:23 KST 시작, 02:18:36 KST까지 문서 및 화면 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
