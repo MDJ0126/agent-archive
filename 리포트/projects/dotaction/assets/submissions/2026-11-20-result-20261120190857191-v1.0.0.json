@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 특수 공격 1 발도·납도 시험",
+    "summary": "PixMiniMax에 한 건 제출해 준비 자세 포함 5프레임을 받았습니다. 한 차례 발도는 보이지만 효과 제외와 완전 납도 조건을 충족하지 못했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "128×128 원본 5프레임, 입력 첫 프레임 픽셀 일치와 GIF 재생, 작업 소모량 1회분을 확인했습니다.",
+    "remaining": "덧그려진 검궤적이 있고 검집 이동·눈 가림·완전 납도가 불분명합니다. 현행 아카이브와 게임 적용본은 유지했습니다.",
+    "outcome": "![발도·납도 검토 GIF](../assets/officer-special1-resheathe-20261121/motion.gif)",
+    "proposedTime": "2~5분",
+    "actualTime": "04:07:48 KST 시작, 04:08:31 KST 프레임 및 잔여량 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "partial"
+  }
+}
