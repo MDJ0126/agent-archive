@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "스프라이트 제작 가이드 참고 이미지 복원",
+    "summary": "남녀 마네킹과 캐릭터 제작 예시 7장을 복원했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "마네킹 T포즈와 8방향 및 캐릭터 일러스트·T포즈·8방향을 공통 가이드 상단에 배치했습니다.",
+    "verification": "문서 빌드, 실제 웹 가이드의 원본 이미지 7장 로드, 모션 규칙 유지 확인.",
+    "remaining": "중앙 보고서 페이지 배포 미확인.",
+    "outcome": "![복원된 제작 참고 이미지](../assets/sprite-guide-reference-images-20261121/references.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "30초, 02:20:01~02:20:31 KST 화면 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
