@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "모션별 시작·종료 구간과 전진 공격 종점 기준 확정",
+    "summary": "전진 공격의 출발점 복귀를 제외하고 걷기·피격·공격·시전·사망·도약별 필요한 시작과 종료 구간을 구분했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "잿빛 기사 기본 공격과 붉은 장교 특수 공격은 마지막 타격의 전진 종점에서 끝내도록 명시했습니다. 불필요한 대기 시작·복귀와 실제 필요한 공격 준비·예고·반동·무기 회수를 구분하는 선택표 및 전진 공격 영문 프롬프트를 추가했습니다. 반복 모션에만 루프 접합을 요구합니다. 기존 모션은 변경하지 않았습니다.",
+    "verification": "node docs/build.mjs 성공: 15페이지·1030이미지. 원문 두 곳과 AGENTS.md의 신규 규칙 확인. 문서 수정으로 게임 실행과 테스트는 수행하지 않았습니다. SkillEvaluator·CLI-Anything은 적용 대상이 아닙니다.",
+    "remaining": "기존 모션 재제작은 이번 요청 범위가 아닙니다. 순수 제작 규칙 텍스트 수정으로 새 시각 결과가 없어 캡처하지 않았습니다. 직전 중앙 배포는 공통 node --test 단계 종료 코드1로 실패했으며 이번 배포 상태는 별도로 확인합니다. 알려진 최신 지침 ID 2026-11-20-012, 이번 원격 확인 실패.",
+    "outcome": "프로젝트 지침·캐릭터 제작 원문·웹 가이드 수정, docs/index.html 재생성 완료. 중앙 게시 확인 별도.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-20 15:42:32~15:43:23 KST, 문서 수정·빌드 약51초. 중앙 등록·배포 시간 별도.",
+    "xerjEvidence": "요청 범위의 로컬 문서와 빌드 결과로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
