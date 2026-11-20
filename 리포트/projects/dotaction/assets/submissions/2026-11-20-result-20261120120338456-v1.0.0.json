@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 정면 T포즈 투명 경계 갱신",
+    "summary": "정면 T포즈 외곽의 밝은 잔색과 다리 사이 배경 잔색을 정리했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "정면 한 칸의 투명 경계 정리. 아카이브 문서 갱신. d8f6be4e 푸시.",
+    "verification": "어두운 배경에서 동일 크기 전후 비교. docs/build.mjs 성공.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![정면 T포즈 수정 전후](../assets/officer-tpose-front-edge-20261120/front-edge.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "21:02:10 KST 시작, 21:03:16 KST 빌드·푸시 완료. 1분 6초.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
