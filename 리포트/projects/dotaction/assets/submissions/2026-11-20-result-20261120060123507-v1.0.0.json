@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 가이드 레이아웃 복구와 일러스트 예제 복원",
+    "summary": "첫 번째 표에 걸리던 예제 전용 CSS를 분리하고, 장교 일러스트와 남녀 마네퀸을 정돈된 카드로 배치했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "붉은 장교 일러스트를 복원했습니다. 일러스트는 상단 전체폭, 남녀 T포즈와8방향은 아래2열 카드로 정리했습니다. 예전 .data-table:first-of-type 규칙이 일반 규격 표에 적용돼 행을 숨기고 잘못된 제목을 붙이던 원인을 제거했습니다. 빌드에서 예제 표에만 sprite-examples 클래스를 지정하고 전용 스타일을 적용했습니다. 표 아이콘48px 최대높이 제한도 예제 영역에서 해제했습니다. 원본 아트는 변경하지 않았습니다.\n\n![수정된 실제 제작 가이드: 일러스트와 남녀 예제](../assets/sprite-guide-clean-20261120/guide.png)\n\n### 대화 기록\n사용자는 문서가 깨진 상태를 지적하고 깔끔하게 정리하되 일러스트 예제를 빼지 말라고 요청했습니다.",
+    "verification": "node docs/build.mjs 성공. 실제 문서를 기존 Playwright로 캡처·시각 확인. 이미지5장 디코드 성공, 제작 규격 표8행 표시, pageerror0, 가로 넘침 없음. 첫 확인에서 남아 있던48px 제한을 발견해 수정 후 최종 확인했습니다. 테스트는 요청되지 않아 미작성·미실행. SkillEvaluator 비대상(신규 스킬 설치 없음), CLI-Anything 신규 harness 없이 기존 공식 Playwright API 재사용.",
+    "remaining": "모바일 별도 화면 확인은 미실행입니다. 중앙 보고서와 캡처 공개 GET은 배포 후 별도 확인합니다.",
+    "outcome": "일러스트1장·남녀 T포즈2장·8방향2장으로 예제 복원. 규격 표8행 정상 표시.",
+    "proposedTime": "2026-11-20 14:59:13 KST 시작,5~8분 제안.",
+    "actualTime": "문서 수정·빌드·시각 확인15:01 KST 완료, 약2분. 중앙 게시와 배포 대기는 별도 기록합니다.",
+    "xerjEvidence": "예제 레이아웃을 명시적 클래스에 한정하는 수정으로 기존 지침에 부합합니다. 전역 지침 변경 없음. 업데이트 원격 조회 실패로 알려진011 및 대화012 적용, 최종 전 재확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
