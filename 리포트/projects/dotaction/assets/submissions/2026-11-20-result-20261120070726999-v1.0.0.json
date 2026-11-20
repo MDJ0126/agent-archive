@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "애니메이션 이펙트 제외 범위를 피격으로 한정",
+    "summary": "피격 모션만 이펙트를 제외하고 다른 모션은 의도한 효과를 포함할 수 있도록 제작 규칙을 정정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 요청 예시의 Do not add effects를 제거하고 피격에만 효과 제외를 적용했습니다. 다른 모션의 검격·잔상·발광·마법·먼지 등을 허용하며 개별 제어가 필요한 경우 PixelFX 별도 합성을 선택하도록 명시했습니다.",
+    "verification": "node docs/build.mjs 성공: 16페이지·1030이미지. 문서 수정만 수행, 테스트·유료 생성·게임 실행 없음. SkillEvaluator·CLI-Anything 적용 대상 아님.",
+    "remaining": "순수 제작 규칙 텍스트 변경으로 신규 게임 시각 결과·캡처 없음. 기존 다른 작업이 포함된 docs/index.html은 로컬 재생성하고 소스3개만 이번 커밋 대상으로 한정했습니다. 원격 업데이트 확인은 종료 전 재확인합니다.",
+    "outcome": "제작 가이드 두 곳·프로젝트 지침 수정 및 웹 문서 빌드 완료. 게임 자산은 변경하지 않았습니다.",
+    "proposedTime": "2~3분",
+    "actualTime": "2026-11-20 16:06:28~16:06:52 KST, 수정·빌드 약24초. 커밋·푸시·배포 확인 시간 별도.",
+    "xerjEvidence": "요청 범위의 로컬 문서와 빌드 결과로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
