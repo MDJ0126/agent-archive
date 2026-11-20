@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 재생 조작부 위치 고정",
+    "summary": "도트 재생 속도 표시의 너비를 고정해 배율이 바뀌어도 조작부가 움직이지 않도록 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "우측 배율에 고정폭 5ch를 확보하고 줄바꿈 없이 우측 정렬했습니다.",
+    "verification": "실제 로컬 아카이브를 Chromium에 렌더링했습니다. 0.25×~2× 전 구간에서 버튼과 슬라이더의 좌표와 크기가 동일했습니다. 캡처 GIF 12프레임을 확인했습니다.",
+    "remaining": "중앙 배포 미확인. 업데이트 원격 최신 미확인, 로컬 2026-11-20-014 적용.",
+    "outcome": "![캐릭터 아카이브 실제 배율 조작](../assets/archive-speed-layout-20261120/playback.gif)",
+    "proposedTime": "3~5분",
+    "actualTime": "20:07:03 KST 시작, 20:08:55 KST 결과 기록, 112초.",
+    "xerjEvidence": "로컬 Chromium 렌더와 프레임 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
