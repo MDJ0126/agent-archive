@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "공통 스프라이트 납품 체크리스트 추가",
+    "summary": "단계별 결과물과 특수 공격 검수 및 아카이브 상태 표시를 명시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 장교 검격 사양은 공통 문서에서 캐릭터 README로 옮겼습니다.",
+    "verification": "문서 빌드 후 실제 웹 가이드에서 특수 공격 행과 체크리스트를 확인했습니다.",
+    "remaining": "중앙 보고서 배포 미확인.",
+    "outcome": "![공통 스프라이트 납품 기준](../assets/sprite-deliverables-20261121/guide.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "02:44:40 KST 시작, 웹 가이드 검증 후 게시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
