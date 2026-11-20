@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "미니멀 스프라이트 메모와 + 예정 애니메이션 슬롯",
+    "summary": "메모를 제목·본문·저장으로 줄이고 애니메이션 끝 +에서 이름만으로 예정 항목을 추가합니다. 각 썸네일에 프레임 크기와 프레임 수를 함께 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "팝업의 대상·분류·상태 선택, 설명 문구, 이력 패널을 제거했습니다. 제목·본문·저장과 기존 메모 수정만 표시하며 기존 원문·이력은 파일에 보존합니다. 예정 항목은 actor와 안정적인 planned ID로 저장하고 실제 생성물과 구분합니다. 실제 제작 후 status=implemented 및 clip ID를 기록하면 실제 모션에서 예정 항목에 남긴 메모도 확인할 수 있게 연결했습니다. + 폼은 이름 입력·추가·취소만 제공합니다. 기존/예정 이름 중복을 막고 저장 실패 시 입력을 유지합니다. 모션 썸네일에 개별 프레임 가로×세로 px와 프레임 수를 표시합니다. 프로젝트·제작 지침과 아카이브 문서 갱신.",
+    "verification": "node docs/build.mjs 성공, node --check notes.js 및 serve-docs.mjs 성공. 실제 서버·Chrome UI에서 + 이름 입력→예정 슬롯 생성→작업 메모 저장→새로고침 후 예정/메모 복원 확인. pageerror 0, 실제 UI 6프레임 GIF. 촬영 예시를 별도 메모 파일에 저장했으며 사용자 원본 메모 파일은 보존했습니다. 실제 썸네일 128×128px · 17프레임 표시 확인. 테스트 작성·회귀 테스트 없음. SkillEvaluator는 스킬 설치·평가가 아니므로 미적용, 이전 확인된 Playwright 공식 API 경로 재사용. 로컬 문서 서버 기능 갱신 후 재실행.",
+    "remaining": "촬영에 사용한 회피 · 예정 예시는 별도 저장소의 UI 확인용이며 사용자의 실제 제작 요청으로 등록하지 않았습니다. 로컬 프로젝트 서버에서 저장하며 공개 정적 문서는 읽기만 가능합니다. 실제 애니메이션 생성은 이번 요청에 포함하지 않았습니다. 모바일 표시 미확인. 중앙 보고서·GIF 배포 GET은 publication.json에 별도 기록.",
+    "outcome": "캐릭터 상세 메모 버튼과 중복 공통 버튼 제거. 스프라이트별 간단 메모, 이름만 입력하는 + 예정 슬롯, 예정 항목 메모, 개별 프레임 크기 표시를 구현했습니다.\n\n![실제 UI의 예정 항목 추가·간단 메모 저장·재열기 — 별도 저장 파일에 회피 예정 예시 사용](../assets/minimal-notes-20261120/interaction.gif)",
+    "proposedTime": "8~10분",
+    "actualTime": "2026-11-20 15:06:25 KST 시작. 구현·실제 UI 확인·촬영 완료 2026-11-20T06:09:47.909318+00:00 (KST=UTC+9). 배포 대기는 publication.json에 기록.",
+    "xerjEvidence": "사용자 지침에 따라 사용하지 않았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
