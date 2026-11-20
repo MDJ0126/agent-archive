@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 장검 분리 시안",
+    "summary": "기존 일러스트를 참고해 칼집에 든 장검을 가로 정측면으로 분리 제작했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "장검 PNG 원본 추가. 9fc79f9d 푸시. 기존 전신 일러스트 보존.",
+    "verification": "2172×724 투명 PNG, 길이 방향 5개 위치 중심 높이 최대 1px 차이. 시각 확인.",
+    "remaining": "전신 일러스트에는 별도 시안을 적용하기 전. 중앙 배포 미확인.",
+    "outcome": "![붉은 장교 장검](../assets/officer-longsword-prop-20261120/sword.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "21:53:49 KST 확인 시작, 21:54:27 KST 검증 및 푸시 완료. 약 38초.",
+    "xerjEvidence": "ImageGen 및 PNG 실측",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
