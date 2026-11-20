@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "프로젝트 누적 작업 사본 최대 정리와 복구본 보존",
+    "summary": "프로젝트 최초38.78GB에서28.73GB로 감소. 보고서 사본11개 정리와 녹화 원본 무손실 보관.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 중앙 저장소·도구 재사용 지침에 복구본 자동 삭제 금지를 추가. 옛 보고서 생성기의 암묵적 사본 생성 방지. 과거 uv 캐시 삭제. 기존 아트·Git 프로젝트 이력·진행 중 에디터 캐시·AI 모델과 환경은 보존.",
+    "verification": "ZIP에 보존한 모든 항목 SHA-256 재독출 비교, 중앙 Git에 존재하는 커밋 대조, 외부 worktree 미게시 커밋 bundle verify. 중복 객체 제거 후 잔여 ZIP 파일 해시 재확인. 문서 빌드·수정 스크립트 문법 검사 성공. 게임 코드·자산 변경 없음. 빌드·실행·테스트 미실행.",
+    "remaining": "복구 ZIP 일부는 중앙 Git 객체 및 로컬 bundle에 의존하므로 storage-recovery를 자동 삭제하면 안 됨. AI 도구12GB는 오늘 설치되어 제작 코드에서 참조하므로 보존. 중앙 보고서 원격은 이전 non-fast-forward로 게시 미완료. 채팅 게시·모바일 검증 대상 없음.",
+    "outcome": "중앙 객체와 미게시 커밋 대조 후 복구 가능한 ZIP·bundle을 남겨 보고서 작업 폴더11개 제거. AVI71개 무손실 압축. 실패한 초기 Git 다운로드 폐기. 현재 약28.73GB, 최초 조사 대비 약10.06GB 감소. 순수 파일·설정 작업으로 시각 변화와 촬영 대상 없음.",
+    "proposedTime": "약8분",
+    "actualTime": "2026-11-20 16:27:40 KST 시작. 최종 용량16:44:02 KST 확인(16분22초). 두 차례 실행 세션 중단과 복구 압축본의 전체 해시 대조로 예상 초과. 커밋 완료 시각은 최종 응답에 기록.",
+    "xerjEvidence": "rg와 PowerShell 파일·해시 비교 사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
