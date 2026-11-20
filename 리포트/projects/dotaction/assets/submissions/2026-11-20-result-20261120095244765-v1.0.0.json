@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "8방향 비교의 발 위치 정렬",
+    "summary": "겹쳐 보기에서 8개 칸을 따로 비교해 발 중심과 바닥선을 맞춥니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "투명 시트 하단의 실루엣으로 발 위치를 추정하고 겹치는 마네퀸을 방향별로 이동합니다. 가이드에 발 기준을 반영했습니다.",
+    "verification": "문서 빌드 및 브라우저에서 붉은 장교와 잿빛 기사의 8개 바닥선 일치 확인.",
+    "remaining": "발을 가리는 시안의 발 위치는 하단 실루엣을 사용합니다. 아트 원본 개별 재배치는 미진행. 중앙 배포 미확인.",
+    "outcome": "![발 기준 정렬](../assets/direction-foot-alignment-20261120/alignment.gif)",
+    "proposedTime": "3~5분",
+    "actualTime": "18:50:40 KST 시작, 18:52:43 KST 보고 작성.",
+    "xerjEvidence": "실제 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
