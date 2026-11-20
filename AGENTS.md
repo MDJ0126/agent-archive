@@ -1,128 +1,80 @@
-# Codex 전역 지침
+# Codex Global Instructions
 
-## 응답과 실행
+## Start Here
+
+- Before implementing, producing, or running anything on the first task of a session or when resuming work, read the installed global `AGENTS.md`, then the target project's `AGENTS.md` and any applicable instructions in subdirectories. Do this without a separate request from the user.
+- Use the table below to open only the source documents relevant to the task. The global rules in this file apply across projects. For CampGuardian sprites or PixelLab work, also read the relevant sections of the project's `docs/character-production.md` before starting.
+- Resolve archive paths below from `$CODEX_HOME/config-repo`, or from `~/.codex/config-repo` if `CODEX_HOME` is unset. The link labels give the local source paths. Use the corresponding repository links if local sources are unavailable.
+
+| When to read | Source |
+| --- | --- |
+| Unity, Unreal Blueprint, Affinity, design, app operation, large files, external JSON or PowerShell, deployment artifacts, or instruction synchronization | [`리포트/guide/work-instructions.md`](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/work-instructions.md) — read the applicable section |
+| Checking a change and recording QA evidence | [`리포트/guide/관계도/검수 기록.md`](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EA%B8%B0%EB%A1%9D.md) — use only the checks needed for the task |
+| The user asks for a work manual | [`리포트/guide/execution.md`](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/execution.md) |
+| Writing a result report for implementation, a modification, or configuration | [`리포트/guide/authoring.md`](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/authoring.md) — shared JSON v2 |
+| Checking project-specific reporting or publication exceptions | [`리포트/guide/관계도/보고 예외 프로젝트.md`](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.md) — then open the relevant project's source |
+
+For a visual overview, see the [global instruction map](https://mdj0126.github.io/codex-config/guide/relationships.html). Read existing manuals, QA, and discussions when the task needs them or the user requests them. For Unreal Blueprint change requests, express the behavior as equivalent script or C++ execution logic and verify it by running it or with concrete evidence. For Affinity work, use the actual app and run the dedicated CLI's `doctor` and `status` first. For large files in personal projects, prefer Git Chunk and introduce Git LFS only when requested.
+
+## Execution and Communication
 
 - Whenever PixelLab is used, report the actual usage for the request, the account's remaining quota out of the plan total, and the next quota renewal date. Use the job record for usage and the authenticated balance or billing view for quota and renewal. If a value cannot be verified, label it unverified and do not infer a renewal date.
-- 일반 작업은 바로 구현하고 컴파일·저장·변경 동작에 직접 필요한 확인만 한 번 수행한다. 과도한 사전 검토, 불필요한 도구·작업 사본 구성, 동일 방식의 실패 반복, 반복 캡처·다중 해상도 확인은 생략한다. 문제 해결에 필요한 범위만 확인하고 확인하지 못한 것은 미확인으로 짧게 보고한다.
-- 작업 메뉴얼·QA 문서·전체 코드 인용·Mermaid·전후 캡처는 요청한 범위에만 추가한다. 결과 시각자료는 별도 요청 없이 기본 포함하며, 작업별 결과 보고와 중앙 아카이브 등록은 아래 상시 보고 규칙을 따른다.
+- Confirm scope, order, constraints, and completion criteria. State the start time and a grounded estimate when starting. Ordinary tasks should fit within ten minutes, or the user's shorter deadline. If a delay is likely, report the cause, current result, outstanding work, and revised estimate before the deadline. Estimate based on the actual work, including when the user can judge the work as an experienced game client developer.
+- Start approved implementation, installation, execution, and verification promptly. Preserve scope. Diagnose failures and try another permitted route. Check relevant successful sessions against the current environment before concluding that a tool is unavailable.
+- For ordinary work, implement immediately and run one directly relevant compile, save, or behavior check as appropriate. Avoid unnecessary pre-review, tools, copies, repeated attempts by the same method, duplicate captures, and redundant resolution checks. Write or run tests, including regression tests, only when explicitly requested. Verify requests for an actual comparison or run against the actual target.
+- Use logs, source, configuration, and execution results to establish cause and outcome. Mark unverified items as `미확인` (unverified). When the user confirms a UI item is absent, accept that observation and consult the official documentation for the exact version.
+- In Korean responses, use polite language and give the answer or actual status in the first sentence. If a confirmed agent mistake violated an instruction or produced an incorrect result or guidance, identify the mistake, apologize politely, and state the correction or required follow-up. A neutral follow-up, a user correction to their own request, or new information does not by itself establish a mistake.
+- In the final report, give the proposed time, actual elapsed time, completion time, and time zone. Distinguish implementation, build, installation, execution, verification, push, and deployment. State what remains and the evidence briefly.
+- Add work manuals, QA documents, full code excerpts, Mermaid diagrams, before/after captures, and detailed implementation explanations only within the requested scope. For a detailed code report, cover the relevant functions and execution flow, with public-page verification when that report requires it. Apply the standard result media and archive rules below.
 
-- 대형 작업을 제외한 모든 작업 과정은 10분을 초과하지 않는다. 사용자가 더 짧은 기한을 지정하면 그 기한을 우선한다. 사용자는 10년차 게임 클라이언트 프로그래머로 작업 규모를 판단할 수 있으므로, 검토·도구·문서 시간을 근거 없이 작업량처럼 부풀려 설명하지 않는다.
+## Working Safely in the User's Workspace
 
-- 한국어 응답은 정중한 존댓말로 작성하고, 첫 문장에 사용자가 묻는 핵심이나 실제 작업 상태를 답한다.
-- 모든 작업에서 에이전트 자신의 확인된 실수로 사용자 지시를 어기거나 잘못된 결과·안내를 제공한 경우, 무엇을 잘못했는지 구체적으로 인정하고 정중하게 사과한다. 사과와 함께 수정한 내용 또는 필요한 후속 조치를 알린다. 단순한 후속 질문, 사용자 정정, 새 정보만으로는 실수로 간주하지 않는다.
-- 요청의 범위·순서·제약·완료 기준을 먼저 확인한다. 작업 시작 시 시작 시각과 근거 있는 예상 범위를 제시한다. 지정 기한을 작업 예산으로 사용하고, 지연이 예상되면 기한 전에 원인·현재 결과·남은 일·수정 예상을 보고한다.
-- 이미 승인된 구현·설치·실행·검증은 즉시 진행한다. 범위를 임의로 줄이지 않고, 막히면 오류를 확인해 대체 경로로 진행한다. 도구 사용 불가를 결론 내리기 전 관련 세션의 성공 기록을 찾아 현재 환경과 대조한다.
-- 로그·소스·설정·실행 결과로 원인과 완료 여부를 검증한다. 확인하지 못한 부분은 `미확인`으로 표시한다. 사용자가 UI 요소가 없다고 확인하면 관찰을 받아들이고 정확한 버전의 공식 문서를 검색해 다시 안내한다.
-- 검증은 필요한 범위에서 한 번씩 수행한다. 테스트 작성·실행과 회귀 테스트는 사용자가 명시적으로 요청한 경우에만 한다. 실제 원본 대조·실행 요청은 실제 대상에서 검증한다.
-- 최종 보고에는 **제안 시간**, **실제로 완료된 시간**(실측 소요 시간과 완료 시각·시간대)을 적는다. 구현·빌드·설치·실행·검증·푸시·배포를 구분하고, 미완료 항목과 근거를 짧게 기록한다.
+- Use `rg` and `rg --files` for searches. Do not use XERJ, including for connection checks. Reuse existing directories and entry points. Preserve third-party originals and extend them through project-owned code or assets.
+- If the user is working or reports focus interference, continue with file, static, and network work. Hold focus-changing operations and new or restarted GUIs until the user expressly permits them. A hidden or batch option does not establish that an action is nonintrusive. When asked to conserve resources, run heavy tasks sequentially and check usage.
+- Prefer the application's capture or rendering API or CLI to save evidence directly. While the user is using the PC, avoid computer use, OS input, and focus changes.
+- In editors, save and reopen the editable source and check for unsaved changes. Clean up only your working windows, tabs, sessions, and temporary resources. Preserve existing user work and explain any leftovers.
+- Apply verified lessons after comparing them with existing guidance. Keep shared rules global, and project- or version-specific rules in the corresponding guidance. Report additions, consolidations, or the reason existing guidance suffices.
 
-## 작업별 지침
+## Updates and Synchronization
 
-중앙 저장소는 `$CODEX_HOME/config-repo`이며 미설정 시 사용자 홈의 `.codex/config-repo`다. 아래 경로는 이 저장소 기준이다. 로컬 원문을 사용할 수 없으면 [GitHub의 작업별 지침](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/work-instructions.md)을 참조한다.
+- Run `node <archive>/리포트/check-updates.mjs` at the start of each new user request, on resumption or context recovery, and before the final report. Pass `--since <ID>` for an ID already read in this session. Do not reuse another session's status or a shared marker. If the script is absent, read `리포트/guide/updates.json` directly from GitHub main. The [public update board](https://mdj0126.github.io/codex-config/guide/updates.html) presents the same records.
+- Read newly linked source instructions and apply them to the current task. Proceed with already approved configuration, installation, or synchronization. Preserve and merge local unfinished work. Higher-priority instructions and the user's latest explicit request take precedence. An update does not expand authorization, costs, or publication scope. Do not automatically run remote code or overwrite local instructions.
+- If the remote check fails, continue using known instructions and local records, report that the remote state is unverified, and retry at the next checkpoint. Avoid repeated retries at the same checkpoint. Report the latest update ID actually verified and any unapplied or unverified scope. Do not assume active sessions automatically reload instructions.
+- When changing global or shared instructions, prepend a unique increasing ID, actual date, scope, summary, and source path to the update JSON, and advance `latest`. Preserve earlier records. Publish the instructions, update entry, and task report in the same commit.
+- When editing global instructions, synchronize the installed copy and repository source and compare their hashes. Follow the synchronization section of the work instructions. Commit and push only approved files, preserving other work and secrets.
 
-- **프로젝트 작업** — 대상 저장소 지침과 해당 프로젝트 지침 중 변경에 직접 필요한 부분만 확인한다. 기존 메뉴얼·QA·토론은 문제 해결에 필요하거나 사용자가 요청한 경우에만 확인한다.
-- **작업 메뉴얼을 요청받은 경우** — 리포트/guide/execution.md의 필요한 절만 적용한다. 일반 작업에는 메뉴얼을 새로 만들지 않는다.
-- **작업별 결과 보고** — 모든 구현·수정·설정 작업은 리포트/guide/authoring.md의 공통 JSON v2로 개별 보고한다. 상세 설명은 사용자가 요청한 범위만 추가한다.
-- **결과 캡처·작업 기록·블로그** — 완료·부분 완료 결과에는 별도 요청 없이 실제 시각자료를 기본 첨부한다. 정지 화면으로 충분하면 이미지, 동작·상호작용은 GIF, 긴 흐름·음향은 영상으로 기록한다. 전후 비교·상세 작업 기록은 요청한 범위에 맞춘다.
-- **상세 코드 변경 보고를 요청받은 경우** — 필요한 핵심 함수·실행 흐름만 설명한다. 전체 코드 인용·Mermaid·공개 페이지 확인은 요청한 보고 범위에 필요할 때만 적용한다.
-- **Unity 또는 Unreal Blueprint** — `리포트/guide/work-instructions.md`의 해당 엔진 절. Blueprint는 동등한 스크립트 또는 C++ 실행 구조로 옮긴 뒤 실행이나 구체적인 증거로 검증한다.
-- **Affinity, 디자인 또는 앱 조작** — `리포트/guide/work-instructions.md`의 디자인·Affinity·저장과 종료 절. 실제 Affinity가 필수이며 GUI보다 전용 CLI의 `doctor`와 `status`를 먼저 사용한다.
-- **대용량 파일, 외부 JSON·PowerShell, 배포 산출물** — `리포트/guide/work-instructions.md`의 해당 절. 개인 프로젝트의 대용량 파일에는 Git Chunk를 우선하고, 사용자 요청 없이 Git LFS를 도입하지 않는다.
+## Project Commits and Central Reports
 
-## 공통 작업 규칙
+- For every completed or partially completed implementation, modification, or configuration, commit the scoped project changes and push the current branch promptly. Existing authorization carries forward. Preserve unrelated work, originals, and unfinished changes. Exclude secrets and generated caches. Never force-push. If the push fails, report the error, local commit, and remote status, and address remaining unpushed commits in the next task.
+- Write an individual shared JSON v2 result report for each independent task and commit and push it to the central archive. Use the user's instructions on withheld or private publication. Keep project code push and archive publication as separate statuses. Preserve actual progress, partial completion, and unverified items. Report results, changes, verification scope, remaining work, proposed time, and actual time. Exclude raw session logs and secrets.
+- When recording earlier work retrospectively, use the original session's work time and record today's report creation and registration time separately. Missing times, verification, and historical captures stay unrecorded.
+- Give the final report after doing the requested work, necessary verification, and local media checks. The central archive commit, push, Pages deployment, and public HTTPS checks are separate from this final-report milestone. Continue the archive work within scope without delaying the final for publication or repeatedly querying it. Mark unchecked publication or access as unverified, and include the report link when available.
+- For deployment checks performed within scope, distinguish push, published report, and external media access. Verify the report and media by HTTPS GET, including content type and actual display, playback, or sound as applicable. If the user asks to wait for deployment, continue monitoring and report the current stage. Separate hands-on work from deployment wait. Diagnose confirmed deployment failures from logs and recover within the approved scope. Report any remaining permission or authentication blocker.
 
-- 검색에는 `rg`와 `rg --files`를 쓴다. XERJ는 연결 확인을 포함해 사용하지 않는다. 기존 폴더와 진입 흐름을 재사용한다. 외부 리소스 원본은 보존하고 프로젝트 소유 확장 코드나 에셋으로 수정한다.
-- 사용자가 다른 작업 중이거나 포커스 간섭을 알리면 파일·정적 검사·네트워크 작업을 진행한다. 명시적인 재허락 전까지 포커스를 바꾸는 조작이나 GUI 신규 실행·재시작을 보류한다. 숨김·배치 옵션을 비간섭 근거로 삼지 않는다. 자원 절감 요청 시 무거운 작업을 순차 실행하고 사용량을 확인한다.
-- 작업 화면을 촬영할 때는 앱 자체 캡처·렌더 API나 CLI로 파일에 직접 저장하는 방법을 우선한다. 사용자가 PC를 사용 중이면 컴퓨터 유즈, 운영체제 입력 조작, 포커스 전환을 하지 않는다.
-- 편집 도구에서는 편집 가능한 원본을 저장·재열기하고 미저장 표시를 확인한다. 작업용 창·탭·세션과 임시 자원만 정리하고 기존 사용자 작업을 보존한다. 남은 항목과 이유를 보고한다.
-- 검증된 교훈만 기존 지침과 대조해 통합한다. 공통 규칙은 전역, 프로젝트·버전별 규칙은 전용 지침에 둔다. 추가·통합·변경 없음과 근거를 결과에 기록한다.
-- 모든 프로젝트의 완료·부분 완료 작업은 별도 재요청 없이 중앙 아카이브에 작업별 결과 보고서를 작성·커밋·푸시하고 배포와 개별 HTTPS 링크를 확인한다. 사용자가 게시 보류·비공개를 지정하면 그 지시를 우선한다.
-- 전역 지침 수정 시 설치본과 저장소 원문을 동기화하고 해시를 비교한다. 작업별 지침의 동기화 절에 따라 승인된 파일만 커밋·푸시하며 다른 작업과 비밀정보를 보존한다.
+## Evidence and Media
 
-## 2026-11-17 · 세션 공통 상시 결과 보고
+- Select the required evidence at the start and include capture and attachment in the work. Use actual screenshots for static web or UI results, real animated GIFs for game behavior, animations, hover, and interactions of any length, and videos with real sound when sound is part of the result. Sound-bearing video takes precedence over GIF. Split long interactions into GIFs of the essential flows. Avoid redundant captures.
+- Show the same evidence in the final chat and in the individual central report. In chat, embed the actual local file using an absolute Markdown media path and include the archive report link when available. Keep the report's media publicly accessible when publication is approved and verify public access separately. Mobile availability and playback remain unverified until checked.
+- For remote-only results, use the official download or export method, then confirm the file type, contents, and required playback or sound. Do not download to bypass platform URL-safety rules. Distinguish a successful remote GET from successful chat display.
+- Verify that the required local files exist and contain the actual result. A GIF must have meaningful changing frames, and a sound video must have audible sound and show the target action. Record the target, capture time, and scope. Label mockups and old captures accurately. Exclude personal information, secrets, and unrelated user screens.
+- When mandatory local evidence is unavailable or its content is unverified, report implementation and evidence status separately, with the blocker and remaining capture. Treat the overall result and report as incomplete until the required evidence is verified. Pure text or configuration work with no visual result may use file or configuration comparisons with the reason recorded. This exception does not apply to web, app, game, or sound results. Apply the user's workspace and focus rules during capture.
+- Display each requested character or art output directly, including illustrations, T-poses and separated equipment, and eight-direction artwork as applicable. Display a separate actual animated GIF for each requested PixelLab motion. Collages and archive UI screenshots are supplementary. Include the same individual media in the archive. Use real-sound video when evaluating audio.
 
-- 사용자가 새 세션마다 보고를 요청할 필요 없이 모든 프로젝트에 위 보고 규칙을 적용한다. 독립 작업은 각각 보고하고, 진행 중·미확인·미완료를 완료로 바꾸지 않는다.
-- 과거 작업을 소급 등록할 때 작업 일시는 당시 세션 기록을 사용하고 보고서 작성·등록 일시는 현재 시각으로 구분한다. 기록에 없는 시간·검증·화면은 만들지 않는다.
-- 보고서에는 실제 결과·변경·검증 범위·남은 일·제안 시간·실제 시간을 간결하게 기록한다. 과거 시점의 전후 캡처나 검증을 만들지 않는다. 현재 결과의 시각자료는 실제 대상에서 촬영하고, 보고 때문에 추가 테스트를 자동 작성하지 않는다. 원본 세션 로그·비밀정보는 공개하지 않는다.
-- 이미 실행 중인 다른 세션이 새 지침을 자동으로 읽었다고 단정하지 않는다. 푸시·배포·외부 접근을 구분하며 실패는 원인과 남은 조치로 보고한다.
+## Skill and Tool Selection
 
-## 2026-11-20 · 모든 결과 보고의 시각자료 기본 포함
+- Assess SkillEvaluator and CLI-Anything for each task. Find their `SKILL.md` files under `$CODEX_HOME/skills` or `~/.codex/skills` even if absent from the skill list.
+- Run `skillevaluator quality-check <skill-dir>` and `skillevaluator harness-check <skill-dir>` automatically only when first adding a new skill to the canonical installation. For edits, updates, reinstalls, another PC's restoration, synchronization, and routine checks, run assessments only within an explicit evaluation request. Preserve upstream sources and report scores, findings, scope, and exit codes. Static scores do not establish security or practical effectiveness. Model execution, cost, host access, and credentials follow the existing authorization.
+- For GUI automation and repeated operations, check existing CLI-Anything harnesses and CLI-Hub first. Reuse a sufficient dedicated CLI, official API, or SDK. If needed, use the CLI-Anything methodology to implement a project-owned adapter. Verify the real backend, files, and output before claiming support. Follow the Affinity, upstream preservation, and focus rules.
+- Use the isolated `uv tool` installs of `skillevaluator` and `cli-hub`. On Windows, if they are missing from PATH, try `~/.local/bin/<command>.exe` directly, then check installation status and errors. Existing authorization covers these global installs. Additional cost, credentials, and host execution follow existing authorization.
+- The canonical `reverse-engineer-anything` is `~/.agents/skills/reverse-engineer-anything`. Preserve the older backup at `~/.codex/skill-backups/2026-11-20/reverse-engineer-anything` and keep it outside automatic discovery. Compare both before intentionally switching versions.
+- Use `music-gen` for melody, harmony, arrangement, and MIDI rendering. Use `sound` for effects, UI audio, ambience, synthesis, and audio quality analysis. When both apply, use them for distinct parts of the work.
+- For Cloudflare, prefer the feature-specific skill and supplement it with shared Cloudflare guidance as needed. Select stable, next, or migration from the actual dependency and requested transition. Choose native or Google-connected document and spreadsheet skills based on the real target and file format.
+- Preserve official plugin caches and upstream skills. Static formatting or size warnings alone do not establish a loading failure or justify patching or deleting upstream material. Distinguish estimated descriptions and CLI profiles from what an actual session discovers. Check new-chat discovery separately from installation.
 
-- 모든 프로젝트의 완료·부분 완료 보고는 별도 재요청 없이 실제 결과 이미지·GIF·영상 중 적절한 시각자료를 기본 포함한다. 채팅 최종 결과와 중앙 아카이브 개별 보고 양쪽에 표시하고 게시된 미디어가 열리는지 확인한다. 텍스트·실행 로그만으로 시각자료를 대체해 완료 처리하지 않는다.
-- 매체는 결과 전달력을 기준으로 고른다. 정적 UI·외형·명칭은 이미지, 짧은 동작·호버·애니메이션은 GIF, 긴 진행·복합 상호작용·음향은 영상으로 남긴다. 더 잘 설명되는 형식을 우선하되 같은 증거의 불필요한 중복·반복 촬영은 하지 않는다.
-- 앱·엔진 자체 캡처/렌더 API로 파일에 직접 저장하는 방법을 우선하고 실제 대상·촬영 시점·확인 범위를 명시한다. 시안·자동 요약 그림·과거 캡처를 현재 인게임 증거로 표시하지 않는다. 공개 자료에 개인정보·비밀정보·사용자 다른 작업 화면을 포함하지 않는다.
-- 사용자 작업·포커스 보호 규칙은 유지한다. 촬영할 수 없거나 실제 시각 결과가 없는 작업은 사유·대체 근거·미확인 범위를 기록하며 촬영 완료로 바꾸지 않는다. 확보된 현재 시각자료를 먼저 첨부하고 필요한 후속 촬영을 남긴다.
-- 이 기본 시각자료 규칙은 기존의 일반 작업 자동 캡처 생략 문구보다 우선한다. 이미 실행 중인 다른 세션에 자동 전파됐다고 단정하지 않는다.
-## 2026-11-20 · SkillEvaluator와 CLI-Anything 상시 적용
+## Cross-PC Skill Restoration
 
-- 모든 작업에서 두 도구의 적용 여부를 판단하고, 아래 해당 작업에는 별도 재요청 없이 반드시 사용한다. 스킬 진입점은 `$CODEX_HOME/skills/skillevaluator/SKILL.md`와 `$CODEX_HOME/skills/cli-anything/SKILL.md`이며 CODEX_HOME 미설정 시 사용자 홈의 `.codex`를 사용한다. 목록에서 생략돼도 해당 원문을 직접 읽는다.
-- SkillEvaluator는 새 스킬을 설치 정본에 최초 추가할 때에만 `quality-check <skill-dir>`와 `harness-check <skill-dir>`를 자동 실행한다. 기존 스킬의 수정·업데이트·재설치·다른 PC 복원·동기화·정기 확인에는 자동 실행하지 않는다. 사용자가 평가·보안·중복·실제 효과 검사를 명시적으로 요청하면 요청한 범위에서 실행한다. 외부 원본을 보존하고 점수·지적·실행 범위·종료 코드를 보고하며, 정적 점수를 보안 보증이나 실제 작업 효과로 해석하지 않는다. 모델·실행 환경·비용이 필요한 검사는 기존 승인 범위에 따른다.
-- 앱·GUI 자동화와 반복 조작에는 CLI-Anything의 기존 CLI·CLI-Hub·대상별 harness를 우선 확인하고 사용한다. 기존 전용 CLI·공식 API·SDK가 충족하면 재사용하며, 부족한 기능은 CLI-Anything 방법론으로 프로젝트 소유 어댑터를 구현한다. 실제 백엔드·파일·출력을 확인하고 설치만으로 앱 전체 지원을 단정하지 않는다. Affinity 필수 사용, 외부 원본 보존, 사용자 포커스 보호 규칙을 유지한다.
-- 전역 실행 도구는 `uv tool`로 격리 설치한 `skillevaluator`와 `cli-hub`를 사용한다. PATH에 없으면 Windows는 사용자 홈의 `.local/bin/<명령>.exe`를 직접 호출하고, 명령이 없으면 설치 상태와 오류를 확인한다. 두 도구의 이번 전역 설치 승인을 반복 요청하지 않는다. 추가 모델 비용·자격증명·호스트 실행 승인은 기존 승인 범위에 따른다.
-- 새 대화부터 전역 지침과 스킬을 읽어 적용한다. 이미 실행 중인 다른 대화가 자동으로 재로딩했다고 단정하지 않는다.
-
-
-## 2026-11-20 · 업데이트 게시판 확인과 즉시 적용
-
-- 중앙 업데이트 게시판은 `https://mdj0126.github.io/codex-config/guide/updates.html`이며 원본은 저장소의 `리포트/guide/updates.json`이다. 모든 새 사용자 요청의 작업 시작, 작업 재개·컨텍스트 복구, 최종 보고 전에 `node <중앙 저장소>/리포트/check-updates.mjs`로 원격 최신 기록을 확인한다. 같은 세션에서 이미 읽은 ID는 `--since <ID>`로 전달하되 다른 세션·공유 파일의 확인 상태를 재사용하지 않는다. 스크립트가 없으면 GitHub main의 해당 JSON 원문을 직접 조회한다.
-- 새 기록이 있으면 연결된 최신 지침 원문을 읽고 현재 작업에 즉시 반영한다. 기존 승인 범위의 설정·설치·동기화는 재질문 없이 진행하고, 로컬 미완성 변경은 보존·병합한다. 상위 지침과 사용자의 최신 명시적 요청을 우선하며 업데이트를 이유로 승인 범위나 비용·공개 범위를 확대하지 않는다. 원격 코드를 자동 실행하거나 로컬 지침을 무조건 덮어쓰지 않는다.
-- 원격 조회 실패는 최신 확인 완료로 처리하지 않는다. 로컬 기록과 이미 알려진 지침으로 가능한 작업을 계속하고 원격 최신은 미확인으로 보고한 뒤 다음 확인 시점에 재시도한다. 단순 조회 실패로 같은 명령을 반복하거나 작업을 중단하지 않는다.
-- 전역·공통 작업 지침을 변경할 때마다 게시판 JSON 맨 위에 고유 증가 ID·실제 날짜·대상·변경 요약·원문 경로를 추가하고 latest를 갱신한다. 과거 기록은 보존하고 지침·게시판·개별 보고서를 같은 커밋으로 게시한다. 각 세션은 실제 확인한 최신 ID와 미적용·미확인 범위를 결과에 기록한다. 이 규칙을 아직 읽지 않은 실행 중 세션에 강제 전파됐다고 단정하지 않는다.
-
-## 2026-11-20 · 스킬 중복과 역할 선택
-
-- `reverse-engineer-anything`은 사용자 홈의 `.agents/skills/reverse-engineer-anything`을 정본으로 사용한다. 구형 `.codex/skills` 중복 사본은 `.codex/skill-backups/2026-11-20/reverse-engineer-anything`에 원본 그대로 보관했으며 자동 탐색 대상에 다시 복사하지 않는다. 의도적인 버전 교체가 필요하면 먼저 두 내용을 비교한다.
-- 음악·멜로디·화성·악기 편곡과 MIDI 렌더는 `music-gen`, 효과음·UI음·앰비언스·직접 합성 및 음향 품질 분석은 `sound`를 우선한다. 둘이 필요한 과제에서는 담당 단계를 나누고 같은 산출물에 상충하는 경로를 중복 적용하지 않는다.
-- Cloudflare는 해당 기능의 전용 스킬을 우선하고 공통 플랫폼 내용만 `cloudflare`로 보충한다. Sandbox stable·next·migration은 현재 의존성과 요청한 전환 여부로 하나의 경로를 선택한다. 네이티브 문서·스프레드시트와 Google 연결 문서는 파일 형식과 실제 대상을 기준으로 선택한다.
-- SkillEvaluator의 정적 형식·길이 경고만으로 외부 스킬을 패치·삭제하거나 공식 플러그인의 실제 로딩 실패로 단정하지 않는다. 플러그인 캐시는 원본 유지하며, 불필요한 역할 중복은 이 선택 규칙으로 정리한다. 스킬 설명량 경고는 모델 문맥·CLI 버전에 따른 프로필 추정이며 실제 세션 노출 여부와 구분한다.
-
-## 2026-11-20 · 보고 매체 필수 기준
-
-- 웹페이지 등 정적인 결과는 실제 대상의 스크린샷 이미지로 보고한다.
-- 게임·애니메이션·호버·상호작용 등 동적인 결과는 길이와 관계없이 반드시 실제 동작을 촬영한 GIF로 보고한다. 정지 스크린샷으로 대체하지 않는다.
-- 사운드까지 확인해야 하는 결과는 반드시 실제 소리가 포함된 영상으로 보고한다. 이 경우 영상 기준을 GIF 기준보다 우선 적용한다.
-- 위 기준을 채팅 최종 결과와 중앙 아카이브 개별 보고 양쪽에 적용한다. 긴 동작은 핵심 흐름별 GIF로 나누어 기록한다.
-- 촬영 불가 시 사유와 미확인 범위를 기록하고 필수 매체 미첨부 상태를 남긴다. 다른 매체로 대체해 촬영·검증 완료로 처리하지 않는다. 사용자 작업·포커스 보호 규칙은 유지한다.
-- 이 필수 기준은 기존의 매체 재량 선택·짧은 동작만 GIF·긴 진행은 영상 등의 기준보다 우선한다. 이미 실행 중인 다른 세션의 자동 적용은 보장하지 않는다.
-
-### 시각자료 확보는 필수 완료 조건
-
-- 작업 시작 시 결과별 필수 매체(정적 스크린샷·동적 GIF·사운드 포함 영상)를 정하고 구현·수정 작업 범위에 촬영·첨부·게시 확인을 포함한다. 사용자의 별도 촬영 요청을 기다리지 않는다.
-- 완료 보고 직전에 실제 결과의 필수 매체 파일 존재, 내용 확인, 채팅 최종 응답의 직접 표시, 중앙 보고서 본문의 직접 표시, 게시 미디어의 HTTPS 접근을 각각 확인한다. 링크만 나열하거나 텍스트·실행 로그·정지 이미지로 필수 GIF·영상을 대신하지 않는다.
-- 동적 GIF는 실제로 여러 프레임이 재생되며 변경된 동작이 보이는지, 사운드 영상은 실제 소리와 확인 대상 동작이 포함되는지 확인한다. 단일 프레임 GIF·무음 영상·관련 없는 화면을 증거로 인정하지 않는다.
-- 필수 시각자료가 없거나 표시·재생·음향·게시 접근이 미확인이면 전체 작업을 완료로 보고하거나 보고서 상태를 complete로 기록하지 않는다. 구현 완료와 증거 확보 미완료를 분리하고 현재 상태·확인된 장애·남은 촬영 작업을 보고한다. 시간 부족·촬영 누락·도구 설치만으로 면제하지 않는다.
-- 사용자 포커스 보호·접근 권한을 침해하며 촬영하지 않는다. 실제 시각 결과가 없는 순수 텍스트·설정 작업만 해당 사유와 파일·설정 대조 근거를 명시할 수 있으며, 웹·앱·게임·음향 결과에 이 예외를 적용하지 않는다. 가짜·요약 시각자료를 실제 결과 캡처로 만들지 않는다.
-
-### 채팅 시각자료는 게시한 보고서에서 가져오기
-
-- 채팅 최종 응답의 이미지·GIF·영상은 해당 중앙 보고서에 게시한 동일 미디어의 공개 HTTPS 주소를 사용한다. 보고서 본문의 상대 경로는 게시된 보고서 주소를 기준으로 절대 HTTPS 주소로 변환하고, 실제 GET 응답 성공과 미디어 종류·내용을 확인한 뒤 직접 표시한다. 보고서 링크도 함께 제공한다.
-- PC 로컬 경로(C:/, file://, 상대 파일 경로), 로컬 전용 첨부 또는 저장소 raw 주소를 보고서 게시 미디어 대신 사용하지 않는다. 배포 대기·404·접근 실패는 게시 미확인으로 기록하며, 정상 공개 주소를 확보하기 전에는 시각자료 전달 및 전체 작업을 완료로 보고하지 않는다. 모바일에서도 접근 가능한 동일 게시 파일을 사용한다.
-
-## 2026-11-20 · 모든 PC의 전역 스킬 기록·누락 복원
-
-- 전역 스킬 설치 정본은 중앙 저장소 `tools/skills/manifest.json`이다. 사용자 스킬의 설치 위치·원본 스냅샷·파일 SHA-256, CLI 고정 버전, 앱 관리 플러그인 목록을 항상 기록한다. 최초 등록은 사용자 스킬 18개(17개 CODEX_HOME/skills, REA 1개 사용자 홈 .agents/skills), CLI skillevaluator 1.0.1·cli-anything-hub 0.4.1이다. 상세 목록은 manifest를 읽으며 이 숫자만으로 최신 상태를 판단하지 않는다.
-- 새 PC 설정과 새 세션·업데이트 적용 시 `tools/skills/Restore-Skills.ps1 -CheckOnly`로 누락·차이를 확인하고, 누락이 있으면 `Restore-Skills.ps1`로 즉시 설치한다. 이번 요청은 등록된 스킬·CLI·필수 uv/Python의 누락 복원에 대한 상시 승인이다. 경로는 현재 CODEX_HOME과 사용자 홈으로 계산하며 다른 PC의 사용자 이름을 복사하지 않는다. `Sync.ps1 -Direction Pull`도 지침 동기화 후 이 복원을 수행한다.
-- 스킬 신규 설치·수정·업데이트·의도적인 제거 시 `Export-Skills.ps1`로 설치 목록·스냅샷·해시를 갱신하고 이 전역 지침의 적용 규칙, 업데이트 게시판, 개별 결과 보고서를 함께 기록·게시한다. 다른 PC에 아직 없는 항목을 등록 목록에서 임의 삭제하지 않는다. 정본에서의 제거는 명시적 제거 요청 범위에서만 한다.
-- 기존 설치본 내용·CLI 버전이 다르면 무조건 덮어쓰지 않는다. 차이를 보존·검토·병합하고 정본과의 일치 여부를 보고한다. 기본 `.system` 스킬과 공식 플러그인 캐시·로그인·토큰은 복제하지 않는다. manifest의 플러그인이 없으면 Plugin Management로 같은 플러그인을 찾아 연결 절차를 진행하고, 사용자 인증이 필요한 부분은 미완료로 명시한다. 캐시 파일 존재만으로 설치·연결 성공을 단정하지 않는다.
-- 설치 후 원본 해시·실행 버전을 확인하고 새 대화의 스킬 발견 여부를 구분한다. SkillEvaluator는 설치 정본에 새 스킬을 최초 추가할 때에만 자동 실행하며 기존 등록 스킬의 다른 PC 복원에는 자동 실행하지 않는다. 다른 PC에서 실제 실행하지 않은 복원은 해당 PC 검증 미확인으로 남긴다. 상주 자동 동기화가 설치된 것으로 보고하지 않는다.
-
-
-## 2026-11-20 · 중앙 배포를 기다린 뒤 이미지와 함께 최종 보고
-
-- 결과 보고는 중앙 저장소 푸시에서 끝내지 않습니다. 개별 보고서 페이지 배포와 해당 보고서에 실린 필수 미디어의 공개 HTTPS 접근을 기다린 뒤, 같은 게시 미디어를 최종 응답에 직접 표시하고 보고서 링크를 함께 제공합니다.
-- 배포 대기·검증 중에는 commentary로 현재 결과·대기 단계·예상을 알리고 작업을 계속합니다. 단순 배포 대기나 처음의404만으로 최종 응답을 끝내거나 이미지 첨부를 사용자 재요청으로 넘기지 않습니다.
-- 최종 응답 전 보고서 페이지와 각 표시 미디어를 실제 GET으로 확인합니다. 이미지/GIF/영상의 Content-Type·파일 내용과 필요한 재생·음향 확인을 마친 뒤 직접 표시합니다. 로컬 경로·raw 주소·미디어 링크만 나열하는 방식으로 대체하지 않습니다.
-- 제작 실작업 시간과 배포 대기 시간을 구분합니다. 배포 대기로 제안 시간이나 일반10분을 넘길 때는 기한 전에 원인·현재 결과·남은 배포 단계·수정 예상을 알리고, 사용자가 이번에 요청한 배포 대기를 계속합니다.
-- 배포 실패가 확인되면 로그로 원인을 확인하고 승인된 범위에서 복구합니다. 인증·권한 등 실제로 사용자 조치가 필요한 장애만 미완료로 보고하며, 정상 게시 주소를 확보하지 못한 상태를 완료로 기록하지 않습니다.
-
-
-## 2026-11-20 · 캐릭터 결과는 개별 시안과 모션을 직접 표시
-
-- 캐릭터·아트 결과의 최종 응답은 중앙 보고서에 게시한 개별 시안 이미지(일러스트, T포즈·분리 장비,8방향 등)를 종류별로 직접 표시합니다. 보고서 사이트 전체 스크린샷이나 링크만으로 개별 시안 전달을 대신하지 않습니다.
-- PixelLab 등 모션 제작 결과는 실제 생성 프레임이 재생되는 개별 GIF를 모션별로 직접 표시합니다. 대표 모음은 보조 자료이며 요청한 개별 결과를 숨기지 않습니다. 사운드 결과는 기존 실제 소리 포함 영상 기준을 유지합니다.
-- 중앙 보고서 본문에도 같은 개별 미디어를 넣고, 배포 후 공개 HTTPS GET·종류·내용 및 필요한 재생을 확인한 동일 주소를 채팅에 사용합니다. 웹 UI 검증 스크린샷은 보조 증거로 구분하며 아트 시안·동작 GIF를 대체하지 않습니다.
-
-## 2026-11-20 · 매 작업 프로젝트 커밋과 자동 푸시
-
-- 모든 프로젝트의 구현·수정·설정 작업을 완료 또는 부분 완료할 때마다 해당 작업 변경을 커밋하고 현재 브랜치를 원격에 즉시 푸시합니다. 중앙 보고서 게시와 프로젝트 코드 푸시는 별도로 확인하며 이미 승인된 푸시를 재질문하지 않습니다.
-- 다른 작업·미완성 변경과 원본은 보존하고 해당 작업 범위만 커밋합니다. 비밀정보·생성 캐시는 제외하고 강제 푸시는 하지 않습니다. 실패하면 오류·로컬 커밋·원격 반영 상태를 보고하고 다음 작업에서 미푸시 커밋을 함께 처리합니다. 푸시와 빌드·실행 검증의 완료 여부를 구분합니다.
+- The installation manifest is `tools/skills/manifest.json` in the central repository. It records installation paths, source snapshots, SHA-256 hashes, pinned CLI versions, and app-managed plugins. Use the manifest for the current inventory. Initial registration covered 18 user skills, with 17 in Codex home and REA under `~/.agents/skills`, plus skillevaluator 1.0.1 and cli-anything-hub 0.4.1.
+- On a new PC, in a new session, or when applying updates, run `tools/skills/Restore-Skills.ps1 -CheckOnly`. If a registered item is missing, run `Restore-Skills.ps1` immediately under the existing authorization for registered skills, CLIs, and required uv/Python. Resolve paths using the current home and `CODEX_HOME`. `Sync.ps1 -Direction Pull` performs restoration after instruction synchronization.
+- For a new install, modification, upgrade, or intentional removal, run `Export-Skills.ps1` to update the manifest, snapshots, and hashes. Record and publish related instructions, the update board entry, and the individual result together. Keep manifest entries for other PCs unless removal was expressly requested.
+- Preserve and review differing local skill content and CLI versions before merging. Do not copy `.system` skills, official plugin caches, login data, or tokens. Use Plugin Management to find and connect a missing app-managed plugin. Record authentication requirements as pending, and distinguish cache presence from connection.
+- After installation, verify source hashes, CLI versions, and new-chat discovery separately. Apply the SkillEvaluator rule above. Treat any restoration not executed on the other PC as unverified. Do not claim that background synchronization exists unless demonstrated.
