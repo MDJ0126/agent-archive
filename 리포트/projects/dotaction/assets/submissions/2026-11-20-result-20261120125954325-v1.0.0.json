@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 전신 자세와 망토 재작화",
+    "summary": "전신 자세를 다시 잡고 상체, 골반, 무릎과 부츠 방향을 왼쪽 3/4로 통일했습니다. 넓은 망토와 빈손이 보입니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "ImageGen 전신 재작화. 아카이브와 제작 가이드 갱신. 아카이브 갱신. 커밋 640bf437.",
+    "verification": "투명 배경과 실제 아카이브 표시 확인. 웹 빌드 및 모달 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![수정 일러스트](../assets/officer-illustration-unarmed-drape-20261120/illustration.png)\n\n![아카이브 일러스트](../assets/officer-illustration-unarmed-drape-20261120/archive.png)",
+    "proposedTime": "2~4분",
+    "actualTime": "21:57:39 KST 확인 시작, 21:59:52 KST 보고 작성.",
+    "xerjEvidence": "실제 PNG와 문서 빌드",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
