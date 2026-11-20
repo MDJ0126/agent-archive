@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 8방향 왜곡 보정본 철회",
+    "summary": "행별 가로 변형이 몸체와 의상 선을 훼손해 직전 시안을 복원했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "직전 8방향과 아카이브 연결 복원, 커밋 f270cf9a 푸시.",
+    "verification": "직전 커밋의 장교 원본 및 아카이브 소스와 일치. 웹 빌드 성공.",
+    "remaining": "마네킹 체형 일치는 미완료. 중앙 배포 미확인.",
+    "outcome": "![복원한 8방향 시안](../assets/officer-eight-direction-restore-20261120/restored.png)",
+    "proposedTime": "2~3분",
+    "actualTime": "20:53:09 KST 확인 시작, 20:53:31 KST 복원 및 프로젝트 푸시. 22초, 보고 별도.",
+    "xerjEvidence": "Git, 문서 빌드, 복원 PNG",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
