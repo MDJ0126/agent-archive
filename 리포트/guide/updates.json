@@ -7,8 +7,8 @@
       "date": "2026-11-21",
       "title": "CampGuardian PixelLab 모션 제출과 검수",
       "scope": "CampGuardian 스프라이트 제작 세션",
-      "source": "리포트/projects/dotaction/guidelines.md",
-      "summary": "등록한 투명 기준 이미지, 실제 시작·끝 입력 대조, 한 모션씩 타격 검수와 아카이브·게임 상태 구분을 적용합니다."
+      "source": "AGENTS.md",
+      "summary": "등록한 투명 기준 이미지, 실제 시작·끝 입력 대조, 한 모션씩 타격 검수와 아카이브·게임 상태 구분을 적용합니다. CampGuardian 저장소 AGENTS.md와 docs/character-production.md의 PixelLab 절을 읽습니다."
     },
     {
       "id": "2026-11-20-013",
