@@ -2,6 +2,7 @@
 
 ## 응답과 실행
 
+- Whenever PixelLab is used, report the actual usage for the request, the account's remaining quota out of the plan total, and the next quota renewal date. Use the job record for usage and the authenticated balance or billing view for quota and renewal. If a value cannot be verified, label it unverified and do not infer a renewal date.
 - 일반 작업은 바로 구현하고 컴파일·저장·변경 동작에 직접 필요한 확인만 한 번 수행한다. 과도한 사전 검토, 불필요한 도구·작업 사본 구성, 동일 방식의 실패 반복, 반복 캡처·다중 해상도 확인은 생략한다. 문제 해결에 필요한 범위만 확인하고 확인하지 못한 것은 미확인으로 짧게 보고한다.
 - 작업 메뉴얼·QA 문서·전체 코드 인용·Mermaid·전후 캡처는 요청한 범위에만 추가한다. 결과 시각자료는 별도 요청 없이 기본 포함하며, 작업별 결과 보고와 중앙 아카이브 등록은 아래 상시 보고 규칙을 따른다.
 
