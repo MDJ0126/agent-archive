@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "로컬 HTML의 마네퀸 겹쳐 보기 복구",
+    "summary": "로컬 파일의 캔버스 픽셀 읽기 제한을 피하도록 T포즈와 8방향 비교를 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "T포즈는 이미지 합성만 사용합니다. 현행 장교·기사 8방향은 이미지 해시에 결합한 발 정렬값으로 합성합니다.",
+    "verification": "로컬 파일에서 SecurityError 재현. 수정 후 로컬 파일·HTTP에서 붉은 장교 T포즈 및 장교·기사 8방향 비교와 불투명도 검증. 빌드 및 GIF 확인.",
+    "remaining": "정렬값이 없는 신규 시트의 로컬 파일 비교는 기본 위치에 표시됩니다. 중앙 배포 미확인.",
+    "outcome": "![로컬 HTML에서 겹쳐 보기](../assets/overlay-local-fix-20261120/comparison.gif)",
+    "proposedTime": "2~4분",
+    "actualTime": "19:58:06 KST부터 20:01:15 KST까지 작업.",
+    "xerjEvidence": "실제 브라우저 재현과 GIF 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
