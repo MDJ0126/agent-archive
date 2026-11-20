@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 8방향 분리 레이어 재제작",
+    "summary": "수정된 정면 T포즈의 의상을 기준으로 장비 없는 몸체를 그린 후 망토와 장비를 독립 레이어로 합성했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "몸체·망토·장비 PNG와 합성본, 실제 아카이브 비교, 가이드 예제 연결. 프로젝트 커밋 cff0b1e8.",
+    "verification": "방향당 512×512 및 3방향 픽셀 반전 확인. 발바닥 높이 차이 0px. 동일 비율 배치 후 몸체 마스크 겹침 84~89%. 웹 빌드와 로컬 윤곽 전환 확인.",
+    "remaining": "측면과 사선 체형에 차이가 남음. Affinity 연결 거부로 네이티브 파일 작성 미완료. 중앙 배포 미확인.",
+    "outcome": "![붉은 장교 8방향](../assets/officer-eight-layered-20261120/dressed.png)\n\n![장비 없는 8방향 몸체](../assets/officer-eight-layered-20261120/body.png)\n\n![아카이브 여성형 마네킹 윤곽 비교](../assets/officer-eight-layered-20261120/body-overlay.png)",
+    "proposedTime": "5~8분",
+    "actualTime": "21:12:10 KST 확인 시작. 21:14:35 KST 보고 작성.",
+    "xerjEvidence": "ImageGen, PNG 실측, 로컬 브라우저",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
