@@ -2,16 +2,21 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { escapeHTML as escape, renderMarkdown } from './render.mjs';
 
-// The graph uses the same public documents as the archive's guide and project pages.
+const topic = (id, label) => [id, `관계도/${label}.md`, label];
+
 const guideRows = [
-  [['global', 'AGENTS.md', '전역 지침', '../AGENTS.md']],
+  [topic('global', '전역 지침')],
   [
-    ['work', 'work-instructions.md', '작업별 지침'],
-    ['authoring', 'authoring.md', '보고서 작성 가이드'],
+    topic('work', '작업별 지침'),
+    topic('qa', '품질 점검 절차'),
+    topic('authoring', '결과 보고 기준'),
     ['projects', null, '프로젝트 전용 지침'],
   ],
   [
-    ['execution', 'execution.md', '작업 실행과 품질 점검'],
+    topic('naming', '네이밍 규칙'),
+    topic('style', '코드 스타일'),
+    topic('qa-record', '검수 기록'),
+    topic('qa-evidence', '검수 증거'),
     ['workflow', 'workflow.md', '보고서 처리 가이드'],
   ],
   [
@@ -22,26 +27,36 @@ const guideRows = [
 
 const edges = [
   ['global', 'work', 'required'],
+  ['global', 'qa', 'required'],
   ['global', 'authoring', 'required'],
   ['global', 'projects', 'required'],
-  ['work', 'execution', 'reference'],
-  ['authoring', 'execution', 'reference'],
+  ['work', 'naming', 'reference'],
+  ['work', 'style', 'reference'],
+  ['qa', 'qa-record', 'reference'],
+  ['qa', 'qa-evidence', 'reference'],
+  ['authoring', 'qa-evidence', 'reference'],
   ['authoring', 'workflow', 'reference'],
   ['workflow', 'report', 'reference'],
   ['workflow', 'bug', 'reference'],
 ];
 
+const projectReporting = {
+  'sampleprojectforunity': '샘플 프로젝트 보고 예외',
+  'dotaction': '캠프 가디언 보고 예외',
+  'snsmanager': '소셜 게시 보고 예외',
+  'fantasya': '판타지아 보고 기준',
+  'codex-config': '중앙 아카이브 보고 기준',
+};
+
 export async function buildRelationships(root, projects, shell) {
   const previews = [];
-  async function documentNode(id, file, label, source, project = '') {
+  async function documentNode(id, file, label, source, project = '', projectLabel = '') {
     const raw = await readFile(path.join(root, source), 'utf8');
     const markdown = raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n\s*/, '');
-    const base = id === 'global'
-      ? 'https://github.com/MDJ0126/codex-config/blob/main/AGENTS.md'
-      : project ? `../projects/${encodeURIComponent(project)}/guidelines.md` : file;
-    const title = project ? '프로젝트 전용 지침.md' : `${label}.md`;
+    const base = file.split('/').map(encodeURIComponent).join('/');
+    const title = `${label}.md`;
     const { html, toc } = renderMarkdown(markdown, { bodyMode: true });
-    const caption = project ? `${label} · 제목 ${toc.length}개` : `제목 ${toc.length}개`;
+    const caption = projectLabel || `제목 ${toc.length}개`;
     const sections = /^#\s/.test(markdown) ? toc.slice(1) : toc;
     const contents = sections.length > 3
       ? `<details class="relations-contents"><summary>이 문서의 목차</summary><ul>${sections.map(({ id, label }) =>
@@ -53,17 +68,29 @@ export async function buildRelationships(root, projects, shell) {
 
   const projectDocuments = Object.entries(projects).sort(([, a], [, b]) => a.name.localeCompare(b.name, 'ko'));
   const projectNodes = await Promise.all(projectDocuments.map(([id, project]) =>
-    documentNode(`project-${id}`, 'guidelines.md', project.name, `projects/${id}/guidelines.md`, id)));
+    documentNode(`project-${id}`, `../projects/${id}/guidelines.md`, '프로젝트 전용 지침', `projects/${id}/guidelines.md`, id, project.name)));
+  const exceptionNodes = await Promise.all(projectDocuments.map(([id]) => {
+    const label = projectReporting[id];
+    if (!label) {
+      return `<div class="relations-node relations-note" data-node="reporting-${escape(id)}" data-project="${escape(id)}" hidden><strong>보고·공개 예외</strong><small>별도 기준 확인 기록 없음</small></div>`;
+    }
+    const file = `관계도/${label}.md`;
+    return documentNode(`reporting-${id}`, file, label, `guide/${file}`, id, '보고·공개 기준');
+  }));
   const rows = await Promise.all(guideRows.map(async (row, index) => {
     const nodes = await Promise.all(row.map(([id, file, label, source]) => file
       ? documentNode(id, file, label, source ?? `guide/${file}`)
       : `<a class="relations-node" data-node="${id}" href="project-instructions.html"><strong>${label}</strong><small>프로젝트별 문서 목록</small></a>`));
     if (index === 2) nodes.push(`<div class="relations-project">${projectNodes.join('')}</div>`);
+    if (index === 3) nodes.push(`<div class="relations-project">${exceptionNodes.join('')}</div>`);
     return `<div class="relations-row">${nodes.join('')}</div>`;
   }));
   const options = projectDocuments.map(([id, project]) =>
     `<option value="${escape(id)}"${id === 'codex-config' ? ' selected' : ''}>${escape(project.name)}</option>`).join('');
-  const renderedEdges = [...edges, ...projectDocuments.map(([id]) => ['projects', `project-${id}`, 'reference'])]
+  const renderedEdges = [...edges, ...projectDocuments.flatMap(([id]) => [
+    ['projects', `project-${id}`, 'reference'],
+    [`project-${id}`, `reporting-${id}`, 'reference'],
+  ])]
     .map(([from, to, kind]) => `<span data-from="${escape(from)}" data-to="${escape(to)}" data-kind="${kind}"></span>`).join('');
   const body = `<main class="relations-page">
     <div class="relations-heading"><h1>관계도 관리</h1><p>중앙 아카이브의 지침과 가이드 연결을 살펴보고, 문서를 눌러 원문을 읽으세요.</p></div>

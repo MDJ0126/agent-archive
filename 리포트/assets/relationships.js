@@ -8,6 +8,8 @@
   const dialog = document.querySelector('.relations-dialog');
   const article = dialog.querySelector('.relations-document');
   const sourceLink = dialog.querySelector('.relations-source');
+  const documents = new Map([...nodes.values()].filter(node => node.dataset.preview)
+    .map(node => [new URL(node.dataset.preview, location.href).href, node]));
 
   function draw() {
     const bounds = board.getBoundingClientRect();
@@ -48,9 +50,7 @@
     draw();
   });
 
-  board.addEventListener('click', event => {
-    const node = event.target.closest('button[data-preview]');
-    if (!node) return;
+  function showDocument(node) {
     const { preview, title } = node.dataset;
     const base = new URL(preview, location.href);
     const content = document.getElementById(`preview-${node.dataset.node}`).content.cloneNode(true);
@@ -64,8 +64,12 @@
     dialog.querySelector('#relations-location').textContent = node.querySelector('small').textContent;
     sourceLink.href = base.href;
     article.replaceChildren(content);
-    dialog.showModal();
+    if (!dialog.open) dialog.showModal();
     article.scrollTop = 0;
+  }
+  board.addEventListener('click', event => {
+    const node = event.target.closest('button[data-preview]');
+    if (node) showDocument(node);
   });
   dialog.addEventListener('click', event => {
     if (event.target === dialog) dialog.close();
@@ -76,6 +80,14 @@
       heading.tabIndex = -1;
       heading.focus({ preventScroll: true });
       heading.scrollIntoView({ block: 'start' });
+      return;
+    }
+    const related = event.target.closest('.relations-document a');
+    const node = related && documents.get(related.href);
+    if (node && !node.hidden && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+      event.preventDefault();
+      showDocument(node);
+      dialog.querySelector('button').focus();
     }
   });
   new ResizeObserver(draw).observe(board);
