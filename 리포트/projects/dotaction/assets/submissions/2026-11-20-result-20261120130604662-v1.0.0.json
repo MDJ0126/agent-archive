@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 장검과 칼집 재디자인",
+    "summary": "무기와 장식 시트의 검신과 칼집을 길게 다시 그리고 같은 축 방향으로 배치했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "장검·칼집 분리 PNG와 무기·장식 시트 추가. 9982d820 푸시.",
+    "verification": "1536×1024 장식 시트와 분리 PNG 확인. 아카이브 확대창 실제 표시 확인.",
+    "remaining": "중앙 배포 미확인.",
+    "outcome": "![붉은 장교 장검](../assets/officer-long-weapon-board-20261120/weapons.png)\n\n![무기와 장식 확대창](../assets/officer-long-weapon-board-20261120/archive.png)",
+    "proposedTime": "3~5분",
+    "actualTime": "22:04:40 KST 확인 시작, 22:05:34 KST 검증 및 푸시 완료. 약 54초.",
+    "xerjEvidence": "ImageGen 및 PNG 실측",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
