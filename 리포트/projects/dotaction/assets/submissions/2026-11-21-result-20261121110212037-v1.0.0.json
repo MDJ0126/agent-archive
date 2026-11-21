@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 캐릭터 제작하기 메뉴명 변경",
+    "summary": "제작 현황·QA 메뉴를 캐릭터 제작하기로 바꿨습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사이드바, 홈 바로가기, 현재 위치, 브라우저 제목, 관련 안내 링크의 표기를 맞췄습니다. 기존 주소를 유지했습니다.",
+    "verification": "Chrome에서 홈 바로가기 세 곳, 메뉴와 현재 위치, 문서 제목 및 기존 경로 이동을 확인했습니다.",
+    "remaining": "전체 문서 빌드와 공개 사이트 배포 미확인. 지침 원격 조회 실패로 로컬 2026-11-21-011 적용.",
+    "outcome": "프로젝트 3dc3ee27을 main에 푸시했습니다.\n\n![홈의 캐릭터 제작하기 바로가기](../assets/character-production-label-20261121/character-production-label-home.png)\n\n![캐릭터 제작하기 메뉴와 현재 위치](../assets/character-production-label-20261121/character-production-label-page.png)",
+    "proposedTime": "4분",
+    "actualTime": "1분 14초, 20:01:55 KST 프로젝트 푸시 완료",
+    "xerjEvidence": "로컬 대시보드 서버와 Chrome 실제 렌더",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
