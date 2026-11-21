@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마네킹과 붉은 장교 아카이브의 시트 표시 순서 변경",
+    "summary": "남녀 마네킹과 붉은 장교의 T포즈 및 8방향 표시용 시트 7장을 재배치했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "T포즈 위 정면·왼쪽·오른쪽, 아래 후면·위·아래. 8방향 위 SW·S·SE·E, 아래 NW·N·NE·W. 장교의 의복과 장비 착용 모두 적용. 제작 원본 보존. ImageGen 미사용.",
+    "verification": "표시용 PNG 7장의 칸별 RGBA 픽셀 일치 확인. 로컬 docs/index.html에서 인라인과 확대 표시 및 장교 겹쳐 보기 확인. 실제 브라우저 화면 2장 캡처.",
+    "remaining": "프로젝트 공개 페이지 배포와 공개 화면은 미확인.",
+    "outcome": "브라우저에서 표시 순서 변경을 확인했습니다. 프로젝트 main에 c4a983e5까지 푸시했습니다.\n\n![남녀 마네킹 화면](../assets/20261121-archive-sheet-order/mannequins.png)\n\n![붉은 장교 화면](../assets/20261121-archive-sheet-order/officer.png)",
+    "proposedTime": "5분",
+    "actualTime": "14:26:44 시작, 14:30:48 KST 기준 약 4분",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
