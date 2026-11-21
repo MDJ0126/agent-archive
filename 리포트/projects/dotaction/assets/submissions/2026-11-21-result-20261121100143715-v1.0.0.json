@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "남성형·여성형 마네킹을 제작 기준 샘플로 등록",
+    "summary": "두 마네킹을 일반 제작 요청이 가능한 샘플 캐릭터로 등록했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 남성형 기존 산출물을 이어받고 여성형에 별도 제작 인계 및 콘셉트 데이터를 등록했습니다.\n- 각 샘플의 6시점 T포즈와 8방향 원본을 파이프라인에 검수 대기 자료로 표시합니다.\n\n![마네킹 샘플 목록](../assets/mannequin-pipeline-samples-20261121/mannequin-sample-rows.png)\n\n![남성형 파이프라인](../assets/mannequin-pipeline-samples-20261121/mannequin-male-pipeline.png)\n\n![여성형 파이프라인](../assets/mannequin-pipeline-samples-20261121/mannequin-female-pipeline.png)",
+    "verification": "로컬 Chrome에서 두 샘플을 각각 선택해 원본 PNG 로드, 남성형 일러스트, 여성형 미생성 상태, 부분 요청 버튼 활성화를 확인했습니다.",
+    "remaining": "여성형 일러스트 이후 산출물 제작과 최종 QA는 대기 중입니다. 공개 페이지 반영은 별도 확인입니다.",
+    "outcome": "프로젝트 main에 eae46794를 푸시했습니다.",
+    "proposedTime": "6~10분",
+    "actualTime": "2026-11-21 18:58:16~19:01:20 KST, 약 3분 4초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
