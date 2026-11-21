@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 문서 모달과 담당자 상태·로그 개선",
+    "summary": "산출물 문서를 팝업에서 열고 연결·실행 표시를 통일하며 담당자 시작과 종료를 로그에 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![로컬 검증 화면](../assets/production-modal-status-logs-20261121/production-artifact-modal.png)\n\n![로컬 검증 화면](../assets/production-modal-status-logs-20261121/production-status-dot.gif)\n\n![로컬 검증 화면](../assets/production-modal-status-logs-20261121/production-agent-activity-log.png)",
+    "verification": "Chrome에서 인계·콘셉트·정렬 기록의 팝업과 상태 원 크기·회전을 확인했습니다. 실제 남성형 마네킹의 일러스트 시작 로그도 표시됐습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 ebde7f3d를 푸시했습니다.",
+    "proposedTime": "4~6분",
+    "actualTime": "2026-11-21 21:59:28~22:02:23 KST, 2분 55초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
