@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "붉은 장교 8방향 마네킹 겹쳐 보기 복구",
+    "summary": "8방향 겹쳐 보기에서 발생한 JavaScript 오류를 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "여성 T포즈 전용 비교 이미지 분기에 실제 참조가 있는지 확인하도록 수정했습니다. PNG와 경로 변경은 없습니다.",
+    "verification": "수정 전 HTTPS 테스트에서 동일한 실패 문구와 TypeError를 재현했습니다. 수정 후 로컬 파일과 HTTPS 테스트에서 의복·장비 8방향 및 T포즈의 반투명·윤곽선 모드를 확인했습니다. HTTPS 테스트에서 매 칸의 오버레이 픽셀을 확인했습니다.",
+    "remaining": "실제 공개 페이지 배포 미확인.",
+    "outcome": "붉은 장교의 의복과 장비 착용 8방향 겹쳐 보기를 복구했습니다. 프로젝트 0490e93b 푸시.\n\n![의복 8방향 겹쳐 보기](../assets/20261121-officer-overlay-fix/officer-overlay-fixed.png)",
+    "proposedTime": "4분",
+    "actualTime": "15:02:16 KST 시작. 프로젝트 수정 및 푸시 약 2분.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
