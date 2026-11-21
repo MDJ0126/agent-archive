@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 다이어그램 노드에 단계 문서 연결",
+    "summary": "가운데 제작 단계 노드에 Markdown을 연결하고 8방향 공용 담당 표시의 중복 문구를 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "가운데 노드에서 Markdown을, 오른쪽 담당자에서 TOML을 엽니다. 의복·장비 8방향은 오른쪽의 담당 카드 하나로 이어집니다.\n\n![장비 착용 8방향 노드에서 제작 문서와 예제를 열기](../assets/guide-diagram-documents-20261121/guide-diagram-documents.gif)",
+    "verification": "Chrome에서 제작 노드 7개와 진행 화살표 6개를 확인했습니다. 노드 7개가 정확한 문서 절을 열고, Enter와 Escape가 작동하며, 공용 8방향 TOML 카드 하나가 연결되는 것을 확인했습니다. 프로젝트 커밋 00ff9a1f.",
+    "remaining": "공개 페이지 반영은 미확인입니다.",
+    "outcome": "7개 노드에서 제작 문서를 열며 두 8방향 노드는 통합 문서의 각 절로 이동합니다.",
+    "proposedTime": "2026-11-21 14:56:09 KST 시작, 약 4분 예상.",
+    "actualTime": "로컬 검수와 프로젝트 푸시 14:57:36 KST 완료, 약 1분 30초 소요.",
+    "xerjEvidence": "웹 문서 빌드와 Chrome으로 검수했습니다. 중앙 업데이트 2026-11-21-011을 원격 조회했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
