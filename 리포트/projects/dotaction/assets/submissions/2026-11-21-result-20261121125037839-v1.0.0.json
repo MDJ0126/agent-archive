@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "논의 기록이 사라지는 시점 안내",
+    "summary": "입력창 아래 안내가 답변 뒤에도 유지됩니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![논의 기록 안내](../assets/production-discussion-retention-20261121/production-discussion-retention.png)",
+    "verification": "Chrome에서 모의 답변을 받은 뒤에도 안내 문구가 표시되는 것을 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 a54ded16을 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 21:49:34~21:50:17 KST, 43초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
