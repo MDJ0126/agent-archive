@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 기준 도트와 준비 자세 관계도 수정",
+    "summary": "기준 도트 노드 아래에 실제 도트 미리보기와 준비 자세별 분기를 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 대기·캐스팅·사망은 공용 기준 도트에서, 걷기·달리기·피격은 각 준비 자세에서 이어집니다.\n- 공용 공격 준비 자세는 기본·특수 공격 4개에 연결했습니다.\n- 아래 GIF는 실제 대시보드에 모의 진행 상태를 표시해 캡처했습니다.\n\n![기준 도트 진행 표시](../assets/pixellab-motion-branches-20261121/officer-motion-active.gif)\n\n![붉은 장교 전체 관계도](../assets/pixellab-motion-branches-20261121/officer-motion-branched.png)",
+    "verification": "로컬 Chrome에서 미리보기 13개, 기준 도트 수직 배치, 개별 준비 자세 3개, 공격 상세 팝업, 모의 진행 상태의 테두리 애니메이션을 확인했습니다.",
+    "remaining": "공개 페이지 반영은 별도 확인입니다.",
+    "outcome": "프로젝트 main에 a6e8464e를 푸시했습니다.",
+    "proposedTime": "5~8분",
+    "actualTime": "2026-11-21 18:54:32~18:57:28 KST, 약 2분 56초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
