@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "용병 7명 T포즈 겹침과 미착용 8방향",
+    "summary": "마네킹 타입을 제작 명세에서 사용하고, 장비 착용·미착용 8방향을 각각 표시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "Chrome에서 7명 각각 T포즈 및 착용·미착용 8방향 겹침을 켜 21곳 확인. 신규 시트 2048×1024 및 정확한 반전 세 쌍 확인.",
+    "remaining": "최종 관절 일치 검수 및 웹 배포 미확인. PixelLab 호출 없음.",
+    "outcome": "![tpose](../assets/mercenary-body-overlays-20261121/tpose.png)\n\n![body](../assets/mercenary-body-overlays-20261121/body.png)\n\n![equipped](../assets/mercenary-body-overlays-20261121/equipped.png)",
+    "proposedTime": "5~8분",
+    "actualTime": "약 6분, 12:48 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
