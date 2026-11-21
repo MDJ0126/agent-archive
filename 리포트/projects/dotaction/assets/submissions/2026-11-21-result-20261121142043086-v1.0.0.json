@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 FactorRef·로컬라이징 시트 추가",
+    "summary": "데이터 테이블에서 공통 환경 값과 언어별 번역을 조회합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "FactorRef의 배열을 값 열로 펼치고 한국어 원문과 언어별 번역 JSON을 메시지 키로 연결했습니다.",
+    "verification": "Chrome에서 파일 목록 진입, FactorRef 배열 및 CSV, 로컬라이징 11개 언어 열·1,108개 행·미번역 빈 셀과 실제 캡처를 확인했습니다.",
+    "remaining": "게임 런타임은 기존 설정을 사용합니다. 대시보드와 중앙 보고서의 공개 배포는 미확인입니다.",
+    "outcome": "![FactorRef 시트](../assets/factor-ref-localization-20261121/factor-ref.png)\n\n![로컬라이징 시트](../assets/factor-ref-localization-20261121/localization.png)",
+    "proposedTime": "약 10분",
+    "actualTime": "로컬 검수 약 2분, 23:19 KST 완료.",
+    "xerjEvidence": "Node 및 Chrome 검수",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
