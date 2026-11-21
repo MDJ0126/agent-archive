@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "의복·장비 시안 형태 보존과 마네킹 정렬 기준",
+    "summary": "ImageGen 시안의 의복·장비 형태를 보존하고 마네킹은 위치 대조에 쓰도록 지침을 정리했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "의복 T포즈, 의복·장비 8방향, 최종 QA 지침을 수정했습니다.",
+    "verification": "제작·QA 담당이 각 지침을 읽는 것을 확인했고 커밋 전 diff를 검증했습니다. 텍스트 지침 변경입니다.",
+    "remaining": "기존 시안 재제작 및 새 기준으로 생성한 결과 검증 미실행.",
+    "outcome": "main에 7bac0bc5를 푸시했습니다.",
+    "proposedTime": "5분",
+    "actualTime": "22:47:23~22:48:09 KST, 46초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
