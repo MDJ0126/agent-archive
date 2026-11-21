@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 로그를 화면 하단에 고정",
+    "summary": "제작 현황을 스크롤해도 작업 로그를 볼 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![작업 로그 하단 고정](../assets/production-fixed-work-log-20261121/work-log-fixed.gif)",
+    "verification": "Chrome의 넓은 화면과 좁은 화면에서 로그 위치를 확인했고 위아래 스크롤을 캡처했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 5a2b31a0을 푸시했습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-21 21:54:25~21:55:43 KST, 1분 18초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
