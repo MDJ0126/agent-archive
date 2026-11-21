@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 용병 28종 정리",
+    "summary": "첨부 화면에서 표시된 루시안부터 사슬 포획병까지 28종을 캐릭터 아카이브에서 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "아카이브 생성기와 게시용 HTML의 목록·상세·검색 항목을 수정했습니다. 게임 데이터와 아트 원본은 보존했습니다. 프로젝트 main 푸시 81c8f8cd.",
+    "verification": "문서 빌드 성공. 실제 로컬 문서를 Chrome으로 열어 카드 65종과 바론 상세 표시를 확인하고 화면을 캡처했습니다.",
+    "remaining": "공개 사이트 배포 미확인.",
+    "outcome": "아카이브 93종에서 65종으로 정리했습니다.\n\n![캐릭터 아카이브 정리 결과](../assets/gallery-removal-20261121/archive.png)",
+    "proposedTime": "약 5분",
+    "actualTime": "2026-11-21 14:35~14:38 KST, 약 3분",
+    "xerjEvidence": "Playwright Chrome으로 로컬 HTML 확인 및 화면 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
