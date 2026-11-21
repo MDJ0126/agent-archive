@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 다크 모드 차콜 팔레트 보정",
+    "summary": "넓은 녹색 면을 차콜·슬레이트로 바꾸고 선택한 메뉴와 행에 황동색 강조를 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "다크 배경·패널·사이드바·표·데이터 시트·이미지 확대의 색을 보정했습니다. 라이트 모드와 상태색을 보존했습니다.",
+    "verification": "Chrome에서 제작 현황의 일반 행과 선택 행, 캐릭터 아카이브, 게임 기획 본문, 시트, AI 기록과 이미지 확대를 확인했습니다. 두 모드의 계산된 색상과 실제 화면을 대조했습니다.",
+    "remaining": "전체 문서 빌드와 공개 사이트 배포 미확인. 지침 원격 조회 실패로 로컬 2026-11-21-011 적용.",
+    "outcome": "프로젝트 86d5524f을 main에 푸시했습니다.\n\n![제작 현황 다크 모드](../assets/charcoal-theme-20261121/charcoal-production-dark.png)\n\n![제작 현황 다크·라이트 전환](../assets/charcoal-theme-20261121/charcoal-production-toggle.gif)\n\n![캐릭터 아카이브 다크 모드](../assets/charcoal-theme-20261121/charcoal-archive-dark.png)\n\n![데이터 시트 다크 모드](../assets/charcoal-theme-20261121/charcoal-sheet-dark.png)",
+    "proposedTime": "7분",
+    "actualTime": "1분 54초, 17:51:14 KST 프로젝트 푸시 완료",
+    "xerjEvidence": "로컬 대시보드 서버와 Chrome 실제 렌더",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
