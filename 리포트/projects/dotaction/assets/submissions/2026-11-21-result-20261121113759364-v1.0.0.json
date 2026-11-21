@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 결과·입력·프롬프트를 카드에 함께 표시",
+    "summary": "움직이는 결과를 카드 위쪽에 배치하고 보관 제작 기록을 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 붉은 장교와 잿빛 기사의 보관 기록에서 확인한 입력과 프롬프트를 연결했습니다.\n\n![기본 공격 2 결과와 입력](../assets/pixellab-archived-card-20261121/pixellab-archived-card.png)",
+    "verification": "Chrome에서 붉은 장교의 기존 미리보기 13개, 기본 공격 2의 시작·끝 이미지, 한글 표시와 영문 팝업을 확인했습니다.",
+    "remaining": "제작 기록에서 찾지 못한 입력은 빈 칸입니다. 공개 페이지 반영 미확인.",
+    "outcome": "프로젝트 main에 57806901을 푸시했습니다.",
+    "proposedTime": "6~10분",
+    "actualTime": "2026-11-21 20:33:27~20:37:37 KST, 4분 10초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
