@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 역할 라벨 수정",
+    "summary": "깨진 span 시작 태그를 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "Chrome에서 붉은 장교 역할 라벨 표시 및 아카이브 전체 클래스 문자열 미노출 확인.",
+    "remaining": "웹 배포 미확인.",
+    "outcome": "![역할 라벨](../assets/archive-role-label-20261121/role.png)",
+    "proposedTime": "1~2분",
+    "actualTime": "약 1분, KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
