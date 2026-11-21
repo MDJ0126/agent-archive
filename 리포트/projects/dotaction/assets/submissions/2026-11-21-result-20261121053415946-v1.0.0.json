@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "문서 본문과 Markdown 모달 가독성 개선",
+    "summary": "문서와 Markdown 모달에 위키형 제목 구분선과 읽기 밀도를 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "본문 14px, 문서 제목 24px, 중간 제목 18px. 게임 가이드 섹션 카드와 장식 번호 제거, 표와 목록 간격 축소, 모바일 모달 제목 20px 적용.",
+    "verification": "16페이지 빌드. Chrome에서 데스크톱 문서와 390px 모바일 모달, 닫기 버튼 위치와 다크 모드 확인.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![데스크톱 문서 본문](../assets/compact-document-reading-20261121/compact-document.png)\n\n![390px 모바일 Markdown 모달](../assets/compact-document-reading-20261121/compact-markdown-mobile.png)",
+    "proposedTime": "6분",
+    "actualTime": "약 3분, 2026-11-21 14:35 KST 브라우저 검수 및 보고 등록.",
+    "xerjEvidence": "로컬 Chrome 실제 화면 PNG 두 장",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
