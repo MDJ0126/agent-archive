@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 모션 카드 간소화 및 팝업 닫기 개선",
+    "summary": "모션 카드에 시작·끝 이미지와 한글 프롬프트를 직접 배치했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 모션 카드의 테두리를 한 겹으로 줄였습니다.\n- PixelLab 상세 팝업 바깥을 클릭하면 닫힙니다.\n\n![간소화한 모션 카드](../assets/pixellab-flat-motion-cards-20261121/pixellab-flat-motion-cards.png)",
+    "verification": "로컬 Chrome에서 시작·끝 이미지와 한글 프롬프트 배치, 상세 팝업 내부 클릭 시 유지, 바깥 클릭 및 Escape로 닫기를 확인했습니다.",
+    "remaining": "공개 페이지 배포 및 미디어 접근 미확인.",
+    "outcome": "프로젝트 main에 1284154f를 푸시했습니다.",
+    "proposedTime": "4~6분",
+    "actualTime": "2026-11-21 18:34:14~18:36:24 KST, 2분 10초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
