@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 모션 결과 미리보기 확대",
+    "summary": "카드 하단 결과 이미지 높이를 75px에서 132px로 늘렸습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 결과 이미지와 배치 공간을 함께 확대했습니다.\n\n![확대된 모션 결과](../assets/pixellab-larger-results-20261121/officer-motion-larger-results.png)",
+    "verification": "로컬 Chrome에서 붉은 장교 결과 이미지가 로드되고 높이가 132px이며 다음 카드와 겹치지 않는 것을 확인했습니다.",
+    "remaining": "공개 페이지 배포는 별도 확인입니다.",
+    "outcome": "프로젝트 main에 e82d05da를 푸시했습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-21 19:02:02~19:02:45 KST, 약 43초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
