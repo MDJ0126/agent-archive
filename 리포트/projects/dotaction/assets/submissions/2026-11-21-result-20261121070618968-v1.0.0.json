@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "진행 중인 캐릭터가 먼저 보이는 제작 게시판",
+    "summary": "상단 안내와 드롭다운을 캐릭터 목록으로 바꾸고 진행 중인 작업을 위에 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "요청에 따라 전체·부분 실행 버튼을 게시판에서 제거했습니다. 화면은 진행 중 상태를 넣은 검수용 캡처입니다.\n\n![진행 중 캐릭터가 상단에 표시되는 제작 목록](../assets/character-production-roster-20261121/production-roster.png)",
+    "verification": "Chrome에서 65종과 예제 한 줄, 자동 갱신 시 진행 중 캐릭터가 첫 행으로 이동하는 동작, 기존 선택 유지, 키보드로 상세 열기, 예제 QA 4건, 390px에서 목록 가로 넘침이 없음을 확인했습니다. 프로젝트 main에 678a571d를 푸시했습니다.",
+    "remaining": "공개 배포와 공개 미디어 접근은 미확인입니다.",
+    "outcome": "캐릭터 65종의 상태, 현재 단계, 완료 수를 한눈에 확인합니다. 목록에서 선택한 캐릭터의 관계도, 작업 로그, QA 기록이 아래에 표시됩니다.",
+    "proposedTime": "5~7분",
+    "actualTime": "2026-11-21 16:03:19~16:05:55 KST, 약 2분 36초",
+    "xerjEvidence": "로컬 서버, Chrome, Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
