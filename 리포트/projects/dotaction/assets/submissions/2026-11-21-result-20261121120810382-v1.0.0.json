@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 부분 요청 버튼 제거",
+    "summary": "PixelLab 헤더에서 부분 요청 버튼을 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![PixelLab 전체 요청 헤더](../assets/pixellab-full-only-20261121/pixellab-full-only.png)",
+    "verification": "Chrome에서 PixelLab 헤더, 전체 목록의 모의 요청, 캐릭터 제작 부분 요청 표시를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "프로젝트 main에 40842430을 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 21:07:07~21:07:51 KST, 44초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
