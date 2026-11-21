@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "문서 링크와 이미지 모달 확대",
+    "summary": "캠프 가디언 문서 사이트에서 마네킹 제작 인계와 프로젝트 Markdown을 모달로 읽고 이미지를 확대할 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "로컬 Markdown을 빌드에 포함하고 제목 링크 위치를 유지했습니다. 본문과 데이터 시트의 그림을 기존 갤러리 모달에서 확대하도록 연결했습니다. 프로젝트 main 327a0c12 원격 푸시 확인.",
+    "verification": "헤드리스 Chrome에서 마네킹 제작 인계, 문서 내 제목 앵커, 문서 안 이미지, 로고, 몬스터 갤러리, 데이터 시트 Enter 확대 및 Escape로 닫기 확인. 문서 빌드 16페이지 완료.",
+    "remaining": "공개 사이트 배포와 중앙 업데이트 원격 최신 상태 미확인. 로컬 최신 캐시 2026-11-21-011.",
+    "outcome": "![제작 인계와 이미지 확대 브라우저 검수](../assets/site-document-modals-20261121/site-modals.gif)",
+    "proposedTime": "8분",
+    "actualTime": "약 5분, 2026-11-21 14:26 KST 프로젝트 구현·검수·푸시 완료.",
+    "xerjEvidence": "Chrome 실행과 실제 클릭 결과 GIF",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
