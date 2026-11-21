@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 로그 두 줄 축소 및 인계 문구",
+    "summary": "최신 두 줄을 기본으로 보여주고 다음 단계가 기록되면 전환 내용을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![작업 로그 펼치기와 축소](../assets/production-log-toggle-20261121/production-log-toggle.gif)",
+    "verification": "Chrome에서 모의 제작 요청으로 최신 두 줄, 전체 표시, 재축소와 단계 전환 문구를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 29b09f43을 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 22:03:54~22:05:47 KST, 1분 53초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
