@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 7단계와 전용 서브에이전트",
+    "summary": "캐릭터 설정부터 5시 제출용 합성까지 7단계를 정의하고 전용 서브에이전트 지침과 마네킹 실물 예제를 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "관계도 왼쪽에서 제작 단계, 오른쪽에서 전용 담당자 지침을 엽니다. 후속 담당자는 확정 입력·완성본·겹침 증거를 인계받습니다. 청동 훈련검 마네킹 한 체형으로 ImageGen 전신 일러스트와 원본 파생 예제, 분리 검과 버클, 5시 합성을 제작했습니다.\n\n![관계도에서 T포즈 담당 팝업 열기](../assets/character-workflow-7-stage-20261121/production-workflow-popup.gif)\n\n![남성형 마네킹 일러스트](../assets/character-workflow-7-stage-20261121/illustration.png)\n\n![6시점 T포즈](../assets/character-workflow-7-stage-20261121/t-pose.png)\n\n![T포즈와 원본 마네킹 겹침](../assets/character-workflow-7-stage-20261121/t-pose-overlap.png)\n\n![의복만 입은 8방향](../assets/character-workflow-7-stage-20261121/clothes-8-direction.png)\n\n![의복 8방향과 원본 마네킹 겹침](../assets/character-workflow-7-stage-20261121/clothes-overlap.png)\n\n![장비 착용 8방향](../assets/character-workflow-7-stage-20261121/equipped-8-direction.png)\n\n![장비 8방향과 원본 마네킹 겹침](../assets/character-workflow-7-stage-20261121/equipped-overlap.png)\n\n![분리 훈련검](../assets/character-workflow-7-stage-20261121/training-sword.png)\n\n![분리 버클](../assets/character-workflow-7-stage-20261121/belt-ornament.png)\n\n![5시 방향 512 제작 합성 원본](../assets/character-workflow-7-stage-20261121/submission-5-oclock.png)\n\n![5시 방향 128 제출 후보](../assets/character-workflow-7-stage-20261121/submission-5-oclock-128.png)",
+    "verification": "Chrome에서 14개 팝업, 올바른 원문 경로, 예제 이미지 11개 디코딩과 확대, 모바일 관계도와 담당 팝업을 확인했습니다. 22개 시점 겹침과 8방향 시트별 3쌍의 반전을 검증했습니다. 128×128 후보의 몸체 높이는 102px입니다. TOML 7개를 파싱하고 단계와 역할 지침 경로를 대조했습니다. 프로젝트 커밋 144c1d8a.",
+    "remaining": "새 Codex 세션에서 등록 역할 호출과 공개 페이지 반영은 미확인입니다. PixelLab 제출은 대기 상태입니다.",
+    "outcome": "제작 문서·담당 지침 7쌍, 프로젝트 역할 TOML 7개, 동일 남성형 마네킹의 예제 PNG 11개를 프로젝트에 등록했습니다.",
+    "proposedTime": "2026-11-21 13:22:24 KST 시작, 현황 확인 후 약 8분 예상.",
+    "actualTime": "로컬 검수·프로젝트 main 푸시를 13:36:04 KST에 완료했습니다. 약 14분 소요.",
+    "xerjEvidence": "공식 Codex 문서와 프로젝트 브라우저, PNG 분석 기록을 확인했습니다. 중앙 업데이트 2026-11-21-011을 원격 조회했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
