@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마네킹 예제 이름과 작업 로그 진행률",
+    "summary": "예제 두 이름을 줄이고 전체 진행률을 고정 작업 로그 안으로 옮겼습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![작업 로그 진행률](../assets/mannequin-progress-log-20261121/mannequin-progress-log.png)",
+    "verification": "로컬 Chrome에서 예제 두 이름을 클릭하고 작업 로그 안의 진행률과 현재 단계를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 2d6e5d4a를 푸시했습니다.",
+    "proposedTime": "5분",
+    "actualTime": "22:27:02~22:28:27 KST, 1분 25초",
+    "xerjEvidence": "로컬 Chrome에서 고정 로그를 캡처했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
