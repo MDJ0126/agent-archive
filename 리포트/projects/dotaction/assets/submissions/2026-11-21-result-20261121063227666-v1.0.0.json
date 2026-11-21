@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "일러스트 포즈와 카메라 설계 지침 강화",
+    "summary": "기존 캐릭터 포즈 비교, 공식 게임 원화 참고, 동작·각도·화각 후보 비교를 제작 지침으로 정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 아카이브의 포즈와 실루엣을 비교하고 공식 원화에서 가져올 연출 요소를 명시합니다. 성격과 역할을 드러내는 행동 및 카메라를 설계하고 참고 URL과 적용 근거를 인계합니다.\n\n![포즈와 카메라 설계가 반영된 가이드](../assets/guide-illustration-pose-20261121/guide-illustration-pose.png)",
+    "verification": "Chrome에서 일러스트 지침, 네 곳의 공식 참고 링크, 실제 에이전트 TOML과 QA 기준을 확인했습니다. 프로젝트 커밋 4ab10e63.",
+    "remaining": "새 지침을 적용해 특정 캐릭터의 일러스트를 제작하는 작업과 공개 페이지 반영은 미확인입니다.",
+    "outcome": "일러스트 제작 안내, 전용 TOML, 공통 제작 지침과 QA 기준에 반영했습니다.",
+    "proposedTime": "2026-11-21 15:30:11 KST 시작, 약 4분 예상.",
+    "actualTime": "브라우저 검수 및 프로젝트 푸시 15:31:52 KST 완료, 약 1분 40초 소요.",
+    "xerjEvidence": "공식 게임 출처, 웹 문서 빌드, Chrome을 사용했습니다. 중앙 지침 2026-11-21-011 원격 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
