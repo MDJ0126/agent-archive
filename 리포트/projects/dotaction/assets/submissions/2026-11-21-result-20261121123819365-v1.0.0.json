@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 요청에서 논의 직접 전달",
+    "summary": "제작 요청에서 별도 변경안을 만들지 않고 대화를 작업 요청에 포함합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![제작 요청 확인](../assets/production-send-discussion-20261121/production-send-discussion.png)",
+    "verification": "Chrome에서 변경안 버튼 미표시와 양쪽의 대화 및 입력 중인 지시가 요청에 들어가는 것을 모의 검증했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 8131e0dc를 푸시하고 로컬 서버를 갱신했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 21:36:52~21:37:55 KST, 약 1분",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
