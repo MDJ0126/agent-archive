@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 빈 미리보기 정리와 요청 안내",
+    "summary": "빈 결과의 없음 표시를 중앙에 놓고 버튼에서 제출 조건을 안내합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![확인 화면](../assets/pixellab-empty-preview-request-20261121/pixellab-centered-empty.png)\n\n![확인 화면](../assets/pixellab-empty-preview-request-20261121/pixellab-qa-request-note.png)",
+    "verification": "Chrome에서 빈 미리보기 정렬, 기준 이미지 제목, 붉은 장교의 최종 QA 안내와 모의 승인 요청을 확인했습니다. 실제 제출은 없었습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "프로젝트 main에 23e69564를 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 20:52:59~20:54:26 KST, 1분 27초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
