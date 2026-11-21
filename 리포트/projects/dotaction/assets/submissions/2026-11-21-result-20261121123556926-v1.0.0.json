@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Codex 논의 입력에서 Enter 전송",
+    "summary": "Enter로 질문을 보내고 Shift+Enter로 줄을 바꿉니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![논의 입력 검증](../assets/production-discussion-enter-20261121/production-discussion-enter.png)",
+    "verification": "Chrome에서 모의 답변으로 Enter 전송, Shift+Enter 줄바꿈, 빈 입력 및 한글 조합 Enter의 미전송을 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 940b31b0을 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 21:34:51~21:35:36 KST, 45초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
