@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 현황의 로컬 대시보드 이동 버튼 복구",
+    "summary": "제작 현황의 연결 영역에서 로컬 대시보드 열기 버튼을 계속 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "연결 상태에 따라 버튼을 숨기던 조건을 제거했습니다. 커밋 0c42e417 푸시 완료.",
+    "verification": "Chrome에서 파일 주소의 제작 현황 버튼을 눌러 127.0.0.1:43128로 이동했고, 이동한 뒤에도 버튼이 보였습니다.",
+    "remaining": "중앙 보고서 웹 게시 미확인.",
+    "outcome": "![제작 현황의 로컬 대시보드 열기 버튼](../assets/local-dashboard-link-20261121/local-dashboard-link.png)",
+    "proposedTime": "3분",
+    "actualTime": "17:28:04 시작, 17:29:19 프로젝트 푸시 완료. 1분 15초 KST.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
