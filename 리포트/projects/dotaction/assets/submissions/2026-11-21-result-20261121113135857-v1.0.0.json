@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 준비 자세 한글 프롬프트 미리보기 추가",
+    "summary": "준비 자세 네 칸에 한글 미리보기를 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![테스트 프롬프트가 표시된 준비 자세](../assets/pixellab-preparation-prompt-20261121/preparation-prompt-preview.png)",
+    "verification": "Chrome에서 모의 등록값, 미등록, 기준 도트 제외, 영문 팝업을 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "프로젝트 main에 4df9c623을 푸시했습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "2026-11-21 20:30:34~20:31:17 KST, 43초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
