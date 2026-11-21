@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 인계 화살표와 연결선 강조",
+    "summary": "인계 중에는 단계 사이 화살표를 강조하고 진행 중인 단계의 연결선을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![인계 화살표와 연결선](../assets/production-handoff-links-20261121/production-handoff-arrow.gif)",
+    "verification": "Chrome에서 모의 요청으로 인계 화살표, 다음 단계, 해당 담당자·산출물 연결선을 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 21bd3271을 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 22:14:49~22:19:52 KST, 5분 3초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
