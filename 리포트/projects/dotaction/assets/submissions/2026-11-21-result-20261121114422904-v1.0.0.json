@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 카드 크기 통일과 프롬프트 표시 정리",
+    "summary": "빈 카드와 결과 카드의 크기를 맞추고 불필요한 문구를 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![정리된 카드](../assets/pixellab-card-cleanup-20261121/pixellab-clean-card.png)",
+    "verification": "Chrome에서 크기 일치, 프롬프트 최대 네 줄, 보관 결과 문구 제거와 기존 미리보기를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "프로젝트 main에 37ebd70f와 eae9300e를 푸시했습니다.",
+    "proposedTime": "3~5분",
+    "actualTime": "2026-11-21 20:41:54~20:44:02 KST, 2분 8초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
