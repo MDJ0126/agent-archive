@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 기준 도트와 기존 모션 미리보기 연결",
+    "summary": "공격 분기 아래 공용 기준 도트, 이동과 피격의 개별 기준 이미지, 모션별 기존 결과를 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 기본 공격 1·2, 특수 공격 1·2 슬롯과 초안 사양을 적용했습니다.\n- 식별 가능한 붉은 장교와 잿빛 기사 결과를 기존 자료로 연결했습니다.\n\n![붉은 장교 PixelLab 관계도](../assets/pixellab-motion-results-20261121/officer-motion-board.png)",
+    "verification": "로컬 Chrome에서 붉은 장교 미리보기 13개 로드, 공격 슬롯 이름, 달리기 빈 칸, 공용 공격 기준 도트 상세 팝업을 확인했습니다.",
+    "remaining": "달리기 전용 기준 이미지와 결과는 미등록입니다. 공개 페이지 반영은 별도 확인입니다.",
+    "outcome": "프로젝트 main에 2a463be5를 푸시했습니다.",
+    "proposedTime": "8~10분",
+    "actualTime": "2026-11-21 18:46:08~18:51:24 KST, 약 5분 16초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
