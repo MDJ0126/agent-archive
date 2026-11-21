@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Codex 연결·담당자 상태 표시 애니메이션",
+    "summary": "두 원이 중심을 유지하며 커질 때 빛이 강해지고 작아질 때 옅어집니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![상태 표시 애니메이션](../assets/production-status-pulse-20261121/production-status-pulse.gif)",
+    "verification": "로컬 Chrome의 모의 연결 및 작업 상태에서 두 원의 크기, 중심, 그림자 변화를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 6970fc64를 푸시했습니다.",
+    "proposedTime": "5분",
+    "actualTime": "22:20:29~22:22:22 KST, 1분 53초",
+    "xerjEvidence": "로컬 Chrome에서 실제 화면을 캡처했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
