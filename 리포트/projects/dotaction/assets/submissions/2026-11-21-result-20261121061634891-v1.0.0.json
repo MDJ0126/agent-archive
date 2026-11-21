@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "바디와 의복 T포즈를 관계도에서 분리",
+    "summary": "바디 T포즈와 의복 T포즈를 별도 노드로 연결하고, 같은 전용 담당자가 두 단계 모두 맡도록 정리했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "바디 T포즈를 의복 T포즈보다 앞에 배치하고, 의복은 검수된 바디를 복제해 제작하도록 문서화했습니다.\n\n![바디와 의복 T포즈가 나뉜 제작 관계도](../assets/guide-tpose-two-steps-20261121/guide-tpose-two-steps.gif)",
+    "verification": "Chrome에서 제작 노드 9개, 두 T포즈 노드가 공용 담당/개별 문서 절로 연결되는 것을 확인했습니다. 프로젝트 커밋 78c90178.",
+    "remaining": "공개 페이지 반영은 미확인입니다. 기존 예제 원본을 사용했습니다.",
+    "outcome": "두 노드에서 같은 T포즈 가이드의 서로 다른 절과 실제 예제가 열립니다.",
+    "proposedTime": "2026-11-21 15:14:59 KST 시작, 약 3분 예상.",
+    "actualTime": "로컬 검수와 프로젝트 푸시 15:16:06 KST 완료, 약 1분 소요.",
+    "xerjEvidence": "웹 문서 빌드와 Chrome으로 확인했습니다. 중앙 지침 2026-11-21-011 원격 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
