@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "T포즈와 8방향 지침에 마네킹 기준 통합",
+    "summary": "다섯 제작 단계 지침에 정렬과 체형 검수 기준을 직접 적었습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 바디·의복 T포즈와 바디·의복·장비 8방향의 단계별 기준을 추가했습니다.\n\n![정렬 기준을 포함한 지침 팝업](../assets/embedded-mannequin-standard-20261121/embedded-mannequin-standard.png)",
+    "verification": "로컬 Chrome에서 제작 관계도의 T포즈와 8방향 지침 팝업에 다섯 기준 문단이 표시되는 것을 확인했습니다.",
+    "remaining": "공개 페이지 배포 및 접근 미확인.",
+    "outcome": "프로젝트 main에 aba90af9를 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 19:12:01~19:12:59 KST, 약 58초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
