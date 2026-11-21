@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 논의 입력과 메시지 스크롤 개선",
+    "summary": "내 메시지를 즉시 표시하고 답변 로딩을 이어서 표시합니다. 긴 대화는 메시지 목록에서 스크롤됩니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![모의 답변 대기와 대화창](../assets/production-chat-scroll-20261121/production-chat-loading.gif)",
+    "verification": "Chrome에서 모의 응답으로 즉시 표시, 답변 로딩과 치환, 내부 스크롤, 입력창과 하단 작업 버튼 표시를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 5f908750을 푸시했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 21:50:58~21:53:41 KST, 2분 43초",
+    "xerjEvidence": "로컬 Chrome 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
