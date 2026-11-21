@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 현황 게시판에서 운영 명령 제거",
+    "summary": "게시판에서 기록 갱신 명령과 예시를 제거하고 작업 현황과 QA에 집중하도록 정리했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 운영 절차는 제작 담당자용 문서로 옮기고 프로젝트 지침과 에이전트 TOML의 참조를 갱신했습니다.\n\n![정리한 제작 게시판과 QA 기록](../assets/character-production-board-clean-20261121/production-board-clean.png)",
+    "verification": "Chrome에서 게시판과 원문 팝업에 운영 내용이 표시되지 않았고 목차와 검색에서도 제거된 것을 확인했습니다. 마네킹 예제 QA 4건을 확인했습니다. 프로젝트 main에 63224677을 푸시했습니다.",
+    "remaining": "공개 배포 확인은 별도입니다.",
+    "outcome": "제작 현황·QA 화면, 목차, 검색 및 원문 팝업에서 운영 명령을 제거했습니다.",
+    "proposedTime": "4~6분",
+    "actualTime": "2026-11-21 16:01:34~16:02:38 KST, 약 1분",
+    "xerjEvidence": "로컬 Chrome, 빌드 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
