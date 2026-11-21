@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "동작 감소 상태에서 대장간 애니메이션 재생",
+    "summary": "대장간 아이콘의 애니메이션을 멈추던 동작 감소 조건을 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![대장간 애니메이션](../assets/forge-reduced-motion-20261121/forge-reduced-motion.gif)",
+    "verification": "Chrome에서 동작 감소를 활성화해 망치와 불꽃의 재생을 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 e2b0c89e를 푸시했습니다.",
+    "proposedTime": "별도 안내 없음",
+    "actualTime": "22:34:43~22:35:21 KST, 38초",
+    "xerjEvidence": "로컬 Chrome 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
