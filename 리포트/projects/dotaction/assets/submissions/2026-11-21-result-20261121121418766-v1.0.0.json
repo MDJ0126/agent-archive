@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "PixelLab 상세 팝업에 Codex 논의 추가",
+    "summary": "모션 팝업에서 현재 단계와 입력·프롬프트를 바탕으로 Codex에 질문할 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![실제 로컬 Codex 답변](../assets/pixellab-codex-discussion-20261121/pixellab-discussion.png)",
+    "verification": "로컬 Chrome에서 붉은 장교 대기의 실제 한글 답변과 × 닫기를 확인했습니다. 모의 응답으로 후속 질문 문맥도 확인했습니다. PixelLab은 제출하지 않았습니다.",
+    "remaining": "공개 페이지 반영 미확인. 대화 기록은 열린 페이지에 유지됩니다.",
+    "outcome": "프로젝트 main에 70427ac0을 푸시하고 로컬 제작 현황 서버를 갱신했습니다.",
+    "proposedTime": "4~7분",
+    "actualTime": "2026-11-21 21:09:21~21:13:57 KST, 4분 36초",
+    "xerjEvidence": "로컬 Chrome, Codex CLI 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
