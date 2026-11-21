@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "일러스트 참고 이미지 본문 첨부",
+    "summary": "캐릭터의 제작 인계 문서에서 실제 참고 이미지를 확인할 수 있도록 제작 지침을 보완했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "실제 이미지 삽입, 출처 표기, 표시 확인을 제작 지침과 인계·검수에 추가했습니다.",
+    "verification": "대상 네 파일의 git diff --check를 통과했습니다.",
+    "remaining": "캐릭터별 이미지 등록은 해당 일러스트 제작 때 진행합니다. 공개 페이지 배포 미확인.",
+    "outcome": "프로젝트 main에 b3b140b4를 푸시했습니다.",
+    "proposedTime": "3분",
+    "actualTime": "2026-11-21 15:43 KST 시작",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
