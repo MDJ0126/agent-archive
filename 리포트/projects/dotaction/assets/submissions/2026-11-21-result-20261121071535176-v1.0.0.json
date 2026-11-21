@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기존 캐릭터 미리보기 복구와 제작 요청 AI 연결",
+    "summary": "아카이브의 기존 자료를 제작 관계도에서 볼 수 있고, 준비 작업이나 처음부터 만드는 새 버전을 요청할 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "작업을 인계할 AI를 고를 수 있습니다. Windows 로컬 서버는 CLI 로그인 상태를 확인하며, 사용자가 AI에서 요청 열기를 누르면 선택한 대화형 CLI에 요청 ID를 넘깁니다.\n\n![붉은 장교의 기존 자료와 Codex 연결 상태](../assets/character-production-asset-recovery-20261121/production-existing-assets-ai.png)",
+    "verification": "Chrome에서 붉은 장교 기존 자료 7개 단계, 잿빛 기사 미리보기, 격리한 요청함의 준비 작업과 새 버전 요청 및 경로, Codex 로그인과 Claude Code 미설치 상태를 확인했습니다. 실제 제작 요청은 실행하지 않았습니다. 프로젝트 main에 46659869를 푸시했고 로컬 서버의 인증 확인 경로를 검증했습니다.",
+    "remaining": "실제 제작 실행 및 결과 반영, Claude Code 로그인 이후 제작 도구 사용은 미확인입니다. 공개 보고서 배포는 별도입니다.",
+    "outcome": "65종 중 62종의 이미지 242개가 실파일과 일치했습니다. 기존 이미지에는 ‘기존 자료’를 표시합니다. 새로 요청하면 기존 파일과 분리된 버전 경로를 지정합니다.",
+    "proposedTime": "8~10분",
+    "actualTime": "2026-11-21 16:09:45~16:14:58 KST, 약 5분 13초",
+    "xerjEvidence": "아카이브 파일 대조, Chrome, 로컬 CLI 인증 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
