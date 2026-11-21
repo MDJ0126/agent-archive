@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "다크 모드 Mermaid 관계도 색상 조정",
+    "summary": "다크 모드에서 Mermaid 관계도의 배경과 노드를 어둡게 조정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "다크 모드 CSS로 관계도 패널, SVG 배경, 노드, 레이블과 화살표 색상을 적용했습니다.",
+    "verification": "Chrome에서 다크·라이트 모드 전환, 노드와 글자 색상, SVG 크기 일치 확인.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![다크 모드 제작 관계도](../assets/dark-mermaid-palette-20261121/production-mermaid-dark.png)",
+    "proposedTime": "4분",
+    "actualTime": "약 2분, 2026-11-21 14:43 KST 브라우저 검수 및 보고 등록.",
+    "xerjEvidence": "Chrome 렌더링 스크린샷",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
