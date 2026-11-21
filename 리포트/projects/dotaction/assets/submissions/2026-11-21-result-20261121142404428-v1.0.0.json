@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "데이터 테이블 바로 아래에 FactorRef·로컬라이징 탭 배치",
+    "summary": "대시보드 사이드바의 데이터 테이블 바로 아래에서 두 시트를 직접 엽니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사이드바에 FactorRef와 로컬라이징을 순서대로 배치하고 기존 파일 목록에서 중복 항목을 제거했습니다.",
+    "verification": "Chrome에서 탭 순서, 두 시트 진입, 선택 표시, 새로고침 및 기존 파일 40개 목록 복귀를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "![데이터 테이블 아래 FactorRef·로컬라이징 탭](../assets/data-table-sidebar-tabs-20261121/sidebar.png)",
+    "proposedTime": "약 5분",
+    "actualTime": "로컬 검수 약 1분, 23:23 KST 완료.",
+    "xerjEvidence": "Chrome 실제 화면",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
