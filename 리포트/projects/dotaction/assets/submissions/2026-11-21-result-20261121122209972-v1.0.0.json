@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 논의와 PixelLab 제출 초안 연결",
+    "summary": "논의 후 제작 지시를 보내고, PixelLab 카드에서 수정한 초안을 저장합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "PixelLab 상단 전체 요청과 목록을 제거했습니다.\n\n![로컬 검증 화면](../assets/production-discussion-drafts-20261121/production-discuss-send.png)\n\n![로컬 검증 화면](../assets/production-discussion-drafts-20261121/pixellab-revised-draft.png)",
+    "verification": "Chrome의 모의 응답으로 전체·부분 요청 및 초안 갱신을 검증했습니다. 임시 데이터에서 PNG 해시, 승인 입력 스냅샷, 제작 지시 기록, 쓰기 충돌 방지를 확인했습니다. 실제 제작 및 PixelLab 제출은 없었습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main에 8cbf2a43을 푸시하고 로컬 대시보드 서버를 갱신했습니다.",
+    "proposedTime": "별도 제안 없음",
+    "actualTime": "2026-11-21 21:15:54~21:21:47 KST, 5분 53초",
+    "xerjEvidence": "로컬 Chrome, Node 및 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
