@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 겹침 팝업과 수정 지시 입력란",
+    "summary": "관계도 카드에서 겹침을 빼고 확대 팝업에 제어를 추가했습니다. 작업 로그 입력란에서 단계 선택을 없앴습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![production-overlay-toggle.gif](../assets/production-overlay-feedback-20261121/production-overlay-toggle.gif)\n\n![production-feedback-simple.png](../assets/production-overlay-feedback-20261121/production-feedback-simple.png)",
+    "verification": "별도 포트 Chrome에서 기존 실행 형식의 입력란, Enter 전송, 실제 T포즈 겹침 켜기와 끄기를 확인했습니다.",
+    "remaining": "기존 포트 서버는 실행 중인 제작을 위해 유지했습니다. 실제 제작 총괄의 지시 반영은 미확인입니다.",
+    "outcome": "main에 2110b411을 푸시했습니다.",
+    "proposedTime": "5분",
+    "actualTime": "22:57:31~23:00:46 KST, 3분 15초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
