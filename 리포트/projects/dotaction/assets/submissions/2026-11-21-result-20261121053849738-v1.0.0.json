@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 흐름 Mermaid 관계도",
+    "summary": "캐릭터 제작 가이드에 현재 제작 흐름을 세로 다이어그램으로 표시했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 Mermaid 렌더러를 재사용해 일곱 노드와 같은 담당자의 8방향 의복·장비 제작 순서를 표시했습니다. 기존 Markdown 및 TOML 편집 링크도 유지했습니다.",
+    "verification": "16페이지 빌드, Mermaid 다이어그램 5개. Chrome에서 새 관계도의 노드 7개 및 연결 6개 순서와 기존 문서·TOML 모달을 확인했습니다.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![제작 가이드에서 실제 렌더링한 Mermaid 관계도](../assets/production-mermaid-20261121/production-mermaid.png)",
+    "proposedTime": "5분",
+    "actualTime": "약 2분, 2026-11-21 14:38 KST 브라우저 검수 및 보고 등록.",
+    "xerjEvidence": "Chrome에서 렌더링한 관계도 실제 화면",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
