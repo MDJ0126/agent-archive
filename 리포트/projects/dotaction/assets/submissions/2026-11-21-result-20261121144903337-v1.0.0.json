@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "데이터 메뉴 세 항목 들여쓰기 통일",
+    "summary": "데이터 테이블, FactorRef, 로컬라이징을 사이드바의 같은 깊이에 배치했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "FactorRef와 로컬라이징 메뉴의 들여쓰기를 제거했습니다.",
+    "verification": "Chrome에서 세 메뉴 아이콘의 가로 위치가 같고 두 시트에 접근할 수 있음을 확인했습니다.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![같은 깊이로 정렬한 데이터 메뉴](../assets/data-table-sidebar-alignment-20261121/sidebar.png)",
+    "proposedTime": "약 2분",
+    "actualTime": "로컬 구현·검수 약 20초, 23:48 KST 완료.",
+    "xerjEvidence": "Chrome 실제 화면",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
