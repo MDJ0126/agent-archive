@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "불필요한 제작 현황 버튼 정리와 TOML 탐색기 활성화",
+    "summary": "이미 로컬일 때 잘못 노출된 버튼을 숨기고 TOML을 선택한 탐색기 창을 활성화하도록 변경했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "로컬 대시보드 버튼은 기존 표시 조건으로 복구했습니다. 탐색기는 해당 파일이 선택된 창의 포커스를 확인합니다. main 2c21b4f7 푸시 및 서버 재시작.",
+    "verification": "Chrome에서 잘못 노출된 버튼과 TOML의 탐색기 버튼 표시를 확인했습니다. PowerShell 구문·네이티브 코드 컴파일·검증용 요청의 409 응답을 확인했습니다.",
+    "remaining": "실제 전경 활성화는 사용자 작업 중 화면 전환을 피하려고 미확인입니다. 중앙 보고서 웹 게시 미확인.",
+    "outcome": "![불필요한 버튼이 사라진 로컬 제작 현황](../assets/explorer-focus-20261121/remove-extra-local-dashboard-link.png)",
+    "proposedTime": "버튼 정리 2분, 탐색기 수정 추가 4분",
+    "actualTime": "17:35:33 시작, 17:38:20 프로젝트 푸시 완료, 이후 로컬 서버 재시작. KST.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "verification"
+  }
+}
