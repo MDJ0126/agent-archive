@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 상세의 중복 상태 범례 제거",
+    "summary": "캐릭터 이름 아래에 있던 상태 범례를 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "상태는 캐릭터 목록의 상태 열에서 확인합니다.\n\n![상태 범례를 제거한 장막의 궁수 상세](../assets/production-without-legend-20261121/production-without-legend.png)",
+    "verification": "Chrome에서 장막의 궁수 상세의 범례가 사라졌으며 관계도와 캐릭터 목록 상태 버튼이 표시됨을 확인했습니다. main f26dfaf5을 푸시했습니다.",
+    "remaining": "공개 배포는 미확인입니다.",
+    "outcome": "선택한 캐릭터 이름 아래에 관계도가 바로 표시됩니다.",
+    "proposedTime": "2~3분",
+    "actualTime": "2026-11-21 17:25:53~17:26:37 KST, 약 44초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
