@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 진행 관계도 단계별 지침 열기 복구",
+    "summary": "진행 상태와 관계없이 단계 도형에서 지침을 열 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "- 부분 요청 중에는 도형에서 범위를 선택합니다.\n\n![일러스트 제작 지침 팝업](../assets/production-stage-guide-20261121/production-step-guide.png)",
+    "verification": "로컬 Chrome에서 지침 팝업 네 개와 일러스트 단일 단계 부분 범위 선택을 확인했습니다.",
+    "remaining": "공개 페이지 배포는 별도 확인입니다.",
+    "outcome": "프로젝트 main에 cc8445d9를 푸시했습니다.",
+    "proposedTime": "2~4분",
+    "actualTime": "2026-11-21 19:03:22~19:05:15 KST, 약 1분 53초",
+    "xerjEvidence": "로컬 Chrome과 Git으로 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
