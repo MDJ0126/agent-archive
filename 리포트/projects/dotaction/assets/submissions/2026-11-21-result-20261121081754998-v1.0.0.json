@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캠프 가디언 대시보드에 제작 중인 캐릭터 표시",
+    "summary": "홈에서 진행 중인 캐릭터 수와 이름, 현재 제작 단계를 확인하고 해당 제작 현황 상세로 바로 이동합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "홈 상단에 제작 중인 캐릭터를 표시하고, 기록에서 진행 중으로 등록된 단계만 읽습니다. HTTP 환경에서 기존 제작 현황의 자동 갱신 주기를 사용합니다.",
+    "verification": "Chrome에서 실제 빈 상태, 검수용 캐릭터 2건과 단계 표시, 자동 갱신, 완료 건 제거, 390px 모바일 화면과 해당 캐릭터 상세 이동을 확인했습니다.",
+    "remaining": "전체 문서 빌드와 공개 배포 미확인. 검수용 데이터는 브라우저 응답에만 적용했습니다.",
+    "outcome": "프로젝트 71a24e34을 main에 푸시했습니다. 현재 저장 기록에는 제작 중인 캐릭터가 없습니다.\n\n![두 캐릭터가 진행 중인 검수용 화면](../assets/dashboard-production-home-20261121/production-home-active.png)\n\n![현재 저장 기록의 빈 상태](../assets/dashboard-production-home-20261121/production-home-empty.png)\n\n![검수용 모바일 상세 이동과 완료 반영](../assets/dashboard-production-home-20261121/production-home-navigation.gif)",
+    "proposedTime": "7분",
+    "actualTime": "약 4분 28초, 17:17:51 KST 프로젝트 반영",
+    "xerjEvidence": "Chrome 실제 렌더와 경로 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
