@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 다이어그램에 전용 서브에이전트 연결",
+    "summary": "기존 제작 다이어그램의 오른쪽에 전용 담당 노드를 붙여 각 역할의 TOML 편집기를 열 수 있게 했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "왼쪽에 기존 산출물, 가운데 작업 순서, 오른쪽에 역할을 표시합니다. Markdown의 관계도 정의를 사용해 에이전트 연결선을 그립니다.\n\n![다이어그램의 8방향 담당 링크로 TOML 편집기 열기](../assets/guide-diagram-subagents-20261121/guide-diagram-subagents.gif)",
+    "verification": "Chrome에서 제작 노드 7개, 방향 화살표 6개, 양쪽 연결선 각 7개, 오른쪽 역할 6개, 8방향 공용 담당 1개를 확인했습니다. 모든 역할 카드에 연결된 TOML 편집기와 실제 설정 파일을 대조했습니다. 모바일 390px 폭에서 캔버스 맞춤과 오류 없음도 확인했습니다. 프로젝트 커밋 aa93e2fb.",
+    "remaining": "공개 페이지 배포 상태는 미확인입니다.",
+    "outcome": "전용 역할 6개를 연결했습니다. 의복과 장비 8방향 노드는 하나의 역할 카드로 합류합니다.",
+    "proposedTime": "2026-11-21 14:52:44 KST 시작, 약 4분 예상.",
+    "actualTime": "로컬 검수와 프로젝트 푸시 14:54:28 KST 완료, 약 2분 소요.",
+    "xerjEvidence": "웹 문서 빌드와 Chrome으로 확인했습니다. 중앙 업데이트 2026-11-21-011을 원격 조회했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
