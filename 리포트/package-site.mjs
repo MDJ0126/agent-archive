@@ -8,12 +8,13 @@ const output=path.join(root,'.site');
 if(path.relative(root,output)!=='.site')throw new Error('Invalid output path');
 try{if((await lstat(output)).isSymbolicLink())throw new Error('Output must not be a symlink');}catch(e){if(e.code!=='ENOENT')throw e;}
 const plan=await publicPackage(root);
+const media=await (await import('./media-registry.mjs')).mediaRegistry(root);
 await rm(output,{recursive:true,force:true});
 await mkdir(output,{recursive:true});
 const directories=[...new Set(plan.files.map(file=>path.dirname(path.join(output,file))))].sort();
 for(const dir of directories)await mkdir(dir,{recursive:true});
 let cursor=0;
-await Promise.all(Array.from({length:8},async()=>{while(cursor<plan.files.length){const relative=plan.files[cursor++];await copyFile(path.join(root,relative),path.join(output,relative));}}));
+await Promise.all(Array.from({length:8},async()=>{while(cursor<plan.files.length){const relative=plan.files[cursor++],entry=media.byPath.get(relative);await copyFile(entry?path.join(media.objects,entry.object):path.join(root,relative),path.join(output,relative));}}));
 await writeFile(path.join(output,'.nojekyll'),'');
 await writeFile(path.join(output,'404.html'),'<!doctype html><html lang="ko"><meta charset="utf-8"><title>보고서를 찾을 수 없습니다</title><h1>보고서를 찾을 수 없습니다</h1><a href="/codex-config/">보고서 목록</a></html>');
 const stats={...plan,files:undefined,packageMs:Math.round(performance.now()-started)};

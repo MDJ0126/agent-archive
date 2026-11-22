@@ -21,9 +21,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          sparse-checkout: |
+            /*
+            !*.gif
+            !*.mp4
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - uses: actions/cache@v4
+        with:
+          path: 리포트/.media-cache
+          key: public-media-${{ hashFiles('리포트/media-registry.json') }}
+      - run: node 리포트/prepare-media.mjs
       - uses: actions/cache@v4
         with:
           path: 리포트/.build-cache

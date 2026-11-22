@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url)),budget=JSON.parse(await fs.readFile(path.join(root,'performance-budget.json'),'utf8'));
 const index=await fs.readFile(path.join(root,'index.html'),'utf8'),stats=JSON.parse(await fs.readFile(path.join(root,'.package-stats.json'),'utf8'));
-const metrics={homeHtmlBytes:Buffer.byteLength(index),trackerDataBytes:(await fs.stat(path.join(root,'assets/tracker-data.json'))).size,initialRecordRows:(index.match(/class="record issue-row"/g)||[]).length,packageBytes:stats.bytes,excludedFiles:stats.excludedFiles,excludedBytes:stats.sourceBytes-stats.bytes,packageMs:stats.packageMs};
+const metrics={homeHtmlBytes:Buffer.byteLength(index),trackerDataBytes:(await fs.stat(path.join(root,'assets/tracker-data.json'))).size,initialRecordRows:(index.match(/class="record issue-row"/g)||[]).length,packageBytes:stats.bytes,excludedFiles:stats.excludedFiles,excludedBytes:stats.excludedBytes??stats.sourceBytes-stats.bytes,mediaSavingsBytes:stats.mediaSavingsBytes||0,archivedMediaPaths:stats.archivedMediaPaths||0,packageMs:stats.packageMs};
 let previous;try{previous=JSON.parse(await fs.readFile(path.join(root,'.build-cache/performance.json'),'utf8'));}catch{}
 const failures=[];for(const key of ['homeHtmlBytes','trackerDataBytes','initialRecordRows'])if(metrics[key]>budget[key])failures.push(`${key}: ${metrics[key]} > ${budget[key]}`);
 if(metrics.packageBytes>budget.packageMaxBytes)failures.push('Public package exceeds project capacity budget');

@@ -11,3 +11,10 @@
 ## 근거가 된 작업
 
 - [전역 지침 페이지 공개](reports/2026-11-09-result-20261109143936010-v1.0.0.html)
+
+## GIF·영상 원본과 게시본 보관
+
+- Git 원본은 수정·삭제하지 않습니다. `media-registry.json`은 기존 경로, 원본 Git OID·SHA-256, 게시본 SHA-256·용량과 원본 Release 주소를 연결합니다. 원본은 콘텐츠 해시 이름의 별도 GitHub Release에도 보관합니다. 기존 GitHub Pages 주소에는 같은 형식의 게시본을 남깁니다. github.io 주소를 외부 호스팅으로 서버 리다이렉트할 수 없으므로 게시용 미디어까지 Pages에서 제거했다고 보고하지 않습니다.
+- `prepare-media.mjs` → `build.mjs` → `verify.mjs` → `package-site.mjs` → `check-performance.mjs` 순서로 실행합니다. CI는 원본 GIF·MP4를 sparse checkout에서 제외하고 검증된 게시본 번들을 캐시합니다. 등록되지 않았거나 Git OID가 달라진 파일은 현재 Git 원본으로 복원합니다. 캐시와 `.site`를 원본에 덮어쓰지 않습니다.
+- 새 미디어는 `media-optimize.py`로 별도 작업 폴더에서 처리합니다. GIF는 픽셀·프레임 시간·반복 정보를 비교하고 영상은 프레임 수·재생 시간·SSIM 0.99 이상·동일 오디오 패킷 해시를 확인합니다. 검증 실패 또는 2% 미만 감소 시 원본을 제공합니다. 원본 및 게시본을 함께 검증한 새 불변 Release와 registry를 게시한 후 registry를 갱신합니다. 기존 Release 자산은 덮어쓰지 않습니다.
+- `publish-media-archive.py`는 업로드 후 GitHub의 SHA-256과 용량을 비교합니다. 배포 후 `verify-media.mjs`로 기존 경로 전체의 HTTPS 상태·형식·용량·해시를 확인합니다. 실패 시 registry와 배포 변경을 되돌리고 원본을 유지합니다. 보관함 목록은 50개 단위로 생성합니다.

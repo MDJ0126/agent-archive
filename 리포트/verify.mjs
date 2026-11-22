@@ -1,11 +1,13 @@
 import {matchesRecord} from './assets/filter-core.mjs';
 import {postFiles} from './layout.mjs';
+import {mediaRegistry} from './media-registry.mjs';
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import vm from 'node:vm';
 const root=path.dirname(fileURLToPath(import.meta.url));
+const media=await mediaRegistry(root);
 const index=await readFile(path.join(root,'index.html'),'utf8');
 const registry=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8'));
 const entries=await postFiles(root,registry);
@@ -19,7 +21,7 @@ for(const file of ['index.html','discussions/index.html','manuals/index.html','g
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
   const target=decodeURIComponent(match[1]).split(/[?#]/)[0];if(!target||/^[a-z]+:/.test(target))continue;
   const resolved=path.resolve(path.dirname(path.join(root,file)),target);
-  assert.ok(resolved.startsWith(root+path.sep));await access(resolved);links++;
+  assert.ok(resolved.startsWith(root+path.sep));const relative=path.relative(root,resolved).split(path.sep).join('/'),entry=media.byPath.get(relative);await access(entry?path.join(media.objects,entry.object):resolved);links++;
  }
 }
 const elements=JSON.parse(await readFile(path.join(root,'assets/tracker-data.json'),'utf8')).map(row=>({...row,search:[row.title,row.summary,row.category,row.version,row.projectName,row.type,row.ticket].join(' ').toLowerCase()}));
