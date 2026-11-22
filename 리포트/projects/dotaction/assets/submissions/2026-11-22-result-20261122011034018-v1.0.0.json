@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "트레이 실행 파일과 Windows 자동 시작",
+    "summary": "프로젝트 루트의 VBS 실행기와 알림 영역 메뉴의 자동 시작 토글을 추가했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "VBS 실행 진입점, 현재 사용자 자동 실행 등록, 켜짐·꺼짐 상태 저장 및 운영 지침을 추가했습니다.",
+    "verification": "VBS 실행 후 실제 연결 API가 성공했고 Windows Run 항목 제거·재등록을 검증했습니다.",
+    "remaining": "Windows 재로그인 후 자동 실행 및 실제 우클릭 화면 캡처 미확인.",
+    "outcome": "프로젝트 main a8910117 푸시. 이 PC에서 자동 실행 켜짐.",
+    "proposedTime": "5분",
+    "actualTime": "10:08:08~10:09:58 KST, 1분 50초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
