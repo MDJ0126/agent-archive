@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "관계도 모달에 원문 Markdown 내용 요약",
+    "summary": "관계도 내 22개 문서 노드의 모달에서 원문 주요 내용과 확인 기준을 먼저 볼 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전투 수치·제작 규격·승인과 검수·인계·데이터 위치 등 작업에 직접 필요한 내용을 원문에서 추려 요약했습니다. main 4f338091에 푸시했습니다.",
+    "verification": "빌드 성공. 실제 Chrome에서 요약 22개와 전투·캐릭터 제작·전역 지침·메모장 예시를 확인했습니다. 중앙 업데이트 ID 2026-11-22-001 원격 검증 완료.",
+    "remaining": "요약은 원문이 바뀔 때 함께 갱신해야 합니다. 실제 시간 절감량, 공개 배포는 미확인입니다.",
+    "outcome": "![전투와 원정 원문 내용 요약](../assets/agent-map-doc-summaries-20261122/combat.png)\n\n관계도 모달 상단에 22개 문서 노드의 원문 기반 요약을 배치했습니다.",
+    "proposedTime": "8분. 11월 22일 14:25 KST 시작.",
+    "actualTime": "11월 22일 14:27 KST까지 약 2분.",
+    "xerjEvidence": "rg, Markdown 원문 대조, 대시보드 빌드 및 Chrome 검증.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
