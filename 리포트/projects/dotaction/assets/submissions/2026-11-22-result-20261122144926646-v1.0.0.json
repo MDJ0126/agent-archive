@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "사용한 카드 더미를 테이블 건너편 왼쪽으로 이동",
+    "summary": "사용한 카드는 건너편 왼쪽, 드로우 카드는 플레이어 쪽 오른편에 상판 각도로 놓입니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "사용한 카드 더미의 위치와 왼쪽 상판 원근 방향을 반영했습니다. 전투·조작 문서와 캡처를 갱신했습니다.",
+    "verification": "Godot 실제 전투에서 카드 사용 후 건너편 왼쪽 1장, 보충 후 오른쪽 드로우 5장·손패 4장을 확인했습니다. 18프레임의 GIF는 전부 다른 프레임입니다. 대시보드 빌드 2.87초, 초기 HTML 로컬 빌드 전후 +87바이트, 지연 로드 캡처 참조 용량 +613,449바이트. Chrome 헤드리스에서 전투·화면과 조작 캡처의 표시를 확인했습니다. ![건너편 왼쪽에 쌓이는 사용한 카드](../assets/20261122-battle-tabletop-discard-left.gif)",
+    "remaining": "게임 패키지 배포와 공개 Pages는 미확인입니다.",
+    "outcome": "Godot 전투와 캠프 가디언 대시보드 캡처를 갱신했습니다. 프로젝트 main에 74fc6455를 푸시했습니다.",
+    "proposedTime": "5분",
+    "actualTime": "2026-11-22 23:46~23:48 KST, 구현·Godot 검수·프로젝트 푸시 약 2분.",
+    "xerjEvidence": "Godot 실제 렌더와 로컬 대시보드.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
