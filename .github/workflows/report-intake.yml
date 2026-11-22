@@ -24,6 +24,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - uses: actions/cache@v4
+        with:
+          path: 리포트/.build-cache
+          key: report-render-${{ runner.os }}-${{ github.sha }}-${{ github.run_id }}
+          restore-keys: report-render-${{ runner.os }}-
       - run: node 리포트/sync-issue.mjs
       - run: node 리포트/build.mjs
       - run: node 리포트/verify.mjs
@@ -40,6 +45,7 @@ jobs:
             git push origin HEAD:main
           fi
       - run: node 리포트/package-site.mjs
+      - run: node 리포트/check-performance.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         id: pages_artifact

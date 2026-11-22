@@ -22,7 +22,8 @@ for(const file of ['index.html','discussions/index.html','manuals/index.html','g
   assert.ok(resolved.startsWith(root+path.sep));await access(resolved);links++;
  }
 }
-const elements=[...index.matchAll(/data-search="([^"]*)" data-project="([^"]*)" data-type="([^"]*)" data-group="([^"]*)" data-stage="([^"]*)" data-collection="([^"]*)"/g)].map(m=>({search:m[1],project:m[2],type:m[3],group:m[4],stage:m[5],collection:m[6]}));
+const elements=JSON.parse(await readFile(path.join(root,'assets/tracker-data.json'),'utf8')).map(row=>({...row,search:[row.title,row.summary,row.category,row.version,row.projectName,row.type,row.ticket].join(' ').toLowerCase()}));
+assert.equal((index.match(/class="record issue-row"/g)||[]).length,Math.min(50,elements.length));
 assert.ok(elements.length>0);
 const projectGroups=JSON.parse(await readFile(path.join(root,'project-groups.json'),'utf8'));
 for(const [id,g]of Object.entries(projectGroups)){const expected=elements.filter(e=>g.projects.includes(e.project));assert.ok(expected.length>0);assert.deepEqual(elements.filter(e=>matchesRecord(e,{project:'collection:'+id})),expected);for(const group of ['result','bug'])assert.equal(elements.filter(e=>matchesRecord(e,{project:'collection:'+id,group})).length,expected.filter(e=>e.group===group).length);}

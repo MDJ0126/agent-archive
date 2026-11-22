@@ -7,7 +7,8 @@ import {historicalWorkflow} from './legacy-workflow.mjs';
 import {projectMembership} from './project-tree.mjs';
 import {createHash} from 'node:crypto';
 import {stageIcon} from './stage-icons.mjs';
-import {trackerPage} from './tracker-page.mjs';
+import {trackerPage,trackerRecords} from './tracker-page.mjs';
+import {createRenderCache} from './render-cache.mjs';
 import {formPage} from './form-page.mjs';
 import {validateReport,toMarkdown,WORKFLOW} from './assets/report-contract.mjs';
 import {renderMarkdown} from './render.mjs';
@@ -16,10 +17,12 @@ import {buildProjectGuidelines} from './guidelines-view.mjs';
 import {buildRelationships} from './relationships-view.mjs';
 import {validatePost} from './standards.mjs';
 import {postFiles} from './layout.mjs';
-import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readdir, readFile, writeFile as rawWriteFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const root = path.dirname(fileURLToPath(import.meta.url));
+const buildStarted=performance.now(),renderCache=await createRenderCache(root);let unchangedWrites=0;
+async function writeFile(file,content){try{if(await readFile(file,'utf8')===content){unchangedWrites++;return;}}catch(error){if(error.code!=='ENOENT')throw error;}await rawWriteFile(file,content);}
 const visualsVersion=createHash('sha256')
  .update(await readFile(path.join(root,'assets/report-visuals.css')))
  .update(await readFile(path.join(root,'assets/report-visuals.js')))
@@ -32,7 +35,7 @@ const projects=JSON.parse(await readFile(path.join(root,'projects.json'),'utf8')
 const projectGroups=JSON.parse(await readFile(path.join(root,'project-groups.json'),'utf8'));
 const memberships=projectMembership(projectGroups,projects);
 const types=['작업 결과','버그','수정사항','검토','설정','토론','작업 메뉴얼'];
-const projectIcon=(id,prefix='')=>{const p=projects[id];return p.logo?`<img class="project-logo" src="${prefix}${esc(p.logo)}" alt="${esc(p.name)} 로고">`:`<span class="project-fallback" aria-label="로고 미등록">${esc(p.name.slice(0,1))}</span>`;};
+const projectIcon=(id,prefix='')=>{const p=projects[id];return p.logo?`<img class="project-logo" src="${prefix}${esc(p.logo)}" alt="${esc(p.name)} 로고" width="34" height="34" loading="lazy" decoding="async">`:`<span class="project-fallback" aria-label="로고 미등록">${esc(p.name.slice(0,1))}</span>`;};
 const legacyFiles=new Set(JSON.parse(await readFile(path.join(root,'migration/editorial-2026-10-29.json'),'utf8')).map(e=>e.post));
 const workflowReviews=JSON.parse(await readFile(path.join(root,'migration/workflow-review-2026-10-30.json'),'utf8'));
 const posts=[];
@@ -65,7 +68,7 @@ for(const meta of posts){validateDiscussionLinks(meta,posts);validateManualLinks
  const archived=meta.record==='archived';
  let articleBody=meta.body.replace(/^\s*# [^\n]+\n+/,'').trim();
  if(archived)articleBody=articleBody.replace(/^> 보관 기록입니다\.[^\n]*\n+/, '');
- const content=renderMarkdown(articleBody,{bodyMode:true,enhanceCode:true});
+ const content=renderCache.render(articleBody,{bodyMode:true,enhanceCode:true});
  const historical=historicalDiagram(meta.postPath,articleBody)+historicalCode(meta.postPath,articleBody);
  const hasVisuals=historical||content.html.includes('<code data-language=')||content.html.includes('<pre class="mermaid">');
  const visuals=hasVisuals?`<link rel="stylesheet" href="../../../assets/report-visuals.css?v=${visualsVersion}"><script type="module" src="../../../assets/report-visuals.js?v=${visualsVersion}"></script>`:'';
@@ -75,6 +78,7 @@ for(const meta of posts){validateDiscussionLinks(meta,posts);validateManualLinks
 }
 const activeProjects=Object.entries(projects).filter(([id])=>posts.some(p=>p.project===id));
 await writeFile(path.join(root,'index.html'),shell('보고서 · 이슈',trackerPage(posts.filter(p=>!['discussion','manual'].includes(p.report_kind)),projects,projectIcon,projectGroups)));
+await writeFile(path.join(root,'assets/tracker-data.json'),JSON.stringify(trackerRecords(posts.filter(p=>!['discussion','manual'].includes(p.report_kind)),projects,projectGroups)));
 await mkdir(path.join(root,'manuals'),{recursive:true});
 await writeFile(path.join(root,'manuals/index.html'),shell('작업 메뉴얼',manualsPage(posts,projects,projectIcon),'../'));
 await writeFile(path.join(root,'assets/manual-registry.json'),JSON.stringify(posts.filter(p=>p.manual).map(p=>({reportPath:p.reportPath,postPath:p.postPath,date:p.date,version:p.version,project:p.project,kind:'manual',manualId:p.manual.manualId,round:p.manual.round,manual:p.manual})),null,2));
@@ -120,3 +124,6 @@ await writeFile(path.join(root,'guide/workflow.html'),shell('사람·AI 공통 �
 
 const executionGuide=renderMarkdown(await readFile(path.join(root,'guide/execution.md'),'utf8'));
 await writeFile(path.join(root,'guide/execution.html'),shell('작업 시작·반복 QA 메뉴얼',`<main class="detail guide-page"><article>${executionGuide.html}<a href="template-manual.json" download>작업 메뉴얼 JSON 템플릿</a></article></main>`,'../'));
+
+await writeFile(path.join(root,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+posts.map(p=>'<url><loc>https://mdj0126.github.io/codex-config/'+esc(p.reportPath.split('/').map(encodeURIComponent).join('/'))+'</loc></url>').join('')+'</urlset>');
+const cacheStats=await renderCache.save();const metrics={buildMs:Math.round(performance.now()-buildStarted),unchangedWrites,...cacheStats};await rawWriteFile(path.join(root,'.build-metrics.json'),JSON.stringify(metrics));console.log(JSON.stringify(metrics));
