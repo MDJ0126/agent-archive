@@ -6,12 +6,13 @@ const digest=b=>crypto.createHash('sha256').update(b).digest('hex');
 export async function verifyResponse(url,expected,{request=fetch,attempts=12,delay=5000}={}){
  let last;
  for(let n=0;n<attempts;n++){
-  try{const response=await request(url,{headers:{'cache-control':'no-cache'}});if(!response.ok)throw new Error(`HTTP ${response.status}`);const body=Buffer.from(await response.arrayBuffer());if(digest(body)!==digest(expected))throw new Error('published bytes differ from packaged bytes');return body;}
+  try{const response=await request(url,{headers:{'cache-control':'no-cache'}});if(!response.ok)throw new Error(`HTTP ${response.status}`);const body=Buffer.from(await response.arrayBuffer());if(digest(body)!==(expected.sha256||digest(expected)))throw new Error('published bytes differ from packaged bytes');return body;}
   catch(error){last=error;if(n+1<attempts)await new Promise(resolve=>setTimeout(resolve,delay));}
  }
  throw new Error(`${url}: ${last.message}`);
 }
-export async function verifyPublic({root=path.dirname(fileURLToPath(import.meta.url)),base='https://mdj0126.github.io/codex-config/',request=fetch}={}){
+export async function verifyPublic({root=path.dirname(fileURLToPath(import.meta.url)),base='https://mdj0126.github.io/codex-config/',request=fetch,manifestPath,preparePath}={}){
+ if(manifestPath){const manifest=JSON.parse(await fs.readFile(manifestPath,'utf8'));for(const entry of manifest){const url=new URL(entry.relative,base);if(url.origin!==new URL(base).origin||!url.pathname.startsWith(new URL(base).pathname))throw new Error('Manifest target escaped site');url.searchParams.set('verify',process.env.GITHUB_SHA||String(Date.now()));await verifyResponse(url.href,{sha256:entry.sha256},{request});}console.log(`PASS: ${manifest.length} public reports/assets matched build SHA-256 manifest`);return manifest.length;}
  const site=path.join(root,'.site'),catalog=JSON.parse(await fs.readFile(path.join(root,'assets/report-catalog.json'),'utf8'));
  const projects=JSON.parse(await fs.readFile(path.join(root,'projects.json'),'utf8'));
  const reports=catalog.slice(0,5).map(r=>r.reportPath),targets=new Set(['index.html','guide/index.html','guide/global-instructions.html','guide/project-instructions.html',...Object.keys(projects).flatMap(id=>['guidelines.html','guidelines.md'].map(file=>`projects/${id}/${file}`)),...reports]);
@@ -21,10 +22,12 @@ export async function verifyPublic({root=path.dirname(fileURLToPath(import.meta.
   let relative=decodeURIComponent(url.pathname.slice(prefix.pathname.length));if(!relative||relative.endsWith('/'))relative+='index.html';
   if(/\.(?:html|md|css|js|png|webp|jpg|jpeg|gif|svg|woff2?)$/i.test(relative))targets.add(relative);
  }}
+ const manifest=[];
  for(const relative of targets){const target=path.resolve(site,relative);if(!target.startsWith(path.resolve(site)+path.sep))throw new Error('public target escaped package');
-  const expected=await fs.readFile(target),url=new URL(relative,base);url.searchParams.set('verify',process.env.GITHUB_SHA||String(Date.now()));await verifyResponse(url.href,expected,{request});
+  const expected=await fs.readFile(target);if(preparePath){manifest.push({relative,sha256:digest(expected)});continue;}const url=new URL(relative,base);url.searchParams.set('verify',process.env.GITHUB_SHA||String(Date.now()));await verifyResponse(url.href,expected,{request});
  }
+ if(preparePath){await fs.writeFile(preparePath,JSON.stringify(manifest));console.log(`Prepared ${manifest.length} public checks without uploading a second site copy`);return manifest.length;}
  console.log(`PASS: ${targets.size} public reports/assets returned HTTP 200 and exact packaged SHA-256 bytes. Browser rendering not tested.`);
  return targets.size;
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))await verifyPublic();
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))await verifyPublic({manifestPath:process.argv.includes('--manifest')?process.argv[process.argv.indexOf('--manifest')+1]:undefined,preparePath:process.argv.includes('--prepare')?process.argv[process.argv.indexOf('--prepare')+1]:undefined});

@@ -13,11 +13,13 @@ concurrency:
   group: report-pages
   cancel-in-progress: false
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+    outputs:
+      artifact_id: ${{ steps.pages_artifact.outputs.artifact_id }}
+      checks_artifact_name: ${{ steps.checks_name.outputs.name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,20 +31,48 @@ jobs:
       - run: node 리포트/verify-editorial.mjs
       - run: node --test 리포트/tests/*.test.mjs
       - run: node 리포트/package-site.mjs
-      - uses: actions/configure-pages@v5
+      - run: node 리포트/verify-public.mjs --prepare public-checks.json
       - uses: actions/upload-pages-artifact@v3
         id: pages_artifact
         with:
           path: 리포트/.site
           name: report-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - id: checks_name
+        run: echo "name=public-checks-${{ github.run_id }}-${{ github.run_attempt }}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.checks_name.outputs.name }}
+          path: public-checks.json
+          retention-days: 1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            리포트/deploy-pages.mjs
+            리포트/verify-public.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/configure-pages@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.checks_artifact_name }}
+          path: .public-checks
       - name: Deploy
         id: deployment
         uses: actions/github-script@v7
         env:
-          PAGES_ARTIFACT_ID: ${{ steps.pages_artifact.outputs.artifact_id }}
+          PAGES_ARTIFACT_ID: ${{ needs.build.outputs.artifact_id }}
         with:
           script: |
             const {default: deployPages} = await import(`${process.env.GITHUB_WORKSPACE}/리포트/deploy-pages.mjs`);
             await deployPages({github, core, context, artifactId: process.env.PAGES_ARTIFACT_ID});
       - name: Verify public reports and assets
-        run: node 리포트/verify-public.mjs
+        run: node 리포트/verify-public.mjs --manifest .public-checks/public-checks.json
