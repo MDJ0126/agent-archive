@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Pixel Snapper 적용 전후 일러스트 비교",
+    "summary": "같은 야영지 소재를 일반 일러스트와 도트풍 일러스트로 생성하고 고정 32색 팔레트로 후처리했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공식 웹 워커와 WASM을 로컬에서 실행하고 격자는 자동 감지했습니다. 후처리 이미지는 표시용으로 최근접 3배 확대했습니다.",
+    "verification": "일반 1254×1254 → 270×276, 15색. 도트풍 1254×1254 → 206×209, 13색. 두 출력의 전체 픽셀이 지정한 32색 안에 들어가는 것을 확인했습니다.",
+    "remaining": "이번 팔레트는 비교 예제에 사용했습니다.",
+    "outcome": "ImageGen 원본 두 장과 Pixel Snapper 변환 두 장을 비교했습니다.\n\n![일반 일러스트 원본](../assets/pixel-snapper-comparison-20261122/painted-before.png)\n\n![일반 일러스트 변환 3배 확대](../assets/pixel-snapper-comparison-20261122/painted-after-3x.png)\n\n![도트풍 일러스트 원본](../assets/pixel-snapper-comparison-20261122/pixel-before.png)\n\n![도트풍 일러스트 변환 3배 확대](../assets/pixel-snapper-comparison-20261122/pixel-after-3x.png)",
+    "proposedTime": "7~10분",
+    "actualTime": "2026-11-22 09:14:56~09:18:09 KST, 생성 및 픽셀 검증 3분 13초",
+    "xerjEvidence": "공식 WASM 처리 결과를 직접 검사했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
