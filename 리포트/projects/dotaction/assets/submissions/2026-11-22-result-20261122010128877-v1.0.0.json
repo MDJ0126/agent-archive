@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 비활성 안내와 연결 상태 정렬",
+    "summary": "코덱스 연결 필요 안내를 제작 상세에 표시하고 공통 연결 상태를 메뉴에 맞췄습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![연결 필요 안내](../assets/production-codex-required-20261122/production-codex-required.png)",
+    "verification": "Chrome에서 모의 연결 실패 시 안내, 실제 재연결 뒤 숨김과 제작 영역 활성화, 메뉴 아이콘과 동일한 시작점을 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "프로젝트 main b54edc8c 푸시.",
+    "proposedTime": "3분",
+    "actualTime": "09:59:21~10:01:02 KST, 1분 41초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
