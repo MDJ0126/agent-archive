@@ -6,6 +6,7 @@
   - [작업별 지침](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%9E%91%EC%97%85%EB%B3%84%20%EC%A7%80%EC%B9%A8.md) — Task-specific work guidance
     - [네이밍 규칙](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EB%84%A4%EC%9D%B4%EB%B0%8D%20%EA%B7%9C%EC%B9%99.md) — Unity naming conventions
     - [코드 스타일](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%BD%94%EB%93%9C%20%EC%8A%A4%ED%83%80%EC%9D%BC.md) — Unity code style
+    - [SNS 글쓰기 가이드](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/SNS%20%EA%B8%80%EC%93%B0%EA%B8%B0%20%EA%B0%80%EC%9D%B4%EB%93%9C.md) — Voice, vocabulary, and examples for public posts
   - [품질 점검 절차](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%ED%92%88%EC%A7%88%20%EC%A0%90%EA%B2%80%20%EC%A0%88%EC%B0%A8.md) — QA procedure
     - [검수 기록](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EA%B8%B0%EB%A1%9D.md) — Verification records
     - [검수 증거](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EC%A6%9D%EA%B1%B0.md) — Evidence by result type
@@ -27,6 +28,7 @@
 - Before implementing, producing, or running anything on the first task of a session or when resuming work, read the installed global `AGENTS.md`, then the target project's `AGENTS.md` and any applicable instructions in subdirectories. Do this without a separate request from the user.
 - Use the table below to open only the source documents relevant to the task. The global rules in this file apply across projects. For CampGuardian sprites or PixelLab work, also read the relevant sections of the project's `docs/character-production.md` before starting.
 - Resolve archive paths below from `$CODEX_HOME/config-repo`, or from `~/.codex/config-repo` if `CODEX_HOME` is unset. The link labels give the local source paths. Use the corresponding repository links if local sources are unavailable.
+- For SNS drafts, public posts, channel introductions, devlogs, and blog posts written for the user, read the [SNS 글쓰기 가이드](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/SNS%20%EA%B8%80%EC%93%B0%EA%B8%B0%20%EA%B0%80%EC%9D%B4%EB%93%9C.md) and recent user-approved posts for the target channel. Apply the user's latest request and project-specific disclosure rules. Use natural Korean polite speech and exclude profanity, anger, and aggression from both style samples and output. Fold confirmed wording preferences into the archive Markdown guide.
 
 | When to read | Source |
 | --- | --- |
@@ -69,6 +71,7 @@ For a visual overview, see the [global instruction map](https://mdj0126.github.i
 ## Project Commits and Central Reports
 
 - For website changes and archive publications, optimize the changed content before publishing. Measure the relevant build duration, public package growth, initial HTML/data payload, and rendered list size against the project's performance budget. Reuse unchanged build work, load only the visible page of growing lists, and exclude unreferenced publication files while preserving originals and existing linked evidence. Do not describe an unmeasured browser metric as verified. Record material regressions and remaining capacity work in the result; follow the project's performance guidance and automated publication checks.
+
 
 - For every completed or partially completed implementation, modification, or configuration, commit the scoped project changes and push the current branch promptly. Existing authorization carries forward. Preserve unrelated work, originals, and unfinished changes. Exclude secrets and generated caches. Never force-push. If the push fails, report the error, local commit, and remote status, and address remaining unpushed commits in the next task.
 - Write an individual shared JSON v2 result report for each independent task and commit and push it to the central archive. Use the user's instructions on withheld or private publication. Keep project code push and archive publication as separate statuses. Preserve actual progress, partial completion, and unverified items. Report results, changes, verification scope, remaining work, proposed time, and actual time. Exclude raw session logs and secrets.
