@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 게시물에서 해당 캐릭터 아카이브로 바로 이동",
+    "summary": "남녀 마네킹의 상세 항목을 등록하고 게시물 버튼의 아카이브 목록 전환을 제거했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "![남성형 마네킹 아카이브](../assets/mannequin-archive-direct-20261122/mannequin-archive-direct.png)",
+    "verification": "Chrome에서 남성형·여성형 마네킹과 잿빛 기사의 버튼을 눌러 각 상세 화면 제목과 주소를 확인했습니다.",
+    "remaining": "공개 페이지 반영 미확인.",
+    "outcome": "main 6b2c8f05 푸시.",
+    "proposedTime": "5분",
+    "actualTime": "10:23:17~10:25:33 KST, 2분 16초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
