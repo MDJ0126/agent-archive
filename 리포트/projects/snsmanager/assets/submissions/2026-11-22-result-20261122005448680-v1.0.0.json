@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "snsmanager",
+    "kind": "result",
+    "title": "캐릭터 제작 과정 쇼츠 YouTube·Threads·X 게시",
+    "summary": "승인된 40초 쇼츠를 세 플랫폼에 직접 첨부해 공개 게시했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 승인 영상과 썸네일, 플랫폼별 한글 본문 사용. 게임명 비공개 유지. 실제 게시문·URL·영상·편집 프로젝트·필수 소스·체크섬을 비공개 GitHub에 보관하고 8e4a93d 커밋을 main에 푸시했습니다.",
+    "verification": "YouTube 게시 성공 화면, X 본인 게시물 본문과 고유 URL, Threads 본인 게시물 본문과 고유 URL 확인. X·Threads 제출 전 40초 첨부 영상 재생 준비 상태 확인. Threads 게시 화면은 비공개 기록 폴더에 보관.",
+    "remaining": "다른 계정과 모바일에서의 재생은 미확인. 중앙 보고 공개 배포는 별도 상태입니다.",
+    "outcome": "YouTube https://www.youtube.com/shorts/Lf8KSipZqBc / Threads https://www.threads.com/@itsnerdyjun/post/DgBjxqYDtLk / X https://x.com/nerdy_jun/status/2124304469257302480",
+    "proposedTime": "5~10분",
+    "actualTime": "2026-11-22 09:42:39 KST 시작, 게시와 비공개 보관 푸시 09:52:53 KST 완료, 약 10분 14초. 순차 업로드로 예상보다 지연되어 작업 중 안내했습니다.",
+    "xerjEvidence": "실제 게시 DOM·미디어 상태·Git push 결과",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
