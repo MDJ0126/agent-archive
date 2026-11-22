@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "지침 관계도 라이트 모드 전용 색상 적용",
+    "summary": "라이트 모드에서 밝은 격자, 흰 문서 카드, 진한 글자와 연결선을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "라이트 모드에서 밝은 청회색 격자, 흰 카드, 따뜻한 색의 상위 노드와 진한 연결선을 사용합니다. 다크 모드는 기존 색상을 사용합니다. main 23df7161에 푸시했습니다.",
+    "verification": "Chrome에서 두 모드의 실제 색상 및 가로 넘침을 확인했습니다. 도형 내부 제목·설명 텍스트의 최소 대비는 라이트 6.16:1, 다크 6.78:1입니다. 중앙 최신 업데이트 2026-11-22-001을 원격 확인했습니다.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![라이트 모드의 실제 관계도](../assets/agent-map-light-20261122/light.png)\n\n라이트 모드 전용 색상을 적용했습니다.",
+    "proposedTime": "5분. 11월 22일 16:25 KST 시작.",
+    "actualTime": "11월 22일 16:26 KST까지 약 1분.",
+    "xerjEvidence": "Node 빌드, Chrome 색상 비교 및 실제 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
