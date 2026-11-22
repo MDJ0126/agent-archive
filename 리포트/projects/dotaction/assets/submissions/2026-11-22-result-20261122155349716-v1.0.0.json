@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브와 제작하기에 정렬 추가",
+    "summary": "두 캐릭터 목록에 이름·생성 시간·종류의 오름차순과 내림차순을 제공합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공용 한국어 정렬을 적용했습니다. 새 캐릭터는 등록 시각을 저장하며 기존 캐릭터는 저장소의 최초 확인 기록으로 채웠습니다. 시각이 같은 경우 이름순으로 정렬합니다. 프로젝트 main 9776d470 푸시.",
+    "verification": "Chrome에서 두 화면 각각 67개 항목의 6가지 정렬과 기본 순서 복원, 기존 선택 유지 및 검색 병행을 확인했습니다. 11월 23일 00:52 KST 캡처. 빌드 3.38초, 초기 HTML 3,564,247B, 옵션은 화면당 7개, 증거 GIF 합계 197,493B.",
+    "remaining": "기존 항목의 최초 저장소 기록은 원본 제작 시각과 다를 수 있습니다. 공개 배포 및 중앙 지침 원격 최신은 미확인입니다. 로컬 지침 2026-11-22-004 확인.",
+    "outcome": "![아카이브 정렬 검증](../assets/character-sort-20261123/archive.gif)\n\n![제작하기 정렬 검증](../assets/character-sort-20261123/production.gif)",
+    "proposedTime": "11월 23일 00:50 KST 시작, 약 7분.",
+    "actualTime": "11월 23일 00:53:18 KST 구현·검증·프로젝트 푸시 완료, 약 2분 30초.",
+    "xerjEvidence": "rg, Git 이력, Node, Chrome 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
