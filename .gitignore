@@ -13,6 +13,9 @@
 !리포트/
 !리포트/**
 리포트/.site/
+리포트/.build-cache/
+리포트/.package-stats.json
+리포트/.build-metrics.json
 리포트/.public-site/
 리포트/access/.wrangler/
 !tools/

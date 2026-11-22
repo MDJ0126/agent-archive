@@ -1,0 +1,11 @@
+{
+  "homeHtmlBytes": 262144,
+  "trackerDataBytes": 2097152,
+  "initialRecordRows": 50,
+  "packageWarnBytes": 1073741824,
+  "packageMaxBytes": 2000000000,
+  "packageGrowthWarnBytes": 20000000,
+  "packageGrowthMaxBytes": 100000000,
+  "buildWarnMs": 60000,
+  "note": "Project guardrails, not browser Core Web Vitals guarantees. Existing linked historical media is preserved."
+}

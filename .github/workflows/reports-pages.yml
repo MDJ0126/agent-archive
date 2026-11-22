@@ -25,12 +25,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - uses: actions/cache@v4
+        with:
+          path: 리포트/.build-cache
+          key: report-render-${{ runner.os }}-${{ github.sha }}
+          restore-keys: report-render-${{ runner.os }}-
       - run: node 리포트/build.mjs
       - run: node 리포트/verify.mjs
       - run: node 리포트/verify-migration.mjs
       - run: node 리포트/verify-editorial.mjs
       - run: node --test 리포트/tests/*.test.mjs
       - run: node 리포트/package-site.mjs
+      - run: node 리포트/check-performance.mjs
       - run: node 리포트/verify-public.mjs --prepare public-checks.json
       - uses: actions/upload-pages-artifact@v3
         id: pages_artifact
