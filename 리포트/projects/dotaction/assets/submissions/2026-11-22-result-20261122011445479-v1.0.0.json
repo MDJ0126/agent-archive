@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Godot에서 대시보드 트레이 자동 실행",
+    "summary": "Windows Godot 에디터가 프로젝트를 열면 기존 트레이 실행기를 호출합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "에디터 플러그인, 프로젝트 기본 활성화 및 운영 지침.",
+    "verification": "Godot 4.7.2 스크립트 검사 종료 코드 0. 샌드박스의 사용자 로그 경로 쓰기 오류는 확인했습니다.",
+    "remaining": "실제 Godot 창을 열었을 때 트레이 실행과 화면 증거 미확인.",
+    "outcome": "프로젝트 main a1d8f128 푸시.",
+    "proposedTime": "5분",
+    "actualTime": "10:13:17~10:14:21 KST, 1분 4초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
