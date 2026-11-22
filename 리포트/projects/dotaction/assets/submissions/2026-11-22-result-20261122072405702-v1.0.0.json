@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "AGENTS.md 관계도 원문 연결과 AI 작업 기록 분리",
+    "summary": "AI 작업 기록을 작업 지침 아래 독립 탭에 두고 프로젝트 AGENTS.md부터 Markdown을 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "작업 지침 아래 독립 AI 작업 기록 탭을 두고 기존 기록·분류와 옛 링크를 보존했습니다. 관계도 아래의 요약 검토·업데이트 블록을 제거하고 모달 안의 개별 검토 상태를 유지했습니다. 작업과 검수, 대시보드 이용, Godot 구현 진입점 문서를 보강했습니다. 격자·균일한 카드·곡선 연결선을 적용했습니다. main f9744e1f를 푸시했습니다.",
+    "verification": "빌드 성공. 실제 Chrome에서 다크 격자, 문서 노드 26개와 가로 넘침·글자 잘림 없음, 프로젝트 지침 및 Godot 문서 미리보기, AI 기록 14개 및 기존 기록 링크 호환을 확인했습니다. 중앙 최신 ID 2026-11-22-001을 원격 확인했습니다.",
+    "remaining": "공개 배포와 모바일 실기기 표시는 미확인입니다.",
+    "outcome": "![격자와 곡선 연결선을 적용한 관계도](../assets/agent-map-reference-20261122/graph.png)\n\n![작업 지침의 독립 AI 작업 기록 탭](../assets/agent-map-reference-20261122/log.png)\n\nMarkdown 26개와 기존 AI 기록 14개를 확인했습니다.",
+    "proposedTime": "10분. 11월 22일 16:17 KST 시작.",
+    "actualTime": "11월 22일 16:23 KST까지 약 6분.",
+    "xerjEvidence": "Node 빌드, Chrome 실행과 실제 화면 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
