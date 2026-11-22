@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 시트의 기준 마네킹 자동 연결",
+    "summary": "인간형 캐릭터에 등록한 기준 마네킹을 제작 현황의 T포즈와 8방향 시트에 자동 연결합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "캐릭터 등록에 기준 마네킹 필드를 추가하고 단계별 검수 비교 이미지를 우선합니다. 프로젝트 a4d3825b 푸시.",
+    "verification": "대시보드 빌드, 여성형·남성형 바디 T포즈와 8방향, 기존 남성형 의복 비교 이미지, 별도 신규 ID에서 기준 윤곽 표시 확인.",
+    "remaining": "공개 배포 및 전역 업데이트 원격 상태 미확인.",
+    "outcome": "![여성형 마네킹 8방향 겹쳐 보기](../assets/shared-mannequin-overlay-20261123/overlay.png)",
+    "proposedTime": "5분",
+    "actualTime": "약 3분, 00:03 KST 프로젝트 푸시.",
+    "xerjEvidence": "브라우저 렌더링 및 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
