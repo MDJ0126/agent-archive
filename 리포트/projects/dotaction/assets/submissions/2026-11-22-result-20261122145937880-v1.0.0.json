@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마네킹 바디 예제 겹쳐 보기 복구",
+    "summary": "남성형 마네킹 예제의 비교 레이어를 복구하고 제작 현황의 비교 이미지 역할을 명시했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 비교 이미지 역할을 추가했습니다. 프로젝트 d2bfb5eb 푸시.",
+    "verification": "브라우저에서 남성형 바디와 의복 T포즈, 바디·의복·장비 8방향 총 5개 비교 레이어를 켜서 확인했습니다.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![남성형 마네킹 8방향 겹쳐 보기](../assets/mannequin-overlay-20261122/overlay.png)",
+    "proposedTime": "5분",
+    "actualTime": "약 2분, 23:59 KST",
+    "xerjEvidence": "브라우저 렌더링과 비교 레이어 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
