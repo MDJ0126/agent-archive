@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 결과물 클릭과 마네킹 대조 복구",
+    "summary": "Codex 미연결 상태의 결과물 열람을 복구하고 아카이브에서 가져온 비교 기준을 확대 모달에 전달합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "열람 잠금 범위 수정, 클릭한 결과물 비교 기준 전달, 제작 가이드 예제 연결. 프로젝트 5a31d7ab 푸시.",
+    "verification": "Codex 미연결 브라우저에서 여성형 마네킹, 붉은 장교, 잿빛 기사의 제작 결과물을 실제 클릭해 확인. 잿빛 기사 아카이브와 제작 가이드 예제도 확인.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![잿빛 기사 결과물 마네킹 대조](../assets/result-mannequin-overlay-20261123/overlay.png)",
+    "proposedTime": "5분",
+    "actualTime": "약 5분, 00:14 KST 프로젝트 푸시.",
+    "xerjEvidence": "브라우저 마우스 클릭과 비교 레이어 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
