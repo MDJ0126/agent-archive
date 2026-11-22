@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캠프 가디언 대시보드 메모장 추가",
+    "summary": "운영 기록에 메모장 탭을 추가하고 첫 메모와 브라우저 자동 저장을 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "대시보드 메뉴, 직접 진입 경로와 지침 관계도에 메모장을 연결했습니다. 입력한 내용은 브라우저에 자동 저장합니다.",
+    "verification": "대시보드 빌드와 Chromium에서 메뉴 진입, 기본 메모 표시, 새로고침 후 편집 유지 확인. 프로젝트 커밋 e9ccbc50.\r\n\r\n![메모장 화면](../assets/dashboard-notepad-20261122.png)",
+    "remaining": "공개 대시보드 배포 확인은 미확인입니다.",
+    "outcome": "메모장 탭과 첫 메모를 구현하고 프로젝트 main에 푸시했습니다.",
+    "proposedTime": "약 10분",
+    "actualTime": "11:10에 시작해 약 5분 후 11:15에 구현·검증 및 프로젝트 푸시 완료 (KST)",
+    "xerjEvidence": "rg로 대시보드 코드 위치 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
