@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "부분 제작 요청에 최종 QA 필수 적용",
+    "summary": "부분 요청에서 최종 QA 체크박스를 제거하고 선택한 제작 단계 뒤에 QA를 자동으로 추가합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "최종 QA는 선택 모드에 필수로 표시되고 확인 및 접수 단계 목록에 포함됩니다. 부분 요청의 QA는 선택한 단계와 인계를 검수하며 결과에 범위를 기록합니다. PixelLab은 전체 QA 통과를 요구합니다. 프로젝트 main 2f8e127e 푸시.",
+    "verification": "Chrome에서 제작 단계 9개에만 체크박스 표시, QA 단독 요청 차단, 확인과 저장 목록에 QA 포함을 검증했습니다. 격리 데이터로 선택 단계 등록 전 QA 시작 차단, 부분 QA 기록과 요청 종료, PixelLab 자격 차단을 확인했습니다. 11월 23일 01:02 KST 캡처. 빌드 3.16초, 초기 HTML 3,565,489B, 검증 GIF 395,377B.",
+    "remaining": "실제 제작 실행 및 PixelLab 외부 호출과 공개 배포는 미확인입니다. 중앙 지침은 로컬 2026-11-22-004까지 확인했고 원격 최신은 미확인입니다.",
+    "outcome": "![부분 요청에서 최종 QA 필수 표시와 접수 결과](../assets/production-required-qa-20261123/flow.gif)",
+    "proposedTime": "11월 23일 00:59 KST 시작, 약 5분.",
+    "actualTime": "11월 23일 01:02:56 KST 구현·검증·프로젝트 푸시 완료, 약 3분 30초.",
+    "xerjEvidence": "rg, Node, Chrome 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
