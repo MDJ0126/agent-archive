@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 게시판에 캐릭터 슬롯과 걷기 썸네일 적용",
+    "summary": "캐릭터 제작 게시판을 아카이브와 같은 슬롯으로 표시하고 걷기 모션이 없는 슬롯에 ‘없음’을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "아카이브에 등록된 걷기 클립과 공용 재생 코드를 사용합니다. 스크롤 영역에 보이는 썸네일만 재생하며 슬롯에 기존 상태와 요청 버튼을 배치했습니다. 프로젝트 main f07aad81 푸시.",
+    "verification": "Chrome에서 67개 슬롯 중 걷기 46개와 없음 21개, 실제 이미지 로드와 프레임 변경, 슬롯 상세 전환, 검색과 빈 결과를 확인했습니다. 아카이브의 기존 목록 재생도 확인했습니다. 11월 23일 00:43 KST 캡처. 빌드 2.39초, 초기 HTML 3,561,634B, 별도 썸네일 원본 추가 없음, GIF 124,750B.",
+    "remaining": "백그라운드 제작 실행과 공개 배포 미확인. 중앙 지침은 로컬 2026-11-22-004까지 확인했고 원격 최신은 미확인입니다.",
+    "outcome": "![제작 게시판의 걷기 썸네일과 없음 표시](../assets/production-character-slots-20261123/slots.gif)\n\n슬롯의 이름이나 썸네일을 누르면 캐릭터 제작 상세를 선택합니다.",
+    "proposedTime": "11월 23일 00:41 KST 시작, 약 7분.",
+    "actualTime": "11월 23일 00:44:19 KST 구현·게시판 검증·프로젝트 푸시 완료, 약 3분.",
+    "xerjEvidence": "rg, Node, Chrome 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
