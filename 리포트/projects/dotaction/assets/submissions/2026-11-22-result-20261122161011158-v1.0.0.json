@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 요청 접수 상태 표시와 작업 버튼 잠금",
+    "summary": "전송과 접수 여부를 확인창과 제작 화면에 표시하고 중복 요청 버튼을 잠급니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전송 중 로딩과 제작 버튼 잠금을 적용했습니다. 접수 이후에는 서버에 저장된 요청 상태를 표시하며 해당 캐릭터의 새 요청 버튼을 잠급니다. 응답이 뒤늦게 도착한 이전 조회값이 최신 요청 상태를 덮는 것을 막습니다. 프로젝트 main 87ecbe07 푸시.",
+    "verification": "Chrome에서 실제 접수 함수를 쓰고 실행 응답과 종료 사유는 검증용으로 대체했습니다. 전송 중 전체 요청 버튼 잠금, 접수 문구, 중복 없는 재시도, 새로고침 후 실행 표시와 잠금 유지, 중단 시 잠금 해제를 확인했습니다. 11월 23일 01:09 KST 캡처. 빌드 3.11초, 초기 HTML 3,565,489B, GIF 116,374B.",
+    "remaining": "사용자가 누른 요청의 접수 여부, 실제 백그라운드 제작 실행 및 공개 배포 미확인. 중앙 지침은 로컬 2026-11-22-004까지 확인했고 원격 최신은 미확인입니다.",
+    "outcome": "![제작 요청의 처리, 접수, 실행 오류, 재시도 후 실행 중 표시](../assets/production-request-receipt-20261123/flow.gif)",
+    "proposedTime": "11월 23일 01:07 KST 시작, 약 5분.",
+    "actualTime": "11월 23일 01:09:37 KST 구현·검증·프로젝트 푸시 완료, 약 2분 30초.",
+    "xerjEvidence": "rg, Node, Chrome 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
