@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "관계도 카드 안에 문서 요약 통합",
+    "summary": "캠프 가디언 대시보드에서 문서 제목과 요약을 연결된 카드 안에 표시하고 해당 원문과 화면을 엽니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "샘플 프로젝트의 카드 배치와 본문 열기 동작을 실제 화면에서 대조했습니다. 기존 그림과 아래 요약 목록을 통합했습니다. 프로젝트 main에 b0147893을 푸시했습니다.",
+    "verification": "대시보드 빌드와 Chrome 캡처를 확인했습니다. 모든 카드에 요약이 있고 별도 요약 목록이 없음을 확인했습니다. 프로젝트 지침 미리보기, AI 작업 기록 이동, 390px 가로 넘침 여부와 중앙 업데이트 ID 2026-11-21-011을 확인했습니다.",
+    "remaining": "공개 대시보드 배포와 모바일 실기기 표시는 미확인입니다.",
+    "outcome": "![캠프 가디언 대시보드 관계도 카드](../assets/agent-map-integrated-20261122/relationship.png)\n\n카드 21개가 세 가지 주제에 연결됩니다.",
+    "proposedTime": "8분. 10:56 KST 시작.",
+    "actualTime": "11월 22일 10:59 KST 완료. 약 3분.",
+    "xerjEvidence": "rg, Node, Chrome 헤드리스 실행으로 검증했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
