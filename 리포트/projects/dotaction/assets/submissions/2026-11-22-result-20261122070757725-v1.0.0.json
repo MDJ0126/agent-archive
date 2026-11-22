@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 지침 관계도 주제별 정리",
+    "summary": "위에서 아래로 읽는 관계도를 세 주제 탭으로 나누고 선택한 가지의 연결도를 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "세 주제 탭과 문서 수를 위에 배치하고 긴 교차 연결선을 줄였습니다. 모바일은 동일 주제의 세로 트리를 사용합니다. 프로젝트 main 8585b218을 푸시했습니다.",
+    "verification": "18페이지 빌드 성공. 1440px와 390px Chrome에서 가로 넘침 없음, 탭 선택과 화살표 키, 전투 요약 모달을 확인했습니다. 원격 업데이트 2026-11-22-001 확인.",
+    "remaining": "공개 배포와 모바일 실기기는 미확인입니다.",
+    "outcome": "![주제별로 정리한 실제 대시보드](../assets/agent-map-clean-20261122/desktop.png)\n\n선택한 주제의 문서와 관련 문서를 읽을 수 있습니다.",
+    "proposedTime": "6분. 11월 22일 16:05 KST 시작.",
+    "actualTime": "11월 22일 16:07 KST까지 약 2분 30초.",
+    "xerjEvidence": "Node 빌드와 실제 Chrome 화면 확인.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
