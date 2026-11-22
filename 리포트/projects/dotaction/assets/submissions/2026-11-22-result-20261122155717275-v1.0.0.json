@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "T포즈 겹쳐보기에 반투명 마네킹 원본 추가",
+    "summary": "제작하기와 제작 가이드 T포즈에서 마네킹 원본과 윤곽선을 전환할 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작하기와 제작 가이드의 T포즈 겹침 데이터를 원본과 윤곽선 모드로 전달합니다. 의복 T포즈의 저장된 검수 겹침 자료도 윤곽선 모드에서 유지됩니다. 프로젝트 main fa843aae 푸시.",
+    "verification": "Chrome에서 남성형·여성형 바디와 남성형 의복 T포즈 각 두 모드가 실제로 렌더링되며 픽셀이 다른 것을 확인했고, 제작 가이드 관계도의 두 모드도 확인했습니다. 11월 23일 00:56 KST 캡처. 빌드 2.65초, 초기 HTML 3,565,047B, 원본 신규 추가 없음, 증거 GIF 226,275B.",
+    "remaining": "공개 배포와 중앙 지침 원격 최신 미확인. 로컬 지침 2026-11-22-004 확인.",
+    "outcome": "![T포즈 반투명 마네킹과 윤곽선 전환](../assets/tpose-overlay-modes-20261123/modes.gif)\n\n기존 남성형·여성형 마네킹 원본과 검수 겹침 자료를 사용합니다.",
+    "proposedTime": "11월 23일 00:54 KST 시작, 약 5분.",
+    "actualTime": "11월 23일 00:56:44 KST 구현·검증·프로젝트 푸시 완료, 약 2분 30초.",
+    "xerjEvidence": "rg, Node, Chrome 사용.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
