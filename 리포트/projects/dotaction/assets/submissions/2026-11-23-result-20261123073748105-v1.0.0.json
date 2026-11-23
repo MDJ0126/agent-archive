@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 동작 감소 분기 제거",
+    "summary": "Chrome의 동작 감소 설정과 관계없이 제작 로딩 회전과 아카이브 스크롤 동작을 유지합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 로딩과 아카이브의 동작 감소 분기를 제거하고 프로젝트 지침에 해당 기준을 명시했습니다. acef3d14 푸시.",
+    "verification": "Chrome에서 동작 감소를 활성화하고 제작 아이콘 회전과 상태 전환, GIF 8프레임을 확인했습니다. 대시보드 CSS·JS에서 동작 감소 분기 검색 결과 없음. 빌드 1.72초.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![Chrome 동작 감소 환경의 제작 로딩 화면](../assets/dashboard-motion-consistency-20261123/dashboard-production-motion-reduce.gif)",
+    "proposedTime": "약 3분",
+    "actualTime": "약 1분 31초, 2026-11-23 16:35:50~16:37:21 KST.",
+    "xerjEvidence": "대시보드 빌드와 Chrome 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
