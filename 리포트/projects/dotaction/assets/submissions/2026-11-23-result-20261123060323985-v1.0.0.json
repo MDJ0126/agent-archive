@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "메모장 즉시 읽기 전환과 한 줄 토스트",
+    "summary": "저장 요청 즉시 읽기 화면으로 돌아가고 우측 하단에 한 줄 알림을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "대시보드 변경 c1f82579를 origin/main에 푸시했습니다.",
+    "verification": "브라우저에서 저장 응답을 지연시켜 읽기 전환과 우측 하단 한 줄 토스트, 완료 상태를 확인했습니다. 예시 메모와 모의 저장 응답을 사용했습니다.",
+    "remaining": "실제 메모 저장 및 운영 배포 미확인.",
+    "outcome": "![메모장 저장 중 읽기 화면](../assets/dashboard-notepad-toast-20261123/notepad-saving.png)",
+    "proposedTime": "약 5분",
+    "actualTime": "약 1분 30초. 2026-11-23 15:02 KST 프로젝트 푸시.",
+    "xerjEvidence": "대시보드 빌드 및 브라우저 캡처",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
