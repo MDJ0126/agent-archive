@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "트레이 제작 알림 메뉴 간소화",
+    "summary": "트레이의 제작 알림을 체크 메뉴 하나로 통합했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "트레이의 5초 테스트 메뉴 제거. 기존 알림음 설정값을 제작 알림 토글에 사용. 프로젝트 main 25d97703 푸시.",
+    "verification": "PowerShell 구문 검사 및 git diff --check 통과.",
+    "remaining": "실행 중 트레이는 재시작 후 적용됩니다. 실제 트레이 표시와 알림 재생 및 화면 캡처 미확인.",
+    "outcome": "체크하면 제작 알림 팝업과 소리가 켜지고, 체크를 해제하면 함께 꺼집니다.",
+    "proposedTime": "약 5분",
+    "actualTime": "약 1분 10초, 2026-11-23 18:01 KST 프로젝트 푸시.",
+    "xerjEvidence": "없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
