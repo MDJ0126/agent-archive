@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "지휘관 부적과 원정 클리어 갱신",
+    "summary": "지휘관별 부적을 전투 슬롯에 적용하고 출정 시 후보와 장착 상태를 고정합니다. 10구역 클리어 정산이 저장되면 후보를 갱신합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "출정 시 지휘관 저장에 후보와 교체 잠금을 함께 기록합니다. 구역 이동, 패배, 중도 귀환, 게임 재시작 뒤에도 유지됩니다. 10구역 승리 정산은 잠금을 해제하고 후보 세 개를 갱신합니다. 기존 부적은 교체할 때까지 남습니다.",
+    "verification": "Godot 4.7.2에서 장착, 출정, 저장 재로딩, 중도 귀환, 잠금 상태의 교체 거부, 최종 구역 승리 판정 및 갱신 저장을 확인했습니다. 지정한 잭팟에서 기본 마나 5에 부적 마나 8이 추가됐습니다. 대시보드 빌드 2.82초, HTML 9,025바이트 및 신규 미디어 814,544바이트 증가. 부적 표 5개 행과 이미지 확대를 확인했습니다.\n\n![장착 화면](../assets/commander-charm-20261123/commander-charm-selected.webp)\n\n![중도 귀환 후 교체 잠금](../assets/commander-charm-20261123/commander-charm-locked.webp)\n\n![클리어 뒤 갱신한 후보](../assets/commander-charm-20261123/commander-charm-refreshed.webp)\n\n![실제 Godot 슬롯 회전과 잭팟 보너스](../assets/commander-charm-20261123/commander-charm-slot.gif)",
+    "remaining": "10개 구역을 처음부터 끝까지 플레이하는 밸런스 검증과 공개 페이지에서의 재생은 미확인입니다.",
+    "outcome": "모닥불 마을의 지휘관 부적 메뉴에서 세 후보 중 하나를 장착할 수 있습니다. 부적 다섯 종이 플레이어의 실시간 슬롯 보상을 각각 바꿉니다. 프로젝트 커밋 a4b910c5를 origin/main에 푸시했습니다.",
+    "proposedTime": "10분",
+    "actualTime": "기능·증거·프로젝트 푸시 약 8분. 2026-11-23 11:31 KST 기준.",
+    "xerjEvidence": "rg로 Godot 진입점과 저장·정산 흐름을 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
