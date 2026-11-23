@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캠프 가디언 대시보드와 캐릭터 제작 실행 분리",
+    "summary": "로컬 대시보드와 독립된 프로세스에서 제작 실행과 취소를 관리하도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "대시보드는 요청을 독립 Node 실행기에 전달합니다. 실행기가 Codex 시작, 취소 감시 및 종료 기록을 담당합니다. 운영 문서와 관계도 요약을 갱신했습니다.",
+    "verification": "Windows에서 실제 HTTP API와 대체 Codex CLI를 사용했습니다. 서버 강제 종료 중 종료 기록 저장, 재시작 후 상태 조회, 재시작 후 취소가 통과했습니다. 대시보드 빌드는 3.06초, HTML은 3,772,713바이트에서 3,773,471바이트로 증가했습니다. 생성 HTML에서 운영 요약 최신 상태를 확인했습니다.",
+    "remaining": "기존 중단 요청의 직접 원인과 실모델 생성은 미확인입니다. 기존 작업 변경이 포함된 생성 HTML 및 미디어 인덱스는 로컬 빌드에 남겼습니다.",
+    "outcome": "프로젝트 main에 11553207을 푸시했습니다. 새 서버로 시작한 대시보드 제작에 적용됩니다.",
+    "proposedTime": "10분",
+    "actualTime": "약 4분, 2026-11-23 16:48~16:52 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
