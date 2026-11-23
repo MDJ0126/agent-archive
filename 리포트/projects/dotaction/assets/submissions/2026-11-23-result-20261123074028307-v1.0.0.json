@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 최근 작업을 분 단위 상대 시간으로 표시",
+    "summary": "제작 단계, 캐릭터 목록, 상세 제목 오른쪽, 아카이브에 최근 작업 상대 시간을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "방금 전, 분, 시간, 일 등으로 표시하고 정확한 한국 시각을 마우스 오버로 제공합니다. 2941d1c1 푸시.",
+    "verification": "Chrome에서 방금 전, 1분 전, 5분 전, 1시간 전, 2일 전, 1개월 전과 네 화면 위치의 상대 시간 표시를 확인했습니다. 빌드 2.55초.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![제작 상세 오른쪽과 캐릭터 목록의 상대 시간](../assets/production-relative-date-20261123/production-relative-date.png)",
+    "proposedTime": "약 3분",
+    "actualTime": "약 1분 11초, 2026-11-23 16:38:52~16:40:03 KST.",
+    "xerjEvidence": "대시보드 빌드와 Chrome 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
