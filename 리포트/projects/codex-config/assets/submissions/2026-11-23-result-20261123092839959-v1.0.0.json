@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "전역 지침 트리와 프로젝트 적용 규격",
+    "summary": "최신 원격 전문을 보존하고 신규·미적용 프로젝트에 적용하는 공통 규격을 정리했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "중앙 루트와 작업별 트리, 이전 전문, 업데이트 기록 및 캠프 가디언 수정 규격.",
+    "verification": "원격 전문 Git 해시 일치, 중앙 트리 상대 링크 및 바이트 확인, 캠프 가디언 대시보드 빌드.",
+    "remaining": "새 데스크톱 세션과 다른 PC의 자동 적용, 미적용 프로젝트의 개별 전환 및 공개 배포는 별도 확인.",
+    "outcome": "공통 및 선택 경로 각각 4 KiB, 자동 로딩 16 KiB, 수정 때마다 요약 및 어려울 때 사용자 안내를 문서화했습니다.",
+    "proposedTime": "약 10분",
+    "actualTime": "2026-11-23 18:25 KST 착수",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

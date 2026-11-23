@@ -9,7 +9,7 @@ const exceptionFile = '관계도/보고 예외 프로젝트.md';
 function readDocumentTree(source) {
   const normalized = source.replaceAll('\r\n', '\n');
   const start = normalized.indexOf(treeHeading);
-  if (start < 0) throw Error('Missing Document Tree in AGENTS.md');
+  if (start < 0) throw Error('Missing Document Tree in AGENTS-reference.md');
   const body = normalized.slice(start + treeHeading.length).split(/\n## /, 1)[0];
   const nodes = [];
   const ancestors = [];
@@ -42,7 +42,8 @@ function readDocumentTree(source) {
 
 export async function buildRelationships(root, _projects, shell) {
   const instructions = await readFile(path.join(root, '../AGENTS.md'), 'utf8');
-  const nodes = readDocumentTree(instructions);
+  const reference = await readFile(path.join(root, '../AGENTS-reference.md'), 'utf8');
+  const nodes = readDocumentTree(reference);
   const exceptionRoot = nodes.find(node => node.file === exceptionFile);
   if (!exceptionRoot || exceptionRoot.depth !== 1) throw Error('Reporting exceptions must be a direct child of AGENTS.md');
   const exceptionNodes = nodes.filter(node => node.parent === exceptionRoot.id);
