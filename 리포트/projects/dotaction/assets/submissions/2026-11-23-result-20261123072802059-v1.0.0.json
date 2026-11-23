@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 연필 시안도와 시트 묶음",
+    "summary": "모든 캐릭터의 이미지 팝업을 본문 카드와 연결하고, 등록된 앞·뒤 시안도와 T포즈·8방향 묶음을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "팝업에 본문 대표 이미지와 등록된 시안도를 표시합니다. PixelLab 도트와 검토 중 디자인 시안을 아카이브 이미지 목록에서 제외했습니다. 프로젝트 6187b52f를 main에 푸시했습니다.",
+    "verification": "Chrome에서 아카이브 69개 항목의 분류, 붉은 장교 시안도 확대와 8방향 레이어, 잿빛 기사 T포즈·8방향 묶음을 확인했습니다. 빌드 2.99초, HTML 6382바이트 증가, 등록 이미지 1253개에서 1252개로 감소.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![팝업의 연필 시안도](../assets/archive-grouped-sketch-20261123/archive-grouped-sketch.png)\n\n![8방향 묶음](../assets/archive-grouped-sketch-20261123/archive-grouped-layers.png)",
+    "proposedTime": "약 5분",
+    "actualTime": "약 2분 21초, 2026-11-23 16:25:13~16:27:34 KST.",
+    "xerjEvidence": "대시보드 빌드와 Chrome 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
