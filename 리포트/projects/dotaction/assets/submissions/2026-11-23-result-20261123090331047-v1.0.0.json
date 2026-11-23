@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 작업 로그의 초안 미리보기",
+    "summary": "작업 로그 끝의 링크로 각 시안과 마네킹 겹침 이미지를 모달에서 확인할 수 있습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "붉은 장교의 첫 초안과 수정본 로그 두 건에 각각 시안과 마네킹 겹침 링크를 추가했습니다. 새 로그도 이미지 경로를 받아 첨부합니다. 프로젝트 main에 a5bbd31c를 푸시했습니다.",
+    "verification": "대시보드 빌드 27.27초. Chrome에서 링크 네 개의 실제 PNG 표시 및 Esc 닫기를 확인했습니다. 참조 이미지 네 개의 합계는 6,053,706바이트이며 모달을 열 때 요청합니다.",
+    "remaining": "대시보드 및 중앙 보고서의 공개 배포 확인이 남았습니다.",
+    "outcome": "![붉은 장교 바디 T포즈 수정본을 연 대시보드 모달](../assets/production-log-preview-20261123/preview.png)",
+    "proposedTime": "약 8분",
+    "actualTime": "약 3분, 2026-11-23 18:02 KST 프로젝트 푸시 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
