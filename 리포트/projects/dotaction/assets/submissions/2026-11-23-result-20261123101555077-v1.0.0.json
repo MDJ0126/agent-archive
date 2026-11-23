@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 Windows 아이콘의 매끈한 불꽃 디자인",
+    "summary": "픽셀 표현을 제거하고 트레이와 작업 표시줄에 매끈한 주황 불꽃을 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "작업 표시줄용은 둥근 블루 타일과 주황 불꽃, 트레이용은 주황 불꽃 단독으로 제작했습니다. 흰색 트레이 시안을 제거했고 빨간 미확인 알림 배지는 유지했습니다. 프로젝트 main의 11579c75에 반영했습니다.",
+    "verification": "트레이를 백그라운드에서 재시작하고 로컬 서버 응답과 Windows 알림 영역의 주황 아이콘을 확인했습니다. 새 Windows 아이콘으로 알림 배지 켜기와 지우기 경로를 확인했습니다.",
+    "remaining": "새 작업 표시줄 아이콘은 제작 미리보기로 검수했습니다. 사용자 창을 열어 실제 표시한 결과와 공개 보고서 배포는 미확인입니다.",
+    "outcome": "![작업 표시줄과 트레이 아이콘의 확대 및 실제 픽셀 크기 비교](../assets/dashboard-smooth-icons-20261123/variants.png)\n\n![현재 Windows 알림 영역의 주황 불꽃](../assets/dashboard-smooth-icons-20261123/tray.png)",
+    "proposedTime": "약 4분",
+    "actualTime": "약 3분, 2026-11-23 19:15 KST 적용 및 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
