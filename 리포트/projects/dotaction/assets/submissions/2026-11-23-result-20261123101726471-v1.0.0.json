@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기획 하위 주제 분리와 전역 문서 규칙",
+    "summary": "캠프 가디언 기획 문서 8개와 중앙 작업 경로 5개를 하위 Markdown으로 분리했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기획 원문 41개, 대시보드 미리보기와 검색 연결, 중앙 5개 작업별 문서와 전역 규칙.",
+    "verification": "41개 본문 일치 및 링크 확인. Chrome에서 두 단계 문서 열기와 대시보드 기획 절 연결을 확인했습니다.\n\n![하위 기획 문서 열기](../assets/nested-design-topic-20261123.png)",
+    "remaining": "기존 다른 프로젝트는 각 지침 정리 또는 관련 문서 변경 때 해당 가지에 적용합니다. 공개 배포 미확인.",
+    "outcome": "기획은 41개 소관 문서로 이동하고 중앙 지침은 모든 프로젝트에 하위 색인 기준을 적용합니다.",
+    "proposedTime": "약 10분",
+    "actualTime": "2026-11-23 19:13 KST 착수",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
