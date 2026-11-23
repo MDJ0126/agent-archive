@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "부적 인벤토리 그리드와 상세 툴팁",
+    "summary": "왼쪽 인벤토리를 4열 2행 슬롯으로 바꾸고 선택한 부적의 하단 설명과 호버 툴팁을 추가했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "적용 중인 부적에 슬롯 라벨을 표시합니다. 각 아이콘의 툴팁에는 부적 이름, 적용 상태와 발동 조건을 표시합니다. 슬롯 3개가 찼으면 하단 교체를 누른 뒤 적용 슬롯을 선택합니다.",
+    "verification": "Godot 4.7.2에서 실제 뷰포트 호버와 슬롯 선택, 구매·적용, 교체 취소 및 확정, 출정 후 잠금과 클리어 정산을 확인했습니다. 대시보드 빌드 3.08초, 커밋 대상 HTML 1,374바이트 증가, 증거 미디어 704,407바이트, 부적 표 5행. 증거 3개와 이미지 확대를 브라우저에서 확인했습니다.\n\n![부적 그리드와 하단 설명](../assets/commander-charm-grid-20261123/commander-charm-grid.webp)\n\n![부적 상세 툴팁](../assets/commander-charm-grid-20261123/commander-charm-tooltip.webp)\n\n![그리드에서 부적 교체](../assets/commander-charm-grid-20261123/commander-charm-grid-replace.gif)",
+    "remaining": "공개 페이지의 이미지 표시와 재생 미확인.",
+    "outcome": "기존 게임 아이템 아이콘을 활용한 그리드에서 부적을 선택하면 하단에 이름, 보관·적용 상태, 상세 효과와 적용·교체 버튼이 표시됩니다. 프로젝트 main에 cecfa859를 푸시했습니다.",
+    "proposedTime": "8분",
+    "actualTime": "구현·검증·프로젝트 푸시 약 6분. 2026-11-23 12:15 KST.",
+    "xerjEvidence": "rg로 기존 인벤토리와 아이템 아이콘을 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "complete"
+  }
+}
