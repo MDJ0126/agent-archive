@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 관계도 팝업의 T포즈와 8방향 중복 제거",
+    "summary": "캐릭터 아카이브와 제작 관계도 두 진입점에서 T포즈와 8방향을 각각 한 항목으로 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 관계도의 단계별 결과를 T포즈와 8방향으로 묶고 실제 바디·의복·장비를 각 그룹에 연결했습니다. a77900f2를 main에 푸시했습니다.",
+    "verification": "Chrome에서 붉은 장교의 제작 관계도 T포즈·8방향과 붉은 장교, 잿빛 기사, 제작 기준 샘플의 아카이브를 직접 확인했습니다. 빌드 성공, 이미지 1252개 유지.",
+    "remaining": "공개 배포 미확인.",
+    "outcome": "![제작 관계도 8방향 팝업](../assets/production-grouped-popups-20261123/production-grouped-directions.png)\n\n![제작 관계도 T포즈 팝업](../assets/production-grouped-popups-20261123/production-grouped-tpose.png)",
+    "proposedTime": "약 4분",
+    "actualTime": "약 2분 8초, 2026-11-23 16:41:42~16:43:50 KST.",
+    "xerjEvidence": "대시보드 빌드와 Chrome 캡처.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
