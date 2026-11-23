@@ -40,6 +40,20 @@
 
 For a visual overview, see the [global instruction map](https://mdj0126.github.io/codex-config/guide/relationships.html). Read existing manuals, QA, and discussions when the task needs them or the user requests them. For Unreal Blueprint change requests, express the behavior as equivalent script or C++ execution logic and verify it by running it or with concrete evidence. For Affinity work, use the actual app and run the dedicated CLI's `doctor` and `status` first. For large files in personal projects, prefer Git Chunk and introduce Git LFS only when requested.
 
+### First reads by task / 작업 유형별 먼저 읽을 문서
+
+관계도는 문서를 찾는 지도입니다. 위의 공통 확인(업데이트 확인 → 전역·프로젝트·하위 `AGENTS.md`) 뒤에, 해당하는 줄의 원문 2~3개를 왼쪽부터 엽니다. 각 문서는 이번 변경과 관련된 절부터 읽습니다.
+
+| 작업 유형 | 먼저 읽을 원문 (순서대로) |
+| --- | --- |
+| Unity 구현·리팩터링 | [작업별 지침의 Unity 절](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/work-instructions.md) → [코드 스타일](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%BD%94%EB%93%9C%20%EC%8A%A4%ED%83%80%EC%9D%BC.md) → [검수 기록](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EA%B8%B0%EB%A1%9D.md) |
+| 씬 전환·UI·리소스처럼 여러 영역을 함께 바꾸는 작업 | 대상 프로젝트의 진입·전환 또는 리소스 원문 → [작업별 지침의 Unity 절](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/work-instructions.md) → [검수 기록](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EA%B8%B0%EB%A1%9D.md) |
+| 에셋 제작·서브에이전트 분담과 결과 검수 | 대상 프로젝트의 제작 원문(예: CampGuardian의 `docs/character-production.md`) → [품질 점검 절차](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%ED%92%88%EC%A7%88%20%EC%A0%90%EA%B2%80%20%EC%A0%88%EC%B0%A8.md) → [검수 증거](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EC%A6%9D%EA%B1%B0.md) |
+| 결과·버그 보고서 또는 검수 자료 등록 | [공통 작성 가이드](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/authoring.md) → [검수 증거](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EA%B2%80%EC%88%98%20%EC%A6%9D%EA%B1%B0.md) → [보고 예외 프로젝트](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EB%B3%B4%EA%B3%A0%20%EC%98%88%EC%99%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.md)에서 해당 프로젝트 원문 |
+| 전역 지침·중앙 업데이트 변경 | [업데이트 확인·반영](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%20%ED%99%95%EC%9D%B8%C2%B7%EB%B0%98%EC%98%81.md) → [작업별 지침의 Git 동기화 절](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/work-instructions.md) → [중앙 아카이브 보고 기준](https://github.com/MDJ0126/codex-config/blob/main/%EB%A6%AC%ED%8F%AC%ED%8A%B8/guide/%EA%B4%80%EA%B3%84%EB%8F%84/%EC%A4%91%EC%95%99%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C%20%EB%B3%B4%EA%B3%A0%20%EA%B8%B0%EC%A4%80.md) |
+
+첫 문서 목록이 읽을 범위의 상한은 아닙니다. 예를 들어 씬 전환이 UI 초기화와 리소스 해제를 함께 바꾸면, 첫 줄의 일반적인 Unity 규칙으로 끝내지 않고 프로젝트의 UI·리소스 원문을 각각 확인합니다. 관계도에 있다는 사실만으로 원문이 최신이거나 현재 프로젝트에 적용된다고 보지 않습니다. 링크가 끊겼거나 지침이 상충하면 최신 사용자 지시와 적용 범위를 확인하고, 확인하지 못한 부분은 표시합니다.
+
 ## Execution and Communication
 
 - Whenever PixelLab is used, report the actual usage for the request and the account's remaining quota out of the plan total. Use the job record for usage and the authenticated balance for remaining quota. Label any unverified value as such.
