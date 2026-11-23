@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "프로젝트 서브에이전트별 작업 노하우 운영",
+    "summary": "역할별 노하우를 Git으로 공유하고, 새 역할까지 시작 시 열람과 종료 전 갱신·중복 정리·요약을 적용합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "새 역할은 첫 배정 전에 역할명으로 Markdown을 만들고 지침에 연결합니다. 시작·재배정·재개 때 메모를 읽고 적용합니다. 사용자 지적, QA 반려, 자체 검수에서 확인한 교훈은 적용 조건·다음 조치·근거와 함께 갱신합니다. 같은 원인과 조치는 통합하고 미확인 사항은 검증 후 정리합니다. 인계·종료 시 적용·변경·미확인 항목을 요약합니다. [역할별 작업 노하우 원문](https://github.com/MDJ0126/camp-guardian/tree/main/docs/ai-log/agent-notes)",
+    "verification": "변경 파일의 git diff --check를 통과했습니다. 대시보드 생성 HTML을 메모리에서 빌드해 관계도 노드와 QA 메모 링크를 확인했습니다. 빌드 2.7초, HTML 3,720,188바이트입니다.",
+    "remaining": "실제 제작 배정에서의 운용과 다른 PC 적용은 미확인입니다. 기존 대시보드 편집을 보존하기 위해 생성 HTML은 프로젝트 커밋에서 제외했습니다.",
+    "outcome": "제작 총괄, QA, PixelLab 등 9개 역할에 전용 메모를 추가하고 프로젝트 main에 ce33a5e0을 푸시했습니다.",
+    "proposedTime": "약 5분",
+    "actualTime": "프로젝트 푸시까지 약 3분, 2026-11-23 16:11 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
