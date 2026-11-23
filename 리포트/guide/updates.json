@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "latest": "2026-11-22-004",
+  "latest": "2026-11-23-001",
   "entries": [
+    {
+      "id": "2026-11-23-001",
+      "date": "2026-11-23",
+      "title": "캠프 가디언 제작 상태 애니메이션 유지",
+      "scope": "CampGuardian 제작 대시보드",
+      "source": "projects/dotaction/guidelines.md",
+      "summary": "Chrome 동작 감소 상태에서도 제작 스피너·준비 점선 등 상태 애니메이션을 유지하고 검증합니다."
+    },
     {
       "id": "2026-11-22-004",
       "date": "2026-11-22",
