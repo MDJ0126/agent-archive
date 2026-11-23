@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마네킹 비교 표시 모드 누락 수정",
+    "summary": "캐릭터 제작 현황과 제작 가이드의 마네킹 비교에 반투명 마네킹·윤곽선 선택을 추가했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 현황의 8방향에 체형별 마네킹 원본과 윤곽선을 연결하고, 제작 가이드의 원본과 단계별 예제에 같은 비교 정보를 적용했습니다. 프로젝트 커밋 430e885e를 origin/main에 푸시했습니다.",
+    "verification": "대시보드 빌드 약 2.7초. HTML 3,605,007바이트(+11,518), 추가 대시보드 이미지 0개. 로컬 대시보드 파일을 헤드리스 Chrome에 제공해 제작 가이드 2건 및 여성형 제작 현황 3건에서 두 모드의 실제 표시가 다름을 확인했습니다.",
+    "remaining": "공개 페이지 배포 및 모바일 표시 미확인.",
+    "outcome": "여성형 의복 8방향 확대 화면에서 윤곽선을 표시했습니다.\n\n![의복 8방향 표시 모드](../assets/mannequin-display-modes-20261123/mannequin-modes.png)",
+    "proposedTime": "약 8분",
+    "actualTime": "2026-11-23 11:38~11:42 KST, 프로젝트 푸시까지 약 4분.",
+    "xerjEvidence": "프로젝트 파일과 브라우저에서 직접 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
