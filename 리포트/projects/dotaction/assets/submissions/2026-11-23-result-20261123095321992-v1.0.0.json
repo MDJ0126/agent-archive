@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Windows 작업 표시줄에 캠프 가디언 아이콘 적용",
+    "summary": "대시보드 작업 표시줄 버튼에 캠프 가디언의 기존 아이콘을 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 파비콘으로 Windows용 다중 해상도 ICO를 만들고 대시보드 창에 전용 앱 ID와 아이콘 리소스를 설정합니다. 프로젝트 a47b88a5 푸시.",
+    "verification": "Windows PowerShell 5.1로 창 DLL 빌드. 현재 대시보드 창을 다시 시작하지 않고 아이콘을 적용하고 Windows 속성을 다시 읽었습니다. 작업 표시줄의 해당 버튼을 찾아 캡처와 실제 아이콘 표시를 확인했습니다.",
+    "remaining": "중앙 보고서 공개 배포 미확인.",
+    "outcome": "![실제 Windows 작업 표시줄의 캠프 가디언 대시보드 아이콘](../assets/dashboard-taskbar-icon-20261123/icon.png)",
+    "proposedTime": "약 4분",
+    "actualTime": "약 2분, 2026-11-23 18:52 KST 반영 및 프로젝트 푸시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
