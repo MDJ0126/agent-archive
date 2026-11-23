@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 트레이 다시 시작 기능",
+    "summary": "트레이 메뉴와 Windows PowerShell 명령으로 트레이 및 소유 서버를 백그라운드에서 다시 시작합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "트레이 메뉴에 다시 시작을 추가하고 Windows PowerShell -Restart 호출도 같은 종료 및 시작 경로에 연결했습니다. 메뉴 변수와 명령 옵션의 이름 충돌을 수정했습니다. 프로젝트 644de793 푸시.",
+    "verification": "실제 Windows 트레이 PID 29604가 720으로 교체됐고 관리 서버 PID도 2504에서 8552로 교체됐습니다. 대시보드 창이 자동 표시되지 않았고 응답 및 새 트레이 아이콘을 확인했습니다. 대시보드 빌드 3.13초, 관계도 제작 운영 모달의 검토 기준 일치 확인.",
+    "remaining": "작업 표시줄의 창 아이콘과 공개 보고서 배포 표시는 미확인입니다.",
+    "outcome": "![재시작한 Windows 트레이의 새 캠프 가디언 아이콘](../assets/dashboard-tray-restart-20261123/tray.png)",
+    "proposedTime": "약 4분",
+    "actualTime": "약 4분, 2026-11-23 19:08 KST 프로젝트 반영 및 확인",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
