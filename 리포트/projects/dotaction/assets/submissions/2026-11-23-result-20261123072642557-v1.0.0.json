@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 대화창 전송 버튼 디자인 개선",
+    "summary": "입력하면 전송 버튼을 강조하고 답변을 기다리는 동안 진행 상태를 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공백·대기 중에는 버튼을 비활성화하고 입력이 있으면 강조합니다. 답변을 기다리는 동안 진행 표시를 나타냅니다.",
+    "verification": "Chrome 어두운 테마에서 실제 모달의 강조색, 공백 비활성화, Enter 전송, 응답 대기, 초기화를 확인했습니다. API는 검증 응답을 사용했습니다. 대시보드 빌드 3.2초, 생성 HTML 3,726,657바이트이며 이번 커밋의 HTML은 CSS와 JS 캐시 버전만 갱신했습니다.",
+    "remaining": "실제 Codex 응답과 공개 페이지 배포는 미확인입니다.",
+    "outcome": "제작 대화창의 전송 버튼을 둥근 모서리와 화살표 아이콘으로 정리했습니다. 프로젝트 main에 9d1ed15c를 푸시했습니다.\n\n![입력 후 강조된 대화창 전송 버튼](../assets/production-chat-send-2026-11-23.png)",
+    "proposedTime": "약 4분",
+    "actualTime": "2026-11-23 16:23 KST 시작, 프로젝트 반영까지 약 3분",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
