@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 독립 Windows 창과 백그라운드 CLI",
+    "summary": "WebView2 창에서 대시보드를 열고 헤드리스 CLI에서 탐색, 조작, PNG 캡처를 실행합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "트레이와 알림을 WebView2 창에 연결하고 Windows 프로토콜을 등록했습니다. CLI는 트레이 서버 또는 작업 종료 시 정리하는 임시 서버를 사용합니다. 프로젝트 a7ae4390 푸시.",
+    "verification": "숨긴 WebView2 창에서 실제 대시보드를 읽었고, 종료 기능이 창·WebView2 프로세스·관리 서버를 함께 정리하는 것을 확인했습니다. 등록된 Windows 트레이 서버에 연결하고 헤드리스 CLI로 실제 로그를 펼쳐 모달 표시와 PNG 저장을 확인했습니다. 대시보드 빌드 4.78초.",
+    "remaining": "공개 배포는 미확인입니다.",
+    "outcome": "![백그라운드 CLI에서 연 바디 T포즈 수정본 모달](../assets/dashboard-windows-20261123/cli-modal.png)",
+    "proposedTime": "10분",
+    "actualTime": "약 10분, 2026-11-23 18:14 KST 프로젝트 푸시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

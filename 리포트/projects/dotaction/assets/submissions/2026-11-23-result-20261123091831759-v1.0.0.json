@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 창을 닫아도 화면 상태 유지",
+    "summary": "일반 닫기로 창을 트레이에 숨기며 다시 열면 같은 WebView2 세션을 표시합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "닫기를 숨김으로 처리하고 일반 열기에 초기 경로를 다시 지정하지 않습니다. 제작 알림은 해당 화면으로 이동합니다. 프로젝트 823ce337 푸시.",
+    "verification": "화면을 표시하지 않은 WebView2에서 닫기 전후 URL, 문서 로드 시각, 열린 모달 상태가 같았습니다. 실제 종료 함수 호출로 WebView2 및 관리 서버가 종료되었습니다. 관계도 제작 운영 모달의 검토 기준 일치 표시를 CLI로 확인했습니다. 대시보드 빌드 2.55초.",
+    "remaining": "실행 중이던 트레이는 유지했습니다. 최신 코드는 다음 트레이 시작에 적용됩니다. 공개 배포는 미확인입니다.",
+    "outcome": "같은 문서와 열린 모달이 일반 닫기 후에도 유지됐습니다. 명시적인 트레이 종료는 창과 관리 서버를 함께 닫습니다.",
+    "proposedTime": "4분",
+    "actualTime": "약 2분, 2026-11-23 18:17 KST 프로젝트 푸시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
