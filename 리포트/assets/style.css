@@ -36,3 +36,5 @@
 .activity-tooltip{width:min(350px,calc(100vw - 16px))}
 
 @media(max-width:700px){.tracker{width:calc(100% - 32px)}}
+.exact-time-tooltip{position:fixed;z-index:10000;pointer-events:none;padding:5px 8px;border-radius:4px;background:var(--ink);color:var(--paper);font-size:12px;white-space:nowrap;box-shadow:0 2px 8px #0003}
+@media(max-width:1100px){.issue-row .ticket-date{display:block;grid-column:2;justify-self:start}}
