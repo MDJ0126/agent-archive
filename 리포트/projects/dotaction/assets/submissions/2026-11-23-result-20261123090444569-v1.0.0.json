@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "트레이 공통 알림 설정",
+    "summary": "트레이 메뉴 이름을 알림으로 수정했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이전 설정값을 읽고 새 값은 AlertsEnabled에 저장합니다. 프로젝트 main 46abc911 푸시.",
+    "verification": "Windows PowerShell 구문 및 Git diff 검사 통과.",
+    "remaining": "트레이 재시작 및 실제 메뉴 확인 미확인.",
+    "outcome": "제작 팝업과 소리, 트레이 오류 풍선을 공통 알림 설정으로 제어합니다.",
+    "proposedTime": "약 2분",
+    "actualTime": "약 30초, 18:04 KST 프로젝트 푸시.",
+    "xerjEvidence": "없음",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
