@@ -13,7 +13,7 @@
     "actual": "",
     "cause": "",
     "changes": "기존 마네킹 ID·원본 경로 유지. 신규 체형은 등록 원본의 윤곽을 국소 보정하고 시점별 원본과 SHA-256을 기록했습니다. 새 시트와 청록 윤곽을 연결했습니다.",
-    "verification": "로컬 대시보드 빌드 및 Chromium에서 네 카드, 원본 여덟 장, 윤곽 겹침과 제작 가이드 표시를 확인했습니다. 게임 실행 및 원격 페이지 표시 미확인.",
+    "verification": "로컬 대시보드 빌드 및 Chromium에서 네 카드, 원본 여덟 장, 윤곽 겹침과 제작 가이드 표시를 확인했습니다. 게임 실행 및 원격 페이지 표시 미확인.\n\n![제작 가이드 마네킹 비교](../assets/mannequin-body-types-20261123/mannequins-dashboard.png)\n\n![건장한 남자 6시점 T포즈](../assets/mannequin-body-types-20261123/sturdy-tpose.png)\n\n![건장한 남자 8방향](../assets/mannequin-body-types-20261123/sturdy-directions.png)\n\n![큰 가슴 여자 6시점 T포즈](../assets/mannequin-body-types-20261123/fuller-tpose.png)\n\n![큰 가슴 여자 8방향](../assets/mannequin-body-types-20261123/fuller-directions.png)",
     "remaining": "원격 대시보드 배포 및 공개 접근은 미확인입니다.",
     "outcome": "캠프 가디언 대시보드 제작 가이드와 캐릭터 아카이브에 네 체형이 표시됩니다.",
     "proposedTime": "10분",
