@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 캐릭터 목록 걷기 미리보기 재생 제어",
+    "summary": "캐릭터 제작 목록에 걷기 재생과 일시정지를 추가했습니다. 모션 감소 환경에서 직접 재생할 수 있습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "모션 감소 환경에서는 첫 프레임을 표시하며 걷기 재생 버튼으로 직접 재생합니다. 목록에서 보이는 카드만 갱신합니다.",
+    "verification": "헤드리스 Chrome에서 실제 제작 화면을 열고 모션 감소 설정을 적용했습니다. 재생 후 8개의 서로 다른 프레임 상태와 일시정지 후 프레임 유지를 확인했습니다.",
+    "remaining": "실제 화면 GIF 첨부와 공개 배포 확인이 남았습니다. 사용자의 브라우저 모션 감소 설정은 미확인입니다.",
+    "outcome": "대시보드의 제작 캐릭터 목록에 재생 제어를 추가하고 프로젝트 main에 b45cf377을 푸시했습니다.",
+    "proposedTime": "5분",
+    "actualTime": "약 3분 · 2026-11-23 14:06 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
