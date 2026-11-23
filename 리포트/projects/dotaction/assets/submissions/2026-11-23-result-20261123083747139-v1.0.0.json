@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 완료 알림에서 해당 제작 단계로 이동",
+    "summary": "트레이·사이트 토스트와 알림 기록에서 제작 단계로 이동하며, 현재 제작 화면을 보고 있으면 완료 팝업을 숨깁니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 완료 토스트와 Windows 카드를 15초 표시합니다. 캐릭터·단계 정보를 연결해 토스트와 알림 기록에서 해당 관계도 위치를 엽니다. Windows 트레이는 서버에서 열린 로컬 대시보드에 이동을 전달하며 응답 가능한 탭이 없으면 대상 주소를 엽니다. 제작 화면에 포커스가 있으면 팝업을 자동으로 숨깁니다.",
+    "verification": "격리된 로컬 서버와 Chrome에서 기존 탭 하나를 재사용하는 이동, 탭이 없을 때의 정확한 주소, 기존 알림 기록 연결, 6.2초 뒤에도 남은 토스트, 단계 강조와 제작 화면 알림 숨김을 확인했습니다. Windows PowerShell 5.1에서 카드 메시지 클릭 이벤트와 Windows 스크립트 구문을 검증했습니다. 실제 트레이와 서버 갱신 후 기존 제작 PID 유지 및 새 로컬 API HTTP 200을 확인했습니다. 빌드 약 1.5초, 생성 HTML 3,792,271바이트입니다.",
+    "remaining": "실제 Windows 트레이 카드 클릭으로 Chrome 창이 앞에 올라오는 동작, Windows 15초 표시의 실측, 공개 페이지 배포는 미확인입니다.",
+    "outcome": "프로젝트 main에 bd69d820을 반영했습니다. Windows 트레이 및 로컬 서버를 재시작하고 진행 중인 기존 제작 실행기를 유지했습니다.\n\n![제작 완료 토스트에서 캐릭터 제작 단계로 이동한 실제 Chrome 화면](../assets/production-alert-navigation-2026-11-23.gif)",
+    "proposedTime": "약 8분",
+    "actualTime": "2026-11-23 17:28 KST 시작, 로컬 적용까지 약 9분",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
