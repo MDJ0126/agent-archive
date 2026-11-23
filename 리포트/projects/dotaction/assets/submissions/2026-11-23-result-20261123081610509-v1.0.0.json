@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "알림 점멸 제거와 빨간 미확인 배지 정렬",
+    "summary": "사이드바 점멸을 제거하고, 알림 건수를 종 아이콘과 수평으로 정렬한 빨간 원에 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "알림 토스트에서 사이드바 애니메이션을 제거했습니다. 5초 테스트는 일반 토스트로 표시됩니다. 고정 22px 빨간 원을 링크 행의 세로 중앙에 두고 숫자의 시각적 중심을 보정했습니다.",
+    "verification": "Chrome에서 배지와 종 아이콘 세로 중심의 오차가 0.6 CSS px 미만이며 대시보드 홈과 행 높이가 같은 것을 확인했습니다. 제목 미확인 접두어와 진입 시 해제, 5초 테스트 후 토스트와 사이드바 무점멸을 확인했습니다. 빌드 2.2초, HTML 3,775,981바이트입니다.",
+    "remaining": "공개 페이지 배포는 미확인입니다.",
+    "outcome": "프로젝트 main에 03d269c0과 9aa500aa를 반영했습니다.\n\n![종 아이콘과 같은 높이에 정렬된 빨간 숫자 배지](../assets/notification-red-badge-aligned-2026-11-23.png)",
+    "proposedTime": "약 3분",
+    "actualTime": "2026-11-23 17:13 KST 시작, 프로젝트 반영까지 약 2분 30초",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
