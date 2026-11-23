@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 내장 창의 Windows PowerShell 호환 오류 수정",
+    "summary": "Get-FileHash를 사용할 수 없는 Windows PowerShell 5.1에서 내장 창을 여는 경로를 복구했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "대시보드 창 빌드 스크립트의 Get-FileHash 의존을 제거했습니다. 프로젝트 main의 2ebe23de에 반영했습니다.",
+    "verification": "Windows PowerShell 5.1에서 Get-FileHash를 호출하면 실패하는 조건으로 빌드 캐시 경로, 숨긴 WebView2에서 실제 페이지 로딩과 모달 유지, 창 및 소유 서버 종료를 확인했습니다. 오류 문구를 제거하는 실행 경로 수정으로 신규 화면 구성은 없습니다.",
+    "remaining": "사용자 트레이의 실제 창 동작과 공개 배포는 별도 확인 범위입니다.",
+    "outcome": "SHA-256 계산을 .NET으로 바꿔 기존 빌드 캐시를 그대로 사용합니다.",
+    "proposedTime": "약 4분",
+    "actualTime": "약 1분, 2026-11-23 18:46 KST 수정 및 프로젝트 푸시",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
