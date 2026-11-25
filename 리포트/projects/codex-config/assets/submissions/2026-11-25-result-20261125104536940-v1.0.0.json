@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "모든 프로젝트의 구현·QA·결과 보고 흐름",
+    "summary": "프로젝트 변경에 구현, QA, 결과 보고를 적용하고 실패한 검사는 수정 후 다시 실행합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "정상 진입점 검증, QA 실패 시 수정과 재검증, 작업별 보고서에 결과 증거 첨부를 명시했습니다. 일반 작업은 같은 담당자가 검증할 수 있습니다.",
+    "verification": "텍스트 지침 변경입니다. 설치본과 중앙본 SHA-256 일치, 공통 진입 지침 3153바이트, 로컬 체크 도구의 공지 2026-11-25-001 인식을 확인했습니다.",
+    "remaining": "원격 푸시와 배포 미확인. 중앙 작업 트리의 선행 변경과 분리 필요.",
+    "outcome": "중앙 지침과 이 PC의 설치 지침에 공통 흐름을 반영했습니다.",
+    "proposedTime": "사전 시간 추정 미기록",
+    "actualTime": "2026-11-25 19:44 KST 시작, 보고 등록 19:45:32 KST",
+    "xerjEvidence": "미사용",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
