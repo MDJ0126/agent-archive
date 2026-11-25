@@ -11,13 +11,23 @@ export async function verifyResponse(url,expected,{request=fetch,attempts=12,del
  }
  throw new Error(`${url}: ${last.message}`);
 }
-export async function verifyPublic({root=path.dirname(fileURLToPath(import.meta.url)),base='https://mdj0126.github.io/codex-config/',request=fetch,manifestPath,preparePath}={}){
- if(manifestPath){const manifest=JSON.parse(await fs.readFile(manifestPath,'utf8'));for(const entry of manifest){const url=new URL(entry.relative,base);if(url.origin!==new URL(base).origin||!url.pathname.startsWith(new URL(base).pathname))throw new Error('Manifest target escaped site');url.searchParams.set('verify',process.env.GITHUB_SHA||String(Date.now()));await verifyResponse(url.href,{sha256:entry.sha256},{request});}console.log(`PASS: ${manifest.length} public reports/assets matched build SHA-256 manifest`);return manifest.length;}
+// For standard github.io project sites, both CI jobs receive the current owner/repo.
+export function projectPagesBase(repository){
+ const match=/^([a-z\d](?:[a-z\d-]*[a-z\d])?)\/([a-z\d_.-]+)$/i.exec(repository);
+ if(!match||['.','..'].includes(match[2]))throw new Error('Invalid GitHub Pages repository name');
+ const [,owner,repo]=match,host=owner.toLowerCase()+'.github.io';
+ return 'https://'+host+'/'+(repo.toLowerCase()===host?'':repo+'/');
+}
+export async function verifyPublic({root=path.dirname(fileURLToPath(import.meta.url)),base=projectPagesBase(process.env.GITHUB_REPOSITORY ?? 'MDJ0126/agent-archive'),request=fetch,manifestPath,preparePath}={}){
+ const prefix=new URL(base);
+ if(!prefix.pathname.endsWith('/'))prefix.pathname+='/';
+ base=prefix.href;
+ if(manifestPath){const manifest=JSON.parse(await fs.readFile(manifestPath,'utf8'));for(const entry of manifest){const url=new URL(entry.relative,base);if(url.origin!==prefix.origin||!url.pathname.startsWith(prefix.pathname))throw new Error('Manifest target escaped site');url.searchParams.set('verify',process.env.GITHUB_SHA||String(Date.now()));await verifyResponse(url.href,{sha256:entry.sha256},{request});}console.log(`PASS: ${manifest.length} public reports/assets matched build SHA-256 manifest`);return manifest.length;}
  const site=path.join(root,'.site'),catalog=JSON.parse(await fs.readFile(path.join(root,'assets/report-catalog.json'),'utf8'));
  const projects=JSON.parse(await fs.readFile(path.join(root,'projects.json'),'utf8'));
  const reports=catalog.slice(0,5).map(r=>r.reportPath),targets=new Set(['index.html','guide/index.html','guide/global-instructions.html','guide/project-instructions.html',...Object.keys(projects).flatMap(id=>['guidelines.html','guidelines.md'].map(file=>`projects/${id}/${file}`)),...reports]);
  for(const report of reports){const html=await fs.readFile(path.join(site,report),'utf8');for(const match of html.matchAll(/(?:href|src)=["']([^"']+)["']/g)){
-  const url=new URL(match[1].replaceAll('&amp;','&'),new URL(report,base)),prefix=new URL(base);
+  const url=new URL(match[1].replaceAll('&amp;','&'),new URL(report,base));
   if(url.origin!==prefix.origin||!url.pathname.startsWith(prefix.pathname))continue;
   let relative=decodeURIComponent(url.pathname.slice(prefix.pathname.length));if(!relative||relative.endsWith('/'))relative+='index.html';
   if(/\.(?:html|md|css|js|png|webp|jpg|jpeg|gif|svg|woff2?)$/i.test(relative))targets.add(relative);
