@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "재의 약탈자 캐릭터 제작 산출물 복구 보고 (33567146)",
+    "summary": "재의 약탈자의 분리 장비, 바디 방향 시트, 바디 T포즈, 의복 방향 시트, 시안도, 장비 착용 방향 시트, 장비 T포즈, 일러스트, 제출용 자세, 의복 T포즈 산출물과 등록 변경을 프로젝트 이력에서 확인했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "이 요청에서 확인한 제작 단계는 분리 장비, 바디 방향 시트, 바디 T포즈, 의복 방향 시트, 시안도, 장비 착용 방향 시트, 장비 T포즈, 일러스트, 제출용 자세, 의복 T포즈입니다.",
+    "verification": "프로젝트 커밋의 변경 목록과 첨부 PNG 원본을 확인했습니다. 프로젝트 origin/main의 확인 상태는 로컬 원격 추적 기록에 포함입니다.\n\nCamp-Guardian-Commit: 33567146a6f5b92fc979e790c642ce876cdaf383",
+    "remaining": "이번 복구에서는 Godot 인게임 재현, 사용자 확인 및 최종 게임 적용을 다시 검증하지 않았습니다.",
+    "outcome": "제작 요청의 커밋에 저장된 결과 일부를 첨부했습니다.\n\n![재의 약탈자 장비 착용 방향 시트](../assets/camp-recovery-20261126/33567146a6f5-1.png)\n\n![재의 약탈자 일러스트](../assets/camp-recovery-20261126/33567146a6f5-2.png)",
+    "proposedTime": "",
+    "actualTime": "프로젝트 커밋 기록 2026-11-25T22:39:19+09:00. 제작 소요 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

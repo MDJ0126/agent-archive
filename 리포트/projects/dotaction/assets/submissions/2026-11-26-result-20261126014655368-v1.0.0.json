@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 모바일 제작 알림과 이력",
+    "summary": "모바일 기기 등록, 테스트 푸시, 연결 기기 배지와 알림 이력 화면의 커밋 15개를 하나의 기능으로 복구 기록했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "Windows 시작과 기기 등록 안내, 설정 주소 표시, 등록된 기기의 테스트 대상 포함, 이력 화면 기본 다크 테마와 테스트 알림 제목을 반영했습니다.",
+    "verification": "11월 24일 프로젝트 Git 기록에서 대시보드 UI, 서비스 워커, 웹 푸시와 알림 이력 변경을 대조했습니다.\n\nCamp-Guardian-Commit: 2b1f6f123d5815d8c74a64411f88b066bdf2aeed\nCamp-Guardian-Commit: c93f028cd2ba528f248ea51f3ba0d927f3603c4b\nCamp-Guardian-Commit: a64704d5493d75e187d855adf5987061b646e185\nCamp-Guardian-Commit: f9bdce6b50e60546f2776d6104d464f89fbe8999\nCamp-Guardian-Commit: 27e3f01afabd7c3aaa188a8f52358513295d8976\nCamp-Guardian-Commit: 11289f2d1618dfb2c7780217f1fda76f0e147c26\nCamp-Guardian-Commit: c6a200cf2a63a037f28e26312b2ea2808ec6b3bb\nCamp-Guardian-Commit: 0be88c7c65dfbbc14d27ad827e1d68ae0efdae5a\nCamp-Guardian-Commit: 33f2931ba9d50cfae78736ae797d898e66905e76\nCamp-Guardian-Commit: 702589deb60242aa5cebd20859f30bda3900bb89\nCamp-Guardian-Commit: 13f46223d51d9a54e543c90963cdf7b52d4f8676\nCamp-Guardian-Commit: 804fd2e255e6611fc409f1e88b11c4ad5725ee2e\nCamp-Guardian-Commit: 1ec8801e31f5c4e6e83bfef6723db3c01f067cb5\nCamp-Guardian-Commit: 2d090d94509aae2dd0229cf814479fe98c9dd90d\nCamp-Guardian-Commit: bca3df9388592b939b205e1be7bb7294f676ea99",
+    "remaining": "실기기 푸시 재검증과 공개용 화면 증거 확보는 미완료입니다.",
+    "outcome": "Windows 대시보드 실행에 모바일 알림 흐름을 연결하고, 등록 뒤 이력과 연결 기기를 확인할 수 있도록 화면을 갱신했습니다.",
+    "proposedTime": "",
+    "actualTime": "11월 24일 KST 커밋 기준. 실제 작업 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
