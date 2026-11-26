@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 담당 통합과 단계별 실행 기록",
+    "summary": "제작 담당을 통합하고 도구 호출 시각과 소요를 대시보드 작업 로그에 연결했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "당시 구현은 단계별 자체 품질 판정과 총괄 역할을 줄이고 별도 최종 검수로 넘겼습니다. 부분 바디 T포즈 입력에 지정 마네킹을 쓰도록 지침을 적었습니다.",
+    "verification": "당시 작업 기록에는 호출 43.33초 재현과 대시보드 빌드, 임시 프로젝트의 요청 배정·등록·검수 테스트가 남아 있습니다. 현행 제작 운영 변경과는 별개의 이력입니다.",
+    "remaining": "실행 중이던 기존 요청의 전환, 새 역할의 실제 이미지 생성, 부분 T포즈 입력 적용 및 운영 서버 반영은 미확인입니다.",
+    "outcome": "제작 담당을 통합하고 도구 호출 시각과 소요를 대시보드 작업 로그에 연결했습니다.",
+    "proposedTime": "",
+    "actualTime": "11월 24일 KST 로컬 작업 기록 기준. 작업 소요 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

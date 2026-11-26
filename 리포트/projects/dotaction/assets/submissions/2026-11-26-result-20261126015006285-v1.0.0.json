@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "제작 역할 노하우의 기록 기준",
+    "summary": "첫 시도부터 잘된 방법도 검증했고 재사용할 수 있으면 노하우에 남기도록 정리했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "역할 노하우를 공용 문서에 둡니다. 캐릭터별 요청 결과와 다음 단계 입력은 제작 인계 기록에 남깁니다.",
+    "verification": "작업 기록과 현재 프로젝트의 역할 노하우 문서 변경 여부를 대조했습니다.",
+    "remaining": "당시 문서 커밋과 푸시가 미확인입니다. 최종 목록 표시와 제작 동시 실행 수는 검증되지 않았습니다.",
+    "outcome": "첫 시도부터 잘된 방법도 검증했고 재사용할 수 있으면 노하우에 남기도록 정리했습니다.",
+    "proposedTime": "",
+    "actualTime": "11월 24일 KST 로컬 작업 기록 기준. 작업 소요 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

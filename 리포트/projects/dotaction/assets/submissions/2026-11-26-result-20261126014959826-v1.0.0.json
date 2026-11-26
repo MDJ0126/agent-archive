@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Windows 대시보드의 테마 타이틀바",
+    "summary": "테마 기반 타이틀바를 구현하고 상단 가장자리 표시를 조사했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "타이틀바의 색상과 Windows 창 모서리 설정을 조정했습니다.",
+    "verification": "당시 빌드 성공 및 DWM 모서리 설정 읽기를 기록했습니다.",
+    "remaining": "상단 가장자리 표시의 원인과 사용자 실행 창의 최종 화면은 미확인입니다. 프로젝트 푸시도 미확인입니다.",
+    "outcome": "테마 기반 타이틀바를 구현하고 상단 가장자리 표시를 조사했습니다.",
+    "proposedTime": "",
+    "actualTime": "11월 24일 KST 로컬 작업 기록 기준. 작업 소요 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

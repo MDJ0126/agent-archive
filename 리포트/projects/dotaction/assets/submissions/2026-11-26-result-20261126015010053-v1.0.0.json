@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "중앙 보고서 누락 복구와 공개 게시 검사",
+    "summary": "프로젝트 커밋과 공개 아카이브 목록을 대조하고 캠프 가디언 보고서를 복구했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 완료 절차에서 프로젝트 푸시만 확인하면 중앙 게시가 누락될 수 있었습니다. GitHub Actions에서 하루 두 번 작업 커밋과 실제 공개 보고서를 대조하도록 추가했습니다. Codex의 캠프 가디언 프로젝트에 하루 두 번 누락 보고서를 대조하고, 공개 범위와 근거가 확인되면 복구 게시하는 예약 작업을 등록했습니다.",
+    "verification": "프로젝트 원격 main에 검사 파일 두 개를 반영했고 복구 보고서의 사이트 빌드 및 커밋 참조 표기를 로컬에서 확인했습니다.\n\nCamp-Guardian-Commit: 7348b0148ea819df26abdf1e88dabfb9f4ece0ad",
+    "remaining": "예약 작업의 첫 실행과 실제 알림 도착은 아직 확인하지 않았습니다. 증거 또는 공개 범위가 불명확한 작업은 미결로 표시합니다.",
+    "outcome": "프로젝트 커밋과 공개 아카이브 목록을 대조하고 캠프 가디언 보고서를 복구했습니다.",
+    "proposedTime": "",
+    "actualTime": "11월 26일 KST. 작업 소요 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}

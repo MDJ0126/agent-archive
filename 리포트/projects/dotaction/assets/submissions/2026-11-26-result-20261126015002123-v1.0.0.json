@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 라이트 스크롤바와 모닥불 아이콘",
+    "summary": "라이트 테마 스크롤바를 낮은 채도로 조정하고 트레이와 창 아이콘에 모닥불 디자인을 적용했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "창 아이콘이 이전 파일을 읽고 있어 모닥불 아이콘 경로로 수정했습니다. 트레이의 읽지 않은 알림 배지도 갱신했습니다.",
+    "verification": "당시 대시보드 빌드와 PowerShell 파싱, 아이콘 로딩, 트레이 재시작 뒤 로컬 HTTP 200을 확인한 기록이 있습니다.",
+    "remaining": "사용자 창과 작업 표시줄에 보이는 최종 아이콘 및 브라우저에서의 스크롤바 색상은 미확인입니다.",
+    "outcome": "라이트 테마 스크롤바를 낮은 채도로 조정하고 트레이와 창 아이콘에 모닥불 디자인을 적용했습니다.",
+    "proposedTime": "",
+    "actualTime": "11월 24일 KST 로컬 작업 기록 기준. 작업 소요 시간은 미확인입니다.",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
