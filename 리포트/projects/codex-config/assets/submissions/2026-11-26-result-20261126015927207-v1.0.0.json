@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "중앙 보고서 제출 시 누락분 동시 등록 지침",
+    "summary": "새 보고서를 제출할 때 해당 프로젝트의 누락 보고서도 대조하여 확인된 건을 함께 등록하도록 중앙 지침을 갱신했습니다.",
+    "reporter": "Codex",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "근거와 공개 범위가 확인된 누락분은 작업별 JSON v2로 작성해 같은 제출에 포함합니다. 기존 보고서가 공개 목록에 없으면 배포 상태를 확인하고, 누락분의 근거 또는 공개 범위가 불확실하면 그 사유를 남깁니다.",
+    "verification": "보고와 게시 요약, 실행 지침, 작성 가이드, 업데이트 공지에 같은 제출 기준이 반영됐는지 대조했습니다. 문서 규칙 변경으로 별도 화면 증거는 없습니다.",
+    "remaining": "후속 작업에서 실제 누락 건을 이 절차로 등록하는 사례는 아직 검증하지 않았습니다.",
+    "outcome": "중앙 보고서 제출 단계에 같은 프로젝트의 완료·부분 완료 작업과 중앙 등록·게시 목록을 대조하는 절차를 추가했습니다.",
+    "proposedTime": "",
+    "actualTime": "2026-11-26 KST",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
