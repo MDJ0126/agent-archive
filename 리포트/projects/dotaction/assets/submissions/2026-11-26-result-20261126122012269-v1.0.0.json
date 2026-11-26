@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 아카이브 목록의 도트 호버 제거",
+    "summary": "캐릭터 목록에 마우스를 올려도 제출용 썸네일이 유지됩니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "목록에서 호버용 도트 이미지, 전환 스타일, 대기 프레임 초기화를 제거했습니다.",
+    "verification": "로컬 Chrome에서 목록 카드 11개에 도트 전환 요소가 없음을 확인했습니다. 이미지가 있는 카드에 마우스를 올린 뒤 이미지 URL과 표시 상태가 유지되었습니다.\n\n![마우스를 올린 상태의 캐릭터 아카이브 목록](../assets/character-roster-no-hover-20261126.webp)",
+    "remaining": "프로젝트 원격 반영과 보고서 공개 배포 확인이 남았습니다.",
+    "outcome": "캐릭터 아카이브 목록에서 도트 썸네일 전환을 제거했습니다.",
+    "proposedTime": "미기록",
+    "actualTime": "2026-11-26 KST 작업 및 검증. 정확한 소요 시간 미기록.",
+    "xerjEvidence": "로컬 소스와 Chrome으로 검증",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
