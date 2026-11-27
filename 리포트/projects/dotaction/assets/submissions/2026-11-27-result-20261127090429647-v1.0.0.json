@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 로그를 완료·실패·알림·변경·저장으로 정리",
+    "summary": "작업 로그의 상세 모드를 제거하고 사용자 작업과 결과만 표시합니다. 접힌 미리보기와 펼친 목록에 같은 시간·등급·메시지 행을 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 작업 로그에 필요한 작업만 기록하고, 그동안 저장한 기록은 표시할 때 선별합니다. 제작 이력에는 요청과 결과 및 수정 반영 기록을 표시합니다.",
+    "verification": "Chrome에서 기존 기록 변환, 로그 등급, 접힌 미리보기와 목록의 공통 행, 새로고침, 모바일 너비를 확인했습니다. 제작 이력의 도구 단계 제외는 서버 함수 결과로 확인했습니다.\n\n![접힌 작업 로그](../assets/activity-log-meaning-preview-20261127.png)\n\n![펼친 작업 로그](../assets/activity-log-meaning-list-20261127.png)",
+    "remaining": "기존에 실행 중인 Windows 서버와 공개 배포 완료 여부는 확인하지 않았습니다.",
+    "outcome": "저장된 HTTP 로그를 제작 요청 접수로 바꾸고, 메모장 저장은 작업 결과로 표시했습니다. 마우스 조작, 콘솔, 반복 조회는 목록에서 제외했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
