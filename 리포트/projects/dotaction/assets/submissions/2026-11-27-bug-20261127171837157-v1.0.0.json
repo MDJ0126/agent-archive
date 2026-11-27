@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "bug",
+    "title": "장비 5시 겹쳐 보기 복구",
+    "summary": "홀수 높이의 시트에서도 5시 장비 레이어를 표시합니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "Windows Chrome",
+    "steps": "기사의 5시 대기 모달에서 장비 5시 겹쳐 보기를 켭니다.",
+    "expected": "5시 비교 레이어가 표시됩니다.",
+    "actual": "비교 이미지 오류가 표시됩니다.",
+    "cause": "1774×887 시트의 칸 크기가 소수여서 정수 검사에 실패했습니다.",
+    "changes": "원본 칸 경계를 소수 좌표로 사용하고 표시 캔버스만 반올림했습니다.",
+    "verification": "실제 PNG와 모달 코드를 사용한 Chrome 검사에서 기사·궁수·붉은장교의 반투명 및 윤곽선 출력을 확인했습니다.\n\n![기사 모달](../assets/equipped-overlay-20261128.png)",
+    "remaining": "공개 배포와 사용자 탭은 미확인입니다.",
+    "outcome": "수정 커밋 e9c21c01을 프로젝트 main에 푸시했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "new",
+    "state": "progress"
+  }
+}
