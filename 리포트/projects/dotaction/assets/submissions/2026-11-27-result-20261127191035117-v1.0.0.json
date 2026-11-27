@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "대시보드 출시 일정의 다음 마감과 남은 일수",
+    "summary": "플랜별 다음 일정과 남은 날짜를 대시보드에서 먼저 볼 수 있도록 했다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "플랜별 일정 카드 상단에 D-day를 표시하고 전체에서 가장 가까운 일정이 있는 카드를 강조한다.",
+    "verification": "브라우저에서 2026년 11월 28일 기준 D−44와 D−149, 해외 시간대의 동일 결과, 마감 당일, 행사 시작·종료, 모바일 표시를 확인했다. 프로젝트 main 0a29492d에 반영했다.\n\n![출시 일정 카운트다운](../assets/2026-11-28-dashboard-release-countdown.png)",
+    "remaining": "작업 트리의 별도 아트 경로 누락으로 전체 대시보드 빌드가 중단되어 출시 일정 영역을 갱신했다. 공개 Pages 게시 완료는 확인하지 않았다.",
+    "outcome": "한국 시간으로 남은 일수와 당일 또는 진행 중 상태를 자동 갱신한다.",
+    "proposedTime": "별도 약속 없음",
+    "actualTime": "2026-11-28 KST · 구현과 로컬 브라우저 확인 및 푸시 완료",
+    "xerjEvidence": "로컬 브라우저 시간제어로 검증",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
