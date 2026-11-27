@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "작업 로그를 본문 위 오버레이로 표시",
+    "summary": "로그를 열 때 본문 크기와 스크롤 위치를 유지하고, 어두운 배경을 클릭하거나 Esc를 누르면 로그를 닫습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "로그를 펼치면 패널이 본문 위로 올라오고 나머지 대시보드가 어두워집니다. 로그 내부에서 조작을 이어갈 수 있습니다.",
+    "verification": "Chrome 1200px와 390px에서 본문 좌표와 스크롤 위치, 패널 내부 클릭, 배경 클릭 닫기, Esc 후 포커스를 확인했습니다.\n\n![위쪽 본문이 어두워진 작업 로그 오버레이](../assets/activity-log-overlay-20261127.png)",
+    "remaining": "공개 배포 완료와 기존 Windows 창에 적용된 상태는 확인하지 않았습니다.",
+    "outcome": "데스크톱과 모바일 너비에서 본문 레이아웃이 움직이지 않았고, 배경 클릭과 Esc로 로그를 닫을 수 있었습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
