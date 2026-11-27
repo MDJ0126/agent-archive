@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "알림 기록 만료 시 축소본 캐시 정리",
+    "summary": "알림 기록이 1,000건을 넘으면 보존 대상에서 빠진 알림의 JPEG·PNG 캐시를 정리합니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "서버가 기록을 불러오거나 새 알림을 저장하면서 보관 한도를 넘긴 기록을 제거할 때 축소본 캐시를 정리합니다. 프로젝트 원격 main에 6895c70c를 반영했습니다.",
+    "verification": "임시 데이터로 알림 1,000건에서 1,002건으로 증가하는 경우와 1,002건 기록을 다시 여는 경우를 확인했습니다. 실제 JPEG·PNG 생성 후 만료 이미지 캐시가 삭제되고 공유 캐시와 원본이 유지되는 것을 확인했습니다.",
+    "remaining": "실행 중인 대시보드 서버 반영은 확인하지 않았습니다. 이미 만료된 기록이나 이전 원본 버전에 해당하는 캐시는 기존 200개 한도 정리 대상입니다.",
+    "outcome": "다른 보존 알림이 같은 이미지를 쓰면 축소본을 유지합니다. 원본 파일은 그대로 남습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "Node.js와 Windows System.Drawing을 사용한 임시 데이터 검증",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
