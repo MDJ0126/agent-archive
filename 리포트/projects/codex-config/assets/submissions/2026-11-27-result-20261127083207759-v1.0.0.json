@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "중앙 보고서 푸시와 Pages 게시 대기 기준 정리",
+    "summary": "중앙 보고서를 최종 답변 전에 푸시하고 Pages 게시를 기다리지 않도록 지침을 통일했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전역 진입 지침, 보고 요약, 상세 지침과 작성 가이드의 상충 문구를 수정했습니다. 원격 작업본의 공지 확인 스크립트도 설치 환경과 같은 로컬 조회 방식으로 맞추고 공지 2026-11-27-001을 추가했습니다.",
+    "verification": "설치본·로컬 중앙본·원격 작업본의 AGENTS.md SHA-256 일치, 4 KiB 요약 한도와 공지 감지, 지침 변경 diff를 확인했습니다. 문서 수정이라 제품 실행 화면에 해당하는 시각 자료는 없습니다.",
+    "remaining": "Pages 게시 완료와 공개 접근은 대기하지 않습니다.",
+    "outcome": "보고서는 작업 중 등록하고, 게시 여부는 별도 상태로 보고합니다. 이전 작업이나 세션의 제출 실패 및 누락은 같은 프로젝트의 다음 제출에서 대조해 함께 올립니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "rg로 관련 지침과 상충 문구를 확인했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}

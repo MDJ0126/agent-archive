@@ -85,9 +85,9 @@ qaRuns는 id·kind(step/regression/final)·실제 at·summary·results를 기록
 
 각 작업의 선택 항목 `visualEvidence`에 원본(reference)과 실제 실행(current) 이미지를 붙일 수 있습니다. 같은 프로젝트의 `../assets/` 안에 실제 이미지를 보관하고 `image`, `caption`, 선택 사항인 공식 `source` HTTPS 주소를 기록합니다. 탭 전체·부분 메뉴·구형 버전 등 원본 범위와 실제 실행 버전을 설명에 명시합니다. 없는 화면은 만들어 넣지 않습니다. 화면 촬영은 기능 실행 전체의 통과를 대신하지 않습니다. `blocked`는 실제 외부 제한으로 실행할 수 없을 때만 사용하며 미구현은 실패, 미실행은 `not_run`으로 구분합니다.
 
-## 최종 보고는 푸시·공개 배포 후 웹 링크로 제출
+## 중앙 보고서 푸시 후 최종 답변
 
-[작업별 지침](work-instructions.md)의 Tracefolio 절에 따라 푸시·배포 성공과 개별 공개 본문·첨부 접근을 확인합니다.
+[작업별 지침](work-instructions.md)의 Tracefolio 절에 따라 보고서와 증거를 커밋·푸시해 배포를 시작합니다. Pages 게시 완료와 공개 본문·첨부 확인은 기다리지 않습니다.
 
 ## 이미지 작업은 Affinity 필수
 
