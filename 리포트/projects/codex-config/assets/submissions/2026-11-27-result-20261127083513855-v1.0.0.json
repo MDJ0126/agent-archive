@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "중앙 보고 범위에서 단순 대화와 가벼운 변경 제외",
+    "summary": "단순 대화와 영향이 작은 변경을 채팅으로 마무리하도록 공통 보고 기준을 조정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "공통 진입 지침과 상세 보고 지침에 경미한 작업 예외와 누락분 대조 범위를 명시하고 업데이트 공지 2026-11-27-002를 추가했습니다.",
+    "verification": "설치본과 중앙 작업본의 SHA-256 일치, 요약 용량 4 KiB 이내, 공지 조회와 Git diff를 확인했습니다. 지침 변경의 결과는 텍스트로 검증했습니다.",
+    "remaining": "",
+    "outcome": "중앙 보고 대상 작업은 실제 시각 증거 기준을 적용하며, 시각 결과가 없는 작업은 텍스트 근거를 남깁니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "rg로 보고 및 시각자료 지침을 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
