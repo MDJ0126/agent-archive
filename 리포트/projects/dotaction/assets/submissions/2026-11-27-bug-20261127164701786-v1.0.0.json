@@ -1,0 +1,29 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "bug",
+    "title": "모달을 열 때 대시보드 알림이 순간 이동하는 문제 수정",
+    "summary": "알림이 표시된 채 모달을 열거나 닫아도 화면 오른쪽 아래 좌표가 유지됩니다. Chrome에서 두 화면 크기로 검증했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "Windows 헤드리스 Chrome, 1739×885 및 390×760 뷰포트",
+    "steps": "대시보드의 알림 페이지에서 테스트 알림 두 개가 표시된 상태로 알림 옵션을 연 뒤 닫습니다.",
+    "expected": "알림이 기존 화면 위치에 유지되고 닫기 버튼을 사용할 수 있습니다.",
+    "actual": "수정 전 1739×885에서 첫 프레임에 알림이 가로 670.5px 이동했습니다.",
+    "cause": "활성 모달의 자식으로 이동한 알림 스택에 모달 진입 애니메이션의 translate가 적용됐습니다.",
+    "changes": "모달이 열렸을 때 알림 스택을 수동 팝오버로 표시하고 대시보드 바닥글과 안전 영역 여백을 유지했습니다.",
+    "verification": "두 뷰포트에서 일반 모달, 중첩 모달 및 닫기를 포함한 30프레임을 측정했습니다. 수정 후 좌표 변화는 두 크기 모두 0px이었고 모달 위에서 알림 닫기 버튼이 포인터 대상으로 확인됐습니다.\n\n![모달 전환 중 알림 위치 확인](../assets/modal-toast-position.gif)",
+    "remaining": "사용자 트레이 창과 공개 배포 환경의 표시 확인은 별도로 남아 있습니다.",
+    "outcome": "모달 전환 중 알림 위치를 고정하고 알림 닫기 버튼의 클릭 영역을 유지했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "rg로 알림 스택과 모달 공유 스타일을 찾았습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "버그",
+    "workflow": "resolved",
+    "state": "verification"
+  }
+}
