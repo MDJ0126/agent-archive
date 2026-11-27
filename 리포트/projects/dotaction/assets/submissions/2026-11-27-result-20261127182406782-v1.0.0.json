@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캠프 가디언 데모 선공개와 넥스트 페스트 직후 정식판 일정",
+    "summary": "Valve 참가 조건에 맞춰 행사 전 Steam 데모와 행사 직후 본편 출시 목표를 배치했다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "목표일을 다이어그램, 캘린더 및 상세 표에 추가하고 표와 캘린더의 양방향 강조를 연동했다. 정식판 승인은 행사 전 완료를 목표로 잡았다.",
+    "verification": "브라우저에서 두 플랜의 날짜, 다이어그램 및 표 상호작용을 확인했다. GitHub main 2c137a40에 반영했다.\n\n![플랜 A](../assets/2026-11-28-next-fest-early-demo-0.png)\n\n![플랜 B](../assets/2026-11-28-next-fest-early-demo-1.png)",
+    "remaining": "공개 Pages 게시 완료는 확인하지 않았다.",
+    "outcome": "플랜 A는 2월 9일 데모 및 3월 3일 1.0 출시를, 플랜 B는 6월 1일 데모 및 6월 23일 1.0 출시를 목표로 정리했다.",
+    "proposedTime": "별도 약속 없음",
+    "actualTime": "2026-11-28 KST · 구현과 브라우저 검증 및 프로젝트 푸시 완료",
+    "xerjEvidence": "로컬 대시보드와 공식 이벤트 일정 확인",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "complete"
+  }
+}
