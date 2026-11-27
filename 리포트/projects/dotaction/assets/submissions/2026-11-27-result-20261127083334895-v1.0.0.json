@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "Windows 제작 알림 보기 버튼 디자인 개선",
+    "summary": "알림 보기 버튼을 카드에 어울리는 둥근 모양으로 바꿨습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "버튼의 사각 테두리를 제거하고 라이트·다크 테마별 채움색과 호버·누름 색을 적용했습니다.",
+    "verification": "브람 산출물로 두 테마를 렌더링했습니다. 버튼 호출 시 카드가 닫히고 대시보드 열기 이벤트가 발생했습니다.\n\n![라이트 모드](../assets/20261127-production-toast-button-light.png)\n\n![다크 모드](../assets/20261127-production-toast-button-dark.png)",
+    "remaining": "프로젝트 원격 main 푸시는 자동 검토에서 차단됐습니다. 실행 중인 트레이 재시작 및 라이브 적용은 확인하지 않았습니다.",
+    "outcome": "로컬 커밋 f88ebc5a에 변경을 기록했습니다.",
+    "proposedTime": "별도 산정하지 않았습니다.",
+    "actualTime": "순수 작업 시간은 계측하지 않았습니다.",
+    "xerjEvidence": "Windows PowerShell과 WinForms 실제 카드로 검증했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
