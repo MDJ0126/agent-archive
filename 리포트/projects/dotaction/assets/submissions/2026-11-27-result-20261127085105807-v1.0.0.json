@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "캐릭터 제작 진행 로그의 하단 겹침 수정",
+    "summary": "캐릭터 제작이 진행 중일 때 떠 있는 진행 로그를 공통 하단 로그 위 본문 경계에 맞췄습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 진행 로그의 하단 위치를 본문 영역 경계에서 계산하고, 공통 로그를 접거나 펼칠 때 본문 높이 변화를 반영합니다.",
+    "verification": "Chrome에서 데스크톱·모바일 너비, 두 로그의 접기·펼치기, 수정 요청 입력 유지와 실행 중 스크립트 오류가 없는 것을 확인했습니다.\n\n![제작 진행 로그가 공통 작업 로그 위에 있는 화면](../assets/production-log-separated-20261127.png)",
+    "remaining": "실제 진행 중인 제작 작업에 개입하지 않았습니다. 실사용 창과 공개 배포 완료 상태는 별도 확인 대상입니다.",
+    "outcome": "테스트용 진행 중 요청을 불러와 두 로그가 겹치지 않고, 제작 수정 요청 입력칸을 계속 사용할 수 있는 것을 확인했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
