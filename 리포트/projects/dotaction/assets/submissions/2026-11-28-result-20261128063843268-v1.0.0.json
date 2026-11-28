@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "수퍼토닉 M1 내레이션 쇼츠 재제작",
+    "summary": "사용자가 선택한 남성 M1 음성으로 기존 인게임 쇼츠를 다시 제작했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "비공개 output/shorts/08-gameplay-supertonic-m1/gameplay-supertonic-m1.mp4 및 output/shorts/gameplay-supertonic-m1-editable.zip 생성. 영상 약 69MB, ZIP 약 233MB.",
+    "verification": "8개 장면 ASR 인식과 대본 문자 일치 100%. ASR 단어 시각을 대본에 매핑. 전체 영상 디코딩 성공, 첫 프레임과 주요 7개 프레임 검수. 최고 음량 -1.5dB. MLT 참조 19개 모두 존재, 밈 트랙 포함, ZIP CRC 통과.",
+    "remaining": "목소리 최종 청취 승인은 사용자 확인 예정. Shotcut 앱에서 직접 열기·렌더 일치 확인은 미실시. 게시·SNS 업로드 없음. 영상·편집 파일은 공개 저장소로 전송하지 않았습니다.",
+    "outcome": "1080×1920 30fps, 38.77초. Supertonic 3 M1, speed 1.05. 기존 인게임 순서·하단 단어 강조·밈 2개 유지. 음성별 장면 길이와 자막을 재조정하고 Shotcut 프로젝트·소스 포함 ZIP을 비공개 아카이브에 보관했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
