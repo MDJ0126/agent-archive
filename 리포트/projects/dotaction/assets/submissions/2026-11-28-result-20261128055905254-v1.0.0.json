@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "마네킹 남녀 그룹과 아이 얼굴 비율 개선",
+    "summary": "마네킹 목록을 남녀로 나누고 각 그룹 맨 앞에 아이 체형을 배치했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "확대창과 제작 선택창에 남자·여자 그룹을 적용하고, 아이 체형의 키를 성인 기본형의 약 83%로 조정했습니다.",
+    "verification": "헤드리스 Chrome에서 두 그룹의 첫 항목과 여아 썸네일 선택을 확인했습니다. 두 시트의 16방향 발바닥 기준선과 대시보드 빌드를 검증했습니다. [확대창 캡처](../assets/20261128-child-mannequin-gallery.png)",
+    "remaining": "프로젝트 원격 main 1f996773 반영을 확인했습니다. 공개 Pages 반영 여부는 미확인입니다.",
+    "outcome": "남아·여아 모두 큰 얼굴과 둥근 볼이 잘 읽히도록 8방향 시트를 교체했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
