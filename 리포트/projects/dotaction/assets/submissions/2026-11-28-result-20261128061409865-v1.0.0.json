@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "남아·여아 투명 배경 재생성본 등록",
+    "summary": "ImageGen에 투명 배경을 직접 요청한 남아·여아 무광 시트를 등록했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "생성된 알파 채널로 등록하고 기존 시트 크기와 방향별 접지 위치를 맞췄습니다.",
+    "verification": "성인 기본형과 16개 방향의 발바닥 위치를 픽셀 단위로 대조했습니다. 로컬 대시보드에서 두 시트를 열었습니다. [남아 캡처](../assets/20261128-native-male-gallery.png) · [여아 캡처](../assets/20261128-native-female-gallery.png)",
+    "remaining": "남아 다리 사이에 작은 잡티가 있으며 여아 뒷사선 한 컷에서 눈이 보입니다. 프로젝트 원격 main 27a26b4b를 확인했고 공개 Pages는 미확인입니다.",
+    "outcome": "두 8방향 시트와 윤곽선 및 대시보드 등록 데이터를 갱신했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
