@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "커뮤니티별 최신 수정 게시물만 표시",
+    "summary": "같은 콘텐츠·플랫폼의 수정 전후 기록 중 최신본 하나만 표시하도록 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "마네킹 콘텐츠의 Threads·YouTube·X 각 본문 1건과 최신 URL, 첨부 2장 확인.",
+    "remaining": "af05de3e 별도 브랜치 푸시. main 통합·공개 배포 미확인.",
+    "outcome": "목록·상세·영상 관련 게시물에 동일한 최신본 선택 적용. 최신 첨부만 표시하며 원본 이력은 보존.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
