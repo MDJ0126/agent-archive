@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "게시물 반반 레이아웃 및 방향별 호버 이미지 탐색",
+    "summary": "게시물 카드와 모달에 이미지 방향별 그라데이션 탐색을 공통 적용했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "헤드리스 Chrome에서 카드 양쪽 너비 161px 동일, 카드와 모달 다음 이미지 전환, 호버 opacity=1, 카드 화살표 클릭 시 모달 미진입 확인.",
+    "remaining": "a20d6ae5 별도 브랜치 푸시 완료. main 통합·공개 배포 미확인.",
+    "outcome": "게시물 카드 이미지·본문 50:50, 모달 좌우 50:50. 이전·다음 방향 영역을 호버할 때만 그라데이션과 화살표 표시. 경계 방향 숨김 및 터치 버튼 제공.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
