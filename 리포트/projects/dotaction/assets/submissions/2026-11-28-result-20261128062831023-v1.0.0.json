@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "수퍼토닉 한국어 목소리 10종 비교 샘플 제작",
+    "summary": "사용자 지정에 따라 Microsoft 대신 수퍼토닉 3를 로컬 실행해 샘플을 다시 제작했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "10개 전체 ffmpeg 디코딩 통과, 길이 10.73~13.37초. 실제 Supertonic 3 로컬 모델 및 내장 10종 스타일로 생성. 목소리 자연스러움·선호는 사용자 청취 선택 예정.",
+    "remaining": "아직 기존 영상 음성은 교체하지 않음. 음성 및 게임 미디어 공개 업로드 없음.",
+    "outcome": "M1~M5, F1~F5 총 10종. 동일 한국어 대본, speed 1.05, 10 steps, -18 LUFS/-2 dBTP. MP3·대본·생성 스크립트·설정과 해시·비교 HTML을 비공개 아카이브 output/voice-samples/2026-11-28-supertonic에 보관.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
