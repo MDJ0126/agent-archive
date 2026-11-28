@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "게시물 상세창 고정 및 이미지 잘림 수정",
+    "summary": "커뮤니티별 상세창 크기 변화를 없애고 카드와 본문 글꼴을 축소했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "헤드리스 Chrome에서 세 커뮤니티 전환 시 창 1200×760 및 좌우 영역 치수 동일 확인. 이미지 contain 확인. 420px 모바일 화면도 검수.",
+    "remaining": "7087ad4c 별도 브랜치 푸시 완료. main 통합·공개 배포 미확인.",
+    "outcome": "고정 좌우 영역, 이미지 contain 표시, 다중 이미지 이전·다음 이동, 본문 박스 제거, 카드 아이콘 잘림 방지.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
