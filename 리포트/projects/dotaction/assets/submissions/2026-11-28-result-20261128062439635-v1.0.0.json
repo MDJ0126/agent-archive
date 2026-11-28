@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "한국어 내레이션 비교 음성 5개 제작",
+    "summary": "같은 대본으로 인준·선희·현수 음성과 속도 설정을 비교할 MP3 샘플을 만들었습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "5개 파일 ffmpeg 전체 디코딩 통과, 길이 13.01~15.65초. 음성의 선호와 자연스러움은 사용자 청취로 선택 예정. Reddit 빈 상태 중앙 정렬은 실제 너비 및 중심 오차 0 확인.",
+    "remaining": "기존 현수 +6%/-2Hz 동일 설정 추가 샘플은 서비스 NoAudioReceived로 생성하지 못했으며 성공한 5개만 제공. 음성 파일은 공개 저장소에 업로드하지 않음. 새 음성의 영상 반영은 선택 이후.",
+    "outcome": "인준 기본·+12%, 선희 기본·+10%, 현수 기본 5개. 음량 -18 LUFS 정규화. 비교 재생 HTML, 대본, 생성 설정과 파일 해시를 비공개 아카이브에 보관.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
