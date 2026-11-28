@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "같은 PC의 공통 알림음 중복 재생 제거",
+    "summary": "동일 알림의 대시보드 토스트와 Windows 카드가 각각 소리를 요청하던 동작을 수정했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "격리 Chrome에서 네 유형의 대시보드 토스트에 WebView 재생 요청이 0회이며 단독 토스트는 1회임을 확인했습니다. PowerShell 모의 검증에서 트레이가 반복 타이머에도 카드와 소리 재생을 한 번만 요청했습니다.",
+    "remaining": "로컬 커밋 2c262593. 트레이 재시작은 보류 상태이며 실제 PC 청취와 녹음은 미확인입니다. 프로젝트 원격 충돌로 푸시 보류 상태입니다.",
+    "outcome": "즉시 테스트, Codex 잔여량, 캐릭터 제작, 저장 결과는 화면에 함께 표시하며 PC 재생은 Windows 트레이에 맡겼습니다. 대시보드에만 표시되는 토스트는 기존 소리 동작을 유지합니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
