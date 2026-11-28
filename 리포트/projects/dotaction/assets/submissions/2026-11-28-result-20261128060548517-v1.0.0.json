@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "남아·여아 무광 마네킹 등록본 교체",
+    "summary": "승인된 무광 시안 두 종의 민트 배경을 투명하게 제거하고 제작 대시보드 등록본을 교체했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 2048×1024 등록 규격과 아이 체형 높이를 유지하고, 민트 배경을 분리한 후 방향별 발바닥 위치를 맞췄습니다.",
+    "verification": "16개 방향의 발바닥을 각각 성인 기본형과 픽셀 단위로 검증했습니다. 실제 확대창에서 남아는 어두운 테마, 여아는 밝은 테마로 열어 윤곽과 내부 채색을 확인했습니다. [남아 캡처](../assets/20261128-matte-male-gallery.png) · [여아 캡처](../assets/20261128-matte-female-gallery.png)",
+    "remaining": "프로젝트 원격 main 3c9bd513 반영을 확인했습니다. 공개 Pages 반영은 미확인입니다.",
+    "outcome": "남아·여아 8방향 시트와 겹쳐 보기용 윤곽선을 갱신했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
