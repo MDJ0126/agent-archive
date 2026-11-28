@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "장비 8방향의 머리와 몸 고정 제작 지침",
+    "summary": "머리와 몸 고정을 최초 제작 지시로 명시하고 반복 겹쳐보기 검수를 제거했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "제작 가이드, 일러스트레이터 에이전트 설정, 공통 재시도 규칙을 수정했습니다. 사용자가 삭제를 요청한 제작 가이드 문단은 후속 커밋에서 제거했습니다.",
+    "verification": "대시보드 빌드 성공. 실행 중인 로컬 서버 응답 200에서 머리와 몸 고정 문구의 존재 및 삭제 문단의 부재를 확인했습니다.",
+    "remaining": "로컬 커밋 2a527014와 afa0a341. 원격 main의 제작 문서가 별도 이력을 사용하여 병합 충돌이 재현됐습니다. 실제 이미지 생성은 수행하지 않았습니다.",
+    "outcome": "로컬 장비 8방향 제작 기준 및 화면에 적용했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "partial"
+  }
+}

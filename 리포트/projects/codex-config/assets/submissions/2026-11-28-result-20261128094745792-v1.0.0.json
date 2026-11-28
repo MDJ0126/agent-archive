@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "codex-config",
+    "kind": "result",
+    "title": "프로젝트 원격 반영과 중앙 보고 누락 대조를 완료 조건에 추가",
+    "summary": "최종 답변 전 프로젝트 원격 반영, 누락 대조 및 새 보고와 확인된 누락분의 푸시를 확인하도록 전역 지침을 강화했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "전역 AGENTS와 보고서 작성 지침을 맞췄습니다. 대기열 지연 시 원인 조사와 재시도, 미완료 범위와 사유 표시를 명시했습니다.",
+    "verification": "설치본과 중앙본의 SHA-256이 일치했습니다. 공통 진입 문서 합계 3,621바이트를 확인했고 로컬 업데이트 조회에서 신규 공지를 읽었습니다.",
+    "remaining": "공개 Pages 게시 여부는 별도입니다.",
+    "outcome": "이 PC 설치본과 중앙 작업본에 새 지침을 적용했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "설정",
+    "state": "partial"
+  }
+}
