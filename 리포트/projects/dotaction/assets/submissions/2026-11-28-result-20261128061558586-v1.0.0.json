@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "목록 카드 세로 배치 복구",
+    "summary": "모달 좌우 분할이 목록에 잘못 적용된 문제를 복구했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "실제 브라우저에서 목록 이미지 아래 본문 배치, 그리드와 부모 너비 836px 동일, 쇼츠 모달 좌우 572px 동일 확인.",
+    "remaining": "e2a32a1e 별도 브랜치 푸시 완료. main 통합·공개 배포 미확인.",
+    "outcome": "목록은 이미지 위·내용 아래, 상세창만 좌우 50:50. 상단 필터 검색 유지. 목록 너비 740px 제한을 제거해 가용 영역을 사용합니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
