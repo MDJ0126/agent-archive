@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "강조 없는 흰색 자막 및 내레이션 3dB 축소 버전",
+    "summary": "단어별 노란 강조를 제거하고 내레이션만 3dB 낮춘 확인 영상을 제작했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "비공개 output/shorts/09-gameplay-m1-continuous/gameplay-m1-white-quieter.mp4 및 output/shorts/gameplay-m1-white-quieter-editable.zip 생성.",
+    "verification": "전체 디코딩 성공. 자막 색상 강조 태그 없음 확인 및 실제 프레임 검수. 평균 -26.6dB, 최고 -8.3dB. 프로젝트 참조 17개 존재, ZIP CRC 통과.",
+    "remaining": "최종 청취는 사용자 확인 대기. Shotcut 앱 직접 재렌더 대조 미실시. 공개 게시 없음.",
+    "outcome": "25.6초 영상의 내용·타이밍·배경음 유지. 모든 자막 흰색, 동일 자막 인접 이벤트 병합. Shotcut 프로젝트에도 흰색 자막과 -3dB 음성 필터 적용. 별도 MP4와 편집 ZIP 생성.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
