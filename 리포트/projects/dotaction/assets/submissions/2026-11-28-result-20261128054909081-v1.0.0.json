@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "커뮤니티 게시물 아이콘 필터 및 이미지 본문 상세창",
+    "summary": "LinkedIn을 화면에서 제외하고 커뮤니티 표시를 아이콘만으로 변경했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "LinkedIn 원본 보존 및 화면 제외, 플랫폼 이름 숨김·접근성 이름 유지, 카드별 아이콘 선택, 반응형 게시물 상세창.",
+    "verification": "헤드리스 Chrome에서 LinkedIn 탭 제외, 아이콘 이름 표기 없음, 카드 클릭 상세창, 사이트 전환 및 아이콘 직접 클릭을 확인했습니다. 화면 증거는 로컬 비공개 보관.",
+    "remaining": "codex/social-dashboard-history 브랜치에 푸시. main 통합·공개 배포 미확인.",
+    "outcome": "카드 오른쪽 위 커뮤니티 아이콘으로 사이트별 게시물을 선택합니다. 카드 클릭 시 인스타그램 형식의 이미지 왼쪽·본문 오른쪽 상세창을 표시하며 상세창에서도 사이트 전환이 가능합니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
