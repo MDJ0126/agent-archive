@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "기본 비율과 채색을 유지한 마네킹 14종 교체",
+    "summary": "14종을 각 원본을 참조해 5방향으로 다시 생성하고 접지선을 맞춘 8방향 PNG를 등록했습니다.",
+    "reporter": "Codex",
+    "assignee": "Codex",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "체형별 기존 회색 관절과 붉은 눈의 그림체를 참고해 남성 7종과 여성 7종을 따로 재생성했습니다. 1536×1024 5방향 시트를 정리하고 반대편 세 방향을 좌우 반전해 1774×887 8방향 시트를 만들었습니다. 카탈로그, 대시보드 참조와 두 레이아웃의 윤곽선을 갱신했습니다. 원격 전용 SD 2종과 기존 원격 파일 경로는 보존했습니다.",
+    "verification": "5방향의 다섯 칸, 공통 접지선, 빈 여섯째 칸, 8방향 좌우 반전 픽셀을 검사했습니다. 14종의 PNG와 윤곽선 56개 및 대시보드 참조 해시를 대조했습니다. 대시보드 빌드 성공과 원격 main 커밋 해시를 확인했습니다. 정면 눈동자 중심 간격은 대응하는 성인 조합에서 0.4~3.3px 차이입니다.",
+    "remaining": "다른 각도의 얼굴 치수는 육안으로 비교했습니다. 캐릭터 이미지 생성 재시험과 Pages 공개 접근은 미확인입니다.",
+    "outcome": "캠프 가디언 원격 main에 커밋 7594c808을 반영했습니다.\n\n![교체본 마네킹 14종의 8방향과 공통 접지선](../assets/2026-11-28-mannequins-all-8-directions.png)",
+    "proposedTime": "별도 소요 시간 약정 없음",
+    "actualTime": "2026-11-28 KST, 약 17분에 걸쳐 재생성·검수·프로젝트 푸시를 진행했습니다.",
+    "xerjEvidence": "로컬 이미지와 생성본 및 Git 원격을 직접 대조했습니다.",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
