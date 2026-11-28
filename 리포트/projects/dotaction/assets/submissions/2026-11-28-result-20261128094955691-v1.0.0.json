@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "8방향 마네킹 PNG를 장비 시트 크기로 축소",
+    "summary": "8방향 마네킹 원본 14개와 대시보드 이미지 17개를 1774 × 887px로 축소했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "기존 PNG 파일을 축소하고 윤곽선 생성기에서 새 크기의 칸 경계를 정수 픽셀로 계산하도록 수정했습니다.",
+    "verification": "기존 PNG 31개를 다시 열어 픽셀 크기를 확인했습니다. 남성형 슬림 윤곽선 재생성과 대시보드 빌드가 통과했습니다.",
+    "remaining": "변경은 로컬 작업본에 남아 있습니다. 실제 장비 겹침 화면의 비율 결과와 원격 반영은 미확인입니다.",
+    "outcome": "마네킹 파일 자체에서 새 해상도를 확인했습니다.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "수정사항",
+    "state": "partial"
+  }
+}
