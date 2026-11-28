@@ -1,0 +1,28 @@
+{
+  "report": {
+    "schemaVersion": 2,
+    "project": "dotaction",
+    "kind": "result",
+    "title": "밈 제외 및 내레이션 음량 축소와 차분한 샘플",
+    "summary": "사용자의 피드백으로 M1 전체 톤을 보류하고 향후 영상의 밈을 제외하는 기준을 기록했습니다.",
+    "reporter": "",
+    "assignee": "",
+    "environment": "",
+    "steps": "",
+    "expected": "",
+    "actual": "",
+    "cause": "",
+    "changes": "",
+    "verification": "밈 없는 확인본 전체 디코딩 성공. 최고 -7.2dB. MLT 반응 트랙 제거 및 참조 17개 파일 존재, ZIP CRC 통과. 샘플 A·B 디코딩 성공. 프로젝트 제작 기준 문서 빌드·별도 브랜치 7cf21a5c 푸시 완료.",
+    "remaining": "차분한 톤은 사용자 청취 선택 대기이며 전체 영상 미적용. 현재 확인본은 밈·음량만 바뀐 기존 M1 억양. Shotcut 앱 렌더 대조 미실시. 공개 게시 없음.",
+    "outcome": "기존 영상에서 밈을 완전히 제거한 38.77초 확인본과 편집 ZIP 생성. 기존 평균 -17.7dB에서 -24.6dB로 축소. 차분한 문장의 M1 speed .96 원음높이 A 및 pitch factor .96 B 두 MP3 샘플 생성, -23 LUFS 정규화.",
+    "proposedTime": "",
+    "actualTime": "",
+    "xerjEvidence": "",
+    "priority": "normal",
+    "severity": "normal",
+    "xerjUsage": "미사용",
+    "type": "작업 결과",
+    "state": "verification"
+  }
+}
